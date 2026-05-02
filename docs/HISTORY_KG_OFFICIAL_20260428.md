@@ -1859,10 +1859,52 @@ Updated state / 更新后的项目状态：
 - Gemma baseline：未开始。
 - 软化后的 CONTROLLED_TEMPLATE 已提交但 trigger logic 改动仍在等待。
 
+## 51. 2026-05-03 E147/E148 Fine-Grained Timecourse + Wrong-Case Probe / 细粒度风险时间曲线与错题探针
+
+Updated baseline state / 更新后的 baseline 状态：
+
+p29/p30 已补齐。Qwen 30/30 完成：26 对 4 错（p13/p15/p29/p30），86.7%。Timeout 根因：p29（13K tokens, ~23 min）+ p30（16K tokens, ~25 min）在 7200s 超时内没排到。
+
+E147 / p28 细粒度风险时间曲线（±500 chars 窗口，100 chars 步长）：
+
+- 12 个 anchor 全部显示 uniformly high risk（~3.5），std 仅 0.21-0.30。
+- pre=3.52, at=3.56, post=3.55 —— risk 在整个 ±500 chars 窗口内**平坦高企**，不是在 "Wait..." 前一刻尖峰。
+- 解释：模型在概念性框架构建时进入了**持续的"高元认知不确定性格局"**（sustained high metacognitive uncertainty regime），而非仅在意识到错误前一刻短暂升高。
+- 脚本：`scripts/probe_e147_fine_grained_p28_risk_timecourse.py`。
+- 结果：`results/E147_p28_fine_grained_risk_timecourse/`。
+
+E148 / 错题 hidden risk 探针（4 道错题，每 300 chars 采样）：
+
+与正确自纠题的对比：
+| 类型 | confident | pre | at | post | pre-conf delta |
+|------|-----------|-----|-----|------|----------------|
+| 正确自纠题 (4) | 2.546 | 2.692 | 3.034 | 2.657 | **+0.146** |
+| 错题 (4) | 2.753 | 2.635 | 2.688 | 2.682 | **-0.118** |
+
+错题**没有**预转变信号（delta 为负）。逐题模式：
+- **p15 "自信地错了"**：所有段 risk 都低（2.23-2.58），at_correction 反而最低。模型在 self-correct 但 hidden state 一点都不紧张——它根本不知道自己错了。
+- **p13 "纠错后恐慌"**：post=3.19 > at=2.96 > pre=2.86。模型纠错后 risk 反而飙升——"修错了"。
+- **p29/p30 "看起来对但实际错"**：模式类似正确题但 risk 更低、无 pre-turnaround signal。
+
+结果：`results/E148_wrong_case_probe/`。
+
+Key insight / 核心洞察：
+
+正确自纠和错误自纠在 hidden state 层面有**系统性差异**：
+1. 正确自纠：risk 升高（特别是概念性纠错），有 pre-turnaround signal，纠错后可能回落。
+2. 错误自纠（"自信地错了"）：risk 全程低，模型没有元认知警觉。
+3. 错误自纠（"修错了"）：risk 在纠错后反而升高。
+
+这意味着 hidden risk 不仅反映"附近有风险"，还编码了模型对纠错质量的元认知——正确的修复降低风险，错误的修复反而增加风险。
+
+E149 prep / Gemma4 smoke 准备：
+
+- 脚本：`scripts/launch_e149_gemma4_smoke_20260503.sh`（可执行）。
+- 对 gemma4_31b_it 和 gemma4_26b_a4b_it 各跑 baseline smoke + hidden-gate smoke（p01, 1 题）。
+
 Next / 下一步：
 
-- 对 p28 做更细粒度分析（缩小采样间隔、逐 anchor 分析哪些 anchor 有预信号哪些没有）。
-- 对 2 道错题（p13/p15）运行同样的 probe，看错题的 hidden risk pattern 是否不同。
-- 补齐 p29/p30 baseline。
-- 应用 delayed trigger logic（前 200 token 用 budgeted 阈值或完全跳过）。
-- 如果 p28 的预信号能被更细粒度验证，可以写成新 claim："hidden states carry a selective pre-turnaround signal that precedes conceptual self-correction in CoT reasoning"。
+- 启动 E149 Gemma4 smoke：`bash scripts/launch_e149_gemma4_smoke_20260503.sh`。
+- 应用 delayed trigger logic 到 hidden-gate。
+- 对 p15（"自信地错了"）做 causal intervention 实验——如果人为升高 hidden risk 会不会让模型更谨慎？
+- 对 p13（"修错了"）分析具体哪些 anchor 后的 risk 飙升最严重。

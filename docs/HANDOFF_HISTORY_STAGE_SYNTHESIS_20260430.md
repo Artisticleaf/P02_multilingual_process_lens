@@ -176,6 +176,25 @@ GLM is admitted as expanded P0 boundary evidence, not merged into the core headl
 
 **Stage F fact / 人话结论：** Hidden states carry a selective "pre-turnaround signal" — risk elevates BEFORE the model explicitly writes "Wait..." / self-correction markers, but only for conceptual/structural error recognition, not for routine execution checks or definitional uncertainty. The strongest case (p28) shows +28% risk elevation with std=0.19 across all 13 pre-correction samples. This suggests hidden states encode metacognitive uncertainty about the reasoning framework, not just local token risk. The causal direction is not yet proven (correlation, not intervention). / hidden state 中存在选择性的预转变信号——模型在写出"Wait..."之前，hidden risk 就已经升高了。但这个信号只对概念性/结构性的错误识别有效，对执行细节检查和定义不确定不敏感。p28 是最强证据：pre-correction risk 比 confident 高 28%，且所有 13 个采样点一致地高（std=0.19）。这说明 hidden state 编码了对推理框架的元认知不确定性，而不仅仅是局部 token 风险。因果方向尚未通过干预实验证明。
 
+**E147 / p28 细粒度时间曲线（2026-05-03）：**
+
+对 p28 以 100 chars 步长、±500 chars 窗口做逐 anchor 细粒度探测。12 个 anchor 全部显示 uniformly high risk（~3.5），std 仅 0.21-0.30。pre=3.52, at=3.56, post=3.55 —— risk 在整个窗口内平坦高企，不是在 "Wait..." 前一刻尖峰。说明模型在概念性框架构建时进入了**持续的"高元认知不确定性格局"**，而非仅在意识到错误前短暂升高。
+
+**E148 / 错题 hidden risk 探针（2026-05-03）：**
+
+对 4 道错题（p13/p15/p29/p30）做同样 probe，与正确自纠题对比：
+| 类型 | confident | pre | at | post | pre-conf delta |
+|------|-----------|-----|-----|------|----------------|
+| 正确自纠题 (4) | 2.546 | 2.692 | 3.034 | 2.657 | **+0.146** |
+| 错题 (4) | 2.753 | 2.635 | 2.688 | 2.682 | **-0.118** |
+
+错题没有预转变信号。三种错题模式：
+1. **p15 "自信地错了"**：risk 全程低（2.23-2.58），at_correction 最低——模型不知道自己错了。
+2. **p13 "纠错后恐慌"**：post=3.19 > at=2.96 > pre=2.86——纠错后 risk 飙升，"修错了"。
+3. **p29/p30 "看起来对但实际错"**：模式类似正确题但 risk 更低，无 pre-turnaround signal。
+
+**核心洞察：** 正确自纠和错误自纠在 hidden state 层面有系统性差异——hidden risk 不仅反映"附近有风险"，还编码了模型对纠错质量的元认知。
+
 **Boundaries / 边界：**
 - 当前证据仅在 Qwen3.5-27B 的 4 道 AIME2026 正确题上，不能声称跨模型或跨任务分布。
 - 聚合 delta +0.146 主要由 p28 驱动；p17/p27 无信号。
