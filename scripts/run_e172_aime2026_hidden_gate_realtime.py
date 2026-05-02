@@ -43,9 +43,11 @@ BASELINE_TEMPLATE = (
 )
 
 CONTROLLED_TEMPLATE = (
-    "A hidden monitor flagged this visible span as potentially abnormal: `{localized_span}`. "
-    "The signal came from hidden/component state while running non-thinking generation, not from a gold answer. "
-    "Stay in non-thinking mode, do a short controlled check of the flagged span against the problem, correct it if needed, and continue. "
+    "A monitor suggests reviewing the following span: `{localized_span}`. "
+    "The suggestion came from hidden/component state while running non-thinking generation, not from a gold answer. "
+    "Stay in non-thinking mode. Briefly check if the span contains any error against the problem. "
+    "If it looks correct, continue directly without restarting. "
+    "If something is wrong, correct only that part and continue. "
     "End with exactly one line `Final answer: <integer>`.\n\n"
     "Problem: {problem}\n\nPartial solution so far:\n{prefix}"
 )
