@@ -1,0 +1,93 @@
+{
+  "cases": 274,
+  "created_at": "2026-05-02T04:08:07",
+  "leakage_policy": "Runtime repair prompts may use problem, prefix_text, localized_span, localized_hint, random_location_span; gold answer/manual labels remain offline. oracle_hint is allowed only in oracle condition. manual_error_span_end E166 points are excluded from E167 non-oracle trigger candidates.",
+  "models": {
+    "gemma4_26b_a4b_it": {
+      "best_key": "17:post_attention_norm_output",
+      "budgeted_threshold": -1.7429176568984985,
+      "cases": 95,
+      "counts": {
+        "budgeted_cases": 48,
+        "budgeted_invalid_cases": 42,
+        "budgeted_manual_target_trigger": 0,
+        "budgeted_valid_cases": 6,
+        "budgeted_valid_no_trigger": 15,
+        "high_precision_cases": 47,
+        "high_precision_invalid_cases": 42,
+        "high_precision_manual_target_trigger": 0,
+        "high_precision_valid_cases": 5,
+        "high_precision_valid_no_trigger": 16
+      },
+      "families": {
+        "code_boundary": 14,
+        "geometry_constraints": 12,
+        "graph_definition": 12,
+        "long_table_aggregation": 12,
+        "multilingual_semantic": 17,
+        "proof_validity": 14,
+        "set_venn_counting": 14
+      },
+      "high_precision_threshold": -1.6649012565612793,
+      "manual_target_trigger_rate": 0
+    },
+    "gemma4_31b_it": {
+      "best_key": "33:post_attention_norm_output",
+      "budgeted_threshold": 1.8913071155548096,
+      "cases": 90,
+      "counts": {
+        "budgeted_cases": 43,
+        "budgeted_invalid_cases": 42,
+        "budgeted_manual_target_trigger": 0,
+        "budgeted_valid_cases": 1,
+        "budgeted_valid_no_trigger": 20,
+        "high_precision_cases": 47,
+        "high_precision_invalid_cases": 42,
+        "high_precision_manual_target_trigger": 0,
+        "high_precision_valid_cases": 5,
+        "high_precision_valid_no_trigger": 16
+      },
+      "families": {
+        "code_boundary": 13,
+        "geometry_constraints": 14,
+        "graph_definition": 12,
+        "long_table_aggregation": 12,
+        "multilingual_semantic": 12,
+        "proof_validity": 14,
+        "set_venn_counting": 13
+      },
+      "high_precision_threshold": 1.6851304769515991,
+      "manual_target_trigger_rate": 0
+    },
+    "qwen35_27b": {
+      "best_key": "35:residual_hidden_state",
+      "budgeted_threshold": 2.2777209281921387,
+      "cases": 89,
+      "counts": {
+        "budgeted_cases": 42,
+        "budgeted_invalid_cases": 42,
+        "budgeted_manual_target_trigger": 0,
+        "budgeted_valid_cases": 0,
+        "budgeted_valid_no_trigger": 21,
+        "high_precision_cases": 47,
+        "high_precision_invalid_cases": 42,
+        "high_precision_manual_target_trigger": 0,
+        "high_precision_valid_cases": 5,
+        "high_precision_valid_no_trigger": 16
+      },
+      "families": {
+        "code_boundary": 12,
+        "geometry_constraints": 14,
+        "graph_definition": 14,
+        "long_table_aggregation": 12,
+        "multilingual_semantic": 12,
+        "proof_validity": 12,
+        "set_venn_counting": 13
+      },
+      "high_precision_threshold": 1.4118950366973877,
+      "manual_target_trigger_rate": 0
+    }
+  },
+  "out": "data/processed/e167_hidden_derived_repair_cases_20260502.jsonl",
+  "trigger_candidate_policy": "auto_boundary_only"
+}

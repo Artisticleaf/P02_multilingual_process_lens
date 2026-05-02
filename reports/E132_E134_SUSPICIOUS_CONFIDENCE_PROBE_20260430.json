@@ -1,0 +1,405 @@
+{
+  "created_at": "2026-04-30T18:04:14",
+  "experiment": "E132_E134_suspicious_confidence_probe",
+  "models": {
+    "gemma4_26b_a4b_it": {
+      "path": "/home/Awei/P02_multilingual_process_lens/results/E132_E133_suspicious_confidence_probe/gemma4_26b_a4b_it_e132_e133_all_chat.json",
+      "source_rows": 60,
+      "prefix_rows": 211,
+      "best_component_key": "17:residual_hidden_state",
+      "hidden_auc_valid_vs_invalid_completion": 0.9600694444444444,
+      "strict_confidence_auc_valid_vs_invalid_completion": 0.6684027777777778,
+      "plain_accept_auc_valid_vs_invalid_completion": 0.9184027777777778,
+      "matched_analysis_completion": {
+        "hidden_pair_accuracy_valid_gt_invalid": 1.0,
+        "mean_match_distance": 1.6517156214882842,
+        "n_pairs": 12
+      },
+      "completion_trigger_stats": {
+        "valid_all": {
+          "n": 48,
+          "triggered": 6,
+          "trigger_rate": 0.125,
+          "trigger_wilson95": [
+            0.05856971750400845,
+            0.2470072708605482
+          ],
+          "mean_best_component_score": 7.936760108917952,
+          "strict_accept_rate": 0.9166666666666666,
+          "plain_accept_rate": 0.9166666666666666
+        },
+        "suspicious_valid": {
+          "n": 36,
+          "triggered": 5,
+          "trigger_rate": 0.1388888888888889,
+          "trigger_wilson95": [
+            0.060817253631150966,
+            0.2865985128039319
+          ],
+          "mean_best_component_score": 7.5184660570489035,
+          "strict_accept_rate": 0.9166666666666666,
+          "plain_accept_rate": 0.9166666666666666
+        },
+        "invalid": {
+          "n": 12,
+          "triggered": 12,
+          "trigger_rate": 1.0,
+          "trigger_wilson95": [
+            0.7574992425007574,
+            1.0
+          ],
+          "mean_best_component_score": -5.4569899042447405,
+          "strict_accept_rate": 0.08333333333333333,
+          "plain_accept_rate": 0.5
+        },
+        "by_variant": {
+          "clean_valid": {
+            "n": 12,
+            "triggered": 1,
+            "trigger_rate": 0.08333333333333333,
+            "trigger_wilson95": [
+              0.014864709450773478,
+              0.35388592179859524
+            ],
+            "mean_best_component_score": 9.191642264525095,
+            "strict_accept_rate": 0.9166666666666666,
+            "plain_accept_rate": 0.9166666666666666
+          },
+          "low_conf_valid": {
+            "n": 12,
+            "triggered": 2,
+            "trigger_rate": 0.16666666666666666,
+            "trigger_wilson95": [
+              0.04696414761482223,
+              0.44803635738467273
+            ],
+            "mean_best_component_score": 7.763168329993884,
+            "strict_accept_rate": 0.9166666666666666,
+            "plain_accept_rate": 0.9166666666666666
+          },
+          "repaired_strict_invalid": {
+            "n": 12,
+            "triggered": 12,
+            "trigger_rate": 1.0,
+            "trigger_wilson95": [
+              0.7574992425007574,
+              1.0
+            ],
+            "mean_best_component_score": -5.4569899042447405,
+            "strict_accept_rate": 0.08333333333333333,
+            "plain_accept_rate": 0.5
+          },
+          "suspicious_valid_alternative": {
+            "n": 12,
+            "triggered": 1,
+            "trigger_rate": 0.08333333333333333,
+            "trigger_wilson95": [
+              0.014864709450773478,
+              0.35388592179859524
+            ],
+            "mean_best_component_score": 7.0658382674058275,
+            "strict_accept_rate": 0.9166666666666666,
+            "plain_accept_rate": 0.9166666666666666
+          },
+          "suspicious_valid_marker": {
+            "n": 12,
+            "triggered": 2,
+            "trigger_rate": 0.16666666666666666,
+            "trigger_wilson95": [
+              0.04696414761482223,
+              0.44803635738467273
+            ],
+            "mean_best_component_score": 7.726391573746999,
+            "strict_accept_rate": 0.9166666666666666,
+            "plain_accept_rate": 0.9166666666666666
+          }
+        }
+      },
+      "leakage_audit": {
+        "error_spans_in_prompt_rows": 0,
+        "gold_answer_in_prompt_rows": 0,
+        "labels_in_prompt_rows": 0,
+        "note_zh": "manual labels/error spans/gold answers are offline metadata only. Verifier prompts contain problem plus visible trace prefix."
+      }
+    },
+    "gemma4_31b_it": {
+      "path": "/home/Awei/P02_multilingual_process_lens/results/E132_E133_suspicious_confidence_probe/gemma4_31b_it_e132_e133_all_chat.json",
+      "source_rows": 60,
+      "prefix_rows": 211,
+      "best_component_key": "34:residual_hidden_state",
+      "hidden_auc_valid_vs_invalid_completion": 1.0,
+      "strict_confidence_auc_valid_vs_invalid_completion": 0.9409722222222222,
+      "plain_accept_auc_valid_vs_invalid_completion": 1.0,
+      "matched_analysis_completion": {
+        "hidden_pair_accuracy_valid_gt_invalid": 1.0,
+        "mean_match_distance": 1.6548037710802819,
+        "n_pairs": 12
+      },
+      "completion_trigger_stats": {
+        "valid_all": {
+          "n": 48,
+          "triggered": 0,
+          "trigger_rate": 0.0,
+          "trigger_wilson95": [
+            0.0,
+            0.0741026511527422
+          ],
+          "mean_best_component_score": 5.823399328316252,
+          "strict_accept_rate": 1.0,
+          "plain_accept_rate": 1.0
+        },
+        "suspicious_valid": {
+          "n": 36,
+          "triggered": 0,
+          "trigger_rate": 0.0,
+          "trigger_wilson95": [
+            0.0,
+            0.09642183044857634
+          ],
+          "mean_best_component_score": 4.479311271674103,
+          "strict_accept_rate": 1.0,
+          "plain_accept_rate": 1.0
+        },
+        "invalid": {
+          "n": 12,
+          "triggered": 12,
+          "trigger_rate": 1.0,
+          "trigger_wilson95": [
+            0.7574992425007574,
+            1.0
+          ],
+          "mean_best_component_score": -7.223947882652283,
+          "strict_accept_rate": 0.08333333333333333,
+          "plain_accept_rate": 0.25
+        },
+        "by_variant": {
+          "clean_valid": {
+            "n": 12,
+            "triggered": 0,
+            "trigger_rate": 0.0,
+            "trigger_wilson95": [
+              0.0,
+              0.2425007574992425
+            ],
+            "mean_best_component_score": 9.855663498242697,
+            "strict_accept_rate": 1.0,
+            "plain_accept_rate": 1.0
+          },
+          "low_conf_valid": {
+            "n": 12,
+            "triggered": 0,
+            "trigger_rate": 0.0,
+            "trigger_wilson95": [
+              0.0,
+              0.2425007574992425
+            ],
+            "mean_best_component_score": 3.267766905327638,
+            "strict_accept_rate": 1.0,
+            "plain_accept_rate": 1.0
+          },
+          "repaired_strict_invalid": {
+            "n": 12,
+            "triggered": 12,
+            "trigger_rate": 1.0,
+            "trigger_wilson95": [
+              0.7574992425007574,
+              1.0
+            ],
+            "mean_best_component_score": -7.223947882652283,
+            "strict_accept_rate": 0.08333333333333333,
+            "plain_accept_rate": 0.25
+          },
+          "suspicious_valid_alternative": {
+            "n": 12,
+            "triggered": 0,
+            "trigger_rate": 0.0,
+            "trigger_wilson95": [
+              0.0,
+              0.2425007574992425
+            ],
+            "mean_best_component_score": 5.325886746247609,
+            "strict_accept_rate": 1.0,
+            "plain_accept_rate": 1.0
+          },
+          "suspicious_valid_marker": {
+            "n": 12,
+            "triggered": 0,
+            "trigger_rate": 0.0,
+            "trigger_wilson95": [
+              0.0,
+              0.2425007574992425
+            ],
+            "mean_best_component_score": 4.8442801634470625,
+            "strict_accept_rate": 1.0,
+            "plain_accept_rate": 1.0
+          }
+        }
+      },
+      "leakage_audit": {
+        "error_spans_in_prompt_rows": 0,
+        "gold_answer_in_prompt_rows": 0,
+        "labels_in_prompt_rows": 0,
+        "note_zh": "manual labels/error spans/gold answers are offline metadata only. Verifier prompts contain problem plus visible trace prefix."
+      }
+    },
+    "qwen35_27b": {
+      "path": "/home/Awei/P02_multilingual_process_lens/results/E132_E133_suspicious_confidence_probe/qwen35_27b_e132_e133_all_chat.json",
+      "source_rows": 60,
+      "prefix_rows": 211,
+      "best_component_key": "34:residual_hidden_state",
+      "hidden_auc_valid_vs_invalid_completion": 1.0,
+      "strict_confidence_auc_valid_vs_invalid_completion": 0.4470486111111111,
+      "plain_accept_auc_valid_vs_invalid_completion": 0.9878472222222222,
+      "matched_analysis_completion": {
+        "hidden_pair_accuracy_valid_gt_invalid": 1.0,
+        "mean_match_distance": 1.214944650540346,
+        "n_pairs": 12
+      },
+      "completion_trigger_stats": {
+        "valid_all": {
+          "n": 48,
+          "triggered": 2,
+          "trigger_rate": 0.041666666666666664,
+          "trigger_wilson95": [
+            0.011501652078965613,
+            0.13975911147771472
+          ],
+          "mean_best_component_score": 4.904965241750081,
+          "strict_accept_rate": 0.9375,
+          "plain_accept_rate": 1.0
+        },
+        "suspicious_valid": {
+          "n": 36,
+          "triggered": 2,
+          "trigger_rate": 0.05555555555555555,
+          "trigger_wilson95": [
+            0.015369663767066846,
+            0.18144974107611211
+          ],
+          "mean_best_component_score": 4.367363095283508,
+          "strict_accept_rate": 0.9444444444444444,
+          "plain_accept_rate": 1.0
+        },
+        "invalid": {
+          "n": 12,
+          "triggered": 12,
+          "trigger_rate": 1.0,
+          "trigger_wilson95": [
+            0.7574992425007574,
+            1.0
+          ],
+          "mean_best_component_score": -6.439885298411052,
+          "strict_accept_rate": 0.0,
+          "plain_accept_rate": 0.3333333333333333
+        },
+        "by_variant": {
+          "clean_valid": {
+            "n": 12,
+            "triggered": 0,
+            "trigger_rate": 0.0,
+            "trigger_wilson95": [
+              0.0,
+              0.2425007574992425
+            ],
+            "mean_best_component_score": 6.5177716811498,
+            "strict_accept_rate": 0.9166666666666666,
+            "plain_accept_rate": 1.0
+          },
+          "low_conf_valid": {
+            "n": 12,
+            "triggered": 1,
+            "trigger_rate": 0.08333333333333333,
+            "trigger_wilson95": [
+              0.014864709450773478,
+              0.35388592179859524
+            ],
+            "mean_best_component_score": 4.320331414540608,
+            "strict_accept_rate": 0.9166666666666666,
+            "plain_accept_rate": 1.0
+          },
+          "repaired_strict_invalid": {
+            "n": 12,
+            "triggered": 12,
+            "trigger_rate": 1.0,
+            "trigger_wilson95": [
+              0.7574992425007574,
+              1.0
+            ],
+            "mean_best_component_score": -6.439885298411052,
+            "strict_accept_rate": 0.0,
+            "plain_accept_rate": 0.3333333333333333
+          },
+          "suspicious_valid_alternative": {
+            "n": 12,
+            "triggered": 0,
+            "trigger_rate": 0.0,
+            "trigger_wilson95": [
+              0.0,
+              0.2425007574992425
+            ],
+            "mean_best_component_score": 3.965975364049276,
+            "strict_accept_rate": 0.9166666666666666,
+            "plain_accept_rate": 1.0
+          },
+          "suspicious_valid_marker": {
+            "n": 12,
+            "triggered": 1,
+            "trigger_rate": 0.08333333333333333,
+            "trigger_wilson95": [
+              0.014864709450773478,
+              0.35388592179859524
+            ],
+            "mean_best_component_score": 4.81578250726064,
+            "strict_accept_rate": 1.0,
+            "plain_accept_rate": 1.0
+          }
+        }
+      },
+      "leakage_audit": {
+        "error_spans_in_prompt_rows": 0,
+        "gold_answer_in_prompt_rows": 0,
+        "labels_in_prompt_rows": 0,
+        "note_zh": "manual labels/error spans/gold answers are offline metadata only. Verifier prompts contain problem plus visible trace prefix."
+      }
+    }
+  },
+  "e134_summary": {
+    "experiment": "E134_trigger_window_audit",
+    "created_at": "2026-04-30T18:02:18",
+    "source_scored_json": [
+      "results/E132_E133_suspicious_confidence_probe/qwen35_27b_e132_e133_all_chat.json",
+      "results/E132_E133_suspicious_confidence_probe/gemma4_31b_it_e132_e133_all_chat.json",
+      "results/E132_E133_suspicious_confidence_probe/gemma4_26b_a4b_it_e132_e133_all_chat.json"
+    ],
+    "out_jsonl": "data/processed/e134_trigger_window_audit_sheet_20260430.jsonl",
+    "rows": 209,
+    "threshold": 0.0,
+    "radius": 240,
+    "by_variant": {
+      "suspicious_valid_marker": 31,
+      "low_conf_valid": 42,
+      "repaired_strict_invalid": 128,
+      "suspicious_valid_alternative": 6,
+      "clean_valid": 2
+    },
+    "by_stage": {
+      "suspicion_marker_end": 58,
+      "error_span_end": 11,
+      "completion_end": 44,
+      "first_final_answer_end": 44,
+      "post_error_240chars": 12,
+      "first_claim_end": 24,
+      "repair_or_contrast_marker_end": 9,
+      "post_suspicion_240chars": 7
+    },
+    "by_preliminary_label": {
+      "marker_only_prefix_control_not_policy_trigger": 58,
+      "true_error_near_error_candidate": 47,
+      "strict_invalid_after_repair_or_completion_candidate": 45,
+      "true_error_candidate": 36,
+      "false_trigger_suspicious_valid_candidate": 21,
+      "false_trigger_clean_valid_candidate": 2
+    },
+    "note_zh": "E134 是窗口审计表，不把人工标签写回模型 prompt。preliminary_label 只用于审计排序，不是最终人工结论。"
+  }
+}

@@ -1,0 +1,372 @@
+# E06 E05 Manual Trace Verifier Summary
+
+Manual seed labels are in `data/processed/manual_e05_audit_seed_20260427.jsonl`.
+
+Modes:
+
+- `process_only`: judge mathematical process only; ignore truncation/format.
+- `training_candidate`: keep only if final answer, process, and output hygiene are all acceptable.
+
+## Overall
+
+| verifier | mode | prompt | n | acc | yes rate | false accept | process-invalid false accept | ACPI false accept | mean margin |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|
+| deepseek_r1_0528_qwen3_8b | process_only | en | 136 | 0.860 | 0.993 | 1.000 | 1.000 | 1.000 | 3.644 |
+| deepseek_r1_0528_qwen3_8b | process_only | zh | 136 | 0.868 | 0.985 | 0.944 | 0.944 | 1.000 | 5.721 |
+| deepseek_r1_0528_qwen3_8b | training_candidate | en | 139 | 0.453 | 1.000 | 1.000 | 1.000 | 1.000 | 3.162 |
+| deepseek_r1_0528_qwen3_8b | training_candidate | zh | 139 | 0.468 | 0.986 | 0.974 | 0.944 | 0.889 | 4.162 |
+| phi4_mini_reasoning | process_only | en | 136 | 0.853 | 0.985 | 1.000 | 1.000 | 1.000 | 4.772 |
+| phi4_mini_reasoning | process_only | zh | 136 | 0.868 | 1.000 | 1.000 | 1.000 | 1.000 | 7.849 |
+| phi4_mini_reasoning | training_candidate | en | 139 | 0.439 | 0.914 | 0.934 | 0.833 | 0.889 | 2.668 |
+| phi4_mini_reasoning | training_candidate | zh | 139 | 0.432 | 0.978 | 1.000 | 1.000 | 1.000 | 3.819 |
+| qwen35_9b | process_only | en | 136 | 0.853 | 0.985 | 1.000 | 1.000 | 1.000 | 2.887 |
+| qwen35_9b | process_only | zh | 136 | 0.868 | 0.985 | 0.944 | 0.944 | 0.889 | 2.652 |
+| qwen35_9b | training_candidate | en | 139 | 0.460 | 0.993 | 0.987 | 1.000 | 1.000 | 2.178 |
+| qwen35_9b | training_candidate | zh | 139 | 0.468 | 0.986 | 0.974 | 0.944 | 1.000 | 1.752 |
+| qwen3_14b_base | process_only | en | 136 | 0.897 | 0.956 | 0.722 | 0.722 | 0.778 | 2.155 |
+| qwen3_14b_base | process_only | zh | 136 | 0.890 | 0.978 | 0.833 | 0.833 | 0.889 | 1.568 |
+| qwen3_14b_base | training_candidate | en | 139 | 0.511 | 0.928 | 0.882 | 0.667 | 0.889 | 1.630 |
+| qwen3_14b_base | training_candidate | zh | 139 | 0.525 | 0.914 | 0.855 | 0.778 | 1.000 | 0.941 |
+
+## Error Rows
+
+### deepseek_r1_0528_qwen3_8b
+
+| idx | mode | prompt | trace model | task | route | risk | target | pred | margin |
+|---:|---|---|---|---|---|---|---|---|---:|
+| 4 | process_only | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | zh->en | self_corrected_discount_semantic_confusion | False | True | 2.375 |
+| 6 | process_only | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | en->zh | self_corrected_75_percent_surface_confusion | False | True | 2.875 |
+| 178 | process_only | en | phi4_mini_reasoning | deriv_sum | zh->zh | acpi_truncated_wrong_derivative_rule | False | True | 3.625 |
+| 179 | process_only | en | phi4_mini_reasoning | deriv_sum | zh->zh | self_corrected_derivative_rule_error_truncated | False | True | 1.375 |
+| 183 | process_only | en | phi4_mini_reasoning | deriv_sum | en->zh | late_confusion_constant_vs_linear_derivative_truncated | False | True | 4.125 |
+| 195 | process_only | en | phi4_mini_reasoning | deriv_coeff | zh->zh | wrong_derivative_x_to_x_final_wrong_truncated | False | True | 2.250 |
+| 197 | process_only | en | phi4_mini_reasoning | deriv_coeff | zh->en | contradictory_definition_derivative_omits_h_term | False | True | 0.125 |
+| 198 | process_only | en | phi4_mini_reasoning | deriv_coeff | en->zh | offtask_mvt_problem_generated | False | True | 4.125 |
+| 208 | process_only | en | phi4_mini_reasoning | frac_simplify | en->en | nonsense_spill_after_correct_fraction_start | False | True | 3.000 |
+| 228 | process_only | en | qwen35_9b | disc_zh_75_price | zh->en | semantic_drift_qiwuzhe_to_75off_final_wrong_repeated | False | True | 3.500 |
+| 229 | process_only | en | qwen35_9b | disc_zh_75_price | zh->en | semantic_drift_qiwuzhe_to_75off_final_wrong | False | True | 4.125 |
+| 234 | process_only | en | qwen35_9b | disc_en_25_off | zh->zh | acpi_unmarked_discount_word_mismatch | False | True | 0.625 |
+| 261 | process_only | en | qwen35_9b | ratio_boys_total | zh->en | acpi_self_corrected_arithmetic_step | False | True | 1.750 |
+| 296 | process_only | en | qwen35_9b | deriv_product_equiv | en->en | wrong_derivative_and_after_final_template | False | True | 1.375 |
+| 324 | process_only | en | qwen35_9b | frac_simplify | zh->en | valid_correct_but_after_final_spill_or_trim | True | False | -1.000 |
+| 358 | process_only | en | qwen3_14b_base | disc_en_75_off | en->zh | semantic_drift_75off_to_qiwuzhe_final_wrong | False | True | 3.375 |
+| 402 | process_only | en | qwen3_14b_base | deriv_sum | zh->zh | acpi_unmarked_wrong_derivative_rule | False | True | 4.250 |
+| 444 | process_only | en | qwen3_14b_base | percent_then_discount | zh->en | semantic_drift_dabazhe_as_80_percent_discount_final_wrong | False | True | 2.250 |
+| 445 | process_only | en | qwen3_14b_base | percent_then_discount | zh->en | acpi_lexical_mismatch_dabazhe_80_percent_discount | False | True | 2.500 |
+| 4 | process_only | zh | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | zh->en | self_corrected_discount_semantic_confusion | False | True | 7.000 |
+| 6 | process_only | zh | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | en->zh | self_corrected_75_percent_surface_confusion | False | True | 5.500 |
+| 178 | process_only | zh | phi4_mini_reasoning | deriv_sum | zh->zh | acpi_truncated_wrong_derivative_rule | False | True | 3.500 |
+| 179 | process_only | zh | phi4_mini_reasoning | deriv_sum | zh->zh | self_corrected_derivative_rule_error_truncated | False | True | 1.375 |
+| 183 | process_only | zh | phi4_mini_reasoning | deriv_sum | en->zh | late_confusion_constant_vs_linear_derivative_truncated | False | True | 2.500 |
+| 195 | process_only | zh | phi4_mini_reasoning | deriv_coeff | zh->zh | wrong_derivative_x_to_x_final_wrong_truncated | False | True | 2.500 |
+| 198 | process_only | zh | phi4_mini_reasoning | deriv_coeff | en->zh | offtask_mvt_problem_generated | False | True | 2.875 |
+| 208 | process_only | zh | phi4_mini_reasoning | frac_simplify | en->en | nonsense_spill_after_correct_fraction_start | False | True | 2.500 |
+| 228 | process_only | zh | qwen35_9b | disc_zh_75_price | zh->en | semantic_drift_qiwuzhe_to_75off_final_wrong_repeated | False | True | 6.750 |
+| 229 | process_only | zh | qwen35_9b | disc_zh_75_price | zh->en | semantic_drift_qiwuzhe_to_75off_final_wrong | False | True | 6.500 |
+| 234 | process_only | zh | qwen35_9b | disc_en_25_off | zh->zh | acpi_unmarked_discount_word_mismatch | False | True | 1.875 |
+| 261 | process_only | zh | qwen35_9b | ratio_boys_total | zh->en | acpi_self_corrected_arithmetic_step | False | True | 2.625 |
+| 296 | process_only | zh | qwen35_9b | deriv_product_equiv | en->en | wrong_derivative_and_after_final_template | False | True | 3.625 |
+| 324 | process_only | zh | qwen35_9b | frac_simplify | zh->en | valid_correct_but_after_final_spill_or_trim | True | False | -1.375 |
+| 358 | process_only | zh | qwen3_14b_base | disc_en_75_off | en->zh | semantic_drift_75off_to_qiwuzhe_final_wrong | False | True | 6.750 |
+| 402 | process_only | zh | qwen3_14b_base | deriv_sum | zh->zh | acpi_unmarked_wrong_derivative_rule | False | True | 6.125 |
+| 444 | process_only | zh | qwen3_14b_base | percent_then_discount | zh->en | semantic_drift_dabazhe_as_80_percent_discount_final_wrong | False | True | 1.625 |
+| 445 | process_only | zh | qwen3_14b_base | percent_then_discount | zh->en | acpi_lexical_mismatch_dabazhe_80_percent_discount | False | True | 5.375 |
+| 0 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | en->en | truncated_valid_or_no_clean_final | False | True | 4.000 |
+| 2 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | zh->zh | truncated_valid_or_no_clean_final | False | True | 2.625 |
+| 4 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | zh->en | self_corrected_discount_semantic_confusion | False | True | 3.250 |
+| 6 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | en->zh | self_corrected_75_percent_surface_confusion | False | True | 2.750 |
+| 16 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_en_75_off | en->en | truncated_valid_or_no_clean_final | False | True | 1.125 |
+| 18 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_en_75_off | zh->zh | truncated_valid_or_no_clean_final | False | True | 2.125 |
+| 20 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_en_75_off | zh->en | truncated_valid_or_no_clean_final | False | True | 1.500 |
+| 22 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_en_75_off | en->zh | truncated_valid_or_no_clean_final | False | True | 3.500 |
+| 32 | training_candidate | en | deepseek_r1_0528_qwen3_8b | ratio_boys_total | en->en | truncated_valid_or_no_clean_final | False | True | 3.000 |
+| 34 | training_candidate | en | deepseek_r1_0528_qwen3_8b | ratio_boys_total | zh->zh | truncated_valid_or_no_clean_final | False | True | 0.125 |
+| 36 | training_candidate | en | deepseek_r1_0528_qwen3_8b | ratio_boys_total | zh->en | truncated_valid_or_no_clean_final | False | True | 3.875 |
+| 38 | training_candidate | en | deepseek_r1_0528_qwen3_8b | ratio_boys_total | en->zh | truncated_valid_or_no_clean_final | False | True | 1.250 |
+| 64 | training_candidate | en | deepseek_r1_0528_qwen3_8b | deriv_sum | en->en | truncated_valid_or_no_clean_final | False | True | 3.000 |
+| 66 | training_candidate | en | deepseek_r1_0528_qwen3_8b | deriv_sum | zh->zh | truncated_valid_or_no_clean_final | False | True | 2.875 |
+| 68 | training_candidate | en | deepseek_r1_0528_qwen3_8b | deriv_sum | zh->en | truncated_valid_or_no_clean_final | False | True | 3.875 |
+| 70 | training_candidate | en | deepseek_r1_0528_qwen3_8b | deriv_sum | en->zh | truncated_valid_or_no_clean_final | False | True | 3.500 |
+| 104 | training_candidate | en | deepseek_r1_0528_qwen3_8b | percent_then_discount | en->en | truncated_valid_or_no_clean_final | False | True | 2.500 |
+| 106 | training_candidate | en | deepseek_r1_0528_qwen3_8b | percent_then_discount | zh->zh | truncated_valid_or_no_clean_final | False | True | 2.250 |
+| 108 | training_candidate | en | deepseek_r1_0528_qwen3_8b | percent_then_discount | zh->en | truncated_valid_or_no_clean_final | False | True | 2.750 |
+| 110 | training_candidate | en | deepseek_r1_0528_qwen3_8b | percent_then_discount | en->zh | truncated_valid_or_no_clean_final | False | True | 2.375 |
+| 178 | training_candidate | en | phi4_mini_reasoning | deriv_sum | zh->zh | acpi_truncated_wrong_derivative_rule | False | True | 1.250 |
+| 179 | training_candidate | en | phi4_mini_reasoning | deriv_sum | zh->zh | self_corrected_derivative_rule_error_truncated | False | True | 1.625 |
+| 180 | training_candidate | en | phi4_mini_reasoning | deriv_sum | zh->en | truncated_valid_or_no_clean_final | False | True | 2.375 |
+| 181 | training_candidate | en | phi4_mini_reasoning | deriv_sum | zh->en | truncated_valid_or_no_clean_final | False | True | 2.250 |
+| 182 | training_candidate | en | phi4_mini_reasoning | deriv_sum | en->zh | truncated_valid_or_no_clean_final | False | True | 1.750 |
+| 183 | training_candidate | en | phi4_mini_reasoning | deriv_sum | en->zh | late_confusion_constant_vs_linear_derivative_truncated | False | True | 1.500 |
+| 195 | training_candidate | en | phi4_mini_reasoning | deriv_coeff | zh->zh | wrong_derivative_x_to_x_final_wrong_truncated | False | True | 2.250 |
+| 197 | training_candidate | en | phi4_mini_reasoning | deriv_coeff | zh->en | contradictory_definition_derivative_omits_h_term | False | True | 0.750 |
+| 198 | training_candidate | en | phi4_mini_reasoning | deriv_coeff | en->zh | offtask_mvt_problem_generated | False | True | 2.625 |
+| 208 | training_candidate | en | phi4_mini_reasoning | frac_simplify | en->en | nonsense_spill_after_correct_fraction_start | False | True | 2.000 |
+| 209 | training_candidate | en | phi4_mini_reasoning | frac_simplify | en->en | truncated_valid_or_no_clean_final | False | True | 2.625 |
+| 218 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | zh->zh | truncated_valid_or_no_clean_final | False | True | 1.750 |
+| 219 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | zh->zh | truncated_valid_before_final_value | False | True | 0.875 |
+| 220 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | zh->en | truncated_valid_or_no_clean_final | False | True | 2.125 |
+| 221 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | zh->en | truncated_valid_or_no_clean_final | False | True | 3.000 |
+| 222 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | en->zh | truncated_valid_or_no_clean_final | False | True | 0.875 |
+| 223 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | en->zh | truncated_valid_or_no_clean_final | False | True | 1.375 |
+| 224 | training_candidate | en | qwen35_9b | disc_zh_75_price | en->en | valid_correct_but_raw_or_visible_spill | False | True | 3.000 |
+| 228 | training_candidate | en | qwen35_9b | disc_zh_75_price | zh->en | semantic_drift_qiwuzhe_to_75off_final_wrong_repeated | False | True | 3.750 |
+| 229 | training_candidate | en | qwen35_9b | disc_zh_75_price | zh->en | semantic_drift_qiwuzhe_to_75off_final_wrong | False | True | 4.750 |
+| 230 | training_candidate | en | qwen35_9b | disc_zh_75_price | en->zh | valid_correct_but_raw_or_visible_spill | False | True | 4.000 |
+| 233 | training_candidate | en | qwen35_9b | disc_en_25_off | en->en | valid_correct_but_raw_or_visible_spill | False | True | 4.000 |
+| 234 | training_candidate | en | qwen35_9b | disc_en_25_off | zh->zh | acpi_unmarked_discount_word_mismatch | False | True | 1.375 |
+
+### phi4_mini_reasoning
+
+| idx | mode | prompt | trace model | task | route | risk | target | pred | margin |
+|---:|---|---|---|---|---|---|---|---|---:|
+| 4 | process_only | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | zh->en | self_corrected_discount_semantic_confusion | False | True | 6.250 |
+| 6 | process_only | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | en->zh | self_corrected_75_percent_surface_confusion | False | True | 3.000 |
+| 178 | process_only | en | phi4_mini_reasoning | deriv_sum | zh->zh | acpi_truncated_wrong_derivative_rule | False | True | 6.000 |
+| 179 | process_only | en | phi4_mini_reasoning | deriv_sum | zh->zh | self_corrected_derivative_rule_error_truncated | False | True | 1.125 |
+| 183 | process_only | en | phi4_mini_reasoning | deriv_sum | en->zh | late_confusion_constant_vs_linear_derivative_truncated | False | True | 1.625 |
+| 195 | process_only | en | phi4_mini_reasoning | deriv_coeff | zh->zh | wrong_derivative_x_to_x_final_wrong_truncated | False | True | 2.000 |
+| 197 | process_only | en | phi4_mini_reasoning | deriv_coeff | zh->en | contradictory_definition_derivative_omits_h_term | False | True | 1.125 |
+| 198 | process_only | en | phi4_mini_reasoning | deriv_coeff | en->zh | offtask_mvt_problem_generated | False | True | 2.000 |
+| 208 | process_only | en | phi4_mini_reasoning | frac_simplify | en->en | nonsense_spill_after_correct_fraction_start | False | True | 1.625 |
+| 228 | process_only | en | qwen35_9b | disc_zh_75_price | zh->en | semantic_drift_qiwuzhe_to_75off_final_wrong_repeated | False | True | 3.250 |
+| 229 | process_only | en | qwen35_9b | disc_zh_75_price | zh->en | semantic_drift_qiwuzhe_to_75off_final_wrong | False | True | 6.500 |
+| 234 | process_only | en | qwen35_9b | disc_en_25_off | zh->zh | acpi_unmarked_discount_word_mismatch | False | True | 1.125 |
+| 256 | process_only | en | qwen35_9b | ratio_boys_total | en->en | valid_correct_but_after_final_spill_or_trim | True | False | -1.375 |
+| 261 | process_only | en | qwen35_9b | ratio_boys_total | zh->en | acpi_self_corrected_arithmetic_step | False | True | 11.750 |
+| 296 | process_only | en | qwen35_9b | deriv_product_equiv | en->en | wrong_derivative_and_after_final_template | False | True | 3.125 |
+| 334 | process_only | en | qwen35_9b | percent_then_discount | en->zh | valid_correct_but_after_final_spill_or_trim | True | False | -0.375 |
+| 358 | process_only | en | qwen3_14b_base | disc_en_75_off | en->zh | semantic_drift_75off_to_qiwuzhe_final_wrong | False | True | 4.125 |
+| 402 | process_only | en | qwen3_14b_base | deriv_sum | zh->zh | acpi_unmarked_wrong_derivative_rule | False | True | 6.125 |
+| 444 | process_only | en | qwen3_14b_base | percent_then_discount | zh->en | semantic_drift_dabazhe_as_80_percent_discount_final_wrong | False | True | 5.750 |
+| 445 | process_only | en | qwen3_14b_base | percent_then_discount | zh->en | acpi_lexical_mismatch_dabazhe_80_percent_discount | False | True | 5.125 |
+| 4 | process_only | zh | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | zh->en | self_corrected_discount_semantic_confusion | False | True | 4.250 |
+| 6 | process_only | zh | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | en->zh | self_corrected_75_percent_surface_confusion | False | True | 8.000 |
+| 178 | process_only | zh | phi4_mini_reasoning | deriv_sum | zh->zh | acpi_truncated_wrong_derivative_rule | False | True | 9.887 |
+| 179 | process_only | zh | phi4_mini_reasoning | deriv_sum | zh->zh | self_corrected_derivative_rule_error_truncated | False | True | 10.608 |
+| 183 | process_only | zh | phi4_mini_reasoning | deriv_sum | en->zh | late_confusion_constant_vs_linear_derivative_truncated | False | True | 9.250 |
+| 195 | process_only | zh | phi4_mini_reasoning | deriv_coeff | zh->zh | wrong_derivative_x_to_x_final_wrong_truncated | False | True | 5.625 |
+| 197 | process_only | zh | phi4_mini_reasoning | deriv_coeff | zh->en | contradictory_definition_derivative_omits_h_term | False | True | 7.125 |
+| 198 | process_only | zh | phi4_mini_reasoning | deriv_coeff | en->zh | offtask_mvt_problem_generated | False | True | 8.500 |
+| 208 | process_only | zh | phi4_mini_reasoning | frac_simplify | en->en | nonsense_spill_after_correct_fraction_start | False | True | 3.875 |
+| 228 | process_only | zh | qwen35_9b | disc_zh_75_price | zh->en | semantic_drift_qiwuzhe_to_75off_final_wrong_repeated | False | True | 10.129 |
+| 229 | process_only | zh | qwen35_9b | disc_zh_75_price | zh->en | semantic_drift_qiwuzhe_to_75off_final_wrong | False | True | 6.000 |
+| 234 | process_only | zh | qwen35_9b | disc_en_25_off | zh->zh | acpi_unmarked_discount_word_mismatch | False | True | 4.625 |
+| 261 | process_only | zh | qwen35_9b | ratio_boys_total | zh->en | acpi_self_corrected_arithmetic_step | False | True | 6.875 |
+| 296 | process_only | zh | qwen35_9b | deriv_product_equiv | en->en | wrong_derivative_and_after_final_template | False | True | 6.956 |
+| 358 | process_only | zh | qwen3_14b_base | disc_en_75_off | en->zh | semantic_drift_75off_to_qiwuzhe_final_wrong | False | True | 6.250 |
+| 402 | process_only | zh | qwen3_14b_base | deriv_sum | zh->zh | acpi_unmarked_wrong_derivative_rule | False | True | 9.437 |
+| 444 | process_only | zh | qwen3_14b_base | percent_then_discount | zh->en | semantic_drift_dabazhe_as_80_percent_discount_final_wrong | False | True | 9.125 |
+| 445 | process_only | zh | qwen3_14b_base | percent_then_discount | zh->en | acpi_lexical_mismatch_dabazhe_80_percent_discount | False | True | 5.375 |
+| 0 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | en->en | truncated_valid_or_no_clean_final | False | True | 4.750 |
+| 2 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | zh->zh | truncated_valid_or_no_clean_final | False | True | 2.125 |
+| 6 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | en->zh | self_corrected_75_percent_surface_confusion | False | True | 7.625 |
+| 16 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_en_75_off | en->en | truncated_valid_or_no_clean_final | False | True | 2.125 |
+| 18 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_en_75_off | zh->zh | truncated_valid_or_no_clean_final | False | True | 6.125 |
+| 20 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_en_75_off | zh->en | truncated_valid_or_no_clean_final | False | True | 1.625 |
+| 22 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_en_75_off | en->zh | truncated_valid_or_no_clean_final | False | True | 3.125 |
+| 32 | training_candidate | en | deepseek_r1_0528_qwen3_8b | ratio_boys_total | en->en | truncated_valid_or_no_clean_final | False | True | 1.500 |
+| 34 | training_candidate | en | deepseek_r1_0528_qwen3_8b | ratio_boys_total | zh->zh | truncated_valid_or_no_clean_final | False | True | 3.500 |
+| 36 | training_candidate | en | deepseek_r1_0528_qwen3_8b | ratio_boys_total | zh->en | truncated_valid_or_no_clean_final | False | True | 0.250 |
+| 38 | training_candidate | en | deepseek_r1_0528_qwen3_8b | ratio_boys_total | en->zh | truncated_valid_or_no_clean_final | False | True | 3.250 |
+| 64 | training_candidate | en | deepseek_r1_0528_qwen3_8b | deriv_sum | en->en | truncated_valid_or_no_clean_final | False | True | 6.125 |
+| 66 | training_candidate | en | deepseek_r1_0528_qwen3_8b | deriv_sum | zh->zh | truncated_valid_or_no_clean_final | False | True | 3.875 |
+| 68 | training_candidate | en | deepseek_r1_0528_qwen3_8b | deriv_sum | zh->en | truncated_valid_or_no_clean_final | False | True | 1.125 |
+| 70 | training_candidate | en | deepseek_r1_0528_qwen3_8b | deriv_sum | en->zh | truncated_valid_or_no_clean_final | False | True | 1.625 |
+| 104 | training_candidate | en | deepseek_r1_0528_qwen3_8b | percent_then_discount | en->en | truncated_valid_or_no_clean_final | False | True | 0.250 |
+| 106 | training_candidate | en | deepseek_r1_0528_qwen3_8b | percent_then_discount | zh->zh | truncated_valid_or_no_clean_final | False | True | 6.250 |
+| 108 | training_candidate | en | deepseek_r1_0528_qwen3_8b | percent_then_discount | zh->en | truncated_valid_or_no_clean_final | False | True | 3.250 |
+| 110 | training_candidate | en | deepseek_r1_0528_qwen3_8b | percent_then_discount | en->zh | truncated_valid_or_no_clean_final | False | True | 1.625 |
+| 178 | training_candidate | en | phi4_mini_reasoning | deriv_sum | zh->zh | acpi_truncated_wrong_derivative_rule | False | True | 3.750 |
+| 179 | training_candidate | en | phi4_mini_reasoning | deriv_sum | zh->zh | self_corrected_derivative_rule_error_truncated | False | True | 2.125 |
+| 180 | training_candidate | en | phi4_mini_reasoning | deriv_sum | zh->en | truncated_valid_or_no_clean_final | False | True | 1.750 |
+| 181 | training_candidate | en | phi4_mini_reasoning | deriv_sum | zh->en | truncated_valid_or_no_clean_final | False | True | 6.500 |
+| 182 | training_candidate | en | phi4_mini_reasoning | deriv_sum | en->zh | truncated_valid_or_no_clean_final | False | True | 3.125 |
+| 183 | training_candidate | en | phi4_mini_reasoning | deriv_sum | en->zh | late_confusion_constant_vs_linear_derivative_truncated | False | True | 3.875 |
+| 195 | training_candidate | en | phi4_mini_reasoning | deriv_coeff | zh->zh | wrong_derivative_x_to_x_final_wrong_truncated | False | True | 4.625 |
+| 197 | training_candidate | en | phi4_mini_reasoning | deriv_coeff | zh->en | contradictory_definition_derivative_omits_h_term | False | True | 0.875 |
+| 198 | training_candidate | en | phi4_mini_reasoning | deriv_coeff | en->zh | offtask_mvt_problem_generated | False | True | 1.625 |
+| 209 | training_candidate | en | phi4_mini_reasoning | frac_simplify | en->en | truncated_valid_or_no_clean_final | False | True | 0.500 |
+| 218 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | zh->zh | truncated_valid_or_no_clean_final | False | True | 2.250 |
+| 219 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | zh->zh | truncated_valid_before_final_value | False | True | 4.250 |
+| 220 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | zh->en | truncated_valid_or_no_clean_final | False | True | 5.125 |
+| 221 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | zh->en | truncated_valid_or_no_clean_final | False | True | 1.625 |
+| 222 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | en->zh | truncated_valid_or_no_clean_final | False | True | 4.875 |
+| 223 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | en->zh | truncated_valid_or_no_clean_final | False | True | 3.750 |
+| 224 | training_candidate | en | qwen35_9b | disc_zh_75_price | en->en | valid_correct_but_raw_or_visible_spill | False | True | 3.250 |
+| 229 | training_candidate | en | qwen35_9b | disc_zh_75_price | zh->en | semantic_drift_qiwuzhe_to_75off_final_wrong | False | True | 1.250 |
+| 230 | training_candidate | en | qwen35_9b | disc_zh_75_price | en->zh | valid_correct_but_raw_or_visible_spill | False | True | 1.500 |
+| 233 | training_candidate | en | qwen35_9b | disc_en_25_off | en->en | valid_correct_but_raw_or_visible_spill | False | True | 1.375 |
+| 234 | training_candidate | en | qwen35_9b | disc_en_25_off | zh->zh | acpi_unmarked_discount_word_mismatch | False | True | 4.125 |
+| 235 | training_candidate | en | qwen35_9b | disc_en_25_off | zh->zh | valid_correct_but_raw_or_visible_spill | False | True | 2.625 |
+| 236 | training_candidate | en | qwen35_9b | disc_en_25_off | zh->en | valid_clean | True | False | 0.000 |
+
+### qwen35_9b
+
+| idx | mode | prompt | trace model | task | route | risk | target | pred | margin |
+|---:|---|---|---|---|---|---|---|---|---:|
+| 4 | process_only | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | zh->en | self_corrected_discount_semantic_confusion | False | True | 1.625 |
+| 6 | process_only | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | en->zh | self_corrected_75_percent_surface_confusion | False | True | 2.000 |
+| 178 | process_only | en | phi4_mini_reasoning | deriv_sum | zh->zh | acpi_truncated_wrong_derivative_rule | False | True | 3.375 |
+| 179 | process_only | en | phi4_mini_reasoning | deriv_sum | zh->zh | self_corrected_derivative_rule_error_truncated | False | True | 0.375 |
+| 183 | process_only | en | phi4_mini_reasoning | deriv_sum | en->zh | late_confusion_constant_vs_linear_derivative_truncated | False | True | 2.438 |
+| 195 | process_only | en | phi4_mini_reasoning | deriv_coeff | zh->zh | wrong_derivative_x_to_x_final_wrong_truncated | False | True | 2.500 |
+| 197 | process_only | en | phi4_mini_reasoning | deriv_coeff | zh->en | contradictory_definition_derivative_omits_h_term | False | True | 0.250 |
+| 198 | process_only | en | phi4_mini_reasoning | deriv_coeff | en->zh | offtask_mvt_problem_generated | False | True | 2.375 |
+| 208 | process_only | en | phi4_mini_reasoning | frac_simplify | en->en | nonsense_spill_after_correct_fraction_start | False | True | 0.750 |
+| 228 | process_only | en | qwen35_9b | disc_zh_75_price | zh->en | semantic_drift_qiwuzhe_to_75off_final_wrong_repeated | False | True | 3.250 |
+| 229 | process_only | en | qwen35_9b | disc_zh_75_price | zh->en | semantic_drift_qiwuzhe_to_75off_final_wrong | False | True | 3.125 |
+| 234 | process_only | en | qwen35_9b | disc_en_25_off | zh->zh | acpi_unmarked_discount_word_mismatch | False | True | 0.625 |
+| 261 | process_only | en | qwen35_9b | ratio_boys_total | zh->en | acpi_self_corrected_arithmetic_step | False | True | 0.375 |
+| 296 | process_only | en | qwen35_9b | deriv_product_equiv | en->en | wrong_derivative_and_after_final_template | False | True | 2.500 |
+| 324 | process_only | en | qwen35_9b | frac_simplify | zh->en | valid_correct_but_after_final_spill_or_trim | True | False | 0.000 |
+| 340 | process_only | en | qwen3_14b_base | disc_zh_75_price | zh->en | valid_math_wrong_requested_reason_language | True | False | -1.125 |
+| 358 | process_only | en | qwen3_14b_base | disc_en_75_off | en->zh | semantic_drift_75off_to_qiwuzhe_final_wrong | False | True | 2.500 |
+| 402 | process_only | en | qwen3_14b_base | deriv_sum | zh->zh | acpi_unmarked_wrong_derivative_rule | False | True | 1.500 |
+| 444 | process_only | en | qwen3_14b_base | percent_then_discount | zh->en | semantic_drift_dabazhe_as_80_percent_discount_final_wrong | False | True | 1.250 |
+| 445 | process_only | en | qwen3_14b_base | percent_then_discount | zh->en | acpi_lexical_mismatch_dabazhe_80_percent_discount | False | True | 2.312 |
+| 4 | process_only | zh | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | zh->en | self_corrected_discount_semantic_confusion | False | True | 1.875 |
+| 6 | process_only | zh | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | en->zh | self_corrected_75_percent_surface_confusion | False | True | 2.750 |
+| 178 | process_only | zh | phi4_mini_reasoning | deriv_sum | zh->zh | acpi_truncated_wrong_derivative_rule | False | True | 3.625 |
+| 179 | process_only | zh | phi4_mini_reasoning | deriv_sum | zh->zh | self_corrected_derivative_rule_error_truncated | False | True | 1.625 |
+| 183 | process_only | zh | phi4_mini_reasoning | deriv_sum | en->zh | late_confusion_constant_vs_linear_derivative_truncated | False | True | 3.000 |
+| 195 | process_only | zh | phi4_mini_reasoning | deriv_coeff | zh->zh | wrong_derivative_x_to_x_final_wrong_truncated | False | True | 3.125 |
+| 197 | process_only | zh | phi4_mini_reasoning | deriv_coeff | zh->en | contradictory_definition_derivative_omits_h_term | False | True | 2.250 |
+| 198 | process_only | zh | phi4_mini_reasoning | deriv_coeff | en->zh | offtask_mvt_problem_generated | False | True | 2.625 |
+| 208 | process_only | zh | phi4_mini_reasoning | frac_simplify | en->en | nonsense_spill_after_correct_fraction_start | False | True | 2.125 |
+| 228 | process_only | zh | qwen35_9b | disc_zh_75_price | zh->en | semantic_drift_qiwuzhe_to_75off_final_wrong_repeated | False | True | 3.000 |
+| 229 | process_only | zh | qwen35_9b | disc_zh_75_price | zh->en | semantic_drift_qiwuzhe_to_75off_final_wrong | False | True | 2.438 |
+| 234 | process_only | zh | qwen35_9b | disc_en_25_off | zh->zh | acpi_unmarked_discount_word_mismatch | False | True | 0.375 |
+| 296 | process_only | zh | qwen35_9b | deriv_product_equiv | en->en | wrong_derivative_and_after_final_template | False | True | 1.125 |
+| 340 | process_only | zh | qwen3_14b_base | disc_zh_75_price | zh->en | valid_math_wrong_requested_reason_language | True | False | -0.125 |
+| 358 | process_only | zh | qwen3_14b_base | disc_en_75_off | en->zh | semantic_drift_75off_to_qiwuzhe_final_wrong | False | True | 1.812 |
+| 402 | process_only | zh | qwen3_14b_base | deriv_sum | zh->zh | acpi_unmarked_wrong_derivative_rule | False | True | 1.438 |
+| 444 | process_only | zh | qwen3_14b_base | percent_then_discount | zh->en | semantic_drift_dabazhe_as_80_percent_discount_final_wrong | False | True | 1.125 |
+| 445 | process_only | zh | qwen3_14b_base | percent_then_discount | zh->en | acpi_lexical_mismatch_dabazhe_80_percent_discount | False | True | 1.562 |
+| 0 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | en->en | truncated_valid_or_no_clean_final | False | True | 1.875 |
+| 2 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | zh->zh | truncated_valid_or_no_clean_final | False | True | 2.125 |
+| 4 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | zh->en | self_corrected_discount_semantic_confusion | False | True | 2.250 |
+| 6 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | en->zh | self_corrected_75_percent_surface_confusion | False | True | 1.625 |
+| 16 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_en_75_off | en->en | truncated_valid_or_no_clean_final | False | True | 1.875 |
+| 18 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_en_75_off | zh->zh | truncated_valid_or_no_clean_final | False | True | 1.625 |
+| 20 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_en_75_off | zh->en | truncated_valid_or_no_clean_final | False | True | 1.500 |
+| 22 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_en_75_off | en->zh | truncated_valid_or_no_clean_final | False | True | 1.750 |
+| 32 | training_candidate | en | deepseek_r1_0528_qwen3_8b | ratio_boys_total | en->en | truncated_valid_or_no_clean_final | False | True | 1.625 |
+| 34 | training_candidate | en | deepseek_r1_0528_qwen3_8b | ratio_boys_total | zh->zh | truncated_valid_or_no_clean_final | False | True | 1.250 |
+| 36 | training_candidate | en | deepseek_r1_0528_qwen3_8b | ratio_boys_total | zh->en | truncated_valid_or_no_clean_final | False | True | 2.125 |
+| 38 | training_candidate | en | deepseek_r1_0528_qwen3_8b | ratio_boys_total | en->zh | truncated_valid_or_no_clean_final | False | True | 1.375 |
+| 64 | training_candidate | en | deepseek_r1_0528_qwen3_8b | deriv_sum | en->en | truncated_valid_or_no_clean_final | False | True | 1.625 |
+| 66 | training_candidate | en | deepseek_r1_0528_qwen3_8b | deriv_sum | zh->zh | truncated_valid_or_no_clean_final | False | True | 1.625 |
+| 68 | training_candidate | en | deepseek_r1_0528_qwen3_8b | deriv_sum | zh->en | truncated_valid_or_no_clean_final | False | True | 1.875 |
+| 70 | training_candidate | en | deepseek_r1_0528_qwen3_8b | deriv_sum | en->zh | truncated_valid_or_no_clean_final | False | True | 1.625 |
+| 104 | training_candidate | en | deepseek_r1_0528_qwen3_8b | percent_then_discount | en->en | truncated_valid_or_no_clean_final | False | True | 1.875 |
+| 106 | training_candidate | en | deepseek_r1_0528_qwen3_8b | percent_then_discount | zh->zh | truncated_valid_or_no_clean_final | False | True | 1.625 |
+| 108 | training_candidate | en | deepseek_r1_0528_qwen3_8b | percent_then_discount | zh->en | truncated_valid_or_no_clean_final | False | True | 1.875 |
+| 110 | training_candidate | en | deepseek_r1_0528_qwen3_8b | percent_then_discount | en->zh | truncated_valid_or_no_clean_final | False | True | 2.000 |
+| 178 | training_candidate | en | phi4_mini_reasoning | deriv_sum | zh->zh | acpi_truncated_wrong_derivative_rule | False | True | 1.625 |
+| 179 | training_candidate | en | phi4_mini_reasoning | deriv_sum | zh->zh | self_corrected_derivative_rule_error_truncated | False | True | 0.750 |
+| 180 | training_candidate | en | phi4_mini_reasoning | deriv_sum | zh->en | truncated_valid_or_no_clean_final | False | True | 1.250 |
+| 181 | training_candidate | en | phi4_mini_reasoning | deriv_sum | zh->en | truncated_valid_or_no_clean_final | False | True | 2.062 |
+| 182 | training_candidate | en | phi4_mini_reasoning | deriv_sum | en->zh | truncated_valid_or_no_clean_final | False | True | 1.500 |
+| 183 | training_candidate | en | phi4_mini_reasoning | deriv_sum | en->zh | late_confusion_constant_vs_linear_derivative_truncated | False | True | 1.125 |
+| 195 | training_candidate | en | phi4_mini_reasoning | deriv_coeff | zh->zh | wrong_derivative_x_to_x_final_wrong_truncated | False | True | 1.500 |
+| 197 | training_candidate | en | phi4_mini_reasoning | deriv_coeff | zh->en | contradictory_definition_derivative_omits_h_term | False | True | 0.750 |
+| 198 | training_candidate | en | phi4_mini_reasoning | deriv_coeff | en->zh | offtask_mvt_problem_generated | False | True | 1.375 |
+| 208 | training_candidate | en | phi4_mini_reasoning | frac_simplify | en->en | nonsense_spill_after_correct_fraction_start | False | True | 0.250 |
+| 209 | training_candidate | en | phi4_mini_reasoning | frac_simplify | en->en | truncated_valid_or_no_clean_final | False | True | 1.875 |
+| 218 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | zh->zh | truncated_valid_or_no_clean_final | False | True | 1.625 |
+| 219 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | zh->zh | truncated_valid_before_final_value | False | True | 2.000 |
+| 220 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | zh->en | truncated_valid_or_no_clean_final | False | True | 1.125 |
+| 221 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | zh->en | truncated_valid_or_no_clean_final | False | True | 2.000 |
+| 222 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | en->zh | truncated_valid_or_no_clean_final | False | True | 1.375 |
+| 223 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | en->zh | truncated_valid_or_no_clean_final | False | True | 1.750 |
+| 224 | training_candidate | en | qwen35_9b | disc_zh_75_price | en->en | valid_correct_but_raw_or_visible_spill | False | True | 3.250 |
+| 228 | training_candidate | en | qwen35_9b | disc_zh_75_price | zh->en | semantic_drift_qiwuzhe_to_75off_final_wrong_repeated | False | True | 1.875 |
+| 229 | training_candidate | en | qwen35_9b | disc_zh_75_price | zh->en | semantic_drift_qiwuzhe_to_75off_final_wrong | False | True | 2.063 |
+| 230 | training_candidate | en | qwen35_9b | disc_zh_75_price | en->zh | valid_correct_but_raw_or_visible_spill | False | True | 2.063 |
+| 233 | training_candidate | en | qwen35_9b | disc_en_25_off | en->en | valid_correct_but_raw_or_visible_spill | False | True | 2.938 |
+
+### qwen3_14b_base
+
+| idx | mode | prompt | trace model | task | route | risk | target | pred | margin |
+|---:|---|---|---|---|---|---|---|---|---:|
+| 4 | process_only | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | zh->en | self_corrected_discount_semantic_confusion | False | True | 1.250 |
+| 6 | process_only | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | en->zh | self_corrected_75_percent_surface_confusion | False | True | 1.875 |
+| 178 | process_only | en | phi4_mini_reasoning | deriv_sum | zh->zh | acpi_truncated_wrong_derivative_rule | False | True | 2.000 |
+| 179 | process_only | en | phi4_mini_reasoning | deriv_sum | zh->zh | self_corrected_derivative_rule_error_truncated | False | True | 0.250 |
+| 195 | process_only | en | phi4_mini_reasoning | deriv_coeff | zh->zh | wrong_derivative_x_to_x_final_wrong_truncated | False | True | 1.500 |
+| 228 | process_only | en | qwen35_9b | disc_zh_75_price | zh->en | semantic_drift_qiwuzhe_to_75off_final_wrong_repeated | False | True | 2.000 |
+| 229 | process_only | en | qwen35_9b | disc_zh_75_price | zh->en | semantic_drift_qiwuzhe_to_75off_final_wrong | False | True | 0.125 |
+| 261 | process_only | en | qwen35_9b | ratio_boys_total | zh->en | acpi_self_corrected_arithmetic_step | False | True | 2.250 |
+| 296 | process_only | en | qwen35_9b | deriv_product_equiv | en->en | wrong_derivative_and_after_final_template | False | True | 2.500 |
+| 324 | process_only | en | qwen35_9b | frac_simplify | zh->en | valid_correct_but_after_final_spill_or_trim | True | False | -0.875 |
+| 358 | process_only | en | qwen3_14b_base | disc_en_75_off | en->zh | semantic_drift_75off_to_qiwuzhe_final_wrong | False | True | 0.250 |
+| 402 | process_only | en | qwen3_14b_base | deriv_sum | zh->zh | acpi_unmarked_wrong_derivative_rule | False | True | 2.125 |
+| 444 | process_only | en | qwen3_14b_base | percent_then_discount | zh->en | semantic_drift_dabazhe_as_80_percent_discount_final_wrong | False | True | 1.875 |
+| 445 | process_only | en | qwen3_14b_base | percent_then_discount | zh->en | acpi_lexical_mismatch_dabazhe_80_percent_discount | False | True | 2.625 |
+| 4 | process_only | zh | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | zh->en | self_corrected_discount_semantic_confusion | False | True | 0.750 |
+| 6 | process_only | zh | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | en->zh | self_corrected_75_percent_surface_confusion | False | True | 1.250 |
+| 178 | process_only | zh | phi4_mini_reasoning | deriv_sum | zh->zh | acpi_truncated_wrong_derivative_rule | False | True | 1.876 |
+| 179 | process_only | zh | phi4_mini_reasoning | deriv_sum | zh->zh | self_corrected_derivative_rule_error_truncated | False | True | 1.000 |
+| 183 | process_only | zh | phi4_mini_reasoning | deriv_sum | en->zh | late_confusion_constant_vs_linear_derivative_truncated | False | True | 1.125 |
+| 195 | process_only | zh | phi4_mini_reasoning | deriv_coeff | zh->zh | wrong_derivative_x_to_x_final_wrong_truncated | False | True | 1.000 |
+| 197 | process_only | zh | phi4_mini_reasoning | deriv_coeff | zh->en | contradictory_definition_derivative_omits_h_term | False | True | 1.125 |
+| 208 | process_only | zh | phi4_mini_reasoning | frac_simplify | en->en | nonsense_spill_after_correct_fraction_start | False | True | 0.375 |
+| 228 | process_only | zh | qwen35_9b | disc_zh_75_price | zh->en | semantic_drift_qiwuzhe_to_75off_final_wrong_repeated | False | True | 0.750 |
+| 229 | process_only | zh | qwen35_9b | disc_zh_75_price | zh->en | semantic_drift_qiwuzhe_to_75off_final_wrong | False | True | 0.750 |
+| 261 | process_only | zh | qwen35_9b | ratio_boys_total | zh->en | acpi_self_corrected_arithmetic_step | False | True | 0.876 |
+| 358 | process_only | zh | qwen3_14b_base | disc_en_75_off | en->zh | semantic_drift_75off_to_qiwuzhe_final_wrong | False | True | 1.250 |
+| 402 | process_only | zh | qwen3_14b_base | deriv_sum | zh->zh | acpi_unmarked_wrong_derivative_rule | False | True | 1.875 |
+| 444 | process_only | zh | qwen3_14b_base | percent_then_discount | zh->en | semantic_drift_dabazhe_as_80_percent_discount_final_wrong | False | True | 1.250 |
+| 445 | process_only | zh | qwen3_14b_base | percent_then_discount | zh->en | acpi_lexical_mismatch_dabazhe_80_percent_discount | False | True | 1.251 |
+| 0 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | en->en | truncated_valid_or_no_clean_final | False | True | 1.375 |
+| 2 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | zh->zh | truncated_valid_or_no_clean_final | False | True | 1.250 |
+| 4 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | zh->en | self_corrected_discount_semantic_confusion | False | True | 0.250 |
+| 6 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_zh_75_price | en->zh | self_corrected_75_percent_surface_confusion | False | True | 1.750 |
+| 16 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_en_75_off | en->en | truncated_valid_or_no_clean_final | False | True | 0.625 |
+| 18 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_en_75_off | zh->zh | truncated_valid_or_no_clean_final | False | True | 1.375 |
+| 20 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_en_75_off | zh->en | truncated_valid_or_no_clean_final | False | True | 1.250 |
+| 22 | training_candidate | en | deepseek_r1_0528_qwen3_8b | disc_en_75_off | en->zh | truncated_valid_or_no_clean_final | False | True | 0.625 |
+| 32 | training_candidate | en | deepseek_r1_0528_qwen3_8b | ratio_boys_total | en->en | truncated_valid_or_no_clean_final | False | True | 1.875 |
+| 34 | training_candidate | en | deepseek_r1_0528_qwen3_8b | ratio_boys_total | zh->zh | truncated_valid_or_no_clean_final | False | True | 0.750 |
+| 36 | training_candidate | en | deepseek_r1_0528_qwen3_8b | ratio_boys_total | zh->en | truncated_valid_or_no_clean_final | False | True | 0.750 |
+| 38 | training_candidate | en | deepseek_r1_0528_qwen3_8b | ratio_boys_total | en->zh | truncated_valid_or_no_clean_final | False | True | 0.875 |
+| 64 | training_candidate | en | deepseek_r1_0528_qwen3_8b | deriv_sum | en->en | truncated_valid_or_no_clean_final | False | True | 1.000 |
+| 66 | training_candidate | en | deepseek_r1_0528_qwen3_8b | deriv_sum | zh->zh | truncated_valid_or_no_clean_final | False | True | 1.875 |
+| 68 | training_candidate | en | deepseek_r1_0528_qwen3_8b | deriv_sum | zh->en | truncated_valid_or_no_clean_final | False | True | 1.875 |
+| 70 | training_candidate | en | deepseek_r1_0528_qwen3_8b | deriv_sum | en->zh | truncated_valid_or_no_clean_final | False | True | 0.625 |
+| 104 | training_candidate | en | deepseek_r1_0528_qwen3_8b | percent_then_discount | en->en | truncated_valid_or_no_clean_final | False | True | 1.250 |
+| 106 | training_candidate | en | deepseek_r1_0528_qwen3_8b | percent_then_discount | zh->zh | truncated_valid_or_no_clean_final | False | True | 0.750 |
+| 108 | training_candidate | en | deepseek_r1_0528_qwen3_8b | percent_then_discount | zh->en | truncated_valid_or_no_clean_final | False | True | 0.500 |
+| 110 | training_candidate | en | deepseek_r1_0528_qwen3_8b | percent_then_discount | en->zh | truncated_valid_or_no_clean_final | False | True | 0.250 |
+| 178 | training_candidate | en | phi4_mini_reasoning | deriv_sum | zh->zh | acpi_truncated_wrong_derivative_rule | False | True | 1.125 |
+| 179 | training_candidate | en | phi4_mini_reasoning | deriv_sum | zh->zh | self_corrected_derivative_rule_error_truncated | False | True | 0.250 |
+| 180 | training_candidate | en | phi4_mini_reasoning | deriv_sum | zh->en | truncated_valid_or_no_clean_final | False | True | 0.500 |
+| 181 | training_candidate | en | phi4_mini_reasoning | deriv_sum | zh->en | truncated_valid_or_no_clean_final | False | True | 0.625 |
+| 183 | training_candidate | en | phi4_mini_reasoning | deriv_sum | en->zh | late_confusion_constant_vs_linear_derivative_truncated | False | True | 0.375 |
+| 195 | training_candidate | en | phi4_mini_reasoning | deriv_coeff | zh->zh | wrong_derivative_x_to_x_final_wrong_truncated | False | True | 0.625 |
+| 197 | training_candidate | en | phi4_mini_reasoning | deriv_coeff | zh->en | contradictory_definition_derivative_omits_h_term | False | True | 0.500 |
+| 209 | training_candidate | en | phi4_mini_reasoning | frac_simplify | en->en | truncated_valid_or_no_clean_final | False | True | 1.875 |
+| 218 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | zh->zh | truncated_valid_or_no_clean_final | False | True | 1.250 |
+| 219 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | zh->zh | truncated_valid_before_final_value | False | True | 0.125 |
+| 220 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | zh->en | truncated_valid_or_no_clean_final | False | True | 1.000 |
+| 221 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | zh->en | truncated_valid_or_no_clean_final | False | True | 1.000 |
+| 222 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | en->zh | truncated_valid_or_no_clean_final | False | True | 0.500 |
+| 223 | training_candidate | en | phi4_mini_reasoning | percent_then_discount | en->zh | truncated_valid_or_no_clean_final | False | True | 1.000 |
+| 224 | training_candidate | en | qwen35_9b | disc_zh_75_price | en->en | valid_correct_but_raw_or_visible_spill | False | True | 2.500 |
+| 230 | training_candidate | en | qwen35_9b | disc_zh_75_price | en->zh | valid_correct_but_raw_or_visible_spill | False | True | 3.250 |
+| 233 | training_candidate | en | qwen35_9b | disc_en_25_off | en->en | valid_correct_but_raw_or_visible_spill | False | True | 3.000 |
+| 235 | training_candidate | en | qwen35_9b | disc_en_25_off | zh->zh | valid_correct_but_raw_or_visible_spill | False | True | 3.000 |
+| 237 | training_candidate | en | qwen35_9b | disc_en_25_off | zh->en | valid_correct_but_raw_or_visible_spill | False | True | 1.625 |
+| 238 | training_candidate | en | qwen35_9b | disc_en_25_off | en->zh | valid_correct_but_raw_or_visible_spill | False | True | 0.875 |
+| 246 | training_candidate | en | qwen35_9b | disc_en_75_off | en->zh | valid_correct_but_raw_or_visible_spill | False | True | 2.250 |
+| 247 | training_candidate | en | qwen35_9b | disc_en_75_off | en->zh | valid_clean | True | False | -0.875 |
+| 248 | training_candidate | en | qwen35_9b | ratio_boys_girls | en->en | format_only_placeholder_answer | False | True | 1.000 |
+| 249 | training_candidate | en | qwen35_9b | ratio_boys_girls | en->en | valid_but_final_line_contains_reasoning | False | True | 2.375 |
+| 253 | training_candidate | en | qwen35_9b | ratio_boys_girls | zh->en | valid_correct_but_after_final_spill_or_trim | False | True | 1.125 |
+| 256 | training_candidate | en | qwen35_9b | ratio_boys_total | en->en | valid_correct_but_after_final_spill_or_trim | False | True | 1.250 |
+| 261 | training_candidate | en | qwen35_9b | ratio_boys_total | zh->en | acpi_self_corrected_arithmetic_step | False | True | 2.000 |
+| 265 | training_candidate | en | qwen35_9b | ratio_girls_boys | en->en | valid_with_variable_name_typo_and_trim | False | True | 1.500 |
+| 266 | training_candidate | en | qwen35_9b | ratio_girls_boys | zh->zh | valid_correct_but_after_final_spill_or_trim | False | True | 2.250 |
+| 267 | training_candidate | en | qwen35_9b | ratio_girls_boys | zh->zh | valid_correct_but_after_final_spill_or_trim | False | True | 2.125 |
+| 268 | training_candidate | en | qwen35_9b | ratio_girls_boys | zh->en | valid_correct_but_after_final_spill_or_trim | False | True | 1.250 |
+

@@ -1,0 +1,1306 @@
+{
+  "contextual_bridge": {
+    "best_layer": {
+      "layer": 5,
+      "mean_hard_margin": 0.2646005799372991,
+      "mean_mismatch_cos": 0.3348059220747514,
+      "mean_pair_cos": 0.6859793066978455,
+      "mean_rank": 1.0,
+      "min_hard_margin": 0.1240277886390686,
+      "top1": 1.0
+    },
+    "early_bridge_layer": {
+      "layer": 0,
+      "mean_hard_margin": 0.12353568337857723,
+      "mean_mismatch_cos": 0.08888467152913411,
+      "mean_pair_cos": 0.2630826532840729,
+      "mean_rank": 1.0833333333333333,
+      "min_hard_margin": -0.0037584304809570312,
+      "top1": 0.9166666666666666
+    },
+    "layers": [
+      {
+        "layer": 0,
+        "mean_hard_margin": 0.12353568337857723,
+        "mean_mismatch_cos": 0.08888467152913411,
+        "mean_pair_cos": 0.2630826532840729,
+        "mean_rank": 1.0833333333333333,
+        "min_hard_margin": -0.0037584304809570312,
+        "top1": 0.9166666666666666
+      },
+      {
+        "layer": 1,
+        "mean_hard_margin": 0.1205688292781512,
+        "mean_mismatch_cos": 0.21503269311153528,
+        "mean_pair_cos": 0.3982044756412506,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.01642930507659912,
+        "top1": 1.0
+      },
+      {
+        "layer": 2,
+        "mean_hard_margin": 0.15092202772696814,
+        "mean_mismatch_cos": 0.2570203145345052,
+        "mean_pair_cos": 0.4616413116455078,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.012077867984771729,
+        "top1": 1.0
+      },
+      {
+        "layer": 3,
+        "mean_hard_margin": 0.2211563984553019,
+        "mean_mismatch_cos": 0.3119092710090406,
+        "mean_pair_cos": 0.5924279093742371,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.04290604591369629,
+        "top1": 1.0
+      },
+      {
+        "layer": 4,
+        "mean_hard_margin": 0.2269824892282486,
+        "mean_mismatch_cos": 0.35442944728966913,
+        "mean_pair_cos": 0.6548941135406494,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.08585110306739807,
+        "top1": 1.0
+      },
+      {
+        "layer": 5,
+        "mean_hard_margin": 0.2646005799372991,
+        "mean_mismatch_cos": 0.3348059220747514,
+        "mean_pair_cos": 0.6859793066978455,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.1240277886390686,
+        "top1": 1.0
+      },
+      {
+        "layer": 6,
+        "mean_hard_margin": 0.25762830923000973,
+        "mean_mismatch_cos": 0.3783448248198538,
+        "mean_pair_cos": 0.7215023636817932,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.15843439102172852,
+        "top1": 1.0
+      },
+      {
+        "layer": 7,
+        "mean_hard_margin": 0.23319629579782486,
+        "mean_mismatch_cos": 0.4265320806792288,
+        "mean_pair_cos": 0.7453941702842712,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.11823058128356934,
+        "top1": 1.0
+      },
+      {
+        "layer": 8,
+        "mean_hard_margin": 0.19374120235443115,
+        "mean_mismatch_cos": 0.4980490713408499,
+        "mean_pair_cos": 0.7683871388435364,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.08893537521362305,
+        "top1": 1.0
+      },
+      {
+        "layer": 9,
+        "mean_hard_margin": 0.18376960357030234,
+        "mean_mismatch_cos": 0.5237000205300071,
+        "mean_pair_cos": 0.7797827124595642,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.06941366195678711,
+        "top1": 1.0
+      },
+      {
+        "layer": 10,
+        "mean_hard_margin": 0.1672902007897695,
+        "mean_mismatch_cos": 0.5369200850978042,
+        "mean_pair_cos": 0.7703769207000732,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.07445287704467773,
+        "top1": 1.0
+      },
+      {
+        "layer": 11,
+        "mean_hard_margin": 0.16415230929851532,
+        "mean_mismatch_cos": 0.5227069276751894,
+        "mean_pair_cos": 0.7494366765022278,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.08226490020751953,
+        "top1": 1.0
+      },
+      {
+        "layer": 12,
+        "mean_hard_margin": 0.12846186757087708,
+        "mean_mismatch_cos": 0.6050082698012843,
+        "mean_pair_cos": 0.7944576144218445,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.04092848300933838,
+        "top1": 1.0
+      },
+      {
+        "layer": 13,
+        "mean_hard_margin": 0.13722517093022665,
+        "mean_mismatch_cos": 0.5757257866136956,
+        "mean_pair_cos": 0.7740755081176758,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.04766625165939331,
+        "top1": 1.0
+      },
+      {
+        "layer": 14,
+        "mean_hard_margin": 0.12771821518739065,
+        "mean_mismatch_cos": 0.5799210866292318,
+        "mean_pair_cos": 0.7659156918525696,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.0512579083442688,
+        "top1": 1.0
+      },
+      {
+        "layer": 15,
+        "mean_hard_margin": 0.155490443110466,
+        "mean_mismatch_cos": 0.5400013779148911,
+        "mean_pair_cos": 0.7597348093986511,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.05652886629104614,
+        "top1": 1.0
+      },
+      {
+        "layer": 16,
+        "mean_hard_margin": 0.1632933815320333,
+        "mean_mismatch_cos": 0.5072980938535748,
+        "mean_pair_cos": 0.7371349930763245,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.07047951221466064,
+        "top1": 1.0
+      },
+      {
+        "layer": 17,
+        "mean_hard_margin": 0.16878433525562286,
+        "mean_mismatch_cos": 0.4767680890632398,
+        "mean_pair_cos": 0.7303600311279297,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.08161640167236328,
+        "top1": 1.0
+      },
+      {
+        "layer": 18,
+        "mean_hard_margin": 0.1798636093735695,
+        "mean_mismatch_cos": 0.4611125136866714,
+        "mean_pair_cos": 0.726508378982544,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.10155045986175537,
+        "top1": 1.0
+      },
+      {
+        "layer": 19,
+        "mean_hard_margin": 0.1747729852795601,
+        "mean_mismatch_cos": 0.4563903230609316,
+        "mean_pair_cos": 0.712995707988739,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.07205730676651001,
+        "top1": 1.0
+      },
+      {
+        "layer": 20,
+        "mean_hard_margin": 0.1700913334886233,
+        "mean_mismatch_cos": 0.47698387955174304,
+        "mean_pair_cos": 0.7196576595306396,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.0737343430519104,
+        "top1": 1.0
+      },
+      {
+        "layer": 21,
+        "mean_hard_margin": 0.15370693802833557,
+        "mean_mismatch_cos": 0.4957457455721768,
+        "mean_pair_cos": 0.725066602230072,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.05956733226776123,
+        "top1": 1.0
+      },
+      {
+        "layer": 22,
+        "mean_hard_margin": 0.1405553768078486,
+        "mean_mismatch_cos": 0.4954687176328717,
+        "mean_pair_cos": 0.7100433707237244,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.057926058769226074,
+        "top1": 1.0
+      },
+      {
+        "layer": 23,
+        "mean_hard_margin": 0.13026073078314462,
+        "mean_mismatch_cos": 0.49882842555190576,
+        "mean_pair_cos": 0.7015615105628967,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.06031203269958496,
+        "top1": 1.0
+      },
+      {
+        "layer": 24,
+        "mean_hard_margin": 0.11716489493846893,
+        "mean_mismatch_cos": 0.5079211032751835,
+        "mean_pair_cos": 0.6867387294769287,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.06501823663711548,
+        "top1": 1.0
+      },
+      {
+        "layer": 25,
+        "mean_hard_margin": 0.11075161894162495,
+        "mean_mismatch_cos": 0.4945750958991773,
+        "mean_pair_cos": 0.6676571369171143,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.059007465839385986,
+        "top1": 1.0
+      },
+      {
+        "layer": 26,
+        "mean_hard_margin": 0.10541185736656189,
+        "mean_mismatch_cos": 0.4910380045572917,
+        "mean_pair_cos": 0.65559321641922,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.051747143268585205,
+        "top1": 1.0
+      },
+      {
+        "layer": 27,
+        "mean_hard_margin": 0.09768938024838765,
+        "mean_mismatch_cos": 0.4293302189220082,
+        "mean_pair_cos": 0.5853294730186462,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.03677552938461304,
+        "top1": 1.0
+      },
+      {
+        "layer": 28,
+        "mean_hard_margin": 0.05883598824342092,
+        "mean_mismatch_cos": 0.24876733259721237,
+        "mean_pair_cos": 0.3536761999130249,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.01983073353767395,
+        "top1": 1.0
+      }
+    ],
+    "term_rows": [
+      {
+        "idx": 0,
+        "lang": "en",
+        "prompt": "In mathematical reasoning, the current concept is: derivative. Understand this concept.",
+        "target_positions": [
+          10
+        ],
+        "term": "derivative"
+      },
+      {
+        "idx": 0,
+        "lang": "zh",
+        "prompt": "在数学推理中，当前概念是：导数。请理解这个概念。",
+        "target_positions": [
+          11,
+          12
+        ],
+        "term": "导数"
+      },
+      {
+        "idx": 1,
+        "lang": "en",
+        "prompt": "In mathematical reasoning, the current concept is: prime number. Understand this concept.",
+        "target_positions": [
+          10,
+          11
+        ],
+        "term": "prime number"
+      },
+      {
+        "idx": 1,
+        "lang": "zh",
+        "prompt": "在数学推理中，当前概念是：质数。请理解这个概念。",
+        "target_positions": [
+          11,
+          12
+        ],
+        "term": "质数"
+      },
+      {
+        "idx": 2,
+        "lang": "en",
+        "prompt": "In mathematical reasoning, the current concept is: fraction. Understand this concept.",
+        "target_positions": [
+          10
+        ],
+        "term": "fraction"
+      },
+      {
+        "idx": 2,
+        "lang": "zh",
+        "prompt": "在数学推理中，当前概念是：分数。请理解这个概念。",
+        "target_positions": [
+          11,
+          12
+        ],
+        "term": "分数"
+      },
+      {
+        "idx": 3,
+        "lang": "en",
+        "prompt": "In mathematical reasoning, the current concept is: equation. Understand this concept.",
+        "target_positions": [
+          10
+        ],
+        "term": "equation"
+      },
+      {
+        "idx": 3,
+        "lang": "zh",
+        "prompt": "在数学推理中，当前概念是：方程。请理解这个概念。",
+        "target_positions": [
+          11,
+          12
+        ],
+        "term": "方程"
+      },
+      {
+        "idx": 4,
+        "lang": "en",
+        "prompt": "In mathematical reasoning, the current concept is: remainder. Understand this concept.",
+        "target_positions": [
+          10
+        ],
+        "term": "remainder"
+      },
+      {
+        "idx": 4,
+        "lang": "zh",
+        "prompt": "在数学推理中，当前概念是：余数。请理解这个概念。",
+        "target_positions": [
+          11,
+          12
+        ],
+        "term": "余数"
+      },
+      {
+        "idx": 5,
+        "lang": "en",
+        "prompt": "In mathematical reasoning, the current concept is: probability. Understand this concept.",
+        "target_positions": [
+          10
+        ],
+        "term": "probability"
+      },
+      {
+        "idx": 5,
+        "lang": "zh",
+        "prompt": "在数学推理中，当前概念是：概率。请理解这个概念。",
+        "target_positions": [
+          11,
+          12
+        ],
+        "term": "概率"
+      },
+      {
+        "idx": 6,
+        "lang": "en",
+        "prompt": "In mathematical reasoning, the current concept is: angle. Understand this concept.",
+        "target_positions": [
+          10
+        ],
+        "term": "angle"
+      },
+      {
+        "idx": 6,
+        "lang": "zh",
+        "prompt": "在数学推理中，当前概念是：角度。请理解这个概念。",
+        "target_positions": [
+          11,
+          12
+        ],
+        "term": "角度"
+      },
+      {
+        "idx": 7,
+        "lang": "en",
+        "prompt": "In mathematical reasoning, the current concept is: triangle. Understand this concept.",
+        "target_positions": [
+          10
+        ],
+        "term": "triangle"
+      },
+      {
+        "idx": 7,
+        "lang": "zh",
+        "prompt": "在数学推理中，当前概念是：三角形。请理解这个概念。",
+        "target_positions": [
+          11,
+          12,
+          13
+        ],
+        "term": "三角形"
+      },
+      {
+        "idx": 8,
+        "lang": "en",
+        "prompt": "In mathematical reasoning, the current concept is: average. Understand this concept.",
+        "target_positions": [
+          10
+        ],
+        "term": "average"
+      },
+      {
+        "idx": 8,
+        "lang": "zh",
+        "prompt": "在数学推理中，当前概念是：平均数。请理解这个概念。",
+        "target_positions": [
+          11,
+          12
+        ],
+        "term": "平均数"
+      },
+      {
+        "idx": 9,
+        "lang": "en",
+        "prompt": "In mathematical reasoning, the current concept is: integer. Understand this concept.",
+        "target_positions": [
+          10
+        ],
+        "term": "integer"
+      },
+      {
+        "idx": 9,
+        "lang": "zh",
+        "prompt": "在数学推理中，当前概念是：整数。请理解这个概念。",
+        "target_positions": [
+          11,
+          12
+        ],
+        "term": "整数"
+      },
+      {
+        "idx": 10,
+        "lang": "en",
+        "prompt": "In mathematical reasoning, the current concept is: factor. Understand this concept.",
+        "target_positions": [
+          10
+        ],
+        "term": "factor"
+      },
+      {
+        "idx": 10,
+        "lang": "zh",
+        "prompt": "在数学推理中，当前概念是：因数。请理解这个概念。",
+        "target_positions": [
+          11,
+          12
+        ],
+        "term": "因数"
+      },
+      {
+        "idx": 11,
+        "lang": "en",
+        "prompt": "In mathematical reasoning, the current concept is: square root. Understand this concept.",
+        "target_positions": [
+          10,
+          11
+        ],
+        "term": "square root"
+      },
+      {
+        "idx": 11,
+        "lang": "zh",
+        "prompt": "在数学推理中，当前概念是：平方根。请理解这个概念。",
+        "target_positions": [
+          11,
+          12
+        ],
+        "term": "平方根"
+      }
+    ]
+  },
+  "created_at": "2026-04-27T01:31:46",
+  "cuda_visible_devices": "3",
+  "device": "cuda:0",
+  "dtype": "bfloat16",
+  "host": "hpc-node-01",
+  "model_config": {
+    "architectures": [
+      "LlamaForCausalLM"
+    ],
+    "hidden_size": 3072,
+    "model_type": "llama",
+    "num_hidden_layers": 28,
+    "vocab_size": 128256
+  },
+  "model_key": "llama32_3b",
+  "model_spec": {
+    "class": "base_or_instruct_unknown",
+    "family": "llama",
+    "notes": "low-capacity negative control; do not overgeneralize",
+    "path": "/home/Awei/LLM/Model/base/Llama-3.2-3B",
+    "priority": "negative_control",
+    "status": "local"
+  },
+  "num_process_cases": 8,
+  "num_terms": 12,
+  "patch_layers": [
+    7,
+    14,
+    21,
+    27
+  ],
+  "process_verifier": {
+    "accuracy": 0.5625,
+    "invalid_final_correct_false_accept_rate": 0.875,
+    "no_id": 2360,
+    "rows": [
+      {
+        "case_id": "linear_valid",
+        "correct": true,
+        "final_correct_gold": true,
+        "no_token_id": 2360,
+        "pred_process_valid": true,
+        "process_valid_gold": true,
+        "prompt_lang": "en",
+        "risk_type": "other",
+        "yes_minus_no_logprob": 0.5,
+        "yes_token_id": 7566
+      },
+      {
+        "case_id": "linear_valid",
+        "correct": true,
+        "final_correct_gold": true,
+        "no_token_id": 39533,
+        "pred_process_valid": true,
+        "process_valid_gold": true,
+        "prompt_lang": "zh",
+        "risk_type": "other",
+        "yes_minus_no_logprob": 1.8125,
+        "yes_token_id": 55951
+      },
+      {
+        "case_id": "linear_invalid_final_correct",
+        "correct": false,
+        "final_correct_gold": true,
+        "no_token_id": 2360,
+        "pred_process_valid": true,
+        "process_valid_gold": false,
+        "prompt_lang": "en",
+        "risk_type": "invalid_final_correct",
+        "yes_minus_no_logprob": 0.375,
+        "yes_token_id": 7566
+      },
+      {
+        "case_id": "linear_invalid_final_correct",
+        "correct": false,
+        "final_correct_gold": true,
+        "no_token_id": 39533,
+        "pred_process_valid": true,
+        "process_valid_gold": false,
+        "prompt_lang": "zh",
+        "risk_type": "invalid_final_correct",
+        "yes_minus_no_logprob": 1.4375,
+        "yes_token_id": 55951
+      },
+      {
+        "case_id": "area_valid",
+        "correct": true,
+        "final_correct_gold": true,
+        "no_token_id": 2360,
+        "pred_process_valid": true,
+        "process_valid_gold": true,
+        "prompt_lang": "en",
+        "risk_type": "other",
+        "yes_minus_no_logprob": 0.5,
+        "yes_token_id": 7566
+      },
+      {
+        "case_id": "area_valid",
+        "correct": true,
+        "final_correct_gold": true,
+        "no_token_id": 39533,
+        "pred_process_valid": true,
+        "process_valid_gold": true,
+        "prompt_lang": "zh",
+        "risk_type": "other",
+        "yes_minus_no_logprob": 1.4999998807907104,
+        "yes_token_id": 55951
+      },
+      {
+        "case_id": "area_invalid_final_correct",
+        "correct": true,
+        "final_correct_gold": true,
+        "no_token_id": 2360,
+        "pred_process_valid": false,
+        "process_valid_gold": false,
+        "prompt_lang": "en",
+        "risk_type": "invalid_final_correct",
+        "yes_minus_no_logprob": 0.0,
+        "yes_token_id": 7566
+      },
+      {
+        "case_id": "area_invalid_final_correct",
+        "correct": false,
+        "final_correct_gold": true,
+        "no_token_id": 39533,
+        "pred_process_valid": true,
+        "process_valid_gold": false,
+        "prompt_lang": "zh",
+        "risk_type": "invalid_final_correct",
+        "yes_minus_no_logprob": 1.1249998807907104,
+        "yes_token_id": 55951
+      },
+      {
+        "case_id": "derivative_valid",
+        "correct": true,
+        "final_correct_gold": true,
+        "no_token_id": 2360,
+        "pred_process_valid": true,
+        "process_valid_gold": true,
+        "prompt_lang": "en",
+        "risk_type": "other",
+        "yes_minus_no_logprob": 0.3749999403953552,
+        "yes_token_id": 7566
+      },
+      {
+        "case_id": "derivative_valid",
+        "correct": true,
+        "final_correct_gold": true,
+        "no_token_id": 39533,
+        "pred_process_valid": true,
+        "process_valid_gold": true,
+        "prompt_lang": "zh",
+        "risk_type": "other",
+        "yes_minus_no_logprob": 1.1874998807907104,
+        "yes_token_id": 55951
+      },
+      {
+        "case_id": "derivative_invalid_final_correct",
+        "correct": false,
+        "final_correct_gold": true,
+        "no_token_id": 2360,
+        "pred_process_valid": true,
+        "process_valid_gold": false,
+        "prompt_lang": "en",
+        "risk_type": "invalid_final_correct",
+        "yes_minus_no_logprob": 0.4999999403953552,
+        "yes_token_id": 7566
+      },
+      {
+        "case_id": "derivative_invalid_final_correct",
+        "correct": false,
+        "final_correct_gold": true,
+        "no_token_id": 39533,
+        "pred_process_valid": true,
+        "process_valid_gold": false,
+        "prompt_lang": "zh",
+        "risk_type": "invalid_final_correct",
+        "yes_minus_no_logprob": 1.1875,
+        "yes_token_id": 55951
+      },
+      {
+        "case_id": "probability_valid",
+        "correct": true,
+        "final_correct_gold": true,
+        "no_token_id": 2360,
+        "pred_process_valid": true,
+        "process_valid_gold": true,
+        "prompt_lang": "en",
+        "risk_type": "other",
+        "yes_minus_no_logprob": 0.375,
+        "yes_token_id": 7566
+      },
+      {
+        "case_id": "probability_valid",
+        "correct": true,
+        "final_correct_gold": true,
+        "no_token_id": 39533,
+        "pred_process_valid": true,
+        "process_valid_gold": true,
+        "prompt_lang": "zh",
+        "risk_type": "other",
+        "yes_minus_no_logprob": 0.5,
+        "yes_token_id": 55951
+      },
+      {
+        "case_id": "probability_invalid_final_correct",
+        "correct": false,
+        "final_correct_gold": true,
+        "no_token_id": 2360,
+        "pred_process_valid": true,
+        "process_valid_gold": false,
+        "prompt_lang": "en",
+        "risk_type": "invalid_final_correct",
+        "yes_minus_no_logprob": 0.25,
+        "yes_token_id": 7566
+      },
+      {
+        "case_id": "probability_invalid_final_correct",
+        "correct": false,
+        "final_correct_gold": true,
+        "no_token_id": 39533,
+        "pred_process_valid": true,
+        "process_valid_gold": false,
+        "prompt_lang": "zh",
+        "risk_type": "invalid_final_correct",
+        "yes_minus_no_logprob": 0.75,
+        "yes_token_id": 55951
+      }
+    ],
+    "yes_id": 7566,
+    "zh_no_id": 39533,
+    "zh_yes_id": 55951
+  },
+  "residual_patching": {
+    "by_layer": [
+      {
+        "layer": 7,
+        "mean_bad_to_valid_effect": -0.031249970197677612,
+        "mean_valid_to_bad_effect": 1.4901161193847656e-08,
+        "n": 4
+      },
+      {
+        "layer": 14,
+        "mean_bad_to_valid_effect": -0.1874999850988388,
+        "mean_valid_to_bad_effect": 0.09375,
+        "n": 4
+      },
+      {
+        "layer": 21,
+        "mean_bad_to_valid_effect": -0.1875,
+        "mean_valid_to_bad_effect": 0.1875000298023224,
+        "n": 4
+      },
+      {
+        "layer": 27,
+        "mean_bad_to_valid_effect": 0.1249999850988388,
+        "mean_valid_to_bad_effect": 0.4687500447034836,
+        "n": 4
+      }
+    ],
+    "rows": [
+      {
+        "bad_case_id": "linear_invalid_final_correct",
+        "bad_to_valid_effect": 0.0,
+        "bad_to_valid_margin": 0.5,
+        "base_bad_margin": 0.375,
+        "base_valid_margin": 0.5,
+        "layer": 7,
+        "valid_case_id": "linear_valid",
+        "valid_to_bad_effect": 0.0,
+        "valid_to_bad_margin": 0.375
+      },
+      {
+        "bad_case_id": "linear_invalid_final_correct",
+        "bad_to_valid_effect": -0.12500005960464478,
+        "bad_to_valid_margin": 0.3749999403953552,
+        "base_bad_margin": 0.375,
+        "base_valid_margin": 0.5,
+        "layer": 14,
+        "valid_case_id": "linear_valid",
+        "valid_to_bad_effect": 0.12499994039535522,
+        "valid_to_bad_margin": 0.4999999403953552
+      },
+      {
+        "bad_case_id": "linear_invalid_final_correct",
+        "bad_to_valid_effect": -0.125,
+        "bad_to_valid_margin": 0.375,
+        "base_bad_margin": 0.375,
+        "base_valid_margin": 0.5,
+        "layer": 21,
+        "valid_case_id": "linear_valid",
+        "valid_to_bad_effect": 0.24999994039535522,
+        "valid_to_bad_margin": 0.6249999403953552
+      },
+      {
+        "bad_case_id": "linear_invalid_final_correct",
+        "bad_to_valid_effect": 0.125,
+        "bad_to_valid_margin": 0.625,
+        "base_bad_margin": 0.375,
+        "base_valid_margin": 0.5,
+        "layer": 27,
+        "valid_case_id": "linear_valid",
+        "valid_to_bad_effect": 0.5000000596046448,
+        "valid_to_bad_margin": 0.8750000596046448
+      },
+      {
+        "bad_case_id": "area_invalid_final_correct",
+        "bad_to_valid_effect": 0.0,
+        "bad_to_valid_margin": 0.5,
+        "base_bad_margin": 0.0,
+        "base_valid_margin": 0.5,
+        "layer": 7,
+        "valid_case_id": "area_valid",
+        "valid_to_bad_effect": 0.0,
+        "valid_to_bad_margin": 0.0
+      },
+      {
+        "bad_case_id": "area_invalid_final_correct",
+        "bad_to_valid_effect": -0.5,
+        "bad_to_valid_margin": 0.0,
+        "base_bad_margin": 0.0,
+        "base_valid_margin": 0.5,
+        "layer": 14,
+        "valid_case_id": "area_valid",
+        "valid_to_bad_effect": 0.3749999403953552,
+        "valid_to_bad_margin": 0.3749999403953552
+      },
+      {
+        "bad_case_id": "area_invalid_final_correct",
+        "bad_to_valid_effect": -0.5,
+        "bad_to_valid_margin": 0.0,
+        "base_bad_margin": 0.0,
+        "base_valid_margin": 0.5,
+        "layer": 21,
+        "valid_case_id": "area_valid",
+        "valid_to_bad_effect": 0.3750000596046448,
+        "valid_to_bad_margin": 0.3750000596046448
+      },
+      {
+        "bad_case_id": "area_invalid_final_correct",
+        "bad_to_valid_effect": -0.2500000596046448,
+        "bad_to_valid_margin": 0.24999994039535522,
+        "base_bad_margin": 0.0,
+        "base_valid_margin": 0.5,
+        "layer": 27,
+        "valid_case_id": "area_valid",
+        "valid_to_bad_effect": 0.75,
+        "valid_to_bad_margin": 0.75
+      },
+      {
+        "bad_case_id": "derivative_invalid_final_correct",
+        "bad_to_valid_effect": 1.1920928955078125e-07,
+        "bad_to_valid_margin": 0.3750000596046448,
+        "base_bad_margin": 0.4999999403953552,
+        "base_valid_margin": 0.3749999403953552,
+        "layer": 7,
+        "valid_case_id": "derivative_valid",
+        "valid_to_bad_effect": 5.960464477539063e-08,
+        "valid_to_bad_margin": 0.5
+      },
+      {
+        "bad_case_id": "derivative_invalid_final_correct",
+        "bad_to_valid_effect": 5.960464477539063e-08,
+        "bad_to_valid_margin": 0.375,
+        "base_bad_margin": 0.4999999403953552,
+        "base_valid_margin": 0.3749999403953552,
+        "layer": 14,
+        "valid_case_id": "derivative_valid",
+        "valid_to_bad_effect": -0.12499994039535522,
+        "valid_to_bad_margin": 0.375
+      },
+      {
+        "bad_case_id": "derivative_invalid_final_correct",
+        "bad_to_valid_effect": 0.0,
+        "bad_to_valid_margin": 0.3749999403953552,
+        "base_bad_margin": 0.4999999403953552,
+        "base_valid_margin": 0.3749999403953552,
+        "layer": 21,
+        "valid_case_id": "derivative_valid",
+        "valid_to_bad_effect": 1.1920928955078125e-07,
+        "valid_to_bad_margin": 0.5000000596046448
+      },
+      {
+        "bad_case_id": "derivative_invalid_final_correct",
+        "bad_to_valid_effect": 0.375,
+        "bad_to_valid_margin": 0.7499999403953552,
+        "base_bad_margin": 0.4999999403953552,
+        "base_valid_margin": 0.3749999403953552,
+        "layer": 27,
+        "valid_case_id": "derivative_valid",
+        "valid_to_bad_effect": 0.25000011920928955,
+        "valid_to_bad_margin": 0.7500000596046448
+      },
+      {
+        "bad_case_id": "probability_invalid_final_correct",
+        "bad_to_valid_effect": -0.125,
+        "bad_to_valid_margin": 0.25,
+        "base_bad_margin": 0.25,
+        "base_valid_margin": 0.375,
+        "layer": 7,
+        "valid_case_id": "probability_valid",
+        "valid_to_bad_effect": 0.0,
+        "valid_to_bad_margin": 0.25
+      },
+      {
+        "bad_case_id": "probability_invalid_final_correct",
+        "bad_to_valid_effect": -0.12499994039535522,
+        "bad_to_valid_margin": 0.2500000596046448,
+        "base_bad_margin": 0.25,
+        "base_valid_margin": 0.375,
+        "layer": 14,
+        "valid_case_id": "probability_valid",
+        "valid_to_bad_effect": 5.960464477539063e-08,
+        "valid_to_bad_margin": 0.2500000596046448
+      },
+      {
+        "bad_case_id": "probability_invalid_final_correct",
+        "bad_to_valid_effect": -0.125,
+        "bad_to_valid_margin": 0.25,
+        "base_bad_margin": 0.25,
+        "base_valid_margin": 0.375,
+        "layer": 21,
+        "valid_case_id": "probability_valid",
+        "valid_to_bad_effect": 0.125,
+        "valid_to_bad_margin": 0.375
+      },
+      {
+        "bad_case_id": "probability_invalid_final_correct",
+        "bad_to_valid_effect": 0.25,
+        "bad_to_valid_margin": 0.625,
+        "base_bad_margin": 0.25,
+        "base_valid_margin": 0.375,
+        "layer": 27,
+        "valid_case_id": "probability_valid",
+        "valid_to_bad_effect": 0.375,
+        "valid_to_bad_margin": 0.625
+      }
+    ]
+  },
+  "started_at": "2026-04-27T01:31:41",
+  "tokenization": [
+    {
+      "lang": "en",
+      "num_tokens": 2,
+      "pair_en": "derivative",
+      "pair_zh": "导数",
+      "text": "derivative",
+      "token_ids": [
+        1126,
+        48258
+      ],
+      "tokens": [
+        "der",
+        "ivative"
+      ]
+    },
+    {
+      "lang": "zh",
+      "num_tokens": 2,
+      "pair_en": "derivative",
+      "pair_zh": "导数",
+      "text": "导数",
+      "token_ids": [
+        65820,
+        9039
+      ],
+      "tokens": [
+        "å¯¼",
+        "æķ°"
+      ]
+    },
+    {
+      "lang": "en",
+      "num_tokens": 2,
+      "pair_en": "prime number",
+      "pair_zh": "质数",
+      "text": "prime number",
+      "token_ids": [
+        33438,
+        1396
+      ],
+      "tokens": [
+        "prime",
+        "Ġnumber"
+      ]
+    },
+    {
+      "lang": "zh",
+      "num_tokens": 2,
+      "pair_en": "prime number",
+      "pair_zh": "质数",
+      "text": "质数",
+      "token_ids": [
+        103706,
+        9039
+      ],
+      "tokens": [
+        "è´¨",
+        "æķ°"
+      ]
+    },
+    {
+      "lang": "en",
+      "num_tokens": 1,
+      "pair_en": "fraction",
+      "pair_zh": "分数",
+      "text": "fraction",
+      "token_ids": [
+        82190
+      ],
+      "tokens": [
+        "fraction"
+      ]
+    },
+    {
+      "lang": "zh",
+      "num_tokens": 2,
+      "pair_en": "fraction",
+      "pair_zh": "分数",
+      "text": "分数",
+      "token_ids": [
+        17620,
+        9039
+      ],
+      "tokens": [
+        "åĪĨ",
+        "æķ°"
+      ]
+    },
+    {
+      "lang": "en",
+      "num_tokens": 2,
+      "pair_en": "equation",
+      "pair_zh": "方程",
+      "text": "equation",
+      "token_ids": [
+        26378,
+        367
+      ],
+      "tokens": [
+        "equ",
+        "ation"
+      ]
+    },
+    {
+      "lang": "zh",
+      "num_tokens": 2,
+      "pair_en": "equation",
+      "pair_zh": "方程",
+      "text": "方程",
+      "token_ids": [
+        24273,
+        39607
+      ],
+      "tokens": [
+        "æĸ¹",
+        "ç¨ĭ"
+      ]
+    },
+    {
+      "lang": "en",
+      "num_tokens": 1,
+      "pair_en": "remainder",
+      "pair_zh": "余数",
+      "text": "remainder",
+      "token_ids": [
+        78481
+      ],
+      "tokens": [
+        "remainder"
+      ]
+    },
+    {
+      "lang": "zh",
+      "num_tokens": 2,
+      "pair_en": "remainder",
+      "pair_zh": "余数",
+      "text": "余数",
+      "token_ids": [
+        89783,
+        9039
+      ],
+      "tokens": [
+        "ä½Ļ",
+        "æķ°"
+      ]
+    },
+    {
+      "lang": "en",
+      "num_tokens": 1,
+      "pair_en": "probability",
+      "pair_zh": "概率",
+      "text": "probability",
+      "token_ids": [
+        88540
+      ],
+      "tokens": [
+        "probability"
+      ]
+    },
+    {
+      "lang": "zh",
+      "num_tokens": 2,
+      "pair_en": "probability",
+      "pair_zh": "概率",
+      "text": "概率",
+      "token_ids": [
+        107963,
+        96455
+      ],
+      "tokens": [
+        "æ¦Ĥ",
+        "çİĩ"
+      ]
+    },
+    {
+      "lang": "en",
+      "num_tokens": 1,
+      "pair_en": "angle",
+      "pair_zh": "角度",
+      "text": "angle",
+      "token_ids": [
+        4134
+      ],
+      "tokens": [
+        "angle"
+      ]
+    },
+    {
+      "lang": "zh",
+      "num_tokens": 2,
+      "pair_en": "angle",
+      "pair_zh": "角度",
+      "text": "角度",
+      "token_ids": [
+        64936,
+        27479
+      ],
+      "tokens": [
+        "è§Ĵ",
+        "åº¦"
+      ]
+    },
+    {
+      "lang": "en",
+      "num_tokens": 1,
+      "pair_en": "triangle",
+      "pair_zh": "三角形",
+      "text": "triangle",
+      "token_ids": [
+        56214
+      ],
+      "tokens": [
+        "triangle"
+      ]
+    },
+    {
+      "lang": "zh",
+      "num_tokens": 3,
+      "pair_en": "triangle",
+      "pair_zh": "三角形",
+      "text": "三角形",
+      "token_ids": [
+        46091,
+        64936,
+        83799
+      ],
+      "tokens": [
+        "ä¸ī",
+        "è§Ĵ",
+        "å½¢"
+      ]
+    },
+    {
+      "lang": "en",
+      "num_tokens": 1,
+      "pair_en": "average",
+      "pair_zh": "平均数",
+      "text": "average",
+      "token_ids": [
+        17645
+      ],
+      "tokens": [
+        "average"
+      ]
+    },
+    {
+      "lang": "zh",
+      "num_tokens": 2,
+      "pair_en": "average",
+      "pair_zh": "平均数",
+      "text": "平均数",
+      "token_ids": [
+        115274,
+        9039
+      ],
+      "tokens": [
+        "å¹³åĿĩ",
+        "æķ°"
+      ]
+    },
+    {
+      "lang": "en",
+      "num_tokens": 1,
+      "pair_en": "integer",
+      "pair_zh": "整数",
+      "text": "integer",
+      "token_ids": [
+        11924
+      ],
+      "tokens": [
+        "integer"
+      ]
+    },
+    {
+      "lang": "zh",
+      "num_tokens": 2,
+      "pair_en": "integer",
+      "pair_zh": "整数",
+      "text": "整数",
+      "token_ids": [
+        64531,
+        9039
+      ],
+      "tokens": [
+        "æķ´",
+        "æķ°"
+      ]
+    },
+    {
+      "lang": "en",
+      "num_tokens": 1,
+      "pair_en": "factor",
+      "pair_zh": "因数",
+      "text": "factor",
+      "token_ids": [
+        38691
+      ],
+      "tokens": [
+        "factor"
+      ]
+    },
+    {
+      "lang": "zh",
+      "num_tokens": 2,
+      "pair_en": "factor",
+      "pair_zh": "因数",
+      "text": "因数",
+      "token_ids": [
+        63212,
+        9039
+      ],
+      "tokens": [
+        "åĽł",
+        "æķ°"
+      ]
+    },
+    {
+      "lang": "en",
+      "num_tokens": 2,
+      "pair_en": "square root",
+      "pair_zh": "平方根",
+      "text": "square root",
+      "token_ids": [
+        38576,
+        3789
+      ],
+      "tokens": [
+        "square",
+        "Ġroot"
+      ]
+    },
+    {
+      "lang": "zh",
+      "num_tokens": 2,
+      "pair_en": "square root",
+      "pair_zh": "平方根",
+      "text": "平方根",
+      "token_ids": [
+        112396,
+        102831
+      ],
+      "tokens": [
+        "å¹³æĸ¹",
+        "æł¹"
+      ]
+    }
+  ]
+}

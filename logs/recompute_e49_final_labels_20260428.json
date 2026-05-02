@@ -1,0 +1,52 @@
+{
+  "created_at": "2026-04-28T13:00:52",
+  "changes": [
+    {
+      "path": "/home/Awei/P02_multilingual_process_lens/results/E49_hard_task_conditioning_official/qwen35_27b_e49_answer_anchor_hard_task_conditioning.json",
+      "archive": "/home/Awei/P02_multilingual_process_lens/archive/logic_error_quarantine_20260428/qwen35_27b_e49_answer_anchor_hard_task_conditioning.pre_e49_line_anchor_fix_20260428.json",
+      "changed_rows": [
+        {
+          "row_index": 2,
+          "task_id": "aime25_icecream_ordered_assign_p3",
+          "old": [
+            "16.",
+            true,
+            true,
+            null,
+            "final_correct_needs_manual_process_audit",
+            false
+          ],
+          "new": [
+            "",
+            false,
+            false,
+            null,
+            "not_final_correct",
+            false
+          ]
+        },
+        {
+          "row_index": 5,
+          "task_id": "aime25_trapezoid_incircle_p6",
+          "old": [
+            "<integer>`.",
+            true,
+            false,
+            null,
+            "not_final_correct",
+            false
+          ],
+          "new": [
+            "",
+            false,
+            false,
+            null,
+            "not_final_correct",
+            false
+          ]
+        }
+      ]
+    }
+  ],
+  "changed_file_count": 1
+}

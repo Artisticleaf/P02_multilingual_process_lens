@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Conda / venv
+.conda/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Large model / data artifacts
+*.bin
+*.safetensors
+*.gguf
+*.pth
+
+# Dependencies
+.deps/
+
+# Logs
+logs/*.log
+logs/*.jsonl
+
+# Results - large .pt files
+results/**/*.pt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets / environment
+.env
+.env.local
+*.secret

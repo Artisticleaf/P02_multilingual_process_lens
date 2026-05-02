@@ -1,0 +1,30 @@
+{
+  "args": {
+    "dtype": "bfloat16",
+    "gpu_memory_utilization": 0.5,
+    "max_model_len": 1024,
+    "model_impl": "transformers",
+    "model_key": "qwen35_9b",
+    "out_dir": "/home/Awei/P02_multilingual_process_lens/logs",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "tensor_parallel_size": 4
+  },
+  "backend": "vllm",
+  "created_at": "2026-04-28T12:20:39",
+  "error_text": "1 validation error for ModelConfig\n  Value error, The Transformers implementation of 'Qwen3_5ForConditionalGeneration' is not compatible with vLLM. [type=value_error, input_value=ArgsKwargs((), {'model': ...rocessor_plugin': None}), input_type=ArgsKwargs]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error",
+  "error_type": "ValidationError",
+  "host": "hpc-node-01",
+  "model_key": "qwen35_9b",
+  "model_spec": {
+    "class": "post_trained_hybrid",
+    "family": "qwen35",
+    "loader_risk": "conditional_generation_or_multimodal; may require AutoModelForImageTextToText/AutoProcessor rather than AutoModelForCausalLM",
+    "notes": "latest small Qwen candidate; architecture may differ from standard Transformer",
+    "path": "/home/Awei/LLM/Model/base/qwen35_9b",
+    "priority": "P0",
+    "remote_repo": "Qwen/Qwen3.5-9B",
+    "status": "local_downloaded"
+  },
+  "ok": false,
+  "traceback_tail": "Traceback (most recent call last):\n  File \"/home/Awei/P02_multilingual_process_lens/scripts/check_backend_compatibility.py\", line 65, in main\n    llm = LLM(**kwargs)\n          ^^^^^^^^^^^^^\n  File \"/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/vllm/entrypoints/llm.py\", line 334, in __init__\n    self.llm_engine = LLMEngine.from_engine_args(\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/vllm/v1/engine/llm_engine.py\", line 175, in from_engine_args\n    vllm_config = engine_args.create_engine_config(usage_context)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/vllm/engine/arg_utils.py\", line 1365, in create_engine_config\n    model_config = self.create_model_config()\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/vllm/engine/arg_utils.py\", line 1221, in create_model_config\n    return ModelConfig(\n           ^^^^^^^^^^^^\n  File \"/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/pydantic/_internal/_dataclasses.py\", line 121, in __init__\n    s.__pydantic_validator__.validate_python(ArgsKwargs(args, kwargs), self_instance=s)\npydantic_core._pydantic_core.ValidationError: 1 validation error for ModelConfig\n  Value error, The Transformers implementation of 'Qwen3_5ForConditionalGeneration' is not compatible with vLLM. [type=value_error, input_value=ArgsKwargs((), {'model': ...rocessor_plugin': None}), input_type=ArgsKwargs]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+}

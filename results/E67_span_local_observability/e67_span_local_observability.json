@@ -1,0 +1,4274 @@
+{
+  "created_at": "2026-04-29T04:05:27",
+  "span_meta": [
+    {
+      "audit_idx": 610002,
+      "task_id": "e61_en_en_meter_centimeter",
+      "family": "unit_scale",
+      "route_id": "en_en",
+      "error_span": "1 meter is 10 centimeters",
+      "error_span_literal_found": true,
+      "error_span_char_pos": 0,
+      "completion_len": 168,
+      "error_span_relative_pos": 0.0
+    },
+    {
+      "audit_idx": 610012,
+      "task_id": "e61_zh_zh_meter_centimeter",
+      "family": "unit_scale",
+      "route_id": "zh_zh",
+      "error_span": "1 meter is 10 centimeters",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 69,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610022,
+      "task_id": "e61_zh_en_meter_centimeter",
+      "family": "unit_scale",
+      "route_id": "zh_en",
+      "error_span": "1 meter is 10 centimeters",
+      "error_span_literal_found": true,
+      "error_span_char_pos": 0,
+      "completion_len": 168,
+      "error_span_relative_pos": 0.0
+    },
+    {
+      "audit_idx": 610032,
+      "task_id": "e61_en_zh_meter_centimeter",
+      "family": "unit_scale",
+      "route_id": "en_zh",
+      "error_span": "1 meter is 10 centimeters",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 69,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610042,
+      "task_id": "e61_mixed_meter_centimeter",
+      "family": "unit_scale",
+      "route_id": "mixed",
+      "error_span": "1 meter is 10 centimeters",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 93,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610052,
+      "task_id": "e61_romanized_zh_meter_centimeter",
+      "family": "unit_scale",
+      "route_id": "romanized_zh",
+      "error_span": "1 meter is 10 centimeters",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 112,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610062,
+      "task_id": "e61_en_en_increase_base",
+      "family": "percentage_base",
+      "route_id": "en_en",
+      "error_span": "25% increase means the final price is 25% of the original",
+      "error_span_literal_found": true,
+      "error_span_char_pos": 2,
+      "completion_len": 161,
+      "error_span_relative_pos": 0.012422360248447204
+    },
+    {
+      "audit_idx": 610072,
+      "task_id": "e61_zh_zh_increase_base",
+      "family": "percentage_base",
+      "route_id": "zh_zh",
+      "error_span": "25% increase means the final price is 25% of the original",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 73,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610082,
+      "task_id": "e61_zh_en_increase_base",
+      "family": "percentage_base",
+      "route_id": "zh_en",
+      "error_span": "25% increase means the final price is 25% of the original",
+      "error_span_literal_found": true,
+      "error_span_char_pos": 2,
+      "completion_len": 161,
+      "error_span_relative_pos": 0.012422360248447204
+    },
+    {
+      "audit_idx": 610092,
+      "task_id": "e61_en_zh_increase_base",
+      "family": "percentage_base",
+      "route_id": "en_zh",
+      "error_span": "25% increase means the final price is 25% of the original",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 73,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610102,
+      "task_id": "e61_mixed_increase_base",
+      "family": "percentage_base",
+      "route_id": "mixed",
+      "error_span": "25% increase means the final price is 25% of the original",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 103,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610112,
+      "task_id": "e61_romanized_zh_increase_base",
+      "family": "percentage_base",
+      "route_id": "romanized_zh",
+      "error_span": "25% increase means the final price is 25% of the original",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 136,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610122,
+      "task_id": "e61_en_en_strict_inclusive_mix",
+      "family": "quantifier_inequality",
+      "route_id": "en_en",
+      "error_span": "greater than -1 includes -1",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 148,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610132,
+      "task_id": "e61_zh_zh_strict_inclusive_mix",
+      "family": "quantifier_inequality",
+      "route_id": "zh_zh",
+      "error_span": "greater than -1 includes -1",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 57,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610142,
+      "task_id": "e61_zh_en_strict_inclusive_mix",
+      "family": "quantifier_inequality",
+      "route_id": "zh_en",
+      "error_span": "greater than -1 includes -1",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 148,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610152,
+      "task_id": "e61_en_zh_strict_inclusive_mix",
+      "family": "quantifier_inequality",
+      "route_id": "en_zh",
+      "error_span": "greater than -1 includes -1",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 57,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610162,
+      "task_id": "e61_mixed_strict_inclusive_mix",
+      "family": "quantifier_inequality",
+      "route_id": "mixed",
+      "error_span": "greater than -1 includes -1",
+      "error_span_literal_found": true,
+      "error_span_char_pos": 0,
+      "completion_len": 92,
+      "error_span_relative_pos": 0.0
+    },
+    {
+      "audit_idx": 610172,
+      "task_id": "e61_romanized_zh_strict_inclusive_mix",
+      "family": "quantifier_inequality",
+      "route_id": "romanized_zh",
+      "error_span": "greater than -1 includes -1",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 94,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610182,
+      "task_id": "e61_en_en_roles_ordered",
+      "family": "counting_order",
+      "route_id": "en_en",
+      "error_span": "choosing president and secretary is unordered",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 166,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610192,
+      "task_id": "e61_zh_zh_roles_ordered",
+      "family": "counting_order",
+      "route_id": "zh_zh",
+      "error_span": "choosing president and secretary is unordered",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 66,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610202,
+      "task_id": "e61_zh_en_roles_ordered",
+      "family": "counting_order",
+      "route_id": "zh_en",
+      "error_span": "choosing president and secretary is unordered",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 166,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610212,
+      "task_id": "e61_en_zh_roles_ordered",
+      "family": "counting_order",
+      "route_id": "en_zh",
+      "error_span": "choosing president and secretary is unordered",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 66,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610222,
+      "task_id": "e61_mixed_roles_ordered",
+      "family": "counting_order",
+      "route_id": "mixed",
+      "error_span": "choosing president and secretary is unordered",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 128,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610232,
+      "task_id": "e61_romanized_zh_roles_ordered",
+      "family": "counting_order",
+      "route_id": "romanized_zh",
+      "error_span": "choosing president and secretary is unordered",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 126,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610242,
+      "task_id": "e61_en_en_sum_vs_max_table",
+      "family": "table_interpretation",
+      "route_id": "en_en",
+      "error_span": "total means the largest entry",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 123,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610252,
+      "task_id": "e61_zh_zh_sum_vs_max_table",
+      "family": "table_interpretation",
+      "route_id": "zh_zh",
+      "error_span": "total means the largest entry",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 54,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610262,
+      "task_id": "e61_zh_en_sum_vs_max_table",
+      "family": "table_interpretation",
+      "route_id": "zh_en",
+      "error_span": "total means the largest entry",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 123,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610272,
+      "task_id": "e61_en_zh_sum_vs_max_table",
+      "family": "table_interpretation",
+      "route_id": "en_zh",
+      "error_span": "total means the largest entry",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 54,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610282,
+      "task_id": "e61_mixed_sum_vs_max_table",
+      "family": "table_interpretation",
+      "route_id": "mixed",
+      "error_span": "total means the largest entry",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 84,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610292,
+      "task_id": "e61_romanized_zh_sum_vs_max_table",
+      "family": "table_interpretation",
+      "route_id": "romanized_zh",
+      "error_span": "total means the largest entry",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 120,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610302,
+      "task_id": "e61_en_en_python_range_stop",
+      "family": "code_execution",
+      "route_id": "en_en",
+      "error_span": "range(2,6) includes 6",
+      "error_span_literal_found": true,
+      "error_span_char_pos": 0,
+      "completion_len": 130,
+      "error_span_relative_pos": 0.0
+    },
+    {
+      "audit_idx": 610312,
+      "task_id": "e61_zh_zh_python_range_stop",
+      "family": "code_execution",
+      "route_id": "zh_zh",
+      "error_span": "range(2,6) includes 6",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 82,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610322,
+      "task_id": "e61_zh_en_python_range_stop",
+      "family": "code_execution",
+      "route_id": "zh_en",
+      "error_span": "range(2,6) includes 6",
+      "error_span_literal_found": true,
+      "error_span_char_pos": 0,
+      "completion_len": 130,
+      "error_span_relative_pos": 0.0
+    },
+    {
+      "audit_idx": 610332,
+      "task_id": "e61_en_zh_python_range_stop",
+      "family": "code_execution",
+      "route_id": "en_zh",
+      "error_span": "range(2,6) includes 6",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 82,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610342,
+      "task_id": "e61_mixed_python_range_stop",
+      "family": "code_execution",
+      "route_id": "mixed",
+      "error_span": "range(2,6) includes 6",
+      "error_span_literal_found": true,
+      "error_span_char_pos": 0,
+      "completion_len": 95,
+      "error_span_relative_pos": 0.0
+    },
+    {
+      "audit_idx": 610352,
+      "task_id": "e61_romanized_zh_python_range_stop",
+      "family": "code_execution",
+      "route_id": "romanized_zh",
+      "error_span": "range(2,6) includes 6",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 115,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610362,
+      "task_id": "e61_en_en_multiple_of_six_even",
+      "family": "proof_validity",
+      "route_id": "en_en",
+      "error_span": "all even numbers are multiples of 6",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 156,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610372,
+      "task_id": "e61_zh_zh_multiple_of_six_even",
+      "family": "proof_validity",
+      "route_id": "zh_zh",
+      "error_span": "all even numbers are multiples of 6",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 70,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610382,
+      "task_id": "e61_zh_en_multiple_of_six_even",
+      "family": "proof_validity",
+      "route_id": "zh_en",
+      "error_span": "all even numbers are multiples of 6",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 156,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610392,
+      "task_id": "e61_en_zh_multiple_of_six_even",
+      "family": "proof_validity",
+      "route_id": "en_zh",
+      "error_span": "all even numbers are multiples of 6",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 70,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610402,
+      "task_id": "e61_mixed_multiple_of_six_even",
+      "family": "proof_validity",
+      "route_id": "mixed",
+      "error_span": "all even numbers are multiples of 6",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 114,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610412,
+      "task_id": "e61_romanized_zh_multiple_of_six_even",
+      "family": "proof_validity",
+      "route_id": "romanized_zh",
+      "error_span": "all even numbers are multiples of 6",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 126,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610422,
+      "task_id": "e61_en_en_rectangle_perimeter_area",
+      "family": "geometry_notation",
+      "route_id": "en_en",
+      "error_span": "perimeter means length times width",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 110,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610432,
+      "task_id": "e61_zh_zh_rectangle_perimeter_area",
+      "family": "geometry_notation",
+      "route_id": "zh_zh",
+      "error_span": "perimeter means length times width",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 52,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610442,
+      "task_id": "e61_zh_en_rectangle_perimeter_area",
+      "family": "geometry_notation",
+      "route_id": "zh_en",
+      "error_span": "perimeter means length times width",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 110,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610452,
+      "task_id": "e61_en_zh_rectangle_perimeter_area",
+      "family": "geometry_notation",
+      "route_id": "en_zh",
+      "error_span": "perimeter means length times width",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 52,
+      "error_span_relative_pos": null
+    },
+    {
+      "audit_idx": 610462,
+      "task_id": "e61_mixed_rectangle_perimeter_area",
+      "family": "geometry_notation",
+      "route_id": "mixed",
+      "error_span": "perimeter means length times width",
+      "error_span_literal_found": true,
+      "error_span_char_pos": 0,
+      "completion_len": 95,
+      "error_span_relative_pos": 0.0
+    },
+    {
+      "audit_idx": 610472,
+      "task_id": "e61_romanized_zh_rectangle_perimeter_area",
+      "family": "geometry_notation",
+      "route_id": "romanized_zh",
+      "error_span": "perimeter means length times width",
+      "error_span_literal_found": false,
+      "error_span_char_pos": -1,
+      "completion_len": 105,
+      "error_span_relative_pos": null
+    }
+  ],
+  "verifier_rows": [
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610002,
+      "family": "unit_scale",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": false,
+      "margin": -1.125
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610012,
+      "family": "unit_scale",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -2.1250000596046448
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610022,
+      "family": "unit_scale",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": false,
+      "margin": -1.5
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610032,
+      "family": "unit_scale",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -0.4999999701976776
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610042,
+      "family": "unit_scale",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -1.25
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610052,
+      "family": "unit_scale",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -0.375
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610062,
+      "family": "percentage_base",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": true,
+      "margin": 1.4999999552965164
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610072,
+      "family": "percentage_base",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 0.125
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610082,
+      "family": "percentage_base",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": true,
+      "margin": 0.5
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610092,
+      "family": "percentage_base",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 0.25
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610102,
+      "family": "percentage_base",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 4.2499998062849045
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610112,
+      "family": "percentage_base",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 2.2499999031424522
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610122,
+      "family": "quantifier_inequality",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -1.4999999552965164
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610132,
+      "family": "quantifier_inequality",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -2.375000052154064
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610142,
+      "family": "quantifier_inequality",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -2.3749999031424522
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610152,
+      "family": "quantifier_inequality",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -0.375
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610162,
+      "family": "quantifier_inequality",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": false,
+      "margin": -1.1250000298023224
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610172,
+      "family": "quantifier_inequality",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -1.6249999552965164
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610182,
+      "family": "counting_order",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 0.5
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610192,
+      "family": "counting_order",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -0.125
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610202,
+      "family": "counting_order",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 0.375
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610212,
+      "family": "counting_order",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -0.375
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610222,
+      "family": "counting_order",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 2.6249999329447746
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610232,
+      "family": "counting_order",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 0.7499999701976776
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610242,
+      "family": "table_interpretation",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -0.8750000298023224
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610252,
+      "family": "table_interpretation",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -0.875
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610262,
+      "family": "table_interpretation",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -1.2499999701976776
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610272,
+      "family": "table_interpretation",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 0.25
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610282,
+      "family": "table_interpretation",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 2.4999998956918716
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610292,
+      "family": "table_interpretation",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -0.25
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610302,
+      "family": "code_execution",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": true,
+      "margin": 4.375000189058483
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610312,
+      "family": "code_execution",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 2.5000000074505806
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610322,
+      "family": "code_execution",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": true,
+      "margin": 3.5000000447034836
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610332,
+      "family": "code_execution",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 3.6250000782310963
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610342,
+      "family": "code_execution",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": true,
+      "margin": 3.000000048428774
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610352,
+      "family": "code_execution",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 2.625000022351742
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610362,
+      "family": "proof_validity",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -2.8749998807907104
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610372,
+      "family": "proof_validity",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -2.7499999962747097
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610382,
+      "family": "proof_validity",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -2.375
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610392,
+      "family": "proof_validity",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -1.375
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610402,
+      "family": "proof_validity",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -0.25
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610412,
+      "family": "proof_validity",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -0.25
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610422,
+      "family": "geometry_notation",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -2.0
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610432,
+      "family": "geometry_notation",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -3.250000100582838
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610442,
+      "family": "geometry_notation",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -2.0000000596046448
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610452,
+      "family": "geometry_notation",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -2.1249999031424522
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610462,
+      "family": "geometry_notation",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": false,
+      "margin": -1.3749999552965164
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610472,
+      "family": "geometry_notation",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -1.6249999552965164
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610002,
+      "family": "unit_scale",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": false,
+      "margin": -20.718749880790718
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610012,
+      "family": "unit_scale",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -19.374999880790718
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610022,
+      "family": "unit_scale",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": false,
+      "margin": -16.937499880790718
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610032,
+      "family": "unit_scale",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -13.437500119210881
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610042,
+      "family": "unit_scale",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -9.750000240153895
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610052,
+      "family": "unit_scale",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -11.625000000045475
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610062,
+      "family": "percentage_base",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": true,
+      "margin": 4.000000134110451
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610072,
+      "family": "percentage_base",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 6.249999835155904
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610082,
+      "family": "percentage_base",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": true,
+      "margin": 2.1250000968575478
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610092,
+      "family": "percentage_base",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 6.999999938940164
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610102,
+      "family": "percentage_base",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 15.312499642372188
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610112,
+      "family": "percentage_base",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 27.453125
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610122,
+      "family": "quantifier_inequality",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -7.624999761930667
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610132,
+      "family": "quantifier_inequality",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -4.000000176951289
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610142,
+      "family": "quantifier_inequality",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -5.62500005424954
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610152,
+      "family": "quantifier_inequality",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -7.24999989522621
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610162,
+      "family": "quantifier_inequality",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": false,
+      "margin": -6.249999955878593
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610172,
+      "family": "quantifier_inequality",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -10.625000119538527
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610182,
+      "family": "counting_order",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 14.562499523162955
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610192,
+      "family": "counting_order",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 12.499999880798441
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610202,
+      "family": "counting_order",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 15.49999976158145
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610212,
+      "family": "counting_order",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 17.90625
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610222,
+      "family": "counting_order",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 23.76953125
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610232,
+      "family": "counting_order",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 26.04296875
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610242,
+      "family": "table_interpretation",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -21.75781226158145
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610252,
+      "family": "table_interpretation",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -6.374999901861884
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610262,
+      "family": "table_interpretation",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -17.18749976158145
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610272,
+      "family": "table_interpretation",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 3.625000111758709
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610282,
+      "family": "table_interpretation",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 16.968749880790718
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610292,
+      "family": "table_interpretation",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 21.53125
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610302,
+      "family": "code_execution",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": true,
+      "margin": 16.187499642372188
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610312,
+      "family": "code_execution",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 12.562500238429038
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610322,
+      "family": "code_execution",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": true,
+      "margin": 16.062499880790718
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610332,
+      "family": "code_execution",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 15.499999523162955
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610342,
+      "family": "code_execution",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": true,
+      "margin": 21.125
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610352,
+      "family": "code_execution",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 21.75
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610362,
+      "family": "proof_validity",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -2.7500000670552254
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610372,
+      "family": "proof_validity",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -6.12500001071021
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610382,
+      "family": "proof_validity",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -3.125000100582838
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610392,
+      "family": "proof_validity",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -3.875000035390258
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610402,
+      "family": "proof_validity",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -12.249999880802534
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610412,
+      "family": "proof_validity",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -10.24999976231993
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610422,
+      "family": "geometry_notation",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -20.968749880790718
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610432,
+      "family": "geometry_notation",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -19.718749880790718
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610442,
+      "family": "geometry_notation",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -16.99999976158145
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610452,
+      "family": "geometry_notation",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -14.000000000000455
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610462,
+      "family": "geometry_notation",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": false,
+      "margin": -11.749999523195584
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610472,
+      "family": "geometry_notation",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 7.250000014028046
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610002,
+      "family": "unit_scale",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": false,
+      "margin": -10.781237602790497
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610012,
+      "family": "unit_scale",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -11.562500715294846
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610022,
+      "family": "unit_scale",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": false,
+      "margin": -11.937501549733952
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610032,
+      "family": "unit_scale",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -8.437537209538277
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610042,
+      "family": "unit_scale",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -13.343747377406089
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610052,
+      "family": "unit_scale",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -11.34375560285389
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610062,
+      "family": "percentage_base",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": true,
+      "margin": 9.937500001182343
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610072,
+      "family": "percentage_base",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 1.5435997545719147
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610082,
+      "family": "percentage_base",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": true,
+      "margin": 15.24999976158145
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610092,
+      "family": "percentage_base",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 5.378450961550698
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610102,
+      "family": "percentage_base",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 19.375
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610112,
+      "family": "percentage_base",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 19.3125
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610122,
+      "family": "quantifier_inequality",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -13.515625238418806
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610132,
+      "family": "quantifier_inequality",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -15.664062380790718
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610142,
+      "family": "quantifier_inequality",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -15.87499976158145
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610152,
+      "family": "quantifier_inequality",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -9.875005723137292
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610162,
+      "family": "quantifier_inequality",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": false,
+      "margin": -14.835937380790718
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610172,
+      "family": "quantifier_inequality",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -8.312636142945848
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610182,
+      "family": "counting_order",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 2.2196737062186003
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610192,
+      "family": "counting_order",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 5.3768153274431825
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610202,
+      "family": "counting_order",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 2.6059963777661324
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610212,
+      "family": "counting_order",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 4.623707197606564
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610222,
+      "family": "counting_order",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 9.874911318111117
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610232,
+      "family": "counting_order",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 11.562495470146132
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610242,
+      "family": "table_interpretation",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -14.43124449253088
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610252,
+      "family": "table_interpretation",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -5.749999932711944
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610262,
+      "family": "table_interpretation",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -16.531249880790718
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610272,
+      "family": "table_interpretation",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -6.244323572143912
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610282,
+      "family": "table_interpretation",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 5.110386410728097
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610292,
+      "family": "table_interpretation",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 8.24665921763517
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610302,
+      "family": "code_execution",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": true,
+      "margin": 11.812501072904979
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610312,
+      "family": "code_execution",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 8.375039357386413
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610322,
+      "family": "code_execution",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": true,
+      "margin": 14.000000238418806
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610332,
+      "family": "code_execution",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 9.124949944700347
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610342,
+      "family": "code_execution",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": true,
+      "margin": 13.82812511920963
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610352,
+      "family": "code_execution",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -2.4519616961479187
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610362,
+      "family": "proof_validity",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -7.937337653187569
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610372,
+      "family": "proof_validity",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -10.781253814844604
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610382,
+      "family": "proof_validity",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -8.812590481604275
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610392,
+      "family": "proof_validity",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -7.687248126894701
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610402,
+      "family": "proof_validity",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -11.062496423917764
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610412,
+      "family": "proof_validity",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 5.374999850522727
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610422,
+      "family": "geometry_notation",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -6.625293192919344
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610432,
+      "family": "geometry_notation",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -8.43750038118742
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610442,
+      "family": "geometry_notation",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -10.781258702353625
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610452,
+      "family": "geometry_notation",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -9.187462101239362
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610462,
+      "family": "geometry_notation",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": false,
+      "margin": -12.09374773505533
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610472,
+      "family": "geometry_notation",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 6.999999820312951
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610002,
+      "family": "unit_scale",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": true,
+      "margin": 0.4999926686286926
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610012,
+      "family": "unit_scale",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 0.5
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610022,
+      "family": "unit_scale",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": true,
+      "margin": 0.5000109970569611
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610032,
+      "family": "unit_scale",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": 0.0
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610042,
+      "family": "unit_scale",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": 0.0
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610052,
+      "family": "unit_scale",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -0.4999920129776001
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610062,
+      "family": "percentage_base",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": true,
+      "margin": 1.574706792831421
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610072,
+      "family": "percentage_base",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -2.000000074505806
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610082,
+      "family": "percentage_base",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": true,
+      "margin": 2.499999888241291
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610092,
+      "family": "percentage_base",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -1.5000000298023224
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610102,
+      "family": "percentage_base",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 0.9999999403953552
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610112,
+      "family": "percentage_base",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 0.9999999403953552
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610122,
+      "family": "quantifier_inequality",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -3.0000000186264515
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610132,
+      "family": "quantifier_inequality",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -1.5000459849834442
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610142,
+      "family": "quantifier_inequality",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -0.5
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610152,
+      "family": "quantifier_inequality",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -0.5
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610162,
+      "family": "quantifier_inequality",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": false,
+      "margin": -1.9998991191387177
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610172,
+      "family": "quantifier_inequality",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 0.5005635619163513
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610182,
+      "family": "counting_order",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 1.5000000298023224
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610192,
+      "family": "counting_order",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 1.0
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610202,
+      "family": "counting_order",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 1.9999999701976776
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610212,
+      "family": "counting_order",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 1.0000000298023224
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610222,
+      "family": "counting_order",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 3.5000000447034836
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610232,
+      "family": "counting_order",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 3.4999977070838213
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610242,
+      "family": "table_interpretation",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": 0.0
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610252,
+      "family": "table_interpretation",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -4.500000124797225
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610262,
+      "family": "table_interpretation",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -2.5000761821866035
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610272,
+      "family": "table_interpretation",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -2.999999951571226
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610282,
+      "family": "table_interpretation",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 2.99998926743865
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610292,
+      "family": "table_interpretation",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": 0.0
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610302,
+      "family": "code_execution",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": true,
+      "margin": 2.0
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610312,
+      "family": "code_execution",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 1.4999641180038452
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610322,
+      "family": "code_execution",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": true,
+      "margin": 2.9696440920233727
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610332,
+      "family": "code_execution",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 6.002187728881836e-05
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610342,
+      "family": "code_execution",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": false,
+      "margin": -0.5006464719772339
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610352,
+      "family": "code_execution",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 0.5000000298023224
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610362,
+      "family": "proof_validity",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -0.5000000298023224
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610372,
+      "family": "proof_validity",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -0.5
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610382,
+      "family": "proof_validity",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -1.9999999105930328
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610392,
+      "family": "proof_validity",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 0.5
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610402,
+      "family": "proof_validity",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -0.5
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610412,
+      "family": "proof_validity",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 1.5000000447034836
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610422,
+      "family": "geometry_notation",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": 0.0
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610432,
+      "family": "geometry_notation",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -2.499999947845936
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610442,
+      "family": "geometry_notation",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -0.5
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610452,
+      "family": "geometry_notation",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": false,
+      "margin": -1.1118318438529968
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610462,
+      "family": "geometry_notation",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "plain_accepts_strict_acpi": false,
+      "margin": -0.21884265542030334
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610472,
+      "family": "geometry_notation",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "plain_accepts_strict_acpi": true,
+      "margin": 0.5000000298023224
+    }
+  ],
+  "hidden_rows": [
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610062,
+      "family": "percentage_base",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.5885515213012695
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610002,
+      "family": "unit_scale",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -6.991972923278809
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610362,
+      "family": "proof_validity",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -5.5597453117370605
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610302,
+      "family": "code_execution",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -1.4009710550308228
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610422,
+      "family": "geometry_notation",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -5.805181980133057
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610182,
+      "family": "counting_order",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -6.516480445861816
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610122,
+      "family": "quantifier_inequality",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.324008464813232
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610242,
+      "family": "table_interpretation",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.052726745605469
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610092,
+      "family": "percentage_base",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.367880821228027
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610032,
+      "family": "unit_scale",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -5.662374973297119
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610392,
+      "family": "proof_validity",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -4.577462673187256
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610332,
+      "family": "code_execution",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.0868101119995117
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610452,
+      "family": "geometry_notation",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -5.608997344970703
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610212,
+      "family": "counting_order",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -6.47355842590332
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610152,
+      "family": "quantifier_inequality",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -5.765904903411865
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610272,
+      "family": "table_interpretation",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -5.261134624481201
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610102,
+      "family": "percentage_base",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -5.097878456115723
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610042,
+      "family": "unit_scale",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.034127235412598
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610402,
+      "family": "proof_validity",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -6.341958045959473
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610342,
+      "family": "code_execution",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.4880471229553223
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610462,
+      "family": "geometry_notation",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -5.340537071228027
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610222,
+      "family": "counting_order",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.667501449584961
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610162,
+      "family": "quantifier_inequality",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -8.076130867004395
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610282,
+      "family": "table_interpretation",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.383913516998291
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610112,
+      "family": "percentage_base",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.913486480712891
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610052,
+      "family": "unit_scale",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.639670372009277
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610412,
+      "family": "proof_validity",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -5.750870704650879
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610352,
+      "family": "code_execution",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.7075252532958984
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610472,
+      "family": "geometry_notation",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.107936859130859
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610232,
+      "family": "counting_order",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -3.363494634628296
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610172,
+      "family": "quantifier_inequality",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -6.3189520835876465
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610292,
+      "family": "table_interpretation",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -6.42216682434082
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610082,
+      "family": "percentage_base",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.674474716186523
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610022,
+      "family": "unit_scale",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.595826148986816
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610382,
+      "family": "proof_validity",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -5.597781181335449
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610322,
+      "family": "code_execution",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -0.3354904055595398
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610442,
+      "family": "geometry_notation",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -5.661472797393799
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610202,
+      "family": "counting_order",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -5.52543306350708
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610142,
+      "family": "quantifier_inequality",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.243893146514893
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610262,
+      "family": "table_interpretation",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -6.549070358276367
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610072,
+      "family": "percentage_base",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.098329544067383
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610012,
+      "family": "unit_scale",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.107102394104004
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610372,
+      "family": "proof_validity",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -5.546022415161133
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610312,
+      "family": "code_execution",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.5019307136535645
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610432,
+      "family": "geometry_notation",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -6.359536170959473
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610192,
+      "family": "counting_order",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -6.456507205963135
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610132,
+      "family": "quantifier_inequality",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.106423377990723
+    },
+    {
+      "model_key": "qwen35_27b",
+      "audit_idx": 610252,
+      "family": "table_interpretation",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -6.374904155731201
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610062,
+      "family": "percentage_base",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -4.868457794189453
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610002,
+      "family": "unit_scale",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -8.828378677368164
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610362,
+      "family": "proof_validity",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -6.992560863494873
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610302,
+      "family": "code_execution",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -0.6546645164489746
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610422,
+      "family": "geometry_notation",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -6.391205787658691
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610182,
+      "family": "counting_order",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -5.342390060424805
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610122,
+      "family": "quantifier_inequality",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.536282539367676
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610242,
+      "family": "table_interpretation",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.222860336303711
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610092,
+      "family": "percentage_base",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -9.4463472366333
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610032,
+      "family": "unit_scale",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -10.128535270690918
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610392,
+      "family": "proof_validity",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -11.68819522857666
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610332,
+      "family": "code_execution",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -4.726129055023193
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610452,
+      "family": "geometry_notation",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -9.671537399291992
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610212,
+      "family": "counting_order",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.673576354980469
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610152,
+      "family": "quantifier_inequality",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -11.538483619689941
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610272,
+      "family": "table_interpretation",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -10.215476036071777
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610102,
+      "family": "percentage_base",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.230981826782227
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610042,
+      "family": "unit_scale",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -6.632603168487549
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610402,
+      "family": "proof_validity",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -11.751623153686523
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610342,
+      "family": "code_execution",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -6.034162521362305
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610462,
+      "family": "geometry_notation",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -12.32544231414795
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610222,
+      "family": "counting_order",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -8.164922714233398
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610162,
+      "family": "quantifier_inequality",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -12.982148170471191
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610282,
+      "family": "table_interpretation",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -10.766505241394043
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610112,
+      "family": "percentage_base",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -8.070980072021484
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610052,
+      "family": "unit_scale",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -9.550151824951172
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610412,
+      "family": "proof_validity",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -10.858661651611328
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610352,
+      "family": "code_execution",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -8.325963973999023
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610472,
+      "family": "geometry_notation",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -12.222688674926758
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610232,
+      "family": "counting_order",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -8.954465866088867
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610172,
+      "family": "quantifier_inequality",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -10.4769287109375
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610292,
+      "family": "table_interpretation",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -9.053678512573242
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610082,
+      "family": "percentage_base",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -8.153505325317383
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610022,
+      "family": "unit_scale",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -8.62404727935791
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610382,
+      "family": "proof_validity",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -8.951433181762695
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610322,
+      "family": "code_execution",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.3786532878875732
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610442,
+      "family": "geometry_notation",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -10.038515090942383
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610202,
+      "family": "counting_order",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -6.542079925537109
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610142,
+      "family": "quantifier_inequality",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -10.341975212097168
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610262,
+      "family": "table_interpretation",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -11.009648323059082
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610072,
+      "family": "percentage_base",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -8.447897911071777
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610012,
+      "family": "unit_scale",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -10.013349533081055
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610372,
+      "family": "proof_validity",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -11.26460075378418
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610312,
+      "family": "code_execution",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -4.632571697235107
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610432,
+      "family": "geometry_notation",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -9.85493278503418
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610192,
+      "family": "counting_order",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -8.46304702758789
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610132,
+      "family": "quantifier_inequality",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -10.41983413696289
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "audit_idx": 610252,
+      "family": "table_interpretation",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 34,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -11.319465637207031
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610062,
+      "family": "percentage_base",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -4.130641460418701
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610002,
+      "family": "unit_scale",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -4.305584907531738
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610362,
+      "family": "proof_validity",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -8.804893493652344
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610302,
+      "family": "code_execution",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -0.8638883829116821
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610422,
+      "family": "geometry_notation",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -6.6534528732299805
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610182,
+      "family": "counting_order",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -4.977073669433594
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610122,
+      "family": "quantifier_inequality",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.999101638793945
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610242,
+      "family": "table_interpretation",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -9.56734848022461
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610092,
+      "family": "percentage_base",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -8.09661865234375
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610032,
+      "family": "unit_scale",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -3.3025732040405273
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610392,
+      "family": "proof_validity",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -11.105655670166016
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610332,
+      "family": "code_execution",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -0.5832208395004272
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610452,
+      "family": "geometry_notation",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -8.430185317993164
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610212,
+      "family": "counting_order",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -8.330686569213867
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610152,
+      "family": "quantifier_inequality",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -9.747445106506348
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610272,
+      "family": "table_interpretation",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.976218223571777
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610102,
+      "family": "percentage_base",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -4.475599765777588
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610042,
+      "family": "unit_scale",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -11.889053344726562
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610402,
+      "family": "proof_validity",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -13.490697860717773
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610342,
+      "family": "code_execution",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -3.661993980407715
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610462,
+      "family": "geometry_notation",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -13.035721778869629
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610222,
+      "family": "counting_order",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -6.087366104125977
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610162,
+      "family": "quantifier_inequality",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -14.760725021362305
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610282,
+      "family": "table_interpretation",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -11.120534896850586
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610112,
+      "family": "percentage_base",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.795385360717773
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610052,
+      "family": "unit_scale",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -11.41418743133545
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610412,
+      "family": "proof_validity",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.663910388946533
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610352,
+      "family": "code_execution",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -8.185731887817383
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610472,
+      "family": "geometry_notation",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -4.380375385284424
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610232,
+      "family": "counting_order",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -5.574031829833984
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610172,
+      "family": "quantifier_inequality",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -13.385388374328613
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610292,
+      "family": "table_interpretation",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -5.169865608215332
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610082,
+      "family": "percentage_base",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -4.514098644256592
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610022,
+      "family": "unit_scale",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -9.050503730773926
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610382,
+      "family": "proof_validity",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -10.644084930419922
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610322,
+      "family": "code_execution",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -1.3628082275390625
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610442,
+      "family": "geometry_notation",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -11.159271240234375
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610202,
+      "family": "counting_order",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -7.260238170623779
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610142,
+      "family": "quantifier_inequality",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -10.35196590423584
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610262,
+      "family": "table_interpretation",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -12.315664291381836
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610072,
+      "family": "percentage_base",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -9.268434524536133
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610012,
+      "family": "unit_scale",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -8.558606147766113
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610372,
+      "family": "proof_validity",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -13.757805824279785
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610312,
+      "family": "code_execution",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -4.527741432189941
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610432,
+      "family": "geometry_notation",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -12.205156326293945
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610192,
+      "family": "counting_order",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -9.888803482055664
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610132,
+      "family": "quantifier_inequality",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -10.835623741149902
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "audit_idx": 610252,
+      "family": "table_interpretation",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 17,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -13.343875885009766
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610062,
+      "family": "percentage_base",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -0.4814164638519287
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610002,
+      "family": "unit_scale",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.976793050765991
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610362,
+      "family": "proof_validity",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -1.9932221174240112
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610302,
+      "family": "code_execution",
+      "route_id": "en_en",
+      "error_span_literal_found": true,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -0.3618883490562439
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610422,
+      "family": "geometry_notation",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.449145555496216
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610182,
+      "family": "counting_order",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -0.04959234222769737
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610122,
+      "family": "quantifier_inequality",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.617776393890381
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610242,
+      "family": "table_interpretation",
+      "route_id": "en_en",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.8073601722717285
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610092,
+      "family": "percentage_base",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.8054497241973877
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610032,
+      "family": "unit_scale",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.941283941268921
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610392,
+      "family": "proof_validity",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.0053420066833496
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610332,
+      "family": "code_execution",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -1.8623801469802856
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610452,
+      "family": "geometry_notation",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -3.707961320877075
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610212,
+      "family": "counting_order",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -1.575881838798523
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610152,
+      "family": "quantifier_inequality",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -1.86966073513031
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610272,
+      "family": "table_interpretation",
+      "route_id": "en_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.796910285949707
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610102,
+      "family": "percentage_base",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -1.1389999389648438
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610042,
+      "family": "unit_scale",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.667128086090088
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610402,
+      "family": "proof_validity",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.657444477081299
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610342,
+      "family": "code_execution",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -1.848153829574585
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610462,
+      "family": "geometry_notation",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.339010238647461
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610222,
+      "family": "counting_order",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -0.36234724521636963
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610162,
+      "family": "quantifier_inequality",
+      "route_id": "mixed",
+      "error_span_literal_found": true,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.615013599395752
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610282,
+      "family": "table_interpretation",
+      "route_id": "mixed",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -0.6327162981033325
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610112,
+      "family": "percentage_base",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -1.0379419326782227
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610052,
+      "family": "unit_scale",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.2407166957855225
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610412,
+      "family": "proof_validity",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -0.852628231048584
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610352,
+      "family": "code_execution",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -0.9400556683540344
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610472,
+      "family": "geometry_notation",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -1.2989012002944946
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610232,
+      "family": "counting_order",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -0.06678777933120728
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610172,
+      "family": "quantifier_inequality",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -1.7063703536987305
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610292,
+      "family": "table_interpretation",
+      "route_id": "romanized_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.2465660572052
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610082,
+      "family": "percentage_base",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -0.15198500454425812
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610022,
+      "family": "unit_scale",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.6994948387145996
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610382,
+      "family": "proof_validity",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.676210880279541
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610322,
+      "family": "code_execution",
+      "route_id": "zh_en",
+      "error_span_literal_found": true,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": false,
+      "score": 0.3656758964061737
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610442,
+      "family": "geometry_notation",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.1503615379333496
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610202,
+      "family": "counting_order",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -0.3763187527656555
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610142,
+      "family": "quantifier_inequality",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.1076862812042236
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610262,
+      "family": "table_interpretation",
+      "route_id": "zh_en",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.123175621032715
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610072,
+      "family": "percentage_base",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.9392197132110596
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610012,
+      "family": "unit_scale",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.8805413246154785
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610372,
+      "family": "proof_validity",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.252577781677246
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610312,
+      "family": "code_execution",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -0.6049200892448425
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610432,
+      "family": "geometry_notation",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -3.6819663047790527
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610192,
+      "family": "counting_order",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -1.2391952276229858
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610132,
+      "family": "quantifier_inequality",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -2.2198376655578613
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "audit_idx": 610252,
+      "family": "table_interpretation",
+      "route_id": "zh_zh",
+      "error_span_literal_found": false,
+      "best_layer": 27,
+      "hidden_probe_rejects_strict_acpi": true,
+      "score": -3.148585796356201
+    }
+  ],
+  "verifier_by_literal_found": [
+    {
+      "error_span_literal_found": false,
+      "n": 156,
+      "mean_plain_accepts_strict_acpi": 0.40384615384615385
+    },
+    {
+      "error_span_literal_found": true,
+      "n": 36,
+      "mean_plain_accepts_strict_acpi": 0.5833333333333334
+    }
+  ],
+  "verifier_by_route": [
+    {
+      "route_id": "en_en",
+      "n": 32,
+      "mean_plain_accepts_strict_acpi": 0.40625
+    },
+    {
+      "route_id": "en_zh",
+      "n": 32,
+      "mean_plain_accepts_strict_acpi": 0.40625
+    },
+    {
+      "route_id": "mixed",
+      "n": 32,
+      "mean_plain_accepts_strict_acpi": 0.46875
+    },
+    {
+      "route_id": "romanized_zh",
+      "n": 32,
+      "mean_plain_accepts_strict_acpi": 0.59375
+    },
+    {
+      "route_id": "zh_en",
+      "n": 32,
+      "mean_plain_accepts_strict_acpi": 0.40625
+    },
+    {
+      "route_id": "zh_zh",
+      "n": 32,
+      "mean_plain_accepts_strict_acpi": 0.34375
+    }
+  ],
+  "hidden_by_literal_found": [
+    {
+      "error_span_literal_found": false,
+      "n": 156,
+      "mean_hidden_probe_rejects_strict_acpi": 1.0
+    },
+    {
+      "error_span_literal_found": true,
+      "n": 36,
+      "mean_hidden_probe_rejects_strict_acpi": 0.9722222222222222
+    }
+  ],
+  "hidden_by_route": [
+    {
+      "route_id": "en_en",
+      "n": 32,
+      "mean_hidden_probe_rejects_strict_acpi": 1.0
+    },
+    {
+      "route_id": "en_zh",
+      "n": 32,
+      "mean_hidden_probe_rejects_strict_acpi": 1.0
+    },
+    {
+      "route_id": "mixed",
+      "n": 32,
+      "mean_hidden_probe_rejects_strict_acpi": 1.0
+    },
+    {
+      "route_id": "romanized_zh",
+      "n": 32,
+      "mean_hidden_probe_rejects_strict_acpi": 1.0
+    },
+    {
+      "route_id": "zh_en",
+      "n": 32,
+      "mean_hidden_probe_rejects_strict_acpi": 0.96875
+    },
+    {
+      "route_id": "zh_zh",
+      "n": 32,
+      "mean_hidden_probe_rejects_strict_acpi": 1.0
+    }
+  ],
+  "scope_note_zh": "E67 是 span-local observability 审计，不是把 span 提供给 verifier 的泄露实验。"
+}

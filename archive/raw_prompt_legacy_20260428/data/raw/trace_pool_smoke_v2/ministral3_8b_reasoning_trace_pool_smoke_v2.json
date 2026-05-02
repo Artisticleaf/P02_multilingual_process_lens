@@ -1,0 +1,435 @@
+{
+  "args": {
+    "chat_template": "auto",
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "k": 1,
+    "max_new_tokens": 160,
+    "max_tasks": 6,
+    "model_key": "ministral3_8b_reasoning",
+    "out_dir": "/home/Awei/P02_multilingual_process_lens/data/raw/trace_pool_smoke_v2",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "temperature": 0.7,
+    "top_p": 0.95
+  },
+  "model_spec": {
+    "class": "reasoning",
+    "family": "mistral",
+    "loader_risk": "conditional_generation_or_multimodal; may require AutoModelForImageTextToText/AutoProcessor rather than AutoModelForCausalLM",
+    "notes": "non-Qwen reasoning control",
+    "path": "/home/Awei/LLM/Model/base/ministral3_8b_reasoning",
+    "priority": "P0",
+    "remote_repo": "mistralai/Ministral-3-8B-Reasoning-2512",
+    "status": "local_downloaded"
+  },
+  "rows": [
+    {
+      "completion": "1.ĠSubtractĠ3ĠfromĠbothĠsidesĠtoĠisolateĠtheĠtermĠwithĠtheĠvariable:ĊĠĠĠ2xĠ+Ġ3Ġ-Ġ3Ġ=Ġ11Ġ-Ġ3ĊĠĠĠ2xĠ=Ġ8ĊĊ2.ĠDivideĠbothĠsidesĠbyĠ2ĠtoĠsolveĠforĠx:ĊĠĠĠ2xĠ/Ġ2Ġ=Ġ8Ġ/Ġ2ĊĠĠĠxĠ=Ġ4ĊĊFinalĠanswer:Ġ4",
+      "created_at": "2026-04-27T02:19:28",
+      "gold_answer": "4",
+      "input_lang": "en",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.[/SYSTEM_PROMPT][INST]Solve 2x + 3 = 11.[/INST]",
+      "raw_completion": "1.ĠSubtractĠ3ĠfromĠbothĠsidesĠtoĠisolateĠtheĠtermĠwithĠtheĠvariable:ĊĠĠĠ2xĠ+Ġ3Ġ-Ġ3Ġ=Ġ11Ġ-Ġ3ĊĠĠĠ2xĠ=Ġ8ĊĊ2.ĠDivideĠbothĠsidesĠbyĠ2ĠtoĠsolveĠforĠx:ĊĠĠĠ2xĠ/Ġ2Ġ=Ġ8Ġ/Ġ2ĊĠĠĠxĠ=Ġ4ĊĊFinalĠanswer:Ġ4",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "lin_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "é¦ĸåħĪï¼ĮæĪĳä»¬éľĢè¦ģè§£æĸ¹ç¨ĭĠ2xĠ+Ġ3Ġ=Ġ11ãĢĤĊĊ1.Ġé¦ĸåħĪï¼Įå°Ĩæĸ¹ç¨ĭä¸ŃçļĦå¸¸æķ°é¡¹ç§»åĪ°çŃīå¼ıåı³è¾¹ãĢĤæĪĳä»¬åı¯ä»¥éĢļè¿ĩåĩıåİ»3æĿ¥å®ŀçİ°è¿Ļä¸ĢçĤ¹ï¼ļĊĠĠĠ2xĠ+Ġ3Ġ-Ġ3Ġ=Ġ11Ġ-Ġ3ĊĠĠĠç®ĢåĮĸåĲİå¾ĹåĪ°ï¼ļĊĠĠĠ2xĠ=Ġ8ĊĊ2.Ġæİ¥ä¸ĭæĿ¥ï¼ĮæĪĳä»¬éľĢè¦ģè§£åĩºxçļĦåĢ¼ãĢĤçĶ±äºİxçĽ®åīįä¹ĺä»¥2ï¼ĮæĪĳä»¬åı¯ä»¥éĢļè¿ĩéĻ¤ä»¥2æĿ¥è§£åĩºxï¼ļĊĠĠĠ2xĠ/Ġ2Ġ=Ġ8Ġ/Ġ2ĊĠĠĠç®ĢåĮĸåĲİå¾ĹåĪ°ï¼ļĊĠĠĠxĠ=Ġ4ĊĊFinalĠanswer:Ġ4",
+      "created_at": "2026-04-27T02:19:30",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。[/SYSTEM_PROMPT][INST]求解 2x + 3 = 11。[/INST]",
+      "raw_completion": "é¦ĸåħĪï¼ĮæĪĳä»¬éľĢè¦ģè§£æĸ¹ç¨ĭĠ2xĠ+Ġ3Ġ=Ġ11ãĢĤĊĊ1.Ġé¦ĸåħĪï¼Įå°Ĩæĸ¹ç¨ĭä¸ŃçļĦå¸¸æķ°é¡¹ç§»åĪ°çŃīå¼ıåı³è¾¹ãĢĤæĪĳä»¬åı¯ä»¥éĢļè¿ĩåĩıåİ»3æĿ¥å®ŀçİ°è¿Ļä¸ĢçĤ¹ï¼ļĊĠĠĠ2xĠ+Ġ3Ġ-Ġ3Ġ=Ġ11Ġ-Ġ3ĊĠĠĠç®ĢåĮĸåĲİå¾ĹåĪ°ï¼ļĊĠĠĠ2xĠ=Ġ8ĊĊ2.Ġæİ¥ä¸ĭæĿ¥ï¼ĮæĪĳä»¬éľĢè¦ģè§£åĩºxçļĦåĢ¼ãĢĤçĶ±äºİxçĽ®åīįä¹ĺä»¥2ï¼ĮæĪĳä»¬åı¯ä»¥éĢļè¿ĩéĻ¤ä»¥2æĿ¥è§£åĩºxï¼ļĊĠĠĠ2xĠ/Ġ2Ġ=Ġ8Ġ/Ġ2ĊĠĠĠç®ĢåĮĸåĲİå¾ĹåĪ°ï¼ļĊĠĠĠxĠ=Ġ4ĊĊFinalĠanswer:Ġ4",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "lin_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1.ĠStartĠwithĠtheĠequation:Ġ2xĠ+Ġ3Ġ=Ġ11.Ċ2.ĠSubtractĠ3ĠfromĠbothĠsidesĠtoĠisolateĠtheĠtermĠwithĠx:ĊĠĠĠ2xĠ+Ġ3Ġ-Ġ3Ġ=Ġ11Ġ-Ġ3ĊĠĠĠ2xĠ=Ġ8Ċ3.ĠDivideĠbothĠsidesĠbyĠ2ĠtoĠsolveĠforĠx:ĊĠĠĠ2xĠ/Ġ2Ġ=Ġ8Ġ/Ġ2ĊĠĠĠxĠ=Ġ4ĊĊFinalĠanswer:Ġ4",
+      "created_at": "2026-04-27T02:19:31",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.[/SYSTEM_PROMPT][INST]求解 2x + 3 = 11。[/INST]",
+      "raw_completion": "1.ĠStartĠwithĠtheĠequation:Ġ2xĠ+Ġ3Ġ=Ġ11.Ċ2.ĠSubtractĠ3ĠfromĠbothĠsidesĠtoĠisolateĠtheĠtermĠwithĠx:ĊĠĠĠ2xĠ+Ġ3Ġ-Ġ3Ġ=Ġ11Ġ-Ġ3ĊĠĠĠ2xĠ=Ġ8Ċ3.ĠDivideĠbothĠsidesĠbyĠ2ĠtoĠsolveĠforĠx:ĊĠĠĠ2xĠ/Ġ2Ġ=Ġ8Ġ/Ġ2ĊĠĠĠxĠ=Ġ4ĊĊFinalĠanswer:Ġ4",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "lin_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "é¦ĸåħĪï¼Įæĸ¹ç¨ĭæĺ¯2xĠ+Ġ3Ġ=Ġ11ãĢĤĊĊ1.ĠæĪĳä»¬çļĦçĽ®æłĩæĺ¯è§£åĩºxçļĦåĢ¼ãĢĤĊ2.Ġé¦ĸåħĪï¼ĮæĪĳä»¬éľĢè¦ģå°Ĩå¸¸æķ°é¡¹ç§»åĪ°çŃīå¼ıåı³è¾¹ãĢĤåı¯ä»¥ä¸¤è¾¹åĲĮæĹ¶åĩıåİ»3ï¼ļĊĠĠĠ2xĠ+Ġ3Ġ-Ġ3Ġ=Ġ11Ġ-Ġ3ĊĠĠĠç®ĢåĮĸåĲİå¾ĹåĪ°ï¼ļ2xĠ=Ġ8Ċ3.Ġæİ¥ä¸ĭæĿ¥ï¼ĮæĪĳä»¬éľĢè¦ģè§£åĩºxãĢĤåı¯ä»¥ä¸¤è¾¹åĲĮæĹ¶éĻ¤ä»¥2ï¼ļĊĠĠĠ2xĠ/Ġ2Ġ=Ġ8Ġ/Ġ2ĊĠĠĠç®ĢåĮĸåĲİå¾ĹåĪ°ï¼ļxĠ=Ġ4ĊĊFinalĠanswer:Ġ4",
+      "created_at": "2026-04-27T02:19:34",
+      "gold_answer": "4",
+      "input_lang": "en",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。[/SYSTEM_PROMPT][INST]Solve 2x + 3 = 11.[/INST]",
+      "raw_completion": "é¦ĸåħĪï¼Įæĸ¹ç¨ĭæĺ¯2xĠ+Ġ3Ġ=Ġ11ãĢĤĊĊ1.ĠæĪĳä»¬çļĦçĽ®æłĩæĺ¯è§£åĩºxçļĦåĢ¼ãĢĤĊ2.Ġé¦ĸåħĪï¼ĮæĪĳä»¬éľĢè¦ģå°Ĩå¸¸æķ°é¡¹ç§»åĪ°çŃīå¼ıåı³è¾¹ãĢĤåı¯ä»¥ä¸¤è¾¹åĲĮæĹ¶åĩıåİ»3ï¼ļĊĠĠĠ2xĠ+Ġ3Ġ-Ġ3Ġ=Ġ11Ġ-Ġ3ĊĠĠĠç®ĢåĮĸåĲİå¾ĹåĪ°ï¼ļ2xĠ=Ġ8Ċ3.Ġæİ¥ä¸ĭæĿ¥ï¼ĮæĪĳä»¬éľĢè¦ģè§£åĩºxãĢĤåı¯ä»¥ä¸¤è¾¹åĲĮæĹ¶éĻ¤ä»¥2ï¼ļĊĠĠĠ2xĠ/Ġ2Ġ=Ġ8Ġ/Ġ2ĊĠĠĠç®ĢåĮĸåĲİå¾ĹåĪ°ï¼ļxĠ=Ġ4ĊĊFinalĠanswer:Ġ4",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "lin_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "ToĠfindĠtheĠareaĠofĠaĠtriangle,ĠweĠuseĠtheĠformula:ĊĊAreaĠ=Ġ(baseĠÃĹĠheight)ĠÃ·Ġ2ĊĊGiven:Ċ-ĠBaseĠ=Ġ8Ċ-ĠHeightĠ=Ġ5ĊĊStepĠ1:ĠMultiplyĠtheĠbaseĠbyĠtheĠheight.Ċ8ĠÃĹĠ5Ġ=Ġ40ĊĊStepĠ2:ĠDivideĠtheĠresultĠbyĠ2.Ċ40ĠÃ·Ġ2Ġ=Ġ20ĊĊFinalĠanswer:Ġ20",
+      "created_at": "2026-04-27T02:19:35",
+      "gold_answer": "20",
+      "input_lang": "en",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.[/SYSTEM_PROMPT][INST]A triangle has base 8 and height 5. What is its area?[/INST]",
+      "raw_completion": "ToĠfindĠtheĠareaĠofĠaĠtriangle,ĠweĠuseĠtheĠformula:ĊĊAreaĠ=Ġ(baseĠÃĹĠheight)ĠÃ·Ġ2ĊĊGiven:Ċ-ĠBaseĠ=Ġ8Ċ-ĠHeightĠ=Ġ5ĊĊStepĠ1:ĠMultiplyĠtheĠbaseĠbyĠtheĠheight.Ċ8ĠÃĹĠ5Ġ=Ġ40ĊĊStepĠ2:ĠDivideĠtheĠresultĠbyĠ2.Ċ40ĠÃ·Ġ2Ġ=Ġ20ĊĊFinalĠanswer:Ġ20",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "area_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "é¦ĸåħĪï¼ĮåĽŀå¿Ĩä¸īè§Ĵå½¢çļĦéĿ¢ç§¯åħ¬å¼ıï¼ļéĿ¢ç§¯Ġ=Ġ(åºķĠÃĹĠé«ĺ)Ġ/Ġ2ãĢĤĊĊçĦ¶åĲİï¼Įå°Ĩå·²çŁ¥æķ°åĢ¼ä»£åħ¥åħ¬å¼ıï¼ļĊ-ĠåºķĠ=Ġ8Ċ-Ġé«ĺĠ=Ġ5ĊĊè®¡ç®ĹåºķĠÃĹĠé«ĺï¼ļĊ8ĠÃĹĠ5Ġ=Ġ40ĊĊæľĢåĲİï¼Įå°Ĩç»ĵæŀľéĻ¤ä»¥Ġ2ï¼ļĊ40Ġ/Ġ2Ġ=Ġ20ĊĊåĽłæŃ¤ï¼Įè¿Ļä¸ªä¸īè§Ĵå½¢çļĦéĿ¢ç§¯æĺ¯Ġ20Ġå¹³æĸ¹åįķä½įãĢĤĊĊFinalĠanswer:Ġ20Ġå¹³æĸ¹åįķä½į",
+      "created_at": "2026-04-27T02:19:37",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。[/SYSTEM_PROMPT][INST]一个三角形的底为8，高为5，面积是多少？[/INST]",
+      "raw_completion": "é¦ĸåħĪï¼ĮåĽŀå¿Ĩä¸īè§Ĵå½¢çļĦéĿ¢ç§¯åħ¬å¼ıï¼ļéĿ¢ç§¯Ġ=Ġ(åºķĠÃĹĠé«ĺ)Ġ/Ġ2ãĢĤĊĊçĦ¶åĲİï¼Įå°Ĩå·²çŁ¥æķ°åĢ¼ä»£åħ¥åħ¬å¼ıï¼ļĊ-ĠåºķĠ=Ġ8Ċ-Ġé«ĺĠ=Ġ5ĊĊè®¡ç®ĹåºķĠÃĹĠé«ĺï¼ļĊ8ĠÃĹĠ5Ġ=Ġ40ĊĊæľĢåĲİï¼Įå°Ĩç»ĵæŀľéĻ¤ä»¥Ġ2ï¼ļĊ40Ġ/Ġ2Ġ=Ġ20ĊĊåĽłæŃ¤ï¼Įè¿Ļä¸ªä¸īè§Ĵå½¢çļĦéĿ¢ç§¯æĺ¯Ġ20Ġå¹³æĸ¹åįķä½įãĢĤĊĊFinalĠanswer:Ġ20Ġå¹³æĸ¹åįķä½į",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "area_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1.Ġè®¡ç®Ĺä¸īè§Ĵå½¢çļĦéĿ¢ç§¯åħ¬å¼ıæĺ¯ï¼ļéĿ¢ç§¯Ġ=Ġ(åºķĠÃĹĠé«ĺ)Ġ/Ġ2Ċ2.Ġå°Ĩå·²çŁ¥æķ°åĢ¼ä»£åħ¥åħ¬å¼ıï¼ļåºķĠ=Ġ8ï¼Įé«ĺĠ=Ġ5Ċ3.ĠéĿ¢ç§¯Ġ=Ġ(8ĠÃĹĠ5)Ġ/Ġ2Ċ4.Ġé¦ĸåħĪè®¡ç®Ĺä¹ĺæ³ķï¼ļ8ĠÃĹĠ5Ġ=Ġ40Ċ5.ĠçĦ¶åĲİè¿Ľè¡ĮéĻ¤æ³ķï¼ļ40Ġ/Ġ2Ġ=Ġ20Ċ6.ĠåĽłæŃ¤ï¼Įä¸īè§Ĵå½¢çļĦéĿ¢ç§¯ä¸º20å¹³æĸ¹åįķä½įĊĊFinalĠanswer:Ġ20",
+      "created_at": "2026-04-27T02:19:39",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.[/SYSTEM_PROMPT][INST]一个三角形的底为8，高为5，面积是多少？[/INST]",
+      "raw_completion": "1.Ġè®¡ç®Ĺä¸īè§Ĵå½¢çļĦéĿ¢ç§¯åħ¬å¼ıæĺ¯ï¼ļéĿ¢ç§¯Ġ=Ġ(åºķĠÃĹĠé«ĺ)Ġ/Ġ2Ċ2.Ġå°Ĩå·²çŁ¥æķ°åĢ¼ä»£åħ¥åħ¬å¼ıï¼ļåºķĠ=Ġ8ï¼Įé«ĺĠ=Ġ5Ċ3.ĠéĿ¢ç§¯Ġ=Ġ(8ĠÃĹĠ5)Ġ/Ġ2Ċ4.Ġé¦ĸåħĪè®¡ç®Ĺä¹ĺæ³ķï¼ļ8ĠÃĹĠ5Ġ=Ġ40Ċ5.ĠçĦ¶åĲİè¿Ľè¡ĮéĻ¤æ³ķï¼ļ40Ġ/Ġ2Ġ=Ġ20Ċ6.ĠåĽłæŃ¤ï¼Įä¸īè§Ĵå½¢çļĦéĿ¢ç§¯ä¸º20å¹³æĸ¹åįķä½įĊĊFinalĠanswer:Ġ20",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "area_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1.ĠTheĠareaĠofĠaĠtriangleĠisĠcalculatedĠusingĠtheĠformula:ĊĠĠĠAreaĠ=Ġ(baseĠÃĹĠheight)Ġ/Ġ2ĊĊ2.ĠSubstituteĠtheĠgivenĠvaluesĠintoĠtheĠformula:ĊĠĠĠbaseĠ=Ġ8ĊĠĠĠheightĠ=Ġ5ĊĊ3.ĠCalculateĠtheĠproductĠofĠtheĠbaseĠandĠheight:ĊĠĠĠ8ĠÃĹĠ5Ġ=Ġ40ĊĊ4.ĠDivideĠtheĠproductĠbyĠ2ĠtoĠfindĠtheĠarea:ĊĠĠĠ40Ġ/Ġ2Ġ=Ġ20ĊĊFinalĠanswer:Ġ20",
+      "created_at": "2026-04-27T02:19:41",
+      "gold_answer": "20",
+      "input_lang": "en",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。[/SYSTEM_PROMPT][INST]A triangle has base 8 and height 5. What is its area?[/INST]",
+      "raw_completion": "1.ĠTheĠareaĠofĠaĠtriangleĠisĠcalculatedĠusingĠtheĠformula:ĊĠĠĠAreaĠ=Ġ(baseĠÃĹĠheight)Ġ/Ġ2ĊĊ2.ĠSubstituteĠtheĠgivenĠvaluesĠintoĠtheĠformula:ĊĠĠĠbaseĠ=Ġ8ĊĠĠĠheightĠ=Ġ5ĊĊ3.ĠCalculateĠtheĠproductĠofĠtheĠbaseĠandĠheight:ĊĠĠĠ8ĠÃĹĠ5Ġ=Ġ40ĊĊ4.ĠDivideĠtheĠproductĠbyĠ2ĠtoĠfindĠtheĠarea:ĊĠĠĠ40Ġ/Ġ2Ġ=Ġ20ĊĊFinalĠanswer:Ġ20",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "area_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "First,ĠdetermineĠtheĠtotalĠnumberĠofĠballsĠinĠtheĠbag.ĠThereĠareĠ3ĠredĠballsĠandĠ2ĠblueĠballs,ĠsoĠtheĠtotalĠnumberĠofĠballsĠisĠ3Ġ+Ġ2Ġ=Ġ5.ĊĊNext,ĠidentifyĠtheĠnumberĠofĠfavorableĠoutcomes,ĠwhichĠisĠtheĠnumberĠofĠredĠballs.ĠThereĠareĠ3ĠredĠballs.ĊĊTheĠprobabilityĠofĠdrawingĠaĠredĠballĠisĠtheĠratioĠofĠtheĠnumberĠofĠfavorableĠoutcomesĠtoĠtheĠtotalĠnumberĠofĠpossibleĠoutcomes.ĠSo,ĠtheĠprobabilityĠisĠ3Ġ(redĠballs)ĠdividedĠbyĠ5Ġ(totalĠballs).ĊĊCalculateĠtheĠprobability:Ġ3/5Ġ=Ġ0.6ĠorĠ60%.ĊĊFinalĠanswer:Ġ3/5ĠorĠ0.6ĠorĠ60%",
+      "created_at": "2026-04-27T02:19:43",
+      "gold_answer": "3/5",
+      "input_lang": "en",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.[/SYSTEM_PROMPT][INST]A bag has 3 red balls and 2 blue balls. What is the probability of drawing a red ball?[/INST]",
+      "raw_completion": "First,ĠdetermineĠtheĠtotalĠnumberĠofĠballsĠinĠtheĠbag.ĠThereĠareĠ3ĠredĠballsĠandĠ2ĠblueĠballs,ĠsoĠtheĠtotalĠnumberĠofĠballsĠisĠ3Ġ+Ġ2Ġ=Ġ5.ĊĊNext,ĠidentifyĠtheĠnumberĠofĠfavorableĠoutcomes,ĠwhichĠisĠtheĠnumberĠofĠredĠballs.ĠThereĠareĠ3ĠredĠballs.ĊĊTheĠprobabilityĠofĠdrawingĠaĠredĠballĠisĠtheĠratioĠofĠtheĠnumberĠofĠfavorableĠoutcomesĠtoĠtheĠtotalĠnumberĠofĠpossibleĠoutcomes.ĠSo,ĠtheĠprobabilityĠisĠ3Ġ(redĠballs)ĠdividedĠbyĠ5Ġ(totalĠballs).ĊĊCalculateĠtheĠprobability:Ġ3/5Ġ=Ġ0.6ĠorĠ60%.ĊĊFinalĠanswer:Ġ3/5ĠorĠ0.6ĠorĠ60%",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "prob_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "è¢ĭåŃĲéĩĮæĢ»åħ±æľī3ä¸ªçº¢çĲĥåĴĮ2ä¸ªèĵĿçĲĥï¼ĮæīĢä»¥çĲĥçļĦæĢ»æķ°æĺ¯3Ġ+Ġ2Ġ=Ġ5ä¸ªãĢĤĊĊæĬ½åĪ°çº¢çĲĥçļĦæ¦ĤçİĩçŃīäºİæĬ½åĪ°çº¢çĲĥçļĦæķ°éĩıéĻ¤ä»¥æĢ»çĲĥæķ°ï¼Įåį³3/5ãĢĤĊĊFinalĠanswer:Ġ3/5",
+      "created_at": "2026-04-27T02:19:44",
+      "gold_answer": "3/5",
+      "input_lang": "zh",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。[/SYSTEM_PROMPT][INST]袋子里有3个红球和2个蓝球，抽到红球的概率是多少？[/INST]",
+      "raw_completion": "è¢ĭåŃĲéĩĮæĢ»åħ±æľī3ä¸ªçº¢çĲĥåĴĮ2ä¸ªèĵĿçĲĥï¼ĮæīĢä»¥çĲĥçļĦæĢ»æķ°æĺ¯3Ġ+Ġ2Ġ=Ġ5ä¸ªãĢĤĊĊæĬ½åĪ°çº¢çĲĥçļĦæ¦ĤçİĩçŃīäºİæĬ½åĪ°çº¢çĲĥçļĦæķ°éĩıéĻ¤ä»¥æĢ»çĲĥæķ°ï¼Įåį³3/5ãĢĤĊĊFinalĠanswer:Ġ3/5",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "prob_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1.Ġé¦ĸåħĪï¼ĮæĪĳä»¬éľĢè¦ģçŁ¥éģĵè¢ĭåŃĲéĩĮæĢ»åħ±æľīå¤ļå°ĳä¸ªçĲĥãĢĤĊĠĠĠ-Ġçº¢çĲĥæľī3ä¸ªï¼ĮèĵĿçĲĥæľī2ä¸ªãĢĤĊĠĠĠ-ĠæĢ»çĲĥæķ°Ġ=Ġçº¢çĲĥæķ°Ġ+ĠèĵĿçĲĥæķ°Ġ=Ġ3Ġ+Ġ2Ġ=Ġ5ä¸ªãĢĤĊĊ2.Ġæİ¥ä¸ĭæĿ¥ï¼ĮæĪĳä»¬éľĢè¦ģè®¡ç®ĹæĬ½åĪ°çº¢çĲĥçļĦæ¦ĤçİĩãĢĤĊĠĠĠ-Ġçº¢çĲĥçļĦæķ°éĩıĠ=Ġ3ä¸ªãĢĤĊĠĠĠ-ĠæĢ»çĲĥæķ°Ġ=Ġ5ä¸ªãĢĤĊĠĠĠ-Ġæ¦ĤçİĩĠ=Ġçº¢çĲĥçļĦæķ°éĩıĠ/ĠæĢ»çĲĥæķ°Ġ=Ġ3Ġ/Ġ5ãĢĤĊĊ3.ĠåĽłæŃ¤ï¼ĮæĬ½åĪ°çº¢çĲĥçļĦæ¦Ĥçİĩæĺ¯3/5ãĢĤĊĊFinalĠanswer:Ġ3/5",
+      "created_at": "2026-04-27T02:19:47",
+      "gold_answer": "3/5",
+      "input_lang": "zh",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.[/SYSTEM_PROMPT][INST]袋子里有3个红球和2个蓝球，抽到红球的概率是多少？[/INST]",
+      "raw_completion": "1.Ġé¦ĸåħĪï¼ĮæĪĳä»¬éľĢè¦ģçŁ¥éģĵè¢ĭåŃĲéĩĮæĢ»åħ±æľīå¤ļå°ĳä¸ªçĲĥãĢĤĊĠĠĠ-Ġçº¢çĲĥæľī3ä¸ªï¼ĮèĵĿçĲĥæľī2ä¸ªãĢĤĊĠĠĠ-ĠæĢ»çĲĥæķ°Ġ=Ġçº¢çĲĥæķ°Ġ+ĠèĵĿçĲĥæķ°Ġ=Ġ3Ġ+Ġ2Ġ=Ġ5ä¸ªãĢĤĊĊ2.Ġæİ¥ä¸ĭæĿ¥ï¼ĮæĪĳä»¬éľĢè¦ģè®¡ç®ĹæĬ½åĪ°çº¢çĲĥçļĦæ¦ĤçİĩãĢĤĊĠĠĠ-Ġçº¢çĲĥçļĦæķ°éĩıĠ=Ġ3ä¸ªãĢĤĊĠĠĠ-ĠæĢ»çĲĥæķ°Ġ=Ġ5ä¸ªãĢĤĊĠĠĠ-Ġæ¦ĤçİĩĠ=Ġçº¢çĲĥçļĦæķ°éĩıĠ/ĠæĢ»çĲĥæķ°Ġ=Ġ3Ġ/Ġ5ãĢĤĊĊ3.ĠåĽłæŃ¤ï¼ĮæĬ½åĪ°çº¢çĲĥçļĦæ¦Ĥçİĩæĺ¯3/5ãĢĤĊĊFinalĠanswer:Ġ3/5",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "prob_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "é¦ĸåħĪï¼ĮæĪĳä»¬éľĢè¦ģçŁ¥éģĵè¢ĭåŃĲéĩĮæĢ»åħ±æľīå¤ļå°ĳä¸ªçĲĥãĢĤè¢ĭåŃĲéĩĮæľī3ä¸ªçº¢çĲĥåĴĮ2ä¸ªèĵĿçĲĥï¼ĮæīĢä»¥æĢ»çĲĥæķ°æĺ¯3Ġ+Ġ2Ġ=Ġ5ä¸ªãĢĤĊĊæİ¥ä¸ĭæĿ¥ï¼ĮæĪĳä»¬éľĢè¦ģè®¡ç®ĹæĬ½åĪ°çº¢çĲĥçļĦæ¦ĤçİĩãĢĤæ¦ĤçİĩçļĦè®¡ç®Ĺåħ¬å¼ıæĺ¯ï¼ļæīĢæ±Ĥäºĭä»¶åıĳçĶŁçļĦåı¯èĥ½æĢ§ï¼ĪæľīåĪ©äºĭä»¶çļĦæķ°éĩıï¼īéĻ¤ä»¥æīĢæľīåı¯èĥ½æĢ§ï¼ĪæĢ»äºĭä»¶çļĦæķ°éĩıï¼īãĢĤĊĊåľ¨è¿Ļä¸ªéĹ®é¢ĺä¸Ńï¼ĮæľīåĪ©äºĭä»¶çļĦæķ°éĩıæĺ¯æĬ½åĪ°çº¢çĲĥçļĦæķ°éĩıï¼Įåį³3ä¸ªçº¢çĲĥãĢĤæĢ»äºĭä»¶çļĦæķ°éĩıæĺ¯æīĢæľīçĲĥçļĦæĢ»æķ°ï¼Įåį³5ä¸ªãĢĤĊĊåĽłæŃ¤ï¼ĮæĬ½åĪ°çº¢çĲĥçļĦæ¦Ĥçİĩæĺ¯3ï¼Īçº¢çĲĥæķ°éĩıï¼īéĻ¤ä»¥5",
+      "created_at": "2026-04-27T02:19:49",
+      "gold_answer": "3/5",
+      "input_lang": "en",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。[/SYSTEM_PROMPT][INST]A bag has 3 red balls and 2 blue balls. What is the probability of drawing a red ball?[/INST]",
+      "raw_completion": "é¦ĸåħĪï¼ĮæĪĳä»¬éľĢè¦ģçŁ¥éģĵè¢ĭåŃĲéĩĮæĢ»åħ±æľīå¤ļå°ĳä¸ªçĲĥãĢĤè¢ĭåŃĲéĩĮæľī3ä¸ªçº¢çĲĥåĴĮ2ä¸ªèĵĿçĲĥï¼ĮæīĢä»¥æĢ»çĲĥæķ°æĺ¯3Ġ+Ġ2Ġ=Ġ5ä¸ªãĢĤĊĊæİ¥ä¸ĭæĿ¥ï¼ĮæĪĳä»¬éľĢè¦ģè®¡ç®ĹæĬ½åĪ°çº¢çĲĥçļĦæ¦ĤçİĩãĢĤæ¦ĤçİĩçļĦè®¡ç®Ĺåħ¬å¼ıæĺ¯ï¼ļæīĢæ±Ĥäºĭä»¶åıĳçĶŁçļĦåı¯èĥ½æĢ§ï¼ĪæľīåĪ©äºĭä»¶çļĦæķ°éĩıï¼īéĻ¤ä»¥æīĢæľīåı¯èĥ½æĢ§ï¼ĪæĢ»äºĭä»¶çļĦæķ°éĩıï¼īãĢĤĊĊåľ¨è¿Ļä¸ªéĹ®é¢ĺä¸Ńï¼ĮæľīåĪ©äºĭä»¶çļĦæķ°éĩıæĺ¯æĬ½åĪ°çº¢çĲĥçļĦæķ°éĩıï¼Įåį³3ä¸ªçº¢çĲĥãĢĤæĢ»äºĭä»¶çļĦæķ°éĩıæĺ¯æīĢæľīçĲĥçļĦæĢ»æķ°ï¼Įåį³5ä¸ªãĢĤĊĊåĽłæŃ¤ï¼ĮæĬ½åĪ°çº¢çĲĥçļĦæ¦Ĥçİĩæĺ¯3ï¼Īçº¢çĲĥæķ°éĩıï¼īéĻ¤ä»¥5",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "prob_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "ToĠfindĠtheĠvalueĠofĠx,Ġwe'llĠfollowĠtheseĠsteps:ĊĊ1.Ġ**UnderstandĠtheĠaverageĠformula**:ĠTheĠaverageĠofĠaĠsetĠofĠnumbersĠisĠtheĠsumĠofĠtheĠnumbersĠdividedĠbyĠtheĠcountĠofĠnumbers.ĊĊĠĠĠForĠtheĠnumbersĠ6,Ġ10,ĠandĠx,ĠtheĠaverageĠisĠgivenĠby:ĊĠĠĠ\\[ĊĠĠĠ\\text{Average}Ġ=Ġ\\frac{6Ġ+Ġ10Ġ+Ġx}{3}ĊĠĠĠ\\]ĊĊ2.Ġ**SetĠupĠtheĠequation**:ĠWeĠknowĠtheĠaverageĠisĠ9,Ġso:ĊĠĠĠ\\[ĊĠĠĠ\\frac{6Ġ+Ġ10Ġ+Ġx}{3}Ġ=Ġ9ĊĠĠĠ\\]ĊĊ3.Ġ**SolveĠforĠx**:ĊĠĠĠ-ĠMultiplyĠbothĠsidesĠbyĠ3ĠtoĠeliminateĠtheĠdenominator:ĊĠĠĠĠĠ\\[ĊĠĠĠĠĠ6Ġ+Ġ10",
+      "created_at": "2026-04-27T02:19:52",
+      "gold_answer": "11",
+      "input_lang": "en",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.[/SYSTEM_PROMPT][INST]The average of 6, 10, and x is 9. Find x.[/INST]",
+      "raw_completion": "ToĠfindĠtheĠvalueĠofĠx,Ġwe'llĠfollowĠtheseĠsteps:ĊĊ1.Ġ**UnderstandĠtheĠaverageĠformula**:ĠTheĠaverageĠofĠaĠsetĠofĠnumbersĠisĠtheĠsumĠofĠtheĠnumbersĠdividedĠbyĠtheĠcountĠofĠnumbers.ĊĊĠĠĠForĠtheĠnumbersĠ6,Ġ10,ĠandĠx,ĠtheĠaverageĠisĠgivenĠby:ĊĠĠĠ\\[ĊĠĠĠ\\text{Average}Ġ=Ġ\\frac{6Ġ+Ġ10Ġ+Ġx}{3}ĊĠĠĠ\\]ĊĊ2.Ġ**SetĠupĠtheĠequation**:ĠWeĠknowĠtheĠaverageĠisĠ9,Ġso:ĊĠĠĠ\\[ĊĠĠĠ\\frac{6Ġ+Ġ10Ġ+Ġx}{3}Ġ=Ġ9ĊĠĠĠ\\]ĊĊ3.Ġ**SolveĠforĠx**:ĊĠĠĠ-ĠMultiplyĠbothĠsidesĠbyĠ3ĠtoĠeliminateĠtheĠdenominator:ĊĠĠĠĠĠ\\[ĊĠĠĠĠĠ6Ġ+Ġ10",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "avg_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "é¦ĸåħĪï¼Įæł¹æį®é¢ĺçĽ®ï¼Į6ãĢģ10ĠåĴĮĠxĠçļĦå¹³åĿĩæķ°æĺ¯Ġ9ãĢĤå¹³åĿĩæķ°æĺ¯æĮĩæīĢæľīæķ°çļĦæĢ»åĴĮéĻ¤ä»¥æķ°çļĦä¸ªæķ°ãĢĤĊĊ1.Ġé¦ĸåħĪï¼Įè®¡ç®Ĺä¸īä¸ªæķ°çļĦæĢ»åĴĮï¼ļĊĠĠĠå¹³åĿĩæķ°Ġ=Ġ(6Ġ+Ġ10Ġ+Ġx)Ġ/Ġ3Ġ=Ġ9ĊĊ2.Ġå°Ĩæĸ¹ç¨ĭä¸¤è¾¹ä¹ĺä»¥Ġ3ï¼Įå¾ĹåĪ°æĢ»åĴĮï¼ļĊĠĠĠ6Ġ+Ġ10Ġ+ĠxĠ=Ġ9Ġ*Ġ3ĊĠĠĠ6Ġ+Ġ10Ġ+ĠxĠ=Ġ27ĊĊ3.Ġå°Ĩå·²çŁ¥æķ°çĽ¸åĬłï¼ļĊĠĠĠ6Ġ+Ġ10Ġ=Ġ16ĊĊ4.Ġå°ĨĠ16Ġä»£åħ¥æĸ¹ç¨ĭä¸Ńï¼ļĊĠĠĠ16Ġ+",
+      "created_at": "2026-04-27T02:19:54",
+      "gold_answer": "11",
+      "input_lang": "zh",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。[/SYSTEM_PROMPT][INST]6、10 和 x 的平均数是 9，求 x。[/INST]",
+      "raw_completion": "é¦ĸåħĪï¼Įæł¹æį®é¢ĺçĽ®ï¼Į6ãĢģ10ĠåĴĮĠxĠçļĦå¹³åĿĩæķ°æĺ¯Ġ9ãĢĤå¹³åĿĩæķ°æĺ¯æĮĩæīĢæľīæķ°çļĦæĢ»åĴĮéĻ¤ä»¥æķ°çļĦä¸ªæķ°ãĢĤĊĊ1.Ġé¦ĸåħĪï¼Įè®¡ç®Ĺä¸īä¸ªæķ°çļĦæĢ»åĴĮï¼ļĊĠĠĠå¹³åĿĩæķ°Ġ=Ġ(6Ġ+Ġ10Ġ+Ġx)Ġ/Ġ3Ġ=Ġ9ĊĊ2.Ġå°Ĩæĸ¹ç¨ĭä¸¤è¾¹ä¹ĺä»¥Ġ3ï¼Įå¾ĹåĪ°æĢ»åĴĮï¼ļĊĠĠĠ6Ġ+Ġ10Ġ+ĠxĠ=Ġ9Ġ*Ġ3ĊĠĠĠ6Ġ+Ġ10Ġ+ĠxĠ=Ġ27ĊĊ3.Ġå°Ĩå·²çŁ¥æķ°çĽ¸åĬłï¼ļĊĠĠĠ6Ġ+Ġ10Ġ=Ġ16ĊĊ4.Ġå°ĨĠ16Ġä»£åħ¥æĸ¹ç¨ĭä¸Ńï¼ļĊĠĠĠ16Ġ+",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "avg_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "ToĠfindĠtheĠvalueĠofĠxĠsuchĠthatĠtheĠaverageĠofĠ6,Ġ10,ĠandĠxĠisĠ9,ĠfollowĠtheseĠsteps:ĊĊ1.ĠTheĠaverageĠofĠthreeĠnumbersĠisĠcalculatedĠbyĠsummingĠthemĠandĠdividingĠbyĠ3.Ċ2.ĠWriteĠtheĠequation:Ġ(6Ġ+Ġ10Ġ+Ġx)Ġ/Ġ3Ġ=Ġ9Ċ3.ĠMultiplyĠbothĠsidesĠbyĠ3ĠtoĠeliminateĠtheĠdenominator:Ġ6Ġ+Ġ10Ġ+ĠxĠ=Ġ27Ċ4.ĠCombineĠlikeĠtermsĠonĠtheĠleftĠside:Ġ16Ġ+ĠxĠ=Ġ27Ċ5.ĠSubtractĠ16ĠfromĠbothĠsidesĠtoĠsolveĠforĠx:ĠxĠ=Ġ11ĊĊFinalĠanswer:Ġ11",
+      "created_at": "2026-04-27T02:19:56",
+      "gold_answer": "11",
+      "input_lang": "zh",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.[/SYSTEM_PROMPT][INST]6、10 和 x 的平均数是 9，求 x。[/INST]",
+      "raw_completion": "ToĠfindĠtheĠvalueĠofĠxĠsuchĠthatĠtheĠaverageĠofĠ6,Ġ10,ĠandĠxĠisĠ9,ĠfollowĠtheseĠsteps:ĊĊ1.ĠTheĠaverageĠofĠthreeĠnumbersĠisĠcalculatedĠbyĠsummingĠthemĠandĠdividingĠbyĠ3.Ċ2.ĠWriteĠtheĠequation:Ġ(6Ġ+Ġ10Ġ+Ġx)Ġ/Ġ3Ġ=Ġ9Ċ3.ĠMultiplyĠbothĠsidesĠbyĠ3ĠtoĠeliminateĠtheĠdenominator:Ġ6Ġ+Ġ10Ġ+ĠxĠ=Ġ27Ċ4.ĠCombineĠlikeĠtermsĠonĠtheĠleftĠside:Ġ16Ġ+ĠxĠ=Ġ27Ċ5.ĠSubtractĠ16ĠfromĠbothĠsidesĠtoĠsolveĠforĠx:ĠxĠ=Ġ11ĊĊFinalĠanswer:Ġ11",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "avg_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1.Ġå¹³åĿĩæķ°åħ¬å¼ıï¼ļ(6Ġ+Ġ10Ġ+Ġx)Ġ/Ġ3Ġ=Ġ9Ċ2.Ġä¸¤è¾¹ä¹ĺä»¥3ï¼ļ6Ġ+Ġ10Ġ+ĠxĠ=Ġ27Ċ3.Ġ6Ġ+Ġ10Ġ=Ġ16ï¼ĮæīĢä»¥ï¼ļ16Ġ+ĠxĠ=Ġ27Ċ4.Ġç§»é¡¹ï¼ļxĠ=Ġ27Ġ-Ġ16Ċ5.Ġè®¡ç®Ĺï¼ļxĠ=Ġ11ĊĊFinalĠanswer:Ġ11",
+      "created_at": "2026-04-27T02:19:58",
+      "gold_answer": "11",
+      "input_lang": "en",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。[/SYSTEM_PROMPT][INST]The average of 6, 10, and x is 9. Find x.[/INST]",
+      "raw_completion": "1.Ġå¹³åĿĩæķ°åħ¬å¼ıï¼ļ(6Ġ+Ġ10Ġ+Ġx)Ġ/Ġ3Ġ=Ġ9Ċ2.Ġä¸¤è¾¹ä¹ĺä»¥3ï¼ļ6Ġ+Ġ10Ġ+ĠxĠ=Ġ27Ċ3.Ġ6Ġ+Ġ10Ġ=Ġ16ï¼ĮæīĢä»¥ï¼ļ16Ġ+ĠxĠ=Ġ27Ċ4.Ġç§»é¡¹ï¼ļxĠ=Ġ27Ġ-Ġ16Ċ5.Ġè®¡ç®Ĺï¼ļxĠ=Ġ11ĊĊFinalĠanswer:Ġ11",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "avg_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "StepĠ1:ĠCalculateĠtheĠdiscountĠamount.ĊTheĠdiscountĠisĠ25%ĠofĠ$80.Ċ25%Ġ=Ġ0.25ĊDiscountĠamountĠ=Ġ0.25Ġ*Ġ$80Ġ=Ġ$20ĊĊStepĠ2:ĠSubtractĠtheĠdiscountĠfromĠtheĠoriginalĠpriceĠtoĠfindĠtheĠsaleĠprice.ĊSaleĠpriceĠ=ĠOriginalĠpriceĠ-ĠDiscountĠamountĊSaleĠpriceĠ=Ġ$80Ġ-Ġ$20Ġ=Ġ$60ĊĊFinalĠanswer:Ġ$60",
+      "created_at": "2026-04-27T02:19:59",
+      "gold_answer": "60",
+      "input_lang": "en",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.[/SYSTEM_PROMPT][INST]A $80 jacket is discounted by 25%. What is the sale price?[/INST]",
+      "raw_completion": "StepĠ1:ĠCalculateĠtheĠdiscountĠamount.ĊTheĠdiscountĠisĠ25%ĠofĠ$80.Ċ25%Ġ=Ġ0.25ĊDiscountĠamountĠ=Ġ0.25Ġ*Ġ$80Ġ=Ġ$20ĊĊStepĠ2:ĠSubtractĠtheĠdiscountĠfromĠtheĠoriginalĠpriceĠtoĠfindĠtheĠsaleĠprice.ĊSaleĠpriceĠ=ĠOriginalĠpriceĠ-ĠDiscountĠamountĊSaleĠpriceĠ=Ġ$80Ġ-Ġ$20Ġ=Ġ$60ĊĊFinalĠanswer:Ġ$60",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "percent_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1.ĠåİŁä»·æĺ¯80ç¾İåħĥãĢĤĊ2.Ġä¸ĥäºĶæĬĺè¡¨ç¤ºæīĵæĬĺçİĩä¸º75%ï¼Įåį³ä¿ĿçķĻ75%ãĢĤĊ3.Ġè®¡ç®ĹæĬĺåĲİä»·æł¼ï¼ļ80ĠÃĹĠ0.75Ġ=Ġ60ãĢĤĊ4.ĠåĽłæŃ¤ï¼Įå¤¹åħĭæīĵä¸ĥäºĶæĬĺåĲİåĶ®ä»·æĺ¯60ç¾İåħĥãĢĤĊĊFinalĠanswer:Ġ60ç¾İåħĥ",
+      "created_at": "2026-04-27T02:20:01",
+      "gold_answer": "60",
+      "input_lang": "zh",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。[/SYSTEM_PROMPT][INST]一件80美元的夹克打七五折后售价是多少？[/INST]",
+      "raw_completion": "1.ĠåİŁä»·æĺ¯80ç¾İåħĥãĢĤĊ2.Ġä¸ĥäºĶæĬĺè¡¨ç¤ºæīĵæĬĺçİĩä¸º75%ï¼Įåį³ä¿ĿçķĻ75%ãĢĤĊ3.Ġè®¡ç®ĹæĬĺåĲİä»·æł¼ï¼ļ80ĠÃĹĠ0.75Ġ=Ġ60ãĢĤĊ4.ĠåĽłæŃ¤ï¼Įå¤¹åħĭæīĵä¸ĥäºĶæĬĺåĲİåĶ®ä»·æĺ¯60ç¾İåħĥãĢĤĊĊFinalĠanswer:Ġ60ç¾İåħĥ",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "percent_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1.ĠOriginalĠpriceĠofĠtheĠjacket:Ġ80ĠdollarsĊ2.ĠDiscountĠrate:Ġ7.5Ġ(whichĠisĠ75%,ĠorĠ3/4)Ċ3.ĠCalculateĠtheĠsaleĠprice:Ġ80Ġ*Ġ(1Ġ-Ġ0.75)Ġ=Ġ80Ġ*Ġ0.25Ġ=Ġ20ĠdollarsĊ4.ĠTherefore,ĠtheĠsaleĠpriceĠisĠ80Ġ-Ġ20Ġ=Ġ60ĠdollarsĊĊFinalĠanswer:Ġ60Ġdollars",
+      "created_at": "2026-04-27T02:20:02",
+      "gold_answer": "60",
+      "input_lang": "zh",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.[/SYSTEM_PROMPT][INST]一件80美元的夹克打七五折后售价是多少？[/INST]",
+      "raw_completion": "1.ĠOriginalĠpriceĠofĠtheĠjacket:Ġ80ĠdollarsĊ2.ĠDiscountĠrate:Ġ7.5Ġ(whichĠisĠ75%,ĠorĠ3/4)Ċ3.ĠCalculateĠtheĠsaleĠprice:Ġ80Ġ*Ġ(1Ġ-Ġ0.75)Ġ=Ġ80Ġ*Ġ0.25Ġ=Ġ20ĠdollarsĊ4.ĠTherefore,ĠtheĠsaleĠpriceĠisĠ80Ġ-Ġ20Ġ=Ġ60ĠdollarsĊĊFinalĠanswer:Ġ60Ġdollars",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "percent_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "é¦ĸåħĪï¼Įè®¡ç®Ĺ25%çļĦæĬĺæī£éĩĳé¢Ŀï¼ļĊ25%ĠofĠ$80Ġ=Ġ0.25ĠÃĹĠ80Ġ=Ġ$20ĊĊçĦ¶åĲİï¼ĮçĶ¨åİŁä»·åĩıåİ»æĬĺæī£éĩĳé¢Ŀå¾ĹåĪ°éĶĢåĶ®ä»·æł¼ï¼ļĊ$80Ġ-Ġ$20Ġ=Ġ$60ĊĊFinalĠanswer:Ġ$60",
+      "created_at": "2026-04-27T02:20:04",
+      "gold_answer": "60",
+      "input_lang": "en",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。[/SYSTEM_PROMPT][INST]A $80 jacket is discounted by 25%. What is the sale price?[/INST]",
+      "raw_completion": "é¦ĸåħĪï¼Įè®¡ç®Ĺ25%çļĦæĬĺæī£éĩĳé¢Ŀï¼ļĊ25%ĠofĠ$80Ġ=Ġ0.25ĠÃĹĠ80Ġ=Ġ$20ĊĊçĦ¶åĲİï¼ĮçĶ¨åİŁä»·åĩıåİ»æĬĺæī£éĩĳé¢Ŀå¾ĹåĪ°éĶĢåĶ®ä»·æł¼ï¼ļĊ$80Ġ-Ġ$20Ġ=Ġ$60ĊĊFinalĠanswer:Ġ$60",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "percent_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "First,ĠunderstandĠtheĠratio:ĠtheĠratioĠofĠboysĠtoĠgirlsĠisĠ3:5,ĠwhichĠmeansĠforĠeveryĠ3Ġboys,ĠthereĠareĠ5Ġgirls.ĊĊNext,ĠidentifyĠtheĠgivenĠinformation:ĠthereĠareĠ24Ġboys.ĊĊNow,ĠsetĠupĠaĠproportionĠtoĠfindĠtheĠnumberĠofĠgirlsĠ(let'sĠcallĠitĠG):Ċ3ĠboysĠ/Ġ5ĠgirlsĠ=Ġ24ĠboysĠ/ĠGĠgirlsĊĊCross-multiplyĠtoĠsolveĠforĠG:Ċ3Ġ*ĠGĠ=Ġ5Ġ*Ġ24ĊĊCalculateĠtheĠrightĠside:Ċ3Ġ*ĠGĠ=Ġ120ĊĊDivideĠbothĠsidesĠbyĠ3ĠtoĠisolateĠG:ĊGĠ=Ġ120Ġ/Ġ3ĊGĠ=Ġ40ĊĊFinalĠanswer:Ġ40",
+      "created_at": "2026-04-27T02:20:06",
+      "gold_answer": "40",
+      "input_lang": "en",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.[/SYSTEM_PROMPT][INST]The ratio of boys to girls is 3:5. If there are 24 boys, how many girls are there?[/INST]",
+      "raw_completion": "First,ĠunderstandĠtheĠratio:ĠtheĠratioĠofĠboysĠtoĠgirlsĠisĠ3:5,ĠwhichĠmeansĠforĠeveryĠ3Ġboys,ĠthereĠareĠ5Ġgirls.ĊĊNext,ĠidentifyĠtheĠgivenĠinformation:ĠthereĠareĠ24Ġboys.ĊĊNow,ĠsetĠupĠaĠproportionĠtoĠfindĠtheĠnumberĠofĠgirlsĠ(let'sĠcallĠitĠG):Ċ3ĠboysĠ/Ġ5ĠgirlsĠ=Ġ24ĠboysĠ/ĠGĠgirlsĊĊCross-multiplyĠtoĠsolveĠforĠG:Ċ3Ġ*ĠGĠ=Ġ5Ġ*Ġ24ĊĊCalculateĠtheĠrightĠside:Ċ3Ġ*ĠGĠ=Ġ120ĊĊDivideĠbothĠsidesĠbyĠ3ĠtoĠisolateĠG:ĊGĠ=Ġ120Ġ/Ġ3ĊGĠ=Ġ40ĊĊFinalĠanswer:Ġ40",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "ratio_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1.ĠçĲĨè§£é¢ĺçĽ®ï¼ļçĶ·çĶŁåĴĮå¥³çĶŁçļĦæ¯Ķä¾ĭæĺ¯3:5ï¼Įè¡¨ç¤ºçĶ·çĶŁä¸İå¥³çĶŁçļĦæķ°éĩıæ¯Ķä¾ĭãĢĤĊ2.Ġé¢ĺçĽ®ç»ĻåĩºäºĨçĶ·çĶŁçļĦåħ·ä½ĵäººæķ°ï¼Įåį³24åĲįçĶ·çĶŁãĢĤĊ3.Ġè®¾æ¯Ķä¾ĭä¸ŃçļĦ3å¯¹åºĶ24åĲįçĶ·çĶŁãĢĤĊ4.Ġæł¹æį®æ¯Ķä¾ĭåħ³ç³»ï¼Įåı¯ä»¥åĪĹåĩºæĸ¹ç¨ĭï¼ļ3éĥ¨åĪĨĠ=Ġ24åĲįçĶ·çĶŁãĢĤĊ5.Ġè®¡ç®Ĺ1éĥ¨åĪĨå¯¹åºĶçļĦäººæķ°ï¼ļ1éĥ¨åĪĨĠ=Ġ24ĠÃ·Ġ3Ġ=Ġ8åĲįãĢĤĊ6.Ġæ¯Ķä¾ĭä¸ŃçļĦ5éĥ¨åĪĨå¯¹åºĶå¥³çĶŁäººæķ°ï¼ĮåĽłæŃ¤å¥³çĶŁäººæķ°ä¸ºï¼ļ5ĠÃĹĠ8Ġ=Ġ40åĲįãĢĤĊĊFinalĠanswer:Ġ40",
+      "created_at": "2026-04-27T02:20:08",
+      "gold_answer": "40",
+      "input_lang": "zh",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。[/SYSTEM_PROMPT][INST]男生和女生的比例是3:5。如果有24名男生，女生有多少名？[/INST]",
+      "raw_completion": "1.ĠçĲĨè§£é¢ĺçĽ®ï¼ļçĶ·çĶŁåĴĮå¥³çĶŁçļĦæ¯Ķä¾ĭæĺ¯3:5ï¼Įè¡¨ç¤ºçĶ·çĶŁä¸İå¥³çĶŁçļĦæķ°éĩıæ¯Ķä¾ĭãĢĤĊ2.Ġé¢ĺçĽ®ç»ĻåĩºäºĨçĶ·çĶŁçļĦåħ·ä½ĵäººæķ°ï¼Įåį³24åĲįçĶ·çĶŁãĢĤĊ3.Ġè®¾æ¯Ķä¾ĭä¸ŃçļĦ3å¯¹åºĶ24åĲįçĶ·çĶŁãĢĤĊ4.Ġæł¹æį®æ¯Ķä¾ĭåħ³ç³»ï¼Įåı¯ä»¥åĪĹåĩºæĸ¹ç¨ĭï¼ļ3éĥ¨åĪĨĠ=Ġ24åĲįçĶ·çĶŁãĢĤĊ5.Ġè®¡ç®Ĺ1éĥ¨åĪĨå¯¹åºĶçļĦäººæķ°ï¼ļ1éĥ¨åĪĨĠ=Ġ24ĠÃ·Ġ3Ġ=Ġ8åĲįãĢĤĊ6.Ġæ¯Ķä¾ĭä¸ŃçļĦ5éĥ¨åĪĨå¯¹åºĶå¥³çĶŁäººæķ°ï¼ĮåĽłæŃ¤å¥³çĶŁäººæķ°ä¸ºï¼ļ5ĠÃĹĠ8Ġ=Ġ40åĲįãĢĤĊĊFinalĠanswer:Ġ40",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "ratio_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1.Ġè®¾çĶ·çĶŁåĴĮå¥³çĶŁçļĦæ¯Ķä¾ĭä¸º3:5ãĢĤĊ2.Ġå·²çŁ¥çĶ·çĶŁæľī24åĲįï¼Įå¯¹åºĶæ¯Ķä¾ĭä¸ŃçļĦ3éĥ¨åĪĨãĢĤĊ3.Ġè®¡ç®Ĺæ¯ıä¸Ģéĥ¨åĪĨä»£è¡¨çļĦäººæķ°ï¼ļ24ĠÃ·Ġ3Ġ=Ġ8ãĢĤĊ4.Ġå¥³çĶŁå¯¹åºĶæ¯Ķä¾ĭä¸ŃçļĦ5éĥ¨åĪĨï¼ĮæīĢä»¥å¥³çĶŁäººæķ°ä¸º5ĠÃĹĠ8Ġ=Ġ40ãĢĤĊĊFinalĠanswer:Ġ40",
+      "created_at": "2026-04-27T02:20:10",
+      "gold_answer": "40",
+      "input_lang": "zh",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.[/SYSTEM_PROMPT][INST]男生和女生的比例是3:5。如果有24名男生，女生有多少名？[/INST]",
+      "raw_completion": "1.Ġè®¾çĶ·çĶŁåĴĮå¥³çĶŁçļĦæ¯Ķä¾ĭä¸º3:5ãĢĤĊ2.Ġå·²çŁ¥çĶ·çĶŁæľī24åĲįï¼Įå¯¹åºĶæ¯Ķä¾ĭä¸ŃçļĦ3éĥ¨åĪĨãĢĤĊ3.Ġè®¡ç®Ĺæ¯ıä¸Ģéĥ¨åĪĨä»£è¡¨çļĦäººæķ°ï¼ļ24ĠÃ·Ġ3Ġ=Ġ8ãĢĤĊ4.Ġå¥³çĶŁå¯¹åºĶæ¯Ķä¾ĭä¸ŃçļĦ5éĥ¨åĪĨï¼ĮæīĢä»¥å¥³çĶŁäººæķ°ä¸º5ĠÃĹĠ8Ġ=Ġ40ãĢĤĊĊFinalĠanswer:Ġ40",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "ratio_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "é¦ĸåħĪï¼Įé¢ĺçĽ®ç»ĻåĩºäºĨçĶ·åŃ©ä¸İå¥³åŃ©çļĦæ¯Ķä¾ĭæĺ¯3æ¯Ķ5ãĢĤè¿ĻæĦıåĳ³çĿĢæ¯ı3ä¸ªçĶ·åŃ©å¯¹åºĶ5ä¸ªå¥³åŃ©ãĢĤĊĊçĦ¶åĲİï¼Įé¢ĺçĽ®åĳĬè¯īæĪĳä»¬æľī24ä¸ªçĶ·åŃ©ãĢĤæĪĳä»¬åı¯ä»¥åĪ©çĶ¨æ¯Ķä¾ĭæĿ¥æī¾åĪ°å¥³åŃ©çļĦæķ°éĩıãĢĤĊĊæł¹æį®æ¯Ķä¾ĭ3:5ï¼Įåı¯ä»¥è®¾çĶ·åŃ©æķ°éĩıä¸º3xï¼Įå¥³åŃ©æķ°éĩıä¸º5xãĢĤåĽłä¸ºçĶ·åŃ©æķ°éĩıå·²çŁ¥ä¸º24ï¼ĮæīĢä»¥åı¯ä»¥å»ºç«ĭæĸ¹ç¨ĭï¼ļĊĊ3xĠ=Ġ24ĊĊæİ¥ä¸ĭæĿ¥è§£è¿Ļä¸ªæĸ¹ç¨ĭï¼ļĊĊxĠ=Ġ24ĠÃ·Ġ3Ġ=Ġ8ĊĊçİ°åľ¨ï¼ĮæĪĳä»¬çŁ¥éģĵxçļĦåĢ¼æĺ¯8ãĢĤå°Ĩxä»£åħ¥å¥³åŃ©æķ°éĩıçļĦè¡¨è¾¾å¼ıï¼ļĊĊå¥³åŃ©æķ°éĩıĠ=Ġ",
+      "created_at": "2026-04-27T02:20:12",
+      "gold_answer": "40",
+      "input_lang": "en",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "<s>[SYSTEM_PROMPT]请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。[/SYSTEM_PROMPT][INST]The ratio of boys to girls is 3:5. If there are 24 boys, how many girls are there?[/INST]",
+      "raw_completion": "é¦ĸåħĪï¼Įé¢ĺçĽ®ç»ĻåĩºäºĨçĶ·åŃ©ä¸İå¥³åŃ©çļĦæ¯Ķä¾ĭæĺ¯3æ¯Ķ5ãĢĤè¿ĻæĦıåĳ³çĿĢæ¯ı3ä¸ªçĶ·åŃ©å¯¹åºĶ5ä¸ªå¥³åŃ©ãĢĤĊĊçĦ¶åĲİï¼Įé¢ĺçĽ®åĳĬè¯īæĪĳä»¬æľī24ä¸ªçĶ·åŃ©ãĢĤæĪĳä»¬åı¯ä»¥åĪ©çĶ¨æ¯Ķä¾ĭæĿ¥æī¾åĪ°å¥³åŃ©çļĦæķ°éĩıãĢĤĊĊæł¹æį®æ¯Ķä¾ĭ3:5ï¼Įåı¯ä»¥è®¾çĶ·åŃ©æķ°éĩıä¸º3xï¼Įå¥³åŃ©æķ°éĩıä¸º5xãĢĤåĽłä¸ºçĶ·åŃ©æķ°éĩıå·²çŁ¥ä¸º24ï¼ĮæīĢä»¥åı¯ä»¥å»ºç«ĭæĸ¹ç¨ĭï¼ļĊĊ3xĠ=Ġ24ĊĊæİ¥ä¸ĭæĿ¥è§£è¿Ļä¸ªæĸ¹ç¨ĭï¼ļĊĊxĠ=Ġ24ĠÃ·Ġ3Ġ=Ġ8ĊĊçİ°åľ¨ï¼ĮæĪĳä»¬çŁ¥éģĵxçļĦåĢ¼æĺ¯8ãĢĤå°Ĩxä»£åħ¥å¥³åŃ©æķ°éĩıçļĦè¡¨è¾¾å¼ıï¼ļĊĊå¥³åŃ©æķ°éĩıĠ=Ġ",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "ratio_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    }
+  ]
+}

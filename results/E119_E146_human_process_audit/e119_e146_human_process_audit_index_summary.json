@@ -1,0 +1,903 @@
+{
+  "by_model": {
+    "gemma4_26b_a4b_it": {
+      "hit_max": 2,
+      "missing_strict_marker": 0,
+      "multiple_distinct_finals": 1,
+      "n": 66,
+      "repair_marker_any": 27,
+      "risk_score_ge_6": 12
+    },
+    "gemma4_31b_it": {
+      "hit_max": 0,
+      "missing_strict_marker": 0,
+      "multiple_distinct_finals": 6,
+      "n": 63,
+      "repair_marker_any": 32,
+      "risk_score_ge_6": 15
+    },
+    "glm47_flash_candidate": {
+      "hit_max": 3,
+      "missing_strict_marker": 0,
+      "multiple_distinct_finals": 0,
+      "n": 17,
+      "repair_marker_any": 13,
+      "risk_score_ge_6": 4
+    },
+    "qwen35_27b": {
+      "hit_max": 7,
+      "missing_strict_marker": 1,
+      "multiple_distinct_finals": 20,
+      "n": 55,
+      "repair_marker_any": 49,
+      "risk_score_ge_6": 23
+    }
+  },
+  "by_run": {
+    "E119_uniform_legacy": {
+      "hit_max": 8,
+      "missing_strict_marker": 0,
+      "multiple_distinct_finals": 11,
+      "n": 104,
+      "repair_marker_any": 63,
+      "risk_score_ge_6": 25
+    },
+    "E146_model_card_hf": {
+      "hit_max": 4,
+      "missing_strict_marker": 1,
+      "multiple_distinct_finals": 16,
+      "n": 97,
+      "repair_marker_any": 58,
+      "risk_score_ge_6": 29
+    }
+  },
+  "by_task": {
+    "aime25_base_divisor_p1": {
+      "hit_max": 0,
+      "missing_strict_marker": 0,
+      "multiple_distinct_finals": 4,
+      "n": 39,
+      "repair_marker_any": 20,
+      "risk_score_ge_6": 4
+    },
+    "aime25_geometry_reflection_p2": {
+      "hit_max": 3,
+      "missing_strict_marker": 0,
+      "multiple_distinct_finals": 1,
+      "n": 17,
+      "repair_marker_any": 17,
+      "risk_score_ge_6": 16
+    },
+    "aime25_icecream_ordered_assign_p3": {
+      "hit_max": 1,
+      "missing_strict_marker": 0,
+      "multiple_distinct_finals": 5,
+      "n": 36,
+      "repair_marker_any": 18,
+      "risk_score_ge_6": 5
+    },
+    "aime25_integer_pairs_quad_p4": {
+      "hit_max": 0,
+      "missing_strict_marker": 0,
+      "multiple_distinct_finals": 6,
+      "n": 37,
+      "repair_marker_any": 19,
+      "risk_score_ge_6": 8
+    },
+    "aime25_perm_div22_p5": {
+      "hit_max": 5,
+      "missing_strict_marker": 1,
+      "multiple_distinct_finals": 4,
+      "n": 33,
+      "repair_marker_any": 29,
+      "risk_score_ge_6": 14
+    },
+    "aime25_trapezoid_incircle_p6": {
+      "hit_max": 3,
+      "missing_strict_marker": 0,
+      "multiple_distinct_finals": 7,
+      "n": 39,
+      "repair_marker_any": 18,
+      "risk_score_ge_6": 7
+    }
+  },
+  "out_jsonl": "data/processed/e119_e146_human_process_audit_index_20260430.jsonl",
+  "rows": 201,
+  "top_risk": [
+    {
+      "audit_idx": 1460073,
+      "flags": {
+        "completion_chars": 14867,
+        "distinct_final_marker_values": [
+          "588",
+          "588.",
+          "864"
+        ],
+        "generated_tokens": 8192,
+        "geometry_self_intersect_concern": true,
+        "high_risk_task": true,
+        "hit_max": true,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": true,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 26,
+        "risk_score": 14
+      },
+      "model_key": "qwen35_27b",
+      "prompt_variant": "answer_first_no_gold",
+      "risk_score": 14,
+      "run_id": "E146_model_card_hf",
+      "task_id": "aime25_geometry_reflection_p2"
+    },
+    {
+      "audit_idx": 1190097,
+      "flags": {
+        "completion_chars": 7773,
+        "distinct_final_marker_values": [
+          "117",
+          "61"
+        ],
+        "generated_tokens": 3815,
+        "geometry_self_intersect_concern": false,
+        "high_risk_task": true,
+        "hit_max": false,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": true,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": true,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 16,
+        "risk_score": 12
+      },
+      "model_key": "qwen35_27b",
+      "prompt_variant": "answer_first_no_gold",
+      "risk_score": 12,
+      "run_id": "E119_uniform_legacy",
+      "task_id": "aime25_integer_pairs_quad_p4"
+    },
+    {
+      "audit_idx": 1460084,
+      "flags": {
+        "completion_chars": 11167,
+        "distinct_final_marker_values": [
+          "117",
+          "201"
+        ],
+        "generated_tokens": 6894,
+        "geometry_self_intersect_concern": false,
+        "high_risk_task": true,
+        "hit_max": false,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": true,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": true,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 25,
+        "risk_score": 12
+      },
+      "model_key": "qwen35_27b",
+      "prompt_variant": "answer_first_no_gold",
+      "risk_score": 12,
+      "run_id": "E146_model_card_hf",
+      "task_id": "aime25_integer_pairs_quad_p4"
+    },
+    {
+      "audit_idx": 1460085,
+      "flags": {
+        "completion_chars": 14717,
+        "distinct_final_marker_values": [
+          "117",
+          "203"
+        ],
+        "generated_tokens": 6894,
+        "geometry_self_intersect_concern": false,
+        "high_risk_task": true,
+        "hit_max": false,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": true,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": true,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 35,
+        "risk_score": 12
+      },
+      "model_key": "qwen35_27b",
+      "prompt_variant": "answer_first_no_gold",
+      "risk_score": 12,
+      "run_id": "E146_model_card_hf",
+      "task_id": "aime25_integer_pairs_quad_p4"
+    },
+    {
+      "audit_idx": 1190007,
+      "flags": {
+        "completion_chars": 6045,
+        "distinct_final_marker_values": [
+          "588"
+        ],
+        "generated_tokens": 4096,
+        "geometry_self_intersect_concern": true,
+        "high_risk_task": true,
+        "hit_max": true,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": false,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 10,
+        "risk_score": 11
+      },
+      "model_key": "gemma4_26b_a4b_it",
+      "prompt_variant": "self_check",
+      "risk_score": 11,
+      "run_id": "E119_uniform_legacy",
+      "task_id": "aime25_geometry_reflection_p2"
+    },
+    {
+      "audit_idx": 1190098,
+      "flags": {
+        "completion_chars": 7311,
+        "distinct_final_marker_values": [
+          "1857",
+          "279"
+        ],
+        "generated_tokens": 4096,
+        "geometry_self_intersect_concern": false,
+        "high_risk_task": true,
+        "hit_max": true,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": true,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 8,
+        "risk_score": 11
+      },
+      "model_key": "qwen35_27b",
+      "prompt_variant": "answer_first_no_gold",
+      "risk_score": 11,
+      "run_id": "E119_uniform_legacy",
+      "task_id": "aime25_perm_div22_p5"
+    },
+    {
+      "audit_idx": 1460007,
+      "flags": {
+        "completion_chars": 8368,
+        "distinct_final_marker_values": [
+          "588"
+        ],
+        "generated_tokens": 8192,
+        "geometry_self_intersect_concern": true,
+        "high_risk_task": true,
+        "hit_max": true,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": false,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 17,
+        "risk_score": 11
+      },
+      "model_key": "gemma4_26b_a4b_it",
+      "prompt_variant": "neutral",
+      "risk_score": 11,
+      "run_id": "E146_model_card_hf",
+      "task_id": "aime25_geometry_reflection_p2"
+    },
+    {
+      "audit_idx": 1460086,
+      "flags": {
+        "completion_chars": 16925,
+        "distinct_final_marker_values": [
+          "279",
+          "279."
+        ],
+        "generated_tokens": 8192,
+        "geometry_self_intersect_concern": false,
+        "high_risk_task": true,
+        "hit_max": true,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": true,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 14,
+        "risk_score": 11
+      },
+      "model_key": "qwen35_27b",
+      "prompt_variant": "neutral",
+      "risk_score": 11,
+      "run_id": "E146_model_card_hf",
+      "task_id": "aime25_perm_div22_p5"
+    },
+    {
+      "audit_idx": 1190091,
+      "flags": {
+        "completion_chars": 6647,
+        "distinct_final_marker_values": [
+          "16",
+          "240"
+        ],
+        "generated_tokens": 4096,
+        "geometry_self_intersect_concern": false,
+        "high_risk_task": false,
+        "hit_max": true,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": true,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 20,
+        "risk_score": 10
+      },
+      "model_key": "qwen35_27b",
+      "prompt_variant": "answer_first_no_gold",
+      "risk_score": 10,
+      "run_id": "E119_uniform_legacy",
+      "task_id": "aime25_icecream_ordered_assign_p3"
+    },
+    {
+      "audit_idx": 1190103,
+      "flags": {
+        "completion_chars": 9365,
+        "distinct_final_marker_values": [
+          "350",
+          "504"
+        ],
+        "generated_tokens": 4096,
+        "geometry_self_intersect_concern": false,
+        "high_risk_task": false,
+        "hit_max": true,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": true,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 23,
+        "risk_score": 10
+      },
+      "model_key": "qwen35_27b",
+      "prompt_variant": "answer_first_no_gold",
+      "risk_score": 10,
+      "run_id": "E119_uniform_legacy",
+      "task_id": "aime25_trapezoid_incircle_p6"
+    },
+    {
+      "audit_idx": 1190104,
+      "flags": {
+        "completion_chars": 6515,
+        "distinct_final_marker_values": [
+          "200",
+          "504"
+        ],
+        "generated_tokens": 4096,
+        "geometry_self_intersect_concern": false,
+        "high_risk_task": false,
+        "hit_max": true,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": true,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 14,
+        "risk_score": 10
+      },
+      "model_key": "qwen35_27b",
+      "prompt_variant": "answer_first_no_gold",
+      "risk_score": 10,
+      "run_id": "E119_uniform_legacy",
+      "task_id": "aime25_trapezoid_incircle_p6"
+    },
+    {
+      "audit_idx": 1460087,
+      "flags": {
+        "completion_chars": 16066,
+        "distinct_final_marker_values": [],
+        "generated_tokens": 8192,
+        "geometry_self_intersect_concern": false,
+        "high_risk_task": true,
+        "hit_max": true,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": true,
+        "multiple_distinct_finals": false,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 19,
+        "risk_score": 10
+      },
+      "model_key": "qwen35_27b",
+      "prompt_variant": "neutral",
+      "risk_score": 10,
+      "run_id": "E146_model_card_hf",
+      "task_id": "aime25_perm_div22_p5"
+    },
+    {
+      "audit_idx": 1190008,
+      "flags": {
+        "completion_chars": 4091,
+        "distinct_final_marker_values": [
+          "588"
+        ],
+        "generated_tokens": 3590,
+        "geometry_self_intersect_concern": true,
+        "high_risk_task": true,
+        "hit_max": false,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": false,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 7,
+        "risk_score": 9
+      },
+      "model_key": "gemma4_26b_a4b_it",
+      "prompt_variant": "answer_first_no_gold",
+      "risk_score": 9,
+      "run_id": "E119_uniform_legacy",
+      "task_id": "aime25_geometry_reflection_p2"
+    },
+    {
+      "audit_idx": 1190009,
+      "flags": {
+        "completion_chars": 7943,
+        "distinct_final_marker_values": [
+          "588"
+        ],
+        "generated_tokens": 3590,
+        "geometry_self_intersect_concern": true,
+        "high_risk_task": true,
+        "hit_max": false,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": false,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 25,
+        "risk_score": 9
+      },
+      "model_key": "gemma4_26b_a4b_it",
+      "prompt_variant": "answer_first_no_gold",
+      "risk_score": 9,
+      "run_id": "E119_uniform_legacy",
+      "task_id": "aime25_geometry_reflection_p2"
+    },
+    {
+      "audit_idx": 1190038,
+      "flags": {
+        "completion_chars": 6439,
+        "distinct_final_marker_values": [
+          "588"
+        ],
+        "generated_tokens": 2752,
+        "geometry_self_intersect_concern": true,
+        "high_risk_task": true,
+        "hit_max": false,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": false,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 12,
+        "risk_score": 9
+      },
+      "model_key": "gemma4_31b_it",
+      "prompt_variant": "neutral",
+      "risk_score": 9,
+      "run_id": "E119_uniform_legacy",
+      "task_id": "aime25_geometry_reflection_p2"
+    },
+    {
+      "audit_idx": 1190040,
+      "flags": {
+        "completion_chars": 5499,
+        "distinct_final_marker_values": [
+          "588"
+        ],
+        "generated_tokens": 2511,
+        "geometry_self_intersect_concern": true,
+        "high_risk_task": true,
+        "hit_max": false,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": false,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 7,
+        "risk_score": 9
+      },
+      "model_key": "gemma4_31b_it",
+      "prompt_variant": "self_check",
+      "risk_score": 9,
+      "run_id": "E119_uniform_legacy",
+      "task_id": "aime25_geometry_reflection_p2"
+    },
+    {
+      "audit_idx": 1190052,
+      "flags": {
+        "completion_chars": 3488,
+        "distinct_final_marker_values": [
+          "117",
+          "71"
+        ],
+        "generated_tokens": 2188,
+        "geometry_self_intersect_concern": false,
+        "high_risk_task": true,
+        "hit_max": false,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": true,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 19,
+        "risk_score": 9
+      },
+      "model_key": "gemma4_31b_it",
+      "prompt_variant": "answer_first_no_gold",
+      "risk_score": 9,
+      "run_id": "E119_uniform_legacy",
+      "task_id": "aime25_integer_pairs_quad_p4"
+    },
+    {
+      "audit_idx": 1190069,
+      "flags": {
+        "completion_chars": 8212,
+        "distinct_final_marker_values": [
+          "588"
+        ],
+        "generated_tokens": 3319,
+        "geometry_self_intersect_concern": true,
+        "high_risk_task": true,
+        "hit_max": false,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": false,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 20,
+        "risk_score": 9
+      },
+      "model_key": "glm47_flash_candidate",
+      "prompt_variant": "self_check",
+      "risk_score": 9,
+      "run_id": "E119_uniform_legacy",
+      "task_id": "aime25_geometry_reflection_p2"
+    },
+    {
+      "audit_idx": 1190096,
+      "flags": {
+        "completion_chars": 6048,
+        "distinct_final_marker_values": [
+          "117",
+          "203"
+        ],
+        "generated_tokens": 3815,
+        "geometry_self_intersect_concern": false,
+        "high_risk_task": true,
+        "hit_max": false,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": true,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 20,
+        "risk_score": 9
+      },
+      "model_key": "qwen35_27b",
+      "prompt_variant": "answer_first_no_gold",
+      "risk_score": 9,
+      "run_id": "E119_uniform_legacy",
+      "task_id": "aime25_integer_pairs_quad_p4"
+    },
+    {
+      "audit_idx": 1460008,
+      "flags": {
+        "completion_chars": 8602,
+        "distinct_final_marker_values": [
+          "588"
+        ],
+        "generated_tokens": 4561,
+        "geometry_self_intersect_concern": true,
+        "high_risk_task": true,
+        "hit_max": false,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": false,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 14,
+        "risk_score": 9
+      },
+      "model_key": "gemma4_26b_a4b_it",
+      "prompt_variant": "self_check",
+      "risk_score": 9,
+      "run_id": "E146_model_card_hf",
+      "task_id": "aime25_geometry_reflection_p2"
+    },
+    {
+      "audit_idx": 1460009,
+      "flags": {
+        "completion_chars": 9263,
+        "distinct_final_marker_values": [
+          "588"
+        ],
+        "generated_tokens": 4561,
+        "geometry_self_intersect_concern": true,
+        "high_risk_task": true,
+        "hit_max": false,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": false,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 12,
+        "risk_score": 9
+      },
+      "model_key": "gemma4_26b_a4b_it",
+      "prompt_variant": "self_check",
+      "risk_score": 9,
+      "run_id": "E146_model_card_hf",
+      "task_id": "aime25_geometry_reflection_p2"
+    },
+    {
+      "audit_idx": 1460010,
+      "flags": {
+        "completion_chars": 12938,
+        "distinct_final_marker_values": [
+          "588"
+        ],
+        "generated_tokens": 7886,
+        "geometry_self_intersect_concern": true,
+        "high_risk_task": true,
+        "hit_max": false,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": false,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 35,
+        "risk_score": 9
+      },
+      "model_key": "gemma4_26b_a4b_it",
+      "prompt_variant": "answer_first_no_gold",
+      "risk_score": 9,
+      "run_id": "E146_model_card_hf",
+      "task_id": "aime25_geometry_reflection_p2"
+    },
+    {
+      "audit_idx": 1460040,
+      "flags": {
+        "completion_chars": 4921,
+        "distinct_final_marker_values": [
+          "588"
+        ],
+        "generated_tokens": 2426,
+        "geometry_self_intersect_concern": true,
+        "high_risk_task": true,
+        "hit_max": false,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": false,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 6,
+        "risk_score": 9
+      },
+      "model_key": "gemma4_31b_it",
+      "prompt_variant": "neutral",
+      "risk_score": 9,
+      "run_id": "E146_model_card_hf",
+      "task_id": "aime25_geometry_reflection_p2"
+    },
+    {
+      "audit_idx": 1460041,
+      "flags": {
+        "completion_chars": 3460,
+        "distinct_final_marker_values": [
+          "588"
+        ],
+        "generated_tokens": 2426,
+        "geometry_self_intersect_concern": true,
+        "high_risk_task": true,
+        "hit_max": false,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": false,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 5,
+        "risk_score": 9
+      },
+      "model_key": "gemma4_31b_it",
+      "prompt_variant": "neutral",
+      "risk_score": 9,
+      "run_id": "E146_model_card_hf",
+      "task_id": "aime25_geometry_reflection_p2"
+    },
+    {
+      "audit_idx": 1460053,
+      "flags": {
+        "completion_chars": 2141,
+        "distinct_final_marker_values": [
+          "117"
+        ],
+        "generated_tokens": 1090,
+        "geometry_self_intersect_concern": false,
+        "high_risk_task": true,
+        "hit_max": false,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": true,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": false,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 6,
+        "risk_score": 9
+      },
+      "model_key": "gemma4_31b_it",
+      "prompt_variant": "self_check",
+      "risk_score": 9,
+      "run_id": "E146_model_card_hf",
+      "task_id": "aime25_integer_pairs_quad_p4"
+    },
+    {
+      "audit_idx": 1460054,
+      "flags": {
+        "completion_chars": 4126,
+        "distinct_final_marker_values": [
+          "117",
+          "81"
+        ],
+        "generated_tokens": 2385,
+        "geometry_self_intersect_concern": false,
+        "high_risk_task": true,
+        "hit_max": false,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": true,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 21,
+        "risk_score": 9
+      },
+      "model_key": "gemma4_31b_it",
+      "prompt_variant": "answer_first_no_gold",
+      "risk_score": 9,
+      "run_id": "E146_model_card_hf",
+      "task_id": "aime25_integer_pairs_quad_p4"
+    },
+    {
+      "audit_idx": 1460090,
+      "flags": {
+        "completion_chars": 9384,
+        "distinct_final_marker_values": [
+          "2145",
+          "279"
+        ],
+        "generated_tokens": 4660,
+        "geometry_self_intersect_concern": false,
+        "high_risk_task": true,
+        "hit_max": false,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": true,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 9,
+        "risk_score": 9
+      },
+      "model_key": "qwen35_27b",
+      "prompt_variant": "answer_first_no_gold",
+      "risk_score": 9,
+      "run_id": "E146_model_card_hf",
+      "task_id": "aime25_perm_div22_p5"
+    },
+    {
+      "audit_idx": 1460091,
+      "flags": {
+        "completion_chars": 8489,
+        "distinct_final_marker_values": [
+          "1745",
+          "279"
+        ],
+        "generated_tokens": 4660,
+        "geometry_self_intersect_concern": false,
+        "high_risk_task": true,
+        "hit_max": false,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": true,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 9,
+        "risk_score": 9
+      },
+      "model_key": "qwen35_27b",
+      "prompt_variant": "answer_first_no_gold",
+      "risk_score": 9,
+      "run_id": "E146_model_card_hf",
+      "task_id": "aime25_perm_div22_p5"
+    },
+    {
+      "audit_idx": 1190046,
+      "flags": {
+        "completion_chars": 3302,
+        "distinct_final_marker_values": [
+          "16",
+          "504"
+        ],
+        "generated_tokens": 1489,
+        "geometry_self_intersect_concern": false,
+        "high_risk_task": false,
+        "hit_max": false,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": true,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 20,
+        "risk_score": 8
+      },
+      "model_key": "gemma4_31b_it",
+      "prompt_variant": "answer_first_no_gold",
+      "risk_score": 8,
+      "run_id": "E119_uniform_legacy",
+      "task_id": "aime25_icecream_ordered_assign_p3"
+    },
+    {
+      "audit_idx": 1190063,
+      "flags": {
+        "completion_chars": 3556,
+        "distinct_final_marker_values": [
+          "162",
+          "504"
+        ],
+        "generated_tokens": 2620,
+        "geometry_self_intersect_concern": false,
+        "high_risk_task": false,
+        "hit_max": false,
+        "icecream_missing_531_hint": false,
+        "integer_wrong_factor_alt": false,
+        "integer_wrong_factor_plus_xy": false,
+        "missing_strict_marker": false,
+        "multiple_distinct_finals": true,
+        "perm_suspicious_41472": false,
+        "repair_marker_count": 12,
+        "risk_score": 8
+      },
+      "model_key": "gemma4_31b_it",
+      "prompt_variant": "answer_first_no_gold",
+      "risk_score": 8,
+      "run_id": "E119_uniform_legacy",
+      "task_id": "aime25_trapezoid_incircle_p6"
+    }
+  ]
+}

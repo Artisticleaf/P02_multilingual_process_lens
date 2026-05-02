@@ -1,0 +1,128 @@
+[2026-04-27 22:50:04 CST] queued E36/E37; waiting for gemma31_postdownload session to end
+[2026-04-27 22:52:04 CST] still waiting for gemma31_postdownload
+[2026-04-27 22:54:04 CST] still waiting for gemma31_postdownload
+[2026-04-27 22:56:04 CST] still waiting for gemma31_postdownload
+[2026-04-27 22:58:04 CST] still waiting for gemma31_postdownload
+[2026-04-27 23:00:04 CST] still waiting for gemma31_postdownload
+[2026-04-27 23:02:04 CST] still waiting for gemma31_postdownload
+[2026-04-27 23:04:04 CST] still waiting for gemma31_postdownload
+[2026-04-27 23:06:04 CST] still waiting for gemma31_postdownload
+[2026-04-27 23:08:04 CST] still waiting for gemma31_postdownload
+[2026-04-27 23:10:04 CST] still waiting for gemma31_postdownload
+[2026-04-27 23:12:04 CST] still waiting for gemma31_postdownload
+[2026-04-27 23:14:04 CST] still waiting for gemma31_postdownload
+[2026-04-27 23:16:04 CST] still waiting for gemma31_postdownload
+[2026-04-27 23:18:04 CST] still waiting for gemma31_postdownload
+[2026-04-27 23:20:04 CST] still waiting for gemma31_postdownload
+[2026-04-27 23:20:04 CST] gemma31_postdownload ended; starting E36/E37
+[2026-04-27T23:20:07] loading qwen3_14b_base on cuda; pairs=5
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s]Loading weights: 100%|██████████| 443/443 [00:00<00:00, 17722.97it/s]
+pair=e36_ineq_full_condition_qwen14 base_valid=2.625 base_bad=2.500 layers=[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 39]
+pair=e36_ineq_lower_bound_qwen14 base_valid=2.625 base_bad=2.500 layers=[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 39]
+pair=e36_ineq_upper_bound_qwen14 base_valid=2.625 base_bad=2.500 layers=[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 39]
+pair=e36_ineq_corrective_list_qwen14 base_valid=2.625 base_bad=2.500 layers=[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 39]
+pair=e36_ineq_full_clause_qwen14 base_valid=2.625 base_bad=2.500 layers=[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 39]
+wrote results/E36_inequality_boundary_span_variants/qwen3_14b_base_real_acpi_span_patch.json; rows=105 best_pair=e36_ineq_upper_bound_qwen14 span=support_error_span L12 v2b=0.125 b2v=-1.500
+[2026-04-27T23:20:36] loading qwen35_9b on cuda; pairs=5
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/427 [00:00<?, ?it/s]Loading weights: 100%|██████████| 427/427 [00:00<00:00, 14775.74it/s]
+pair=e36_ineq_full_condition_qwen35_9b base_valid=3.438 base_bad=2.750 layers=[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]
+pair=e36_ineq_lower_bound_qwen35_9b base_valid=3.438 base_bad=2.750 layers=[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]
+pair=e36_ineq_upper_bound_qwen35_9b base_valid=3.438 base_bad=2.750 layers=[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]
+pair=e36_ineq_corrective_list_qwen35_9b base_valid=3.438 base_bad=2.750 layers=[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]
+pair=e36_ineq_full_clause_qwen35_9b base_valid=3.438 base_bad=2.750 layers=[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]
+wrote results/E36_inequality_boundary_span_variants/qwen35_9b_real_acpi_span_patch.json; rows=80 best_pair=e36_ineq_full_clause_qwen35_9b span=support_error_span L8 v2b=0.188 b2v=-2.563
+wrote /home/Awei/P02_multilingual_process_lens/reports/E36_inequality_boundary_deep_dive_20260427.md and /home/Awei/P02_multilingual_process_lens/results/E36_inequality_boundary_span_variants/summary.json
+[2026-04-27T23:21:13] loading qwen3_14b_base for layerwise lens on cuda
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s]Loading weights: 100%|██████████| 443/443 [00:00<00:00, 15377.48it/s]
+absolute idx=310001 lang=en final=12.375
+absolute idx=310001 lang=zh final=-5.875
+absolute idx=310002 lang=en final=10.125
+absolute idx=310002 lang=zh final=-6.875
+absolute idx=310007 lang=en final=12.375
+absolute idx=310007 lang=zh final=-6.375
+absolute idx=310008 lang=en final=12.375
+absolute idx=310008 lang=zh final=-6.500
+absolute idx=310013 lang=en final=12.125
+absolute idx=310013 lang=zh final=-6.250
+absolute idx=310014 lang=en final=10.000
+absolute idx=310014 lang=zh final=-7.250
+absolute idx=310019 lang=en final=12.625
+absolute idx=310019 lang=zh final=-5.750
+absolute idx=310020 lang=en final=10.250
+absolute idx=310020 lang=zh final=-7.000
+absolute idx=310025 lang=en final=12.125
+absolute idx=310025 lang=zh final=-6.500
+absolute idx=310026 lang=en final=10.500
+absolute idx=310026 lang=zh final=-7.625
+contrastive pair=e31_ratio_boys_girls_bad310002_valid310001 lang=en order=bad_A final=-0.688
+contrastive pair=e31_ratio_boys_girls_bad310002_valid310001 lang=en order=bad_B final=3.031
+contrastive pair=e31_ratio_boys_girls_bad310002_valid310001 lang=zh order=bad_A final=1.688
+contrastive pair=e31_ratio_boys_girls_bad310002_valid310001 lang=zh order=bad_B final=0.875
+contrastive pair=e31_inequality_boundary_bad310008_valid310007 lang=en order=bad_A final=-2.156
+contrastive pair=e31_inequality_boundary_bad310008_valid310007 lang=en order=bad_B final=2.125
+contrastive pair=e31_inequality_boundary_bad310008_valid310007 lang=zh order=bad_A final=-0.188
+contrastive pair=e31_inequality_boundary_bad310008_valid310007 lang=zh order=bad_B final=-0.062
+contrastive pair=e31_unit_dozen_pairs_bad310014_valid310013 lang=en order=bad_A final=-0.656
+contrastive pair=e31_unit_dozen_pairs_bad310014_valid310013 lang=en order=bad_B final=2.781
+contrastive pair=e31_unit_dozen_pairs_bad310014_valid310013 lang=zh order=bad_A final=1.688
+contrastive pair=e31_unit_dozen_pairs_bad310014_valid310013 lang=zh order=bad_B final=0.625
+contrastive pair=e31_geometry_diameter_bad310020_valid310019 lang=en order=bad_A final=-1.125
+contrastive pair=e31_geometry_diameter_bad310020_valid310019 lang=en order=bad_B final=2.312
+contrastive pair=e31_geometry_diameter_bad310020_valid310019 lang=zh order=bad_A final=1.500
+contrastive pair=e31_geometry_diameter_bad310020_valid310019 lang=zh order=bad_B final=0.750
+contrastive pair=e31_comb_unordered_bad310026_valid310025 lang=en order=bad_A final=-0.156
+contrastive pair=e31_comb_unordered_bad310026_valid310025 lang=en order=bad_B final=3.156
+contrastive pair=e31_comb_unordered_bad310026_valid310025 lang=zh order=bad_A final=1.938
+contrastive pair=e31_comb_unordered_bad310026_valid310025 lang=zh order=bad_B final=1.000
+wrote results/E37_e31_layerwise_lens/qwen3_14b_base_layerwise_verifier_lens.json; absolute=20 contrastive=20
+[2026-04-27T23:21:24] loading qwen35_9b for layerwise lens on cuda
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/427 [00:00<?, ?it/s]Loading weights: 100%|██████████| 427/427 [00:00<00:00, 15557.40it/s]
+absolute idx=310001 lang=en final=4.750
+absolute idx=310001 lang=zh final=2.438
+absolute idx=310002 lang=en final=-0.625
+absolute idx=310002 lang=zh final=-0.500
+absolute idx=310007 lang=en final=4.125
+absolute idx=310007 lang=zh final=2.000
+absolute idx=310008 lang=en final=3.375
+absolute idx=310008 lang=zh final=1.625
+absolute idx=310013 lang=en final=3.500
+absolute idx=310013 lang=zh final=1.250
+absolute idx=310014 lang=en final=-1.625
+absolute idx=310014 lang=zh final=-1.750
+absolute idx=310019 lang=en final=4.250
+absolute idx=310019 lang=zh final=2.125
+absolute idx=310020 lang=en final=2.500
+absolute idx=310020 lang=zh final=1.000
+absolute idx=310025 lang=en final=4.000
+absolute idx=310025 lang=zh final=1.875
+absolute idx=310026 lang=en final=1.500
+absolute idx=310026 lang=zh final=0.625
+contrastive pair=e31_ratio_boys_girls_bad310002_valid310001 lang=en order=bad_A final=0.250
+contrastive pair=e31_ratio_boys_girls_bad310002_valid310001 lang=en order=bad_B final=3.000
+contrastive pair=e31_ratio_boys_girls_bad310002_valid310001 lang=zh order=bad_A final=0.625
+contrastive pair=e31_ratio_boys_girls_bad310002_valid310001 lang=zh order=bad_B final=0.750
+contrastive pair=e31_inequality_boundary_bad310008_valid310007 lang=en order=bad_A final=-0.375
+contrastive pair=e31_inequality_boundary_bad310008_valid310007 lang=en order=bad_B final=0.750
+contrastive pair=e31_inequality_boundary_bad310008_valid310007 lang=zh order=bad_A final=0.125
+contrastive pair=e31_inequality_boundary_bad310008_valid310007 lang=zh order=bad_B final=0.125
+contrastive pair=e31_unit_dozen_pairs_bad310014_valid310013 lang=en order=bad_A final=-0.375
+contrastive pair=e31_unit_dozen_pairs_bad310014_valid310013 lang=en order=bad_B final=1.500
+contrastive pair=e31_unit_dozen_pairs_bad310014_valid310013 lang=zh order=bad_A final=0.750
+contrastive pair=e31_unit_dozen_pairs_bad310014_valid310013 lang=zh order=bad_B final=0.250
+contrastive pair=e31_geometry_diameter_bad310020_valid310019 lang=en order=bad_A final=0.375
+contrastive pair=e31_geometry_diameter_bad310020_valid310019 lang=en order=bad_B final=2.375
+contrastive pair=e31_geometry_diameter_bad310020_valid310019 lang=zh order=bad_A final=0.250
+contrastive pair=e31_geometry_diameter_bad310020_valid310019 lang=zh order=bad_B final=0.750
+contrastive pair=e31_comb_unordered_bad310026_valid310025 lang=en order=bad_A final=0.625
+contrastive pair=e31_comb_unordered_bad310026_valid310025 lang=en order=bad_B final=1.125
+contrastive pair=e31_comb_unordered_bad310026_valid310025 lang=zh order=bad_A final=0.375
+contrastive pair=e31_comb_unordered_bad310026_valid310025 lang=zh order=bad_B final=0.750
+wrote results/E37_e31_layerwise_lens/qwen35_9b_layerwise_verifier_lens.json; absolute=20 contrastive=20
+wrote reports/E37_e31_layerwise_lens_summary_20260427.md and results/E37_e31_layerwise_lens/summary.json
+[2026-04-27 23:21:36 CST] E36/E37 done

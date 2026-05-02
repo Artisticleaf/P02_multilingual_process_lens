@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-04-29T12:10:00+08:00",
+  "status": "interim_e88_running",
+  "artifacts": {
+    "report": "reports/E85_E89_INTERIM_DEEPDIVE_20260429.md",
+    "e85": "results/E85_hardtask_full_hidden_cache/",
+    "e86": "results/E86_algebra_equivalence_adversarial/",
+    "e87": "results/E87_glm_readout_intervention/",
+    "e88_status": "logs/e85_e89_status_20260429.jsonl",
+    "e89": "results/E89_repair_policy_filter_simulation/"
+  },
+  "key_results": {
+    "E85": "Gemma31 repaired prefixes flip from accept to reject after repair markers; Gemma26 unrepaired prefixes remain accepted despite weak/negative hidden projection.",
+    "E86": "Strict pointwise catches all short algebra-equivalence invalid traces (invalid accept 0 across P0), but over-rejects valid terse traces; GLM raw A/B remains weak.",
+    "E87": "GLM raw A/B 0.542; two-order antisymmetric 0.812; hidden readout 1.000; label-free 0.958.",
+    "E88": "running; no prevalence update until manual audit."
+  },
+  "safe_claim_zh": "受控 strict ACPI 风险稳健；自然未修复 ACPI 当前低频但真实；hidden residual 中有过程证据，但目标、阈值、答案锚定、修复感知、上下文/局部隐蔽性和输出标签读出决定最终是否用上。"
+}

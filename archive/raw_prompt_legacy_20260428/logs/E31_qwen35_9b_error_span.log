@@ -1,0 +1,129 @@
+[2026-04-27T19:56:58] loading model=qwen35_9b device=cuda rows=30
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/427 [00:00<?, ?it/s]Loading weights: 100%|██████████| 427/427 [00:00<00:00, 14728.60it/s]
+idx=310001 mode=locate_only prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=310001 mode=locate_only prompt=zh proc=True span_ok=True judge=None out=NONE
+idx=310001 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes  <think> Thinking Process:  1.  **Analyze the Request:**     *   T
+idx=310001 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes  <think> Thinking Process:  1.  **Analyze the Request:**     *   R
+idx=310002 mode=locate_only prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=310002 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=男生占全班的2/3。  <think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathemat
+idx=310002 mode=locate_then_judge prompt=en proc=False span_ok=True judge=False out=男生占全班的2/3 Process-valid: No  <think> Thinking Process:  1.  **Analyze the Request:**     *
+idx=310002 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=False out=男生占全班的2/3 Process-valid: No  <think> Thinking Process:  1.  **Analyze the Request:**     *
+idx=310003 mode=locate_only prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=310003 mode=locate_only prompt=zh proc=True span_ok=True judge=None out=NONE
+idx=310003 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes  Problem: 一个社团里男生和女生的人数比是2:3。如果社团共有30名学生，男生有多少名？ Reasoning trace: 
+idx=310003 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes  <think> Thinking Process:  1.  **Analyze the Request:**     *   R
+idx=310004 mode=locate_only prompt=en proc=False span_ok=True judge=None out="男生占全班的2/3", reason: 比例2:3表示男生占2份，女生占3份，总份数为5，男生应占2/5，而非2/3。  <think> Thinking Process:  1
+idx=310004 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=男生占全班的2/3。  <think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathemat
+idx=310004 mode=locate_then_judge prompt=en proc=False span_ok=True judge=False out=男生占全班的2/3 Process-valid: No  <think> Thinking Process:  1.  **Analyze the Request:**     *
+idx=310004 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=False out=男生占全班的2/3 Process-valid: No  <think> Thinking Process:  1.  **Analyze the Request:**     *
+idx=310005 mode=locate_only prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=310005 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=310005 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=Process-valid:  <think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audi
+idx=310005 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=False out=30×2/5=12 Process-valid: No  <think> Thinking Process:  1.  **Analyze the Request:**     *
+idx=310006 mode=locate_only prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=310006 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=男生占全班的2/3。 解释：男生和女生的人数比是2:3，男生应占全班的2/5，而非2/3。  <think> Thinking Process:  1.  **Analyze th
+idx=310006 mode=locate_then_judge prompt=en proc=False span_ok=True judge=False out="男生占全班的2/3" Process-valid: No  <think> Thinking Process:  1.  **Analyze the Request:**    
+idx=310006 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=False out=男生占全班的2/3 Process-valid: No  <think> Thinking Process:  1.  **Analyze the Request:**     *
+idx=310007 mode=locate_only prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=310007 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=310007 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=Process-valid:  <think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audi
+idx=310007 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes  <think> Thinking Process:  1.  **Analyze the Request:**     *   R
+idx=310008 mode=locate_only prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=310008 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=310008 mode=locate_then_judge prompt=en proc=False span_ok=False judge=None out=Process-valid:  <think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audi
+idx=310008 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=False out=4, 5, 6, and 7 Process-valid: No  题目：一个数是大于3且不超过7的整数。它有多少个可能取值？ 推理过程：The condition means t
+idx=310009 mode=locate_only prompt=en proc=True span_ok=False judge=None out="Counting them gives 4 possible values." Reason: The integers are 4, 5, 6, 7, which are 4 
+idx=310009 mode=locate_only prompt=zh proc=True span_ok=False judge=None out="greater than 3 and no more than 7" 被解释为 4, 5, 6, 7，但 "no more than 7" 意味着 ≤7，而 "greater t
+idx=310009 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes  Problem: 一个数是大于3且不超过7的整数。它有多少个可能取值？ Reasoning trace: The conditio
+idx=310009 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes  题目：一个数是大于3且不超过7的整数。它有多少个可能取值？ 推理过程：The condition is greater than 
+idx=310010 mode=locate_only prompt=en proc=False span_ok=True judge=None out="The condition means the integer values are between 3 and 7, inclusive." Reason: The probl
+idx=310010 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=310010 mode=locate_then_judge prompt=en proc=False span_ok=False judge=True out=NONE Process-valid: Yes  Problem: 一个数是大于3且不超过7的整数。它有多少个可能取值？ Reasoning trace: The conditio
+idx=310010 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=False out=4, 5, 6, and 7 Process-valid: No  题目：一个数是大于3且不超过7的整数。它有多少个可能取值？ 推理过程：The condition means t
+idx=310011 mode=locate_only prompt=en proc=True span_ok=False judge=None out="Counting them gives 4 possible values." Reason: The count of {4, 5, 6, 7} is 4, but the f
+idx=310011 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=310011 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=Process-valid:  <think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audi
+idx=310011 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=False out=4, 5, 6, and 7 Process-valid: No  题目：一个数是大于3且不超过7的整数。它有多少个可能取值？ 推理过程：The condition is grea
+idx=310012 mode=locate_only prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=310012 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=310012 mode=locate_then_judge prompt=en proc=False span_ok=False judge=None out=Process-valid:  <think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audi
+idx=310012 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=False out=4, 5, 6, and 7 Process-valid: No  <think> Thinking Process:  1.  **Analyze the Request:** 
+idx=310013 mode=locate_only prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=310013 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=310013 mode=locate_then_judge prompt=en proc=True span_ok=False judge=False out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=310013 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=False out=一打等于12只袜子。 Process-valid: No  <think> Thinking Process:  1.  **Analyze the Request:**     
+idx=310014 mode=locate_only prompt=en proc=False span_ok=False judge=None out="3打袜子是36双"  <think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a 
+idx=310014 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=310014 mode=locate_then_judge prompt=en proc=False span_ok=False judge=False out=接着把3打理解为36只袜子，每双有2只，因此36÷2=18双。 Process-valid: No  <think> Thinking Process:  1.  **Analyz
+idx=310014 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=False out=接着把3打理解为36只袜子，每双有1双有2只，因此36÷2=18双。 Process-valid: No  <think> Thinking Process:  1.  **Ana
+idx=310015 mode=locate_only prompt=en proc=True span_ok=False judge=None out="3打袜子就是3×12=36只袜子" Reason: "只" is incorrect; should be "双" (pairs).  Problem: 一家商店卖出3打袜子。相
+idx=310015 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=310015 mode=locate_then_judge prompt=en proc=True span_ok=True judge=False out=一打等于12只袜子。 Process-valid: No  Problem: 一个数加上5等于10，这个数是多少？ Reasoning trace: 设这个数为x。x+5=10。x
+idx=310015 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=False out=一打等于12只袜子。 Process-valid: No  题目：一个长方形的长是10厘米，宽是5厘米。它的面积是多少？ 推理过程：长方形的面积公式是长×宽。10×5=50。所以面
+idx=310016 mode=locate_only prompt=en proc=False span_ok=False judge=None out="接着把3打理解为36只袜子，每双有2只，因此36÷2=18双。" Reason: 3打袜子已经等于36双，不需要再除以2。  You are auditing a mathema
+idx=310016 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=310016 mode=locate_then_judge prompt=en proc=False span_ok=False judge=False out=接着把3打理解为36只袜子，每双有2只，因此36÷2=18双。 Process-valid: No  Problem: 一个数加上5等于10，这个数是多少？ Reasoning t
+idx=310016 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=False out=接着把3打理解为36只袜子，每双有2只，因此36÷2=18双。 Process-valid: No  <think> Thinking Process:  1.  **Analyz
+idx=310017 mode=locate_only prompt=en proc=True span_ok=False judge=None out="36只袜子等于36÷2=18双"  <think> Thinking Process:  1.  **Analyze the Request:**     *   Task: A
+idx=310017 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=310017 mode=locate_then_judge prompt=en proc=True span_ok=False judge=False out=3打袜子就是3×12=36只袜子。每双袜子有2只，所以36只袜子等于36÷2=18双。 Process-valid: No  <think> Thinking Process:  
+idx=310017 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=False out=36只袜子 Process-valid: No  <think> Thinking Process:  1.  **Analyze the Request:**     *   R
+idx=310018 mode=locate_only prompt=en proc=False span_ok=False judge=None out="接着把3打理解为36只袜子，每双有2只，因此36÷2=18双" Reason: 3打袜子即36双，不应再除以2，该步骤逻辑错误。
+idx=310018 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=310018 mode=locate_then_judge prompt=en proc=False span_ok=False judge=False out=接着把3打理解为36只袜子，每双有2只，因此36÷2=18双。 Process-valid: No  <think> Thinking Process:  1.  **Analyz
+idx=310018 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=False out=接着把3打理解为36只袜子，每双有1双有2只，因此36÷2=18双。 Process-valid: No  <think> Thinking Process:  1.  **Ana
+idx=310019 mode=locate_only prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=310019 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=310019 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes  Problem: 一个圆的直径是10厘米。它的面积是多少（用π表示）？ Reasoning trace: 圆的直径是10厘米，所以
+idx=310019 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes  <think> Thinking Process:  1.  **Analyze the Request:**     *   R
+idx=310020 mode=locate_only prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=310020 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=310020 mode=locate_then_judge prompt=en proc=False span_ok=True judge=False out=圆的直径是10厘米，也就是说半径是10厘米。 Process-valid: No  Problem: 一个圆的直径是10厘米。它的面积是多少（用π表示）？ Reasoning tr
+idx=310020 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=False out=圆的直径是10厘米，也就是说半径是10厘米。 Process-valid: No  <think> Thinking Process:  1.  **Analyze the Req
+idx=310021 mode=locate_only prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=310021 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=310021 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes  Problem: 一个圆的直径是10厘米。它的面积是多少（用π表示）？ Reasoning trace: 圆的直径是10厘米，所以
+idx=310021 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes  <think> Thinking Process:  1.  **Analyze the Request:**     *   R
+idx=310022 mode=locate_only prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=310022 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=310022 mode=locate_then_judge prompt=en proc=False span_ok=False judge=False out=圆的直径是10厘米，也就是说半径是10厘米。 Process-valid: No  Problem: 一个圆的直径是10厘米。它的面积是多少（用π表示）？ Reasoning tr
+idx=310022 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=False out=圆的直径是10厘米，也就是说半径是10厘米。 Process-valid: No  <think> Thinking Process:  1.  **Analyze the Req
+idx=310023 mode=locate_only prompt=en proc=True span_ok=False judge=None out="100π", reason: 计算错误，5²=25，不是100。  <think> Thinking Process:  1.  **Analyze the Request:**
+idx=310023 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=310023 mode=locate_then_judge prompt=en proc=True span_ok=False judge=False out=100π Process-valid: No  <think> Thinking Process:  1.  **Analyze the Request:**     *   Ta
+idx=310023 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=False out=Final answer: 100π Process-valid: No  <think> Thinking Process:  1.  **Analyze the Request
+idx=310024 mode=locate_only prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=310024 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=310024 mode=locate_then_judge prompt=en proc=False span_ok=True judge=False out=圆的直径是10厘米，也就是说半径是10厘米。 Process-valid: No  Problem: 一个圆的直径是10厘米。它的面积是多少（用π表示）？ Reasoning tr
+idx=310024 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=False out=圆的直径是10厘米，也就是说半径是10厘米。 Process-valid: No  <think> Thinking Process:  1.  **Analyze the Req
+idx=310025 mode=locate_only prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=310025 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=310025 mode=locate_then_judge prompt=en proc=True span_ok=False judge=False out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=310025 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes  <think> Thinking Process:  1.  **Analyze the Request:**     *   R
+idx=310026 mode=locate_only prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=310026 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=Because two students are selected, the order matters. 解释：题目明确说明委员会不区分顺序，因此顺序不重要。  <think> 
+idx=310026 mode=locate_then_judge prompt=en proc=False span_ok=False judge=None out=Process-valid:  <think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audi
+idx=310026 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=False out=Because two students are selected, the order matters. Process-valid: No  题目：计算 $12345 \tim
+idx=310027 mode=locate_only prompt=en proc=True span_ok=False judge=None out="Compute C(5,2)=5×4÷2=10." Reason: The formula for combinations is C(n,k) = n! / (k!(n-k)!
+idx=310027 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=310027 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes Problem: 从5名学生中选2名组成不区分顺序的组合。有多少种选法？ Reasoning trace: The committe
+idx=310027 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes  题目：计算 $12345 \times 67890$ 的个位数字。 推理过程：The last digit of a produc
+idx=310028 mode=locate_only prompt=en proc=False span_ok=True judge=None out="Because two students are selected, the order matters."  <think> Thinking Process:  1.  **
+idx=310028 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=Because two students are selected, the order matters. 解释：题目明确说明委员会不区分顺序，因此顺序不应被视为重要因素。  <t
+idx=310028 mode=locate_then_judge prompt=en proc=False span_ok=True judge=True out="Because two students are selected, the order matters." Process-valid: Yes  Problem: 从5名学生
+idx=310028 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=False out=Because two students are selected, the order matters. Process-valid: No  题目：计算 $12345 \tim
+idx=310029 mode=locate_only prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=310029 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=310029 mode=locate_then_judge prompt=en proc=True span_ok=False judge=False out=Process-valid:  <think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audi
+idx=310029 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes  <think> Thinking Process:  1.  **Analyze the Request:**     *   R
+idx=310030 mode=locate_only prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=310030 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=Because two students are selected, the order matters. 解释：题目明确说明委员会不区分顺序，因此顺序不应被视为重要因素。  <t
+idx=310030 mode=locate_then_judge prompt=en proc=False span_ok=True judge=False out="Because two students are selected, the order matters." Process-valid: No  Problem: 计算 3^4
+idx=310030 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=False out=Because two students are selected, the order matters. Process-valid: No  题目：计算 3^4。 推理过程：3
+[2026-04-27T20:01:08] wrote results/E31_non_discount_error_span_verifier/qwen35_9b_error_span_extraction_verifier.json; eval_rows=120
+SUMMARY mode=locate_only prompt=en span_acc=0.1 invalid_hit=0.2 judge_acc=None loc_but_accept=None
+SUMMARY mode=locate_only prompt=zh span_acc=0.26666666666666666 invalid_hit=0.4 judge_acc=None loc_but_accept=None
+SUMMARY mode=locate_then_judge prompt=en span_acc=0.4666666666666667 invalid_hit=0.4666666666666667 judge_acc=0.6666666666666666 loc_but_accept=0.08333333333333333
+SUMMARY mode=locate_then_judge prompt=zh span_acc=0.6666666666666666 invalid_hit=0.6666666666666666 judge_acc=0.8 loc_but_accept=0.0

@@ -1,0 +1,4 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/427 [00:00<?, ?it/s]Loading weights: 100%|██████████| 427/427 [00:00<00:00, 15949.06it/s]
+wrote /home/Awei/P02_multilingual_process_lens/data/raw/e26_aime_hard_trace_pool_fast/qwen35_9b_trace_pool_smoke_v2_aime_hard_fast.json; rows=6

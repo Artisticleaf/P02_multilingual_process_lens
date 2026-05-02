@@ -1,0 +1,28 @@
+{
+  "candidate_solutions": 63,
+  "candidate_variants": {
+    "invalid_answer_preserving_reference": 21,
+    "invalid_answer_wrong_reference": 21,
+    "valid_reference": 21
+  },
+  "created_at": "2026-05-01T23:47:01",
+  "families": {
+    "code_boundary": 3,
+    "geometry_constraints": 3,
+    "graph_definition": 3,
+    "long_table_aggregation": 3,
+    "multilingual_semantic": 3,
+    "proof_validity": 3,
+    "set_venn_counting": 3
+  },
+  "ready_requires_static_audit": true,
+  "repair_case_out": "data/processed/e165_hardened_multi_family_repair_cases_20260501.jsonl",
+  "repair_case_types": {
+    "controlled_invalid_answer_preserving_trace": 21,
+    "controlled_invalid_answer_wrong_trace": 21
+  },
+  "repair_cases": 42,
+  "solution_out": "data/processed/e164_hardened_multi_family_candidate_solutions_20260501.jsonl",
+  "task_out": "data/processed/e164_hardened_multi_family_tasks_20260501.jsonl",
+  "tasks": 21
+}

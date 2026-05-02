@@ -1,0 +1,16 @@
+[2026-04-27T18:06:08] loading verifier=gemma4_e4b_it on cuda; pairs=3
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/2076 [00:00<?, ?it/s]Loading weights:  86%|████████▌ | 1781/2076 [00:00<00:00, 17805.47it/s]Loading weights: 100%|██████████| 2076/2076 [00:00<00:00, 17862.12it/s]
+pair=gemma4_s6_25off_bad49_valid48 prompt=en order=bad_A target=A pred=A margin=2.220
+pair=gemma4_s6_25off_bad49_valid48 prompt=en order=bad_B target=B pred=A margin=-2.813
+pair=gemma4_s6_25off_bad49_valid48 prompt=zh order=bad_A target=A pred=A margin=1.625
+pair=gemma4_s6_25off_bad49_valid48 prompt=zh order=bad_B target=B pred=A margin=-2.357
+pair=gemma4_s6_dabazhe_bad70_valid71 prompt=en order=bad_A target=A pred=A margin=2.628
+pair=gemma4_s6_dabazhe_bad70_valid71 prompt=en order=bad_B target=B pred=A margin=-1.832
+pair=gemma4_s6_dabazhe_bad70_valid71 prompt=zh order=bad_A target=A pred=A margin=0.297
+pair=gemma4_s6_dabazhe_bad70_valid71 prompt=zh order=bad_B target=B pred=A margin=-1.125
+pair=qwen14_s6_pay75_bad150_valid151 prompt=en order=bad_A target=A pred=A margin=2.064
+pair=qwen14_s6_pay75_bad150_valid151 prompt=en order=bad_B target=B pred=A margin=-0.763
+pair=qwen14_s6_pay75_bad150_valid151 prompt=zh order=bad_A target=A pred=A margin=0.199
+pair=qwen14_s6_pay75_bad150_valid151 prompt=zh order=bad_B target=B pred=A margin=-0.807
+wrote /home/Awei/P02_multilingual_process_lens/results/S6_lexical_grid_contrastive_verifier/gemma4_e4b_it_contrastive_acpi_verifier.json; rows=12 acc=0.500 mean_margin=-0.055

@@ -1,0 +1,145 @@
+pairs:
+  - id: e54_weighted_vs_simple_average_bad540002_valid540001
+    task_id: weighted_vs_simple_average
+    model_key: e54_controlled
+    bad_idx: 540002
+    valid_idx: 540001
+    problem: "A class has 2 quizzes scored 80 and 3 quizzes scored 90. What is the weighted average score?"
+    error_span: "weighted average is the simple average of 80 and 90"
+    support_span: "weighted average uses all 5 quizzes"
+  - id: e54_median_even_middle_pair_bad540012_valid540011
+    task_id: median_even_middle_pair
+    model_key: e54_controlled
+    bad_idx: 540012
+    valid_idx: 540011
+    problem: "What is the median of the numbers 1, 5, 9, and 13?"
+    error_span: "the median is the first middle value 5"
+    support_span: "average the two middle values 5 and 9"
+  - id: e54_percentage_point_vs_percent_bad540022_valid540021
+    task_id: percentage_point_vs_percent
+    model_key: e54_controlled
+    bad_idx: 540022
+    valid_idx: 540021
+    problem: "An interest rate rises from 10% by 5 percentage points. What is the new rate in percent?"
+    error_span: "5 percentage points means 5% of the old 10% rate"
+    support_span: "5 percentage points adds directly to 10%"
+  - id: e54_reverse_percent_original_bad540032_valid540031
+    task_id: reverse_percent_original
+    model_key: e54_controlled
+    bad_idx: 540032
+    valid_idx: 540031
+    problem: "After a 20% increase, a value is 120. What was the original value?"
+    error_span: "a 20% increase means the final value is 20% of the original"
+    support_span: "the final value is 1.2 times the original"
+  - id: e54_meter_to_centimeter_scale_bad540042_valid540041
+    task_id: meter_to_centimeter_scale
+    model_key: e54_controlled
+    bad_idx: 540042
+    valid_idx: 540041
+    problem: "How many centimeters are in 2.5 meters?"
+    error_span: "1 meter is 10 centimeters"
+    support_span: "1 meter is 100 centimeters"
+  - id: e54_hours_to_minutes_decimal_bad540052_valid540051
+    task_id: hours_to_minutes_decimal
+    model_key: e54_controlled
+    bad_idx: 540052
+    valid_idx: 540051
+    problem: "How many minutes are in 1.75 hours?"
+    error_span: "1 hour is 100 minutes"
+    support_span: "1 hour is 60 minutes"
+  - id: e54_strict_vs_inclusive_english_bad540062_valid540061
+    task_id: strict_vs_inclusive_english
+    model_key: e54_controlled
+    bad_idx: 540062
+    valid_idx: 540061
+    problem: "How many integers are greater than 2 and at most 5?"
+    error_span: "greater than 2 includes 2"
+    support_span: "Greater than 2 excludes 2, and at most 5 includes 5"
+  - id: e54_no_more_than_boundary_bad540072_valid540071
+    task_id: no_more_than_boundary
+    model_key: e54_controlled
+    bad_idx: 540072
+    valid_idx: 540071
+    problem: "How many positive integers are no more than 4?"
+    error_span: "no more than 4 means strictly less than 4"
+    support_span: "no more than 4 includes 4"
+  - id: e54_before_after_weekday_bad540082_valid540081
+    task_id: before_after_weekday
+    model_key: e54_controlled
+    bad_idx: 540082
+    valid_idx: 540081
+    problem: "If today is Monday, what day is 3 days after today?"
+    error_span: "after today means counting Monday as the first day"
+    support_span: "Thursday after 3 days"
+  - id: e54_rate_time_distance_bad540092_valid540091
+    task_id: rate_time_distance
+    model_key: e54_controlled
+    bad_idx: 540092
+    valid_idx: 540091
+    problem: "A car travels at 60 miles per hour for 1.5 hours. How many miles does it travel?"
+    error_span: "distance equals speed divided by time"
+    support_span: "distance equals speed times time"
+  - id: e54_ratio_reversal_bad540102_valid540101
+    task_id: ratio_reversal
+    model_key: e54_controlled
+    bad_idx: 540102
+    valid_idx: 540101
+    problem: "The ratio of cats to dogs is 2:3. If there are 12 dogs, how many cats are there?"
+    error_span: "cats to dogs 2:3 means cats are 3/2 of dogs"
+    support_span: "cats to dogs is 2 to 3"
+  - id: e54_negative_inequality_flip_bad540112_valid540111
+    task_id: negative_inequality_flip
+    model_key: e54_controlled
+    bad_idx: 540112
+    valid_idx: 540111
+    problem: "Solve the inequality -2x < 6. What inequality describes x?"
+    error_span: "dividing by -2 keeps the inequality direction"
+    support_span: "Dividing both sides by -2 flips the inequality"
+  - id: e54_sqrt_extraneous_root_bad540122_valid540121
+    task_id: sqrt_extraneous_root
+    model_key: e54_controlled
+    bad_idx: 540122
+    valid_idx: 540121
+    problem: "Solve sqrt(x+1) = x - 1."
+    error_span: "squaring preserves all roots without needing a check"
+    support_span: "Checking in the original equation rejects x=0 and keeps x=3"
+  - id: e54_combination_ordered_vs_unordered_bad540132_valid540131
+    task_id: combination_ordered_vs_unordered
+    model_key: e54_controlled
+    bad_idx: 540132
+    valid_idx: 540131
+    problem: "How many ways are there to choose 2 students from 5 students?"
+    error_span: "choosing 2 students is ordered"
+    support_span: "choosing 2 students is unordered"
+  - id: e54_table_row_column_total_bad540142_valid540141
+    task_id: table_row_column_total
+    model_key: e54_controlled
+    bad_idx: 540142
+    valid_idx: 540141
+    problem: "A table shows apples sold: Monday 7, Tuesday 5, Wednesday 8. How many apples were sold in total?"
+    error_span: "total apples means the largest single-day entry"
+    support_span: "total apples are the sum across days"
+  - id: e54_python_range_boundary_bad540152_valid540151
+    task_id: python_range_boundary
+    model_key: e54_controlled
+    bad_idx: 540152
+    valid_idx: 540151
+    problem: "In Python, what is the value of s after: s=0; for i in range(1,4): s += i ?"
+    error_span: "range(1,4) includes 4"
+    support_span: "range(1,4) includes 1, 2, and 3, but excludes 4"
+  - id: e54_integer_division_floor_bad540162_valid540161
+    task_id: integer_division_floor
+    model_key: e54_controlled
+    bad_idx: 540162
+    valid_idx: 540161
+    problem: "In Python, what is the value of 7//2?"
+    error_span: "integer division rounds to the nearest integer"
+    support_span: "7//2 is floor division"
+  - id: e54_proof_invalid_converse_bad540172_valid540171
+    task_id: proof_invalid_converse
+    model_key: e54_controlled
+    bad_idx: 540172
+    valid_idx: 540171
+    problem: "A proof tries to show: if n is a multiple of 4, then n is even. Is the conclusion true? Give the final truth value."
+    error_span: "all even numbers are multiples of 4"
+    support_span: "n=4k=2(2k), so n is even"

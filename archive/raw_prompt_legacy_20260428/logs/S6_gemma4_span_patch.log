@@ -1,0 +1,6 @@
+[2026-04-27T18:09:56] loading gemma4_e4b_it on cuda; pairs=2
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/2076 [00:00<?, ?it/s]Loading weights:  77%|███████▋  | 1596/2076 [00:00<00:00, 15951.61it/s]Loading weights: 100%|██████████| 2076/2076 [00:00<00:00, 15956.14it/s]
+pair=gemma4_s6_25off_bad49_valid48 base_valid=8.250 base_bad=7.875 layers=[8, 14, 20, 28, 36]
+pair=gemma4_s6_dabazhe_bad70_valid71 base_valid=6.000 base_bad=6.000 layers=[8, 14, 20, 28, 36]
+wrote /home/Awei/P02_multilingual_process_lens/results/S6_lexical_grid_span_patch/gemma4_e4b_it_real_acpi_span_patch.json; rows=30 best_pair=gemma4_s6_dabazhe_bad70_valid71 span=support_error_span L8 v2b=0.250 b2v=-0.125

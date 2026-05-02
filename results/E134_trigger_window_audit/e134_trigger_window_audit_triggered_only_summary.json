@@ -1,0 +1,39 @@
+{
+  "experiment": "E134_trigger_window_audit",
+  "created_at": "2026-04-30T18:03:11",
+  "source_scored_json": [
+    "results/E132_E133_suspicious_confidence_probe/qwen35_27b_e132_e133_all_chat.json",
+    "results/E132_E133_suspicious_confidence_probe/gemma4_31b_it_e132_e133_all_chat.json",
+    "results/E132_E133_suspicious_confidence_probe/gemma4_26b_a4b_it_e132_e133_all_chat.json"
+  ],
+  "out_jsonl": "data/processed/e134_trigger_window_audit_sheet_triggered_only_20260430.jsonl",
+  "rows": 205,
+  "threshold": 0.0,
+  "radius": 240,
+  "by_variant": {
+    "suspicious_valid_marker": 30,
+    "low_conf_valid": 40,
+    "repaired_strict_invalid": 128,
+    "clean_valid": 2,
+    "suspicious_valid_alternative": 5
+  },
+  "by_stage": {
+    "suspicion_marker_end": 54,
+    "error_span_end": 11,
+    "completion_end": 44,
+    "first_final_answer_end": 44,
+    "post_error_240chars": 12,
+    "first_claim_end": 24,
+    "repair_or_contrast_marker_end": 9,
+    "post_suspicion_240chars": 7
+  },
+  "by_preliminary_label": {
+    "marker_only_prefix_control_not_policy_trigger": 54,
+    "true_error_near_error_candidate": 47,
+    "strict_invalid_after_repair_or_completion_candidate": 45,
+    "true_error_candidate": 36,
+    "false_trigger_suspicious_valid_candidate": 21,
+    "false_trigger_clean_valid_candidate": 2
+  },
+  "note_zh": "E134 是窗口审计表，不把人工标签写回模型 prompt。preliminary_label 只用于审计排序，不是最终人工结论。"
+}

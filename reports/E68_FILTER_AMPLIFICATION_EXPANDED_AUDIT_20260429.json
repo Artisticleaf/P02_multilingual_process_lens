@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-04-29T03:11:29",
+  "passed": true,
+  "checks": [
+    {
+      "check": "E60 input gemma4_26b_a4b_it_e60_objective_ladder_chat.json",
+      "ok": true,
+      "detail": "results/E60_objective_ladder/gemma4_26b_a4b_it_e60_objective_ladder_chat.json"
+    },
+    {
+      "check": "E60 input gemma4_31b_it_e60_objective_ladder_chat.json",
+      "ok": true,
+      "detail": "results/E60_objective_ladder/gemma4_31b_it_e60_objective_ladder_chat.json"
+    },
+    {
+      "check": "E60 input glm47_flash_candidate_e60_objective_ladder_chat.json",
+      "ok": true,
+      "detail": "results/E60_objective_ladder/glm47_flash_candidate_e60_objective_ladder_chat.json"
+    },
+    {
+      "check": "E60 input qwen35_27b_e60_objective_ladder_chat.json",
+      "ok": true,
+      "detail": "results/E60_objective_ladder/qwen35_27b_e60_objective_ladder_chat.json"
+    },
+    {
+      "check": "E61 input gemma4_26b_a4b_it_e61_language_error_grid_chat.json",
+      "ok": true,
+      "detail": "results/E61_language_error_grid/gemma4_26b_a4b_it_e61_language_error_grid_chat.json"
+    },
+    {
+      "check": "E61 input gemma4_31b_it_e61_language_error_grid_chat.json",
+      "ok": true,
+      "detail": "results/E61_language_error_grid/gemma4_31b_it_e61_language_error_grid_chat.json"
+    },
+    {
+      "check": "E61 input glm47_flash_candidate_e61_language_error_grid_chat.json",
+      "ok": true,
+      "detail": "results/E61_language_error_grid/glm47_flash_candidate_e61_language_error_grid_chat.json"
+    },
+    {
+      "check": "E61 input qwen35_27b_e61_language_error_grid_chat.json",
+      "ok": true,
+      "detail": "results/E61_language_error_grid/qwen35_27b_e61_language_error_grid_chat.json"
+    }
+  ],
+  "result_path": "results/E68_filter_amplification_expanded/e68_filter_amplification_expanded.json",
+  "leakage_boundary_zh": "E68 只读取已审计输出；不新增 prompt，不使用错误 span 影响模型。"
+}

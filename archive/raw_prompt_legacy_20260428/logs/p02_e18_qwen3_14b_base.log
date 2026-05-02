@@ -1,0 +1,5 @@
+/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 500.80it/s]
+wrote /home/Awei/P02_multilingual_process_lens/data/raw/e18_targeted_sibling_expansion/qwen3_14b_base_trace_pool_smoke_v2_e18_2026042701.json; rows=108

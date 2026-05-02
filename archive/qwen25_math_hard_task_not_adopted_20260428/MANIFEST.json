@@ -1,0 +1,50 @@
+{
+  "created_at": "2026-04-28T14:05:07",
+  "status_en": "Not adopted for the mainline. Qwen2.5-Math hard-task outputs are legacy diagnostics only and must not be used as headline evidence or in future mainline synthesis.",
+  "status_zh": "不纳入主线。Qwen2.5-Math 困难题输出仅作为旧诊断材料，不能作为主证据，也不能进入后续主线综合。",
+  "reason_en": "Qwen2.5-Math-7B is an older P2 legacy math-control model; the project now focuses P0 evidence on Qwen3.5-27B, Gemma-4-31B, Gemma-4-26B-A4B, and newly downloaded P0 candidates.",
+  "reason_zh": "Qwen2.5-Math-7B 是较旧的 P2 数学控制模型；项目主证据改为 Qwen3.5-27B、Gemma-4-31B、Gemma-4-26B-A4B 以及新下载的 P0 候选。",
+  "archived": [
+    {
+      "from": "results/E49_hard_task_conditioning_official/qwen25_math_7b_instruct_e49_vllm_official_generation.json",
+      "to": "archive/qwen25_math_hard_task_not_adopted_20260428/results/E49_hard_task_conditioning_official/qwen25_math_7b_instruct_e49_vllm_official_generation.json"
+    },
+    {
+      "from": "results/E51_hard_task_parser_split/e51_hard_task_parser_split_20260428.json",
+      "to": "archive/qwen25_math_hard_task_not_adopted_20260428/results/E51_hard_task_parser_split/e51_hard_task_parser_split_20260428.json"
+    },
+    {
+      "from": "results/E52_hard_task_strict_format_forcing/qwen25_math_7b_instruct_e52_hard_task_strict_format_forcing.json",
+      "to": "archive/qwen25_math_hard_task_not_adopted_20260428/results/E52_hard_task_strict_format_forcing/qwen25_math_7b_instruct_e52_hard_task_strict_format_forcing.json"
+    },
+    {
+      "from": "results/E52_hard_task_strict_format_forcing/e52_manual_audit_20260428.json",
+      "to": "archive/qwen25_math_hard_task_not_adopted_20260428/results/E52_hard_task_strict_format_forcing/e52_manual_audit_20260428.json"
+    },
+    {
+      "from": "reports/E51_HARD_TASK_PARSER_SPLIT_20260428.md",
+      "to": "archive/qwen25_math_hard_task_not_adopted_20260428/reports/E51_HARD_TASK_PARSER_SPLIT_20260428.md"
+    },
+    {
+      "from": "reports/E52_HARD_TASK_STRICT_FORMAT_FORCING_20260428.md",
+      "to": "archive/qwen25_math_hard_task_not_adopted_20260428/reports/E52_HARD_TASK_STRICT_FORMAT_FORCING_20260428.md"
+    },
+    {
+      "from": "logs/e49_qwen25_math_7b_instruct_vllm4_queue_20260428.log",
+      "to": "archive/qwen25_math_hard_task_not_adopted_20260428/logs/e49_qwen25_math_7b_instruct_vllm4_queue_20260428.log"
+    },
+    {
+      "from": "logs/e49_qwen25_math_7b_instruct_vllm4_retry4096_20260428.log",
+      "to": "archive/qwen25_math_hard_task_not_adopted_20260428/logs/e49_qwen25_math_7b_instruct_vllm4_retry4096_20260428.log"
+    },
+    {
+      "from": "logs/e52_qwen25_math_7b_instruct_vllm4_strict_format_20260428.log",
+      "to": "archive/qwen25_math_hard_task_not_adopted_20260428/logs/e52_qwen25_math_7b_instruct_vllm4_strict_format_20260428.log"
+    },
+    {
+      "from": "logs/audit_e52_hard_task_strict_format_20260428.json",
+      "to": "archive/qwen25_math_hard_task_not_adopted_20260428/logs/audit_e52_hard_task_strict_format_20260428.json"
+    }
+  ],
+  "missing_at_archive_time": []
+}

@@ -1,0 +1,29 @@
+{
+  "definitions": {
+    "baseline_nonthinking": "Chat template is requested with enable_thinking=False when supported; prompt contains only the problem.",
+    "controlled_thinking": "The second branch is still rendered with enable_thinking=False; the control is a short visible check instruction derived from hidden risk, not long-CoT thinking mode.",
+    "hidden_gate": "A teacher-forced component monitor scores the current generated prefix; crossing the calibrated E166 threshold triggers a non-thinking controlled-check branch."
+  },
+  "errors": [],
+  "experiment": "E172_aime2026_hidden_gate_pipeline_audit",
+  "guards": [
+    "AIME 2026 answers are offline scoring metadata only.",
+    "Hidden observations are made on causal prefixes of the model's own generation.",
+    "The hidden gate records every observation with risk score, threshold, token count, and visible span.",
+    "The gate can trigger only from hidden/component risk, never from comparing to the gold answer.",
+    "Baseline, observed-prefix, and gated branch rows keep mode and prompt fields explicit for audit."
+  ],
+  "passed": true,
+  "required_scripts": [
+    "scripts/build_e172_aime2026_task_bank.py",
+    "scripts/smoke_e172_aime2026_prompt.py",
+    "scripts/audit_e172_aime2026_pipeline.py",
+    "scripts/run_e172_aime2026_nonthinking_baseline.py",
+    "scripts/run_e172_aime2026_hidden_gate_realtime.py",
+    "scripts/summarize_e172_aime2026_hidden_gate.py",
+    "scripts/launch_e172_aime2026_hidden_gate_queue_20260502.sh"
+  ],
+  "task_bank": "data/processed/e172_aime2026_matharena_task_bank_20260502.jsonl",
+  "tasks": 30,
+  "warnings": []
+}

@@ -1,0 +1,73 @@
+pairs:
+  # E36: same valid/bad E31 inequality pair, but patch progressively smaller
+  # surface/error spans to test why the boundary example has weak residual signal.
+  - id: e36_ineq_full_condition_qwen14
+    model_key: qwen3_14b_base
+    bad_idx: 310008
+    valid_idx: 310007
+    error_span: "between 3 and 7, inclusive"
+    support_span: "greater than 3 and no more than 7"
+    layers: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 39]
+  - id: e36_ineq_lower_bound_qwen14
+    model_key: qwen3_14b_base
+    bad_idx: 310008
+    valid_idx: 310007
+    error_span: "between 3 and 7"
+    support_span: "greater than 3"
+    layers: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 39]
+  - id: e36_ineq_upper_bound_qwen14
+    model_key: qwen3_14b_base
+    bad_idx: 310008
+    valid_idx: 310007
+    error_span: "inclusive"
+    support_span: "no more than 7"
+    layers: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 39]
+  - id: e36_ineq_corrective_list_qwen14
+    model_key: qwen3_14b_base
+    bad_idx: 310008
+    valid_idx: 310007
+    error_span: "4, 5, 6, and 7"
+    support_span: "4, 5, 6, and 7"
+    layers: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 39]
+  - id: e36_ineq_full_clause_qwen14
+    model_key: qwen3_14b_base
+    bad_idx: 310008
+    valid_idx: 310007
+    error_span: "between 3 and 7, inclusive. Start by listing the integers greater than 3 and no more than 7"
+    support_span: "greater than 3 and no more than 7, so the integers are 4, 5, 6, and 7"
+    layers: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 39]
+  - id: e36_ineq_full_condition_qwen35_9b
+    model_key: qwen35_9b
+    bad_idx: 310008
+    valid_idx: 310007
+    error_span: "between 3 and 7, inclusive"
+    support_span: "greater than 3 and no more than 7"
+    layers: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 39]
+  - id: e36_ineq_lower_bound_qwen35_9b
+    model_key: qwen35_9b
+    bad_idx: 310008
+    valid_idx: 310007
+    error_span: "between 3 and 7"
+    support_span: "greater than 3"
+    layers: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 39]
+  - id: e36_ineq_upper_bound_qwen35_9b
+    model_key: qwen35_9b
+    bad_idx: 310008
+    valid_idx: 310007
+    error_span: "inclusive"
+    support_span: "no more than 7"
+    layers: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 39]
+  - id: e36_ineq_corrective_list_qwen35_9b
+    model_key: qwen35_9b
+    bad_idx: 310008
+    valid_idx: 310007
+    error_span: "4, 5, 6, and 7"
+    support_span: "4, 5, 6, and 7"
+    layers: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 39]
+  - id: e36_ineq_full_clause_qwen35_9b
+    model_key: qwen35_9b
+    bad_idx: 310008
+    valid_idx: 310007
+    error_span: "between 3 and 7, inclusive. Start by listing the integers greater than 3 and no more than 7"
+    support_span: "greater than 3 and no more than 7, so the integers are 4, 5, 6, and 7"
+    layers: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 39]

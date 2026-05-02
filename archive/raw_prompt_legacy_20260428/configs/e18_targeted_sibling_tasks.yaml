@@ -1,0 +1,31 @@
+tasks:
+  - id: disc_en_25_off
+    en: A $80 jacket is discounted by 25%. What is the sale price?
+    zh: 一件80美元的夹克优惠25%后售价是多少？
+    answer: "60"
+    trap: "25% off means pay 75%; do not lexicalize it as 打八折."
+  - id: disc_zh_75_price
+    en: An $80 jacket is sold at 75% of its original price. What is the sale price?
+    zh: 一件80美元的夹克打七五折后售价是多少？
+    answer: "60"
+    trap: "Chinese 七五折 means pay 75%, not 75% off."
+  - id: disc_en_75_off
+    en: A $80 jacket is discounted by 75%. What is the sale price?
+    zh: 一件80美元的夹克优惠75%后售价是多少？
+    answer: "20"
+    trap: "75% off means pay 25%; contrasts with 七五折/pay75."
+  - id: ratio_boys_total
+    en: Boys are 3/8 of a class. If there are 24 boys, how many girls are there?
+    zh: 男生占全班人数的3/8。如果有24名男生，女生有多少名？
+    answer: "40"
+    trap: "3/8 is boys:total, not boys:girls."
+  - id: deriv_sum
+    en: Differentiate x^2 + 3x.
+    zh: 求 x^2 + 3x 的导数。
+    answer: "2x+3"
+    trap: "3x is a linear term; its derivative is 3, not a constant-term derivative."
+  - id: percent_then_discount
+    en: A price is increased by 25% from $80 and then discounted by 20%. What is the final price?
+    zh: 一个80美元的价格先上涨25%，再打八折，最终价格是多少？
+    answer: "80"
+    trap: "打八折 means pay 80%; avoid English lexical drift to 80% off."

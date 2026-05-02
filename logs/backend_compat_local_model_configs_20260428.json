@@ -1,0 +1,74 @@
+{
+  "qwen35_9b": {
+    "path": "/home/Awei/LLM/Model/base/qwen35_9b",
+    "architectures": [
+      "Qwen3_5ForConditionalGeneration"
+    ],
+    "model_type": "qwen3_5",
+    "has_text_config": true,
+    "has_vision_config": true,
+    "has_audio_config": false,
+    "text_model_type": "qwen3_5_text",
+    "text_architectures": null
+  },
+  "qwen35_27b": {
+    "path": "/home/Awei/LLM/Model/base/qwen35_27b",
+    "architectures": [
+      "Qwen3_5ForConditionalGeneration"
+    ],
+    "model_type": "qwen3_5",
+    "has_text_config": true,
+    "has_vision_config": true,
+    "has_audio_config": false,
+    "text_model_type": "qwen3_5_text",
+    "text_architectures": null
+  },
+  "gemma4_e4b_it": {
+    "path": "/home/Awei/LLM/Model/base/gemma4_e4b_it",
+    "architectures": [
+      "Gemma4ForConditionalGeneration"
+    ],
+    "model_type": "gemma4",
+    "has_text_config": true,
+    "has_vision_config": true,
+    "has_audio_config": true,
+    "text_model_type": "gemma4_text",
+    "text_architectures": null
+  },
+  "gemma4_26b_a4b_it": {
+    "path": "/home/Awei/LLM/Model/base/gemma4_26b_a4b_it",
+    "architectures": [
+      "Gemma4ForConditionalGeneration"
+    ],
+    "model_type": "gemma4",
+    "has_text_config": true,
+    "has_vision_config": true,
+    "has_audio_config": true,
+    "text_model_type": "gemma4_text",
+    "text_architectures": null
+  },
+  "gemma4_31b_it": {
+    "path": "/home/Awei/LLM/Model/base/gemma4_31b_it",
+    "architectures": [
+      "Gemma4ForConditionalGeneration"
+    ],
+    "model_type": "gemma4",
+    "has_text_config": true,
+    "has_vision_config": true,
+    "has_audio_config": true,
+    "text_model_type": "gemma4_text",
+    "text_architectures": null
+  },
+  "qwen3_14b_base": {
+    "path": "/home/Awei/LLM/Model/base/Qwen3-14B-Base",
+    "architectures": [
+      "Qwen3ForCausalLM"
+    ],
+    "model_type": "qwen3",
+    "has_text_config": false,
+    "has_vision_config": false,
+    "has_audio_config": false,
+    "text_model_type": null,
+    "text_architectures": null
+  }
+}

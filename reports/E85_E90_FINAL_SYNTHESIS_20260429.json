@@ -1,0 +1,68 @@
+{
+  "created_at": "2026-04-29T14:07:31+08:00",
+  "experiment_range": "E85-E90",
+  "artifacts": [
+    "results/E85_hardtask_full_hidden_cache/",
+    "results/E86_algebra_equivalence_adversarial/",
+    "results/E87_glm_readout_intervention/",
+    "results/E88_answer_first_natural_sample/",
+    "results/E89_repair_policy_filter_simulation/",
+    "results/E90_hardtask_component_activation_cache/",
+    "data/processed/e88_answer_first_manual_audit_20260429.jsonl",
+    "reports/E88_ANSWER_FIRST_MANUAL_AUDIT_20260429.md",
+    "reports/E90_COMPONENT_ACTIVATION_CACHE_20260429.md"
+  ],
+  "key_results": {
+    "e85": {
+      "gemma31_repaired_accept_rates": {
+        "error_span_end": 0.889,
+        "first_final_answer_end": 1.0,
+        "repair_trigger_end": 0.111,
+        "post_repair_240chars": 0.0,
+        "completion_end": 0.111
+      },
+      "gemma26_unrepaired_accept_rate_all_key_prefixes": 1.0
+    },
+    "e86": {
+      "strict_pointwise_invalid_accept_all_p0": 0.0,
+      "valid_accept_range": [
+        0.5,
+        0.583
+      ],
+      "interpretation_zh": "短而显式的代数错误会被 strict pointwise 抓住；困难题漏检更可能来自长上下文、答案自洽、局部隐蔽和锚定。"
+    },
+    "e87": {
+      "glm_raw_ab": 0.542,
+      "glm_two_order_antisymmetric": 0.812,
+      "glm_hidden_readout": 1.0,
+      "glm_label_free_two_pass": 0.958
+    },
+    "e88": {
+      "generated": 192,
+      "final_correct": 63,
+      "strict_acpi": 23,
+      "repaired_acpi": 22,
+      "unrepaired_acpi": 1,
+      "unrepaired_case": "glm47_flash_candidate quadratic-pairs wrong factorization (3x - 2y)(4x + 3y), final answer 117"
+    },
+    "e90": {
+      "gemma31_best_layer": 34,
+      "gemma31_first_final_to_repair_trigger": {
+        "yes_minus_no_delta": -22.153,
+        "residual_delta": -3.69,
+        "mlp_delta": -2.365,
+        "post_feedforward_norm_delta": -4.243
+      },
+      "gemma26_best_layer": 17,
+      "gemma26_completion_accept_rate": 1.0,
+      "interpretation_zh": "组件信号不只在 residual；MLP/post-feedforward 与 token-mixer/attention 也携带阶段性过程信号，但输出决策可能不使用或被答案一致性覆盖。"
+    }
+  },
+  "safe_claim_zh": "受控 strict ACPI trace-selection 风险稳健；当前困难题自然未修复 ACPI 低频但真实存在。hidden residual、MLP、token-mixer 等激活里存在过程有效性证据，但 verifier 是否使用这些证据取决于目标、阈值、最终答案锚定、修复感知阅读、上下文/局部隐蔽性和输出标签/读出格式。",
+  "boundaries_zh": [
+    "不要声称自然未修复 ACPI 高频。",
+    "不要声称 sibling 是无条件 oracle。",
+    "E90 是组件激活诊断，不是完整 circuit 或组件级因果中介证明。",
+    "E86 说明短显式代数错误可被 strict pointwise 抓住，因此不能过宽声称 absolute verifier 普遍漏代数错误。"
+  ]
+}

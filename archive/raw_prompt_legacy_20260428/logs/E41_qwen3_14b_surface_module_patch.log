@@ -1,0 +1,8 @@
+[2026-04-28T00:31:44] loading qwen3_14b_base on cuda; pairs=4 modules=['self_attn', 'mlp']
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s]Loading weights: 100%|██████████| 443/443 [00:00<00:00, 15954.09it/s]
+pair=e41_qwen14_each_vs_total_bad390062_valid390061 base_valid=3.000 base_bad=-1.500 layers=[4, 8, 12, 16, 20]
+pair=e41_qwen14_range_vs_average_bad390012_valid390011 base_valid=2.875 base_bad=-1.000 layers=[8, 12, 16, 20, 24]
+pair=e41_qwen14_prob_without_replacement_bad390052_valid390051 base_valid=1.875 base_bad=-1.875 layers=[4, 8, 12, 16, 20]
+pair=e41_qwen14_zh_exclusive_interval_bad390112_valid390111 base_valid=2.875 base_bad=-0.875 layers=[8, 12, 14, 16, 20]
+wrote results/E41_surface_semantic_module_patch/qwen3_14b_base_real_acpi_module_patch.json; rows=40 best_pair=e41_qwen14_zh_exclusive_interval_bad390112_valid390111 module=mlp span=support_error_span L20 v2b=0.500 b2v=-0.250

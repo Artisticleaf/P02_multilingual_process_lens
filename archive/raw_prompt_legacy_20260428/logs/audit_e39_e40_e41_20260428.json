@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "errors": [],
+  "variant_counts": {
+    "valid_correct": 12,
+    "invalid_correct": 12,
+    "valid_masked": 12,
+    "invalid_masked": 12,
+    "valid_wrong": 12,
+    "invalid_wrong": 12
+  },
+  "n_rows": 72
+}

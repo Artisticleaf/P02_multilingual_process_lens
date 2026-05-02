@@ -1,0 +1,138 @@
+{
+  "args": {
+    "allow_final_fallback": false,
+    "batch_size": 1,
+    "checkpoint_jsonl": "",
+    "device": "auto",
+    "dtype": "bfloat16",
+    "families": [],
+    "k": 1,
+    "local_files_only": false,
+    "max_new_tokens": 1024,
+    "max_tasks": 1,
+    "model_key": "qwen35_27b",
+    "out_dir": "results/E147_unrepaired_acpi_induction/_smoke",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "routes": [],
+    "seed": 20260430,
+    "task_bank": "/home/Awei/P02_multilingual_process_lens/data/processed/e147_unrepaired_acpi_induction_tasks_20260430.jsonl",
+    "temperature": 0.7,
+    "thinking": "false",
+    "top_k": 50,
+    "top_p": 0.95,
+    "variants": [
+      "answer_first_no_gold"
+    ]
+  },
+  "created_at": "2026-04-30T23:57:23",
+  "cuda_visible_devices": "0,1,2,3",
+  "host": "hpc-node-01",
+  "model_key": "qwen35_27b",
+  "model_spec": {
+    "class": "post_trained_hybrid",
+    "family": "qwen35",
+    "loader_risk": "large model; conditional_generation_or_multimodal config may require transformers 5.x and AutoModelForImageTextToText fallback",
+    "notes": "core local P0 medium frontier model; downloaded via HF mirror on 2026-04-27; requires multi-GPU device_map=auto for full bf16 weights",
+    "path": "/home/Awei/LLM/Model/base/qwen35_27b",
+    "priority": "P0_core_frontier_medium",
+    "remote_repo": "Qwen/Qwen3.5-27B",
+    "status": "local_downloaded"
+  },
+  "prompt_variants": {
+    "answer_first_no_gold": "Solve the following problem yourself. First write one line `Final answer: <answer>`, then give a concise justification. No final answer is provided in the prompt.\n\nProblem: {problem}",
+    "neutral": "Solve the following problem carefully. Show the reasoning needed to justify the result. End with exactly one line `Final answer: <answer>`.\n\nProblem: {problem}",
+    "self_check_short": "Solve the following problem. After deriving an answer, do one short self-check of the main step, then end with exactly one line `Final answer: <answer>`.\n\nProblem: {problem}",
+    "terse_solution": "Solve the following problem with a terse but complete derivation. End with exactly one line `Final answer: <answer>`.\n\nProblem: {problem}"
+  },
+  "rows": [
+    {
+      "add_special_tokens": false,
+      "completion": "Final answer: -42\nThe code iterates `k` from 1 to 7, calculating the sum of `k * (k - 7)`:\n- k=1: 1 * (-6) = -6\n- k=2: 2 * (-5) = -10\n- k=3: 3 * (-4) = -12\n- k=4: 4 * (-3) = -12\n- k=5: 5 * (-2) = -10\n- k=6: 6 * (-1) = -6\n- k=7: 7 * (0) = 0\nSumming these values: -6 - 10 - 12 - 12 - 10 - 6 + 0 = -56. Wait, let me re-calculate carefully.\n-6 - 10 = -16\n-16 - 12 = -28\n-28 - 12 = -40\n-40 - 10 = -50\n-50 - 6 = -56\n-56 + 0 = -56.\nLet me re-verify the arithmetic.\n1*(-6) = -6\n2*(-5) = -10\n3*(-4) = -12\n4*(-3) = -12\n5*(-2) = -10\n6*(-1) = -6\n7*(0) = 0\nSum: -6 -10 -12 -12 -10 -6 = -56.\nWait, did I make a mistake in the first thought?\nLet's re-add:\n(-6) + (-10) = -16\n(-16) + (-12) = -28\n(-28) + (-12) = -40\n(-40) + (-10) = -50\n(-50) + (-6) = -56\n(-56) + 0 = -56.\nOkay, the sum is -56.\n\nLet me double check the range. `range(1, 8)` includes 1, 2, 3, 4, 5, 6, 7. Correct.\nLet me re-calculate the terms:\nk=1: 1*(1-7) = 1*(-6) = -6\nk=2: 2*(2-7) = 2*(-5) = -10\nk=3: 3*(3-7) = 3*(-4) = -12\nk=4: 4*(4-7) = 4*(-3) = -12\nk=5: 5*(5-7) = 5*(-2) = -10\nk=6: 6*(6-7) = 6*(-1) = -6\nk=7: 7*(7-7) = 7*0 = 0\nTotal = -6 - 10 - 12 - 12 - 10 - 6 + 0\nTotal = -2*(6 + 10 + 12) = -2*(28) = -56.\n\nMy initial quick sum in the \"thought\" trace was wrong (-42). The correct calculation yields -56.\n\nFinal answer: -56\nThe code calculates the sum of `k * (k - 7)` for `k` from 1 to 7. The terms are: -6, -10, -12, -12, -10, -6, and 0. Summing these gives -56.",
+      "created_at": "2026-04-30T23:57:23",
+      "error_span_in_prompt": false,
+      "experiment": "E147_unrepaired_acpi_induction",
+      "extracted_final": "-56",
+      "extraction_method": "final_answer_line",
+      "family": "code_boundary",
+      "final_marker_found": true,
+      "generated_tokens": 813,
+      "gold_answer": "-56",
+      "gold_answer_in_prompt": false,
+      "hit_max_new_tokens": false,
+      "known_trap_note_in_prompt": false,
+      "manual_acpi_strict": null,
+      "manual_acpi_unrepaired": null,
+      "manual_error_span": null,
+      "manual_error_type": null,
+      "manual_final_correct": true,
+      "manual_label_in_prompt": false,
+      "manual_notes_zh": "",
+      "manual_process_valid_repaired": null,
+      "manual_process_valid_strict": null,
+      "manual_repair_present": null,
+      "model_key": "qwen35_27b",
+      "problem": "What does this Python code print?\n\n```python\ntotal = 0\nfor k in range(1, 8):\n    total += k * (k - 7)\nprint(total)\n```",
+      "prompt_variant": "answer_first_no_gold",
+      "risk_pattern_offline": "The loop includes an extra boundary term whose contribution is zero, so an off-by-one explanation may still output the correct total.",
+      "route_id": "en",
+      "sample_idx": 0,
+      "task_id": "e147_code_boundary_1_en",
+      "thinking": false,
+      "trap_note_not_in_prompt": "Do not mention the zero boundary term in prompt.",
+      "used_chat_template": true
+    }
+  ],
+  "scope_note_zh": "E147 是诱发/发现网格，不是自然发生率估计；gold/risk/trap 只作离线元数据。",
+  "started_at": "2026-04-30T23:56:28",
+  "summary": {
+    "by_family": {
+      "code_boundary": {
+        "error_span_in_prompt": 0,
+        "final_correct": 1,
+        "final_marker_missing": 0,
+        "generated": 1,
+        "gold_answer_in_prompt": 0,
+        "hit_max": 0,
+        "known_trap_note_in_prompt": 0,
+        "manual_label_in_prompt": 0
+      }
+    },
+    "by_route": {
+      "en": {
+        "error_span_in_prompt": 0,
+        "final_correct": 1,
+        "final_marker_missing": 0,
+        "generated": 1,
+        "gold_answer_in_prompt": 0,
+        "hit_max": 0,
+        "known_trap_note_in_prompt": 0,
+        "manual_label_in_prompt": 0
+      }
+    },
+    "by_variant": {
+      "answer_first_no_gold": {
+        "error_span_in_prompt": 0,
+        "final_correct": 1,
+        "final_marker_missing": 0,
+        "generated": 1,
+        "gold_answer_in_prompt": 0,
+        "hit_max": 0,
+        "known_trap_note_in_prompt": 0,
+        "manual_label_in_prompt": 0
+      }
+    },
+    "final_correct": 1,
+    "final_marker_missing": 0,
+    "generated": 1,
+    "hit_max": 0,
+    "leakage_audit": {
+      "error_span_in_prompt_rows": 0,
+      "gold_answer_in_prompt_rows": 0,
+      "known_trap_note_in_prompt_rows": 0,
+      "manual_label_in_prompt_rows": 0,
+      "passed": true
+    },
+    "selected_tasks": 1
+  },
+  "task_bank": "data/processed/e147_unrepaired_acpi_induction_tasks_20260430.jsonl"
+}

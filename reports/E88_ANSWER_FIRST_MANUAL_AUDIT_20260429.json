@@ -1,0 +1,201 @@
+{
+  "audit": {
+    "all_checks_passed": true,
+    "checks": [
+      {
+        "check": "all final-correct rows audited",
+        "detail": "63 rows have manual strict/repaired/unrepaired labels",
+        "ok": true
+      },
+      {
+        "check": "no gold answer in prompt",
+        "detail": "gold_answer_in_prompt_rows=0",
+        "ok": true
+      },
+      {
+        "check": "no trap note in prompt",
+        "detail": "known_trap_note_in_prompt_rows=0",
+        "ok": true
+      },
+      {
+        "check": "strict/unrepaired consistency",
+        "detail": "unrepaired ACPI rows are also strict ACPI",
+        "ok": true
+      },
+      {
+        "check": "second-pass sample reviewed",
+        "detail": "reviewed representative rows [880001, 880009, 880025, 880038, 880041, 880050, 880056, 880058, 880059, 880060, 880063]",
+        "ok": true
+      }
+    ]
+  },
+  "audited_error_indices": [
+    880009,
+    880025,
+    880038,
+    880039,
+    880040,
+    880041,
+    880042,
+    880043,
+    880045,
+    880047,
+    880048,
+    880049,
+    880050,
+    880053,
+    880054,
+    880055,
+    880057,
+    880058,
+    880059,
+    880060,
+    880061,
+    880062,
+    880063
+  ],
+  "created_at": "2026-04-29T14:04:28",
+  "experiment": "E88_answer_first_manual_audit",
+  "input_jsonl": "data/processed/e88_answer_first_final_correct_audit_sheet_20260429.jsonl",
+  "output_jsonl": "data/processed/e88_answer_first_manual_audit_20260429.jsonl",
+  "scope_note_zh": "E88 是 answer-first/no-gold 自然困难题采样；高 strict ACPI 主要来自先写错 final answer 后自修复的格式效应，未修复 ACPI 目前仅 1 条。",
+  "second_pass_sample": [
+    880001,
+    880009,
+    880025,
+    880038,
+    880041,
+    880050,
+    880056,
+    880058,
+    880059,
+    880060,
+    880063
+  ],
+  "summary": {
+    "by_error_type": {
+      "self_corrected_wrong_factor_attempt": 1,
+      "self_corrected_wrong_geometry_area_setup": 1,
+      "self_corrected_wrong_modular_reduction": 1,
+      "self_corrected_wrong_subset_count_claim": 1,
+      "wrong_factorization_unrepaired": 1,
+      "wrong_initial_final_answer_repaired": 18
+    },
+    "by_model": {
+      "gemma4_26b_a4b_it": {
+        "final_correct": 36,
+        "repaired_acpi": 2,
+        "strict_acpi": 2,
+        "strict_valid": 34,
+        "unrepaired_acpi": 0
+      },
+      "gemma4_31b_it": {
+        "final_correct": 19,
+        "repaired_acpi": 14,
+        "strict_acpi": 14,
+        "strict_valid": 5,
+        "unrepaired_acpi": 0
+      },
+      "glm47_flash_candidate": {
+        "final_correct": 5,
+        "repaired_acpi": 3,
+        "strict_acpi": 4,
+        "strict_valid": 1,
+        "unrepaired_acpi": 1
+      },
+      "qwen35_27b": {
+        "final_correct": 3,
+        "repaired_acpi": 3,
+        "strict_acpi": 3,
+        "strict_valid": 0,
+        "unrepaired_acpi": 0
+      }
+    },
+    "by_task": {
+      "aime25_base_divisor_p1": {
+        "final_correct": 18,
+        "repaired_acpi": 8,
+        "strict_acpi": 8,
+        "strict_valid": 10,
+        "unrepaired_acpi": 0
+      },
+      "aime25_geometry_reflection_p2": {
+        "final_correct": 1,
+        "repaired_acpi": 1,
+        "strict_acpi": 1,
+        "strict_valid": 0,
+        "unrepaired_acpi": 0
+      },
+      "aime25_icecream_ordered_assign_p3": {
+        "final_correct": 15,
+        "repaired_acpi": 5,
+        "strict_acpi": 5,
+        "strict_valid": 10,
+        "unrepaired_acpi": 0
+      },
+      "aime25_integer_pairs_quad_p4": {
+        "final_correct": 11,
+        "repaired_acpi": 3,
+        "strict_acpi": 4,
+        "strict_valid": 7,
+        "unrepaired_acpi": 1
+      },
+      "aime25_perm_div22_p5": {
+        "final_correct": 6,
+        "repaired_acpi": 1,
+        "strict_acpi": 1,
+        "strict_valid": 5,
+        "unrepaired_acpi": 0
+      },
+      "aime25_trapezoid_incircle_p6": {
+        "final_correct": 12,
+        "repaired_acpi": 4,
+        "strict_acpi": 4,
+        "strict_valid": 8,
+        "unrepaired_acpi": 0
+      }
+    },
+    "final_correct_total": 63,
+    "generated_total": 192,
+    "rates": {
+      "final_correct_per_generated": {
+        "hi": 0.3973437057005382,
+        "k": 63,
+        "lo": 0.26564924370346993,
+        "n": 192,
+        "rate": 0.328125
+      },
+      "strict_acpi_conditional_final_correct": {
+        "hi": 0.4885151840898606,
+        "k": 23,
+        "lo": 0.25715218473434465,
+        "n": 63,
+        "rate": 0.36507936507936506
+      },
+      "strict_acpi_per_generated": {
+        "hi": 0.17333611783599834,
+        "k": 23,
+        "lo": 0.08116343690620148,
+        "n": 192,
+        "rate": 0.11979166666666667
+      },
+      "unrepaired_acpi_conditional_final_correct": {
+        "hi": 0.0845872544616561,
+        "k": 1,
+        "lo": 0.0028074219075510873,
+        "n": 63,
+        "rate": 0.015873015873015872
+      },
+      "unrepaired_acpi_per_generated": {
+        "hi": 0.02890822021388086,
+        "k": 1,
+        "lo": 0.0009199674643243817,
+        "n": 192,
+        "rate": 0.005208333333333333
+      }
+    },
+    "repaired_acpi_total": 22,
+    "strict_acpi_total": 23,
+    "unrepaired_acpi_total": 1
+  }
+}

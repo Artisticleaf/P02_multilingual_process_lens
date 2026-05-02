@@ -1,0 +1,567 @@
+{
+  "contextual_bridge": {
+    "best_layer": {
+      "layer": 14,
+      "mean_hard_margin": 0.15603611866633096,
+      "mean_mismatch_cos": 0.6899758179982504,
+      "mean_pair_cos": 0.8573298454284668,
+      "mean_rank": 1.0,
+      "min_hard_margin": 0.14006376266479492,
+      "top1": 1.0
+    },
+    "early_bridge_layer": {
+      "layer": 2,
+      "mean_hard_margin": 0.062263270219167076,
+      "mean_mismatch_cos": 0.5726282596588135,
+      "mean_pair_cos": 0.6385288238525391,
+      "mean_rank": 1.0,
+      "min_hard_margin": 0.05185830593109131,
+      "top1": 1.0
+    },
+    "layers": [
+      {
+        "layer": 0,
+        "mean_hard_margin": 0.007356623808542888,
+        "mean_mismatch_cos": 0.07918793956438701,
+        "mean_pair_cos": 0.09769650548696518,
+        "mean_rank": 1.6666666666666667,
+        "min_hard_margin": -0.02336178719997406,
+        "top1": 0.6666666666666666
+      },
+      {
+        "layer": 1,
+        "mean_hard_margin": 0.019272009531656902,
+        "mean_mismatch_cos": 0.5849916537602743,
+        "mean_pair_cos": 0.6212319731712341,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.012681901454925537,
+        "top1": 1.0
+      },
+      {
+        "layer": 2,
+        "mean_hard_margin": 0.062263270219167076,
+        "mean_mismatch_cos": 0.5726282596588135,
+        "mean_pair_cos": 0.6385288238525391,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.05185830593109131,
+        "top1": 1.0
+      },
+      {
+        "layer": 3,
+        "mean_hard_margin": 0.08388008673985799,
+        "mean_mismatch_cos": 0.5968037446339926,
+        "mean_pair_cos": 0.6996909976005554,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.02941840887069702,
+        "top1": 1.0
+      },
+      {
+        "layer": 4,
+        "mean_hard_margin": 0.09710502624511719,
+        "mean_mismatch_cos": 0.611445426940918,
+        "mean_pair_cos": 0.7377073168754578,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.030819177627563477,
+        "top1": 1.0
+      },
+      {
+        "layer": 5,
+        "mean_hard_margin": 0.1091616948445638,
+        "mean_mismatch_cos": 0.6627139250437418,
+        "mean_pair_cos": 0.8028526306152344,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.06725728511810303,
+        "top1": 1.0
+      },
+      {
+        "layer": 6,
+        "mean_hard_margin": 0.1125521461168925,
+        "mean_mismatch_cos": 0.6733135382334391,
+        "mean_pair_cos": 0.8167141079902649,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.0701528787612915,
+        "top1": 1.0
+      },
+      {
+        "layer": 7,
+        "mean_hard_margin": 0.12433056036631267,
+        "mean_mismatch_cos": 0.6905485788981119,
+        "mean_pair_cos": 0.8394771218299866,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.10970902442932129,
+        "top1": 1.0
+      },
+      {
+        "layer": 8,
+        "mean_hard_margin": 0.13928433259328207,
+        "mean_mismatch_cos": 0.6954404513041178,
+        "mean_pair_cos": 0.8547391891479492,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.12468379735946655,
+        "top1": 1.0
+      },
+      {
+        "layer": 9,
+        "mean_hard_margin": 0.15063204367955527,
+        "mean_mismatch_cos": 0.6779521306355795,
+        "mean_pair_cos": 0.84428471326828,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.13494187593460083,
+        "top1": 1.0
+      },
+      {
+        "layer": 10,
+        "mean_hard_margin": 0.14054242769877115,
+        "mean_mismatch_cos": 0.6987872123718262,
+        "mean_pair_cos": 0.8525200486183167,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.11920595169067383,
+        "top1": 1.0
+      },
+      {
+        "layer": 11,
+        "mean_hard_margin": 0.12369223435719807,
+        "mean_mismatch_cos": 0.7298252582550049,
+        "mean_pair_cos": 0.8650739789009094,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.1144757866859436,
+        "top1": 1.0
+      },
+      {
+        "layer": 12,
+        "mean_hard_margin": 0.12491732835769653,
+        "mean_mismatch_cos": 0.7220072746276855,
+        "mean_pair_cos": 0.8591311573982239,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.11537408828735352,
+        "top1": 1.0
+      },
+      {
+        "layer": 13,
+        "mean_hard_margin": 0.12883418798446655,
+        "mean_mismatch_cos": 0.7245356241861979,
+        "mean_pair_cos": 0.8679477572441101,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.11234945058822632,
+        "top1": 1.0
+      },
+      {
+        "layer": 14,
+        "mean_hard_margin": 0.15603611866633096,
+        "mean_mismatch_cos": 0.6899758179982504,
+        "mean_pair_cos": 0.8573298454284668,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.14006376266479492,
+        "top1": 1.0
+      },
+      {
+        "layer": 15,
+        "mean_hard_margin": 0.1499058206876119,
+        "mean_mismatch_cos": 0.6961015065511068,
+        "mean_pair_cos": 0.8581845760345459,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.13633304834365845,
+        "top1": 1.0
+      },
+      {
+        "layer": 16,
+        "mean_hard_margin": 0.14058647553126016,
+        "mean_mismatch_cos": 0.7029666105906168,
+        "mean_pair_cos": 0.858889102935791,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.12023752927780151,
+        "top1": 1.0
+      },
+      {
+        "layer": 17,
+        "mean_hard_margin": 0.13570600748062134,
+        "mean_mismatch_cos": 0.7016684214274088,
+        "mean_pair_cos": 0.854685366153717,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.12173670530319214,
+        "top1": 1.0
+      },
+      {
+        "layer": 18,
+        "mean_hard_margin": 0.12684927384058634,
+        "mean_mismatch_cos": 0.7103587786356608,
+        "mean_pair_cos": 0.8487868905067444,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.10908150672912598,
+        "top1": 1.0
+      },
+      {
+        "layer": 19,
+        "mean_hard_margin": 0.10517072677612305,
+        "mean_mismatch_cos": 0.7366140683492025,
+        "mean_pair_cos": 0.8544675707817078,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.08972734212875366,
+        "top1": 1.0
+      },
+      {
+        "layer": 20,
+        "mean_hard_margin": 0.11041074991226196,
+        "mean_mismatch_cos": 0.7206497192382812,
+        "mean_pair_cos": 0.8438412547111511,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.08755934238433838,
+        "top1": 1.0
+      },
+      {
+        "layer": 21,
+        "mean_hard_margin": 0.11274449030558269,
+        "mean_mismatch_cos": 0.6869396368662516,
+        "mean_pair_cos": 0.8155186772346497,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.0880768895149231,
+        "top1": 1.0
+      },
+      {
+        "layer": 22,
+        "mean_hard_margin": 0.10237866640090942,
+        "mean_mismatch_cos": 0.6929965813954672,
+        "mean_pair_cos": 0.8167726397514343,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.06622850894927979,
+        "top1": 1.0
+      },
+      {
+        "layer": 23,
+        "mean_hard_margin": 0.11569635073343913,
+        "mean_mismatch_cos": 0.6146272818247477,
+        "mean_pair_cos": 0.7618250846862793,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.06261169910430908,
+        "top1": 1.0
+      },
+      {
+        "layer": 24,
+        "mean_hard_margin": 0.11783707141876221,
+        "mean_mismatch_cos": 0.5702908833821615,
+        "mean_pair_cos": 0.7293446660041809,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.05825650691986084,
+        "top1": 1.0
+      },
+      {
+        "layer": 25,
+        "mean_hard_margin": 0.09492319822311401,
+        "mean_mismatch_cos": 0.5701440572738647,
+        "mean_pair_cos": 0.7193589806556702,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.023259282112121582,
+        "top1": 1.0
+      },
+      {
+        "layer": 26,
+        "mean_hard_margin": 0.09644383192062378,
+        "mean_mismatch_cos": 0.5246163209279379,
+        "mean_pair_cos": 0.6830654144287109,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.02773946523666382,
+        "top1": 1.0
+      },
+      {
+        "layer": 27,
+        "mean_hard_margin": 0.09289552768071492,
+        "mean_mismatch_cos": 0.4740270773569743,
+        "mean_pair_cos": 0.6393010020256042,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.006197571754455566,
+        "top1": 1.0
+      },
+      {
+        "layer": 28,
+        "mean_hard_margin": 0.0903887649377187,
+        "mean_mismatch_cos": 0.42366735140482586,
+        "mean_pair_cos": 0.5784896612167358,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.01574036478996277,
+        "top1": 1.0
+      },
+      {
+        "layer": 29,
+        "mean_hard_margin": 0.08537952105204265,
+        "mean_mismatch_cos": 0.3494046131769816,
+        "mean_pair_cos": 0.5016422867774963,
+        "mean_rank": 1.3333333333333333,
+        "min_hard_margin": -0.0012444853782653809,
+        "top1": 0.6666666666666666
+      },
+      {
+        "layer": 30,
+        "mean_hard_margin": 0.08509911100069682,
+        "mean_mismatch_cos": 0.2698526382446289,
+        "mean_pair_cos": 0.4098759591579437,
+        "mean_rank": 1.6666666666666667,
+        "min_hard_margin": -0.012796908617019653,
+        "top1": 0.6666666666666666
+      },
+      {
+        "layer": 31,
+        "mean_hard_margin": 0.05841309825579325,
+        "mean_mismatch_cos": 0.2576070229212443,
+        "mean_pair_cos": 0.358419805765152,
+        "mean_rank": 1.3333333333333333,
+        "min_hard_margin": -0.0461941659450531,
+        "top1": 0.6666666666666666
+      },
+      {
+        "layer": 32,
+        "mean_hard_margin": 0.029819572965304058,
+        "mean_mismatch_cos": 0.2391071319580078,
+        "mean_pair_cos": 0.30332016944885254,
+        "mean_rank": 1.6666666666666667,
+        "min_hard_margin": -0.043222784996032715,
+        "top1": 0.6666666666666666
+      }
+    ],
+    "term_rows": [
+      {
+        "idx": 0,
+        "lang": "en",
+        "prompt": "In mathematical reasoning, the current concept is: derivative. Understand this concept.",
+        "target_positions": [
+          9
+        ],
+        "term": "derivative"
+      },
+      {
+        "idx": 0,
+        "lang": "zh",
+        "prompt": "在数学推理中，当前概念是：导数。请理解这个概念。",
+        "target_positions": [
+          11,
+          12
+        ],
+        "term": "导数"
+      },
+      {
+        "idx": 1,
+        "lang": "en",
+        "prompt": "In mathematical reasoning, the current concept is: prime number. Understand this concept.",
+        "target_positions": [
+          9,
+          10
+        ],
+        "term": "prime number"
+      },
+      {
+        "idx": 1,
+        "lang": "zh",
+        "prompt": "在数学推理中，当前概念是：质数。请理解这个概念。",
+        "target_positions": [
+          11,
+          12
+        ],
+        "term": "质数"
+      },
+      {
+        "idx": 2,
+        "lang": "en",
+        "prompt": "In mathematical reasoning, the current concept is: fraction. Understand this concept.",
+        "target_positions": [
+          9
+        ],
+        "term": "fraction"
+      },
+      {
+        "idx": 2,
+        "lang": "zh",
+        "prompt": "在数学推理中，当前概念是：分数。请理解这个概念。",
+        "target_positions": [
+          11,
+          12
+        ],
+        "term": "分数"
+      }
+    ]
+  },
+  "created_at": "2026-04-27T02:11:49",
+  "cuda_visible_devices": "0",
+  "device": "cuda:0",
+  "dtype": "bfloat16",
+  "host": "hpc-node-01",
+  "model_config": {
+    "architectures": [
+      "Phi3ForCausalLM"
+    ],
+    "hidden_size": 3072,
+    "model_type": "phi3",
+    "num_hidden_layers": 32,
+    "vocab_size": 200064
+  },
+  "model_key": "phi4_mini_reasoning",
+  "model_spec": {
+    "class": "distilled_reasoning",
+    "family": "phi",
+    "loader_risk": "standard causal LM likely supported",
+    "notes": "DeepSeek-R1 synthetic math distillation control",
+    "path": "/home/Awei/LLM/Model/base/phi4_mini_reasoning",
+    "priority": "P0",
+    "remote_repo": "microsoft/Phi-4-mini-reasoning",
+    "status": "local_downloaded"
+  },
+  "num_process_cases": 2,
+  "num_terms": 3,
+  "patch_layers": [
+    8,
+    16,
+    24,
+    31
+  ],
+  "process_verifier": {
+    "accuracy": 1.0,
+    "invalid_final_correct_false_accept_rate": 0.0,
+    "no_id": 3004,
+    "rows": [
+      {
+        "case_id": "linear_valid",
+        "correct": true,
+        "final_correct_gold": true,
+        "no_token_id": 3004,
+        "pred_process_valid": true,
+        "process_valid_gold": true,
+        "prompt_lang": "en",
+        "risk_type": "other",
+        "yes_minus_no_logprob": 5.0,
+        "yes_token_id": 11377
+      },
+      {
+        "case_id": "linear_valid",
+        "correct": true,
+        "final_correct_gold": true,
+        "no_token_id": 11197,
+        "pred_process_valid": true,
+        "process_valid_gold": true,
+        "prompt_lang": "zh",
+        "risk_type": "other",
+        "yes_minus_no_logprob": 3.125,
+        "yes_token_id": 65661
+      },
+      {
+        "case_id": "linear_invalid_final_correct",
+        "correct": true,
+        "final_correct_gold": true,
+        "no_token_id": 3004,
+        "pred_process_valid": false,
+        "process_valid_gold": false,
+        "prompt_lang": "en",
+        "risk_type": "invalid_final_correct",
+        "yes_minus_no_logprob": -0.625,
+        "yes_token_id": 11377
+      },
+      {
+        "case_id": "linear_invalid_final_correct",
+        "correct": true,
+        "final_correct_gold": true,
+        "no_token_id": 11197,
+        "pred_process_valid": false,
+        "process_valid_gold": false,
+        "prompt_lang": "zh",
+        "risk_type": "invalid_final_correct",
+        "yes_minus_no_logprob": -0.3125,
+        "yes_token_id": 65661
+      }
+    ],
+    "yes_id": 11377,
+    "zh_no_id": 11197,
+    "zh_yes_id": 65661
+  },
+  "residual_patching": {
+    "reason": "--skip-patching",
+    "skipped": true
+  },
+  "started_at": "2026-04-27T02:11:47",
+  "tokenization": [
+    {
+      "lang": "en",
+      "num_tokens": 2,
+      "pair_en": "derivative",
+      "pair_zh": "导数",
+      "text": "derivative",
+      "token_ids": [
+        761,
+        89680
+      ],
+      "tokens": [
+        "der",
+        "ivative"
+      ]
+    },
+    {
+      "lang": "zh",
+      "num_tokens": 2,
+      "pair_en": "derivative",
+      "pair_zh": "导数",
+      "text": "导数",
+      "token_ids": [
+        15664,
+        7135
+      ],
+      "tokens": [
+        "å¯¼",
+        "æķ°"
+      ]
+    },
+    {
+      "lang": "en",
+      "num_tokens": 2,
+      "pair_en": "prime number",
+      "pair_zh": "质数",
+      "text": "prime number",
+      "token_ids": [
+        46441,
+        2086
+      ],
+      "tokens": [
+        "prime",
+        "Ġnumber"
+      ]
+    },
+    {
+      "lang": "zh",
+      "num_tokens": 2,
+      "pair_en": "prime number",
+      "pair_zh": "质数",
+      "text": "质数",
+      "token_ids": [
+        25025,
+        7135
+      ],
+      "tokens": [
+        "è´¨",
+        "æķ°"
+      ]
+    },
+    {
+      "lang": "en",
+      "num_tokens": 1,
+      "pair_en": "fraction",
+      "pair_zh": "分数",
+      "text": "fraction",
+      "token_ids": [
+        173249
+      ],
+      "tokens": [
+        "fraction"
+      ]
+    },
+    {
+      "lang": "zh",
+      "num_tokens": 2,
+      "pair_en": "fraction",
+      "pair_zh": "分数",
+      "text": "分数",
+      "token_ids": [
+        2957,
+        7135
+      ],
+      "tokens": [
+        "åĪĨ",
+        "æķ°"
+      ]
+    }
+  ]
+}

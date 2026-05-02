@@ -1,0 +1,19 @@
+pairs:
+  - id: qwen35_e18_discount_234_bad_181000_valid
+    model_key: qwen35_9b
+    valid_idx: 181000
+    bad_idx: 234
+    support_span: "优惠金额等于原价乘以优惠比例，即 $80 \\times 25\\% = 80 \\times 0.25 = 20$ 美元"
+    error_span: "打八折，即原价的75%"
+    final_span_valid: "Final answer: 60美元"
+    final_span_bad: "Final answer: 60美元"
+    layers: [1, 3, 8, 16, 24, 31]
+  - id: qwen35_e18_discount_234_bad_181001_valid
+    model_key: qwen35_9b
+    valid_idx: 181001
+    bad_idx: 234
+    support_span: "$100\\% - 25\\% = 75\\%$，即售价是原价的75%"
+    error_span: "打八折，即原价的75%"
+    final_span_valid: "Final answer: 60美元"
+    final_span_bad: "Final answer: 60美元"
+    layers: [1, 3, 8, 16, 24, 31]

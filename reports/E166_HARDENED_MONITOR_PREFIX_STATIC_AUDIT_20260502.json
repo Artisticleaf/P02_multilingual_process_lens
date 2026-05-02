@@ -1,0 +1,28 @@
+{
+  "boundary_kinds": {
+    "manual_error_span_end": 42,
+    "sentence_end": 155
+  },
+  "families": {
+    "code_boundary": 26,
+    "geometry_constraints": 30,
+    "graph_definition": 30,
+    "long_table_aggregation": 25,
+    "multilingual_semantic": 31,
+    "proof_validity": 25,
+    "set_venn_counting": 30
+  },
+  "invalid_non_target_points": 94,
+  "issues": [],
+  "monitor_targets": 42,
+  "passed": true,
+  "prefix_points": 197,
+  "solutions": 63,
+  "tasks": 21,
+  "trace_classes": {
+    "invalid_answer_correct": 75,
+    "invalid_answer_wrong": 61,
+    "valid": 61
+  },
+  "valid_control_points": 61
+}

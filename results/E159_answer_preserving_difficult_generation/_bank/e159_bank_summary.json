@@ -1,0 +1,31 @@
+{
+  "candidate_solutions": 80,
+  "candidate_variants": {
+    "invalid_answer_preserving_reference": 40,
+    "valid_reference": 40
+  },
+  "created_at": "2026-05-01T03:39:02",
+  "families": {
+    "algebra_sign_symmetry": 4,
+    "code_boundary_zero": 4,
+    "counting_complement": 4,
+    "graph_definition": 4,
+    "multilingual_semantic": 4,
+    "probability_conditioning": 4,
+    "proof_invalid_lemma": 4,
+    "table_zero_swap": 4,
+    "temporal_boundary": 4,
+    "unit_roundtrip": 4
+  },
+  "leakage_policy": {
+    "error_span_in_prompt_for_generation": false,
+    "gold_answer_in_prompt": false,
+    "manual_label_in_prompt": false,
+    "trap_note_in_prompt": false
+  },
+  "outputs": {
+    "candidate_solution_bank": "data/processed/e159_answer_preserving_candidate_solutions_20260501.jsonl",
+    "task_bank": "data/processed/e159_answer_preserving_tasks_20260501.jsonl"
+  },
+  "tasks": 40
+}

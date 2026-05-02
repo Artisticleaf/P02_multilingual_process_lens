@@ -1,0 +1,43 @@
+{
+  "created_at": "2026-04-29T04:00:44",
+  "passed": true,
+  "checks": [
+    {
+      "check": "E64 GLM generation output exists",
+      "ok": true,
+      "detail": "results/E64_natural_hard_task_expansion/glm47_flash_candidate_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json"
+    },
+    {
+      "check": "manual reviewed index set matches final-correct rows",
+      "ok": true,
+      "detail": "final=[2, 3, 6, 7, 10, 11, 28, 33]; manual=[2, 3, 6, 7, 10, 11, 28, 33]"
+    },
+    {
+      "check": "no gold answer in prompts",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "no trap note in prompts",
+      "ok": true,
+      "detail": "0"
+    }
+  ],
+  "manual_final_correct_rows": [
+    2,
+    3,
+    6,
+    7,
+    10,
+    11,
+    28,
+    33
+  ],
+  "manual_audit_jsonl": "results/E64_natural_hard_task_expansion/glm47_flash_candidate_e64_final_correct_manual_audit.jsonl",
+  "summary": {
+    "generated_n": 72,
+    "final_correct": 8,
+    "strict_acpi": 0,
+    "unrepaired_acpi": 0
+  }
+}

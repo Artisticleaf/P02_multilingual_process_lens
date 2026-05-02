@@ -1,0 +1,20 @@
+{
+  "aggregate": {
+    "models": {
+      "qwen35_9b": {
+        "absolute_n": 28,
+        "contrastive_n": 36
+      },
+      "qwen3_14b_base": {
+        "absolute_n": 28,
+        "contrastive_n": 36
+      }
+    },
+    "absolute_n": 56,
+    "contrastive_n": 72
+  },
+  "inputs": [
+    "/home/Awei/P02_multilingual_process_lens/results/E25_layerwise_verifier_lens/qwen35_9b_layerwise_verifier_lens.json",
+    "/home/Awei/P02_multilingual_process_lens/results/E25_layerwise_verifier_lens/qwen3_14b_base_layerwise_verifier_lens.json"
+  ]
+}

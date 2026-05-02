@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-04-30",
+  "report": "reports/E137_E140_ADAPTIVE_NATURAL_CHECK_SYNTHESIS_20260430.md",
+  "mode": "NG_thinking_false",
+  "experiments": {
+    "E137": {
+      "name": "hidden trigger threshold calibration",
+      "result_dir": "results/E137_hidden_trigger_threshold_calibration",
+      "scope": "offline threshold evaluation on E132/E133 controlled rows",
+      "models": {
+        "qwen35_27b": {
+          "threshold_zero": {
+            "invalid_recall": 1.0,
+            "valid_false_trigger_rate": 0.041666666666666664,
+            "suspicious_valid_false_trigger_rate": 0.041666666666666664
+          },
+          "chosen_threshold": -5.169662714004517,
+          "chosen_invalid_recall": 1.0,
+          "chosen_valid_false_trigger_rate": 0.0,
+          "chosen_note": "clean on controlled rows but too conservative on natural transfer"
+        },
+        "gemma4_31b_it": {
+          "threshold_zero": {
+            "invalid_recall": 1.0,
+            "valid_false_trigger_rate": 0.0,
+            "suspicious_valid_false_trigger_rate": 0.0
+          },
+          "chosen_threshold": 0.0,
+          "chosen_invalid_recall": 1.0,
+          "chosen_valid_false_trigger_rate": 0.0,
+          "chosen_note": "cleanest threshold behavior"
+        },
+        "gemma4_26b_a4b_it": {
+          "threshold_zero": {
+            "invalid_recall": 1.0,
+            "valid_false_trigger_rate": 0.125,
+            "suspicious_valid_false_trigger_rate": 0.125
+          },
+          "chosen_threshold": -4.1925506591796875,
+          "chosen_invalid_recall": 1.0,
+          "chosen_valid_false_trigger_rate": 0.0625,
+          "chosen_note": "no feasible threshold satisfied the strict FP constraints"
+        }
+      }
+    },
+    "E138": {
+      "name": "natural hidden-trigger check",
+      "result_dir": "results/E138_natural_hidden_trigger_check",
+      "scope": "natural E119/E146 final-correct hard-task rows; diagnostic offline prefix availability",
+      "leakage_boundary": "prompts contain only problem, visible trace, and optional hidden-trigger-selected visible excerpt; labels/gold/error spans are offline only",
+      "models": {
+        "qwen35_27b": {
+          "n": 24,
+          "strict_invalid_n": 19,
+          "strict_valid_n": 5,
+          "base_invalid_accept_rate": 0.10526315789473684,
+          "zero_trigger_rate": 0.8333333333333334,
+          "e137_chosen_trigger_rate": 0.125,
+          "zero_strict_local_invalid_accept_rate": 0.0,
+          "interpretation": "zero threshold transfers well; E137 chosen threshold is too conservative"
+        },
+        "gemma4_31b_it": {
+          "n": 26,
+          "strict_invalid_n": 16,
+          "strict_valid_n": 10,
+          "base_invalid_accept_rate": 0.375,
+          "zero_trigger_rate": 0.6538461538461539,
+          "e137_chosen_trigger_rate": 0.6538461538461539,
+          "zero_strict_local_invalid_accept_rate": 0.125,
+          "interpretation": "strict local check reduces over-acceptance; default local remains repair-aware"
+        },
+        "gemma4_26b_a4b_it": {
+          "n": 16,
+          "strict_invalid_n": 10,
+          "strict_valid_n": 6,
+          "base_invalid_accept_rate": 0.6,
+          "zero_trigger_rate": 0.875,
+          "e137_chosen_trigger_rate": 0.5,
+          "zero_strict_local_invalid_accept_rate": 0.5,
+          "unrepaired_acpi": {
+            "n": 2,
+            "zero_trigger_rate": 1.0,
+            "e137_chosen_trigger_rate": 0.0,
+            "zero_strict_local_invalid_accept_rate": 1.0
+          },
+          "interpretation": "hidden trigger alone is insufficient; unrepaired rows remain accepted"
+        }
+      }
+    },
+    "E140": {
+      "name": "natural check-rationale audit",
+      "result_dir": "results/E140_natural_check_rationale_audit",
+      "scope": "rationale audit for selected E138 rows; strict and repair-aware decisions separated",
+      "models": {
+        "qwen35_27b": {
+          "n": 8,
+          "parse_ok_rate": 1.0,
+          "error_recognized_rate": 1.0,
+          "strict_accept_rate": 0.0,
+          "repair_aware_accept_rate": 0.625
+        },
+        "gemma4_31b_it": {
+          "n": 20,
+          "parse_ok_rate": 1.0,
+          "error_recognized_rate": 0.4,
+          "strict_accept_rate": 0.6,
+          "repair_aware_accept_rate": 1.0
+        },
+        "gemma4_26b_a4b_it": {
+          "n": 20,
+          "parse_ok_rate": 1.0,
+          "error_recognized_rate": 0.1,
+          "strict_accept_rate": 0.75,
+          "repair_aware_accept_rate": 0.95,
+          "unrepaired_acpi": {
+            "n": 4,
+            "error_recognized_rate": 0.0,
+            "strict_accept_rate": 1.0,
+            "repair_aware_accept_rate": 1.0
+          }
+        }
+      }
+    }
+  },
+  "claim_update": {
+    "supported": [
+      "natural repaired ACPI in Qwen/Gemma31 often carries hidden process-risk signals",
+      "strict second-pass objectives can use these signals better than default repair-aware checks",
+      "models can often localize or describe wrong steps before the final global decision"
+    ],
+    "boundaries": [
+      "E138 is diagnostic, not an online deployable monitor",
+      "thresholds trained on controlled rows do not transfer perfectly",
+      "Gemma26 unrepaired ACPI remains a semantic local-check failure despite hidden triggers"
+    ],
+    "safe_claim": "Hidden process-risk evidence exists and can be useful, but objective, threshold, readout, language route, repair-aware reading, and local semantic competence determine whether it becomes a correct verifier decision."
+  },
+  "next": [
+    "E141 rationale failure taxonomy from E140 outputs",
+    "E142 online trigger scaffold without label-informed prefixes",
+    "E144 caution-token intervention for low-cost non-thinking adaptive checking",
+    "Gemma26 unrepaired ACPI activation/prompt deep dive"
+  ]
+}

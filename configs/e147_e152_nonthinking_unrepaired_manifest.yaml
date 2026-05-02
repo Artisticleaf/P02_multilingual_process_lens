@@ -1,0 +1,97 @@
+stage: E147_E152_nonthinking_unrepaired_acpi
+date: "2026-04-30"
+mode_policy:
+  allowed_modes: [NG, DV, MI-DV, PM]
+  deferred_modes: [TV, TG, MI-TG]
+  note: "Thinking-mode experiments are explicitly deferred for this stage."
+models:
+  core_phase_a:
+    - qwen35_27b
+    - gemma4_31b_it
+    - gemma4_26b_a4b_it
+  phase_b_boundary:
+    - glm47_flash_candidate
+e147:
+  task_bank: data/processed/e147_unrepaired_acpi_induction_tasks_20260430.jsonl
+  summary: results/E147_unrepaired_acpi_induction/_taskbank/e147_taskbank_summary.json
+  result_dir: results/E147_unrepaired_acpi_induction
+  audit_sheet: data/processed/e147_final_correct_audit_sheet_20260430.jsonl
+  families:
+    - sign_symmetry_algebra
+    - invariant_counting
+    - complement_symmetry
+    - percentage_roundtrip
+    - unit_roundtrip
+    - code_boundary
+    - table_aggregation
+    - multilingual_semantic
+  prompts:
+    primary_reasoning_first:
+      - neutral
+      - terse_solution
+      - self_check_short
+    diagnostic_answer_anchor:
+      - answer_first_no_gold
+  phase_a:
+    tasks_per_family: 4
+    task_count: 32
+    models: [qwen35_27b, gemma4_31b_it, gemma4_26b_a4b_it]
+    k: 1
+    expected_generations: 384
+  phase_a_expanded:
+    k: 2
+    expected_generations: 768
+  generation:
+    thinking: false
+    temperature: 0.7
+    top_p: 0.95
+    top_k: 50
+    max_new_tokens: 4096
+    batch_size: 2
+  leakage_policy:
+    gold_answer_in_prompt: 0
+    trap_note_in_prompt: 0
+    manual_label_in_prompt: 0
+    error_span_in_prompt: 0
+e148:
+  status: planned_after_e147_labels
+  compares:
+    - plain_yes_no
+    - careful_yes_no
+    - locate_then_judge
+    - sibling_comparison
+    - confidence_only_trigger
+    - hidden_trigger_strict_local
+    - hidden_trigger_strict_global
+    - always_strict_local
+e149:
+  status: planned_after_e148_e150
+  online_trigger_points:
+    - sentence_end
+    - formula_line_end
+    - paragraph_end
+    - natural_marker_end
+    - rolling_token_boundary
+  policies:
+    - base
+    - shadow_hidden
+    - hidden_check
+    - confidence_only_check
+    - always_check
+  deferred_policy: hidden_caution
+e150:
+  status: planned_after_new_unrepaired_rows
+  seed_rows:
+    - 1190020
+    - 1460021
+  target_question: "threshold/readout vs answer anchor vs local semantic competence"
+e151:
+  status: planned_after_e148_e150
+  output: reports/E151_EXPLAINABILITY_CASE_CARDS_20260430.md
+e152:
+  status: planned_after_e148_e151
+  unified_inputs:
+    - E61_controlled_multilingual
+    - E132_suspicious_valid
+    - E147_induced_unrepaired
+    - E119_E146_natural_ng

@@ -1,0 +1,17 @@
+[2026-04-27T19:45:53] loading model=qwen35_9b device=cuda rows=2
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/427 [00:00<?, ?it/s]Loading weights: 100%|██████████| 427/427 [00:00<00:00, 12850.45it/s]
+idx=300310 mode=locate_only prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=300310 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=The integers greater than 3 are 4, 5, 6, and 7. 解释：大于3的整数包括4, 5, 6, 7, 8, 9...，推理过程错误地将其限定
+idx=300310 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes  Problem: 一个数是大于3且不超过7的整数。它有多少个可能取值？ Reasoning trace: The problem 
+idx=300310 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes  题目：一个数是大于3且不超过7的整数。它有多少个可能取值？ 推理过程：The problem asks for the numbe
+idx=300311 mode=locate_only prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=300311 mode=locate_only prompt=zh proc=False span_ok=True judge=None out="between 3 and 7, inclusive" 解释：题目要求是“大于3且不超过7”，即不包括3，而推理过程错误地将其理解为包含3。  第一处错误： "between 3
+idx=300311 mode=locate_then_judge prompt=en proc=False span_ok=False judge=True out=NONE Process-valid: Yes  Problem: 一个数是大于3且不超过7的整数。它有多少个可能取值？ Reasoning trace: The problem 
+idx=300311 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=True out=NONE Process-valid: Yes  题目：一个数是大于3且不超过7的整数。它有多少个可能取值？ 推理过程：The problem asks for the numbe
+[2026-04-27T19:46:08] wrote results/E30_non_discount_error_span_verifier/qwen35_9b_error_span_extraction_verifier.json; eval_rows=8
+SUMMARY mode=locate_only prompt=en span_acc=0.0 invalid_hit=0.0 judge_acc=None loc_but_accept=None
+SUMMARY mode=locate_only prompt=zh span_acc=0.5 invalid_hit=1.0 judge_acc=None loc_but_accept=None
+SUMMARY mode=locate_then_judge prompt=en span_acc=0.5 invalid_hit=0.0 judge_acc=0.5 loc_but_accept=0.0
+SUMMARY mode=locate_then_judge prompt=zh span_acc=0.5 invalid_hit=0.0 judge_acc=0.5 loc_but_accept=0.0

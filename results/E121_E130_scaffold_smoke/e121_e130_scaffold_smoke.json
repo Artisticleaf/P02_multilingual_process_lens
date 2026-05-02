@@ -1,0 +1,85 @@
+{
+  "created_at": "2026-04-30T02:52:17",
+  "errors": [],
+  "experiment": "E121_E130_scaffold_smoke",
+  "ids": [
+    "E121",
+    "E122",
+    "E123",
+    "E124",
+    "E125",
+    "E126",
+    "E127",
+    "E128",
+    "E129",
+    "E130"
+  ],
+  "leakage_scan": {
+    "counts": {},
+    "hits": [],
+    "passed": true
+  },
+  "manifest": "configs/e121_e130_next_stage_manifest.yaml",
+  "mode_counts": {
+    "DV": 1,
+    "MI_DV": 3,
+    "NG": 1,
+    "PM": 2,
+    "TV": 3
+  },
+  "n_experiments": 10,
+  "note_zh": "No model loaded; safe to run while E119 occupies GPUs.",
+  "passed": true,
+  "prompt_stubs": [
+    {
+      "id": "E121",
+      "mode": "TV",
+      "prompt_stub": "Judge the visible reasoning trace. Do not use hidden annotations.\nProblem: Find the sum of all integer bases b>9 for which 17_b divides 97_b.\nTrace: 17_b=b+7 and 97_b=9b+7. Since b+7 divides 9b+7, b+7 divides 56. Thus b=21 or 49, sum 70.\nFinal decision:"
+    },
+    {
+      "id": "E122",
+      "mode": "TV",
+      "prompt_stub": "Judge the visible reasoning trace. Do not use hidden annotations.\nProblem: Find the sum of all integer bases b>9 for which 17_b divides 97_b.\nTrace: 17_b=b+7 and 97_b=9b+7. Since b+7 divides 9b+7, b+7 divides 56. Thus b=21 or 49, sum 70.\nFinal decision:"
+    },
+    {
+      "id": "E123",
+      "mode": "MI_DV",
+      "prompt_stub": "Judge the visible reasoning trace. Do not use hidden annotations.\nProblem: Find the sum of all integer bases b>9 for which 17_b divides 97_b.\nTrace: 17_b=b+7 and 97_b=9b+7. Since b+7 divides 9b+7, b+7 divides 56. Thus b=21 or 49, sum 70.\nFinal decision:"
+    },
+    {
+      "id": "E124",
+      "mode": "MI_DV",
+      "prompt_stub": "Judge the visible reasoning trace. Do not use hidden annotations.\nProblem: Find the sum of all integer bases b>9 for which 17_b divides 97_b.\nTrace: 17_b=b+7 and 97_b=9b+7. Since b+7 divides 9b+7, b+7 divides 56. Thus b=21 or 49, sum 70.\nFinal decision:"
+    },
+    {
+      "id": "E125",
+      "mode": "NG",
+      "prompt_stub": "Solve the following problem. End with exactly one line `Final answer: <integer>`.\n\nProblem: Find the sum of all integer bases b>9 for which 17_b divides 97_b."
+    },
+    {
+      "id": "E126",
+      "mode": "MI_DV",
+      "prompt_stub": "Judge the visible reasoning trace. Do not use hidden annotations.\nProblem: Find the sum of all integer bases b>9 for which 17_b divides 97_b.\nTrace: 17_b=b+7 and 97_b=9b+7. Since b+7 divides 9b+7, b+7 divides 56. Thus b=21 or 49, sum 70.\nFinal decision:"
+    },
+    {
+      "id": "E127",
+      "mode": "PM",
+      "prompt_stub": "Post-hoc analysis placeholder for E127; no model prompt."
+    },
+    {
+      "id": "E128",
+      "mode": "PM",
+      "prompt_stub": "Post-hoc analysis placeholder for E128; no model prompt."
+    },
+    {
+      "id": "E129",
+      "mode": "DV",
+      "prompt_stub": "Judge the visible reasoning trace. Do not use hidden annotations.\nProblem: Find the sum of all integer bases b>9 for which 17_b divides 97_b.\nTrace: 17_b=b+7 and 97_b=9b+7. Since b+7 divides 9b+7, b+7 divides 56. Thus b=21 or 49, sum 70.\nFinal decision:"
+    },
+    {
+      "id": "E130",
+      "mode": "TV",
+      "prompt_stub": "Judge the visible reasoning trace. Do not use hidden annotations.\nProblem: Find the sum of all integer bases b>9 for which 17_b divides 97_b.\nTrace: 17_b=b+7 and 97_b=9b+7. Since b+7 divides 9b+7, b+7 divides 56. Thus b=21 or 49, sum 70.\nFinal decision:"
+    }
+  ]
+}

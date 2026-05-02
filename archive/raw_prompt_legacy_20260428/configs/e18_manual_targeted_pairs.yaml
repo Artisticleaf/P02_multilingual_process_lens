@@ -1,0 +1,28 @@
+pairs:
+  - id: qwen14_e18_dabazhe_zh_en_92_bad_91_valid
+    model_key: qwen3_14b_base
+    valid_idx: 180091
+    bad_idx: 180092
+    support_span: "Next, we apply the 20% discount to the new price: 20% of 100 = 0.20 * 100 = 20 dollars. Therefore, the final price after the discount is 100 - 20 = 80 dollars."
+    error_span: "Now apply the 80% discount to the new price. 100 * 0.80 = 80."
+    final_span_valid: "Final answer: 80"
+    final_span_bad: "Final answer: 80."
+    layers: [9, 14, 20, 25, 30]
+  - id: qwen14_e18_dabazhe_zh_en_92_bad_94_valid
+    model_key: qwen3_14b_base
+    valid_idx: 180094
+    bad_idx: 180092
+    support_span: "After that, the new price is then discounted by 20% (which is equivalent to paying 80% of the price). So, the final price is $100 * 0.8 = $80."
+    error_span: "Now apply the 80% discount to the new price. 100 * 0.80 = 80."
+    final_span_valid: "Final answer: $80"
+    final_span_bad: "Final answer: 80."
+    layers: [9, 14, 20, 25, 30]
+  - id: qwen14_e18_dabazhe_final_wrong_93_bad_91_valid
+    model_key: qwen3_14b_base
+    valid_idx: 180091
+    bad_idx: 180093
+    support_span: "Next, we apply the 20% discount to the new price: 20% of 100 = 0.20 * 100 = 20 dollars. Therefore, the final price after the discount is 100 - 20 = 80 dollars."
+    error_span: "An 80% discount means the customer pays 20% of the price"
+    final_span_valid: "Final answer: 80"
+    final_span_bad: "Final answer: 20"
+    layers: [9, 14, 20, 25, 30]

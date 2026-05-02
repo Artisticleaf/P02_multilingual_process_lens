@@ -1,0 +1,75 @@
+{
+  "created_at": "2026-05-01T12:35:08",
+  "edges": [
+    {
+      "relation": "constrains",
+      "source": "E153_generation_audits",
+      "target": "claim.natural_unrepaired_acpi_prevalence",
+      "zh": "E153 产生大量正确顺序 trace，但 0 个未修复 ACPI，因此限制了“自然高频”说法。"
+    },
+    {
+      "relation": "supports",
+      "source": "E153_error_finding_audit",
+      "target": "claim.solve_vs_audit_separation",
+      "zh": "同一批能力强的模型在找错/定位上出现误报、漏报和错定位。"
+    },
+    {
+      "relation": "prepares_evidence",
+      "source": "E159_nonthinking_generation",
+      "target": "claim.answer_preserving_traps_needed",
+      "zh": "E159 在 10 类保答案陷阱上生成并审计 360 条 non-thinking trace；自然生成未出现未修复 ACPI，但产生 357 条干净有效 replay 种子。"
+    },
+    {
+      "relation": "pending_upper_bound",
+      "source": "E161_oracle_span_repair",
+      "target": "claim.hidden_state_method",
+      "zh": "E161 将区分 blind 找错、定位和显式 span 上界修复。"
+    }
+  ],
+  "nodes": [
+    {
+      "en": "Solving from scratch and auditing a given reasoning trace are separable abilities.",
+      "evidence": [
+        "E153_generation_audits",
+        "E153_error_finding_audit"
+      ],
+      "id": "claim.solve_vs_audit_separation",
+      "status": "strong_current_evidence",
+      "type": "claim",
+      "zh": "会从头解题，不等于会审计已有推理过程。"
+    },
+    {
+      "en": "Natural unrepaired ACPI has not yet appeared frequently in diverse moderate hard-task generation.",
+      "evidence": [
+        "E153_generation_audits"
+      ],
+      "id": "claim.natural_unrepaired_acpi_prevalence",
+      "status": "not_supported_as_broad_prevalence_yet",
+      "type": "claim",
+      "zh": "自然生成的未修复 ACPI 在多样化中等难题中尚未显示高频。"
+    },
+    {
+      "en": "Efficient ACPI induction needs answer-preserving structures where a local error can leave the final answer unchanged.",
+      "evidence": [
+        "E159_task_bank_audit",
+        "E159_nonthinking_generation",
+        "E159_process_acpi_audit"
+      ],
+      "id": "claim.answer_preserving_traps_needed",
+      "status": "controlled_surface_supported_natural_generation_negative",
+      "type": "claim",
+      "zh": "要高效诱发 ACPI，任务需要局部错误仍能保持最终答案的结构。"
+    },
+    {
+      "en": "Hidden-state evidence should be cached after audit with teacher-forced replay.",
+      "evidence": [
+        "history_hidden_state_policy"
+      ],
+      "id": "claim.hidden_state_method",
+      "status": "method_policy_set_pending_E156_replay",
+      "type": "claim",
+      "zh": "隐藏层信号应在审计后用 teacher-forced replay 保存，作为可解释性主证据。"
+    }
+  ],
+  "scope": "E153-E161 completed-data KG snapshot, with running jobs excluded from evidence counts."
+}

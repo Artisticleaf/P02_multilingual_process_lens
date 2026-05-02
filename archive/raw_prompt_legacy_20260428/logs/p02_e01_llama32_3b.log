@@ -1,0 +1,12 @@
+/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+[2026-04-27T01:31:41] loading tokenizer: llama32_3b -> /home/Awei/LLM/Model/base/Llama-3.2-3B
+[2026-04-27T01:31:41] loading model dtype=bfloat16 device=cuda
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 230.53it/s]
+[2026-04-27T01:31:44] tokenization
+[2026-04-27T01:31:44] contextual bridge
+[2026-04-27T01:31:44] process verifier margins
+[2026-04-27T01:31:45] residual patching pairs=4 layers=[7, 14, 21, 27]
+[2026-04-27T01:31:46] wrote /home/Awei/P02_multilingual_process_lens/results/E01_anchor_matrix/llama32_3b_anchor_smoke.json
+SUMMARY model=llama32_3b bridge_best_layer=5 top1=1.0 proc_acc=0.5625 invalid_fc_false_accept=0.875

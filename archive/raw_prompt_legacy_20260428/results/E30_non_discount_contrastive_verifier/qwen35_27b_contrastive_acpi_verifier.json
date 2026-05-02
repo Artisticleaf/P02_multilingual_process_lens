@@ -1,0 +1,134 @@
+{
+  "args": {
+    "device": "auto",
+    "dtype": "bfloat16",
+    "local_files_only": false,
+    "manual_jsonl": "data/processed/e30_non_discount_verifier_subset_20260427.jsonl",
+    "model_key": "qwen35_27b",
+    "out_dir": "results/E30_non_discount_contrastive_verifier",
+    "pairs_yaml": "configs/e30_non_discount_verifier_pairs.yaml",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml"
+  },
+  "created_at": "2026-04-27T19:45:30",
+  "cuda_visible_devices": "all",
+  "host": "hpc-node-01",
+  "model_spec": {
+    "class": "post_trained_hybrid",
+    "family": "qwen35",
+    "loader_risk": "large model; conditional_generation_or_multimodal config may require transformers 5.x and AutoModelForImageTextToText fallback",
+    "notes": "downloaded via HF mirror on 2026-04-27; requires multi-GPU device_map=auto for full bf16 weights",
+    "path": "/home/Awei/LLM/Model/base/qwen35_27b",
+    "priority": "P0_large_transfer",
+    "remote_repo": "Qwen/Qwen3.5-27B",
+    "status": "local_downloaded"
+  },
+  "rows": [
+    {
+      "a_avg_logprob": -2.772059679031372,
+      "b_avg_logprob": -3.4062732458114624,
+      "bad_idx": 300311,
+      "bad_risk": "acpi_strict_lower_rephrased_as_between_inclusive_but_list_excludes_3",
+      "correct": true,
+      "margin_target_minus_other": 0.6342135667800903,
+      "order": "bad_A",
+      "pair_id": "e30_inequality_no_more_than_between_inclusive",
+      "pred": "A",
+      "prompt_lang": "en",
+      "target": "A",
+      "trace_model_key": "qwen3_14b_base",
+      "valid_idx": 300310,
+      "valid_risk": "valid_clean",
+      "verifier_model_key": "qwen35_27b"
+    },
+    {
+      "a_avg_logprob": -2.6697604656219482,
+      "b_avg_logprob": -2.9747390747070312,
+      "bad_idx": 300311,
+      "bad_risk": "acpi_strict_lower_rephrased_as_between_inclusive_but_list_excludes_3",
+      "correct": false,
+      "margin_target_minus_other": -0.304978609085083,
+      "order": "bad_B",
+      "pair_id": "e30_inequality_no_more_than_between_inclusive",
+      "pred": "A",
+      "prompt_lang": "en",
+      "target": "B",
+      "trace_model_key": "qwen3_14b_base",
+      "valid_idx": 300310,
+      "valid_risk": "valid_clean",
+      "verifier_model_key": "qwen35_27b"
+    },
+    {
+      "a_avg_logprob": -2.6036417484283447,
+      "b_avg_logprob": -3.2286417484283447,
+      "bad_idx": 300311,
+      "bad_risk": "acpi_strict_lower_rephrased_as_between_inclusive_but_list_excludes_3",
+      "correct": true,
+      "margin_target_minus_other": 0.625,
+      "order": "bad_A",
+      "pair_id": "e30_inequality_no_more_than_between_inclusive",
+      "pred": "A",
+      "prompt_lang": "zh",
+      "target": "A",
+      "trace_model_key": "qwen3_14b_base",
+      "valid_idx": 300310,
+      "valid_risk": "valid_clean",
+      "verifier_model_key": "qwen35_27b"
+    },
+    {
+      "a_avg_logprob": -2.4277496337890625,
+      "b_avg_logprob": -2.4277496337890625,
+      "bad_idx": 300311,
+      "bad_risk": "acpi_strict_lower_rephrased_as_between_inclusive_but_list_excludes_3",
+      "correct": false,
+      "margin_target_minus_other": 0.0,
+      "order": "bad_B",
+      "pair_id": "e30_inequality_no_more_than_between_inclusive",
+      "pred": "A",
+      "prompt_lang": "zh",
+      "target": "B",
+      "trace_model_key": "qwen3_14b_base",
+      "valid_idx": 300310,
+      "valid_risk": "valid_clean",
+      "verifier_model_key": "qwen35_27b"
+    }
+  ],
+  "started_at": "2026-04-27T19:45:15",
+  "summary": [
+    {
+      "acc": 0.5,
+      "mean_margin": 0.23855873942375183,
+      "n": 4,
+      "slice": "all",
+      "slice_type": "all"
+    },
+    {
+      "acc": 0.5,
+      "mean_margin": 0.23855873942375183,
+      "n": 4,
+      "slice": "e30_inequality_no_more_than_between_inclusive",
+      "slice_type": "pair"
+    },
+    {
+      "acc": 0.5,
+      "mean_margin": 0.16461747884750366,
+      "n": 2,
+      "slice": "en",
+      "slice_type": "prompt_lang"
+    },
+    {
+      "acc": 0.5,
+      "mean_margin": 0.3125,
+      "n": 2,
+      "slice": "zh",
+      "slice_type": "prompt_lang"
+    },
+    {
+      "acc": 0.5,
+      "mean_margin": 0.23855873942375183,
+      "n": 4,
+      "slice": "qwen3_14b_base",
+      "slice_type": "trace_model"
+    }
+  ],
+  "verifier_model_key": "qwen35_27b"
+}

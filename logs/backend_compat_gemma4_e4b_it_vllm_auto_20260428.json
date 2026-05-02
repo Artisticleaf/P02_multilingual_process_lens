@@ -1,0 +1,29 @@
+{
+  "args": {
+    "dtype": "bfloat16",
+    "gpu_memory_utilization": 0.5,
+    "max_model_len": 1024,
+    "model_impl": "auto",
+    "model_key": "gemma4_e4b_it",
+    "out_dir": "/home/Awei/P02_multilingual_process_lens/logs",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "tensor_parallel_size": 1
+  },
+  "backend": "vllm",
+  "created_at": "2026-04-28T12:19:46",
+  "error_text": "Engine core initialization failed. See root cause above. Failed core proc(s): {}",
+  "error_type": "RuntimeError",
+  "host": "hpc-node-01",
+  "model_key": "gemma4_e4b_it",
+  "model_spec": {
+    "class": "instruct",
+    "family": "gemma",
+    "notes": "downloaded via HF mirror on 2026-04-27; current Google small open model control; may require newer transformers or multimodal text loader",
+    "path": "/home/Awei/LLM/Model/base/gemma4_e4b_it",
+    "priority": "P0",
+    "remote_repo": "google/gemma-4-E4B-it",
+    "status": "local_downloaded"
+  },
+  "ok": false,
+  "traceback_tail": "          ^^^^^^^^^^^^^\n  File \"/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/vllm/entrypoints/llm.py\", line 334, in __init__\n    self.llm_engine = LLMEngine.from_engine_args(\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/vllm/v1/engine/llm_engine.py\", line 183, in from_engine_args\n    return cls(\n           ^^^^\n  File \"/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/vllm/v1/engine/llm_engine.py\", line 109, in __init__\n    self.engine_core = EngineCoreClient.make_client(\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/vllm/v1/engine/core_client.py\", line 93, in make_client\n    return SyncMPClient(vllm_config, executor_class, log_stats)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/vllm/v1/engine/core_client.py\", line 642, in __init__\n    super().__init__(\n  File \"/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/vllm/v1/engine/core_client.py\", line 471, in __init__\n    with launch_core_engines(vllm_config, executor_class, log_stats) as (\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/contextlib.py\", line 144, in __exit__\n    next(self.gen)\n  File \"/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/vllm/v1/engine/utils.py\", line 903, in launch_core_engines\n    wait_for_engine_startup(\n  File \"/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/vllm/v1/engine/utils.py\", line 960, in wait_for_engine_startup\n    raise RuntimeError(\nRuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}"
+}

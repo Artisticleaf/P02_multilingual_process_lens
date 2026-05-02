@@ -1,0 +1,61 @@
+[2026-04-27T04:08:23] loading qwen35_9b on cuda
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/427 [00:00<?, ?it/s]Loading weights: 100%|██████████| 427/427 [00:00<00:00, 14433.51it/s]
+row task=disc_zh_75_price route=en->en gold=60 pred_avg=80 margin_avg=-1.410
+row task=disc_zh_75_price route=zh->zh gold=60 pred_avg=80 margin_avg=-0.405
+row task=disc_zh_75_price route=zh->en gold=60 pred_avg=80 margin_avg=-0.239
+row task=disc_zh_75_price route=en->zh gold=60 pred_avg=80 margin_avg=-1.630
+row task=disc_en_25_off route=en->en gold=60 pred_avg=80 margin_avg=-1.500
+row task=disc_en_25_off route=zh->zh gold=60 pred_avg=80 margin_avg=-0.148
+row task=disc_en_25_off route=zh->en gold=60 pred_avg=80 margin_avg=-0.256
+row task=disc_en_25_off route=en->zh gold=60 pred_avg=80 margin_avg=-1.259
+row task=disc_en_75_off route=en->en gold=20 pred_avg=80 margin_avg=-0.965
+row task=disc_en_75_off route=zh->zh gold=20 pred_avg=80 margin_avg=-0.358
+row task=disc_en_75_off route=zh->en gold=20 pred_avg=20 margin_avg=0.335
+row task=disc_en_75_off route=en->zh gold=20 pred_avg=80 margin_avg=-0.773
+row task=ratio_boys_girls route=en->en gold=40 pred_avg=40 margin_avg=0.016
+row task=ratio_boys_girls route=zh->zh gold=40 pred_avg=24 margin_avg=-0.680
+row task=ratio_boys_girls route=zh->en gold=40 pred_avg=24 margin_avg=-0.694
+row task=ratio_boys_girls route=en->zh gold=40 pred_avg=24 margin_avg=-0.253
+row task=ratio_boys_total route=en->en gold=40 pred_avg=24 margin_avg=-1.189
+row task=ratio_boys_total route=zh->zh gold=40 pred_avg=15 margin_avg=-1.389
+row task=ratio_boys_total route=zh->en gold=40 pred_avg=24 margin_avg=-1.469
+row task=ratio_boys_total route=en->zh gold=40 pred_avg=24 margin_avg=-1.258
+row task=ratio_girls_boys route=en->en gold=40 pred_avg=40 margin_avg=0.172
+row task=ratio_girls_boys route=zh->zh gold=40 pred_avg=24 margin_avg=-0.681
+row task=ratio_girls_boys route=zh->en gold=40 pred_avg=24 margin_avg=-0.936
+row task=ratio_girls_boys route=en->zh gold=40 pred_avg=24 margin_avg=-0.005
+row task=avg_simple route=en->en gold=11 pred_avg=27 margin_avg=-0.236
+row task=avg_simple route=zh->zh gold=11 pred_avg=27 margin_avg=-0.267
+row task=avg_simple route=zh->en gold=11 pred_avg=27 margin_avg=-0.039
+row task=avg_simple route=en->zh gold=11 pred_avg=11 margin_avg=0.545
+row task=avg_weighted route=en->en gold=85 pred_avg=80 margin_avg=-0.458
+row task=avg_weighted route=zh->zh gold=85 pred_avg=80 margin_avg=-0.542
+row task=avg_weighted route=zh->en gold=85 pred_avg=80 margin_avg=-0.542
+row task=avg_weighted route=en->zh gold=85 pred_avg=255 margin_avg=-0.589
+row task=deriv_sum route=en->en gold=2x+3 pred_avg=2x + 3 margin_avg=-1.029
+row task=deriv_sum route=zh->zh gold=2x+3 pred_avg=2x + 3 margin_avg=-0.925
+row task=deriv_sum route=zh->en gold=2x+3 pred_avg=2x + 3 margin_avg=-1.049
+row task=deriv_sum route=en->zh gold=2x+3 pred_avg=2x + 3 margin_avg=-1.126
+row task=deriv_product_equiv route=en->en gold=2x+3 pred_avg=3x^2 + 6x margin_avg=-2.206
+row task=deriv_product_equiv route=zh->zh gold=2x+3 pred_avg=3x^2 + 6x margin_avg=-2.134
+row task=deriv_product_equiv route=zh->en gold=2x+3 pred_avg=3x^2 + 6x margin_avg=-2.818
+row task=deriv_product_equiv route=en->zh gold=2x+3 pred_avg=3x^2 + 6x margin_avg=-1.800
+row task=deriv_coeff route=en->en gold=6x+1 pred_avg=6x + 1 margin_avg=-1.054
+row task=deriv_coeff route=zh->zh gold=6x+1 pred_avg=6x + 1 margin_avg=-1.192
+row task=deriv_coeff route=zh->en gold=6x+1 pred_avg=6x + 1 margin_avg=-1.538
+row task=deriv_coeff route=en->zh gold=6x+1 pred_avg=6x + 1 margin_avg=-1.184
+row task=rem_137_9 route=en->en gold=2 pred_avg=1 margin_avg=-3.344
+row task=rem_137_9 route=zh->zh gold=2 pred_avg=1 margin_avg=-3.988
+row task=rem_137_9 route=zh->en gold=2 pred_avg=1 margin_avg=-3.781
+row task=rem_137_9 route=en->zh gold=2 pred_avg=1 margin_avg=-2.906
+row task=frac_simplify route=en->en gold=3/4 pred_avg=3/4 margin_avg=0.070
+row task=frac_simplify route=zh->zh gold=3/4 pred_avg=6/8 margin_avg=-0.045
+row task=frac_simplify route=zh->en gold=3/4 pred_avg=6/8 margin_avg=-0.331
+row task=frac_simplify route=en->zh gold=3/4 pred_avg=6/8 margin_avg=-0.385
+row task=percent_then_discount route=en->en gold=80 pred_avg=100 margin_avg=-0.925
+row task=percent_then_discount route=zh->zh gold=80 pred_avg=100 margin_avg=-1.653
+row task=percent_then_discount route=zh->en gold=80 pred_avg=100 margin_avg=-1.807
+row task=percent_then_discount route=en->zh gold=80 pred_avg=100 margin_avg=-0.695
+wrote /home/Awei/P02_multilingual_process_lens/results/E07_semantic_trap_answer_probe/qwen35_9b_semantic_trap_answer_probe.json; rows=56 acc_avg=0.089 mean_margin=-1.017

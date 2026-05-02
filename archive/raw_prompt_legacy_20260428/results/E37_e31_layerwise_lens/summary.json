@@ -1,0 +1,20 @@
+{
+  "aggregate": {
+    "models": {
+      "qwen35_9b": {
+        "absolute_n": 20,
+        "contrastive_n": 20
+      },
+      "qwen3_14b_base": {
+        "absolute_n": 20,
+        "contrastive_n": 20
+      }
+    },
+    "absolute_n": 40,
+    "contrastive_n": 40
+  },
+  "inputs": [
+    "results/E37_e31_layerwise_lens/qwen35_9b_layerwise_verifier_lens.json",
+    "results/E37_e31_layerwise_lens/qwen3_14b_base_layerwise_verifier_lens.json"
+  ]
+}

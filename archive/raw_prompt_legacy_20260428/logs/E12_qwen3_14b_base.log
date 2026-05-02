@@ -1,0 +1,22 @@
+/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+[2026-04-27T04:15:23] loading verifier=qwen3_14b_base on cuda; pairs=4
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 476.10it/s]
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=en order=bad_A target=A pred=B margin=-0.250
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=en order=bad_B target=B pred=B margin=0.625
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=zh order=bad_A target=A pred=B margin=-0.750
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=zh order=bad_B target=B pred=B margin=1.375
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=en order=bad_A target=A pred=B margin=-0.125
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=en order=bad_B target=B pred=B margin=0.875
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=zh order=bad_A target=A pred=A margin=1.125
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=zh order=bad_B target=B pred=B margin=0.750
+pair=qwen35_discount_zh_234_bad_235_valid prompt=en order=bad_A target=A pred=A margin=3.242
+pair=qwen35_discount_zh_234_bad_235_valid prompt=en order=bad_B target=B pred=B margin=1.125
+pair=qwen35_discount_zh_234_bad_235_valid prompt=zh order=bad_A target=A pred=A margin=3.708
+pair=qwen35_discount_zh_234_bad_235_valid prompt=zh order=bad_B target=B pred=B margin=1.875
+pair=qwen35_ratio_zh_en_261_bad_260_valid prompt=en order=bad_A target=A pred=A margin=2.125
+pair=qwen35_ratio_zh_en_261_bad_260_valid prompt=en order=bad_B target=B pred=B margin=1.500
+pair=qwen35_ratio_zh_en_261_bad_260_valid prompt=zh order=bad_A target=A pred=A margin=2.000
+pair=qwen35_ratio_zh_en_261_bad_260_valid prompt=zh order=bad_B target=B pred=B margin=1.625
+wrote /home/Awei/P02_multilingual_process_lens/results/E12_contrastive_acpi_verifier/qwen3_14b_base_contrastive_acpi_verifier.json; rows=16 acc=0.812 mean_margin=1.302

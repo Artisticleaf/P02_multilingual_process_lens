@@ -1,0 +1,154 @@
+{
+  "args": {
+    "allow_final_fallback": false,
+    "batch_size": 3,
+    "device": "auto",
+    "dtype": "bfloat16",
+    "k": 1,
+    "local_files_only": true,
+    "max_new_tokens": 768,
+    "max_tasks": 1,
+    "model_key": "qwen35_27b",
+    "out_dir": "results/E57_smoke_thinking_false",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "seed": 20260428,
+    "tasks_yaml": "/home/Awei/P02_multilingual_process_lens/configs/e26_aime_hard_tasks.yaml",
+    "temperature": 0.7,
+    "thinking": "false",
+    "top_k": 50,
+    "top_p": 0.95,
+    "variants": [
+      "neutral",
+      "answer_first_no_gold",
+      "self_check"
+    ]
+  },
+  "created_at": "2026-04-28T18:47:08",
+  "cuda_visible_devices": "all",
+  "host": "hpc-node-01",
+  "model_key": "qwen35_27b",
+  "model_spec": {
+    "class": "post_trained_hybrid",
+    "family": "qwen35",
+    "loader_risk": "large model; conditional_generation_or_multimodal config may require transformers 5.x and AutoModelForImageTextToText fallback",
+    "notes": "core local P0 medium frontier model; downloaded via HF mirror on 2026-04-27; requires multi-GPU device_map=auto for full bf16 weights",
+    "path": "/home/Awei/LLM/Model/base/qwen35_27b",
+    "priority": "P0_core_frontier_medium",
+    "remote_repo": "Qwen/Qwen3.5-27B",
+    "status": "local_downloaded"
+  },
+  "prompt_variants": {
+    "answer_anchor": "This is not a benchmark-performance run. A public final answer is provided only to condition a rationale. Write a concise mathematical solution that genuinely justifies the given answer. If a step is uncertain, say so rather than inventing it. End with exactly one line `Final answer: <integer>`.\n\nProblem: {problem}\nGiven final answer: {answer}",
+    "answer_first_no_gold": "Solve the following AIME-style problem yourself. First write one line `Final answer: <integer>`, then give a concise justification. No final answer is provided in the prompt.\n\nProblem: {problem}",
+    "neutral": "Solve the following AIME-style problem carefully. Show the reasoning needed to justify the result. End with exactly one line `Final answer: <integer>`.\n\nProblem: {problem}",
+    "self_check": "Solve the following AIME-style problem. After deriving an answer, do one brief self-check for the main trap, then end with exactly one line `Final answer: <integer>`.\n\nProblem: {problem}"
+  },
+  "rows": [
+    {
+      "add_special_tokens": false,
+      "completion": "To find the sum of all integer bases $b > 9$ for which $17_b$ is a divisor of $97_b$, we first express the numbers in base $b$ as polynomials in $b$.\n\nThe number $17_b$ represents:\n$$1 \\cdot b^1 + 7 \\cdot b^0 = b + 7$$\n\nThe number $97_b$ represents:\n$$9 \\cdot b^1 + 7 \\cdot b^0 = 9b + 7$$\n\nThe problem states that $17_b$ divides $97_b$. In mathematical terms, this means:\n$$b + 7 \\mid 9b + 7$$\n\nFor the digits $1, 7, 9$ to be valid in base $b$, we must have $b > 9$. This is already given in the problem statement ($b > 9$).\n\nWe can use the property of divisibility: if $x \\mid y$, then $x \\mid (y - kx)$ for any integer $k$. We want to eliminate the $b$ term in the dividend $9b + 7$. Let's subtract $9$ times the divisor $b + 7$ from the dividend:\n$$9b + 7 - 9(b + 7) = 9b + 7 - 9b - 63 = -56$$\n\nSince $b + 7$ divides $9b + 7$ and $b + 7$ obviously divides $9(b + 7)$, it must divide their difference:\n$$b + 7 \\mid -56$$\nThis is equivalent to:\n$$b + 7 \\mid 56$$\n\nNow, we list all positive divisors of $56$. The prime factorization of $56$ is $2^3 \\cdot 7$, so the divisors are:\n$$1, 2, 4, 7, 8, 14, 28, 56$$\n\nLet $d = b + 7$. Then $d$ must be one of these divisors.\nSince $b > 9$, we have:\n$$b + 7 > 9 + 7$$\n$$b + 7 > 16$$\n$$d > 16$$\n\nWe check which divisors of $56$ are greater than $16$:\n- $1 \\ngtr 16$\n- $2 \\ngtr 16$\n- $4 \\ngtr 16$\n- $7 \\ngtr 16$\n- $8 \\ngtr 16$\n- $14 \\ngtr 16$\n- $28 > 16$ (Valid)\n- $56 > 16$ (Valid)\n\nSo the possible values for $d = b + 7$ are $28$ and $56$.\n\nNow we solve for $b$ in each case:\n1. If $b + 7 = 28$, then $b = 28 - 7 = 21$.\n   Check validity: $b = 21 > 9$. The digits $1, 7, 9$ are valid in base $21$.\n   Check divisibility: $17_{21} = 21 + 7 = 28$. $97_{21} = 9(21) + 7 = 189 + 7 = 19",
+      "created_at": "2026-04-28T18:47:08",
+      "extracted_final": "",
+      "final_marker_found": false,
+      "gold_answer": "70",
+      "gold_answer_in_prompt": false,
+      "is_acpi": false,
+      "known_trap_note_in_prompt": false,
+      "manual_final_correct": false,
+      "manual_process_valid": null,
+      "manual_risk": "not_final_correct",
+      "model_key": "qwen35_27b",
+      "problem": "Find the sum of all integer bases $b>9$ for which $17_{b}$ is a divisor of $97_{b}$.",
+      "prompt_variant": "neutral",
+      "sample_idx": 0,
+      "task_id": "aime25_base_divisor_p1",
+      "thinking": false,
+      "trap_note_not_in_prompt": "Base notation: 17_b and 97_b are numbers in base b, not decimal subscripts.",
+      "used_chat_template": true
+    },
+    {
+      "add_special_tokens": false,
+      "completion": "Final answer: 120\n\n**Justification:**\nLet the base be $b$. The numbers $17_b$ and $97_b$ can be expressed in base 10 as:\n$17_b = 1 \\cdot b + 7 = b + 7$\n$97_b = 9 \\cdot b + 7 = 9b + 7$\n\nFor $17_b$ to be a divisor of $97_b$, the expression $\\frac{9b+7}{b+7}$ must be an integer.\nWe can perform polynomial division or algebraic manipulation:\n$\\frac{9b+7}{b+7} = \\frac{9(b+7) - 63 + 7}{b+7} = \\frac{9(b+7) - 56}{b+7} = 9 - \\frac{56}{b+7}$\n\nFor the result to be an integer, $b+7$ must be a divisor of 56.\nThe divisors of 56 are: $1, 2, 4, 7, 8, 14, 28, 56$.\nSince the base $b > 9$, we must have $b+7 > 16$.\nThe divisors of 56 that are greater than 16 are: $28$ and $56$.\n\nCase 1: $b+7 = 28 \\implies b = 21$.\nCase 2: $b+7 = 56 \\implies b = 49$.\n\nBoth $b=21$ and $b=49$ satisfy the condition $b > 9$.\nThe sum of all such integer bases is $21 + 49 = 70$.\n\nWait, let me re-check the divisors and the condition.\nDivisors of 56: 1, 2, 4, 7, 8, 14, 28, 56.\nCondition: $b > 9 \\implies b+7 > 16$.\nDivisors $> 16$: 28, 56.\nCorresponding $b$: $28-7=21$, $56-7=49$.\nSum: $21+49=70$.\n\nLet me double check the problem statement interpretation. \"integer bases $b>9$\".\nIs there any other constraint? The digits in $17_b$ are 1 and 7, so $b > 7$. The digits in $97_b$ are 9 and 7, so $b > 9$. This is consistent with $b > 9$.\nLet's re-calculate the division.\n$9b+7 = k(b+7)$.\n$9b+7 = kb + 7k$.\n$b(9-k) = 7k - 7 = 7(k-1)$.\n$b = \\frac{7(k-1)}{9-k}$.\nSince $b > 0$, $9-k > 0 \\implies k < 9$.\nPossible integer values for $k$:\nIf $k=8$, $b = 7(7)/1 = 49$.\nIf $k=7$, $b = 7(6)/2 = 21$.\nIf $k=6$, $b = 7(5)/3$ (not integer).\nIf $k=",
+      "created_at": "2026-04-28T18:47:08",
+      "extracted_final": "120",
+      "final_marker_found": true,
+      "gold_answer": "70",
+      "gold_answer_in_prompt": false,
+      "is_acpi": false,
+      "known_trap_note_in_prompt": false,
+      "manual_final_correct": false,
+      "manual_process_valid": null,
+      "manual_risk": "not_final_correct",
+      "model_key": "qwen35_27b",
+      "problem": "Find the sum of all integer bases $b>9$ for which $17_{b}$ is a divisor of $97_{b}$.",
+      "prompt_variant": "answer_first_no_gold",
+      "sample_idx": 0,
+      "task_id": "aime25_base_divisor_p1",
+      "thinking": false,
+      "trap_note_not_in_prompt": "Base notation: 17_b and 97_b are numbers in base b, not decimal subscripts.",
+      "used_chat_template": true
+    },
+    {
+      "add_special_tokens": false,
+      "completion": "To find the sum of all integer bases $b > 9$ for which $17_b$ is a divisor of $97_b$, we first express the numbers in base $b$ in terms of $b$.\n\nThe number $17_b$ represents:\n$$1 \\cdot b + 7 = b + 7$$\n\nThe number $97_b$ represents:\n$$9 \\cdot b + 7 = 9b + 7$$\n\nThe problem states that $17_b$ divides $97_b$. In mathematical terms, this means:\n$$b + 7 \\mid 9b + 7$$\n\nFor $b+7$ to divide $9b+7$, it must also divide any linear combination of $9b+7$ and $b+7$. We can eliminate the $b$ term by multiplying $b+7$ by 9:\n$$9(b + 7) = 9b + 63$$\n\nNow, subtract $9b + 63$ from $9b + 7$:\n$$(9b + 7) - (9b + 63) = 7 - 63 = -56$$\n\nSince $b+7$ divides $9b+7$ and $b+7$ divides $9(b+7)$, it must divide their difference:\n$$b + 7 \\mid -56$$\nThis is equivalent to:\n$$b + 7 \\mid 56$$\n\nSo, $b+7$ must be a positive divisor of 56. The divisors of 56 are:\n$$1, 2, 4, 7, 8, 14, 28, 56$$\n\nWe are given the constraint that $b > 9$. Since $b+7$ must be a divisor of 56, let's test the possible values for $b+7$:\n1. If $b+7 = 1$, then $b = -6$ (not valid, $b>9$)\n2. If $b+7 = 2$, then $b = -5$ (not valid)\n3. If $b+7 = 4$, then $b = -3$ (not valid)\n4. If $b+7 = 7$, then $b = 0$ (not valid)\n5. If $b+7 = 8$, then $b = 1$ (not valid)\n6. If $b+7 = 14$, then $b = 7$ (not valid, $7 \\ngtr 9$)\n7. If $b+7 = 28$, then $b = 21$ (valid, $21 > 9$)\n8. If $b+7 = 56$, then $b = 49$ (valid, $49 > 9$)\n\nAdditionally, we must ensure that the digits in the base $b$ representation are valid. The digits used are 9 and 7. For a base $b$, all digits must be strictly less than $b$.\n- For $b = 21$: The digits 9 and 7 are less than 21. Valid.\n- For $b = 49$: The digits 9 and 7 are less than 49. Valid.\n\nThe valid integer bases are $b = 21$ and $b = 49$.\n\nThe sum of these bases is:\n$$21 + 49",
+      "created_at": "2026-04-28T18:47:08",
+      "extracted_final": "",
+      "final_marker_found": false,
+      "gold_answer": "70",
+      "gold_answer_in_prompt": false,
+      "is_acpi": false,
+      "known_trap_note_in_prompt": false,
+      "manual_final_correct": false,
+      "manual_process_valid": null,
+      "manual_risk": "not_final_correct",
+      "model_key": "qwen35_27b",
+      "problem": "Find the sum of all integer bases $b>9$ for which $17_{b}$ is a divisor of $97_{b}$.",
+      "prompt_variant": "self_check",
+      "sample_idx": 0,
+      "task_id": "aime25_base_divisor_p1",
+      "thinking": false,
+      "trap_note_not_in_prompt": "Base notation: 17_b and 97_b are numbers in base b, not decimal subscripts.",
+      "used_chat_template": true
+    }
+  ],
+  "scope_note_en": "Rows with gold_answer_in_prompt=True are answer-anchor diagnostics, not natural prevalence.",
+  "scope_note_zh": "gold_answer_in_prompt=True 的行是 answer-anchor 诊断，不是自然发生率。",
+  "started_at": "2026-04-28T18:46:09",
+  "summary": {
+    "by_task": {
+      "aime25_base_divisor_p1": {
+        "final_correct": 0,
+        "gold_answer_in_prompt": 0,
+        "n": 3,
+        "needs_manual_process_audit": 0
+      }
+    },
+    "by_variant": {
+      "answer_first_no_gold": {
+        "final_correct": 0,
+        "gold_answer_in_prompt": 0,
+        "n": 1,
+        "needs_manual_process_audit": 0
+      },
+      "neutral": {
+        "final_correct": 0,
+        "gold_answer_in_prompt": 0,
+        "n": 1,
+        "needs_manual_process_audit": 0
+      },
+      "self_check": {
+        "final_correct": 0,
+        "gold_answer_in_prompt": 0,
+        "n": 1,
+        "needs_manual_process_audit": 0
+      }
+    },
+    "final_correct": 0,
+    "gold_answer_in_prompt_rows": 0,
+    "known_trap_note_in_prompt_rows": 0,
+    "n": 3,
+    "needs_manual_process_audit": 0,
+    "not_final_correct": 3,
+    "strict_final_marker_missing": 2
+  }
+}

@@ -1,0 +1,51 @@
+⚠️  Warning: 'huggingface-cli download' is deprecated. Use 'hf download' instead.
+Fetching 24 files:   0%|          | 0/24 [00:00<?, ?it/s]Downloading 'model.safetensors-00003-of-00011.safetensors' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/vAHoijb0rmrlyQG8yY6pKxL4bn0=.8aca03689ad0717fb91455809a6670eecca818bea8c0b6bd3a591a8807cc3223.incomplete'
+Downloading 'model.safetensors-00004-of-00011.safetensors' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/1TxESpsLujkIdkZk1QZlGwCMsnw=.20f539430c60fa611b3522b8408749a080b63f1fe034e551a6539ef864ca079a.incomplete'
+Downloading 'model.safetensors-00001-of-00011.safetensors' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/2ohswpNoE-PBmXL9aIRUqIV1vNc=.9019228d172c87d5603266c2d56672d119e838facffa164de803a1ebf0d716d2.incomplete'
+Downloading 'model.safetensors-00005-of-00011.safetensors' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/l3L_oGv-cCbFLkqiExCCA_XnaKo=.57a0c074c654f05fc2d6b5112eeec387ac04986e928e42f502993e69aa03a49d.incomplete'
+Downloading 'model.safetensors-00002-of-00011.safetensors' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/AFtX84mF5UnQLeft5xeiGDX4iK4=.890ef00c920b01c1c02755088c8d8ca5cdd6a1faa2a9a729eecd00857648b411.incomplete'
+Downloading 'model.safetensors-00008-of-00011.safetensors' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/IdV2dpwyyNSXPQP6fuyM6MYLcrQ=.fe60dbb9d25354c4eb2a9a59d9b1afd07741c8bebab5870f5eea6eadb4cf9a06.incomplete'
+Downloading 'model.safetensors-00009-of-00011.safetensors' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/ujiyQOTAAgLB_WZRRHg50FsdHzQ=.71a153d882242734a1fc7e000734727f00f6ec8ca70b044f5e44fcf97736ef8f.incomplete'
+Downloading 'model.safetensors-00006-of-00011.safetensors' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/KfWHtCtUh0CBT0GlTyEB2b5hHqs=.cfa4e6fbfc600854ef6c8e5465d0a1e43832a64b5e539f1e880333e3b1086703.incomplete'
+Downloading 'model.safetensors-00007-of-00011.safetensors' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/RSE_GEFAl1aQ9S32yD0-LyGvFto=.d426963325b2319cb9e1442bc8b89b9a7748a8f7a907aa4041c11531cda6b014.incomplete'
+Downloading 'chat_template.jinja' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/yIUQ6Jg7XpBWXEkozaEkS2ih05g=.a585dec894e63da457d9440ec6aa7caa16d20860.incomplete'
+Downloading 'generation_config.json' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/3EVKVggOldJcKSsGjSdoUCN1AyQ=.85b45ab4f3a24f95a061c5260559471a259187cc.incomplete'
+Downloading 'merges.txt' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/PtHk0z_I45atnj23IIRhTExwT3w=.a494e019ca1502219fd0128658b979e5f05ae8e8.incomplete'
+Downloading 'config.json' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/8_PA_wEVGiVa2goH2H4KQOQpvVY=.bde2be7f34a16fcdf78b9050319cdb330a15fecd.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/chat_template.jinja
+Downloading 'README.md' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/Xn7B-BWUGOee2Y6hCZtEhtFu4BE=.a2a72d09e2fbca37dcf9438add912fccabe048e8.incomplete'
+Downloading 'LICENSE' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/DhCjcNQuMpl4FL346qr3tvNUCgY=.1d5180a42f1c3383ba7c7bd0a50f0837ef0168df.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/generation_config.json
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/config.json
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/README.md
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/LICENSE
+Downloading 'model.safetensors-00010-of-00011.safetensors' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/VdOTTcOwNsiNiwVlPcqVhMUq_gQ=.146745698b9f21940e2982beb1816a0eef3b80d77ab9cd884695b9a08c2697eb.incomplete'
+Downloading '.gitattributes' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/wPaCkH-WbT7GsmxMKKrNZTV4nSM=.52373fe24473b1aa44333d318f578ae6bf04b49b.incomplete'
+Downloading 'model.safetensors-00011-of-00011.safetensors' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/KcCcpSBiA4Fp708XvvAEoZFWGFk=.d947ce7483c4109b55039f1359f4494d22390cf123568100abd89816802f097d.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/.gitattributes
+Fetching 24 files:   4%|▍         | 1/24 [00:01<00:27,  1.19s/it]Downloading 'tokenizer.json' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/HgM_lKo9sdSCfRtVg7MMFS7EKqo=.5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42.incomplete'
+Downloading 'model.safetensors.index.json' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/yVzAsSxRSINSz-tQbpx-TLpfkLU=.a7726bc7355fa586dd0c55f3b4adc410461e9318.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/model.safetensors.index.json
+Downloading 'preprocessor_config.json' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/PYH5dHjks7Ei0Yd3X0Z8xIwsCNQ=.2ea84a437d448ff71b08df68fdd949d5cc4ebb64.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/preprocessor_config.json
+Downloading 'tokenizer_config.json' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/vzaExXFZNBay89bvlQv-ZcI6BTg=.eda48d3e75a8e59a8479ee4ec8b37f76e711d9c1.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/tokenizer_config.json
+Downloading 'video_preprocessor_config.json' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/7uK9jxGLvsg8Gxgsd_3Bi0MthgM=.3ba673a5ad7d4d13f54155ecd38b2a94a6dac8fe.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/video_preprocessor_config.json
+Downloading 'vocab.json' to '/home/Awei/LLM/Model/base/qwen35_27b/.cache/huggingface/download/j3m-Hy6QvBddw8RXA1uSWl1AJ0c=.0aa0ce0658d60ac4a5d609f4eadb0e8e43514176.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/merges.txt
+Fetching 24 files:  29%|██▉       | 7/24 [00:02<00:06,  2.69it/s]Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/tokenizer.json
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/vocab.json
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/model.safetensors-00011-of-00011.safetensors
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/model.safetensors-00007-of-00011.safetensors
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/model.safetensors-00008-of-00011.safetensors
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/model.safetensors-00003-of-00011.safetensors
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/model.safetensors-00010-of-00011.safetensors
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/model.safetensors-00002-of-00011.safetensors
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/model.safetensors-00001-of-00011.safetensors
+Fetching 24 files:  33%|███▎      | 8/24 [09:44<27:19, 102.47s/it]Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/model.safetensors-00005-of-00011.safetensors
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/model.safetensors-00009-of-00011.safetensors
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/model.safetensors-00006-of-00011.safetensors
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_27b/model.safetensors-00004-of-00011.safetensors
+Fetching 24 files:  46%|████▌     | 11/24 [10:45<14:34, 67.28s/it]Fetching 24 files: 100%|██████████| 24/24 [10:45<00:00, 26.91s/it]
+/home/Awei/LLM/Model/base/qwen35_27b

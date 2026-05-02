@@ -1,0 +1,602 @@
+{
+  "args": {
+    "audit_jsonl": "/home/Awei/P02_multilingual_process_lens/data/processed/e119_e146_process_audit_official_20260430.jsonl",
+    "check_variants": "strict_any_wrong_step",
+    "device": "auto",
+    "dry_run": false,
+    "dtype": "bfloat16",
+    "e131_result": null,
+    "e137_json": "/home/Awei/P02_multilingual_process_lens/results/E137_hidden_trigger_threshold_calibration/e137_hidden_trigger_threshold_calibration.json",
+    "excerpt_radius": 220,
+    "local_files_only": true,
+    "max_model_len": 8192,
+    "max_traces": 4,
+    "model_key": "qwen35_27b",
+    "out_dir": "results/E138_natural_hidden_trigger_check_smoke",
+    "prompt_format": "official_if_chat",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "threshold_policies": "zero,e137_chosen"
+  },
+  "created_at": "2026-04-30T22:01:48",
+  "cuda_visible_devices": "0,1,2,3",
+  "experiment": "E138_natural_hidden_trigger_check",
+  "host": "hpc-node-01",
+  "leakage_audit": {
+    "note_zh": "prompts contain only problem, visible solution, and hidden-trigger-selected visible excerpt. E131 diagnostic prefix availability is label-informed offline and must not be described as a deployable online monitor.",
+    "passed": true,
+    "prompt_label_gold_error_span_rows": 0
+  },
+  "model_key": "qwen35_27b",
+  "model_spec": {
+    "class": "post_trained_hybrid",
+    "family": "qwen35",
+    "loader_risk": "large model; conditional_generation_or_multimodal config may require transformers 5.x and AutoModelForImageTextToText fallback",
+    "notes": "core local P0 medium frontier model; downloaded via HF mirror on 2026-04-27; requires multi-GPU device_map=auto for full bf16 weights",
+    "path": "/home/Awei/LLM/Model/base/qwen35_27b",
+    "priority": "P0_core_frontier_medium",
+    "remote_repo": "Qwen/Qwen3.5-27B",
+    "status": "local_downloaded"
+  },
+  "rows": [
+    {
+      "audit_idx": 1190081,
+      "base_completion_accept": true,
+      "base_completion_score": 1.94609797000885,
+      "base_completion_yes_minus_no": 4.8750000623986125,
+      "manual_acpi_strict": false,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": true,
+      "manual_repair_present": false,
+      "model_key": "qwen35_27b",
+      "offline_prefix_selection_label_informed": true,
+      "policy_decisions": {
+        "e137_chosen_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "zero_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "zero_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        }
+      },
+      "prompt_contains_manual_label_gold_or_error_span": false,
+      "prompt_variant": "neutral",
+      "run_id": "E119_uniform_legacy_baseline",
+      "sampling_profile": "NG_uniform_legacy_baseline",
+      "task_id": "aime25_base_divisor_p1",
+      "threshold_policies": {
+        "e137_chosen": {
+          "earliest_trigger": null,
+          "excerpt": null,
+          "min_score": 1.94609797000885,
+          "min_score_row": {
+            "char_end": 2134,
+            "detector": "final_regex",
+            "score": 1.94609797000885,
+            "span_text": "\nFinal answer: 70",
+            "stage": "first_final_answer_end"
+          },
+          "threshold": -5.169662714004517,
+          "trigger": false
+        },
+        "zero": {
+          "earliest_trigger": null,
+          "excerpt": null,
+          "min_score": 1.94609797000885,
+          "min_score_row": {
+            "char_end": 2134,
+            "detector": "final_regex",
+            "score": 1.94609797000885,
+            "span_text": "\nFinal answer: 70",
+            "stage": "first_final_answer_end"
+          },
+          "threshold": 0.0,
+          "trigger": false
+        }
+      },
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190085,
+      "base_completion_accept": false,
+      "base_completion_score": -0.20978449285030365,
+      "base_completion_yes_minus_no": -2.1250000447034836,
+      "manual_acpi_strict": true,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "manual_repair_present": true,
+      "model_key": "qwen35_27b",
+      "offline_prefix_selection_label_informed": true,
+      "policy_decisions": {
+        "e137_chosen_strict_any_wrong_step_global": {
+          "accept": false,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_strict_any_wrong_step_local": {
+          "accept": false,
+          "called": false,
+          "metrics": null
+        },
+        "zero_strict_any_wrong_step_global": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 3084,
+            "label_entropy": 0.22720587929401403,
+            "no_option": "No",
+            "no_score": -0.06900741159915924,
+            "p_no_binary": 0.9399133489844308,
+            "p_yes_binary": 0.06008665101556926,
+            "pred_process_valid": false,
+            "readout_confidence": 2.749999985098839,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -2.749999985098839,
+            "yes_option": "Yes",
+            "yes_score": -2.819007396697998
+          }
+        },
+        "zero_strict_any_wrong_step_local": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 3195,
+            "label_entropy": 0.08164812790312179,
+            "no_option": "No",
+            "no_score": -0.01655730977654457,
+            "p_no_binary": 0.9840936068303507,
+            "p_yes_binary": 0.015906393169649247,
+            "pred_process_valid": false,
+            "readout_confidence": 4.1249999068677425,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -4.1249999068677425,
+            "yes_option": "Yes",
+            "yes_score": -4.141557216644287
+          }
+        }
+      },
+      "prompt_contains_manual_label_gold_or_error_span": false,
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "sampling_profile": "NG_uniform_legacy_baseline",
+      "task_id": "aime25_base_divisor_p1",
+      "threshold_policies": {
+        "e137_chosen": {
+          "earliest_trigger": null,
+          "excerpt": null,
+          "min_score": -4.2065019607543945,
+          "min_score_row": {
+            "char_end": 1547,
+            "detector": "post_repair_window",
+            "score": -4.2065019607543945,
+            "span_text": "Wait, let me re-evaluate the calculation.\n$9b + 7 = 9(b+7) - 56$.\nDivisors of 56: 1, 2, 4, 7, 8, 14, 28, 56.\n$b+7$ must be in this set.\n$b = d - 7$.\nCondition $b > 9 \\implies d - 7 > 9 \\implies d > 16$.\nPossible $d \\in \\{28, 56\\}$.\nIf $d=28, b=",
+            "stage": "post_repair_240chars"
+          },
+          "threshold": -5.169662714004517,
+          "trigger": false
+        },
+        "zero": {
+          "earliest_trigger": {
+            "char_end": 16,
+            "detector": "first_final_regex",
+            "score": -2.0927560329437256,
+            "span_text": "Final answer: 20",
+            "stage": "detected_error_marker_end"
+          },
+          "excerpt": "Final answer: 20\n\n**Justification:**\nFirst, express the numbers $17_b$ and $97_b$ in base 10.\n$17_b = 1 \\cdot b + 7 = b + 7$.\n$97_b = 9 \\cdot b + 7 = 9b + 7$.\n\nThe problem states that $17_b$ is a divisor of $97_b$. This means $(b+7)$ di",
+          "min_score": -4.2065019607543945,
+          "min_score_row": {
+            "char_end": 1547,
+            "detector": "post_repair_window",
+            "score": -4.2065019607543945,
+            "span_text": "Wait, let me re-evaluate the calculation.\n$9b + 7 = 9(b+7) - 56$.\nDivisors of 56: 1, 2, 4, 7, 8, 14, 28, 56.\n$b+7$ must be in this set.\n$b = d - 7$.\nCondition $b > 9 \\implies d - 7 > 9 \\implies d > 16$.\nPossible $d \\in \\{28, 56\\}$.\nIf $d=28, b=",
+            "stage": "post_repair_240chars"
+          },
+          "threshold": 0.0,
+          "trigger": true
+        }
+      },
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190086,
+      "base_completion_accept": false,
+      "base_completion_score": -0.11225255578756332,
+      "base_completion_yes_minus_no": -1.7500000149011612,
+      "manual_acpi_strict": true,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "manual_repair_present": true,
+      "model_key": "qwen35_27b",
+      "offline_prefix_selection_label_informed": true,
+      "policy_decisions": {
+        "e137_chosen_strict_any_wrong_step_global": {
+          "accept": false,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_strict_any_wrong_step_local": {
+          "accept": false,
+          "called": false,
+          "metrics": null
+        },
+        "zero_strict_any_wrong_step_global": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2489,
+            "label_entropy": 0.2910496987423049,
+            "no_option": "No",
+            "no_score": -0.10053253918886185,
+            "p_no_binary": 0.9149009544128985,
+            "p_yes_binary": 0.08509904558710157,
+            "pred_process_valid": false,
+            "readout_confidence": 2.3749999925494194,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -2.3749999925494194,
+            "yes_option": "Yes",
+            "yes_score": -2.4755325317382812
+          }
+        },
+        "zero_strict_any_wrong_step_local": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2602,
+            "label_entropy": 0.06689803780453404,
+            "no_option": "No",
+            "no_score": -0.013260272331535816,
+            "p_no_binary": 0.9875683502787747,
+            "p_yes_binary": 0.01243164972122532,
+            "pred_process_valid": false,
+            "readout_confidence": 4.375000092200935,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -4.375000092200935,
+            "yes_option": "Yes",
+            "yes_score": -4.388260364532471
+          }
+        }
+      },
+      "prompt_contains_manual_label_gold_or_error_span": false,
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "sampling_profile": "NG_uniform_legacy_baseline",
+      "task_id": "aime25_base_divisor_p1",
+      "threshold_policies": {
+        "e137_chosen": {
+          "earliest_trigger": null,
+          "excerpt": null,
+          "min_score": -4.080808639526367,
+          "min_score_row": {
+            "char_end": 1096,
+            "detector": "post_repair_window",
+            "score": -4.080808639526367,
+            "span_text": "Wait, let me re-check the calculation.\n$9b + 7 = 9(b+7) - 56$. Correct.\nDivisors of 56: 1, 2, 4, 7, 8, 14, 28, 56.\nCondition $b > 9 \\implies b+7 > 16$.\nPossible values for $b+7$: 28, 56.\nIf $b+7 = 28$, $b=21$. Check: $17_{21} = 28$, $97_{21} = ",
+            "stage": "post_repair_240chars"
+          },
+          "threshold": -5.169662714004517,
+          "trigger": false
+        },
+        "zero": {
+          "earliest_trigger": {
+            "char_end": 16,
+            "detector": "first_final_regex",
+            "score": -2.900200605392456,
+            "span_text": "Final answer: 12",
+            "stage": "detected_error_marker_end"
+          },
+          "excerpt": "Final answer: 12\n\n**Justification:**\nFirst, express the numbers $17_b$ and $97_b$ in base 10.\n$17_b = 1 \\cdot b + 7 = b + 7$.\n$97_b = 9 \\cdot b + 7 = 9b + 7$.\n\nWe are looking for integer bases $b > 9$ such that $b + 7$ divides $9b + 7$.",
+          "min_score": -4.080808639526367,
+          "min_score_row": {
+            "char_end": 1096,
+            "detector": "post_repair_window",
+            "score": -4.080808639526367,
+            "span_text": "Wait, let me re-check the calculation.\n$9b + 7 = 9(b+7) - 56$. Correct.\nDivisors of 56: 1, 2, 4, 7, 8, 14, 28, 56.\nCondition $b > 9 \\implies b+7 > 16$.\nPossible values for $b+7$: 28, 56.\nIf $b+7 = 28$, $b=21$. Check: $17_{21} = 28$, $97_{21} = ",
+            "stage": "post_repair_240chars"
+          },
+          "threshold": 0.0,
+          "trigger": true
+        }
+      },
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190087,
+      "base_completion_accept": true,
+      "base_completion_score": 0.7875499129295349,
+      "base_completion_yes_minus_no": 3.874999998137355,
+      "manual_acpi_strict": false,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": true,
+      "manual_repair_present": false,
+      "model_key": "qwen35_27b",
+      "offline_prefix_selection_label_informed": true,
+      "policy_decisions": {
+        "e137_chosen_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "zero_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "zero_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        }
+      },
+      "prompt_contains_manual_label_gold_or_error_span": false,
+      "prompt_variant": "neutral",
+      "run_id": "E119_uniform_legacy_baseline",
+      "sampling_profile": "NG_uniform_legacy_baseline",
+      "task_id": "aime25_icecream_ordered_assign_p3",
+      "threshold_policies": {
+        "e137_chosen": {
+          "earliest_trigger": null,
+          "excerpt": null,
+          "min_score": 0.7875499129295349,
+          "min_score_row": {
+            "char_end": 4145,
+            "detector": "final_regex",
+            "score": 0.7875499129295349,
+            "span_text": "\nFinal answer: 16",
+            "stage": "last_final_answer_end"
+          },
+          "threshold": -5.169662714004517,
+          "trigger": false
+        },
+        "zero": {
+          "earliest_trigger": null,
+          "excerpt": null,
+          "min_score": 0.7875499129295349,
+          "min_score_row": {
+            "char_end": 4145,
+            "detector": "final_regex",
+            "score": 0.7875499129295349,
+            "span_text": "\nFinal answer: 16",
+            "stage": "last_final_answer_end"
+          },
+          "threshold": 0.0,
+          "trigger": false
+        }
+      },
+      "trace_class": "strict_valid"
+    }
+  ],
+  "scope_note_zh": "E138 是自然 E119/E146 上的后验 hidden-trigger 检查迁移实验；它比较阈值策略与二次检查 objective，但不是在线生成时插入检查。",
+  "source_audit_jsonl": "data/processed/e119_e146_process_audit_official_20260430.jsonl",
+  "source_e131_result": "results/E131_e119_e146_hidden_localization/qwen35_27b_e131_hidden_localization_mixed_chat.json",
+  "source_e137_json": "results/E137_hidden_trigger_threshold_calibration/e137_hidden_trigger_threshold_calibration.json",
+  "started_at": "2026-04-30T22:01:34",
+  "summary": [
+    {
+      "base_accept_rate": 0.5,
+      "base_invalid_accept_rate": 0.0,
+      "base_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 0.5,
+      "e137_chosen_strict_any_wrong_step_global_invalid_accept_rate": 0.0,
+      "e137_chosen_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 0.5,
+      "e137_chosen_strict_any_wrong_step_local_invalid_accept_rate": 0.0,
+      "e137_chosen_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "e137_chosen_trigger_rate": 0.0,
+      "n": 4,
+      "slice": "all",
+      "slice_type": "all",
+      "strict_invalid_n": 2,
+      "strict_valid_n": 2,
+      "zero_strict_any_wrong_step_global_accept_rate": 0.5,
+      "zero_strict_any_wrong_step_global_invalid_accept_rate": 0.0,
+      "zero_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_accept_rate": 0.5,
+      "zero_strict_any_wrong_step_local_invalid_accept_rate": 0.0,
+      "zero_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "zero_trigger_rate": 0.5
+    },
+    {
+      "base_accept_rate": 0.0,
+      "base_invalid_accept_rate": 0.0,
+      "base_valid_accept_rate": null,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 0.0,
+      "e137_chosen_strict_any_wrong_step_global_invalid_accept_rate": 0.0,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 0.0,
+      "e137_chosen_strict_any_wrong_step_local_invalid_accept_rate": 0.0,
+      "e137_chosen_trigger_rate": 0.0,
+      "n": 2,
+      "slice": "answer_first_no_gold",
+      "slice_type": "prompt_variant",
+      "strict_invalid_n": 2,
+      "strict_valid_n": 0,
+      "zero_strict_any_wrong_step_global_accept_rate": 0.0,
+      "zero_strict_any_wrong_step_global_invalid_accept_rate": 0.0,
+      "zero_strict_any_wrong_step_local_accept_rate": 0.0,
+      "zero_strict_any_wrong_step_local_invalid_accept_rate": 0.0,
+      "zero_trigger_rate": 1.0
+    },
+    {
+      "base_accept_rate": 1.0,
+      "base_invalid_accept_rate": null,
+      "base_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "e137_chosen_trigger_rate": 0.0,
+      "n": 2,
+      "slice": "neutral",
+      "slice_type": "prompt_variant",
+      "strict_invalid_n": 0,
+      "strict_valid_n": 2,
+      "zero_strict_any_wrong_step_global_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "zero_trigger_rate": 0.0
+    },
+    {
+      "base_accept_rate": 0.5,
+      "base_invalid_accept_rate": 0.0,
+      "base_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 0.5,
+      "e137_chosen_strict_any_wrong_step_global_invalid_accept_rate": 0.0,
+      "e137_chosen_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 0.5,
+      "e137_chosen_strict_any_wrong_step_local_invalid_accept_rate": 0.0,
+      "e137_chosen_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "e137_chosen_trigger_rate": 0.0,
+      "n": 4,
+      "slice": "E119_uniform_legacy_baseline",
+      "slice_type": "run_id",
+      "strict_invalid_n": 2,
+      "strict_valid_n": 2,
+      "zero_strict_any_wrong_step_global_accept_rate": 0.5,
+      "zero_strict_any_wrong_step_global_invalid_accept_rate": 0.0,
+      "zero_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_accept_rate": 0.5,
+      "zero_strict_any_wrong_step_local_invalid_accept_rate": 0.0,
+      "zero_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "zero_trigger_rate": 0.5
+    },
+    {
+      "base_accept_rate": 0.5,
+      "base_invalid_accept_rate": 0.0,
+      "base_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 0.5,
+      "e137_chosen_strict_any_wrong_step_global_invalid_accept_rate": 0.0,
+      "e137_chosen_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 0.5,
+      "e137_chosen_strict_any_wrong_step_local_invalid_accept_rate": 0.0,
+      "e137_chosen_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "e137_chosen_trigger_rate": 0.0,
+      "n": 4,
+      "slice": "NG_uniform_legacy_baseline",
+      "slice_type": "sampling_profile",
+      "strict_invalid_n": 2,
+      "strict_valid_n": 2,
+      "zero_strict_any_wrong_step_global_accept_rate": 0.5,
+      "zero_strict_any_wrong_step_global_invalid_accept_rate": 0.0,
+      "zero_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_accept_rate": 0.5,
+      "zero_strict_any_wrong_step_local_invalid_accept_rate": 0.0,
+      "zero_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "zero_trigger_rate": 0.5
+    },
+    {
+      "base_accept_rate": 0.3333333333333333,
+      "base_invalid_accept_rate": 0.0,
+      "base_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 0.3333333333333333,
+      "e137_chosen_strict_any_wrong_step_global_invalid_accept_rate": 0.0,
+      "e137_chosen_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 0.3333333333333333,
+      "e137_chosen_strict_any_wrong_step_local_invalid_accept_rate": 0.0,
+      "e137_chosen_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "e137_chosen_trigger_rate": 0.0,
+      "n": 3,
+      "slice": "aime25_base_divisor_p1",
+      "slice_type": "task_id",
+      "strict_invalid_n": 2,
+      "strict_valid_n": 1,
+      "zero_strict_any_wrong_step_global_accept_rate": 0.3333333333333333,
+      "zero_strict_any_wrong_step_global_invalid_accept_rate": 0.0,
+      "zero_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_accept_rate": 0.3333333333333333,
+      "zero_strict_any_wrong_step_local_invalid_accept_rate": 0.0,
+      "zero_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "zero_trigger_rate": 0.6666666666666666
+    },
+    {
+      "base_accept_rate": 1.0,
+      "base_invalid_accept_rate": null,
+      "base_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "e137_chosen_trigger_rate": 0.0,
+      "n": 1,
+      "slice": "aime25_icecream_ordered_assign_p3",
+      "slice_type": "task_id",
+      "strict_invalid_n": 0,
+      "strict_valid_n": 1,
+      "zero_strict_any_wrong_step_global_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "zero_trigger_rate": 0.0
+    },
+    {
+      "base_accept_rate": 0.0,
+      "base_invalid_accept_rate": 0.0,
+      "base_valid_accept_rate": null,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 0.0,
+      "e137_chosen_strict_any_wrong_step_global_invalid_accept_rate": 0.0,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 0.0,
+      "e137_chosen_strict_any_wrong_step_local_invalid_accept_rate": 0.0,
+      "e137_chosen_trigger_rate": 0.0,
+      "n": 2,
+      "slice": "repaired_acpi",
+      "slice_type": "trace_class",
+      "strict_invalid_n": 2,
+      "strict_valid_n": 0,
+      "zero_strict_any_wrong_step_global_accept_rate": 0.0,
+      "zero_strict_any_wrong_step_global_invalid_accept_rate": 0.0,
+      "zero_strict_any_wrong_step_local_accept_rate": 0.0,
+      "zero_strict_any_wrong_step_local_invalid_accept_rate": 0.0,
+      "zero_trigger_rate": 1.0
+    },
+    {
+      "base_accept_rate": 1.0,
+      "base_invalid_accept_rate": null,
+      "base_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "e137_chosen_trigger_rate": 0.0,
+      "n": 2,
+      "slice": "strict_valid",
+      "slice_type": "trace_class",
+      "strict_invalid_n": 0,
+      "strict_valid_n": 2,
+      "zero_strict_any_wrong_step_global_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "zero_trigger_rate": 0.0
+    }
+  ],
+  "thresholds": {
+    "e137_chosen": -5.169662714004517,
+    "zero": 0.0
+  },
+  "used_chat_template": true
+}

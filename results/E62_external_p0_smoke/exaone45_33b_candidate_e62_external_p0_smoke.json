@@ -1,0 +1,124 @@
+{
+  "args": {
+    "device": "auto",
+    "dtype": "bfloat16",
+    "local_files_only": true,
+    "max_model_len": 2048,
+    "max_new_tokens": 8,
+    "model_key": "exaone45_33b_candidate",
+    "out_dir": "/home/Awei/P02_multilingual_process_lens/results/E62_external_p0_smoke",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "skip_hf_dynamic": true
+  },
+  "checks": [
+    {
+      "name": "license_probe",
+      "ok": true,
+      "seconds": 0.0005986690521240234,
+      "value": {
+        "license_class": "exaone_1_2_nc",
+        "license_exists": true,
+        "license_files": [
+          "LICENSE"
+        ],
+        "readme_exists": true,
+        "snippets": [
+          "--- license: other license_name: exaone license_link: LICENSE language:   - en   - ko   - es   - de   - ja   - vi tags:   - lg-ai   - exaone pipeline_tag: image-text-to-text library_name: transformers ---  <br> <br> <p align=\"center\"> <img src=\"assets/EXAONE_Symbol+BI_3d.png\" width=\"400\"> <br> <br> <br>  <div align=\"center\">   <a href=\"https://huggingface.co/collections/LGAI-EXAONE/exaone-45\" style=\"text-decoration: none;\">     <img src=\"https://img.shields.io/badge/🤗-HuggingFace-FC926C?style=for-th",
+          "--- license: other license_name: exaone license_link: LICENSE language:   - en   - ko   - es   - de   - ja   - vi tags:   - lg-ai   - exaone pipeline_tag: image-text-to-text library_name: transformers ---  <br> <br> <p align=\"center\"> <img src=\"assets/EXAONE_Symbol+BI_3d.png\" width=\"400\"> <br> <br> <br>  <div align=\"center\">   <a href=\"https://huggingface.co/collections/LGAI-EXAONE/exaone-45\" style=\"text-decoration: none;\">     <img src=\"https://img.shields.io/badge/🤗-HuggingFace-FC926C?style=for-the-badge\" alt=\"H",
+          "--- license: other license_name: exaone license_link: LICENSE language:   - en   - ko   - es   - de   - ja   - vi tags:   - lg-ai   - exaone pipeline_tag: image-text-to-text library_name: transformers ---  <br> <br> <p align=\"center\"> <img src=\"assets/EXAONE_Symbol+BI_3d.png\" width=\"400\"> <br> <br> <br>  <div align=\"center\">   <a href=\"https://huggingface.co/collections/LGAI-EXAONE/exaone-45\" style=\"text-decoration: none;\">     <img src=\"https://img.shields.io/badge/🤗-HuggingFace-FC926C?style=for-the-badge\" alt=\"HuggingFace\">   </a>  ",
+          "ompliance with the Agreement by all authorized users who access or utilize     the Model on behalf of the Licensee.  2. License Grant     2.1 Grant of License: Subject to the terms and conditions outlined in this Agreement, the Licensor hereby     grants the Licensee a limited, non-exclusive, non-transferable, worldwide, and revocable license to:         a. Access, download, install, and use the Model solely for research and educational purposes. This          includes evaluation, testing, academic research, experimentation, learning, teaching, training and          participation in competitions, provided that su",
+          "ribution, is strictly prohibited unless explicitly agreed upon     in writing by the Licensor.  3. Restrictions     3.1 Commercial Use: The Licensee is expressly prohibited from using the Model, Derivatives, or Output for     any commercial purposes, including but not limited to, developing or deploying products, services, or     applications that generate revenue, whether directly or indirectly. Any commercial exploitation of the     Model or its derivatives requires a separate commercial license agreement with the Licensor. Furthermore,     the Licensee shall not use the Model, Derivatives or Output to develop "
+        ],
+        "usage_gate": "research_education_only_noncommercial"
+      }
+    },
+    {
+      "name": "static_probe",
+      "ok": true,
+      "seconds": 0.0004191398620605469,
+      "value": {
+        "architectures": [
+          "Exaone4_5_ForConditionalGeneration"
+        ],
+        "auto_map": null,
+        "chat_template_file_exists": true,
+        "config_exists": true,
+        "model_type": "exaone4_5",
+        "path_exists": true,
+        "readme_mentions_transformers_fork": true,
+        "readme_mentions_vllm": true,
+        "safetensor_shards": 2,
+        "safetensor_size_gib": 63.98216923326254,
+        "tokenizer_chat_template_in_config": false,
+        "tokenizer_config_exists": true,
+        "transformers_version_in_config": "5.3.0.dev0"
+      }
+    },
+    {
+      "error": "The checkpoint you are trying to load has model type `exaone4_5` but Transformers does not recognize this architecture. This could be because of an issue with the checkpoint, or because your version of Transformers is out of date.\n\nYou can update Transformers with the command `pip install --upgrade transformers`. If this does not work, and the checkpoint is very new, then there may not be a release version that supports this model yet. In this case, you can get the most up-to-date code by installing Transformers from source with the command `pip install git+https://github.com/huggingface/transformers.git`",
+      "error_type": "ValueError",
+      "name": "auto_config",
+      "ok": false,
+      "seconds": 0.0001285076141357422,
+      "traceback_tail": "Traceback (most recent call last):\n  File \"/home/Awei/P02_multilingual_process_lens/.deps/hf5/transformers/models/auto/configuration_auto.py\", line 405, in from_pretrained\n    config_class = CONFIG_MAPPING[config_dict[\"model_type\"]]\n                   ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/Awei/P02_multilingual_process_lens/.deps/hf5/transformers/models/auto/configuration_auto.py\", line 105, in __getitem__\n    raise KeyError(key)\nKeyError: 'exaone4_5'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/Awei/P02_multilingual_process_lens/scripts/run_e62_candidate_smoke.py\", line 35, in safe_call\n    value = fn()\n            ^^^^\n  File \"/home/Awei/P02_multilingual_process_lens/scripts/run_e62_candidate_smoke.py\", line 233, in <lambda>\n    checks.append(safe_call(\"auto_config\", lambda: {\"class\": type(AutoConfig.from_pretrained(str(model_path), trust_remote_code=True, local_files_only=True)).__name__}))\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/Awei/P02_multilingual_process_lens/.deps/hf5/transformers/models/auto/configuration_auto.py\", line 407, in from_pretrained\n    raise ValueError(\nValueError: The checkpoint you are trying to load has model type `exaone4_5` but Transformers does not recognize this architecture. This could be because of an issue with the checkpoint, or because your version of Transformers is out of date.\n\nYou can update Transformers with the command `pip install --upgrade transformers`. If this does not work, and the checkpoint is very new, then there may not be a release version that supports this model yet. In this case, you can get the most up-to-date code by installing Transformers from source with the command `pip install git+https://github.com/huggingface/transformers.git`\n"
+    },
+    {
+      "name": "tokenizer_chat",
+      "ok": true,
+      "seconds": 1.0658023357391357,
+      "value": {
+        "class": "TokenizersBackend",
+        "has_chat_template": true
+      }
+    },
+    {
+      "name": "vllm_static",
+      "ok": true,
+      "seconds": 0.6552836894989014,
+      "value": {
+        "readme_vllm_lines": [
+          "For better inference speed and memory usage, it is preferred to serve the model using optimized inference engines. The EXAONE 4.5 model is supported by various frameworks, including TensorRT-LLM, vLLM, SGLang, and llama.cpp. Support will be expanded in the future.",
+          "### vLLM",
+          "Both Transformers and vLLM of our forks are required to utilize EXAONE 4.5 model.",
+          "uv pip install git+https://github.com/lkm2835/vllm.git@add-exaone4_5",
+          "After you install the vLLM, you can launch the server with the following code snippet. You can remove unnecessary arguments from the snippet.",
+          "vllm serve LGAI-EXAONE/EXAONE-4.5-33B \\"
+        ],
+        "vllm_import_ok": true,
+        "vllm_version": "0.12.0"
+      }
+    }
+  ],
+  "created_at": "2026-04-29T02:32:32",
+  "cuda_visible_devices": "0,1,2,3",
+  "experiment": "E62_external_p0_candidate_smoke",
+  "host": "hpc-node-01",
+  "model_key": "exaone45_33b_candidate",
+  "model_spec": {
+    "class": "instruction_or_reasoning_candidate",
+    "family": "exaone",
+    "loader_risk": "local_pending_smoke; confirm architecture, license, trust_remote_code requirements, and four-GPU memory before official use",
+    "notes": "User-approved external P0 candidate; downloaded via hf-mirror on 2026-04-28. Promote to expanded P0 only after license check and isolated HF/vLLM smoke test pass.",
+    "path": "/home/Awei/LLM/Model/base/exaone45_33b",
+    "planned_local_path": "/home/Awei/LLM/Model/base/exaone45_33b",
+    "priority": "P0_candidate_external_medium_priority",
+    "remote_repo": "LGAI-EXAONE/EXAONE-4.5-33B",
+    "status": "local_downloaded_pending_smoke"
+  },
+  "started_at": "2026-04-29T02:32:31",
+  "summary": {
+    "architectures": [
+      "Exaone4_5_ForConditionalGeneration"
+    ],
+    "auto_config_ok": false,
+    "hf_dynamic_ok": false,
+    "license_class": "exaone_1_2_nc",
+    "license_ok_for_noncommercial_research": true,
+    "model_type": "exaone4_5",
+    "promote_to_expanded_p0": false,
+    "promotion_rule": "license permits noncommercial research, tokenizer/config load, HF dynamic option-logprob, hidden states, and layer discovery all pass",
+    "tokenizer_ok": true,
+    "usage_gate": "research_education_only_noncommercial",
+    "vllm_static_ok": true
+  }
+}

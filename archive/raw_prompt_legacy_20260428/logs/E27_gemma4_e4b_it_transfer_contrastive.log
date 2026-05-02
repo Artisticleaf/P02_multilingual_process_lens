@@ -1,0 +1,28 @@
+[2026-04-27T13:25:05] loading verifier=gemma4_e4b_it on cuda; pairs=6
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/2076 [00:00<?, ?it/s]Loading weights:  90%|████████▉ | 1860/2076 [00:00<00:00, 18597.36it/s]Loading weights: 100%|██████████| 2076/2076 [00:00<00:00, 19000.91it/s]
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=en order=bad_A target=A pred=A margin=3.393
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=en order=bad_B target=B pred=A margin=-2.088
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=zh order=bad_A target=A pred=A margin=1.023
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=zh order=bad_B target=B pred=A margin=-0.129
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=en order=bad_A target=A pred=A margin=1.133
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=en order=bad_B target=B pred=A margin=-1.205
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=zh order=bad_A target=A pred=A margin=0.424
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=zh order=bad_B target=B pred=A margin=-0.208
+pair=qwen14_e18_dabazhe_zh_en_92_bad_91_valid prompt=en order=bad_A target=A pred=A margin=1.527
+pair=qwen14_e18_dabazhe_zh_en_92_bad_91_valid prompt=en order=bad_B target=B pred=A margin=-0.779
+pair=qwen14_e18_dabazhe_zh_en_92_bad_91_valid prompt=zh order=bad_A target=A pred=A margin=1.056
+pair=qwen14_e18_dabazhe_zh_en_92_bad_91_valid prompt=zh order=bad_B target=B pred=B margin=1.379
+pair=qwen14_e18_dabazhe_zh_en_92_bad_94_valid prompt=en order=bad_A target=A pred=A margin=3.056
+pair=qwen14_e18_dabazhe_zh_en_92_bad_94_valid prompt=en order=bad_B target=B pred=A margin=-1.527
+pair=qwen14_e18_dabazhe_zh_en_92_bad_94_valid prompt=zh order=bad_A target=A pred=A margin=1.743
+pair=qwen14_e18_dabazhe_zh_en_92_bad_94_valid prompt=zh order=bad_B target=B pred=A margin=-0.067
+pair=qwen35_e18_discount_234_bad_181000_valid prompt=en order=bad_A target=A pred=A margin=4.132
+pair=qwen35_e18_discount_234_bad_181000_valid prompt=en order=bad_B target=B pred=A margin=-2.677
+pair=qwen35_e18_discount_234_bad_181000_valid prompt=zh order=bad_A target=A pred=A margin=0.720
+pair=qwen35_e18_discount_234_bad_181000_valid prompt=zh order=bad_B target=B pred=A margin=-0.404
+pair=qwen35_e18_discount_234_bad_181001_valid prompt=en order=bad_A target=A pred=A margin=3.736
+pair=qwen35_e18_discount_234_bad_181001_valid prompt=en order=bad_B target=B pred=A margin=-3.021
+pair=qwen35_e18_discount_234_bad_181001_valid prompt=zh order=bad_A target=A pred=A margin=3.125
+pair=qwen35_e18_discount_234_bad_181001_valid prompt=zh order=bad_B target=B pred=A margin=0.000
+wrote results/E27_transfer_contrastive_verifier/gemma4_e4b_it_contrastive_acpi_verifier.json; rows=24 acc=0.542 mean_margin=0.598

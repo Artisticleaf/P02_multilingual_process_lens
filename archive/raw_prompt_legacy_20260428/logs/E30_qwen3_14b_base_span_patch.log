@@ -1,0 +1,5 @@
+[2026-04-27T19:47:26] loading qwen3_14b_base on cuda; pairs=1
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s]Loading weights: 100%|██████████| 443/443 [00:00<00:00, 16117.94it/s]
+pair=qwen14_e30_inequality_between_inclusive_bad311_valid310 base_valid=2.000 base_bad=2.125 layers=[9, 14, 20, 25, 30]
+wrote results/E30_non_discount_span_patch/qwen3_14b_base_real_acpi_span_patch.json; rows=15 best_pair=qwen14_e30_inequality_between_inclusive_bad311_valid310 span=final_answer_span L25 v2b=0.000 b2v=-0.125

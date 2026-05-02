@@ -1,0 +1,27 @@
+{
+  "candidate_solutions": 63,
+  "candidate_variants": {
+    "invalid_answer_preserving_reference": 21,
+    "invalid_answer_wrong_reference": 21,
+    "valid_reference": 21
+  },
+  "families": {
+    "code_boundary": 3,
+    "geometry_constraints": 3,
+    "graph_definition": 3,
+    "long_table_aggregation": 3,
+    "multilingual_semantic": 3,
+    "proof_validity": 3,
+    "set_venn_counting": 3
+  },
+  "issues": [],
+  "passed": true,
+  "pinyin_removed_from_main_bank": true,
+  "random_control_strategy": "neutral_instruction_span_not_key_data",
+  "repair_case_types": {
+    "controlled_invalid_answer_preserving_trace": 21,
+    "controlled_invalid_answer_wrong_trace": 21
+  },
+  "repair_cases": 42,
+  "tasks": 21
+}

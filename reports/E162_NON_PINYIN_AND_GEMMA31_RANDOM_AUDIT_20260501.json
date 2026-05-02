@@ -1,0 +1,2016 @@
+{
+  "experiment": "E162_non_pinyin_and_gemma31_random_audit",
+  "created_at": "2026-05-01T23:08:52",
+  "exclusion_rule": "Exclude rows whose problem/prefix/span/prompt contains zhi duo wei, zhengshu, shu chu, or qiu zhengshu. These are pinyin/romanized Chinese cases and should not support the main multilingual-semantic claim.",
+  "models": {
+    "qwen35_27b": {
+      "all_rows": 258,
+      "kept_rows": 228,
+      "kept_cases": 38,
+      "excluded_rows": 30,
+      "excluded_cases": 5,
+      "variants": {
+        "baseline_regenerate": {
+          "n": 38,
+          "adjusted_correct": 38,
+          "accuracy": 1.0,
+          "total_completion_tokens": 18833,
+          "completion_cost_per_success": 495.60526315789474,
+          "hitmax": 0
+        },
+        "prefix_continue": {
+          "n": 38,
+          "adjusted_correct": 37,
+          "accuracy": 0.9736842105263158,
+          "total_completion_tokens": 15465,
+          "completion_cost_per_success": 417.97297297297297,
+          "hitmax": 0
+        },
+        "generic_error_prompt": {
+          "n": 38,
+          "adjusted_correct": 38,
+          "accuracy": 1.0,
+          "total_completion_tokens": 23840,
+          "completion_cost_per_success": 627.3684210526316,
+          "hitmax": 1
+        },
+        "localized_error_prompt": {
+          "n": 38,
+          "adjusted_correct": 38,
+          "accuracy": 1.0,
+          "total_completion_tokens": 15431,
+          "completion_cost_per_success": 406.07894736842104,
+          "hitmax": 0
+        },
+        "oracle_error_prompt": {
+          "n": 38,
+          "adjusted_correct": 38,
+          "accuracy": 1.0,
+          "total_completion_tokens": 12463,
+          "completion_cost_per_success": 327.9736842105263,
+          "hitmax": 0
+        },
+        "random_location_prompt": {
+          "n": 38,
+          "adjusted_correct": 38,
+          "accuracy": 1.0,
+          "total_completion_tokens": 22043,
+          "completion_cost_per_success": 580.078947368421,
+          "hitmax": 1
+        }
+      },
+      "families": {
+        "algebra_sign_symmetry": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 2760,
+            "completion_cost_per_success": 690.0,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 2604,
+            "completion_cost_per_success": 651.0,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 2081,
+            "completion_cost_per_success": 520.25,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1699,
+            "completion_cost_per_success": 424.75,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1821,
+            "completion_cost_per_success": 455.25,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1961,
+            "completion_cost_per_success": 490.25,
+            "hitmax": 0
+          }
+        },
+        "code_boundary_zero": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1819,
+            "completion_cost_per_success": 454.75,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1584,
+            "completion_cost_per_success": 396.0,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1563,
+            "completion_cost_per_success": 390.75,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1471,
+            "completion_cost_per_success": 367.75,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1351,
+            "completion_cost_per_success": 337.75,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1484,
+            "completion_cost_per_success": 371.0,
+            "hitmax": 0
+          }
+        },
+        "counting_complement": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 3444,
+            "completion_cost_per_success": 861.0,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 2453,
+            "completion_cost_per_success": 613.25,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 2274,
+            "completion_cost_per_success": 568.5,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1872,
+            "completion_cost_per_success": 468.0,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 2517,
+            "completion_cost_per_success": 629.25,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 3686,
+            "completion_cost_per_success": 921.5,
+            "hitmax": 0
+          }
+        },
+        "graph_definition": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1438,
+            "completion_cost_per_success": 359.5,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1130,
+            "completion_cost_per_success": 282.5,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 870,
+            "completion_cost_per_success": 217.5,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 603,
+            "completion_cost_per_success": 150.75,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 894,
+            "completion_cost_per_success": 223.5,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 817,
+            "completion_cost_per_success": 204.25,
+            "hitmax": 0
+          }
+        },
+        "multilingual_semantic": {
+          "baseline_regenerate": {
+            "n": 2,
+            "adjusted_correct": 2,
+            "accuracy": 1.0,
+            "total_completion_tokens": 941,
+            "completion_cost_per_success": 470.5,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 2,
+            "adjusted_correct": 2,
+            "accuracy": 1.0,
+            "total_completion_tokens": 883,
+            "completion_cost_per_success": 441.5,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 2,
+            "adjusted_correct": 2,
+            "accuracy": 1.0,
+            "total_completion_tokens": 597,
+            "completion_cost_per_success": 298.5,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 2,
+            "adjusted_correct": 2,
+            "accuracy": 1.0,
+            "total_completion_tokens": 474,
+            "completion_cost_per_success": 237.0,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 2,
+            "adjusted_correct": 2,
+            "accuracy": 1.0,
+            "total_completion_tokens": 727,
+            "completion_cost_per_success": 363.5,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 2,
+            "adjusted_correct": 2,
+            "accuracy": 1.0,
+            "total_completion_tokens": 385,
+            "completion_cost_per_success": 192.5,
+            "hitmax": 0
+          }
+        },
+        "probability_conditioning": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 2536,
+            "completion_cost_per_success": 634.0,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 9913,
+            "completion_cost_per_success": 2478.25,
+            "hitmax": 1
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 4000,
+            "completion_cost_per_success": 1000.0,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 2678,
+            "completion_cost_per_success": 669.5,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 4626,
+            "completion_cost_per_success": 1156.5,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 9325,
+            "completion_cost_per_success": 2331.25,
+            "hitmax": 1
+          }
+        },
+        "proof_invalid_lemma": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 2083,
+            "completion_cost_per_success": 520.75,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1514,
+            "completion_cost_per_success": 378.5,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 901,
+            "completion_cost_per_success": 225.25,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 806,
+            "completion_cost_per_success": 201.5,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 953,
+            "completion_cost_per_success": 238.25,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 832,
+            "completion_cost_per_success": 208.0,
+            "hitmax": 0
+          }
+        },
+        "table_zero_swap": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 970,
+            "completion_cost_per_success": 242.5,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1034,
+            "completion_cost_per_success": 258.5,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 877,
+            "completion_cost_per_success": 219.25,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 875,
+            "completion_cost_per_success": 218.75,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 785,
+            "completion_cost_per_success": 196.25,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1007,
+            "completion_cost_per_success": 251.75,
+            "hitmax": 0
+          }
+        },
+        "temporal_boundary": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1353,
+            "completion_cost_per_success": 338.25,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1119,
+            "completion_cost_per_success": 279.75,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1114,
+            "completion_cost_per_success": 278.5,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1030,
+            "completion_cost_per_success": 257.5,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 947,
+            "completion_cost_per_success": 236.75,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 972,
+            "completion_cost_per_success": 243.0,
+            "hitmax": 0
+          }
+        },
+        "unit_roundtrip": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1489,
+            "completion_cost_per_success": 372.25,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1606,
+            "completion_cost_per_success": 401.5,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1154,
+            "completion_cost_per_success": 288.5,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 955,
+            "completion_cost_per_success": 238.75,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 3,
+            "accuracy": 0.75,
+            "total_completion_tokens": 844,
+            "completion_cost_per_success": 281.3333333333333,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1574,
+            "completion_cost_per_success": 393.5,
+            "hitmax": 0
+          }
+        }
+      }
+    },
+    "gemma4_31b_it": {
+      "all_rows": 258,
+      "kept_rows": 228,
+      "kept_cases": 38,
+      "excluded_rows": 30,
+      "excluded_cases": 5,
+      "variants": {
+        "baseline_regenerate": {
+          "n": 38,
+          "adjusted_correct": 38,
+          "accuracy": 1.0,
+          "total_completion_tokens": 13632,
+          "completion_cost_per_success": 358.7368421052632,
+          "hitmax": 0
+        },
+        "prefix_continue": {
+          "n": 38,
+          "adjusted_correct": 38,
+          "accuracy": 1.0,
+          "total_completion_tokens": 7121,
+          "completion_cost_per_success": 187.39473684210526,
+          "hitmax": 0
+        },
+        "generic_error_prompt": {
+          "n": 38,
+          "adjusted_correct": 38,
+          "accuracy": 1.0,
+          "total_completion_tokens": 11559,
+          "completion_cost_per_success": 304.1842105263158,
+          "hitmax": 0
+        },
+        "localized_error_prompt": {
+          "n": 38,
+          "adjusted_correct": 38,
+          "accuracy": 1.0,
+          "total_completion_tokens": 10055,
+          "completion_cost_per_success": 264.60526315789474,
+          "hitmax": 0
+        },
+        "oracle_error_prompt": {
+          "n": 38,
+          "adjusted_correct": 38,
+          "accuracy": 1.0,
+          "total_completion_tokens": 7880,
+          "completion_cost_per_success": 207.3684210526316,
+          "hitmax": 0
+        },
+        "random_location_prompt": {
+          "n": 38,
+          "adjusted_correct": 38,
+          "accuracy": 1.0,
+          "total_completion_tokens": 7680,
+          "completion_cost_per_success": 202.10526315789474,
+          "hitmax": 0
+        }
+      },
+      "families": {
+        "algebra_sign_symmetry": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1904,
+            "completion_cost_per_success": 476.0,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1483,
+            "completion_cost_per_success": 370.75,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1410,
+            "completion_cost_per_success": 352.5,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1091,
+            "completion_cost_per_success": 272.75,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1061,
+            "completion_cost_per_success": 265.25,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1252,
+            "completion_cost_per_success": 313.0,
+            "hitmax": 0
+          }
+        },
+        "code_boundary_zero": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1642,
+            "completion_cost_per_success": 410.5,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1567,
+            "completion_cost_per_success": 391.75,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1287,
+            "completion_cost_per_success": 321.75,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1000,
+            "completion_cost_per_success": 250.0,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1044,
+            "completion_cost_per_success": 261.0,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 962,
+            "completion_cost_per_success": 240.5,
+            "hitmax": 0
+          }
+        },
+        "counting_complement": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 2074,
+            "completion_cost_per_success": 518.5,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1519,
+            "completion_cost_per_success": 379.75,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1523,
+            "completion_cost_per_success": 380.75,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1363,
+            "completion_cost_per_success": 340.75,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1364,
+            "completion_cost_per_success": 341.0,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1310,
+            "completion_cost_per_success": 327.5,
+            "hitmax": 0
+          }
+        },
+        "graph_definition": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1272,
+            "completion_cost_per_success": 318.0,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 877,
+            "completion_cost_per_success": 219.25,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 771,
+            "completion_cost_per_success": 192.75,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 581,
+            "completion_cost_per_success": 145.25,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 369,
+            "completion_cost_per_success": 92.25,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 496,
+            "completion_cost_per_success": 124.0,
+            "hitmax": 0
+          }
+        },
+        "multilingual_semantic": {
+          "baseline_regenerate": {
+            "n": 2,
+            "adjusted_correct": 2,
+            "accuracy": 1.0,
+            "total_completion_tokens": 865,
+            "completion_cost_per_success": 432.5,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 2,
+            "adjusted_correct": 2,
+            "accuracy": 1.0,
+            "total_completion_tokens": 626,
+            "completion_cost_per_success": 313.0,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 2,
+            "adjusted_correct": 2,
+            "accuracy": 1.0,
+            "total_completion_tokens": 438,
+            "completion_cost_per_success": 219.0,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 2,
+            "adjusted_correct": 2,
+            "accuracy": 1.0,
+            "total_completion_tokens": 239,
+            "completion_cost_per_success": 119.5,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 2,
+            "adjusted_correct": 2,
+            "accuracy": 1.0,
+            "total_completion_tokens": 447,
+            "completion_cost_per_success": 223.5,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 2,
+            "adjusted_correct": 2,
+            "accuracy": 1.0,
+            "total_completion_tokens": 299,
+            "completion_cost_per_success": 149.5,
+            "hitmax": 0
+          }
+        },
+        "probability_conditioning": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1601,
+            "completion_cost_per_success": 400.25,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1979,
+            "completion_cost_per_success": 494.75,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1398,
+            "completion_cost_per_success": 349.5,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1085,
+            "completion_cost_per_success": 271.25,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 964,
+            "completion_cost_per_success": 241.0,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1090,
+            "completion_cost_per_success": 272.5,
+            "hitmax": 0
+          }
+        },
+        "proof_invalid_lemma": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1737,
+            "completion_cost_per_success": 434.25,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 956,
+            "completion_cost_per_success": 239.0,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 980,
+            "completion_cost_per_success": 245.0,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 793,
+            "completion_cost_per_success": 198.25,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 620,
+            "completion_cost_per_success": 155.0,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 613,
+            "completion_cost_per_success": 153.25,
+            "hitmax": 0
+          }
+        },
+        "table_zero_swap": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 598,
+            "completion_cost_per_success": 149.5,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 739,
+            "completion_cost_per_success": 184.75,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 646,
+            "completion_cost_per_success": 161.5,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 424,
+            "completion_cost_per_success": 106.0,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 337,
+            "completion_cost_per_success": 84.25,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 463,
+            "completion_cost_per_success": 115.75,
+            "hitmax": 0
+          }
+        },
+        "temporal_boundary": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 815,
+            "completion_cost_per_success": 203.75,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 783,
+            "completion_cost_per_success": 195.75,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 793,
+            "completion_cost_per_success": 198.25,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 570,
+            "completion_cost_per_success": 142.5,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 378,
+            "completion_cost_per_success": 94.5,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 449,
+            "completion_cost_per_success": 112.25,
+            "hitmax": 0
+          }
+        },
+        "unit_roundtrip": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1124,
+            "completion_cost_per_success": 281.0,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1030,
+            "completion_cost_per_success": 257.5,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 809,
+            "completion_cost_per_success": 202.25,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 734,
+            "completion_cost_per_success": 183.5,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 537,
+            "completion_cost_per_success": 134.25,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 746,
+            "completion_cost_per_success": 186.5,
+            "hitmax": 0
+          }
+        }
+      }
+    },
+    "gemma4_26b_a4b_it": {
+      "all_rows": 258,
+      "kept_rows": 228,
+      "kept_cases": 38,
+      "excluded_rows": 30,
+      "excluded_cases": 5,
+      "variants": {
+        "baseline_regenerate": {
+          "n": 38,
+          "adjusted_correct": 38,
+          "accuracy": 1.0,
+          "total_completion_tokens": 16043,
+          "completion_cost_per_success": 422.1842105263158,
+          "hitmax": 0
+        },
+        "prefix_continue": {
+          "n": 38,
+          "adjusted_correct": 38,
+          "accuracy": 1.0,
+          "total_completion_tokens": 10507,
+          "completion_cost_per_success": 276.5,
+          "hitmax": 0
+        },
+        "generic_error_prompt": {
+          "n": 38,
+          "adjusted_correct": 38,
+          "accuracy": 1.0,
+          "total_completion_tokens": 14594,
+          "completion_cost_per_success": 384.05263157894734,
+          "hitmax": 0
+        },
+        "localized_error_prompt": {
+          "n": 38,
+          "adjusted_correct": 38,
+          "accuracy": 1.0,
+          "total_completion_tokens": 14030,
+          "completion_cost_per_success": 369.2105263157895,
+          "hitmax": 0
+        },
+        "oracle_error_prompt": {
+          "n": 38,
+          "adjusted_correct": 38,
+          "accuracy": 1.0,
+          "total_completion_tokens": 12635,
+          "completion_cost_per_success": 332.5,
+          "hitmax": 0
+        },
+        "random_location_prompt": {
+          "n": 38,
+          "adjusted_correct": 38,
+          "accuracy": 1.0,
+          "total_completion_tokens": 11916,
+          "completion_cost_per_success": 313.57894736842104,
+          "hitmax": 0
+        }
+      },
+      "families": {
+        "algebra_sign_symmetry": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 2034,
+            "completion_cost_per_success": 508.5,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1823,
+            "completion_cost_per_success": 455.75,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1899,
+            "completion_cost_per_success": 474.75,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1714,
+            "completion_cost_per_success": 428.5,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1325,
+            "completion_cost_per_success": 331.25,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1530,
+            "completion_cost_per_success": 382.5,
+            "hitmax": 0
+          }
+        },
+        "code_boundary_zero": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1793,
+            "completion_cost_per_success": 448.25,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1776,
+            "completion_cost_per_success": 444.0,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1515,
+            "completion_cost_per_success": 378.75,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1486,
+            "completion_cost_per_success": 371.5,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1181,
+            "completion_cost_per_success": 295.25,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1542,
+            "completion_cost_per_success": 385.5,
+            "hitmax": 0
+          }
+        },
+        "counting_complement": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 2810,
+            "completion_cost_per_success": 702.5,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 2074,
+            "completion_cost_per_success": 518.5,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 2072,
+            "completion_cost_per_success": 518.0,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1874,
+            "completion_cost_per_success": 468.5,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1717,
+            "completion_cost_per_success": 429.25,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1644,
+            "completion_cost_per_success": 411.0,
+            "hitmax": 0
+          }
+        },
+        "graph_definition": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1415,
+            "completion_cost_per_success": 353.75,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 991,
+            "completion_cost_per_success": 247.75,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1086,
+            "completion_cost_per_success": 271.5,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 902,
+            "completion_cost_per_success": 225.5,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 660,
+            "completion_cost_per_success": 165.0,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 955,
+            "completion_cost_per_success": 238.75,
+            "hitmax": 0
+          }
+        },
+        "multilingual_semantic": {
+          "baseline_regenerate": {
+            "n": 2,
+            "adjusted_correct": 2,
+            "accuracy": 1.0,
+            "total_completion_tokens": 851,
+            "completion_cost_per_success": 425.5,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 2,
+            "adjusted_correct": 2,
+            "accuracy": 1.0,
+            "total_completion_tokens": 753,
+            "completion_cost_per_success": 376.5,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 2,
+            "adjusted_correct": 2,
+            "accuracy": 1.0,
+            "total_completion_tokens": 708,
+            "completion_cost_per_success": 354.0,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 2,
+            "adjusted_correct": 2,
+            "accuracy": 1.0,
+            "total_completion_tokens": 711,
+            "completion_cost_per_success": 355.5,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 2,
+            "adjusted_correct": 2,
+            "accuracy": 1.0,
+            "total_completion_tokens": 596,
+            "completion_cost_per_success": 298.0,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 2,
+            "adjusted_correct": 2,
+            "accuracy": 1.0,
+            "total_completion_tokens": 609,
+            "completion_cost_per_success": 304.5,
+            "hitmax": 0
+          }
+        },
+        "probability_conditioning": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 2141,
+            "completion_cost_per_success": 535.25,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1889,
+            "completion_cost_per_success": 472.25,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1996,
+            "completion_cost_per_success": 499.0,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1505,
+            "completion_cost_per_success": 376.25,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1237,
+            "completion_cost_per_success": 309.25,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1314,
+            "completion_cost_per_success": 328.5,
+            "hitmax": 0
+          }
+        },
+        "proof_invalid_lemma": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1623,
+            "completion_cost_per_success": 405.75,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1317,
+            "completion_cost_per_success": 329.25,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1408,
+            "completion_cost_per_success": 352.0,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1121,
+            "completion_cost_per_success": 280.25,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 922,
+            "completion_cost_per_success": 230.5,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 988,
+            "completion_cost_per_success": 247.0,
+            "hitmax": 0
+          }
+        },
+        "table_zero_swap": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 982,
+            "completion_cost_per_success": 245.5,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1255,
+            "completion_cost_per_success": 313.75,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 979,
+            "completion_cost_per_success": 244.75,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1100,
+            "completion_cost_per_success": 275.0,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1113,
+            "completion_cost_per_success": 278.25,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1103,
+            "completion_cost_per_success": 275.75,
+            "hitmax": 0
+          }
+        },
+        "temporal_boundary": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1109,
+            "completion_cost_per_success": 277.25,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1306,
+            "completion_cost_per_success": 326.5,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 991,
+            "completion_cost_per_success": 247.75,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1124,
+            "completion_cost_per_success": 281.0,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 807,
+            "completion_cost_per_success": 201.75,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 998,
+            "completion_cost_per_success": 249.5,
+            "hitmax": 0
+          }
+        },
+        "unit_roundtrip": {
+          "baseline_regenerate": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1285,
+            "completion_cost_per_success": 321.25,
+            "hitmax": 0
+          },
+          "generic_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1410,
+            "completion_cost_per_success": 352.5,
+            "hitmax": 0
+          },
+          "localized_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1376,
+            "completion_cost_per_success": 344.0,
+            "hitmax": 0
+          },
+          "oracle_error_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1098,
+            "completion_cost_per_success": 274.5,
+            "hitmax": 0
+          },
+          "prefix_continue": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 949,
+            "completion_cost_per_success": 237.25,
+            "hitmax": 0
+          },
+          "random_location_prompt": {
+            "n": 4,
+            "adjusted_correct": 4,
+            "accuracy": 1.0,
+            "total_completion_tokens": 1233,
+            "completion_cost_per_success": 308.25,
+            "hitmax": 0
+          }
+        }
+      }
+    }
+  },
+  "gemma4_31b_it_nonpinyin_pair_analysis": {
+    "n_pairs": 38,
+    "localized_correct": 38,
+    "random_correct": 38,
+    "accuracy_disagreements": [],
+    "mean_delta_localized_minus_random": 62.5,
+    "median_delta_localized_minus_random": 67.5,
+    "top_random_cheaper": [
+      {
+        "case_id": "e162_controlled_acpi_e159_probability_conditioning_03_invalid_answer_preserving_reference",
+        "task_id": "e159_probability_conditioning_03",
+        "family": "probability_conditioning",
+        "localized_correct": true,
+        "random_correct": true,
+        "localized_final": "1/3",
+        "random_final": "1/3",
+        "localized_tokens": 278,
+        "random_tokens": 119,
+        "delta_localized_minus_random": 159,
+        "localized_span": "the other child has probability 1/2",
+        "random_span": "A family has two children",
+        "localized_start": "To recheck the step: \"the other child has probability 1/2\", we must look at the sample space. The possible outcomes for two children are $\\{BB, BG, GB, GG\\}$, each with probability $1/4$. The condition is \"at least one child is a boy\". This restricts the sample space to $S' = \\{BB, BG, GB\\}$. The event \"both are boys\" is $E = \\{BB\\}$. The probability is $P(E|S') = \\frac{|E|}{|S'|} = \\frac{1}{3}$.  The statement \"the other child has probability 1/2\" is a common misconception that treats the children as independent events without accounting for the specific condition \"at least one\". If we knew a *specific* child (e.g., the elder) was a boy, the probability the other is a boy would be $1/2$. Ho",
+        "random_start": "The flagged span `A family has two children` is a correct statement of the problem's premise and is not abnormal.  Continuing the solution: The sample space for two children is $S = \\{BB, BG, GB, GG\\}$. The condition \"at least one child is a boy\" restricts the sample space to $S' = \\{BB, BG, GB\\}$. Out of these 3 equally likely outcomes, only 1 outcome ($BB$) consists of two boys. The probability is therefore $1/3$.  Final answer: 1/3"
+      },
+      {
+        "case_id": "e162_controlled_acpi_e159_probability_conditioning_04_invalid_answer_preserving_reference",
+        "task_id": "e159_probability_conditioning_04",
+        "family": "probability_conditioning",
+        "localized_correct": true,
+        "random_correct": true,
+        "localized_final": "1/3",
+        "random_final": "1/3",
+        "localized_tokens": 355,
+        "random_tokens": 214,
+        "delta_localized_minus_random": 141,
+        "localized_span": "4 kings among 13 ranks, so 4/13",
+        "random_span": "A card is drawn from a standard deck",
+        "localized_start": "To solve the problem, we first identify the sample space and the event of interest.  1.  **Identify the given condition**: The card drawn is a face card. In a standard deck of 52 cards, the face cards are the Jacks, Queens, and Kings of each of the four suits. 2.  **Count the face cards**: There are 3 face card ranks (Jack, Queen, King) and 4 suits for each rank.     Total face cards = $3 \\times 4 = 12$. 3.  **Identify the target event**: The card is a king. 4.  **Count the kings**: There are 4 kings in a standard deck. 5.  **Calculate the conditional probability**: The probability that a card is a king, given that it is a face card, is the number of kings divided by the total number of face",
+        "random_start": "The phrase \"A card is drawn from a standard deck\" is a standard description of the experiment and is not abnormal.  Continuing the solution: 1.  **Identify the sample space**: A standard deck has 52 cards. 2.  **Identify the condition**: The card is a face card. Face cards are Jacks, Queens, and Kings. There are 4 of each rank, totaling $3 \\times 4 = 12$ face cards. 3.  **Identify the target event**: The card is a king. There are 4 kings in the deck. 4.  **Calculate the conditional probability**:     $P(\\text{King} | \\text{Face Card}) = \\frac{P(\\text{King} \\cap \\text{Face Card})}{P(\\text{Face Card})} = \\frac{4/52}{12/52} = \\frac{4}{12} = \\frac{1}{3}$.  Final answer: 1/3"
+      },
+      {
+        "case_id": "e162_controlled_acpi_e159_code_boundary_zero_04_invalid_answer_preserving_reference",
+        "task_id": "e159_code_boundary_zero_04",
+        "family": "code_boundary_zero",
+        "localized_correct": true,
+        "random_correct": true,
+        "localized_final": "2",
+        "random_final": "2",
+        "localized_tokens": 341,
+        "random_tokens": 201,
+        "delta_localized_minus_random": 140,
+        "localized_span": "`[0:5]` excludes both endpoints",
+        "random_span": "What does this Python expression evaluate",
+        "localized_start": "The partial solution provided is incorrect. Let's re-evaluate the Python slicing expressions.  1.  **Analyze `'abcde'[0:5]`**:     *   In Python, the slice `[start:stop]` includes the character at the `start` index and excludes the character at the `stop` index.     *   For `'abcde'[0:5]`, the indices are 0, 1, 2, 3, and 4.     *   The characters are `'a'`, `'b'`, `'c'`, `'d'`, and `'e'`.     *   The resulting string is `'abcde'`, and its length is `5`.  2.  **Analyze `'abcde'[1:4]`**:     *   The slice `[1:4]` includes indices 1, 2, and 3.     *   The characters are `'b'`, `'c'`, and `'d'`.     *   The resulting string is `'bcd'`, and its length is `3`.  3.  **Calculate the difference**:   ",
+        "random_start": "The partial solution contains errors regarding how Python slicing works.  1.  **Rechecking the flagged span:** The expression `len('abcde'[0:5])` evaluates the slice from index 0 up to (but not including) index 5. For the string `'abcde'`, this includes indices 0, 1, 2, 3, and 4. Thus, `'abcde'[0:5]` is `'abcde'`, and its length is 5. 2.  **Evaluating the second part:** The expression `len('abcde'[1:4])` evaluates the slice from index 1 up to (but not including) index 4. This includes indices 1, 2, and 3. Thus, `'abcde'[1:4]` is `'bcd'`, and its length is 3. 3.  **Calculating the difference:** `5 - 3 = 2`.  Final answer: 2"
+      },
+      {
+        "case_id": "e162_controlled_acpi_e159_algebra_sign_symmetry_02_invalid_answer_preserving_reference",
+        "task_id": "e159_algebra_sign_symmetry_02",
+        "family": "algebra_sign_symmetry",
+        "localized_correct": true,
+        "random_correct": true,
+        "localized_final": "2,20",
+        "random_final": "2,20",
+        "localized_tokens": 307,
+        "random_tokens": 175,
+        "delta_localized_minus_random": 132,
+        "localized_span": "roots are x=-12 and x=8",
+        "random_span": "How many integer x in",
+        "localized_start": "To solve the problem, we first identify the roots of the equation $(x-12)(x+8)=0$.  1.  **Find the roots:**     The equation $(x-12)(x+8)=0$ is satisfied when either factor is zero:     $x - 12 = 0 \\implies x = 12$     $x + 8 = 0 \\implies x = -8$     The roots are $x = 12$ and $x = -8$. (The partial solution provided previously stated $x = -12$ and $x = 8$, which was incorrect).  2.  **Check if the roots are in the range $[-30, 30]$:**     $x = 12$ is within $[-30, 30]$.     $x = -8$ is within $[-30, 30]$.     Both roots are integers and fall within the specified range.  3.  **Determine the count:**     There are 2 such integers.  4.  **Calculate the sum of the absolute values:**     The abs",
+        "random_start": "The partial solution identifies the roots as $x = -12$ and $x = 8$. Let's re-evaluate the equation $(x-12)(x+8)=0$. The roots are $x = 12$ and $x = -8$.  Checking if these roots are in the range $[-30, 30]$: 1. $x = 12$: $-30 \\le 12 \\le 30$ (True) 2. $x = -8$: $-30 \\le -8 \\le 30$ (True)  Count of integers $x$: 2. Sum of absolute values: $|12| + |-8| = 12 + 8 = 20$.  Final answer: 2,20"
+      },
+      {
+        "case_id": "e162_controlled_acpi_e159_code_boundary_zero_02_invalid_answer_preserving_reference",
+        "task_id": "e159_code_boundary_zero_02",
+        "family": "code_boundary_zero",
+        "localized_correct": true,
+        "random_correct": true,
+        "localized_final": "-4",
+        "random_final": "-4",
+        "localized_tokens": 364,
+        "random_tokens": 238,
+        "delta_localized_minus_random": 126,
+        "localized_span": "range(4) gives j=1,2 only",
+        "random_span": "What does this Python code print",
+        "localized_start": "The partial solution provided is incorrect. In Python, `range(4)` generates a sequence of integers starting from 0 up to (but not including) 4. Therefore, `range(4)` gives `j = 0, 1, 2, 3`.  Let's re-evaluate the code step-by-step: 1.  **Initialization**: `out = []` 2.  **Iteration 1 (`j = 0`)**:     `j * (j - 3)` $\\rightarrow$ `0 * (0 - 3) = 0`     `out = [0]` 3.  **Iteration 2 (`j = 1`)**:     `j * (j - 3)` $\\rightarrow$ `1 * (1 - 3) = 1 * (-2) = -2`     `out = [0, -2]` 4.  **Iteration 3 (`j = 2`)**:     `j * (j - 3)` $\\rightarrow$ `2 * (2 - 3) = 2 * (-1) = -2`     `out = [0, -2, -2]` 5.  **Iteration 4 (`j = 3`)**:     `j * (j - 3)` $\\rightarrow$ `3 * (3 - 3) = 3 * 0 = 0`     `out = [0, -2",
+        "random_start": "The partial solution is incorrect. `range(4)` in Python generates a sequence of integers starting from 0 up to (but not including) 4. Therefore, `j` takes the values `0, 1, 2, 3`.  Let's calculate the values appended to `out` for each `j`: 1. For `j = 0`: `0 * (0 - 3) = 0 * -3 = 0` 2. For `j = 1`: `1 * (1 - 3) = 1 * -2 = -2` 3. For `j = 2`: `2 * (2 - 3) = 2 * -1 = -2` 4. For `j = 3`: `3 * (3 - 3) = 3 * 0 = 0`  The list `out` becomes `[0, -2, -2, 0]`. The `sum(out)` is `0 + (-2) + (-2) + 0 = -4`.  Final answer: -4"
+      },
+      {
+        "case_id": "e162_controlled_acpi_e159_multilingual_semantic_02_invalid_answer_preserving_reference",
+        "task_id": "e159_multilingual_semantic_02",
+        "family": "multilingual_semantic",
+        "localized_correct": true,
+        "random_correct": true,
+        "localized_final": "11",
+        "random_final": "11",
+        "localized_tokens": 229,
+        "random_tokens": 104,
+        "delta_localized_minus_random": 125,
+        "localized_span": "Both endpoints are excluded",
+        "random_span": "Count integers x with -4",
+        "localized_start": "The problem asks to count integers $x$ such that $-4 \\le x \\le 6$. The phrase \"两个端点都包含\" translates to \"both endpoints are included.\"  The partial solution incorrectly stated \"Both endpoints are excluded.\" To correct this, we recognize that since both endpoints are included, we are counting the integers in the closed interval $[-4, 6]$.  The number of integers in the range $[a, b]$ is given by the formula $b - a + 1$. Substituting $a = -4$ and $b = 6$: $6 - (-4) + 1 = 6 + 4 + 1 = 11$.  The integers are: -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6. Counting them manually: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11.  Final answer: 11",
+        "random_start": "The partial solution incorrectly states that both endpoints are excluded. The problem specifies that both endpoints are included ($-4 \\le x \\le 6$).  To count the integers in the range $[a, b]$, the formula is $b - a + 1$. Here, $a = -4$ and $b = 6$. Calculation: $6 - (-4) + 1 = 6 + 4 + 1 = 11$.  Final answer: 11"
+      },
+      {
+        "case_id": "e162_controlled_acpi_e159_proof_invalid_lemma_04_invalid_answer_preserving_reference",
+        "task_id": "e159_proof_invalid_lemma_04",
+        "family": "proof_invalid_lemma",
+        "localized_correct": true,
+        "random_correct": true,
+        "localized_final": "Yes",
+        "random_final": "Yes",
+        "localized_tokens": 237,
+        "random_tokens": 115,
+        "delta_localized_minus_random": 122,
+        "localized_span": "12 and 3 are both multiples of 3",
+        "random_span": "Claim",
+        "localized_start": "To evaluate the claim \"Every multiple of 12 is a multiple of 3,\" we examine the relationship between 12 and 3.  1.  **Analyze the step:** The flagged span says \"12 and 3 are both multiples of 3.\"     *   $12 = 3 \\times 4$ (True)     *   $3 = 3 \\times 1$ (True)     The step is mathematically correct.  2.  **Verify the logic:**     *   A multiple of 12 can be written as $12n$ for some integer $n$.     *   Since $12 = 3 \\times 4$, we can substitute this into the expression: $12n = (3 \\times 4)n = 3(4n)$.     *   Since $4n$ is an integer, $3(4n)$ is by definition a multiple of 3.     *   Therefore, every multiple of 12 is indeed a multiple of 3.  The claim is true.  Final answer: Yes",
+        "random_start": "The claim is \"Every multiple of 12 is a multiple of 3.\" A multiple of 12 can be written as $12n$ for some integer $n$. Since $12 = 3 \\times 4$, we can rewrite $12n$ as $3(4n)$. Since $4n$ is an integer, $3(4n)$ is by definition a multiple of 3. Therefore, every multiple of 12 is indeed a multiple of 3.  Final answer: Yes"
+      },
+      {
+        "case_id": "e162_controlled_acpi_e159_temporal_boundary_03_invalid_answer_preserving_reference",
+        "task_id": "e159_temporal_boundary_03",
+        "family": "temporal_boundary",
+        "localized_correct": true,
+        "random_correct": true,
+        "localized_final": "Sunday",
+        "random_final": "Sunday",
+        "localized_tokens": 238,
+        "random_tokens": 118,
+        "delta_localized_minus_random": 120,
+        "localized_span": "Count Thursday as day 1",
+        "random_span": "If today is Thursday",
+        "localized_start": "The problem states: \"If today is Thursday, what weekday is 10 days from today? Do not count today as day 1.\"  The partial solution provided is logically confused. Let's re-evaluate: 1. Today is Thursday. 2. We need to find the day 10 days from today. 3. \"Do not count today as day 1\" means we start counting from tomorrow (Friday). 4. Day 1 = Friday 5. Day 2 = Saturday 6. Day 3 = Sunday 7. Day 4 = Monday 8. Day 5 = Tuesday 9. Day 6 = Wednesday 10. Day 7 = Thursday (one full week) 11. Day 8 = Friday 12. Day 9 = Saturday 13. Day 10 = Sunday  Alternatively, using modulo arithmetic: Thursday is the starting point. 10 days later: $10 \\pmod 7 = 3$ days after Thursday. Thursday $\\rightarrow$ Friday (",
+        "random_start": "The flagged span `If today is Thursday` is a correct statement of the problem's premise and is not abnormal.  Continuing from the partial solution: 1. Today is Thursday. 2. We need to find the day 10 days from today. 3. 10 days can be broken down as 7 days (one full week) + 3 days. 4. 7 days from Thursday is Thursday. 5. 3 days after Thursday are Friday (1), Saturday (2), and Sunday (3).  Final answer: Sunday"
+      },
+      {
+        "case_id": "e162_controlled_acpi_e159_counting_complement_03_invalid_answer_preserving_reference",
+        "task_id": "e159_counting_complement_03",
+        "family": "counting_complement",
+        "localized_correct": true,
+        "random_correct": true,
+        "localized_final": "25",
+        "random_final": "25",
+        "localized_tokens": 353,
+        "random_tokens": 252,
+        "delta_localized_minus_random": 101,
+        "localized_span": "means outside the interval from -12 to 12",
+        "random_span": "Among integers from -50 to 50 inclusive",
+        "localized_start": "The problem asks for the number of integers from -50 to 50 inclusive that have an absolute value of at most 12.  1.  **Analyze the condition**: The condition \"absolute value at most 12\" is written mathematically as $|x| \\le 12$. 2.  **Solve the inequality**: $|x| \\le 12$ means that $x$ must be between -12 and 12, inclusive. This is the interval $[-12, 12]$. 3.  **Identify the integers**: The integers satisfying this are $\\{-12, -11, \\dots, -1, 0, 1, \\dots, 11, 12\\}$. 4.  **Count the integers**:     *   Positive integers: $1, 2, \\dots, 12$ (12 values)     *   Negative integers: $-1, -2, \\dots, -12$ (12 values)     *   Zero: $0$ (1 value)     *   Total = $12 + 12 + 1 = 25$. 5.  **Check the ran",
+        "random_start": "The partial solution provided is incorrect. Let's re-evaluate the specific span and the problem.  1.  **Recheck the span:** \"Among integers from -50 to 50 inclusive\". This defines the set of integers $S = \\{-50, -49, \\dots, 0, \\dots, 49, 50\\}$. 2.  **Analyze the condition:** \"absolute value at most 12\" means $|x| \\le 12$. 3.  **Solve the inequality:** $|x| \\le 12$ is equivalent to $-12 \\le x \\le 12$. 4.  **Count the integers:** The integers satisfying this are $\\{-12, -11, \\dots, 0, \\dots, 11, 12\\}$. 5.  **Calculation:** The number of integers is $12 - (-12) + 1 = 12 + 12 + 1 = 25$.  The partial solution's logic (\"outside the interval\") was wrong, but the final count of 25 was correct.  Fina"
+      },
+      {
+        "case_id": "e162_controlled_acpi_e159_proof_invalid_lemma_03_invalid_answer_preserving_reference",
+        "task_id": "e159_proof_invalid_lemma_03",
+        "family": "proof_invalid_lemma",
+        "localized_correct": true,
+        "random_correct": true,
+        "localized_final": "Yes",
+        "random_final": "Yes",
+        "localized_tokens": 271,
+        "random_tokens": 173,
+        "delta_localized_minus_random": 98,
+        "localized_span": "sum of two odd numbers is even",
+        "random_span": "Claim",
+        "localized_start": "The problem asks whether the claim \"If $a$ and $b$ are odd integers, then $ab$ is odd\" is true.  Reviewing the partial solution: The step \"The sum of two odd numbers is even\" is a true mathematical statement, but it is irrelevant to the claim about the **product** of two odd numbers. To prove the claim, we should focus on the properties of multiplication.  Corrected reasoning: 1. Let $a$ and $b$ be odd integers. 2. By definition, $a = 2n + 1$ and $b = 2m + 1$ for some integers $n$ and $m$. 3. The product $ab = (2n + 1)(2m + 1) = 4nm + 2n + 2m + 1$. 4. This can be rewritten as $ab = 2(2nm + n + m) + 1$. 5. Since $2nm + n + m$ is an integer, $ab$ is of the form $2k + 1$, which is the definitio",
+        "random_start": "The partial solution contains a logical non sequitur: \"The sum of two odd numbers is even\" is a true statement, but it does not prove that \"the product of two odd numbers is odd.\" However, the claim itself is true.  To verify the claim: An odd integer can be written as $2n + 1$. Let $a = 2k + 1$ and $b = 2m + 1$ for integers $k, m$. $ab = (2k + 1)(2m + 1) = 4km + 2k + 2m + 1 = 2(2km + k + m) + 1$. Since $2km + k + m$ is an integer, $ab$ is odd.  Final answer: Yes"
+      },
+      {
+        "case_id": "e162_controlled_acpi_e159_proof_invalid_lemma_01_invalid_answer_preserving_reference",
+        "task_id": "e159_proof_invalid_lemma_01",
+        "family": "proof_invalid_lemma",
+        "localized_correct": true,
+        "random_correct": true,
+        "localized_final": "Yes",
+        "random_final": "Yes",
+        "localized_tokens": 351,
+        "random_tokens": 257,
+        "delta_localized_minus_random": 94,
+        "localized_span": "divide by n",
+        "random_span": "Claim",
+        "localized_start": "The partial solution provided is logically flawed. Dividing by $n$ is not a valid way to prove that $n$ is divisible by 3, as it assumes the conclusion or fails to account for the properties of prime divisibility.  To correctly evaluate the claim: 1. We are given that $n^2$ is divisible by 3. 2. Since 3 is a prime number, if a prime $p$ divides a product $ab$, then $p$ must divide $a$ or $p$ must divide $b$ (Euclid's Lemma). 3. In this case, $3$ divides $n^2$ (which is $n \\times n$). Therefore, 3 must divide $n$. 4. Alternatively, we can check the contrapositive: If $n$ is not divisible by 3, then $n = 3k+1$ or $n = 3k+2$.    - If $n = 3k+1$, then $n^2 = (3k+1)^2 = 9k^2 + 6k + 1 = 3(3k^2 + 2",
+        "random_start": "The partial solution provided is logically flawed. Dividing $n^2$ by $n$ to conclude that $n$ is divisible by 3 is not a valid proof, as it assumes the property it is trying to prove or fails to account for the nature of divisibility.  To correctly evaluate the claim: If $n$ is not divisible by 3, then $n$ can be written as $3k+1$ or $3k+2$. - If $n = 3k+1$, then $n^2 = (3k+1)^2 = 9k^2 + 6k + 1 = 3(3k^2 + 2k) + 1$, which is not divisible by 3. - If $n = 3k+2$, then $n^2 = (3k+2)^2 = 9k^2 + 12k + 4 = 3(3k^2 + 4k + 1) + 1$, which is not divisible by 3. Thus, if $n^2$ is divisible by 3, $n$ must be divisible by 3.  Final answer: Yes"
+      },
+      {
+        "case_id": "e162_controlled_acpi_e159_graph_definition_01_invalid_answer_preserving_reference",
+        "task_id": "e159_graph_definition_01",
+        "family": "graph_definition",
+        "localized_correct": true,
+        "random_correct": true,
+        "localized_final": "Yes",
+        "random_final": "Yes",
+        "localized_tokens": 227,
+        "random_tokens": 141,
+        "delta_localized_minus_random": 86,
+        "localized_span": "All vertices must have even degree for an Euler trail",
+        "random_span": "A connected graph has degrees 1",
+        "localized_start": "To determine if a connected graph has an Euler trail, we must refer to the fundamental theorem of graph theory regarding Eulerian paths: 1. A connected graph has an **Euler circuit** (a trail that starts and ends at the same vertex) if and only if every vertex has an even degree. 2. A connected graph has an **Euler trail** (a trail that starts and ends at different vertices) if and only if it has exactly zero or two vertices of odd degree.  The partial solution provided stated: \"All vertices must have even degree for an Euler trail.\" This is incorrect; that condition is specifically for an Euler **circuit**. For an Euler **trail**, the graph can have exactly two odd-degree vertices.  Looking",
+        "random_start": "The flagged span `A connected graph has degrees 1` is part of the problem statement and is correct as it describes the degree sequence of the graph.  Re-evaluating the partial solution: 1. The graph is connected. 2. The degrees of the vertices are 1, 1, 2, 2, 2. 3. An Euler trail exists if and only if the graph is connected and has either zero or exactly two vertices of odd degree. 4. In this graph, there are exactly two vertices with odd degree (the two vertices with degree 1). 5. Therefore, the graph has an Euler trail.  Final answer: Yes"
+      }
+    ],
+    "top_localized_cheaper": [
+      {
+        "case_id": "e162_controlled_acpi_e159_algebra_sign_symmetry_03_invalid_answer_preserving_reference",
+        "task_id": "e159_algebra_sign_symmetry_03",
+        "family": "algebra_sign_symmetry",
+        "localized_correct": true,
+        "random_correct": true,
+        "localized_final": "0",
+        "random_final": "0",
+        "localized_tokens": 188,
+        "random_tokens": 274,
+        "delta_localized_minus_random": -86,
+        "localized_span": "roots of t^2-6t+5 are -1 and -5",
+        "random_span": "Let f",
+        "localized_start": "The provided partial solution contains an error in identifying the roots of the quadratic equation $f(t) = t^2 - 6t + 5$.  To find the roots of $t^2 - 6t + 5 = 0$, we can factor the quadratic: $(t - 1)(t - 5) = 0$ Setting each factor to zero gives $t = 1$ and $t = 5$. Thus, the roots are $1$ and $5$, not $-1$ and $-5$.  Since $1$ and $5$ are the roots of $f(t)$, by definition: $f(1) = 0$ $f(5) = 0$  Therefore: $f(1) + f(5) = 0 + 0 = 0$  Final answer: 0",
+        "random_start": "The partial solution contains an error in identifying the roots of the quadratic equation $f(t) = t^2 - 6t + 5$.  1.  **Recheck the flagged location and roots:**     The roots of $t^2 - 6t + 5 = 0$ are found by factoring:     $(t - 1)(t - 5) = 0$.     Thus, the roots are $t = 1$ and $t = 5$.     (The partial solution incorrectly stated the roots were $-1$ and $-5$).  2.  **Calculate $f(1)$ and $f(5)$:**     Since $1$ and $5$ are the roots of the function $f(t)$, by definition:     $f(1) = 1^2 - 6(1) + 5 = 1 - 6 + 5 = 0$.     $f(5) = 5^2 - 6(5) + 5 = 25 - 30 + 5 = 0$.  3.  **Find the sum:**     $f(1) + f(5) = 0 + 0 = 0$.  Final answer: 0"
+      },
+      {
+        "case_id": "e162_controlled_acpi_e159_probability_conditioning_01_invalid_answer_preserving_reference",
+        "task_id": "e159_probability_conditioning_01",
+        "family": "probability_conditioning",
+        "localized_correct": true,
+        "random_correct": true,
+        "localized_final": "1/4",
+        "random_final": "1/4",
+        "localized_tokens": 422,
+        "random_tokens": 492,
+        "delta_localized_minus_random": -70,
+        "localized_span": "remaining ball as equally likely red or blue",
+        "random_span": "A box has 3 red and 3 blue balls",
+        "localized_start": "To find the probability that both balls are red given that at least one is red, we define the events: - $A$: Both balls are red. - $B$: At least one ball is red.  We are looking for $P(A|B) = \\frac{P(A \\cap B)}{P(B)}$. Since $A \\subset B$, $P(A \\cap B) = P(A)$.  1. **Calculate the total number of ways to draw 2 balls from 6:**    $\\binom{6}{2} = \\frac{6 \\times 5}{2 \\times 1} = 15$.  2. **Calculate the number of ways to draw 2 red balls (Event A):**    $\\binom{3}{2} = 3$.    So, $P(A) = \\frac{3}{15}$.  3. **Calculate the number of ways to draw 0 red balls (both blue):**    $\\binom{3}{2} = 3$.    The probability of drawing no red balls is $\\frac{3}{15}$.  4. **Calculate the probability of at l",
+        "random_start": "The flagged span `A box has 3 red and 3 blue balls` is correct as it states the initial conditions of the problem. However, the partial solution provided is incorrect because it treats the remaining ball as a simple coin flip, ignoring the fact that the balls are drawn without replacement from a finite set.  Correcting the logic: 1. **Total outcomes**: The total number of ways to draw 2 balls from 6 is $\\binom{6}{2} = \\frac{6 \\times 5}{2} = 15$. 2. **Event A (Both are red)**: The number of ways to draw 2 red balls from 3 is $\\binom{3}{2} = 3$. 3. **Event B (At least one is red)**: This is the complement of drawing two blue balls. The number of ways to draw 2 blue balls from 3 is $\\binom{3}{2"
+      },
+      {
+        "case_id": "e162_controlled_acpi_e159_unit_roundtrip_02_invalid_answer_preserving_reference",
+        "task_id": "e159_unit_roundtrip_02",
+        "family": "unit_roundtrip",
+        "localized_correct": true,
+        "random_correct": true,
+        "localized_final": "60",
+        "random_final": "60",
+        "localized_tokens": 268,
+        "random_tokens": 323,
+        "delta_localized_minus_random": -55,
+        "localized_span": "one third of the original 60",
+        "random_span": "A value starts at 60",
+        "localized_start": "The problem states that the value starts at 60 and increases by 50%. 1.  **Increase by 50%**: $60 + (0.50 \\times 60) = 60 + 30 = 90$. 2.  **Decrease by one third**: The problem specifies that the *new value* (which is 90) decreases by one third.     *   One third of the new value is $\\frac{1}{3} \\times 90 = 30$.     *   The final value is $90 - 30 = 60$.  The partial solution flagged the phrase \"one third of the original 60\". While the numerical result of the subtraction (30) happens to be the same as one third of the original 60, the logic should be based on the *new value* (90).   Correcting the step: Increasing by 50% adds 30, resulting in 90. Then decreasing by one third subtracts one th",
+        "random_start": "The partial solution contains an error in the second step.  1.  **Rechecking the flagged location:** \"A value starts at 60.\" This is correct based on the problem statement. 2.  **Evaluating the subsequent steps:**     *   Increase by 50%: $60 + (0.50 \\times 60) = 60 + 30 = 90$. (Correct)     *   Decrease by one third: The problem states \"the **new value** decreases by one third.\" The new value is 90.     *   Calculation: $90 - (\\frac{1}{3} \\times 90) = 90 - 30 = 60$.  Wait, let's re-verify the partial solution's logic: \"decreasing by one third subtracts one third of the original 60\". This logic is incorrect; it should subtract one third of the *new* value (90). However, in this specific case"
+      },
+      {
+        "case_id": "e162_controlled_acpi_e159_table_zero_swap_04_invalid_answer_preserving_reference",
+        "task_id": "e159_table_zero_swap_04",
+        "family": "table_zero_swap",
+        "localized_correct": true,
+        "random_correct": true,
+        "localized_final": "15",
+        "random_final": "15",
+        "localized_tokens": 150,
+        "random_tokens": 148,
+        "delta_localized_minus_random": 2,
+        "localized_span": "Pass rows include 7,0,8",
+        "random_span": "Rows show status and value",
+        "localized_start": "The problem asks to sum the values of rows with the status \"pass\". The rows are: 1. pass 7 2. fail 0 3. pass 8 4. fail 1  The rows with status \"pass\" are the first row (value 7) and the third row (value 8). The values to sum are 7 and 8. Sum = 7 + 8 = 15.  The partial solution incorrectly listed \"0\" as a pass row (it is a fail row), although it correctly noted that adding zero would not change the sum. Correcting the step: Pass rows include 7 and 8.  Final answer: 15",
+        "random_start": "The visible span `Rows show status and value: pass 7; fail 0; pass 8; fail 1` lists the following pairs: 1. status: pass, value: 7 2. status: fail, value: 0 3. status: pass, value: 8 4. status: fail, value: 1  To sum the values with status \"pass\", we identify the values associated with \"pass\": 7 and 8. Sum = 7 + 8 = 15.  The partial solution correctly identified the values for \"pass\" (7 and 8) and calculated the sum as 15.  Final answer: 15"
+      },
+      {
+        "case_id": "e162_controlled_acpi_e159_counting_complement_04_invalid_answer_preserving_reference",
+        "task_id": "e159_counting_complement_04",
+        "family": "counting_complement",
+        "localized_correct": true,
+        "random_correct": true,
+        "localized_final": "256",
+        "random_final": "256",
+        "localized_tokens": 358,
+        "random_tokens": 346,
+        "delta_localized_minus_random": 12,
+        "localized_span": "Reversing the order of flips",
+        "random_span": "A fair coin is flipped 9 times",
+        "localized_start": "To find the number of outcome strings with strictly more heads than tails when a fair coin is flipped 9 times, we analyze the total number of possible outcomes.  1.  **Total Outcomes**: Since the coin is flipped 9 times and each flip has 2 possibilities (H or T), the total number of outcome strings is $2^9 = 512$. 2.  **Symmetry**: Let $H$ be the number of heads and $T$ be the number of tails. In any outcome string, $H + T = 9$. 3.  **Strict Majority**: We are looking for the number of strings where $H > T$. Since 9 is an odd number, it is impossible for $H$ to equal $T$. Therefore, for every possible string, either $H > T$ or $T > H$. 4.  **Pairing**: There is a one-to-one correspondence (a",
+        "random_start": "The problem asks for the number of outcome strings with strictly more heads than tails when a fair coin is flipped 9 times.  1.  **Analyze the total number of outcomes**: For 9 flips, there are $2^9 = 512$ possible outcome strings. 2.  **Analyze the condition**: We want the number of strings where the number of heads ($H$) is strictly greater than the number of tails ($T$). Since $H + T = 9$, the condition $H > T$ is equivalent to $H \\ge 5$. 3.  **Symmetry**: For every outcome string, there is a corresponding \"complementary\" string where every head is replaced by a tail and every tail by a head.     *   If a string has $H > T$, its complement has $T > H$.     *   Since the total number of fl"
+      },
+      {
+        "case_id": "e162_controlled_acpi_e159_multilingual_semantic_03_invalid_answer_preserving_reference",
+        "task_id": "e159_multilingual_semantic_03",
+        "family": "multilingual_semantic",
+        "localized_correct": true,
+        "random_correct": true,
+        "localized_final": "11",
+        "random_final": "11",
+        "localized_tokens": 209,
+        "random_tokens": 195,
+        "delta_localized_minus_random": 14,
+        "localized_span": "means strictly less than 5",
+        "random_span": "In the phrase",
+        "localized_start": "The phrase \"at most 5\" means less than or equal to 5 ($\\le 5$), not strictly less than 5.  Re-evaluating the problem: 1. We are looking for integers $n$ such that $-5 \\le n \\le 5$. 2. We are also given the condition that $|n|$ is \"at most 5\", which means $|n| \\le 5$. 3. The inequality $|n| \\le 5$ is equivalent to $-5 \\le n \\le 5$. 4. Both conditions are identical: we need to count integers $n$ in the range $[-5, 5]$. 5. The integers are: $\\{-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5\\}$. 6. Counting these: $5 - (-5) + 1 = 11$.  Final answer: 11",
+        "random_start": "The phrase `at most 5` means less than or equal to 5 ($\\le 5$), not strictly less than 5.  Re-evaluating the condition: 1. The range is $-5 \\le n \\le 5$. 2. The condition is $|n| \\le 5$. 3. For any integer $n$ in the range $[-5, 5]$, the absolute value $|n|$ will be $0, 1, 2, 3, 4,$ or $5$. 4. All these values satisfy $|n| \\le 5$. 5. The integers are $\\{-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5\\}$. 6. Counting these integers: $5 - (-5) + 1 = 11$.  Final answer: 11"
+      },
+      {
+        "case_id": "e162_controlled_acpi_e159_code_boundary_zero_01_invalid_answer_preserving_reference",
+        "task_id": "e159_code_boundary_zero_01",
+        "family": "code_boundary_zero",
+        "localized_correct": true,
+        "random_correct": true,
+        "localized_final": "-20",
+        "random_final": "-20",
+        "localized_tokens": 325,
+        "random_tokens": 301,
+        "delta_localized_minus_random": 24,
+        "localized_span": "range(0,6) gives i=1,2,3,4",
+        "random_span": "What does this Python code print",
+        "localized_start": "The partial solution provided is incorrect. In Python, `range(0, 6)` generates a sequence of integers starting from 0 up to, but not including, 6. Therefore, the values of `i` are `0, 1, 2, 3, 4, 5`.  Let's calculate the sum `s` step-by-step: - For `i = 0`: `s += 0 * (0 - 5) = 0` (s = 0) - For `i = 1`: `s += 1 * (1 - 5) = 1 * (-4) = -4` (s = -4) - For `i = 2`: `s += 2 * (2 - 5) = 2 * (-3) = -6` (s = -10) - For `i = 3`: `s += 3 * (3 - 5) = 3 * (-2) = -6` (s = -16) - For `i = 4`: `s += 4 * (4 - 5) = 4 * (-1) = -4` (s = -20) - For `i = 5`: `s += 5 * (5 - 5) = 5 * 0 = 0` (s = -20)  The final value of `s` is -20.  Final answer: -20",
+        "random_start": "The partial solution provided is incorrect because `range(0, 6)` generates integers from 0 up to (but not including) 6.  Let's calculate the sum `s` step-by-step for `i` in `0, 1, 2, 3, 4, 5`: - For `i = 0`: `0 * (0 - 5) = 0 * -5 = 0` - For `i = 1`: `1 * (1 - 5) = 1 * -4 = -4` - For `i = 2`: `2 * (2 - 5) = 2 * -3 = -6` - For `i = 3`: `3 * (3 - 5) = 3 * -2 = -6` - For `i = 4`: `4 * (4 - 5) = 4 * -1 = -4` - For `i = 5`: `5 * (5 - 5) = 5 * 0 = 0`  Now, sum these values: `s = 0 + (-4) + (-6) + (-6) + (-4) + 0` `s = -4 - 6 - 6 - 4` `s = -20`  Final answer: -20"
+      },
+      {
+        "case_id": "e162_controlled_acpi_e159_counting_complement_01_invalid_answer_preserving_reference",
+        "task_id": "e159_counting_complement_01",
+        "family": "counting_complement",
+        "localized_correct": true,
+        "random_correct": true,
+        "localized_final": "32",
+        "random_final": "32",
+        "localized_tokens": 446,
+        "random_tokens": 416,
+        "delta_localized_minus_random": 30,
+        "localized_span": "desired subsets are those with sum less than half",
+        "random_span": "Let S be a subset of",
+        "localized_start": "To solve the problem, we first determine the total sum of the set $S = \\{1, 2, 3, 4, 5, 6\\}$. The total sum is $1 + 2 + 3 + 4 + 5 + 6 = 21$. Half of the total sum is $21 / 2 = 10.5$. We are looking for the number of subsets whose sum is greater than 10.5.  Let $A$ be a subset of $S$, and let $\\sigma(A)$ denote the sum of the elements of $A$. The complement of $A$ is $A^c = S \\setminus A$. The sum of the elements of $A^c$ is $\\sigma(A^c) = 21 - \\sigma(A)$.  Note that for any subset $A$, exactly one of the following must be true: 1. $\\sigma(A) > 10.5$ 2. $\\sigma(A) < 10.5$ (Since the total sum is odd, the sum of a subset can never be exactly 10.5).  There are $2^6 = 64$ total subsets of $S$. B",
+        "random_start": "To solve the problem, we first determine the total sum of the set $\\{1, 2, 3, 4, 5, 6\\}$. The total sum is $1 + 2 + 3 + 4 + 5 + 6 = 21$. Half of the total sum is $21 / 2 = 10.5$. We are looking for the number of subsets $S \\subseteq \\{1, 2, 3, 4, 5, 6\\}$ such that the sum of elements in $S$, denoted $\\sum S$, is greater than $10.5$.  Let $S$ be a subset and $S^c$ be its complement in $\\{1, 2, 3, 4, 5, 6\\}$. The sum of the elements in $S$ and $S^c$ must equal the total sum: $\\sum S + \\sum S^c = 21$.  Since 21 is odd, it is impossible for $\\sum S$ to equal $10.5$. Therefore, for every subset $S$, either $\\sum S > 10.5$ or $\\sum S < 10.5$. Exactly one of $S$ or $S^c$ must have a sum greater tha"
+      }
+    ]
+  }
+}

@@ -1,0 +1,538 @@
+{
+  "contextual_bridge": {
+    "best_layer": {
+      "layer": 10,
+      "mean_hard_margin": 0.4281758964061737,
+      "mean_mismatch_cos": 0.43679338693618774,
+      "mean_pair_cos": 0.8649693131446838,
+      "mean_rank": 1.0,
+      "min_hard_margin": 0.38755112886428833,
+      "top1": 1.0
+    },
+    "early_bridge_layer": {
+      "layer": 0,
+      "mean_hard_margin": 0.035169124603271484,
+      "mean_mismatch_cos": 0.11029201745986938,
+      "mean_pair_cos": 0.14546114206314087,
+      "mean_rank": 1.0,
+      "min_hard_margin": 0.02723608911037445,
+      "top1": 1.0
+    },
+    "layers": [
+      {
+        "layer": 0,
+        "mean_hard_margin": 0.035169124603271484,
+        "mean_mismatch_cos": 0.11029201745986938,
+        "mean_pair_cos": 0.14546114206314087,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.02723608911037445,
+        "top1": 1.0
+      },
+      {
+        "layer": 1,
+        "mean_hard_margin": 0.044945985078811646,
+        "mean_mismatch_cos": 0.7827777862548828,
+        "mean_pair_cos": 0.8277237415313721,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.020062148571014404,
+        "top1": 1.0
+      },
+      {
+        "layer": 2,
+        "mean_hard_margin": 0.04232150316238403,
+        "mean_mismatch_cos": 0.8040819764137268,
+        "mean_pair_cos": 0.8464035391807556,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.01080089807510376,
+        "top1": 1.0
+      },
+      {
+        "layer": 3,
+        "mean_hard_margin": 0.14845407009124756,
+        "mean_mismatch_cos": 0.6029683351516724,
+        "mean_pair_cos": 0.7514224052429199,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.058425724506378174,
+        "top1": 1.0
+      },
+      {
+        "layer": 4,
+        "mean_hard_margin": 0.2588689625263214,
+        "mean_mismatch_cos": 0.5360956192016602,
+        "mean_pair_cos": 0.7949645519256592,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.18337029218673706,
+        "top1": 1.0
+      },
+      {
+        "layer": 5,
+        "mean_hard_margin": 0.31058406829833984,
+        "mean_mismatch_cos": 0.47652411460876465,
+        "mean_pair_cos": 0.7871081829071045,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.2307649850845337,
+        "top1": 1.0
+      },
+      {
+        "layer": 6,
+        "mean_hard_margin": 0.30436670780181885,
+        "mean_mismatch_cos": 0.4864633083343506,
+        "mean_pair_cos": 0.7908298969268799,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.22333496809005737,
+        "top1": 1.0
+      },
+      {
+        "layer": 7,
+        "mean_hard_margin": 0.3475109338760376,
+        "mean_mismatch_cos": 0.46678441762924194,
+        "mean_pair_cos": 0.8142953515052795,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.29716771841049194,
+        "top1": 1.0
+      },
+      {
+        "layer": 8,
+        "mean_hard_margin": 0.3596465438604355,
+        "mean_mismatch_cos": 0.46079957485198975,
+        "mean_pair_cos": 0.8204461336135864,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.3077065050601959,
+        "top1": 1.0
+      },
+      {
+        "layer": 9,
+        "mean_hard_margin": 0.4106617420911789,
+        "mean_mismatch_cos": 0.4377070665359497,
+        "mean_pair_cos": 0.848368763923645,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.3621978461742401,
+        "top1": 1.0
+      },
+      {
+        "layer": 10,
+        "mean_hard_margin": 0.4281758964061737,
+        "mean_mismatch_cos": 0.43679338693618774,
+        "mean_pair_cos": 0.8649693131446838,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.38755112886428833,
+        "top1": 1.0
+      },
+      {
+        "layer": 11,
+        "mean_hard_margin": 0.4016289561986923,
+        "mean_mismatch_cos": 0.4713134765625,
+        "mean_pair_cos": 0.8729424476623535,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.3629477918148041,
+        "top1": 1.0
+      },
+      {
+        "layer": 12,
+        "mean_hard_margin": 0.3577335476875305,
+        "mean_mismatch_cos": 0.5238628387451172,
+        "mean_pair_cos": 0.8815964460372925,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.319443941116333,
+        "top1": 1.0
+      },
+      {
+        "layer": 13,
+        "mean_hard_margin": 0.34253281354904175,
+        "mean_mismatch_cos": 0.5323880910873413,
+        "mean_pair_cos": 0.8749209642410278,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.3001316785812378,
+        "top1": 1.0
+      },
+      {
+        "layer": 14,
+        "mean_hard_margin": 0.29751771688461304,
+        "mean_mismatch_cos": 0.574535608291626,
+        "mean_pair_cos": 0.8720532655715942,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.26648151874542236,
+        "top1": 1.0
+      },
+      {
+        "layer": 15,
+        "mean_hard_margin": 0.321943074464798,
+        "mean_mismatch_cos": 0.5200679302215576,
+        "mean_pair_cos": 0.8420109748840332,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.28368109464645386,
+        "top1": 1.0
+      },
+      {
+        "layer": 16,
+        "mean_hard_margin": 0.28569453954696655,
+        "mean_mismatch_cos": 0.5414797067642212,
+        "mean_pair_cos": 0.827174186706543,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.24470853805541992,
+        "top1": 1.0
+      },
+      {
+        "layer": 17,
+        "mean_hard_margin": 0.24596145749092102,
+        "mean_mismatch_cos": 0.5980477929115295,
+        "mean_pair_cos": 0.8440093398094177,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.21812975406646729,
+        "top1": 1.0
+      },
+      {
+        "layer": 18,
+        "mean_hard_margin": 0.25457873940467834,
+        "mean_mismatch_cos": 0.5903785228729248,
+        "mean_pair_cos": 0.8449573516845703,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.22415614128112793,
+        "top1": 1.0
+      },
+      {
+        "layer": 19,
+        "mean_hard_margin": 0.25421440601348877,
+        "mean_mismatch_cos": 0.5884444713592529,
+        "mean_pair_cos": 0.8426587581634521,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.21530753374099731,
+        "top1": 1.0
+      },
+      {
+        "layer": 20,
+        "mean_hard_margin": 0.24107390642166138,
+        "mean_mismatch_cos": 0.6047531366348267,
+        "mean_pair_cos": 0.8458271026611328,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.2152174711227417,
+        "top1": 1.0
+      },
+      {
+        "layer": 21,
+        "mean_hard_margin": 0.2650511562824249,
+        "mean_mismatch_cos": 0.5601950287818909,
+        "mean_pair_cos": 0.825246274471283,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.2320772409439087,
+        "top1": 1.0
+      },
+      {
+        "layer": 22,
+        "mean_hard_margin": 0.2326466143131256,
+        "mean_mismatch_cos": 0.5985800623893738,
+        "mean_pair_cos": 0.831226646900177,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.22120946645736694,
+        "top1": 1.0
+      },
+      {
+        "layer": 23,
+        "mean_hard_margin": 0.23304608464241028,
+        "mean_mismatch_cos": 0.5702426433563232,
+        "mean_pair_cos": 0.8032886981964111,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.1924411654472351,
+        "top1": 1.0
+      },
+      {
+        "layer": 24,
+        "mean_hard_margin": 0.2664591372013092,
+        "mean_mismatch_cos": 0.5028504133224487,
+        "mean_pair_cos": 0.7693095207214355,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.22247862815856934,
+        "top1": 1.0
+      },
+      {
+        "layer": 25,
+        "mean_hard_margin": 0.26222893595695496,
+        "mean_mismatch_cos": 0.4946848154067993,
+        "mean_pair_cos": 0.7569137811660767,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.23865163326263428,
+        "top1": 1.0
+      },
+      {
+        "layer": 26,
+        "mean_hard_margin": 0.26553498208522797,
+        "mean_mismatch_cos": 0.46547263860702515,
+        "mean_pair_cos": 0.7310076355934143,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.23657330870628357,
+        "top1": 1.0
+      },
+      {
+        "layer": 27,
+        "mean_hard_margin": 0.2457350641489029,
+        "mean_mismatch_cos": 0.4751437306404114,
+        "mean_pair_cos": 0.7208787798881531,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.23001354932785034,
+        "top1": 1.0
+      },
+      {
+        "layer": 28,
+        "mean_hard_margin": 0.22826522588729858,
+        "mean_mismatch_cos": 0.46915674209594727,
+        "mean_pair_cos": 0.6974219083786011,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.22129377722740173,
+        "top1": 1.0
+      },
+      {
+        "layer": 29,
+        "mean_hard_margin": 0.20353615283966064,
+        "mean_mismatch_cos": 0.46788036823272705,
+        "mean_pair_cos": 0.6714164018630981,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.18887799978256226,
+        "top1": 1.0
+      },
+      {
+        "layer": 30,
+        "mean_hard_margin": 0.17864452302455902,
+        "mean_mismatch_cos": 0.4502074122428894,
+        "mean_pair_cos": 0.6288519501686096,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.1699269413948059,
+        "top1": 1.0
+      },
+      {
+        "layer": 31,
+        "mean_hard_margin": 0.14535114169120789,
+        "mean_mismatch_cos": 0.48091447353363037,
+        "mean_pair_cos": 0.6262655258178711,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.13648295402526855,
+        "top1": 1.0
+      },
+      {
+        "layer": 32,
+        "mean_hard_margin": 0.12430736422538757,
+        "mean_mismatch_cos": 0.44754087924957275,
+        "mean_pair_cos": 0.5718481540679932,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.12164536118507385,
+        "top1": 1.0
+      },
+      {
+        "layer": 33,
+        "mean_hard_margin": 0.10840514302253723,
+        "mean_mismatch_cos": 0.3127257823944092,
+        "mean_pair_cos": 0.421130895614624,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.10158568620681763,
+        "top1": 1.0
+      },
+      {
+        "layer": 34,
+        "mean_hard_margin": 0.08629437163472176,
+        "mean_mismatch_cos": 0.0886298418045044,
+        "mean_pair_cos": 0.17492422461509705,
+        "mean_rank": 1.0,
+        "min_hard_margin": 0.08591124415397644,
+        "top1": 1.0
+      }
+    ],
+    "term_rows": [
+      {
+        "idx": 0,
+        "lang": "en",
+        "prompt": "In mathematical reasoning, the current concept is: derivative. Understand this concept.",
+        "target_positions": [
+          10
+        ],
+        "term": "derivative"
+      },
+      {
+        "idx": 0,
+        "lang": "zh",
+        "prompt": "在数学推理中，当前概念是：导数。请理解这个概念。",
+        "target_positions": [
+          13,
+          14
+        ],
+        "term": "导数"
+      },
+      {
+        "idx": 1,
+        "lang": "en",
+        "prompt": "In mathematical reasoning, the current concept is: prime number. Understand this concept.",
+        "target_positions": [
+          10,
+          11
+        ],
+        "term": "prime number"
+      },
+      {
+        "idx": 1,
+        "lang": "zh",
+        "prompt": "在数学推理中，当前概念是：质数。请理解这个概念。",
+        "target_positions": [
+          13,
+          14
+        ],
+        "term": "质数"
+      }
+    ]
+  },
+  "created_at": "2026-04-27T02:17:15",
+  "cuda_visible_devices": "0",
+  "device": "cuda:0",
+  "dtype": "bfloat16",
+  "host": "hpc-node-01",
+  "model_config": {
+    "architectures": [
+      "Mistral3ForConditionalGeneration"
+    ],
+    "hidden_size": null,
+    "model_type": "mistral3",
+    "num_hidden_layers": null,
+    "vocab_size": null
+  },
+  "model_key": "ministral3_8b_reasoning",
+  "model_spec": {
+    "class": "reasoning",
+    "family": "mistral",
+    "loader_risk": "conditional_generation_or_multimodal; may require AutoModelForImageTextToText/AutoProcessor rather than AutoModelForCausalLM",
+    "notes": "non-Qwen reasoning control",
+    "path": "/home/Awei/LLM/Model/base/ministral3_8b_reasoning",
+    "priority": "P0",
+    "remote_repo": "mistralai/Ministral-3-8B-Reasoning-2512",
+    "status": "local_downloaded"
+  },
+  "num_process_cases": 2,
+  "num_terms": 2,
+  "patch_layers": [
+    8,
+    17,
+    25,
+    33
+  ],
+  "process_verifier": {
+    "accuracy": 1.0,
+    "invalid_final_correct_false_accept_rate": 0.0,
+    "no_id": 3501,
+    "rows": [
+      {
+        "case_id": "linear_valid",
+        "correct": true,
+        "final_correct_gold": true,
+        "no_token_id": 3501,
+        "pred_process_valid": true,
+        "process_valid_gold": true,
+        "prompt_lang": "en",
+        "risk_type": "other",
+        "yes_minus_no_logprob": 1.125,
+        "yes_token_id": 13830
+      },
+      {
+        "case_id": "linear_valid",
+        "correct": true,
+        "final_correct_gold": true,
+        "no_token_id": 1032,
+        "pred_process_valid": true,
+        "process_valid_gold": true,
+        "prompt_lang": "zh",
+        "risk_type": "other",
+        "yes_minus_no_logprob": 1.187499761581421,
+        "yes_token_id": 64359
+      },
+      {
+        "case_id": "linear_invalid_final_correct",
+        "correct": true,
+        "final_correct_gold": true,
+        "no_token_id": 3501,
+        "pred_process_valid": false,
+        "process_valid_gold": false,
+        "prompt_lang": "en",
+        "risk_type": "invalid_final_correct",
+        "yes_minus_no_logprob": -0.75,
+        "yes_token_id": 13830
+      },
+      {
+        "case_id": "linear_invalid_final_correct",
+        "correct": true,
+        "final_correct_gold": true,
+        "no_token_id": 1032,
+        "pred_process_valid": false,
+        "process_valid_gold": false,
+        "prompt_lang": "zh",
+        "risk_type": "invalid_final_correct",
+        "yes_minus_no_logprob": -1.25,
+        "yes_token_id": 64359
+      }
+    ],
+    "yes_id": 13830,
+    "zh_no_id": 1032,
+    "zh_yes_id": 64359
+  },
+  "residual_patching": {
+    "reason": "--skip-patching",
+    "skipped": true
+  },
+  "started_at": "2026-04-27T02:17:12",
+  "tokenization": [
+    {
+      "lang": "en",
+      "num_tokens": 2,
+      "pair_en": "derivative",
+      "pair_zh": "导数",
+      "text": "derivative",
+      "token_ids": [
+        1868,
+        126561
+      ],
+      "tokens": [
+        "der",
+        "ivative"
+      ]
+    },
+    {
+      "lang": "zh",
+      "num_tokens": 2,
+      "pair_en": "derivative",
+      "pair_zh": "导数",
+      "text": "导数",
+      "token_ids": [
+        67330,
+        15627
+      ],
+      "tokens": [
+        "å¯¼",
+        "æķ°"
+      ]
+    },
+    {
+      "lang": "en",
+      "num_tokens": 2,
+      "pair_en": "prime number",
+      "pair_zh": "质数",
+      "text": "prime number",
+      "token_ids": [
+        8658,
+        2782
+      ],
+      "tokens": [
+        "prime",
+        "Ġnumber"
+      ]
+    },
+    {
+      "lang": "zh",
+      "num_tokens": 2,
+      "pair_en": "prime number",
+      "pair_zh": "质数",
+      "text": "质数",
+      "token_ids": [
+        76057,
+        15627
+      ],
+      "tokens": [
+        "è´¨",
+        "æķ°"
+      ]
+    }
+  ]
+}

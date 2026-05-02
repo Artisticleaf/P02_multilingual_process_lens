@@ -1,0 +1,434 @@
+{
+  "created_at": "2026-04-29T16:02:20",
+  "experiment": "E91_thinking_mode_config_audit",
+  "mode_boundary": {
+    "DV": "direct-answer verifier with thinking disabled",
+    "MI_DV": "mechanistic intervention under direct-verifier prompts",
+    "NG": "non-thinking generation",
+    "TG": "thinking generation",
+    "TV": "thinking verifier with generated final decision parsing"
+  },
+  "models": {
+    "gemma4_26b_a4b_it": {
+      "config": {
+        "architectures": [
+          "Gemma4ForConditionalGeneration"
+        ],
+        "max_position_embeddings": null,
+        "model_type": "gemma4",
+        "tokenizer_model_max_length": 1000000000000000019884624838656
+      },
+      "doc_link": "https://huggingface.co/google/gemma-4-26B-A4B-it",
+      "family": "gemma",
+      "has_chat_template": true,
+      "mode_verdict": {
+        "first_token_option_logprob_safe_in_thinking": false,
+        "nonthinking_render_ok": true,
+        "reason": "thinking mode starts a thought/reasoning region before the final answer, so Yes/No or A/B must be parsed from the generated final decision rather than scored as the first assistant token.",
+        "recommended_parser": [
+          "Generate with thinking enabled and sufficient max_new_tokens.",
+          "Strip or separately save thought content according to the model template.",
+          "Parse the last explicit `Final decision: Yes/No` or final A/B line.",
+          "If no final decision is parseable, mark the row parse_failed rather than guessing."
+        ],
+        "thinking_render_ok": true
+      },
+      "model_key": "gemma4_26b_a4b_it",
+      "path": "/home/Awei/LLM/Model/base/gemma4_26b_a4b_it",
+      "priority": "P0_core_frontier_medium",
+      "recommended_params": {
+        "context_note": "local README states medium Gemma4 models support 256K context.",
+        "generation_config": {
+          "temperature": 1.0,
+          "top_k": 64,
+          "top_p": 0.95
+        },
+        "readme_snippets": [
+          {
+            "line": 55,
+            "text": "53: | **Layers** | 35 | 42 | 60 |\n54: | **Sliding Window** | 512 tokens | 512 tokens | 1024 tokens |\n55: | **Context Length** | 128K tokens | 128K tokens | 256K tokens  |\n56: | **Vocabulary Size** | 262K | 262K | 262K |\n57: | **Supported Modalities** | Text, Image, Audio | Text, Image, Audio | Text, Image |"
+          },
+          {
+            "line": 71,
+            "text": "69: | **Layers** | 30 |\n70: | **Sliding Window** | 1024 tokens |\n71: | **Context Length** | 256K tokens |\n72: | **Vocabulary Size** | 262K |\n73: | **Expert Count** | 8 active / 128 total and 1 shared |"
+          },
+          {
+            "line": 156,
+            "text": "154:     tokenize=False, \n155:     add_generation_prompt=True, \n156:     enable_thinking=False\n157: )\n158: inputs = processor(text=text, return_tensors=\"pt\").to(model.device)"
+          },
+          {
+            "line": 169,
+            "text": "167: ```\n168: \n169: To enable reasoning, set `enable_thinking=True` and the `parse_response` function will take care of parsing the thinking output.\n170: \n171: Below, you will also find snippets for processing audio (E2B and E4B only), images, and video alongside text:"
+          },
+          {
+            "line": 358,
+            "text": "356: Use the following standardized sampling configuration across all use cases:\n357: \n358: * `temperature=1.0`  \n359: * `top_p=0.95`  \n360: * `top_k=64`"
+          }
+        ],
+        "recommended_thinking": {
+          "temperature": 1.0,
+          "top_k": 64,
+          "top_p": 0.95
+        }
+      },
+      "render_false": {
+        "add_special_tokens": false,
+        "markers": {
+          "assistant_prompt_tail": "<bos><|turn>user\nPlease inspect the trace and then output a final decision exactly as `Final decision: Yes` or `Final decision: No`.\n\nProblem: Is 2 + 2 = 4?\nTrace: 2 + 2 = 4.<turn|>\n<|turn>model\n<|channel>thought\n<channel|>",
+          "char_len": 223,
+          "contains_channel_thought": true,
+          "contains_close_think": false,
+          "contains_empty_gemma_thought": true,
+          "contains_empty_think_block": false,
+          "contains_gemma_think_token": false,
+          "contains_open_think": false,
+          "has_disabled_thinking_signal": true,
+          "has_thinking_start_signal": false
+        },
+        "note": null
+      },
+      "render_true": {
+        "add_special_tokens": false,
+        "markers": {
+          "assistant_prompt_tail": "<bos><|turn>system\n<|think|>\n<turn|>\n<|turn>user\nPlease inspect the trace and then output a final decision exactly as `Final decision: Yes` or `Final decision: No`.\n\nProblem: Is 2 + 2 = 4?\nTrace: 2 + 2 = 4.<turn|>\n<|turn>model\n",
+          "char_len": 227,
+          "contains_channel_thought": false,
+          "contains_close_think": false,
+          "contains_empty_gemma_thought": false,
+          "contains_empty_think_block": false,
+          "contains_gemma_think_token": true,
+          "contains_open_think": false,
+          "has_disabled_thinking_signal": false,
+          "has_thinking_start_signal": true
+        },
+        "note": null
+      },
+      "tokenizer_class": "GemmaTokenizer"
+    },
+    "gemma4_31b_it": {
+      "config": {
+        "architectures": [
+          "Gemma4ForConditionalGeneration"
+        ],
+        "max_position_embeddings": null,
+        "model_type": "gemma4",
+        "tokenizer_model_max_length": 1000000000000000019884624838656
+      },
+      "doc_link": "https://huggingface.co/google/gemma-4-31B-it",
+      "family": "gemma",
+      "has_chat_template": true,
+      "mode_verdict": {
+        "first_token_option_logprob_safe_in_thinking": false,
+        "nonthinking_render_ok": true,
+        "reason": "thinking mode starts a thought/reasoning region before the final answer, so Yes/No or A/B must be parsed from the generated final decision rather than scored as the first assistant token.",
+        "recommended_parser": [
+          "Generate with thinking enabled and sufficient max_new_tokens.",
+          "Strip or separately save thought content according to the model template.",
+          "Parse the last explicit `Final decision: Yes/No` or final A/B line.",
+          "If no final decision is parseable, mark the row parse_failed rather than guessing."
+        ],
+        "thinking_render_ok": true
+      },
+      "model_key": "gemma4_31b_it",
+      "path": "/home/Awei/LLM/Model/base/gemma4_31b_it",
+      "priority": "P0_core_frontier_medium",
+      "recommended_params": {
+        "context_note": "local README states medium Gemma4 models support 256K context.",
+        "generation_config": {
+          "temperature": 1.0,
+          "top_k": 64,
+          "top_p": 0.95
+        },
+        "readme_snippets": [
+          {
+            "line": 55,
+            "text": "53: | **Layers** | 35 | 42 | 60 |\n54: | **Sliding Window** | 512 tokens | 512 tokens | 1024 tokens |\n55: | **Context Length** | 128K tokens | 128K tokens | 256K tokens  |\n56: | **Vocabulary Size** | 262K | 262K | 262K |\n57: | **Supported Modalities** | Text, Image, Audio | Text, Image, Audio | Text, Image |"
+          },
+          {
+            "line": 71,
+            "text": "69: | **Layers** | 30 |\n70: | **Sliding Window** | 1024 tokens |\n71: | **Context Length** | 256K tokens |\n72: | **Vocabulary Size** | 262K |\n73: | **Expert Count** | 8 active / 128 total and 1 shared |"
+          },
+          {
+            "line": 156,
+            "text": "154:     tokenize=False, \n155:     add_generation_prompt=True, \n156:     enable_thinking=False\n157: )\n158: inputs = processor(text=text, return_tensors=\"pt\").to(model.device)"
+          },
+          {
+            "line": 169,
+            "text": "167: ```\n168: \n169: To enable reasoning, set `enable_thinking=True` and the `parse_response` function will take care of parsing the thinking output.\n170: \n171: Below, you will also find snippets for processing audio (E2B and E4B only), images, and video alongside text:"
+          },
+          {
+            "line": 358,
+            "text": "356: Use the following standardized sampling configuration across all use cases:\n357: \n358: * `temperature=1.0`  \n359: * `top_p=0.95`  \n360: * `top_k=64`"
+          }
+        ],
+        "recommended_thinking": {
+          "temperature": 1.0,
+          "top_k": 64,
+          "top_p": 0.95
+        }
+      },
+      "render_false": {
+        "add_special_tokens": false,
+        "markers": {
+          "assistant_prompt_tail": "<bos><|turn>user\nPlease inspect the trace and then output a final decision exactly as `Final decision: Yes` or `Final decision: No`.\n\nProblem: Is 2 + 2 = 4?\nTrace: 2 + 2 = 4.<turn|>\n<|turn>model\n<|channel>thought\n<channel|>",
+          "char_len": 223,
+          "contains_channel_thought": true,
+          "contains_close_think": false,
+          "contains_empty_gemma_thought": true,
+          "contains_empty_think_block": false,
+          "contains_gemma_think_token": false,
+          "contains_open_think": false,
+          "has_disabled_thinking_signal": true,
+          "has_thinking_start_signal": false
+        },
+        "note": null
+      },
+      "render_true": {
+        "add_special_tokens": false,
+        "markers": {
+          "assistant_prompt_tail": "<bos><|turn>system\n<|think|>\n<turn|>\n<|turn>user\nPlease inspect the trace and then output a final decision exactly as `Final decision: Yes` or `Final decision: No`.\n\nProblem: Is 2 + 2 = 4?\nTrace: 2 + 2 = 4.<turn|>\n<|turn>model\n",
+          "char_len": 227,
+          "contains_channel_thought": false,
+          "contains_close_think": false,
+          "contains_empty_gemma_thought": false,
+          "contains_empty_think_block": false,
+          "contains_gemma_think_token": true,
+          "contains_open_think": false,
+          "has_disabled_thinking_signal": false,
+          "has_thinking_start_signal": true
+        },
+        "note": null
+      },
+      "tokenizer_class": "GemmaTokenizer"
+    },
+    "glm47_flash_candidate": {
+      "config": {
+        "architectures": [
+          "Glm4MoeLiteForCausalLM"
+        ],
+        "max_position_embeddings": 202752,
+        "model_type": "glm4_moe_lite",
+        "tokenizer_model_max_length": 128000
+      },
+      "doc_link": "https://huggingface.co/zai-org/GLM-4.7-Flash",
+      "family": "glm",
+      "has_chat_template": true,
+      "mode_verdict": {
+        "first_token_option_logprob_safe_in_thinking": false,
+        "nonthinking_render_ok": true,
+        "reason": "thinking mode starts a thought/reasoning region before the final answer, so Yes/No or A/B must be parsed from the generated final decision rather than scored as the first assistant token.",
+        "recommended_parser": [
+          "Generate with thinking enabled and sufficient max_new_tokens.",
+          "Strip or separately save thought content according to the model template.",
+          "Parse the last explicit `Final decision: Yes/No` or final A/B line.",
+          "If no final decision is parseable, mark the row parse_failed rather than guessing."
+        ],
+        "thinking_render_ok": true
+      },
+      "model_key": "glm47_flash_candidate",
+      "path": "/home/Awei/LLM/Model/base/glm47_flash",
+      "priority": "P0_expanded_frontier_medium",
+      "recommended_params": {
+        "deployment_note": "local README vLLM examples use --reasoning-parser glm45.",
+        "generation_config": {
+          "temperature": 1.0
+        },
+        "readme_snippets": [
+          {
+            "line": 48,
+            "text": "46: **Default Settings (Most Tasks)**\n47: \n48: * temperature: `1.0`\n49: * top-p: `0.95`\n50: * max new tokens: `131072`"
+          },
+          {
+            "line": 56,
+            "text": "54: **Terminal Bench, SWE Bench Verified**\n55: \n56: * temperature: `0.7`\n57: * top-p: `1.0`\n58: * max new tokens: `16384`"
+          },
+          {
+            "line": 62,
+            "text": "60: **τ^2-Bench**\n61: \n62: * Temperature: `0`\n63: * Max new tokens: `16384`\n64: "
+          },
+          {
+            "line": 135,
+            "text": "133:      --speculative-config.num_speculative_tokens 1 \\\n134:      --tool-call-parser glm47 \\\n135:      --reasoning-parser glm45 \\\n136:      --enable-auto-tool-choice \\\n137:      --served-model-name glm-4.7-flash"
+          },
+          {
+            "line": 147,
+            "text": "145:   --tp-size 4 \\\n146:   --tool-call-parser glm47  \\\n147:   --reasoning-parser glm45 \\\n148:   --speculative-algorithm EAGLE \\\n149:   --speculative-num-steps 3 \\"
+          }
+        ],
+        "recommended_thinking": {
+          "max_new_tokens": 131072,
+          "temperature": 1.0,
+          "top_p": 0.95
+        }
+      },
+      "render_false": {
+        "add_special_tokens": false,
+        "markers": {
+          "assistant_prompt_tail": "[gMASK]<sop><|user|>Please inspect the trace and then output a final decision exactly as `Final decision: Yes` or `Final decision: No`.\n\nProblem: Is 2 + 2 = 4?\nTrace: 2 + 2 = 4.\n<|assistant|></think>",
+          "char_len": 199,
+          "contains_channel_thought": false,
+          "contains_close_think": true,
+          "contains_empty_gemma_thought": false,
+          "contains_empty_think_block": false,
+          "contains_gemma_think_token": false,
+          "contains_open_think": false,
+          "has_disabled_thinking_signal": true,
+          "has_thinking_start_signal": false
+        },
+        "note": null
+      },
+      "render_true": {
+        "add_special_tokens": false,
+        "markers": {
+          "assistant_prompt_tail": "[gMASK]<sop><|user|>Please inspect the trace and then output a final decision exactly as `Final decision: Yes` or `Final decision: No`.\n\nProblem: Is 2 + 2 = 4?\nTrace: 2 + 2 = 4.\n<|assistant|><think>",
+          "char_len": 198,
+          "contains_channel_thought": false,
+          "contains_close_think": false,
+          "contains_empty_gemma_thought": false,
+          "contains_empty_think_block": false,
+          "contains_gemma_think_token": false,
+          "contains_open_think": true,
+          "has_disabled_thinking_signal": false,
+          "has_thinking_start_signal": true
+        },
+        "note": null
+      },
+      "tokenizer_class": "TokenizersBackend"
+    },
+    "qwen35_27b": {
+      "config": {
+        "architectures": [
+          "Qwen3_5ForConditionalGeneration"
+        ],
+        "max_position_embeddings": null,
+        "model_type": "qwen3_5",
+        "tokenizer_model_max_length": 262144
+      },
+      "doc_link": "https://huggingface.co/Qwen/Qwen3.5-27B",
+      "family": "qwen35",
+      "has_chat_template": true,
+      "mode_verdict": {
+        "first_token_option_logprob_safe_in_thinking": false,
+        "nonthinking_render_ok": true,
+        "reason": "thinking mode starts a thought/reasoning region before the final answer, so Yes/No or A/B must be parsed from the generated final decision rather than scored as the first assistant token.",
+        "recommended_parser": [
+          "Generate with thinking enabled and sufficient max_new_tokens.",
+          "Strip or separately save thought content according to the model template.",
+          "Parse the last explicit `Final decision: Yes/No` or final A/B line.",
+          "If no final decision is parseable, mark the row parse_failed rather than guessing."
+        ],
+        "thinking_render_ok": true
+      },
+      "model_key": "qwen35_27b",
+      "path": "/home/Awei/LLM/Model/base/qwen35_27b",
+      "priority": "P0_core_frontier_medium",
+      "recommended_params": {
+        "context_note": "local README states default 262144 tokens and advises at least 128K for thinking capability.",
+        "generation_config": {
+          "temperature": 0.6,
+          "top_k": 20,
+          "top_p": 0.95
+        },
+        "readme_snippets": [
+          {
+            "line": 61,
+            "text": "59:     - LM Output: 248320 (Padded)\n60:     - MTP: trained with multi-steps  \n61: - Context Length: 262,144 natively and extensible up to 1,010,000 tokens.\n62: \n63: ## Benchmark Results"
+          },
+          {
+            "line": 905,
+            "text": "903: \n904: > [!Important]\n905: > The model has a default context length of 262,144 tokens.\n906: > If you encounter out-of-memory (OOM) errors, consider reducing the context window. \n907: > However, because Qwen3.5 leverages extended context for complex tasks, we advise maintaining a context length of at least 128K tokens to preserve thinking capabilities."
+          },
+          {
+            "line": 920,
+            "text": "918: The following will create API endpoints at `http://localhost:8000/v1`:\n919: \n920: - **Standard Version**: The following command can be used to create an API endpoint with maximum context length 262,144 tokens using tensor parallel on 8 GPUs.\n921:     \n922:     ```shell"
+          },
+          {
+            "line": 929,
+            "text": "927:     \n928:     ```shell\n929:     python -m sglang.launch_server --model-path Qwen/Qwen3.5-27B --port 8000 --tp-size 8 --mem-fraction-static 0.8 --context-length 262144 --reasoning-parser qwen3 --tool-call-parser qwen3_coder\n930:     ```\n931: "
+          },
+          {
+            "line": 935,
+            "text": "933:     \n934:     ```shell\n935:     python -m sglang.launch_server --model-path Qwen/Qwen3.5-27B --port 8000 --tp-size 8 --mem-fraction-static 0.8 --context-length 262144 --reasoning-parser qwen3 --speculative-algo NEXTN --speculative-num-steps 3 --speculative-eagle-topk 1 --speculative-num-draft-tokens 4\n936:     ```\n937: "
+          },
+          {
+            "line": 951,
+            "text": "949: The following will create API endpoints at `http://localhost:8000/v1`:\n950: \n951: - **Standard Version**: The following command can be used to create an API endpoint with maximum context length 262,144 tokens using tensor parallel on 8 GPUs.\n952: \n953:     ```shell"
+          },
+          {
+            "line": 960,
+            "text": "958:     \n959:     ```shell\n960:     vllm serve Qwen/Qwen3.5-27B --port 8000 --tensor-parallel-size 8 --max-model-len 262144 --reasoning-parser qwen3 --enable-auto-tool-choice --tool-call-parser qwen3_coder \n961:     ```\n962: "
+          },
+          {
+            "line": 966,
+            "text": "964: \n965:     ```shell\n966:     vllm serve Qwen/Qwen3.5-27B --port 8000 --tensor-parallel-size 8 --max-model-len 262144 --reasoning-parser qwen3 --speculative-config '{\"method\":\"qwen3_next_mtp\",\"num_speculative_tokens\":2}'\n967:     ```\n968: "
+          },
+          {
+            "line": 972,
+            "text": "970:     \n971:     ```shell\n972:     vllm serve Qwen/Qwen3.5-27B --port 8000 --tensor-parallel-size 8 --max-model-len 262144 --reasoning-parser qwen3 --language-model-only\n973:     ```\n974: "
+          },
+          {
+            "line": 1010,
+            "text": "1008: > [!Tip]\n1009: > We recommend using the following set of sampling parameters for generation\n1010: > - Thinking mode for general tasks: `temperature=1.0, top_p=0.95, top_k=20, min_p=0.0, presence_penalty=1.5, repetition_penalty=1.0`\n1011: > - Thinking mode for precise coding tasks (e.g. WebDev): `temperature=0.6, top_p=0.95, top_k=20, min_p=0.0, presence_penalty=0.0, repetition_penalty=1.0`\n1012: > - Instruct (or non-thinking) mode for general tasks: `temperature=0.7, top_p=0.8, top_k=20, min_p=0.0, presence_penalty=1.5, repetition_penalty=1.0`"
+          },
+          {
+            "line": 1032,
+            "text": "1030:     messages=messages,\n1031:     max_tokens=81920,\n1032:     temperature=1.0,\n1033:     top_p=0.95,\n1034:     presence_penalty=1.5,"
+          },
+          {
+            "line": 1072,
+            "text": "1070:     messages=messages,\n1071:     max_tokens=81920,\n1072:     temperature=1.0,\n1073:     top_p=0.95,\n1074:     presence_penalty=1.5,"
+          }
+        ],
+        "recommended_nonthinking_reasoning": {
+          "min_p": 0.0,
+          "presence_penalty": 2.0,
+          "repetition_penalty": 1.0,
+          "temperature": 1.0,
+          "top_k": 40,
+          "top_p": 1.0
+        },
+        "recommended_thinking": {
+          "min_p": 0.0,
+          "presence_penalty": 1.5,
+          "repetition_penalty": 1.0,
+          "temperature": 1.0,
+          "top_k": 20,
+          "top_p": 0.95
+        }
+      },
+      "render_false": {
+        "add_special_tokens": false,
+        "markers": {
+          "assistant_prompt_tail": "<|im_start|>user\nPlease inspect the trace and then output a final decision exactly as `Final decision: Yes` or `Final decision: No`.\n\nProblem: Is 2 + 2 = 4?\nTrace: 2 + 2 = 4.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "char_len": 226,
+          "contains_channel_thought": false,
+          "contains_close_think": true,
+          "contains_empty_gemma_thought": false,
+          "contains_empty_think_block": true,
+          "contains_gemma_think_token": false,
+          "contains_open_think": true,
+          "has_disabled_thinking_signal": true,
+          "has_thinking_start_signal": false
+        },
+        "note": null
+      },
+      "render_true": {
+        "add_special_tokens": false,
+        "markers": {
+          "assistant_prompt_tail": "<|im_start|>user\nPlease inspect the trace and then output a final decision exactly as `Final decision: Yes` or `Final decision: No`.\n\nProblem: Is 2 + 2 = 4?\nTrace: 2 + 2 = 4.<|im_end|>\n<|im_start|>assistant\n<think>\n",
+          "char_len": 215,
+          "contains_channel_thought": false,
+          "contains_close_think": false,
+          "contains_empty_gemma_thought": false,
+          "contains_empty_think_block": false,
+          "contains_gemma_think_token": false,
+          "contains_open_think": true,
+          "has_disabled_thinking_signal": false,
+          "has_thinking_start_signal": true
+        },
+        "note": null
+      },
+      "tokenizer_class": "Qwen2Tokenizer"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+pairs:
+- id: gemma4_s6_25off_bad49_valid48
+  model_key: gemma4_e4b_it
+  bad_idx: 600049
+  valid_idx: 600048
+- id: gemma4_s6_dabazhe_bad70_valid71
+  model_key: gemma4_e4b_it
+  bad_idx: 600070
+  valid_idx: 600071
+- id: qwen14_s6_pay75_bad150_valid151
+  model_key: qwen3_14b_base
+  bad_idx: 600150
+  valid_idx: 600151

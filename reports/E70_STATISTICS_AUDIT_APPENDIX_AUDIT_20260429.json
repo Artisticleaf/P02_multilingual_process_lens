@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-04-29T03:13:15",
+  "passed": true,
+  "result_path": "results/E70_statistics_audit_appendix/e70_statistics_audit_appendix.json",
+  "checks": [
+    {
+      "check": "metric rows non-empty",
+      "ok": true,
+      "detail": "48"
+    },
+    {
+      "check": "E61 LOO rows non-empty",
+      "ok": true,
+      "detail": "24"
+    }
+  ]
+}

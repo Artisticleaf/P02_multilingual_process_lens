@@ -1,0 +1,1126 @@
+{
+  "created_at": "2026-04-29T10:50:00+08:00",
+  "experiments": [
+    "E71",
+    "E76",
+    "E77",
+    "E78",
+    "E79"
+  ],
+  "models": [
+    "qwen35_27b",
+    "gemma4_31b_it",
+    "gemma4_26b_a4b_it",
+    "glm47_flash_candidate"
+  ],
+  "e71": {
+    "qwen35_27b": {
+      "leakage_audit": {
+        "error_spans_in_prompt_as_annotation_rows": 0,
+        "gold_answer_in_prompt_rows": 0,
+        "known_trap_note_in_prompt_rows": 0,
+        "manual_labels_in_prompt_rows": 0,
+        "note_zh": "Prompt 只含 problem 与 visible trace；人工 strict/repaired/unrepaired 标签、error span 和 repair marker 只用于离线分组。"
+      },
+      "used_chat_template": true,
+      "objectives": {
+        "strict_process": {
+          "n": 215,
+          "accuracy_to_objective_target": 0.9023255813953488,
+          "yes_rate": 0.6465116279069767,
+          "strict_invalid_accept_rate": 0.03389830508474576,
+          "repaired_accept_rate": 0.0,
+          "unrepaired_accept_rate": 1.0,
+          "mean_yes_minus_no_margin": 0.9581395252753959
+        },
+        "repair_aware": {
+          "n": 215,
+          "accuracy_to_objective_target": 0.8790697674418605,
+          "yes_rate": 0.9302325581395349,
+          "strict_invalid_accept_rate": 0.8135593220338984,
+          "repaired_accept_rate": 0.9333333333333333,
+          "unrepaired_accept_rate": 1.0,
+          "mean_yes_minus_no_margin": 2.302906977194686
+        },
+        "final_surviving_proof": {
+          "n": 215,
+          "accuracy_to_objective_target": 0.8511627906976744,
+          "yes_rate": 0.9209302325581395,
+          "strict_invalid_accept_rate": 0.7796610169491526,
+          "repaired_accept_rate": 0.8,
+          "unrepaired_accept_rate": 1.0,
+          "mean_yes_minus_no_margin": 2.511627909649423
+        }
+      },
+      "strict_unrepaired_cases": [
+        {
+          "item_id": "E57:gemma4_26b_a4b_it:28",
+          "task_id": "aime25_integer_pairs_quad_p4",
+          "source_model": "gemma4_26b_a4b_it",
+          "pred_process_valid": true,
+          "margin_yes_minus_no": 2.000000089406967
+        },
+        {
+          "item_id": "E57:gemma4_26b_a4b_it:29",
+          "task_id": "aime25_integer_pairs_quad_p4",
+          "source_model": "gemma4_26b_a4b_it",
+          "pred_process_valid": true,
+          "margin_yes_minus_no": 2.3750000298023224
+        }
+      ]
+    },
+    "gemma4_31b_it": {
+      "leakage_audit": {
+        "error_spans_in_prompt_as_annotation_rows": 0,
+        "gold_answer_in_prompt_rows": 0,
+        "known_trap_note_in_prompt_rows": 0,
+        "manual_labels_in_prompt_rows": 0,
+        "note_zh": "Prompt 只含 problem 与 visible trace；人工 strict/repaired/unrepaired 标签、error span 和 repair marker 只用于离线分组。"
+      },
+      "used_chat_template": true,
+      "objectives": {
+        "strict_process": {
+          "n": 215,
+          "accuracy_to_objective_target": 0.9813953488372092,
+          "yes_rate": 0.7441860465116279,
+          "strict_invalid_accept_rate": 0.06779661016949153,
+          "repaired_accept_rate": 0.03333333333333333,
+          "unrepaired_accept_rate": 1.0,
+          "mean_yes_minus_no_margin": 12.012010603226896
+        },
+        "repair_aware": {
+          "n": 215,
+          "accuracy_to_objective_target": 0.8697674418604651,
+          "yes_rate": 0.9767441860465116,
+          "strict_invalid_accept_rate": 0.9152542372881356,
+          "repaired_accept_rate": 0.9333333333333333,
+          "unrepaired_accept_rate": 1.0,
+          "mean_yes_minus_no_margin": 22.113846621291117
+        },
+        "final_surviving_proof": {
+          "n": 215,
+          "accuracy_to_objective_target": 0.8325581395348837,
+          "yes_rate": 0.9674418604651163,
+          "strict_invalid_accept_rate": 0.8813559322033898,
+          "repaired_accept_rate": 0.7666666666666667,
+          "unrepaired_accept_rate": 1.0,
+          "mean_yes_minus_no_margin": 20.063033770630824
+        }
+      },
+      "strict_unrepaired_cases": [
+        {
+          "item_id": "E57:gemma4_26b_a4b_it:28",
+          "task_id": "aime25_integer_pairs_quad_p4",
+          "source_model": "gemma4_26b_a4b_it",
+          "pred_process_valid": true,
+          "margin_yes_minus_no": 25.0078125
+        },
+        {
+          "item_id": "E57:gemma4_26b_a4b_it:29",
+          "task_id": "aime25_integer_pairs_quad_p4",
+          "source_model": "gemma4_26b_a4b_it",
+          "pred_process_valid": true,
+          "margin_yes_minus_no": 10.25000035870471
+        }
+      ]
+    },
+    "gemma4_26b_a4b_it": {
+      "leakage_audit": {
+        "error_spans_in_prompt_as_annotation_rows": 0,
+        "gold_answer_in_prompt_rows": 0,
+        "known_trap_note_in_prompt_rows": 0,
+        "manual_labels_in_prompt_rows": 0,
+        "note_zh": "Prompt 只含 problem 与 visible trace；人工 strict/repaired/unrepaired 标签、error span 和 repair marker 只用于离线分组。"
+      },
+      "used_chat_template": true,
+      "objectives": {
+        "strict_process": {
+          "n": 215,
+          "accuracy_to_objective_target": 0.9023255813953488,
+          "yes_rate": 0.6651162790697674,
+          "strict_invalid_accept_rate": 0.06779661016949153,
+          "repaired_accept_rate": 0.0,
+          "unrepaired_accept_rate": 1.0,
+          "mean_yes_minus_no_margin": 4.090436489738032
+        },
+        "repair_aware": {
+          "n": 215,
+          "accuracy_to_objective_target": 0.8372093023255814,
+          "yes_rate": 0.9534883720930233,
+          "strict_invalid_accept_rate": 0.9152542372881356,
+          "repaired_accept_rate": 0.9,
+          "unrepaired_accept_rate": 1.0,
+          "mean_yes_minus_no_margin": 11.21122898880875
+        },
+        "final_surviving_proof": {
+          "n": 215,
+          "accuracy_to_objective_target": 0.8186046511627907,
+          "yes_rate": 0.8604651162790697,
+          "strict_invalid_accept_rate": 0.6101694915254238,
+          "repaired_accept_rate": 0.5666666666666667,
+          "unrepaired_accept_rate": 1.0,
+          "mean_yes_minus_no_margin": 10.600414387360926
+        }
+      },
+      "strict_unrepaired_cases": [
+        {
+          "item_id": "E57:gemma4_26b_a4b_it:28",
+          "task_id": "aime25_integer_pairs_quad_p4",
+          "source_model": "gemma4_26b_a4b_it",
+          "pred_process_valid": true,
+          "margin_yes_minus_no": 9.625000171479769
+        },
+        {
+          "item_id": "E57:gemma4_26b_a4b_it:29",
+          "task_id": "aime25_integer_pairs_quad_p4",
+          "source_model": "gemma4_26b_a4b_it",
+          "pred_process_valid": true,
+          "margin_yes_minus_no": 7.250000048195943
+        }
+      ]
+    },
+    "glm47_flash_candidate": {
+      "leakage_audit": {
+        "error_spans_in_prompt_as_annotation_rows": 0,
+        "gold_answer_in_prompt_rows": 0,
+        "known_trap_note_in_prompt_rows": 0,
+        "manual_labels_in_prompt_rows": 0,
+        "note_zh": "Prompt 只含 problem 与 visible trace；人工 strict/repaired/unrepaired 标签、error span 和 repair marker 只用于离线分组。"
+      },
+      "used_chat_template": true,
+      "objectives": {
+        "strict_process": {
+          "n": 215,
+          "accuracy_to_objective_target": 0.7767441860465116,
+          "yes_rate": 0.5209302325581395,
+          "strict_invalid_accept_rate": 0.03389830508474576,
+          "repaired_accept_rate": 0.03333333333333333,
+          "unrepaired_accept_rate": 0.0,
+          "mean_yes_minus_no_margin": -0.2697674436689636
+        },
+        "repair_aware": {
+          "n": 215,
+          "accuracy_to_objective_target": 0.8883720930232558,
+          "yes_rate": 0.958139534883721,
+          "strict_invalid_accept_rate": 0.847457627118644,
+          "repaired_accept_rate": 0.9333333333333333,
+          "unrepaired_accept_rate": 1.0,
+          "mean_yes_minus_no_margin": 4.218604628367046
+        },
+        "final_surviving_proof": {
+          "n": 215,
+          "accuracy_to_objective_target": 0.8418604651162791,
+          "yes_rate": 0.8930232558139535,
+          "strict_invalid_accept_rate": 0.6101694915254238,
+          "repaired_accept_rate": 0.5333333333333333,
+          "unrepaired_accept_rate": 1.0,
+          "mean_yes_minus_no_margin": 4.383720925043142
+        }
+      },
+      "strict_unrepaired_cases": [
+        {
+          "item_id": "E57:gemma4_26b_a4b_it:28",
+          "task_id": "aime25_integer_pairs_quad_p4",
+          "source_model": "gemma4_26b_a4b_it",
+          "pred_process_valid": false,
+          "margin_yes_minus_no": -0.5
+        },
+        {
+          "item_id": "E57:gemma4_26b_a4b_it:29",
+          "task_id": "aime25_integer_pairs_quad_p4",
+          "source_model": "gemma4_26b_a4b_it",
+          "pred_process_valid": false,
+          "margin_yes_minus_no": -1.5
+        }
+      ]
+    }
+  },
+  "e78": {
+    "qwen35_27b": {
+      "layer": 34,
+      "items_count": 96,
+      "used_chat_template": true,
+      "leakage_audit": {
+        "gold_label_in_prompt_rows": 0,
+        "known_error_span_annotation_in_prompt_rows": 0,
+        "manual_labels_in_prompt_rows": 0,
+        "note_zh": "Prompt 只含 problem 与 trace；manual_process_valid 只用于离线 probe 标签。"
+      },
+      "metrics": [
+        {
+          "accuracy": 1.0,
+          "control": "leave_one_task_id",
+          "correct": 96,
+          "invalid_false_negative_rate": 0.0,
+          "invalid_n": 48,
+          "n": 96,
+          "valid_false_positive_rate": 0.0,
+          "valid_n": 48,
+          "wilson95_high": 1.0,
+          "wilson95_low": 0.9615230525151842
+        },
+        {
+          "accuracy": 0.9895833333333334,
+          "control": "leave_one_family",
+          "correct": 95,
+          "invalid_false_negative_rate": 0.020833333333333332,
+          "invalid_n": 48,
+          "n": 96,
+          "valid_false_positive_rate": 0.0,
+          "valid_n": 48,
+          "wilson95_high": 0.9981588771815634,
+          "wilson95_low": 0.9433324450728878
+        },
+        {
+          "accuracy": 1.0,
+          "control": "leave_one_route_id",
+          "correct": 96,
+          "invalid_false_negative_rate": 0.0,
+          "invalid_n": 48,
+          "n": 96,
+          "valid_false_positive_rate": 0.0,
+          "valid_n": 48,
+          "wilson95_high": 1.0,
+          "wilson95_low": 0.9615230525151842
+        }
+      ],
+      "permutation_null": {
+        "baseline_leave_one_task_accuracy": 1.0,
+        "max_accuracy": 0.6458333333333334,
+        "mean_accuracy": 0.4975,
+        "n_perm": 100,
+        "p_value_ge_baseline": 0.009900990099009901
+      }
+    },
+    "gemma4_31b_it": {
+      "layer": 34,
+      "items_count": 96,
+      "used_chat_template": true,
+      "leakage_audit": {
+        "gold_label_in_prompt_rows": 0,
+        "known_error_span_annotation_in_prompt_rows": 0,
+        "manual_labels_in_prompt_rows": 0,
+        "note_zh": "Prompt 只含 problem 与 trace；manual_process_valid 只用于离线 probe 标签。"
+      },
+      "metrics": [
+        {
+          "accuracy": 1.0,
+          "control": "leave_one_task_id",
+          "correct": 96,
+          "invalid_false_negative_rate": 0.0,
+          "invalid_n": 48,
+          "n": 96,
+          "valid_false_positive_rate": 0.0,
+          "valid_n": 48,
+          "wilson95_high": 1.0,
+          "wilson95_low": 0.9615230525151842
+        },
+        {
+          "accuracy": 1.0,
+          "control": "leave_one_family",
+          "correct": 96,
+          "invalid_false_negative_rate": 0.0,
+          "invalid_n": 48,
+          "n": 96,
+          "valid_false_positive_rate": 0.0,
+          "valid_n": 48,
+          "wilson95_high": 1.0,
+          "wilson95_low": 0.9615230525151842
+        },
+        {
+          "accuracy": 0.9895833333333334,
+          "control": "leave_one_route_id",
+          "correct": 95,
+          "invalid_false_negative_rate": 0.020833333333333332,
+          "invalid_n": 48,
+          "n": 96,
+          "valid_false_positive_rate": 0.0,
+          "valid_n": 48,
+          "wilson95_high": 0.9981588771815634,
+          "wilson95_low": 0.9433324450728878
+        }
+      ],
+      "permutation_null": {
+        "baseline_leave_one_task_accuracy": 1.0,
+        "max_accuracy": 0.6666666666666666,
+        "mean_accuracy": 0.5044791666666667,
+        "n_perm": 100,
+        "p_value_ge_baseline": 0.009900990099009901
+      }
+    },
+    "gemma4_26b_a4b_it": {
+      "layer": 17,
+      "items_count": 96,
+      "used_chat_template": true,
+      "leakage_audit": {
+        "gold_label_in_prompt_rows": 0,
+        "known_error_span_annotation_in_prompt_rows": 0,
+        "manual_labels_in_prompt_rows": 0,
+        "note_zh": "Prompt 只含 problem 与 trace；manual_process_valid 只用于离线 probe 标签。"
+      },
+      "metrics": [
+        {
+          "accuracy": 0.9270833333333334,
+          "control": "leave_one_task_id",
+          "correct": 89,
+          "invalid_false_negative_rate": 0.0,
+          "invalid_n": 48,
+          "n": 96,
+          "valid_false_positive_rate": 0.14583333333333334,
+          "valid_n": 48,
+          "wilson95_high": 0.9642328737620105,
+          "wilson95_low": 0.8570680669280426
+        },
+        {
+          "accuracy": 0.9166666666666666,
+          "control": "leave_one_family",
+          "correct": 88,
+          "invalid_false_negative_rate": 0.020833333333333332,
+          "invalid_n": 48,
+          "n": 96,
+          "valid_false_positive_rate": 0.14583333333333334,
+          "valid_n": 48,
+          "wilson95_high": 0.9571698885393426,
+          "wilson95_low": 0.8440993218899774
+        },
+        {
+          "accuracy": 0.9270833333333334,
+          "control": "leave_one_route_id",
+          "correct": 89,
+          "invalid_false_negative_rate": 0.0,
+          "invalid_n": 48,
+          "n": 96,
+          "valid_false_positive_rate": 0.14583333333333334,
+          "valid_n": 48,
+          "wilson95_high": 0.9642328737620105,
+          "wilson95_low": 0.8570680669280426
+        }
+      ],
+      "permutation_null": {
+        "baseline_leave_one_task_accuracy": 0.9270833333333334,
+        "max_accuracy": 0.65625,
+        "mean_accuracy": 0.49916666666666665,
+        "n_perm": 100,
+        "p_value_ge_baseline": 0.009900990099009901
+      }
+    },
+    "glm47_flash_candidate": {
+      "layer": 27,
+      "items_count": 96,
+      "used_chat_template": true,
+      "leakage_audit": {
+        "gold_label_in_prompt_rows": 0,
+        "known_error_span_annotation_in_prompt_rows": 0,
+        "manual_labels_in_prompt_rows": 0,
+        "note_zh": "Prompt 只含 problem 与 trace；manual_process_valid 只用于离线 probe 标签。"
+      },
+      "metrics": [
+        {
+          "accuracy": 0.9791666666666666,
+          "control": "leave_one_task_id",
+          "correct": 94,
+          "invalid_false_negative_rate": 0.020833333333333332,
+          "invalid_n": 48,
+          "n": 96,
+          "valid_false_positive_rate": 0.020833333333333332,
+          "valid_n": 48,
+          "wilson95_high": 0.9942681502898627,
+          "wilson95_low": 0.9271914417038554
+        },
+        {
+          "accuracy": 0.9583333333333334,
+          "control": "leave_one_family",
+          "correct": 92,
+          "invalid_false_negative_rate": 0.0625,
+          "invalid_n": 48,
+          "n": 96,
+          "valid_false_positive_rate": 0.020833333333333332,
+          "valid_n": 48,
+          "wilson95_high": 0.9836795565475875,
+          "wilson95_low": 0.8977165749246647
+        },
+        {
+          "accuracy": 0.9791666666666666,
+          "control": "leave_one_route_id",
+          "correct": 94,
+          "invalid_false_negative_rate": 0.020833333333333332,
+          "invalid_n": 48,
+          "n": 96,
+          "valid_false_positive_rate": 0.020833333333333332,
+          "valid_n": 48,
+          "wilson95_high": 0.9942681502898627,
+          "wilson95_low": 0.9271914417038554
+        }
+      ],
+      "permutation_null": {
+        "baseline_leave_one_task_accuracy": 0.9791666666666666,
+        "max_accuracy": 0.6770833333333334,
+        "mean_accuracy": 0.49885416666666665,
+        "n_perm": 100,
+        "p_value_ge_baseline": 0.009900990099009901
+      }
+    }
+  },
+  "e79": {
+    "glm47_flash_candidate": {
+      "leakage_audit": {
+        "error_spans_in_prompt_rows": 0,
+        "manual_labels_in_prompt_rows": 0,
+        "note_zh": "E79 prompt 只含题目与两条 trace；pair 的 valid/invalid 标签只用于离线评分。"
+      },
+      "formats": [
+        "AB",
+        "one_two",
+        "first_second",
+        "trace1_trace2",
+        "label_free_two_pass"
+      ],
+      "summary": [
+        {
+          "accuracy": 0.6375,
+          "bad_first_rate": 0.5,
+          "mean_target_margin": 1.1593750025967893,
+          "n": 480,
+          "predict_first_rate": 0.8166666666666667,
+          "slice": "all",
+          "slice_type": "all"
+        },
+        {
+          "accuracy": 0.5520833333333334,
+          "bad_first_rate": 0.5,
+          "mean_target_margin": 0.43229166488163173,
+          "n": 96,
+          "predict_first_rate": 0.9479166666666666,
+          "slice": "AB",
+          "slice_type": "format"
+        },
+        {
+          "accuracy": 0.5,
+          "bad_first_rate": 0.5,
+          "mean_target_margin": 0.22395833391540995,
+          "n": 96,
+          "predict_first_rate": 1.0,
+          "slice": "first_second",
+          "slice_type": "format"
+        },
+        {
+          "accuracy": 0.9895833333333334,
+          "bad_first_rate": 0.5,
+          "mean_target_margin": 4.947916682716216,
+          "n": 96,
+          "predict_first_rate": 0.5104166666666666,
+          "slice": "label_free_two_pass",
+          "slice_type": "format"
+        },
+        {
+          "accuracy": 0.6458333333333334,
+          "bad_first_rate": 0.5,
+          "mean_target_margin": 0.1927083314706882,
+          "n": 96,
+          "predict_first_rate": 0.625,
+          "slice": "one_two",
+          "slice_type": "format"
+        },
+        {
+          "accuracy": 0.5,
+          "bad_first_rate": 0.5,
+          "mean_target_margin": 0.0,
+          "n": 96,
+          "predict_first_rate": 1.0,
+          "slice": "trace1_trace2",
+          "slice_type": "format"
+        }
+      ],
+      "label_free_wrong_rows": [
+        {
+          "correct": false,
+          "family": "quantifier_inequality",
+          "format": "label_free_two_pass",
+          "option_first": "two_pass_no_minus_yes",
+          "option_second": "two_pass_no_minus_yes",
+          "order": "bad_second",
+          "pair_id": "e61_romanized_zh_strict_inclusive_mix_bad610172_valid610171",
+          "pred_side": "first",
+          "route_id": "romanized_zh",
+          "score_first": 0.0,
+          "score_second": 0.0,
+          "target_margin": 0.0,
+          "target_side": "second",
+          "task_id": "e61_romanized_zh_strict_inclusive_mix",
+          "used_chat_template": true
+        }
+      ]
+    }
+  },
+  "e76_e77": {
+    "gemma4_26b_a4b_it": {
+      "target_mode": "unrepaired_acpi",
+      "layer": 17,
+      "n_rows": 2,
+      "stage_mean_scores": {
+        "completion_end": -5.787226676940918,
+        "error_span_end": -10.654231071472168,
+        "first_final_answer_end": -5.787226676940918,
+        "last_final_answer_end": -5.787226676940918,
+        "repair_trigger_end": -15.053558349609375
+      },
+      "leakage_audit": {
+        "error_spans_in_prompt_rows": 0,
+        "hard_task_labels_in_prompt_rows": 0,
+        "note_zh": "hard-task 人工标签和 span 只用于离线选择分析 token；模型输入为原始 problem prompt + saved completion。"
+      },
+      "rows": [
+        {
+          "manual_audit_idx": 28,
+          "task_id": "aime25_integer_pairs_quad_p4",
+          "trace_class": "unrepaired_acpi",
+          "manual_error_type": "unrepaired_wrong_factorization_sign",
+          "manual_error_span": "(3x - 2y)(4x + 3y) = 0",
+          "stage_scores": [
+            {
+              "char_end": 540,
+              "span_text": "(3x - 2y)(4x + 3y) = 0",
+              "stage": "error_span_end",
+              "token_index_full": 162,
+              "token_index_used": 162,
+              "validity_score": -10.578845977783203
+            },
+            {
+              "char_end": 2207,
+              "span_text": "\nFinal answer: 117",
+              "stage": "first_final_answer_end",
+              "token_index_full": 874,
+              "token_index_used": 874,
+              "validity_score": -5.427553653717041
+            },
+            {
+              "char_end": 2207,
+              "span_text": "\nFinal answer: 117",
+              "stage": "last_final_answer_end",
+              "token_index_full": 874,
+              "token_index_used": 874,
+              "validity_score": -5.427553653717041
+            },
+            {
+              "char_end": 2207,
+              "span_text": "in Case 2) - (Solutions in both)\nTotal = $67 + 51 - 1 = 117$.\n\nFinal answer: 117",
+              "stage": "completion_end",
+              "token_index_full": 874,
+              "token_index_used": 874,
+              "validity_score": -5.427553653717041
+            }
+          ]
+        },
+        {
+          "manual_audit_idx": 29,
+          "task_id": "aime25_integer_pairs_quad_p4",
+          "trace_class": "unrepaired_acpi",
+          "manual_error_type": "unrepaired_wrong_factorization",
+          "manual_error_span": "(4x + y)(3x - y) = 0",
+          "stage_scores": [
+            {
+              "char_end": 589,
+              "span_text": "(4x + y)(3x - y) = 0",
+              "stage": "error_span_end",
+              "token_index_full": 196,
+              "token_index_used": 196,
+              "validity_score": -10.729616165161133
+            },
+            {
+              "char_end": 1727,
+              "span_text": "\nFinal answer: 117",
+              "stage": "first_final_answer_end",
+              "token_index_full": 673,
+              "token_index_used": 673,
+              "validity_score": -6.146899700164795
+            },
+            {
+              "char_end": 1727,
+              "span_text": "\nFinal answer: 117",
+              "stage": "last_final_answer_end",
+              "token_index_full": 673,
+              "token_index_used": 673,
+              "validity_score": -6.146899700164795
+            },
+            {
+              "char_end": 873,
+              "span_text": "check",
+              "stage": "repair_trigger_end",
+              "token_index_full": 319,
+              "token_index_used": 319,
+              "validity_score": -15.053558349609375
+            },
+            {
+              "char_end": 1727,
+              "span_text": "- (Number in Intersection)\nTotal pairs = $51 + 67 - 1 = 117$.\n\nFinal answer: 117",
+              "stage": "completion_end",
+              "token_index_full": 673,
+              "token_index_used": 673,
+              "validity_score": -6.146899700164795
+            }
+          ]
+        }
+      ]
+    },
+    "gemma4_31b_it": {
+      "target_mode": "repaired_acpi",
+      "layer": 34,
+      "n_rows": 9,
+      "stage_mean_scores": {
+        "completion_end": -21.9383610619439,
+        "error_span_end": -13.735784636603462,
+        "first_final_answer_end": -12.040645917256674,
+        "last_final_answer_end": -21.9383610619439,
+        "repair_trigger_end": -27.9791071150038
+      },
+      "leakage_audit": {
+        "error_spans_in_prompt_rows": 0,
+        "hard_task_labels_in_prompt_rows": 0,
+        "note_zh": "hard-task 人工标签和 span 只用于离线选择分析 token；模型输入为原始 problem prompt + saved completion。"
+      },
+      "rows": [
+        {
+          "manual_audit_idx": 56,
+          "task_id": "aime25_base_divisor_p1",
+          "trace_class": "repaired_acpi",
+          "manual_error_type": "repaired_wrong_initial_answer",
+          "manual_error_span": "Final answer: 12",
+          "stage_scores": [
+            {
+              "char_end": 351,
+              "span_text": "Final answer: 12",
+              "stage": "error_span_end",
+              "token_index_full": 87,
+              "token_index_used": 87,
+              "validity_score": -13.26827335357666
+            },
+            {
+              "char_end": 351,
+              "span_text": "Final answer: 12",
+              "stage": "first_final_answer_end",
+              "token_index_full": 87,
+              "token_index_used": 87,
+              "validity_score": -13.26827335357666
+            },
+            {
+              "char_end": 2069,
+              "span_text": "\nFinal answer: 70",
+              "stage": "last_final_answer_end",
+              "token_index_full": 891,
+              "token_index_used": 891,
+              "validity_score": -21.118167877197266
+            },
+            {
+              "char_end": 1182,
+              "span_text": "Wait",
+              "stage": "repair_trigger_end",
+              "token_index_full": 477,
+              "token_index_used": 477,
+              "validity_score": -26.882083892822266
+            },
+            {
+              "char_end": 2069,
+              "span_text": "swer line by mistake while thinking. The calculated sum is 70.\n\nFinal answer: 70",
+              "stage": "completion_end",
+              "token_index_full": 891,
+              "token_index_used": 891,
+              "validity_score": -21.118167877197266
+            }
+          ]
+        },
+        {
+          "manual_audit_idx": 57,
+          "task_id": "aime25_base_divisor_p1",
+          "trace_class": "repaired_acpi",
+          "manual_error_type": "repaired_wrong_initial_answer",
+          "manual_error_span": "Final answer: 14",
+          "stage_scores": [
+            {
+              "char_end": 351,
+              "span_text": "Final answer: 14",
+              "stage": "error_span_end",
+              "token_index_full": 87,
+              "token_index_used": 87,
+              "validity_score": -12.062166213989258
+            },
+            {
+              "char_end": 351,
+              "span_text": "Final answer: 14",
+              "stage": "first_final_answer_end",
+              "token_index_full": 87,
+              "token_index_used": 87,
+              "validity_score": -12.062166213989258
+            },
+            {
+              "char_end": 1613,
+              "span_text": "\nFinal answer: 70",
+              "stage": "last_final_answer_end",
+              "token_index_full": 700,
+              "token_index_used": 700,
+              "validity_score": -20.88014030456543
+            },
+            {
+              "char_end": 1061,
+              "span_text": "Wait",
+              "stage": "repair_trigger_end",
+              "token_index_full": 446,
+              "token_index_used": 446,
+              "validity_score": -27.201791763305664
+            },
+            {
+              "char_end": 1613,
+              "span_text": "ped initially was 14, which is wrong. I will correct it to 70.\n\nFinal answer: 70",
+              "stage": "completion_end",
+              "token_index_full": 700,
+              "token_index_used": 700,
+              "validity_score": -20.88014030456543
+            }
+          ]
+        },
+        {
+          "manual_audit_idx": 58,
+          "task_id": "aime25_base_divisor_p1",
+          "trace_class": "repaired_acpi",
+          "manual_error_type": "repaired_wrong_initial_answer",
+          "manual_error_span": "Final answer: 21",
+          "stage_scores": [
+            {
+              "char_end": 351,
+              "span_text": "Final answer: 21",
+              "stage": "error_span_end",
+              "token_index_full": 87,
+              "token_index_used": 87,
+              "validity_score": -15.108171463012695
+            },
+            {
+              "char_end": 351,
+              "span_text": "Final answer: 21",
+              "stage": "first_final_answer_end",
+              "token_index_full": 87,
+              "token_index_used": 87,
+              "validity_score": -15.108171463012695
+            },
+            {
+              "char_end": 2881,
+              "span_text": "\nFinal Answer: 70",
+              "stage": "last_final_answer_end",
+              "token_index_full": 1268,
+              "token_index_used": 1268,
+              "validity_score": -21.543170928955078
+            },
+            {
+              "char_end": 1099,
+              "span_text": "However",
+              "stage": "repair_trigger_end",
+              "token_index_full": 445,
+              "token_index_used": 445,
+              "validity_score": -30.939544677734375
+            },
+            {
+              "char_end": 2881,
+              "span_text": "n the scratchpad initially. That was a mistake. The sum is 70.\n\nFinal Answer: 70",
+              "stage": "completion_end",
+              "token_index_full": 1268,
+              "token_index_used": 1268,
+              "validity_score": -21.543170928955078
+            }
+          ]
+        },
+        {
+          "manual_audit_idx": 67,
+          "task_id": "aime25_icecream_ordered_assign_p3",
+          "trace_class": "repaired_acpi",
+          "manual_error_type": "repaired_wrong_initial_answer",
+          "manual_error_span": "Final answer: 504",
+          "stage_scores": [
+            {
+              "char_end": 785,
+              "span_text": "Final answer: 504",
+              "stage": "error_span_end",
+              "token_index_full": 169,
+              "token_index_used": 169,
+              "validity_score": -9.465239524841309
+            },
+            {
+              "char_end": 785,
+              "span_text": "Final answer: 504",
+              "stage": "first_final_answer_end",
+              "token_index_full": 169,
+              "token_index_used": 169,
+              "validity_score": -9.465239524841309
+            },
+            {
+              "char_end": 3221,
+              "span_text": "\nFinal answer: 16",
+              "stage": "last_final_answer_end",
+              "token_index_full": 1201,
+              "token_index_used": 1201,
+              "validity_score": -23.7509765625
+            },
+            {
+              "char_end": 1932,
+              "span_text": "Wait",
+              "stage": "repair_trigger_end",
+              "token_index_full": 676,
+              "token_index_used": 676,
+              "validity_score": -27.679733276367188
+            },
+            {
+              "char_end": 3221,
+              "span_text": "ly, looking at the prompt again, I will provide the result 16.\n\nFinal answer: 16",
+              "stage": "completion_end",
+              "token_index_full": 1201,
+              "token_index_used": 1201,
+              "validity_score": -23.7509765625
+            }
+          ]
+        },
+        {
+          "manual_audit_idx": 68,
+          "task_id": "aime25_icecream_ordered_assign_p3",
+          "trace_class": "repaired_acpi",
+          "manual_error_type": "repaired_wrong_initial_answer",
+          "manual_error_span": "Final answer: 1260",
+          "stage_scores": [
+            {
+              "char_end": 786,
+              "span_text": "Final answer: 1260",
+              "stage": "error_span_end",
+              "token_index_full": 170,
+              "token_index_used": 170,
+              "validity_score": -10.990677833557129
+            },
+            {
+              "char_end": 786,
+              "span_text": "Final answer: 1260",
+              "stage": "first_final_answer_end",
+              "token_index_full": 170,
+              "token_index_used": 170,
+              "validity_score": -10.990677833557129
+            },
+            {
+              "char_end": 2943,
+              "span_text": "\nFinal answer: 16",
+              "stage": "last_final_answer_end",
+              "token_index_full": 1139,
+              "token_index_used": 1139,
+              "validity_score": -25.67428207397461
+            },
+            {
+              "char_end": 2227,
+              "span_text": "Wait",
+              "stage": "repair_trigger_end",
+              "token_index_full": 817,
+              "token_index_used": 817,
+              "validity_score": -28.21909523010254
+            },
+            {
+              "char_end": 2943,
+              "span_text": "I must provide the correct remainder.\n$2016 \\pmod{1000} = 16$.\n\nFinal answer: 16",
+              "stage": "completion_end",
+              "token_index_full": 1139,
+              "token_index_used": 1139,
+              "validity_score": -25.67428207397461
+            }
+          ]
+        },
+        {
+          "manual_audit_idx": 69,
+          "task_id": "aime25_icecream_ordered_assign_p3",
+          "trace_class": "repaired_acpi",
+          "manual_error_type": "repaired_wrong_initial_answer",
+          "manual_error_span": "Final answer: 420",
+          "stage_scores": [
+            {
+              "char_end": 785,
+              "span_text": "Final answer: 420",
+              "stage": "error_span_end",
+              "token_index_full": 169,
+              "token_index_used": 169,
+              "validity_score": -9.084233283996582
+            },
+            {
+              "char_end": 785,
+              "span_text": "Final answer: 420",
+              "stage": "first_final_answer_end",
+              "token_index_full": 169,
+              "token_index_used": 169,
+              "validity_score": -9.084233283996582
+            },
+            {
+              "char_end": 3010,
+              "span_text": "\nFinal answer: 16",
+              "stage": "last_final_answer_end",
+              "token_index_full": 1233,
+              "token_index_used": 1233,
+              "validity_score": -22.97067642211914
+            },
+            {
+              "char_end": 2059,
+              "span_text": "Wait",
+              "stage": "repair_trigger_end",
+              "token_index_full": 742,
+              "token_index_used": 742,
+              "validity_score": -27.87738037109375
+            },
+            {
+              "char_end": 3010,
+              "span_text": "\" line in the scratchpad was a placeholder. I will output 16).\n\nFinal answer: 16",
+              "stage": "completion_end",
+              "token_index_full": 1233,
+              "token_index_used": 1233,
+              "validity_score": -22.97067642211914
+            }
+          ]
+        },
+        {
+          "manual_audit_idx": 70,
+          "task_id": "aime25_icecream_ordered_assign_p3",
+          "trace_class": "repaired_acpi",
+          "manual_error_type": "repaired_wrong_initial_answer",
+          "manual_error_span": "Final answer: 1260",
+          "stage_scores": [
+            {
+              "char_end": 786,
+              "span_text": "Final answer: 1260",
+              "stage": "error_span_end",
+              "token_index_full": 170,
+              "token_index_used": 170,
+              "validity_score": -10.990677833557129
+            },
+            {
+              "char_end": 786,
+              "span_text": "Final answer: 1260",
+              "stage": "first_final_answer_end",
+              "token_index_full": 170,
+              "token_index_used": 170,
+              "validity_score": -10.990677833557129
+            },
+            {
+              "char_end": 2848,
+              "span_text": "\nFinal answer: 16",
+              "stage": "last_final_answer_end",
+              "token_index_full": 1132,
+              "token_index_used": 1132,
+              "validity_score": -26.384082794189453
+            },
+            {
+              "char_end": 1958,
+              "span_text": "Wait",
+              "stage": "repair_trigger_end",
+              "token_index_full": 689,
+              "token_index_used": 689,
+              "validity_score": -27.26217269897461
+            },
+            {
+              "char_end": 2848,
+              "span_text": ") = 1260$.\n$252 + 504 + 1260 = 2016$.\n$2016 \\pmod{1000} = 16$.\n\nFinal answer: 16",
+              "stage": "completion_end",
+              "token_index_full": 1132,
+              "token_index_used": 1132,
+              "validity_score": -26.384082794189453
+            }
+          ]
+        },
+        {
+          "manual_audit_idx": 85,
+          "task_id": "aime25_perm_div22_p5",
+          "trace_class": "repaired_acpi",
+          "manual_error_type": "repaired_enumeration_count_error",
+          "manual_error_span": "There are 14 such subsets in total",
+          "stage_scores": [
+            {
+              "char_end": 1793,
+              "span_text": "There are 14 such subsets in total",
+              "stage": "error_span_end",
+              "token_index_full": 770,
+              "token_index_used": 770,
+              "validity_score": -27.747100830078125
+            },
+            {
+              "char_end": 3621,
+              "span_text": "\nFinal answer: 279",
+              "stage": "first_final_answer_end",
+              "token_index_full": 1649,
+              "token_index_used": 1649,
+              "validity_score": -12.490852355957031
+            },
+            {
+              "char_end": 3621,
+              "span_text": "\nFinal answer: 279",
+              "stage": "last_final_answer_end",
+              "token_index_full": 1649,
+              "token_index_used": 1649,
+              "validity_score": -12.490852355957031
+            },
+            {
+              "char_end": 1845,
+              "span_text": "However",
+              "stage": "repair_trigger_end",
+              "token_index_full": 781,
+              "token_index_used": 781,
+              "validity_score": -28.651247024536133
+            },
+            {
+              "char_end": 3621,
+              "span_text": "= 2304$.\n\n6.  **Difference:** $N - 2025 = 2304 - 2025 = 279$.\n\nFinal answer: 279",
+              "stage": "completion_end",
+              "token_index_full": 1649,
+              "token_index_used": 1649,
+              "validity_score": -12.490852355957031
+            }
+          ]
+        },
+        {
+          "manual_audit_idx": 94,
+          "task_id": "aime25_trapezoid_incircle_p6",
+          "trace_class": "repaired_acpi",
+          "manual_error_type": "repaired_wrong_initial_answer",
+          "manual_error_span": "Final answer: 162",
+          "stage_scores": [
+            {
+              "char_end": 520,
+              "span_text": "Final answer: 162",
+              "stage": "error_span_end",
+              "token_index_full": 130,
+              "token_index_used": 130,
+              "validity_score": -14.905521392822266
+            },
+            {
+              "char_end": 520,
+              "span_text": "Final answer: 162",
+              "stage": "first_final_answer_end",
+              "token_index_full": 130,
+              "token_index_used": 130,
+              "validity_score": -14.905521392822266
+            },
+            {
+              "char_end": 3027,
+              "span_text": "\nFinal answer: 504",
+              "stage": "last_final_answer_end",
+              "token_index_full": 1256,
+              "token_index_used": 1256,
+              "validity_score": -22.63290023803711
+            },
+            {
+              "char_end": 2032,
+              "span_text": "Wait",
+              "stage": "repair_trigger_end",
+              "token_index_full": 731,
+              "token_index_used": 731,
+              "validity_score": -27.098915100097656
+            },
+            {
+              "char_end": 3027,
+              "span_text": "76$\n$r^2-2rs+s^2=432$\n$2(r^2+s^2)=1008 \\implies r^2+s^2=504$.\n\nFinal answer: 504",
+              "stage": "completion_end",
+              "token_index_full": 1256,
+              "token_index_used": 1256,
+              "validity_score": -22.63290023803711
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

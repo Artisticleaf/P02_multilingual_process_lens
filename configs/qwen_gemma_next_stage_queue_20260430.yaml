@@ -1,0 +1,73 @@
+created_at: "2026-04-30"
+queue_name: "qwen_gemma_next_stage_serial_20260430"
+scope: "Qwen/Gemma-only next stage after parameter audit"
+gpu_policy:
+  execution: "serial"
+  wait_for_e119: true
+  one_large_model_at_a_time: true
+  cuda_visible_devices: "0,1,2,3"
+  max_memory: "0:29GiB,1:29GiB,2:29GiB,3:29GiB,cpu:160GiB"
+safety:
+  done_marker_required: true
+  continue_after_failure: true
+  missing_done_signal_status: "fail_missing_done_signal"
+  leakage_scan_required: true
+  static_audit_required: true
+  smoke_before_formal: true
+active_steps:
+  - id: "preflight"
+    mode: "CPU"
+    purpose_zh: "静态审计脚本、参数 profile、Qwen/Gemma E119 审计表，不加载模型。"
+  - id: "E146_qwen35_27b_ng_model_card_hf_profile"
+    mode: "NG / non-thinking generation"
+    model_key: "qwen35_27b"
+    purpose_zh: "用 Qwen 模型卡 reasoning 采样主参数复跑自然困难题；presence_penalty 当前 HF generate 不原生支持，结果标为 HF-profile 而非精确 model-card。"
+    command_parameters:
+      variants: ["neutral", "self_check", "answer_first_no_gold"]
+      k: 2
+      max_tasks: 6
+      max_new_tokens: 8192
+      batch_size: 2
+      temperature: 1.0
+      top_p: 0.95
+      top_k: 20
+      thinking: false
+      presence_penalty_status: "not_applied_in_hf_generate"
+  - id: "E146_gemma4_31b_it_ng_model_card"
+    mode: "NG / non-thinking generation"
+    model_key: "gemma4_31b_it"
+    purpose_zh: "用 Gemma4 模型卡推荐采样复跑自然困难题。"
+    command_parameters:
+      variants: ["neutral", "self_check", "answer_first_no_gold"]
+      k: 2
+      max_tasks: 6
+      max_new_tokens: 8192
+      batch_size: 2
+      temperature: 1.0
+      top_p: 0.95
+      top_k: 64
+      thinking: false
+  - id: "E146_gemma4_26b_a4b_it_ng_model_card"
+    mode: "NG / non-thinking generation"
+    model_key: "gemma4_26b_a4b_it"
+    purpose_zh: "用 Gemma4 MoE 模型卡推荐采样复跑自然困难题。"
+    command_parameters:
+      variants: ["neutral", "self_check", "answer_first_no_gold"]
+      k: 2
+      max_tasks: 6
+      max_new_tokens: 8192
+      batch_size: 2
+      temperature: 1.0
+      top_p: 0.95
+      top_k: 64
+      thinking: false
+  - id: "E146_build_audit_sheet"
+    mode: "CPU"
+    purpose_zh: "构建 E146 Qwen/Gemma final-correct 过程审计表。"
+planned_not_in_this_queue:
+  - id: "E131_QG_token_localization"
+    reason_zh: "需要新增 all-token hidden cache 脚本；先不在本队列硬跑未实现机制实验。"
+  - id: "E132_E133_QG_span_patch"
+    reason_zh: "需要新增 span alignment 与 component patch 脚本；等待 E131 smoke 后再串行。"
+  - id: "E121_QG_thinking_verifier"
+    reason_zh: "需要完整生成解析器和防 endless-thinking 策略；先完成 NG 模型卡复跑与审计。"

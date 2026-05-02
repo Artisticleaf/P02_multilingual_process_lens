@@ -1,0 +1,231 @@
+{
+  "boundary_cases": [
+    {
+      "extracted_final": "No",
+      "gold_answer": "Yes",
+      "manual_error_span": "requires a connected graph/all non-isolated edges in one component; prompt did not state connectivity",
+      "manual_note": "The model answers No by constructing the disconnected degree sequence triangle plus one edge. This challenges the gold assumption rather than showing a clean reasoning failure.",
+      "prompt_variant": "solve_neutral",
+      "task_id": "e153_graph_path_constraints_02"
+    }
+  ],
+  "by_family": {
+    "algebra_sign_factor": {
+      "ambiguous_problem_boundary": 0,
+      "auto_final_correct": 6,
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "causal_counterfactual": {
+      "ambiguous_problem_boundary": 0,
+      "auto_final_correct": 6,
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "code_boundary": {
+      "ambiguous_problem_boundary": 0,
+      "auto_final_correct": 6,
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "counting_invariant": {
+      "ambiguous_problem_boundary": 0,
+      "auto_final_correct": 6,
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "geometry_constraints": {
+      "ambiguous_problem_boundary": 0,
+      "auto_final_correct": 6,
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "graph_path_constraints": {
+      "ambiguous_problem_boundary": 1,
+      "auto_final_correct": 5,
+      "clean_valid_prefill_candidate": 5,
+      "language_trait_use": 3,
+      "manual_final_correct": 5,
+      "n": 6
+    },
+    "multilingual_semantic": {
+      "ambiguous_problem_boundary": 0,
+      "auto_final_correct": 6,
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 6,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "optimization_constraints": {
+      "ambiguous_problem_boundary": 0,
+      "auto_final_correct": 6,
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "probability_conditioning": {
+      "ambiguous_problem_boundary": 0,
+      "auto_final_correct": 6,
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "proof_validity": {
+      "ambiguous_problem_boundary": 0,
+      "auto_final_correct": 6,
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "recurrence_dp": {
+      "ambiguous_problem_boundary": 0,
+      "auto_final_correct": 6,
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "set_venn": {
+      "ambiguous_problem_boundary": 0,
+      "auto_final_correct": 6,
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "string_regex_parsing": {
+      "ambiguous_problem_boundary": 0,
+      "auto_final_correct": 3,
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 3,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "table_aggregation": {
+      "ambiguous_problem_boundary": 0,
+      "auto_final_correct": 6,
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "temporal_order": {
+      "ambiguous_problem_boundary": 0,
+      "auto_final_correct": 6,
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "unit_percentage": {
+      "ambiguous_problem_boundary": 0,
+      "auto_final_correct": 3,
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 3,
+      "manual_final_correct": 6,
+      "n": 6
+    }
+  },
+  "by_model": {
+    "gemma4_26b_a4b_it": {
+      "ambiguous_problem_boundary": 1,
+      "auto_final_correct": 89,
+      "causal_prefill_usable": 96,
+      "clean_valid_prefill_candidate": 95,
+      "language_trait_use": 15,
+      "manual_acpi_unrepaired": 0,
+      "manual_final_correct": 95,
+      "manual_process_valid_strict": 95,
+      "mean_generated_tokens": 533.0,
+      "n": 96,
+      "posthoc_rationalization": 0,
+      "repair_or_rethink_marker": 1
+    }
+  },
+  "by_prompt": {
+    "solve_neutral": {
+      "ambiguous_problem_boundary": 1,
+      "auto_final_correct": 29,
+      "clean_valid_prefill_candidate": 31,
+      "language_trait_use": 5,
+      "manual_final_correct": 31,
+      "n": 32
+    },
+    "solve_self_check": {
+      "ambiguous_problem_boundary": 0,
+      "auto_final_correct": 30,
+      "clean_valid_prefill_candidate": 32,
+      "language_trait_use": 5,
+      "manual_final_correct": 32,
+      "n": 32
+    },
+    "solve_terse": {
+      "ambiguous_problem_boundary": 0,
+      "auto_final_correct": 30,
+      "clean_valid_prefill_candidate": 32,
+      "language_trait_use": 5,
+      "manual_final_correct": 32,
+      "n": 32
+    }
+  },
+  "created_at": "2026-05-01T02:42:01",
+  "false_negatives_or_boundary": [
+    {
+      "extracted_final": "'bcd'",
+      "gold_answer": "bcd",
+      "prompt_variant": "solve_neutral",
+      "reason": "quoted_string_equivalent",
+      "task_id": "e153_string_regex_parsing_02"
+    },
+    {
+      "extracted_final": "'bcd'",
+      "gold_answer": "bcd",
+      "prompt_variant": "solve_terse",
+      "reason": "quoted_string_equivalent",
+      "task_id": "e153_string_regex_parsing_02"
+    },
+    {
+      "extracted_final": "'bcd'",
+      "gold_answer": "bcd",
+      "prompt_variant": "solve_self_check",
+      "reason": "quoted_string_equivalent",
+      "task_id": "e153_string_regex_parsing_02"
+    },
+    {
+      "extracted_final": "120 meters",
+      "gold_answer": "120",
+      "prompt_variant": "solve_neutral",
+      "reason": "unit_suffix_equivalent",
+      "task_id": "e153_unit_percentage_02"
+    },
+    {
+      "extracted_final": "120 meters",
+      "gold_answer": "120",
+      "prompt_variant": "solve_terse",
+      "reason": "unit_suffix_equivalent",
+      "task_id": "e153_unit_percentage_02"
+    },
+    {
+      "extracted_final": "120 meters",
+      "gold_answer": "120",
+      "prompt_variant": "solve_self_check",
+      "reason": "unit_suffix_equivalent",
+      "task_id": "e153_unit_percentage_02"
+    }
+  ],
+  "rows": 96,
+  "scope": "E153 MoE generation audit: Gemma4-26B-A4B-it only"
+}

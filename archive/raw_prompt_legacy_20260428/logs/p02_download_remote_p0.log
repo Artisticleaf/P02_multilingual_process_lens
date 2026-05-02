@@ -1,0 +1,122 @@
+[2026-04-27T01:40:10+08:00] downloading qwen35_9b: Qwen/Qwen3.5-9B -> /home/Awei/LLM/Model/base/qwen35_9b
+⚠️  Warning: 'huggingface-cli download' is deprecated. Use 'hf download' instead.
+Fetching 16 files:   0%|          | 0/16 [00:00<?, ?it/s]Downloading 'model.safetensors-00002-of-00004.safetensors' to '/home/Awei/LLM/Model/base/qwen35_9b/.cache/huggingface/download/lGxifgDOtbZu2hl0mgLH73j9H1U=.31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330.incomplete'
+Downloading '.gitattributes' to '/home/Awei/LLM/Model/base/qwen35_9b/.cache/huggingface/download/wPaCkH-WbT7GsmxMKKrNZTV4nSM=.52373fe24473b1aa44333d318f578ae6bf04b49b.incomplete'
+Downloading 'README.md' to '/home/Awei/LLM/Model/base/qwen35_9b/.cache/huggingface/download/Xn7B-BWUGOee2Y6hCZtEhtFu4BE=.0f3972cb2c995a86bde9ac92440da530fe2b2c68.incomplete'
+Downloading 'config.json' to '/home/Awei/LLM/Model/base/qwen35_9b/.cache/huggingface/download/8_PA_wEVGiVa2goH2H4KQOQpvVY=.273ce437e01baf96a07cd9eb3d5f48bac8d7c657.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_9b/.gitattributes
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_9b/config.json
+Fetching 16 files:   6%|▋         | 1/16 [00:00<00:10,  1.39it/s]Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_9b/README.md
+Downloading 'model.safetensors-00003-of-00004.safetensors' to '/home/Awei/LLM/Model/base/qwen35_9b/.cache/huggingface/download/NZE8rrDrloN6zew6e6Hc8J0XErQ=.7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec.incomplete'
+Downloading 'model.safetensors-00004-of-00004.safetensors' to '/home/Awei/LLM/Model/base/qwen35_9b/.cache/huggingface/download/ze74Xb_Ui8CJ1as4zWCspKqrNdE=.b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6.incomplete'
+Downloading 'model.safetensors.index.json' to '/home/Awei/LLM/Model/base/qwen35_9b/.cache/huggingface/download/yVzAsSxRSINSz-tQbpx-TLpfkLU=.e4c1cb7dba5096b43b9d92bc781aba5e3aa8acd8.incomplete'
+Downloading 'preprocessor_config.json' to '/home/Awei/LLM/Model/base/qwen35_9b/.cache/huggingface/download/PYH5dHjks7Ei0Yd3X0Z8xIwsCNQ=.2ea84a437d448ff71b08df68fdd949d5cc4ebb64.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_9b/model.safetensors.index.json
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_9b/preprocessor_config.json
+Downloading 'model.safetensors-00001-of-00004.safetensors' to '/home/Awei/LLM/Model/base/qwen35_9b/.cache/huggingface/download/859-ddA_5DkKQ3D3wQtJuUfYqbY=.db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e.incomplete'
+Downloading 'LICENSE' to '/home/Awei/LLM/Model/base/qwen35_9b/.cache/huggingface/download/DhCjcNQuMpl4FL346qr3tvNUCgY=.f938136e3adacfd92be087f6e113b5d6d97f678f.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_9b/LICENSE
+Fetching 16 files:  12%|█▎        | 2/16 [00:01<00:12,  1.10it/s]Downloading 'video_preprocessor_config.json' to '/home/Awei/LLM/Model/base/qwen35_9b/.cache/huggingface/download/7uK9jxGLvsg8Gxgsd_3Bi0MthgM=.3ba673a5ad7d4d13f54155ecd38b2a94a6dac8fe.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_9b/video_preprocessor_config.json
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_9b/model.safetensors-00004-of-00004.safetensors
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_9b/model.safetensors-00002-of-00004.safetensors
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_9b/model.safetensors-00003-of-00004.safetensors
+Download complete. Moving file to /home/Awei/LLM/Model/base/qwen35_9b/model.safetensors-00001-of-00004.safetensors
+Fetching 16 files:  44%|████▍     | 7/16 [04:14<06:09, 41.04s/it]Fetching 16 files: 100%|██████████| 16/16 [04:14<00:00, 15.92s/it]
+/home/Awei/LLM/Model/base/qwen35_9b
+[2026-04-27T01:44:25+08:00] done qwen35_9b
+[2026-04-27T01:44:25+08:00] downloading ministral3_8b_reasoning: mistralai/Ministral-3-8B-Reasoning-2512 -> /home/Awei/LLM/Model/base/ministral3_8b_reasoning
+⚠️  Warning: 'huggingface-cli download' is deprecated. Use 'hf download' instead.
+Fetching 18 files:   0%|          | 0/18 [00:00<?, ?it/s]Downloading 'model-00001-of-00004.safetensors' to '/home/Awei/LLM/Model/base/ministral3_8b_reasoning/.cache/huggingface/download/IO4xwqmZYzFmxznkwkiNSBwO1H0=.c6ad362f18a10e9e8dc8f1f3951ed0854aeaf427c1531a5b87a2daddf31fb2b2.incomplete'
+Downloading 'consolidated.safetensors' to '/home/Awei/LLM/Model/base/ministral3_8b_reasoning/.cache/huggingface/download/tFt5id3gCLBzpax0WVpbeEjTCck=.ba5577f6f96df4b9a23addd6f49d76eb12cbc87e6c78868181d00988e9173e6e.incomplete'
+Downloading '.gitattributes' to '/home/Awei/LLM/Model/base/ministral3_8b_reasoning/.cache/huggingface/download/wPaCkH-WbT7GsmxMKKrNZTV4nSM=.c684f12ce1b2a358bfc3e8539ba4ca0ef7b5c9cb.incomplete'
+Downloading 'README.md' to '/home/Awei/LLM/Model/base/ministral3_8b_reasoning/.cache/huggingface/download/Xn7B-BWUGOee2Y6hCZtEhtFu4BE=.f29c3b88a06f56fbc8227d039261f5e0e8f2f4bb.incomplete'
+Downloading 'model-00002-of-00004.safetensors' to '/home/Awei/LLM/Model/base/ministral3_8b_reasoning/.cache/huggingface/download/t9msAuTjAZjuQnmzGOwTjiptvIU=.970b5e0a46bc5f4021082b7e1087f61473d9d13cb2a483d0feb8388e2b64d251.incomplete'
+Downloading 'config.json' to '/home/Awei/LLM/Model/base/ministral3_8b_reasoning/.cache/huggingface/download/8_PA_wEVGiVa2goH2H4KQOQpvVY=.03e03146fcd00c01a19dfeefa5cc2e69081ff31d.incomplete'
+Downloading 'SYSTEM_PROMPT.txt' to '/home/Awei/LLM/Model/base/ministral3_8b_reasoning/.cache/huggingface/download/UgABLu2I3NYCm2co4bLZTvLr9yI=.9f8122c3e42278d6a2e319905a62bd15f3f80c10.incomplete'
+Downloading 'generation_config.json' to '/home/Awei/LLM/Model/base/ministral3_8b_reasoning/.cache/huggingface/download/3EVKVggOldJcKSsGjSdoUCN1AyQ=.add11cbc06647495098ee6dd5c9cbc96841a445a.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/ministral3_8b_reasoning/.gitattributes
+Fetching 18 files:   6%|▌         | 1/18 [00:01<00:22,  1.35s/it]Download complete. Moving file to /home/Awei/LLM/Model/base/ministral3_8b_reasoning/SYSTEM_PROMPT.txt
+Download complete. Moving file to /home/Awei/LLM/Model/base/ministral3_8b_reasoning/README.md
+Downloading 'model-00003-of-00004.safetensors' to '/home/Awei/LLM/Model/base/ministral3_8b_reasoning/.cache/huggingface/download/DaGOU-KRMVrY0aYktrsE34tL0Bs=.0b7b28ed7e8435c1867c155639fa9212a87d881752d0c4051e7c84726ebd4748.incomplete'
+Downloading 'model-00004-of-00004.safetensors' to '/home/Awei/LLM/Model/base/ministral3_8b_reasoning/.cache/huggingface/download/-dFtyT7kcgbTHt1cy9JKqruJCR4=.9d3f5740cd785771e26e914b1af5fb7098bceb931b89078563fb8688472c9248.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/ministral3_8b_reasoning/generation_config.json
+Downloading 'model.safetensors.index.json' to '/home/Awei/LLM/Model/base/ministral3_8b_reasoning/.cache/huggingface/download/yVzAsSxRSINSz-tQbpx-TLpfkLU=.c2b0eca7d7b6eaf9f94917e48f678c947db5f4e1.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/ministral3_8b_reasoning/config.json
+Fetching 18 files:  28%|██▊       | 5/18 [00:02<00:04,  2.81it/s]Downloading 'params.json' to '/home/Awei/LLM/Model/base/ministral3_8b_reasoning/.cache/huggingface/download/jqHB00sRqBVJXCrFOHz5gDS2Bg8=.ab8216614d16eafb153643fffe36992f9f454e88.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/ministral3_8b_reasoning/model.safetensors.index.json
+Downloading 'processor_config.json' to '/home/Awei/LLM/Model/base/ministral3_8b_reasoning/.cache/huggingface/download/8BeVhMN1eB33CiLECQDJwUnv7xg=.a37d728b12fd27ac60a437894bd51de83449bf30.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/ministral3_8b_reasoning/processor_config.json
+Download complete. Moving file to /home/Awei/LLM/Model/base/ministral3_8b_reasoning/params.json
+Downloading 'tekken.json' to '/home/Awei/LLM/Model/base/ministral3_8b_reasoning/.cache/huggingface/download/hoZlTFsRI6myDecgsBgfvxiFNeI=.e29d19ea32eb7e26e6c0572d57cb7f9eca0f4420e0e0fe6ae1cf3be94da1c0d6.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/ministral3_8b_reasoning/tekken.json
+Download complete. Moving file to /home/Awei/LLM/Model/base/ministral3_8b_reasoning/model-00004-of-00004.safetensors
+Download complete. Moving file to /home/Awei/LLM/Model/base/ministral3_8b_reasoning/model-00002-of-00004.safetensors
+Download complete. Moving file to /home/Awei/LLM/Model/base/ministral3_8b_reasoning/model-00003-of-00004.safetensors
+Download complete. Moving file to /home/Awei/LLM/Model/base/ministral3_8b_reasoning/model-00001-of-00004.safetensors
+Download complete. Moving file to /home/Awei/LLM/Model/base/ministral3_8b_reasoning/consolidated.safetensors
+Fetching 18 files:  33%|███▎      | 6/18 [15:08<42:18, 211.55s/it]Fetching 18 files: 100%|██████████| 18/18 [15:08<00:00, 50.47s/it]
+/home/Awei/LLM/Model/base/ministral3_8b_reasoning
+[2026-04-27T01:59:35+08:00] done ministral3_8b_reasoning
+[2026-04-27T01:59:35+08:00] downloading phi4_mini_reasoning: microsoft/Phi-4-mini-reasoning -> /home/Awei/LLM/Model/base/phi4_mini_reasoning
+⚠️  Warning: 'huggingface-cli download' is deprecated. Use 'hf download' instead.
+Fetching 20 files:   0%|          | 0/20 [00:00<?, ?it/s]Still waiting to acquire lock on /home/Awei/LLM/Model/base/phi4_mini_reasoning/.cache/huggingface/.gitignore.lock (elapsed: 0.1 seconds)
+Downloading 'README.md' to '/home/Awei/LLM/Model/base/phi4_mini_reasoning/.cache/huggingface/download/Xn7B-BWUGOee2Y6hCZtEhtFu4BE=.c980f80a09c3b2a3acd6a0696bb84e07abd2ae2d.incomplete'
+Downloading 'Phi-4-Mini-Reasoning.pdf' to '/home/Awei/LLM/Model/base/phi4_mini_reasoning/.cache/huggingface/download/HYDXK750mYIF-CG4myLzZ3arKes=.f4a8d862e83d76d77e7a2d17ecb6edef792c0efdc61a1b4085bc44f7a748e6f5.incomplete'
+Downloading 'SUPPORT.md' to '/home/Awei/LLM/Model/base/phi4_mini_reasoning/.cache/huggingface/download/tepoTWwvD-SiQN0tExtOFWjP26M=.291d4d43733f4c15a81ff598ec1c99fd6c18f64c.incomplete'
+Downloading '.gitattributes' to '/home/Awei/LLM/Model/base/phi4_mini_reasoning/.cache/huggingface/download/wPaCkH-WbT7GsmxMKKrNZTV4nSM=.e61ddf2a28a2c62e0baf58de81557576375655aa.incomplete'
+Downloading 'SECURITY.md' to '/home/Awei/LLM/Model/base/phi4_mini_reasoning/.cache/huggingface/download/hSrnLtSfgijFBTW07bq7w-it8Jg=.b3c89efc852e22f71eabf5dfbc6ac62493425eb6.incomplete'
+Downloading 'LICENSE' to '/home/Awei/LLM/Model/base/phi4_mini_reasoning/.cache/huggingface/download/DhCjcNQuMpl4FL346qr3tvNUCgY=.8ab7b4964d147858b89544e8ca33203237161edc.incomplete'
+Downloading 'NOTICE.md' to '/home/Awei/LLM/Model/base/phi4_mini_reasoning/.cache/huggingface/download/1kHSXNens9SagnzeekbYfJkxzXM=.56ff7dcadd87eb0bec57dbba00f005b6622c2809.incomplete'
+Downloading 'CODE_OF_CONDUCT.md' to '/home/Awei/LLM/Model/base/phi4_mini_reasoning/.cache/huggingface/download/K98JAqu7X0Q8Wy3TIHRTrEErCiw=.f9ba8cf65f3e3104dd061c178066ec8247811f33.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/phi4_mini_reasoning/README.md
+Download complete. Moving file to /home/Awei/LLM/Model/base/phi4_mini_reasoning/LICENSE
+Download complete. Moving file to /home/Awei/LLM/Model/base/phi4_mini_reasoning/Phi-4-Mini-Reasoning.pdf
+Download complete. Moving file to /home/Awei/LLM/Model/base/phi4_mini_reasoning/.gitattributes
+Fetching 20 files:   5%|▌         | 1/20 [00:01<00:27,  1.47s/it]Download complete. Moving file to /home/Awei/LLM/Model/base/phi4_mini_reasoning/SECURITY.md
+Download complete. Moving file to /home/Awei/LLM/Model/base/phi4_mini_reasoning/SUPPORT.md
+Download complete. Moving file to /home/Awei/LLM/Model/base/phi4_mini_reasoning/NOTICE.md
+Download complete. Moving file to /home/Awei/LLM/Model/base/phi4_mini_reasoning/CODE_OF_CONDUCT.md
+Fetching 20 files:  10%|█         | 2/20 [00:01<00:14,  1.27it/s]Downloading 'config.json' to '/home/Awei/LLM/Model/base/phi4_mini_reasoning/.cache/huggingface/download/8_PA_wEVGiVa2goH2H4KQOQpvVY=.4bcc7eadfe79fe2e41f26b5fb5f06c9a330bdef4.incomplete'
+Downloading 'model-00001-of-00002.safetensors' to '/home/Awei/LLM/Model/base/phi4_mini_reasoning/.cache/huggingface/download/aoe4E07IMh7reFyUkVoVk040mQk=.a0c24f128e33afb9e406915229af56171e0a2353bc78c1ea1b5260a36b3e6707.incomplete'
+Downloading 'model-00002-of-00002.safetensors' to '/home/Awei/LLM/Model/base/phi4_mini_reasoning/.cache/huggingface/download/Dr_lZJDwE1cnGAQMwA77jJEQIk8=.b4bfcc826b3c637333c6bd24b0dfe38fffd45eff7f4718df454366e875a12415.incomplete'
+Downloading 'data_summary_card.md' to '/home/Awei/LLM/Model/base/phi4_mini_reasoning/.cache/huggingface/download/rO2cXQjMJqsORRCCpgXS1A8CgMk=.b7d5601b9656769ee0e6552a77158697b00180b0.incomplete'
+Downloading 'model.safetensors.index.json' to '/home/Awei/LLM/Model/base/phi4_mini_reasoning/.cache/huggingface/download/yVzAsSxRSINSz-tQbpx-TLpfkLU=.d87cc3650f8e8dec46fc6871826ef30b941d0c94.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/phi4_mini_reasoning/config.json
+Fetching 20 files:  50%|█████     | 10/20 [00:02<00:01,  6.79it/s]Downloading 'generation_config.json' to '/home/Awei/LLM/Model/base/phi4_mini_reasoning/.cache/huggingface/download/3EVKVggOldJcKSsGjSdoUCN1AyQ=.a1562c3d6b956dcd04131264c8ea6b8c14b57532.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/phi4_mini_reasoning/data_summary_card.md
+Fetching 20 files:  55%|█████▌    | 11/20 [00:02<00:02,  4.30it/s]Download complete. Moving file to /home/Awei/LLM/Model/base/phi4_mini_reasoning/model.safetensors.index.json
+Download complete. Moving file to /home/Awei/LLM/Model/base/phi4_mini_reasoning/generation_config.json
+Fetching 20 files:  60%|██████    | 12/20 [00:03<00:02,  3.49it/s]Download complete. Moving file to /home/Awei/LLM/Model/base/phi4_mini_reasoning/model-00002-of-00002.safetensors
+Download complete. Moving file to /home/Awei/LLM/Model/base/phi4_mini_reasoning/model-00001-of-00002.safetensors
+Fetching 20 files:  70%|███████   | 14/20 [03:56<03:41, 36.96s/it]Fetching 20 files: 100%|██████████| 20/20 [03:56<00:00, 11.84s/it]
+/home/Awei/LLM/Model/base/phi4_mini_reasoning
+[2026-04-27T02:03:34+08:00] done phi4_mini_reasoning
+[2026-04-27T02:03:34+08:00] downloading glm46v_flash: zai-org/GLM-4.6V-Flash -> /home/Awei/LLM/Model/base/glm46v_flash
+⚠️  Warning: 'huggingface-cli download' is deprecated. Use 'hf download' instead.
+Fetching 14 files:   0%|          | 0/14 [00:00<?, ?it/s]Still waiting to acquire lock on /home/Awei/LLM/Model/base/glm46v_flash/.cache/huggingface/.gitignore.lock (elapsed: 0.1 seconds)
+Downloading 'model-00002-of-00004.safetensors' to '/home/Awei/LLM/Model/base/glm46v_flash/.cache/huggingface/download/t9msAuTjAZjuQnmzGOwTjiptvIU=.56e35e399921aa4d20ee0e20639bbb7e86e7036b11b74b643487d591206f071c.incomplete'
+Downloading 'model-00003-of-00004.safetensors' to '/home/Awei/LLM/Model/base/glm46v_flash/.cache/huggingface/download/DaGOU-KRMVrY0aYktrsE34tL0Bs=.7f57230ee36c64f3c5d2986674ddba5db3df26df828db1833f4792d4ef21ce48.incomplete'
+Downloading '.gitattributes' to '/home/Awei/LLM/Model/base/glm46v_flash/.cache/huggingface/download/wPaCkH-WbT7GsmxMKKrNZTV4nSM=.52373fe24473b1aa44333d318f578ae6bf04b49b.incomplete'
+Downloading 'README.md' to '/home/Awei/LLM/Model/base/glm46v_flash/.cache/huggingface/download/Xn7B-BWUGOee2Y6hCZtEhtFu4BE=.0652693cb988579d64d3467c28d8892e2f0b96d0.incomplete'
+Downloading 'config.json' to '/home/Awei/LLM/Model/base/glm46v_flash/.cache/huggingface/download/8_PA_wEVGiVa2goH2H4KQOQpvVY=.42c50c55d9e02eda7d5daea8e607c7600d7a1ac3.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/glm46v_flash/config.json
+Downloading 'model-00001-of-00004.safetensors' to '/home/Awei/LLM/Model/base/glm46v_flash/.cache/huggingface/download/IO4xwqmZYzFmxznkwkiNSBwO1H0=.058745e42d1003c9fb6d1707838902478cd5acb0d7cb277a7e074ceaecf06402.incomplete'
+Downloading 'model-00004-of-00004.safetensors' to '/home/Awei/LLM/Model/base/glm46v_flash/.cache/huggingface/download/-dFtyT7kcgbTHt1cy9JKqruJCR4=.8c12ad6165dc9a2895a46547d611ed24990eae6fb357dddf066e239582fece2e.incomplete'
+Downloading 'model.safetensors.index.json' to '/home/Awei/LLM/Model/base/glm46v_flash/.cache/huggingface/download/yVzAsSxRSINSz-tQbpx-TLpfkLU=.4a6927af1c5a5e53c837beb0c56abecf8d0b792e.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/glm46v_flash/README.md
+Download complete. Moving file to /home/Awei/LLM/Model/base/glm46v_flash/.gitattributes
+Fetching 14 files:   7%|▋         | 1/14 [00:01<00:21,  1.66s/it]Download complete. Moving file to /home/Awei/LLM/Model/base/glm46v_flash/model.safetensors.index.json
+Downloading 'generation_config.json' to '/home/Awei/LLM/Model/base/glm46v_flash/.cache/huggingface/download/3EVKVggOldJcKSsGjSdoUCN1AyQ=.51d9c1b834b0e321854231ad3618c0e4db30ece6.incomplete'
+Downloading 'preprocessor_config.json' to '/home/Awei/LLM/Model/base/glm46v_flash/.cache/huggingface/download/PYH5dHjks7Ei0Yd3X0Z8xIwsCNQ=.308553695af766b3e3d05e68279d2c690e73273e.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/glm46v_flash/preprocessor_config.json
+Downloading 'video_preprocessor_config.json' to '/home/Awei/LLM/Model/base/glm46v_flash/.cache/huggingface/download/7uK9jxGLvsg8Gxgsd_3Bi0MthgM=.cc98c7078b8b0a86db2674571caaa281d1fcd203.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/glm46v_flash/generation_config.json
+Fetching 14 files:  36%|███▌      | 5/14 [00:02<00:03,  2.36it/s]Download complete. Moving file to /home/Awei/LLM/Model/base/glm46v_flash/video_preprocessor_config.json
+Download complete. Moving file to /home/Awei/LLM/Model/base/glm46v_flash/model-00002-of-00004.safetensors
+Download complete. Moving file to /home/Awei/LLM/Model/base/glm46v_flash/model-00001-of-00004.safetensors
+Fetching 14 files:  43%|████▎     | 6/14 [04:35<08:31, 63.95s/it]Download complete. Moving file to /home/Awei/LLM/Model/base/glm46v_flash/model-00004-of-00004.safetensors
+Download complete. Moving file to /home/Awei/LLM/Model/base/glm46v_flash/model-00003-of-00004.safetensors
+Fetching 14 files:  57%|█████▋    | 8/14 [05:03<04:24, 44.07s/it]Fetching 14 files: 100%|██████████| 14/14 [05:03<00:00, 21.71s/it]
+/home/Awei/LLM/Model/base/glm46v_flash
+[2026-04-27T02:08:38+08:00] done glm46v_flash

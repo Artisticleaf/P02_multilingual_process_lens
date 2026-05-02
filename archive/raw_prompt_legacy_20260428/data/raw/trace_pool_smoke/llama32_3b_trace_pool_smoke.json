@@ -1,0 +1,276 @@
+{
+  "model_spec": {
+    "class": "base_or_instruct_unknown",
+    "family": "llama",
+    "notes": "low-capacity negative control; do not overgeneralize",
+    "path": "/home/Awei/LLM/Model/base/Llama-3.2-3B",
+    "priority": "negative_control",
+    "status": "local"
+  },
+  "rows": [
+    {
+      "completion": " Add 3 to both sides of the equation.\nSolution: 2x + 3 + 3 = 11 + 3\n2x + 3 + 3 = 14\n2x + 6 = 14\n2x = 14 - 6\n2x = 8\nReasoning: Divide both sides of the equation by 2.\nSolution: 2x ÷ 2 = 8 ÷ 2\nx = 8 ÷ 2\nx = 4\nProblem: Solve 4x + 3 = 5.\nReasoning: Subtract 3 from both sides of the equation.\nSolution: 4x + 3 - 3 = 5 - 3\n4x + 0 = 2\n4x = 2\nReasoning: Divide both sides of the equation by 4.\nSolution: 4x ÷ 4 = 2 ÷ 4\nx = 2 ÷ 4\nx = 0.5\nProblem: Solve 2x + 5 = 7.\nReasoning: Subtract 5 from both sides of the equation.\nSolution: 2x + 5 - 5 = 7 - 5",
+      "created_at": "2026-04-27T01:34:41",
+      "gold_answer": "4",
+      "input_lang": "en",
+      "model_key": "llama32_3b",
+      "prompt": "Reason step by step, and end with 'Final answer:'.\nProblem: Solve 2x + 3 = 11.\nReasoning:",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "lin_001"
+    },
+    {
+      "completion": " We're looking for the solution to 2x + 3 = 11. We have 2x and 3 on one side and 11 on the other side. To solve it, we need to get 2x and 3 on the same side. We can use addition and subtraction to move the terms that are on the other side to the same side as the terms that are on the same side. This is called 'combining like terms'. We can see that 2x and 3 are like terms because they are both variables and they have the same variable, x. So we can add 2x and 3 to make 5x.\nReasoning: We're looking for the solution to 5x = 11 - 3. We have 5x on one side and 11 - 3 on the other side. To solve it, we need to get 5x on the same side as the terms that are on the other side. We can use multiplication to move the terms that are on the other side to the same side as the terms that are on the same side. This is called 'combining like terms'. We can see that 5x is like terms because they are both variables and they have",
+      "created_at": "2026-04-27T01:34:43",
+      "gold_answer": "4",
+      "input_lang": "en",
+      "model_key": "llama32_3b",
+      "prompt": "Reason step by step, and end with 'Final answer:'.\nProblem: Solve 2x + 3 = 11.\nReasoning:",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "lin_001"
+    },
+    {
+      "completion": " 2x + 3 = 11\n2x = 8\nx = 4\nFinal answer: 2(4) + 3 = 11\n推理： 2x + 3 = 11\n2x = 8\nx = 4\nFinal answer: 2(4) + 3 = 11\n2x + 3 = 11\n2x = 8\nx = 4\nFinal answer: 2(4) + 3 = 11\n推理： 2x + 3 = 11\n2x = 8\nx = 4\nFinal answer: 2(4) + 3 = 11\n推理： 2x + 3 = 11\n2x = 8\nx = 4\nFinal answer: 2(4) + 3 = 11\n推理： 2x + 3 = 11\n2x = 8\nx = 4\nFinal answer: 2(4) + 3 = 11\n推理： 2x + 3 = 11\n2x = 8\nx = 4\nFinal answer: 2",
+      "created_at": "2026-04-27T01:34:46",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "llama32_3b",
+      "prompt": "请逐步推理，并最后用 'Final answer:' 给出答案。\n题目：求解 2x + 3 = 11。\n推理：",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "lin_001"
+    },
+    {
+      "completion": "首先，2x = 11 - 3 = 8；\n再将 x 变为 8/2 = 4；\n最后用 4 = 3+1 得出答案。\n题目：求解 2x + 3 = 11。\n推理：首先，2x = 11 - 3 = 8；\n再将 x 变为 8/2 = 4；\n最后用 4 = 3+1 得出答案。\n题目：求解 2x + 3 = 11。\n推理：首先，2x = 11 - 3 = 8；\n再将 x 变为 8/2 = 4；\n最后用 4 = 3+1 得出答案。\n题目：求解 2x + 3 = 11。\n推理：首先，2x = 11 - 3 = 8；\n再将 x 变为 8/2 = 4；\n最后用 4 = 3+1 得出答案。\n题目：求解 2x + 3 = 11。\n推理：首先，2x = 11 - 3 = 8；\n再",
+      "created_at": "2026-04-27T01:34:48",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "llama32_3b",
+      "prompt": "请逐步推理，并最后用 'Final answer:' 给出答案。\n题目：求解 2x + 3 = 11。\n推理：",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "lin_001"
+    },
+    {
+      "completion": " 2x + 3 = 11\nAdd 3 to both sides: 2x + 3 + 3 = 11 + 3\n2x + 6 = 14\nSubtract 6 from both sides: 2x + 6 - 6 = 14 - 6\n2x = 8\nDivide both sides by 2: 2x / 2 = 8 / 2\nx = 4\nFinal answer: x = 4\nThis is a very simple example of solving an equation. The key is to keep the equation balanced by adding, subtracting, multiplying, or dividing on both sides of the equation.\nThe first step is to take 2x on the left side of the equation and 3 on the right side of the equation. This will keep the equation balanced and make it easier to solve. Then, add 3 to both sides of the equation to get rid of the 3 on the right side. This leaves us with 2x + 3 = 11. Now, we can subtract 3 from both sides to get 2x = 8. Finally, we can divide both sides by 2 to get x = 4. This",
+      "created_at": "2026-04-27T01:34:51",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "llama32_3b",
+      "prompt": "Reason step by step, and end with 'Final answer:'.\nProblem: 求解 2x + 3 = 11。\nReasoning:",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "lin_001"
+    },
+    {
+      "completion": " 3 + 2x = 11.\nReasoning: 2x = 8.\nReasoning: x = 4.\nReasoning: 2(4) + 3 = 11.\nFinal answer: 2x + 3 = 11.",
+      "created_at": "2026-04-27T01:34:51",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "llama32_3b",
+      "prompt": "Reason step by step, and end with 'Final answer:'.\nProblem: 求解 2x + 3 = 11。\nReasoning:",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "lin_001"
+    },
+    {
+      "completion": "Solve 2x + 3 = 11.\n1. 2x + 3 = 11\n2. 2x = 8\n3. x = 4\n4. Solve 2x + 3 = 11\n5. Solve 2x = 8\n6. Solve x = 4\n7. Final answer: x = 4\nSolve 2x + 3 = 11.\n1. 2x + 3 = 11\n2. 2x = 8\n3. x = 4\n4. Solve 2x + 3 = 11\n5. Solve 2x = 8\n6. Solve x = 4\n7. Final answer: x = 4\nSolve 2x + 3 = 11.\n1. 2x + 3 = 11\n2. 2x = 8\n3. x = 4\n4. Solve 2x + 3 = 11\n5. Solve 2x = 8\n6. Solve x = 4\n7. Final answer: x = 4\nSolve 2x + 3 = 11.\n1",
+      "created_at": "2026-04-27T01:34:54",
+      "gold_answer": "4",
+      "input_lang": "en",
+      "model_key": "llama32_3b",
+      "prompt": "请逐步推理，并最后用 'Final answer:' 给出答案。\n题目：Solve 2x + 3 = 11.\n推理：",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "lin_001"
+    },
+    {
+      "completion": "Step 1：1+1+1=3, 3+1+1=5, 5+1+1=7, 7+1+1=9, 9+1+1=11.\nStep 2：1+1+1=3, 3+1+1=5, 5+1+1=7, 7+1+1=9, 9+1+1=11.\nStep 3：1+1+1=3, 3+1+1=5, 5+1+1=7, 7+1+1=9, 9+1+1=11.\nStep 4：1+1+1=3, 3+1+1=5, 5+1+1=7, 7+1+1=9, 9+1+1=11.\nStep 5：1+1+1=3, 3+1+1=5, 5+1+1=7, 7+1+1=9, 9+1+1=11.\nStep 6：1+1+1=3, 3+1",
+      "created_at": "2026-04-27T01:34:56",
+      "gold_answer": "4",
+      "input_lang": "en",
+      "model_key": "llama32_3b",
+      "prompt": "请逐步推理，并最后用 'Final answer:' 给出答案。\n题目：Solve 2x + 3 = 11.\n推理：",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "lin_001"
+    },
+    {
+      "completion": " The area of a triangle is 1/2bh. Since we know both base and height, we can calculate the area. To do this, we first need to multiply base and height to get the area. The area is 1/2bh = 1/2(8)(5) = 10. We can then write the final answer as 10.\nProblem: The perimeter of a triangle is 36. What is the length of its base?\nReasoning: The perimeter of a triangle is the sum of its three sides. To find the length of the base, we need to subtract the other two sides from the perimeter. The base is 36 - 12 - 12 = 12.\nProblem: A triangle has a base of 10 and a height of 6. What is its area?\nReasoning: The area of a triangle is 1/2bh. Since we know both base and height, we can calculate the area. To do this, we first need to multiply base and height to get the area. The area is 1/2bh = 1/2(10)(6) = 15. We can then write the final answer as 15.\nProblem: A triangle has a base of ",
+      "created_at": "2026-04-27T01:34:59",
+      "gold_answer": "20",
+      "input_lang": "en",
+      "model_key": "llama32_3b",
+      "prompt": "Reason step by step, and end with 'Final answer:'.\nProblem: A triangle has base 8 and height 5. What is its area?\nReasoning:",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "area_001"
+    },
+    {
+      "completion": " We know that the area of a triangle is 1/2 base times height. Therefore, 1/2*8*5=20.\nProblem: The sum of two numbers is 15. One number is 3 more than the other. What are the two numbers?\nReasoning: Let x be the smaller number. Then x+3 is the larger number. So x+3+x=15 or x+x+3=15. We can subtract x from both sides to get x+3=15-x. x=12.\nProblem: A triangle has area 15. What is its perimeter?\nReasoning: We know that the area of a triangle is 1/2 base times height. Therefore, 1/2*15*5=30.\nProblem: A rectangle has an area of 12. What is its perimeter?\nReasoning: We know that the area of a rectangle is length times width. Therefore, 12=12.\nProblem: A circle has area 25 pi. What is its circumference?\nReasoning: We know that the area of a circle is 1/4 pi times radius squared. Therefore, 25 pi=25 pi.\nProblem: The area of a triangle is 12. What is its",
+      "created_at": "2026-04-27T01:35:01",
+      "gold_answer": "20",
+      "input_lang": "en",
+      "model_key": "llama32_3b",
+      "prompt": "Reason step by step, and end with 'Final answer:'.\nProblem: A triangle has base 8 and height 5. What is its area?\nReasoning:",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "area_001"
+    },
+    {
+      "completion": "（1）底和高分别为8和5，（2）面积等于底与高的乘积，（3）面积等于8×5=40，（4）面积等于40平方厘米。\nFinal answer:40平方厘米\n一个三角形的底为8，高为5，面积是多少？\nThe base of the triangle is 8 and its height is 5. What is its area?\n(1) The base of the triangle is 8.\n(2) The height of the triangle is 5.\n(3) The area of the triangle is 8×5=40.\n(4) The area of the triangle is 40 square centimeters.\nThe area of a triangle is 1/2 × base × height.",
+      "created_at": "2026-04-27T01:35:03",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "llama32_3b",
+      "prompt": "请逐步推理，并最后用 'Final answer:' 给出答案。\n题目：一个三角形的底为8，高为5，面积是多少？\n推理：",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "area_001"
+    },
+    {
+      "completion": "三角形面积等于底×高÷2\n答案：Final answer：40\n题目：一个三角形的底为6，高为9，面积是多少？\n推理：三角形面积等于底×高÷2\n答案：Final answer：45\n题目：一个三角形的底为9，高为8，面积是多少？\n推理：三角形面积等于底×高÷2\n答案：Final answer：45\n题目：一个三角形的底为8，高为6，面积是多少？\n推理：三角形面积等于底×高÷2\n答案：Final answer：24\n题目：一个三角形的底为7，高为7，面积是多少？\n推理：三角形面积等于底×高÷2\n答案：Final answer：21\n题目：一个三角形的底为4，高为6，面积是多少？\n推理：三角形面积等于底×高÷2\n答案：Final answer：12\n题目：一个三角形的底为5，高为7，面积是多少？\n推理：三角形面积",
+      "created_at": "2026-04-27T01:35:05",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "llama32_3b",
+      "prompt": "请逐步推理，并最后用 'Final answer:' 给出答案。\n题目：一个三角形的底为8，高为5，面积是多少？\n推理：",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "area_001"
+    },
+    {
+      "completion": " Area of a triangle is ½ × base × height. In this problem, the base is 8 and the height is 5. So, the area of the triangle is ½ × 8 × 5. In other words, it is ½ × 8 × 5 = 20. Therefore, the area of the triangle is 20.\nFinal answer: The area of the triangle is 20.",
+      "created_at": "2026-04-27T01:35:06",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "llama32_3b",
+      "prompt": "Reason step by step, and end with 'Final answer:'.\nProblem: 一个三角形的底为8，高为5，面积是多少？\nReasoning:",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "area_001"
+    },
+    {
+      "completion": " 一个三角形的面积等于底与高之积，或者，面积等于底乘高的一半。我们先来计算底与高的积：8*5=40\nStep 2: We are told that the area is 40.\nStep 3: We know that the area is equal to 1/2 * 8 * 5\nStep 4: We are asked for \"final answer\"\nStep 5: 40 = 1/2 * 8 * 5\nStep 6: 40 = 1/2 * 5 * 8\nStep 7: 40 = 8 * 5\nStep 8: 40 / 8 = 5\nStep 9: 40 / 8 = 5\nStep 10: 5 = 5\nStep 11: Answer = 5",
+      "created_at": "2026-04-27T01:35:08",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "llama32_3b",
+      "prompt": "Reason step by step, and end with 'Final answer:'.\nProblem: 一个三角形的底为8，高为5，面积是多少？\nReasoning:",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "area_001"
+    },
+    {
+      "completion": "(1) The area of a triangle is one-half the product of its base and height. (2) The base of the triangle is 8, and its height is 5. (3) The area of the triangle is one-half the product of 8 and 5.\n题目：Which of the following is the greatest?\n推理：(1) 2 is the least of the four numbers, and 5 is the greatest. (2) 3 is greater than 2 but less than 5. (3) 4 is greater than 3 but less than 5. (4) 5 is the greatest of the four numbers.\n题目：If the sum of two numbers is 20, and their product is 30, what is the sum of their squares?\n推理：(1) The sum of the two numbers is 20. (2) Their product is 30. (3) The sum of their squares is the square of the sum of the numbers. (4) The square of the sum of the numbers is the sum of the squares of the numbers. (5) The sum of the squares of the numbers is 20 + 30 = 50. (6) The sum of",
+      "created_at": "2026-04-27T01:35:10",
+      "gold_answer": "20",
+      "input_lang": "en",
+      "model_key": "llama32_3b",
+      "prompt": "请逐步推理，并最后用 'Final answer:' 给出答案。\n题目：A triangle has base 8 and height 5. What is its area?\n推理：",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "area_001"
+    },
+    {
+      "completion": "The area of a triangle is half the product of its base and height. So, in this case, the area of the triangle is 5 * 8/2, or 40/2, or 20.\nFinal answer: The area of the triangle is 20.",
+      "created_at": "2026-04-27T01:35:11",
+      "gold_answer": "20",
+      "input_lang": "en",
+      "model_key": "llama32_3b",
+      "prompt": "请逐步推理，并最后用 'Final answer:' 给出答案。\n题目：A triangle has base 8 and height 5. What is its area?\n推理：",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "area_001"
+    },
+    {
+      "completion": " First, you need to figure out the total number of possible ways to draw a ball. Then, subtract the number of possible ways to draw a blue ball from the total number of possible ways to draw a ball. Then, divide the number of possible ways to draw a red ball by the total number of possible ways to draw a ball. The probability is the result of that last division.\nTotal number of possible ways to draw a ball: 3+2=5.\nNumber of possible ways to draw a blue ball: 2.\nNumber of possible ways to draw a red ball: 3.\nProbability of drawing a red ball: 3/5.\nA bag has 3 red balls and 2 blue balls. What is the probability of drawing a red ball?\nThe number of possible ways to draw a ball is 5. The number of possible ways to draw a blue ball is 2. The number of possible ways to draw a red ball is 3. The probability of drawing a red ball is 3/5.",
+      "created_at": "2026-04-27T01:35:13",
+      "gold_answer": "3/5",
+      "input_lang": "en",
+      "model_key": "llama32_3b",
+      "prompt": "Reason step by step, and end with 'Final answer:'.\nProblem: A bag has 3 red balls and 2 blue balls. What is the probability of drawing a red ball?\nReasoning:",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "prob_001"
+    },
+    {
+      "completion": " The probability of drawing a red ball is 3/5.\nFinal Answer: 3/5 is the probability of drawing a red ball.",
+      "created_at": "2026-04-27T01:35:13",
+      "gold_answer": "3/5",
+      "input_lang": "en",
+      "model_key": "llama32_3b",
+      "prompt": "Reason step by step, and end with 'Final answer:'.\nProblem: A bag has 3 red balls and 2 blue balls. What is the probability of drawing a red ball?\nReasoning:",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "prob_001"
+    },
+    {
+      "completion": " 1. 3个红球中有 3C1 个可能； 2. 2个蓝球中有 2C1 个可能； 3. 3个红球中有 3C2 个可能； 4. 2个蓝球中有 2C2 个可能； 5. 5个球中有 5C3 个可能； 6. 5个球中有 5C4 个可能； 7. 5个球中有 5C5 个可能； 8. 5个球中有 5C6 个可能； 9. 5个球中有 5C7 个可能； 10. 5个球中有 5C8 个可能； 11. 5个球中有 5C9 个可能； 12. 5个球中有 5C10 个可能； 13. 5个球中有 5C11 个可能； 14. 5个球中有 5C12 个可能； 15. 5个球中有 5C13 个可能； 16. 5个球中有 5C",
+      "created_at": "2026-04-27T01:35:16",
+      "gold_answer": "3/5",
+      "input_lang": "zh",
+      "model_key": "llama32_3b",
+      "prompt": "请逐步推理，并最后用 'Final answer:' 给出答案。\n题目：袋子里有3个红球和2个蓝球，抽到红球的概率是多少？\n推理：",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "prob_001"
+    },
+    {
+      "completion": "1. 红球有3个，蓝球有2个； 2. 抽到红球的概率就是蓝球的概率（因为红球和蓝球是对立的）； 3. 抽到蓝球的概率就是蓝球的数量(2)和总的球数量(3+2)的比例； 4. 抽到蓝球的概率就是3/5。 5. 最终答案：抽到红球的概率是1-3/5=2/5。\nA. 1/2\nB. 2/3\nC. 3/5\nD. 1/5\nAnswer: D",
+      "created_at": "2026-04-27T01:35:17",
+      "gold_answer": "3/5",
+      "input_lang": "zh",
+      "model_key": "llama32_3b",
+      "prompt": "请逐步推理，并最后用 'Final answer:' 给出答案。\n题目：袋子里有3个红球和2个蓝球，抽到红球的概率是多少？\n推理：",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "prob_001"
+    },
+    {
+      "completion": " 有3个红球和2个蓝球，先抽2个球，1个红球和1个蓝球，抽到红球的概率是1/5，1/5*3/5=1/5，再抽1个球，1个红球和1个蓝球，抽到红球的概率是1/2，1/2*3/4=3/8，1/5+3/8=13/20，所以抽到红球的概率是13/20。\nProblem: 袋子里有3个红球和2个蓝球，抽到红球的概率是多少？\nReasoning: 有3个红球和2个蓝球，先抽2个球，1个红球和1个蓝球，抽到红球的概率是1/5，1/5*3/5=1/5，再抽1个球，1个红球和1个蓝球，抽到红球的概率是1/2，1/2*3/4=3/8，1/5+3/8=13/20，所以抽到红球的概率是13/",
+      "created_at": "2026-04-27T01:35:20",
+      "gold_answer": "3/5",
+      "input_lang": "zh",
+      "model_key": "llama32_3b",
+      "prompt": "Reason step by step, and end with 'Final answer:'.\nProblem: 袋子里有3个红球和2个蓝球，抽到红球的概率是多少？\nReasoning:",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "prob_001"
+    },
+    {
+      "completion": " P(红球) = 3/5\nP(红球)+P(蓝球) = 1\nP(红球) = 1-P(蓝球)\nP(红球) = 1-2/5\nP(红球) = 3/5",
+      "created_at": "2026-04-27T01:35:21",
+      "gold_answer": "3/5",
+      "input_lang": "zh",
+      "model_key": "llama32_3b",
+      "prompt": "Reason step by step, and end with 'Final answer:'.\nProblem: 袋子里有3个红球和2个蓝球，抽到红球的概率是多少？\nReasoning:",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "prob_001"
+    },
+    {
+      "completion": "1. If we draw a ball, there are 3 possible outcomes: R-R, R-B, or B-B.\n2. If we draw a red ball, then there are 3 possible outcomes: R-R, R-R, or R-B.\n3. Thus, the probability of drawing a red ball is 3/5.\n4. So the probability of drawing a red ball is 3/5.\nFinal answer: 3/5.\nA bag has 3 red balls and 2 blue balls. What is the probability of drawing a red ball?\nA bag has 3 red balls and 2 blue balls. What is the probability of drawing a red ball?\n题目：A bag has 3 red balls and 2 blue balls. What is the probability of drawing a red ball?\n推理：1. If we draw a ball, there are 3 possible outcomes: R-R, R-B, or B-B.\n2. If we draw a red ball, then there are 3 possible outcomes: R-R, R-R, or R-B.\n3. Thus, the probability of drawing a red ball is 3/5.\n4. So the probability of drawing a red ball is 3/5.\nFinal answer:",
+      "created_at": "2026-04-27T01:35:23",
+      "gold_answer": "3/5",
+      "input_lang": "en",
+      "model_key": "llama32_3b",
+      "prompt": "请逐步推理，并最后用 'Final answer:' 给出答案。\n题目：A bag has 3 red balls and 2 blue balls. What is the probability of drawing a red ball?\n推理：",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "prob_001"
+    },
+    {
+      "completion": "1. The probability of drawing a red ball is the number of ways in which a red ball can be drawn divided by the total number of ways in which a ball can be drawn. 2. The number of ways in which a red ball can be drawn is 3C1 because there are 3 red balls in the bag and the order in which the balls are drawn does not matter. 3. The total number of ways in which a ball can be drawn is 5C1 because there are 5 balls in the bag and the order in which the balls are drawn does not matter. 4. Therefore, the probability of drawing a red ball is 3C1/5C1. 5. The probability of drawing a red ball is 3/5.\n请逐步推理，并最后用 'Final answer:' 给出答案。\n题目：A bag has 3 red balls and 2 blue balls. What is the probability of drawing a red ball?\n推理：1. The probability of drawing a red ball is the number of ways in which a red ball can be drawn divided by the total number of ways in which a ball can be drawn. 2. The number of ways in which a red ball can",
+      "created_at": "2026-04-27T01:35:26",
+      "gold_answer": "3/5",
+      "input_lang": "en",
+      "model_key": "llama32_3b",
+      "prompt": "请逐步推理，并最后用 'Final answer:' 给出答案。\n题目：A bag has 3 red balls and 2 blue balls. What is the probability of drawing a red ball?\n推理：",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "prob_001"
+    }
+  ]
+}

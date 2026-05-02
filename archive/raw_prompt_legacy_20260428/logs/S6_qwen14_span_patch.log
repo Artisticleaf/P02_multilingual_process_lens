@@ -1,0 +1,5 @@
+[2026-04-27T18:09:55] loading qwen3_14b_base on cuda; pairs=1
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s]Loading weights: 100%|██████████| 443/443 [00:00<00:00, 14477.77it/s]
+pair=qwen14_s6_pay75_bad150_valid151 base_valid=2.875 base_bad=0.625 layers=[9, 14, 20, 25, 30]
+wrote /home/Awei/P02_multilingual_process_lens/results/S6_lexical_grid_span_patch/qwen3_14b_base_real_acpi_span_patch.json; rows=15 best_pair=qwen14_s6_pay75_bad150_valid151 span=support_error_span L14 v2b=2.750 b2v=-1.000

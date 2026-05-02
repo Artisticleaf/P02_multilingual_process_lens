@@ -1,0 +1,9 @@
+/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+[2026-04-27T02:45:13] loading tokenizer: glm46v_flash -> /home/Awei/LLM/Model/base/glm46v_flash
+[2026-04-27T02:45:13] loading model dtype=bfloat16 device=cuda
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 138.60it/s]
+[2026-04-27T02:45:16] pairs=5 layers=[7, 10, 19, 20, 30, 39] spans=['verdict_pos', 'problem_span', 'trace_span', 'support_error_span', 'final_clause_span']
+[2026-04-27T02:45:36] wrote results/E03_span_patch_hard/glm46v_flash_span_patch_hard.json; rows=150
+SUMMARY model=glm46v_flash best_span=trace_span layer=10 v2b=0.225 b2v=-0.138

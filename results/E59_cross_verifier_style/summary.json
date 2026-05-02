@@ -1,0 +1,220 @@
+{
+  "matrix_absolute": [
+    {
+      "source_model_key": "gemma4_26b_a4b_it",
+      "verifier_model_key": "gemma4_26b_a4b_it",
+      "self": true,
+      "n": 22,
+      "acpi_accept_rate": 0.45454545454545453,
+      "valid_accept_rate": 1.0,
+      "accuracy": 0.7727272727272727,
+      "mean_margin": 10.486687487554882
+    },
+    {
+      "source_model_key": "gemma4_31b_it",
+      "verifier_model_key": "gemma4_26b_a4b_it",
+      "self": false,
+      "n": 24,
+      "acpi_accept_rate": 0.5,
+      "valid_accept_rate": 1.0,
+      "accuracy": 0.75,
+      "mean_margin": 11.178614011046022
+    },
+    {
+      "source_model_key": "qwen35_27b",
+      "verifier_model_key": "gemma4_26b_a4b_it",
+      "self": false,
+      "n": 22,
+      "acpi_accept_rate": 0.6363636363636364,
+      "valid_accept_rate": 1.0,
+      "accuracy": 0.6818181818181818,
+      "mean_margin": 14.508015172649698
+    },
+    {
+      "source_model_key": "gemma4_26b_a4b_it",
+      "verifier_model_key": "gemma4_31b_it",
+      "self": false,
+      "n": 22,
+      "acpi_accept_rate": 0.45454545454545453,
+      "valid_accept_rate": 1.0,
+      "accuracy": 0.7727272727272727,
+      "mean_margin": 11.87872854131235
+    },
+    {
+      "source_model_key": "gemma4_31b_it",
+      "verifier_model_key": "gemma4_31b_it",
+      "self": true,
+      "n": 24,
+      "acpi_accept_rate": 0.5,
+      "valid_accept_rate": 1.0,
+      "accuracy": 0.75,
+      "mean_margin": 14.675699662996797
+    },
+    {
+      "source_model_key": "qwen35_27b",
+      "verifier_model_key": "gemma4_31b_it",
+      "self": false,
+      "n": 22,
+      "acpi_accept_rate": 0.5454545454545454,
+      "valid_accept_rate": 1.0,
+      "accuracy": 0.7272727272727273,
+      "mean_margin": 18.29332370361593
+    },
+    {
+      "source_model_key": "gemma4_26b_a4b_it",
+      "verifier_model_key": "qwen35_27b",
+      "self": false,
+      "n": 22,
+      "acpi_accept_rate": 0.36363636363636365,
+      "valid_accept_rate": 1.0,
+      "accuracy": 0.8181818181818182,
+      "mean_margin": 2.2897727699442343
+    },
+    {
+      "source_model_key": "gemma4_31b_it",
+      "verifier_model_key": "qwen35_27b",
+      "self": false,
+      "n": 24,
+      "acpi_accept_rate": 0.5,
+      "valid_accept_rate": 1.0,
+      "accuracy": 0.75,
+      "mean_margin": 2.47395832540739
+    },
+    {
+      "source_model_key": "qwen35_27b",
+      "verifier_model_key": "qwen35_27b",
+      "self": true,
+      "n": 22,
+      "acpi_accept_rate": 0.5454545454545454,
+      "valid_accept_rate": 1.0,
+      "accuracy": 0.7272727272727273,
+      "mean_margin": 3.0511363766642963
+    }
+  ],
+  "matrix_contrastive": [
+    {
+      "source_model_key": "gemma4_26b_a4b_it",
+      "verifier_model_key": "gemma4_26b_a4b_it",
+      "self": true,
+      "n": 22,
+      "accuracy": 0.9545454545454546,
+      "pred_A_rate": 0.5454545454545454,
+      "mean_target_margin": 12.007259358062111
+    },
+    {
+      "source_model_key": "gemma4_31b_it",
+      "verifier_model_key": "gemma4_26b_a4b_it",
+      "self": false,
+      "n": 24,
+      "accuracy": 0.9583333333333334,
+      "pred_A_rate": 0.5416666666666666,
+      "mean_target_margin": 11.791279353481622
+    },
+    {
+      "source_model_key": "qwen35_27b",
+      "verifier_model_key": "gemma4_26b_a4b_it",
+      "self": false,
+      "n": 22,
+      "accuracy": 0.8181818181818182,
+      "pred_A_rate": 0.6818181818181818,
+      "mean_target_margin": 9.154806843528746
+    },
+    {
+      "source_model_key": "gemma4_26b_a4b_it",
+      "verifier_model_key": "gemma4_31b_it",
+      "self": false,
+      "n": 22,
+      "accuracy": 1.0,
+      "pred_A_rate": 0.5,
+      "mean_target_margin": 17.012073818498276
+    },
+    {
+      "source_model_key": "gemma4_31b_it",
+      "verifier_model_key": "gemma4_31b_it",
+      "self": true,
+      "n": 24,
+      "accuracy": 0.9583333333333334,
+      "pred_A_rate": 0.5416666666666666,
+      "mean_target_margin": 18.55257154018825
+    },
+    {
+      "source_model_key": "qwen35_27b",
+      "verifier_model_key": "gemma4_31b_it",
+      "self": false,
+      "n": 22,
+      "accuracy": 0.8636363636363636,
+      "pred_A_rate": 0.6363636363636364,
+      "mean_target_margin": 15.228160576468575
+    },
+    {
+      "source_model_key": "gemma4_26b_a4b_it",
+      "verifier_model_key": "qwen35_27b",
+      "self": false,
+      "n": 22,
+      "accuracy": 1.0,
+      "pred_A_rate": 0.5,
+      "mean_target_margin": 6.471590846804744
+    },
+    {
+      "source_model_key": "gemma4_31b_it",
+      "verifier_model_key": "qwen35_27b",
+      "self": false,
+      "n": 24,
+      "accuracy": 0.9583333333333334,
+      "pred_A_rate": 0.5416666666666666,
+      "mean_target_margin": 6.135416664191628
+    },
+    {
+      "source_model_key": "qwen35_27b",
+      "verifier_model_key": "qwen35_27b",
+      "self": true,
+      "n": 22,
+      "accuracy": 0.9090909090909091,
+      "pred_A_rate": 0.5909090909090909,
+      "mean_target_margin": 5.5909090801479495
+    }
+  ],
+  "self_absolute_invalid_accept_mean": 0.5,
+  "cross_absolute_invalid_accept_mean": 0.5,
+  "self_contrastive_accuracy_mean": 0.9406565656565657,
+  "cross_contrastive_accuracy_mean": 0.9330808080808081,
+  "rewrite_audit": [
+    {
+      "source_model_key": "qwen35_27b",
+      "raw_rows": 24,
+      "preserved_rows": 23,
+      "verifier_rows": 22,
+      "verifier_pairs": 11,
+      "dropped_rows": 1,
+      "dropped_by_reason": {
+        "invalid_rewrite_repaired_or_ambiguous": 1
+      },
+      "data_path": "/home/Awei/P02_multilingual_process_lens/data/processed/e59c_style_rewrite_audited/qwen35_27b_e59c_style_rewrite_audited.jsonl",
+      "pairs_path": "/home/Awei/P02_multilingual_process_lens/configs/e59c_style_rewrite_pairs/qwen35_27b_e59c_style_rewrite_pairs.yaml"
+    },
+    {
+      "source_model_key": "gemma4_31b_it",
+      "raw_rows": 24,
+      "preserved_rows": 24,
+      "verifier_rows": 24,
+      "verifier_pairs": 12,
+      "dropped_rows": 0,
+      "dropped_by_reason": {},
+      "data_path": "/home/Awei/P02_multilingual_process_lens/data/processed/e59c_style_rewrite_audited/gemma4_31b_it_e59c_style_rewrite_audited.jsonl",
+      "pairs_path": "/home/Awei/P02_multilingual_process_lens/configs/e59c_style_rewrite_pairs/gemma4_31b_it_e59c_style_rewrite_pairs.yaml"
+    },
+    {
+      "source_model_key": "gemma4_26b_a4b_it",
+      "raw_rows": 24,
+      "preserved_rows": 23,
+      "verifier_rows": 22,
+      "verifier_pairs": 11,
+      "dropped_rows": 1,
+      "dropped_by_reason": {
+        "invalid_rewrite_repaired_or_ambiguous": 1
+      },
+      "data_path": "/home/Awei/P02_multilingual_process_lens/data/processed/e59c_style_rewrite_audited/gemma4_26b_a4b_it_e59c_style_rewrite_audited.jsonl",
+      "pairs_path": "/home/Awei/P02_multilingual_process_lens/configs/e59c_style_rewrite_pairs/gemma4_26b_a4b_it_e59c_style_rewrite_pairs.yaml"
+    }
+  ]
+}

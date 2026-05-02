@@ -1,0 +1,85 @@
+pairs:
+  - id: e39_mean_vs_median_bad390002_valid390001_qwen35_9b
+    model_key: qwen35_9b
+    bad_idx: 390002
+    valid_idx: 390001
+    error_span: "The mean is the middle value of the ordered list, so it is 4"
+    support_span: "The mean is the sum divided by the count"
+    layers: [0, 4, 8, 12, 14, 16, 20, 24, 28, 31]
+  - id: e39_range_vs_average_bad390012_valid390011_qwen35_9b
+    model_key: qwen35_9b
+    bad_idx: 390012
+    valid_idx: 390011
+    error_span: "The range is the average of the numbers"
+    support_span: "The range is maximum minus minimum"
+    layers: [0, 4, 8, 12, 14, 16, 20, 24, 28, 31]
+  - id: e39_coefficient_vs_exponent_bad390022_valid390021_qwen35_9b
+    model_key: qwen35_9b
+    bad_idx: 390022
+    valid_idx: 390021
+    error_span: "The coefficient is the exponent 3"
+    support_span: "the coefficient is the number multiplying x^3"
+    layers: [0, 4, 8, 12, 14, 16, 20, 24, 28, 31]
+  - id: e39_reciprocal_vs_additive_inverse_bad390032_valid390031_qwen35_9b
+    model_key: qwen35_9b
+    bad_idx: 390032
+    valid_idx: 390031
+    error_span: "The reciprocal means the additive inverse, -4"
+    support_span: "The reciprocal is the number that multiplies by 4 to give 1"
+    layers: [0, 4, 8, 12, 14, 16, 20, 24, 28, 31]
+  - id: e39_percent_increase_vs_percent_of_bad390042_valid390041_qwen35_9b
+    model_key: qwen35_9b
+    bad_idx: 390042
+    valid_idx: 390041
+    error_span: "A 20% increase means the new price is 20% of the original"
+    support_span: "A 20% increase means add 20% of 50 to the original price"
+    layers: [0, 4, 8, 12, 14, 16, 20, 24, 28, 31]
+  - id: e39_prob_without_replacement_bad390052_valid390051_qwen35_9b
+    model_key: qwen35_9b
+    bad_idx: 390052
+    valid_idx: 390051
+    error_span: "Without replacement means the first ball is put back before the second draw"
+    support_span: "Without replacement means the second draw has 2 red balls left out of 4 balls"
+    layers: [0, 4, 8, 12, 14, 16, 20, 24, 28, 31]
+  - id: e39_each_vs_total_bad390062_valid390061_qwen35_9b
+    model_key: qwen35_9b
+    bad_idx: 390062
+    valid_idx: 390061
+    error_span: "each student read 24 pages"
+    support_span: "total pages are 4*6"
+    layers: [0, 4, 8, 12, 14, 16, 20, 24, 28, 31]
+  - id: e39_log_base_argument_bad390072_valid390071_qwen35_9b
+    model_key: qwen35_9b
+    bad_idx: 390072
+    valid_idx: 390071
+    error_span: "The base is 8 and the argument is 2"
+    support_span: "log base 2 of 8 asks what exponent on 2 gives 8"
+    layers: [0, 4, 8, 12, 14, 16, 20, 24, 28, 31]
+  - id: e39_round_vs_truncate_bad390082_valid390081_qwen35_9b
+    model_key: qwen35_9b
+    bad_idx: 390082
+    valid_idx: 390081
+    error_span: "Nearest tenth means drop all later digits, so 4.6"
+    support_span: "the hundredths digit is 7, so the tenths digit rounds up"
+    layers: [0, 4, 8, 12, 14, 16, 20, 24, 28, 31]
+  - id: e39_zh_perimeter_vs_area_bad390092_valid390091_qwen35_9b
+    model_key: qwen35_9b
+    bad_idx: 390092
+    valid_idx: 390091
+    error_span: "周长就是面积"
+    support_span: "周长是四条边长度之和"
+    layers: [0, 4, 8, 12, 14, 16, 20, 24, 28, 31]
+  - id: e39_zh_yi_wan_unit_bad390102_valid390101_qwen35_9b
+    model_key: qwen35_9b
+    bad_idx: 390102
+    valid_idx: 390101
+    error_span: "1亿等于1000万"
+    support_span: "1亿等于10000万"
+    layers: [0, 4, 8, 12, 14, 16, 20, 24, 28, 31]
+  - id: e39_zh_exclusive_interval_bad390112_valid390111_qwen35_9b
+    model_key: qwen35_9b
+    bad_idx: 390112
+    valid_idx: 390111
+    error_span: "大于2且小于6包含2和6"
+    support_span: "大于2且小于6，只能取3、4、5"
+    layers: [0, 4, 8, 12, 14, 16, 20, 24, 28, 31]

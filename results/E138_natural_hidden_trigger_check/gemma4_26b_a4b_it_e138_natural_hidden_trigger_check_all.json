@@ -1,0 +1,3258 @@
+{
+  "args": {
+    "audit_jsonl": "/home/Awei/P02_multilingual_process_lens/data/processed/e119_e146_process_audit_official_20260430.jsonl",
+    "check_variants": "default,strict_any_wrong_step",
+    "device": "auto",
+    "dry_run": false,
+    "dtype": "bfloat16",
+    "e131_result": null,
+    "e137_json": "/home/Awei/P02_multilingual_process_lens/results/E137_hidden_trigger_threshold_calibration/e137_hidden_trigger_threshold_calibration.json",
+    "excerpt_radius": 220,
+    "local_files_only": true,
+    "max_model_len": 8192,
+    "max_traces": 0,
+    "model_key": "gemma4_26b_a4b_it",
+    "out_dir": "/home/Awei/P02_multilingual_process_lens/results/E138_natural_hidden_trigger_check",
+    "prompt_format": "official_if_chat",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "threshold_policies": "zero,e137_chosen"
+  },
+  "created_at": "2026-04-30T22:08:31",
+  "cuda_visible_devices": "0,1,2,3",
+  "experiment": "E138_natural_hidden_trigger_check",
+  "host": "hpc-node-01",
+  "leakage_audit": {
+    "note_zh": "prompts contain only problem, visible solution, and hidden-trigger-selected visible excerpt. E131 diagnostic prefix availability is label-informed offline and must not be described as a deployable online monitor.",
+    "passed": true,
+    "prompt_label_gold_error_span_rows": 0
+  },
+  "model_key": "gemma4_26b_a4b_it",
+  "model_spec": {
+    "class": "instruct_moe",
+    "family": "gemma",
+    "loader_risk": "large model; multimodal/text config may require AutoModelForImageTextToText fallback",
+    "notes": "core local P0 medium frontier model; Google medium Gemma 4 26B-A4B instruction model; downloaded via HF mirror on 2026-04-27; use multi-GPU device_map=auto for verifier/generation",
+    "path": "/home/Awei/LLM/Model/base/gemma4_26b_a4b_it",
+    "priority": "P0_core_frontier_medium",
+    "remote_repo": "google/gemma-4-26B-A4B-it",
+    "status": "local_downloaded"
+  },
+  "rows": [
+    {
+      "audit_idx": 1190007,
+      "base_completion_accept": true,
+      "base_completion_score": -1.2960238456726074,
+      "base_completion_yes_minus_no": 5.187500084750354,
+      "manual_acpi_strict": true,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "manual_repair_present": true,
+      "model_key": "gemma4_26b_a4b_it",
+      "offline_prefix_selection_label_informed": true,
+      "policy_decisions": {
+        "e137_chosen_default_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 3135,
+            "label_entropy": 0.00022473623871580457,
+            "no_option": "No",
+            "no_score": -10.875042915344238,
+            "p_no_binary": 1.8925141460863066e-05,
+            "p_yes_binary": 0.9999810748585392,
+            "pred_process_valid": true,
+            "readout_confidence": 10.875000358533725,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 10.875000358533725,
+            "yes_option": "Yes",
+            "yes_score": -4.255681051290594e-05
+          }
+        },
+        "e137_chosen_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 3301,
+            "label_entropy": 0.015554237172013085,
+            "no_option": "No",
+            "no_score": -6.127926349639893,
+            "p_no_binary": 0.00218271593977251,
+            "p_yes_binary": 0.9978172840602274,
+            "pred_process_valid": true,
+            "readout_confidence": 6.125000232132152,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 6.125000232132152,
+            "yes_option": "Yes",
+            "yes_score": -0.0029261175077408552
+          }
+        },
+        "e137_chosen_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 3151,
+            "label_entropy": 0.017311423303708273,
+            "no_option": "No",
+            "no_score": -6.0048651695251465,
+            "p_no_binary": 0.002472623027996294,
+            "p_yes_binary": 0.9975273769720037,
+            "pred_process_valid": true,
+            "readout_confidence": 6.000000052154064,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 6.000000052154064,
+            "yes_option": "Yes",
+            "yes_score": -0.004865117371082306
+          }
+        },
+        "e137_chosen_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 3322,
+            "label_entropy": 0.25773556504735723,
+            "no_option": "No",
+            "no_score": -2.6379082202911377,
+            "p_no_binary": 0.07159119597808575,
+            "p_yes_binary": 0.9284088040219143,
+            "pred_process_valid": true,
+            "readout_confidence": 2.562500052154064,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 2.562500052154064,
+            "yes_option": "Yes",
+            "yes_score": -0.07540816813707352
+          }
+        },
+        "zero_default_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 3135,
+            "label_entropy": 0.00022473623871580457,
+            "no_option": "No",
+            "no_score": -10.875042915344238,
+            "p_no_binary": 1.8925141460863066e-05,
+            "p_yes_binary": 0.9999810748585392,
+            "pred_process_valid": true,
+            "readout_confidence": 10.875000358533725,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 10.875000358533725,
+            "yes_option": "Yes",
+            "yes_score": -4.255681051290594e-05
+          }
+        },
+        "zero_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 3322,
+            "label_entropy": 0.0004457094594592466,
+            "no_option": "No",
+            "no_score": -10.125261306762695,
+            "p_no_binary": 4.006370041075074e-05,
+            "p_yes_binary": 0.9999599362995892,
+            "pred_process_valid": true,
+            "readout_confidence": 10.124999795778422,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 10.124999795778422,
+            "yes_option": "Yes",
+            "yes_score": -0.0002615109842736274
+          }
+        },
+        "zero_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 3151,
+            "label_entropy": 0.017311423303708273,
+            "no_option": "No",
+            "no_score": -6.0048651695251465,
+            "p_no_binary": 0.002472623027996294,
+            "p_yes_binary": 0.9975273769720037,
+            "pred_process_valid": true,
+            "readout_confidence": 6.000000052154064,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 6.000000052154064,
+            "yes_option": "Yes",
+            "yes_score": -0.004865117371082306
+          }
+        },
+        "zero_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 3343,
+            "label_entropy": 0.023814086561899706,
+            "no_option": "No",
+            "no_score": -5.628911972045898,
+            "p_no_binary": 0.0035936020411863976,
+            "p_yes_binary": 0.9964063979588137,
+            "pred_process_valid": true,
+            "readout_confidence": 5.625000150874257,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 5.625000150874257,
+            "yes_option": "Yes",
+            "yes_score": -0.00391182117164135
+          }
+        }
+      },
+      "prompt_contains_manual_label_gold_or_error_span": false,
+      "prompt_variant": "self_check",
+      "run_id": "E119_uniform_legacy_baseline",
+      "sampling_profile": "NG_uniform_legacy_baseline",
+      "task_id": "aime25_geometry_reflection_p2",
+      "threshold_policies": {
+        "e137_chosen": {
+          "earliest_trigger": {
+            "char_end": 1106,
+            "detector": "repair_regex",
+            "score": -4.387844085693359,
+            "span_text": "However",
+            "stage": "repair_trigger_end"
+          },
+          "excerpt": "e $A, F, N, B, C, E, M$.\nWait, the order of vertices in the heptagon is $A-F-N-B-C-E-M$. Let's calculate the area by subtracting/adding pieces to $S$.\nThe heptagon is formed by the vertices $A, F, N, B, C, E, M$. However, $M$ and $N$ are reflections.\n$M$ is reflection of $D$ through $F$. $N$ is reflection of $G$ through $E$.\nLet's use coordinates or area addition. The area of $AFNBCEM$ can be viewed as:\n$Area = [ABC] - [FBN] - [GCM] \\do",
+          "min_score": -5.108302593231201,
+          "min_score_row": {
+            "char_end": 1156,
+            "detector": "post_error_window",
+            "score": -5.108302593231201,
+            "span_text": " the order of vertices in the heptagon is $A-F-N-B-C-E-M$. Let's calculate the area by subtracting/adding pieces to $S$.\nThe heptagon is formed by the vertices $A, F, N, B, C, E, M$. However, $M$ and $N$ are reflections.\n$M$ is reflection o",
+            "stage": "post_error_240chars"
+          },
+          "threshold": -4.1925506591796875,
+          "trigger": true
+        },
+        "zero": {
+          "earliest_trigger": {
+            "char_end": 916,
+            "detector": "wrong_word_regex",
+            "score": -3.9713048934936523,
+            "span_text": "Wait,",
+            "stage": "detected_error_marker_end"
+          },
+          "excerpt": "\\frac{24}{49} S$.\nGiven $[DEGF] = 288$, we have $\\frac{24}{49} S = 288 \\implies S = \\frac{288 \\cdot 49}{24} = 12 \\cdot 49 = 588$.\n\nNow we find the area of heptagon $AFNBCEM$. The vertices are $A, F, N, B, C, E, M$.\nWait, the order of vertices in the heptagon is $A-F-N-B-C-E-M$. Let's calculate the area by subtracting/adding pieces to $S$.\nThe heptagon is formed by the vertices $A, F, N, B, C, E, M$. However, $M$ and $N$ are reflections.",
+          "min_score": -5.108302593231201,
+          "min_score_row": {
+            "char_end": 1156,
+            "detector": "post_error_window",
+            "score": -5.108302593231201,
+            "span_text": " the order of vertices in the heptagon is $A-F-N-B-C-E-M$. Let's calculate the area by subtracting/adding pieces to $S$.\nThe heptagon is formed by the vertices $A, F, N, B, C, E, M$. However, $M$ and $N$ are reflections.\n$M$ is reflection o",
+            "stage": "post_error_240chars"
+          },
+          "threshold": 0.0,
+          "trigger": true
+        }
+      },
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190008,
+      "base_completion_accept": false,
+      "base_completion_score": -2.641277551651001,
+      "base_completion_yes_minus_no": -1.625,
+      "manual_acpi_strict": true,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "manual_repair_present": true,
+      "model_key": "gemma4_26b_a4b_it",
+      "offline_prefix_selection_label_informed": true,
+      "policy_decisions": {
+        "e137_chosen_default_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2476,
+            "label_entropy": 0.04454515405024789,
+            "no_option": "No",
+            "no_score": -4.882833480834961,
+            "p_no_binary": 0.007577243004700326,
+            "p_yes_binary": 0.9924227569952997,
+            "pred_process_valid": true,
+            "readout_confidence": 4.8749997690320015,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 4.8749997690320015,
+            "yes_option": "Yes",
+            "yes_score": -0.007833711802959442
+          }
+        },
+        "e137_chosen_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2669,
+            "label_entropy": 0.09932976492618006,
+            "no_option": "No",
+            "no_score": -3.930166244506836,
+            "p_no_binary": 0.0203323520069892,
+            "p_yes_binary": 0.9796676479930108,
+            "pred_process_valid": true,
+            "readout_confidence": 3.8750000670552254,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 3.8750000670552254,
+            "yes_option": "Yes",
+            "yes_score": -0.055166177451610565
+          }
+        },
+        "e137_chosen_strict_any_wrong_step_global": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2492,
+            "label_entropy": 0.08164810793807961,
+            "no_option": "No",
+            "no_score": -0.022318147122859955,
+            "p_no_binary": 0.9840936116703609,
+            "p_yes_binary": 0.015906388329639098,
+            "pred_process_valid": false,
+            "readout_confidence": 4.125000216066837,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -4.125000216066837,
+            "yes_option": "Yes",
+            "yes_score": -4.147318363189697
+          }
+        },
+        "e137_chosen_strict_any_wrong_step_local": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2690,
+            "label_entropy": 0.20841675341340532,
+            "no_option": "No",
+            "no_score": -0.0637209489941597,
+            "p_no_binary": 0.9465966698235384,
+            "p_yes_binary": 0.05340333017646162,
+            "pred_process_valid": false,
+            "readout_confidence": 2.8749999925494194,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -2.8749999925494194,
+            "yes_option": "Yes",
+            "yes_score": -2.938720941543579
+          }
+        },
+        "zero_default_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2476,
+            "label_entropy": 0.04454515405024789,
+            "no_option": "No",
+            "no_score": -4.882833480834961,
+            "p_no_binary": 0.007577243004700326,
+            "p_yes_binary": 0.9924227569952997,
+            "pred_process_valid": true,
+            "readout_confidence": 4.8749997690320015,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 4.8749997690320015,
+            "yes_option": "Yes",
+            "yes_score": -0.007833711802959442
+          }
+        },
+        "zero_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2651,
+            "label_entropy": 0.06689804675874206,
+            "no_option": "No",
+            "no_score": -4.496947765350342,
+            "p_no_binary": 0.012431651767901451,
+            "p_yes_binary": 0.9875683482320986,
+            "pred_process_valid": true,
+            "readout_confidence": 4.374999925494194,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 4.374999925494194,
+            "yes_option": "Yes",
+            "yes_score": -0.12194783985614777
+          }
+        },
+        "zero_strict_any_wrong_step_global": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2492,
+            "label_entropy": 0.08164810793807961,
+            "no_option": "No",
+            "no_score": -0.022318147122859955,
+            "p_no_binary": 0.9840936116703609,
+            "p_yes_binary": 0.015906388329639098,
+            "pred_process_valid": false,
+            "readout_confidence": 4.125000216066837,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -4.125000216066837,
+            "yes_option": "Yes",
+            "yes_score": -4.147318363189697
+          }
+        },
+        "zero_strict_any_wrong_step_local": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2672,
+            "label_entropy": 0.2272058630939531,
+            "no_option": "No",
+            "no_score": -0.06578245759010315,
+            "p_no_binary": 0.939913354875362,
+            "p_yes_binary": 0.06008664512463808,
+            "pred_process_valid": false,
+            "readout_confidence": 2.750000089406967,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -2.750000089406967,
+            "yes_option": "Yes",
+            "yes_score": -2.8157825469970703
+          }
+        }
+      },
+      "prompt_contains_manual_label_gold_or_error_span": false,
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "sampling_profile": "NG_uniform_legacy_baseline",
+      "task_id": "aime25_geometry_reflection_p2",
+      "threshold_policies": {
+        "e137_chosen": {
+          "earliest_trigger": {
+            "char_end": 1588,
+            "detector": "post_repair_window",
+            "score": -4.920921325683594,
+            "span_text": "re-read.\nThe heptagon is $AFNBCEM$. The vertices are $A \\to F \\to N \\to B \\to C \\to E \\to M \\to A$.\nActually, it's easier to use the area of $ABC$ and adjust.\n$M$ is reflection of $D$ through $F$. Since $A, F, G, C$ are collinear, $M$ is not neces",
+            "stage": "post_repair_240chars"
+          },
+          "excerpt": "FNBCEM$. The vertices are $A \\to F \\to N \\to B \\to C \\to E \\to M \\to A$.\nActually, it's easier to use the area of $ABC$ and adjust.\n$M$ is reflection of $D$ through $F$. Since $A, F, G, C$ are collinear, $M$ is not necessarily on the sides.\nLet's use coordinates. $A=(0,0)$.\n$D = (4,0)$, $E = (20,0)$, $B = (28,0)$.\n$F = (13 \\cos \\alpha, 13 \\sin \\alpha)$, $G = (65 \\cos \\alpha, 65 \\sin \\alpha)$, $C = (91 \\cos \\alpha, 91 \\sin \\alpha)$.\n$M$ ",
+          "min_score": -4.920921325683594,
+          "min_score_row": {
+            "char_end": 1588,
+            "detector": "post_repair_window",
+            "score": -4.920921325683594,
+            "span_text": "re-read.\nThe heptagon is $AFNBCEM$. The vertices are $A \\to F \\to N \\to B \\to C \\to E \\to M \\to A$.\nActually, it's easier to use the area of $ABC$ and adjust.\n$M$ is reflection of $D$ through $F$. Since $A, F, G, C$ are collinear, $M$ is not neces",
+            "stage": "post_repair_240chars"
+          },
+          "threshold": -4.1925506591796875,
+          "trigger": true
+        },
+        "zero": {
+          "earliest_trigger": {
+            "char_end": 1253,
+            "detector": "wrong_word_regex",
+            "score": -2.551457166671753,
+            "span_text": "Wait,",
+            "stage": "detected_error_marker_end"
+          },
+          "excerpt": "ven $\\frac{24}{49}S = 288$, we find $S = \\frac{288 \\cdot 49}{24} = 12 \\cdot 49 = 588$.\n\nNow we find the area of heptagon $AFNBCEM$.\nThe heptagon is formed by taking $\\triangle ABC$ and adding/subtracting triangles.\nWait, let's look at the vertices: $A, F, N, B, C, E, M$. This is not a simple polygon. Let's re-read.\nThe heptagon is $AFNBCEM$. The vertices are $A \\to F \\to N \\to B \\to C \\to E \\to M \\to A$.\nActually, it's easier to use the",
+          "min_score": -4.920921325683594,
+          "min_score_row": {
+            "char_end": 1588,
+            "detector": "post_repair_window",
+            "score": -4.920921325683594,
+            "span_text": "re-read.\nThe heptagon is $AFNBCEM$. The vertices are $A \\to F \\to N \\to B \\to C \\to E \\to M \\to A$.\nActually, it's easier to use the area of $ABC$ and adjust.\n$M$ is reflection of $D$ through $F$. Since $A, F, G, C$ are collinear, $M$ is not neces",
+            "stage": "post_repair_240chars"
+          },
+          "threshold": 0.0,
+          "trigger": true
+        }
+      },
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190009,
+      "base_completion_accept": false,
+      "base_completion_score": -2.9159011840820312,
+      "base_completion_yes_minus_no": -1.0625,
+      "manual_acpi_strict": true,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "manual_repair_present": true,
+      "model_key": "gemma4_26b_a4b_it",
+      "offline_prefix_selection_label_informed": true,
+      "policy_decisions": {
+        "e137_chosen_default_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 3844,
+            "label_entropy": 0.0015447653145709214,
+            "no_option": "No",
+            "no_score": -8.750245094299316,
+            "p_no_binary": 0.0001584361765856968,
+            "p_yes_binary": 0.9998415638234144,
+            "pred_process_valid": true,
+            "readout_confidence": 8.750000268395524,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 8.750000268395524,
+            "yes_option": "Yes",
+            "yes_score": -0.00024482590379193425
+          }
+        },
+        "e137_chosen_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4007,
+            "label_entropy": 0.014741824656259835,
+            "no_option": "No",
+            "no_score": -6.244820594787598,
+            "p_no_binary": 0.002050743509421586,
+            "p_yes_binary": 0.9979492564905784,
+            "pred_process_valid": true,
+            "readout_confidence": 6.187500014901161,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 6.187500014901161,
+            "yes_option": "Yes",
+            "yes_score": -0.05732057988643646
+          }
+        },
+        "e137_chosen_strict_any_wrong_step_global": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 3860,
+            "label_entropy": 0.25773555489556205,
+            "no_option": "No",
+            "no_score": -0.10844410210847855,
+            "p_no_binary": 0.9284088079835903,
+            "p_yes_binary": 0.07159119201640969,
+            "pred_process_valid": false,
+            "readout_confidence": 2.562500111758709,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -2.562500111758709,
+            "yes_option": "Yes",
+            "yes_score": -2.6709442138671875
+          }
+        },
+        "e137_chosen_strict_any_wrong_step_local": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4028,
+            "label_entropy": 0.007288825583994614,
+            "no_option": "No",
+            "no_score": -0.011408450081944466,
+            "p_no_binary": 0.999088948695397,
+            "p_yes_binary": 0.0009110513046028913,
+            "pred_process_valid": false,
+            "readout_confidence": 6.999999878928065,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -6.999999878928065,
+            "yes_option": "Yes",
+            "yes_score": -7.01140832901001
+          }
+        },
+        "zero_default_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 3844,
+            "label_entropy": 0.0015447653145709214,
+            "no_option": "No",
+            "no_score": -8.750245094299316,
+            "p_no_binary": 0.0001584361765856968,
+            "p_yes_binary": 0.9998415638234144,
+            "pred_process_valid": true,
+            "readout_confidence": 8.750000268395524,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 8.750000268395524,
+            "yes_option": "Yes",
+            "yes_score": -0.00024482590379193425
+          }
+        },
+        "zero_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4007,
+            "label_entropy": 0.014741824656259835,
+            "no_option": "No",
+            "no_score": -6.244820594787598,
+            "p_no_binary": 0.002050743509421586,
+            "p_yes_binary": 0.9979492564905784,
+            "pred_process_valid": true,
+            "readout_confidence": 6.187500014901161,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 6.187500014901161,
+            "yes_option": "Yes",
+            "yes_score": -0.05732057988643646
+          }
+        },
+        "zero_strict_any_wrong_step_global": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 3860,
+            "label_entropy": 0.25773555489556205,
+            "no_option": "No",
+            "no_score": -0.10844410210847855,
+            "p_no_binary": 0.9284088079835903,
+            "p_yes_binary": 0.07159119201640969,
+            "pred_process_valid": false,
+            "readout_confidence": 2.562500111758709,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -2.562500111758709,
+            "yes_option": "Yes",
+            "yes_score": -2.6709442138671875
+          }
+        },
+        "zero_strict_any_wrong_step_local": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4028,
+            "label_entropy": 0.007288825583994614,
+            "no_option": "No",
+            "no_score": -0.011408450081944466,
+            "p_no_binary": 0.999088948695397,
+            "p_yes_binary": 0.0009110513046028913,
+            "pred_process_valid": false,
+            "readout_confidence": 6.999999878928065,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -6.999999878928065,
+            "yes_option": "Yes",
+            "yes_score": -7.01140832901001
+          }
+        }
+      },
+      "prompt_contains_manual_label_gold_or_error_span": false,
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "sampling_profile": "NG_uniform_legacy_baseline",
+      "task_id": "aime25_geometry_reflection_p2",
+      "threshold_policies": {
+        "e137_chosen": {
+          "earliest_trigger": {
+            "char_end": 718,
+            "detector": "wrong_word_regex",
+            "score": -9.437718391418457,
+            "span_text": "not quite right",
+            "stage": "detected_error_marker_end"
+          },
+          "excerpt": "= \\alpha$. The area of $\\triangle ADE$ is 0. The area of $\\triangle AFG$ is 0.\nThe area of quadrilateral $DEGF$ can be calculated as Area($\\triangle AEG$) - Area($\\triangle ADF$) - Area($\\triangle EFG$ is not quite right).\nLet's use coordinates with $A$ at the origin. Let $\\vec{u}$ be the unit vector along $AB$ and $\\vec{v}$ be the unit vector along $AC$.\n$D = 4\\vec{u}$, $E = 20\\vec{u}$, $F = 13\\vec{v}$, $G = 65\\vec{v}$.\nArea($DEGF$) = ",
+          "min_score": -9.437718391418457,
+          "min_score_row": {
+            "char_end": 718,
+            "detector": "wrong_word_regex",
+            "score": -9.437718391418457,
+            "span_text": "not quite right",
+            "stage": "detected_error_marker_end"
+          },
+          "threshold": -4.1925506591796875,
+          "trigger": true
+        },
+        "zero": {
+          "earliest_trigger": {
+            "char_end": 718,
+            "detector": "wrong_word_regex",
+            "score": -9.437718391418457,
+            "span_text": "not quite right",
+            "stage": "detected_error_marker_end"
+          },
+          "excerpt": "= \\alpha$. The area of $\\triangle ADE$ is 0. The area of $\\triangle AFG$ is 0.\nThe area of quadrilateral $DEGF$ can be calculated as Area($\\triangle AEG$) - Area($\\triangle ADF$) - Area($\\triangle EFG$ is not quite right).\nLet's use coordinates with $A$ at the origin. Let $\\vec{u}$ be the unit vector along $AB$ and $\\vec{v}$ be the unit vector along $AC$.\n$D = 4\\vec{u}$, $E = 20\\vec{u}$, $F = 13\\vec{v}$, $G = 65\\vec{v}$.\nArea($DEGF$) = ",
+          "min_score": -9.437718391418457,
+          "min_score_row": {
+            "char_end": 718,
+            "detector": "wrong_word_regex",
+            "score": -9.437718391418457,
+            "span_text": "not quite right",
+            "stage": "detected_error_marker_end"
+          },
+          "threshold": 0.0,
+          "trigger": true
+        }
+      },
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190015,
+      "base_completion_accept": true,
+      "base_completion_score": -0.4305344223976135,
+      "base_completion_yes_minus_no": 10.750000436906703,
+      "manual_acpi_strict": false,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": true,
+      "manual_repair_present": false,
+      "model_key": "gemma4_26b_a4b_it",
+      "offline_prefix_selection_label_informed": true,
+      "policy_decisions": {
+        "e137_chosen_default_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_default_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "zero_default_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 1125,
+            "label_entropy": 3.765936816643901e-05,
+            "no_option": "No",
+            "no_score": -12.812503814697266,
+            "p_no_binary": 2.7264699456576535e-06,
+            "p_yes_binary": 0.9999972735300542,
+            "pred_process_valid": true,
+            "readout_confidence": 12.81250011921611,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 12.81250011921611,
+            "yes_option": "Yes",
+            "yes_score": -3.6954811548639555e-06
+          }
+        },
+        "zero_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 1221,
+            "label_entropy": 2.1691519427475495e-05,
+            "no_option": "No",
+            "no_score": -13.406254768371582,
+            "p_no_binary": 1.5057020843721297e-06,
+            "p_yes_binary": 0.9999984942979158,
+            "pred_process_valid": true,
+            "readout_confidence": 13.406249761594154,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 13.406249761594154,
+            "yes_option": "Yes",
+            "yes_score": -5.006777428206988e-06
+          }
+        },
+        "zero_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 1141,
+            "label_entropy": 0.00028249064760223593,
+            "no_option": "No",
+            "no_score": -10.625212669372559,
+            "p_no_binary": 2.430024598620301e-05,
+            "p_yes_binary": 0.9999756997540139,
+            "pred_process_valid": true,
+            "readout_confidence": 10.624999784238753,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 10.624999784238753,
+            "yes_option": "Yes",
+            "yes_score": -0.00021288513380568475
+          }
+        },
+        "zero_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 1242,
+            "label_entropy": 0.00012662492254022752,
+            "no_option": "No",
+            "no_score": -11.500049591064453,
+            "p_no_binary": 1.0129989760914819e-05,
+            "p_yes_binary": 0.999989870010239,
+            "pred_process_valid": true,
+            "readout_confidence": 11.50000012043165,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 11.50000012043165,
+            "yes_option": "Yes",
+            "yes_score": -4.9470632802695036e-05
+          }
+        }
+      },
+      "prompt_contains_manual_label_gold_or_error_span": false,
+      "prompt_variant": "neutral",
+      "run_id": "E119_uniform_legacy_baseline",
+      "sampling_profile": "NG_uniform_legacy_baseline",
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "threshold_policies": {
+        "e137_chosen": {
+          "earliest_trigger": null,
+          "excerpt": null,
+          "min_score": -0.4305344223976135,
+          "min_score_row": {
+            "char_end": 2114,
+            "detector": "final_regex",
+            "score": -0.4305344223976135,
+            "span_text": "\nFinal answer: 117",
+            "stage": "first_final_answer_end"
+          },
+          "threshold": -4.1925506591796875,
+          "trigger": false
+        },
+        "zero": {
+          "earliest_trigger": {
+            "char_end": 2114,
+            "detector": "final_regex",
+            "score": -0.4305344223976135,
+            "span_text": "\nFinal answer: 117",
+            "stage": "first_final_answer_end"
+          },
+          "excerpt": " \\implies y = 0$\nIf $y = 0$, then $x = 0$.\nThe only pair in the overlap is $(0, 0)$.\n\n**Total count:**\nTotal pairs = (Pairs in Case 1) + (Pairs in Case 2) - (Overlap)\nTotal pairs = $51 + 67 - 1 = 117$.\n\nFinal answer: 117",
+          "min_score": -0.4305344223976135,
+          "min_score_row": {
+            "char_end": 2114,
+            "detector": "final_regex",
+            "score": -0.4305344223976135,
+            "span_text": "\nFinal answer: 117",
+            "stage": "first_final_answer_end"
+          },
+          "threshold": 0.0,
+          "trigger": true
+        }
+      },
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190017,
+      "base_completion_accept": true,
+      "base_completion_score": 0.3008953034877777,
+      "base_completion_yes_minus_no": 3.3750001080334187,
+      "manual_acpi_strict": false,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": true,
+      "manual_repair_present": false,
+      "model_key": "gemma4_26b_a4b_it",
+      "offline_prefix_selection_label_informed": true,
+      "policy_decisions": {
+        "e137_chosen_default_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_default_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "zero_default_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "zero_default_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "zero_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "zero_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        }
+      },
+      "prompt_contains_manual_label_gold_or_error_span": false,
+      "prompt_variant": "self_check",
+      "run_id": "E119_uniform_legacy_baseline",
+      "sampling_profile": "NG_uniform_legacy_baseline",
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "threshold_policies": {
+        "e137_chosen": {
+          "earliest_trigger": null,
+          "excerpt": null,
+          "min_score": 0.3008953034877777,
+          "min_score_row": {
+            "char_end": 1942,
+            "detector": "final_regex",
+            "score": 0.3008953034877777,
+            "span_text": "\nFinal answer: 117",
+            "stage": "first_final_answer_end"
+          },
+          "threshold": -4.1925506591796875,
+          "trigger": false
+        },
+        "zero": {
+          "earliest_trigger": null,
+          "excerpt": null,
+          "min_score": 0.3008953034877777,
+          "min_score_row": {
+            "char_end": 1942,
+            "detector": "final_regex",
+            "score": 0.3008953034877777,
+            "span_text": "\nFinal answer: 117",
+            "stage": "first_final_answer_end"
+          },
+          "threshold": 0.0,
+          "trigger": false
+        }
+      },
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190019,
+      "base_completion_accept": true,
+      "base_completion_score": -1.4222716093063354,
+      "base_completion_yes_minus_no": 6.312500044703484,
+      "manual_acpi_strict": false,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": true,
+      "manual_repair_present": false,
+      "model_key": "gemma4_26b_a4b_it",
+      "offline_prefix_selection_label_informed": true,
+      "policy_decisions": {
+        "e137_chosen_default_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_default_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "zero_default_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 1107,
+            "label_entropy": 0.0002004171996173154,
+            "no_option": "No",
+            "no_score": -11.000018119812012,
+            "p_no_binary": 1.6701421845361053e-05,
+            "p_yes_binary": 0.9999832985781547,
+            "pred_process_valid": true,
+            "readout_confidence": 11.000000000163709,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 11.000000000163709,
+            "yes_option": "Yes",
+            "yes_score": -1.811964830267243e-05
+          }
+        },
+        "zero_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 1217,
+            "label_entropy": 1.0779786759086148e-05,
+            "no_option": "No",
+            "no_score": -14.156256675720215,
+            "p_no_binary": 7.112437833095099e-07,
+            "p_yes_binary": 0.9999992887562166,
+            "pred_process_valid": true,
+            "readout_confidence": 14.156249880813903,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 14.156249880813903,
+            "yes_option": "Yes",
+            "yes_score": -6.794906312279636e-06
+          }
+        },
+        "zero_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 1123,
+            "label_entropy": 0.08164811695842948,
+            "no_option": "No",
+            "no_score": -4.148228168487549,
+            "p_no_binary": 0.015906390516390492,
+            "p_yes_binary": 0.9840936094836095,
+            "pred_process_valid": true,
+            "readout_confidence": 4.125000076368451,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 4.125000076368451,
+            "yes_option": "Yes",
+            "yes_score": -0.02322809211909771
+          }
+        },
+        "zero_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 1238,
+            "label_entropy": 0.005245744862879831,
+            "no_option": "No",
+            "no_score": -7.375829696655273,
+            "p_no_binary": 0.0006263341664529462,
+            "p_yes_binary": 0.9993736658335469,
+            "pred_process_valid": true,
+            "readout_confidence": 7.374999986670446,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 7.374999986670446,
+            "yes_option": "Yes",
+            "yes_score": -0.0008297099848277867
+          }
+        }
+      },
+      "prompt_contains_manual_label_gold_or_error_span": false,
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "sampling_profile": "NG_uniform_legacy_baseline",
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "threshold_policies": {
+        "e137_chosen": {
+          "earliest_trigger": null,
+          "excerpt": null,
+          "min_score": -1.4222716093063354,
+          "min_score_row": {
+            "char_end": 2041,
+            "detector": "final_regex",
+            "score": -1.4222716093063354,
+            "span_text": "\nFinal answer: 117",
+            "stage": "first_final_answer_end"
+          },
+          "threshold": -4.1925506591796875,
+          "trigger": false
+        },
+        "zero": {
+          "earliest_trigger": {
+            "char_end": 2041,
+            "detector": "final_regex",
+            "score": -1.4222716093063354,
+            "span_text": "\nFinal answer: 117",
+            "stage": "first_final_answer_end"
+          },
+          "excerpt": "th $4x=3y$ and $3x=-2y$ is $(0,0)$.\nIn Case 1, $k=0$ gives $(0,0)$.\nIn Case 2, $m=0$ gives $(0,0)$.\nTotal unique pairs = (Number in Case 1) + (Number in Case 2) - (Overlap)\nTotal = $51 + 67 - 1 = 117$.\n\nFinal answer: 117",
+          "min_score": -1.4222716093063354,
+          "min_score_row": {
+            "char_end": 2041,
+            "detector": "final_regex",
+            "score": -1.4222716093063354,
+            "span_text": "\nFinal answer: 117",
+            "stage": "first_final_answer_end"
+          },
+          "threshold": 0.0,
+          "trigger": true
+        }
+      },
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190020,
+      "base_completion_accept": true,
+      "base_completion_score": -0.33988794684410095,
+      "base_completion_yes_minus_no": 8.687499621883035,
+      "manual_acpi_strict": true,
+      "manual_acpi_unrepaired": true,
+      "manual_error_type": "wrong_factorization_unrepaired_symmetric_count",
+      "manual_process_valid_repaired": false,
+      "manual_process_valid_strict": false,
+      "manual_repair_present": false,
+      "model_key": "gemma4_26b_a4b_it",
+      "offline_prefix_selection_label_informed": true,
+      "policy_decisions": {
+        "e137_chosen_default_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_default_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "zero_default_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 826,
+            "label_entropy": 4.894432036628899e-06,
+            "no_option": "No",
+            "no_score": -15.000001907348633,
+            "p_no_binary": 3.0590211752613373e-07,
+            "p_yes_binary": 0.9999996940978825,
+            "pred_process_valid": true,
+            "readout_confidence": 15.00000035762912,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 15.00000035762912,
+            "yes_option": "Yes",
+            "yes_score": -1.5497195136049413e-06
+          }
+        },
+        "zero_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 991,
+            "label_entropy": 1.9878876231897995e-05,
+            "no_option": "No",
+            "no_score": -13.50001049041748,
+            "p_no_binary": 1.3709570433536782e-06,
+            "p_yes_binary": 0.9999986290429567,
+            "pred_process_valid": true,
+            "readout_confidence": 13.50000011926295,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 13.50000011926295,
+            "yes_option": "Yes",
+            "yes_score": -1.0371154530730564e-05
+          }
+        },
+        "zero_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 842,
+            "label_entropy": 0.0017279726809012175,
+            "no_option": "No",
+            "no_score": -8.62984848022461,
+            "p_no_binary": 0.00017952795321502424,
+            "p_yes_binary": 0.999820472046785,
+            "pred_process_valid": true,
+            "readout_confidence": 8.625000089872628,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 8.625000089872628,
+            "yes_option": "Yes",
+            "yes_score": -0.004848390351980925
+          }
+        },
+        "zero_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 1012,
+            "label_entropy": 0.0019325775817321702,
+            "no_option": "No",
+            "no_score": -8.500511169433594,
+            "p_no_binary": 0.00020342704842385577,
+            "p_yes_binary": 0.9997965729515762,
+            "pred_process_valid": true,
+            "readout_confidence": 8.499999654013664,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 8.499999654013664,
+            "yes_option": "Yes",
+            "yes_score": -0.0005115154199302197
+          }
+        }
+      },
+      "prompt_contains_manual_label_gold_or_error_span": false,
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "sampling_profile": "NG_uniform_legacy_baseline",
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "threshold_policies": {
+        "e137_chosen": {
+          "earliest_trigger": null,
+          "excerpt": null,
+          "min_score": -2.2914528846740723,
+          "min_score_row": {
+            "char_end": 157,
+            "detector": "factorization_regex",
+            "score": -2.2914528846740723,
+            "span_text": "(3x - 2y)(4x + 3y)",
+            "stage": "detected_error_marker_end"
+          },
+          "threshold": -4.1925506591796875,
+          "trigger": false
+        },
+        "zero": {
+          "earliest_trigger": {
+            "char_end": 157,
+            "detector": "factorization_regex",
+            "score": -2.2914528846740723,
+            "span_text": "(3x - 2y)(4x + 3y)",
+            "stage": "detected_error_marker_end"
+          },
+          "excerpt": "To solve the equation $12x^2 - xy - 6y^2 = 0$, we first factor the quadratic form.\nThe expression $12x^2 - xy - 6y^2$ can be factored as:\n$(3x - 2y)(4x + 3y) = 0$\n\nFor the product to be zero, at least one of the factors must be zero:\n1. $3x - 2y = 0 \\implies 3x = 2y$. Since $\\gcd(3, 2) = 1$, $x$ must be a multiple of 2 and $y$ must be a multiple of 3. Let $x = 2k$ and $y = 3",
+          "min_score": -2.2914528846740723,
+          "min_score_row": {
+            "char_end": 157,
+            "detector": "factorization_regex",
+            "score": -2.2914528846740723,
+            "span_text": "(3x - 2y)(4x + 3y)",
+            "stage": "detected_error_marker_end"
+          },
+          "threshold": 0.0,
+          "trigger": true
+        }
+      },
+      "trace_class": "unrepaired_acpi"
+    },
+    {
+      "audit_idx": 1190021,
+      "base_completion_accept": true,
+      "base_completion_score": 0.45020899176597595,
+      "base_completion_yes_minus_no": 7.437500149011612,
+      "manual_acpi_strict": false,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": true,
+      "manual_repair_present": false,
+      "model_key": "gemma4_26b_a4b_it",
+      "offline_prefix_selection_label_informed": true,
+      "policy_decisions": {
+        "e137_chosen_default_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_default_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "zero_default_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "zero_default_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "zero_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "zero_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        }
+      },
+      "prompt_contains_manual_label_gold_or_error_span": false,
+      "prompt_variant": "neutral",
+      "run_id": "E119_uniform_legacy_baseline",
+      "sampling_profile": "NG_uniform_legacy_baseline",
+      "task_id": "aime25_perm_div22_p5",
+      "threshold_policies": {
+        "e137_chosen": {
+          "earliest_trigger": null,
+          "excerpt": null,
+          "min_score": 0.45020899176597595,
+          "min_score_row": {
+            "char_end": 6382,
+            "detector": "final_regex",
+            "score": 0.45020899176597595,
+            "span_text": "\nFinal answer: 279",
+            "stage": "first_final_answer_end"
+          },
+          "threshold": -4.1925506591796875,
+          "trigger": false
+        },
+        "zero": {
+          "earliest_trigger": null,
+          "excerpt": null,
+          "min_score": 0.45020899176597595,
+          "min_score_row": {
+            "char_end": 6382,
+            "detector": "final_regex",
+            "score": 0.45020899176597595,
+            "span_text": "\nFinal answer: 279",
+            "stage": "first_final_answer_end"
+          },
+          "threshold": 0.0,
+          "trigger": false
+        }
+      },
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190023,
+      "base_completion_accept": true,
+      "base_completion_score": -2.380571126937866,
+      "base_completion_yes_minus_no": 1.2499999403953552,
+      "manual_acpi_strict": false,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": true,
+      "manual_repair_present": false,
+      "model_key": "gemma4_26b_a4b_it",
+      "offline_prefix_selection_label_informed": true,
+      "policy_decisions": {
+        "e137_chosen_default_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_default_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "zero_default_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 1930,
+            "label_entropy": 0.09009476829056576,
+            "no_option": "No",
+            "no_score": -4.0182204246521,
+            "p_no_binary": 0.017986210093688976,
+            "p_yes_binary": 0.9820137899063109,
+            "pred_process_valid": true,
+            "readout_confidence": 3.9999999925494194,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 3.9999999925494194,
+            "yes_option": "Yes",
+            "yes_score": -0.018220432102680206
+          }
+        },
+        "zero_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2053,
+            "label_entropy": 0.026464203114566237,
+            "no_option": "No",
+            "no_score": -5.513209342956543,
+            "p_no_binary": 0.004070138153817359,
+            "p_yes_binary": 0.9959298618461826,
+            "pred_process_valid": true,
+            "readout_confidence": 5.499999891966581,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 5.499999891966581,
+            "yes_option": "Yes",
+            "yes_score": -0.013209450989961624
+          }
+        },
+        "zero_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 1946,
+            "label_entropy": 0.4750515503555549,
+            "no_option": "No",
+            "no_score": -1.7113053798675537,
+            "p_no_binary": 0.18242551491653522,
+            "p_yes_binary": 0.8175744850834649,
+            "pred_process_valid": true,
+            "readout_confidence": 1.5000000596046448,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 1.5000000596046448,
+            "yes_option": "Yes",
+            "yes_score": -0.21130532026290894
+          }
+        },
+        "zero_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2074,
+            "label_entropy": 0.6628473185771795,
+            "no_option": "No",
+            "no_score": -0.9871352910995483,
+            "p_no_binary": 0.37754066879814546,
+            "p_yes_binary": 0.6224593312018546,
+            "pred_process_valid": true,
+            "readout_confidence": 0.5,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 0.5,
+            "yes_option": "Yes",
+            "yes_score": -0.48713529109954834
+          }
+        }
+      },
+      "prompt_contains_manual_label_gold_or_error_span": false,
+      "prompt_variant": "self_check",
+      "run_id": "E119_uniform_legacy_baseline",
+      "sampling_profile": "NG_uniform_legacy_baseline",
+      "task_id": "aime25_perm_div22_p5",
+      "threshold_policies": {
+        "e137_chosen": {
+          "earliest_trigger": null,
+          "excerpt": null,
+          "min_score": -2.380571126937866,
+          "min_score_row": {
+            "char_end": 3740,
+            "detector": "final_regex",
+            "score": -2.380571126937866,
+            "span_text": "\nFinal answer: 279",
+            "stage": "first_final_answer_end"
+          },
+          "threshold": -4.1925506591796875,
+          "trigger": false
+        },
+        "zero": {
+          "earliest_trigger": {
+            "char_end": 3740,
+            "detector": "final_regex",
+            "score": -2.380571126937866,
+            "span_text": "\nFinal answer: 279",
+            "stage": "first_final_answer_end"
+          },
+          "excerpt": "Final check on $k$:\nTotal even digits $\\{2, 4, 6, 8\\}$.\nIf $A = \\{8, 7, 2, 1\\}$, $B = \\{6, 5, 4, 3\\}$.\n$B$ has even digits $\\{6, 4\\}$, so $k=2$. Correct.\n$N = 8 \\times 288 = 2304$.\n$2304 - 2025 = 279$.\n\nFinal answer: 279",
+          "min_score": -2.380571126937866,
+          "min_score_row": {
+            "char_end": 3740,
+            "detector": "final_regex",
+            "score": -2.380571126937866,
+            "span_text": "\nFinal answer: 279",
+            "stage": "first_final_answer_end"
+          },
+          "threshold": 0.0,
+          "trigger": true
+        }
+      },
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190025,
+      "base_completion_accept": true,
+      "base_completion_score": -1.5755257606506348,
+      "base_completion_yes_minus_no": 0.6250000596046448,
+      "manual_acpi_strict": false,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": true,
+      "manual_repair_present": false,
+      "model_key": "gemma4_26b_a4b_it",
+      "offline_prefix_selection_label_informed": true,
+      "policy_decisions": {
+        "e137_chosen_default_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_default_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "zero_default_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 1959,
+            "label_entropy": 0.4750515736913359,
+            "no_option": "No",
+            "no_score": -1.7020373344421387,
+            "p_no_binary": 0.18242553047372242,
+            "p_yes_binary": 0.8175744695262777,
+            "pred_process_valid": true,
+            "readout_confidence": 1.4999999552965164,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 1.4999999552965164,
+            "yes_option": "Yes",
+            "yes_score": -0.20203737914562225
+          }
+        },
+        "zero_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2114,
+            "label_entropy": 0.12039562458703709,
+            "no_option": "No",
+            "no_score": -3.660245418548584,
+            "p_no_binary": 0.025957359835079137,
+            "p_yes_binary": 0.9740426401649208,
+            "pred_process_valid": true,
+            "readout_confidence": 3.6249998956918716,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 3.6249998956918716,
+            "yes_option": "Yes",
+            "yes_score": -0.03524552285671234
+          }
+        },
+        "zero_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 1975,
+            "label_entropy": 0.6058826762307095,
+            "no_option": "No",
+            "no_score": -1.238181233406067,
+            "p_no_binary": 0.2942149659744614,
+            "p_yes_binary": 0.7057850340255386,
+            "pred_process_valid": true,
+            "readout_confidence": 0.8750000298023224,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 0.8750000298023224,
+            "yes_option": "Yes",
+            "yes_score": -0.3631812036037445
+          }
+        },
+        "zero_strict_any_wrong_step_local": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2135,
+            "label_entropy": 0.6058826816456708,
+            "no_option": "No",
+            "no_score": -0.3677722215652466,
+            "p_no_binary": 0.7057850278370112,
+            "p_yes_binary": 0.29421497216298875,
+            "pred_process_valid": false,
+            "readout_confidence": 0.875,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -0.875,
+            "yes_option": "Yes",
+            "yes_score": -1.2427722215652466
+          }
+        }
+      },
+      "prompt_contains_manual_label_gold_or_error_span": false,
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "sampling_profile": "NG_uniform_legacy_baseline",
+      "task_id": "aime25_perm_div22_p5",
+      "threshold_policies": {
+        "e137_chosen": {
+          "earliest_trigger": null,
+          "excerpt": null,
+          "min_score": -1.5755257606506348,
+          "min_score_row": {
+            "char_end": 3656,
+            "detector": "final_regex",
+            "score": -1.5755257606506348,
+            "span_text": "\nFinal answer: 279",
+            "stage": "first_final_answer_end"
+          },
+          "threshold": -4.1925506591796875,
+          "trigger": false
+        },
+        "zero": {
+          "earliest_trigger": {
+            "char_end": 3656,
+            "detector": "final_regex",
+            "score": -1.5755257606506348,
+            "span_text": "\nFinal answer: 279",
+            "stage": "first_final_answer_end"
+          },
+          "excerpt": "3,2 (even: 8,2)\n   5. 7,6,4,1 (even: 6,4)\n   6. 7,6,3,2 (even: 6,2)\n   7. 7,5,4,2 (even: 4,2)\n   8. 6,5,4,3 (even: 6,4)\n   All have $k=2$.\n   $N = 8 \\times 24 \\times 12 = 2304$.\n   $2304 - 2025 = 279$.\n\nFinal answer: 279",
+          "min_score": -1.5755257606506348,
+          "min_score_row": {
+            "char_end": 3656,
+            "detector": "final_regex",
+            "score": -1.5755257606506348,
+            "span_text": "\nFinal answer: 279",
+            "stage": "first_final_answer_end"
+          },
+          "threshold": 0.0,
+          "trigger": true
+        }
+      },
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1460007,
+      "base_completion_accept": true,
+      "base_completion_score": -1.1379280090332031,
+      "base_completion_yes_minus_no": 5.8124999878928065,
+      "manual_acpi_strict": true,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "manual_repair_present": true,
+      "model_key": "gemma4_26b_a4b_it",
+      "offline_prefix_selection_label_informed": true,
+      "policy_decisions": {
+        "e137_chosen_default_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4196,
+            "label_entropy": 8.709207115503462e-05,
+            "no_option": "No",
+            "no_score": -11.906274795532227,
+            "p_no_binary": 6.748052392374712e-06,
+            "p_yes_binary": 0.9999932519476076,
+            "pred_process_valid": true,
+            "readout_confidence": 11.906249881101758,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 11.906249881101758,
+            "yes_option": "Yes",
+            "yes_score": -2.4914430468925275e-05
+          }
+        },
+        "e137_chosen_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4349,
+            "label_entropy": 0.001827452901184621,
+            "no_option": "No",
+            "no_score": -8.564115524291992,
+            "p_no_binary": 0.00019110427148031706,
+            "p_yes_binary": 0.9998088957285196,
+            "pred_process_valid": true,
+            "readout_confidence": 8.562500232364982,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 8.562500232364982,
+            "yes_option": "Yes",
+            "yes_score": -0.001615291927009821
+          }
+        },
+        "e137_chosen_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4212,
+            "label_entropy": 0.06361829226708994,
+            "no_option": "No",
+            "no_score": -4.4500932693481445,
+            "p_no_binary": 0.011687256661777405,
+            "p_yes_binary": 0.9883127433382225,
+            "pred_process_valid": true,
+            "readout_confidence": 4.437500115483999,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 4.437500115483999,
+            "yes_option": "Yes",
+            "yes_score": -0.012593153864145279
+          }
+        },
+        "e137_chosen_strict_any_wrong_step_local": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4370,
+            "label_entropy": 0.4470838909188609,
+            "no_option": "No",
+            "no_score": -0.1987842470407486,
+            "p_no_binary": 0.8354835350552604,
+            "p_yes_binary": 0.16451646494473965,
+            "pred_process_valid": false,
+            "readout_confidence": 1.6249999850988388,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -1.6249999850988388,
+            "yes_option": "Yes",
+            "yes_score": -1.8237842321395874
+          }
+        },
+        "zero_default_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4196,
+            "label_entropy": 8.709207115503462e-05,
+            "no_option": "No",
+            "no_score": -11.906274795532227,
+            "p_no_binary": 6.748052392374712e-06,
+            "p_yes_binary": 0.9999932519476076,
+            "pred_process_valid": true,
+            "readout_confidence": 11.906249881101758,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 11.906249881101758,
+            "yes_option": "Yes",
+            "yes_score": -2.4914430468925275e-05
+          }
+        },
+        "zero_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4349,
+            "label_entropy": 0.001827452901184621,
+            "no_option": "No",
+            "no_score": -8.564115524291992,
+            "p_no_binary": 0.00019110427148031706,
+            "p_yes_binary": 0.9998088957285196,
+            "pred_process_valid": true,
+            "readout_confidence": 8.562500232364982,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 8.562500232364982,
+            "yes_option": "Yes",
+            "yes_score": -0.001615291927009821
+          }
+        },
+        "zero_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4212,
+            "label_entropy": 0.06361829226708994,
+            "no_option": "No",
+            "no_score": -4.4500932693481445,
+            "p_no_binary": 0.011687256661777405,
+            "p_yes_binary": 0.9883127433382225,
+            "pred_process_valid": true,
+            "readout_confidence": 4.437500115483999,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 4.437500115483999,
+            "yes_option": "Yes",
+            "yes_score": -0.012593153864145279
+          }
+        },
+        "zero_strict_any_wrong_step_local": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4370,
+            "label_entropy": 0.4470838909188609,
+            "no_option": "No",
+            "no_score": -0.1987842470407486,
+            "p_no_binary": 0.8354835350552604,
+            "p_yes_binary": 0.16451646494473965,
+            "pred_process_valid": false,
+            "readout_confidence": 1.6249999850988388,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -1.6249999850988388,
+            "yes_option": "Yes",
+            "yes_score": -1.8237842321395874
+          }
+        }
+      },
+      "prompt_contains_manual_label_gold_or_error_span": false,
+      "prompt_variant": "neutral",
+      "run_id": "E146_model_card_hf_profile",
+      "sampling_profile": "NG_model_card_hf_profile",
+      "task_id": "aime25_geometry_reflection_p2",
+      "threshold_policies": {
+        "e137_chosen": {
+          "earliest_trigger": {
+            "char_end": 886,
+            "detector": "wrong_word_regex",
+            "score": -5.872321605682373,
+            "span_text": "No,",
+            "stage": "detected_error_marker_end"
+          },
+          "excerpt": "iangle ADE$ is $\\frac{1}{2} (AD)(AE) \\sin \\alpha = \\frac{1}{2} (4)(20) \\sin \\alpha$.\nHowever, we are given the area of quadrilateral $DEGF = 288$.\n$DEGF$ is the difference between $\\triangle AEG$ and $\\triangle ADF$? No, $DEGF$ is a quadrilateral with vertices $D, E, G, F$. Since $D, E$ are on $AB$ and $F, G$ are on $AC$, we can use the area formula for a quadrilateral with vertices on the sides of an angle:\nArea($DEGF$) = Area($AEG$) -",
+          "min_score": -7.747288703918457,
+          "min_score_row": {
+            "char_end": 1398,
+            "detector": "post_repair_window",
+            "score": -7.747288703918457,
+            "span_text": "Actually, Area($DEGF$) = Area($AEG$) - Area($ADF$) - Area($\\triangle \\dots$ is incorrect).\nThe area of a quadrilateral with vertices $D, E$ on one side and $F, G$ on the other (starting from $A$) is:\nArea($DEGF$) = Area($AEG$) - Area($ADF$) - Area(",
+            "stage": "post_repair_240chars"
+          },
+          "threshold": -4.1925506591796875,
+          "trigger": true
+        },
+        "zero": {
+          "earliest_trigger": {
+            "char_end": 886,
+            "detector": "wrong_word_regex",
+            "score": -5.872321605682373,
+            "span_text": "No,",
+            "stage": "detected_error_marker_end"
+          },
+          "excerpt": "iangle ADE$ is $\\frac{1}{2} (AD)(AE) \\sin \\alpha = \\frac{1}{2} (4)(20) \\sin \\alpha$.\nHowever, we are given the area of quadrilateral $DEGF = 288$.\n$DEGF$ is the difference between $\\triangle AEG$ and $\\triangle ADF$? No, $DEGF$ is a quadrilateral with vertices $D, E, G, F$. Since $D, E$ are on $AB$ and $F, G$ are on $AC$, we can use the area formula for a quadrilateral with vertices on the sides of an angle:\nArea($DEGF$) = Area($AEG$) -",
+          "min_score": -7.747288703918457,
+          "min_score_row": {
+            "char_end": 1398,
+            "detector": "post_repair_window",
+            "score": -7.747288703918457,
+            "span_text": "Actually, Area($DEGF$) = Area($AEG$) - Area($ADF$) - Area($\\triangle \\dots$ is incorrect).\nThe area of a quadrilateral with vertices $D, E$ on one side and $F, G$ on the other (starting from $A$) is:\nArea($DEGF$) = Area($AEG$) - Area($ADF$) - Area(",
+            "stage": "post_repair_240chars"
+          },
+          "threshold": 0.0,
+          "trigger": true
+        }
+      },
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460008,
+      "base_completion_accept": true,
+      "base_completion_score": -1.0895333290100098,
+      "base_completion_yes_minus_no": 7.125000042608008,
+      "manual_acpi_strict": true,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "manual_repair_present": true,
+      "model_key": "gemma4_26b_a4b_it",
+      "offline_prefix_selection_label_informed": true,
+      "policy_decisions": {
+        "e137_chosen_default_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4571,
+            "label_entropy": 3.402496011432726e-05,
+            "no_option": "No",
+            "no_score": -12.921892166137695,
+            "p_no_binary": 2.443992553887727e-06,
+            "p_yes_binary": 0.9999975560074462,
+            "pred_process_valid": true,
+            "readout_confidence": 12.921875119354809,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 12.921875119354809,
+            "yes_option": "Yes",
+            "yes_score": -1.7046782886609435e-05
+          }
+        },
+        "e137_chosen_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4769,
+            "label_entropy": 0.0002122317070524382,
+            "no_option": "No",
+            "no_score": -10.937716484069824,
+            "p_no_binary": 1.777855992219012e-05,
+            "p_yes_binary": 0.9999822214400779,
+            "pred_process_valid": true,
+            "readout_confidence": 10.937499546693289,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 10.937499546693289,
+            "yes_option": "Yes",
+            "yes_score": -0.0002169373765354976
+          }
+        },
+        "e137_chosen_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4587,
+            "label_entropy": 0.019260301018133412,
+            "no_option": "No",
+            "no_score": -5.877925395965576,
+            "p_no_binary": 0.002800926658221352,
+            "p_yes_binary": 0.9971990733417787,
+            "pred_process_valid": true,
+            "readout_confidence": 5.875000110594556,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 5.875000110594556,
+            "yes_option": "Yes",
+            "yes_score": -0.0029252853710204363
+          }
+        },
+        "e137_chosen_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4790,
+            "label_entropy": 0.04454514134960982,
+            "no_option": "No",
+            "no_score": -4.885293960571289,
+            "p_no_binary": 0.007577240399441201,
+            "p_yes_binary": 0.9924227596005588,
+            "pred_process_valid": true,
+            "readout_confidence": 4.875000115483999,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 4.875000115483999,
+            "yes_option": "Yes",
+            "yes_score": -0.01029384508728981
+          }
+        },
+        "zero_default_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4571,
+            "label_entropy": 3.402496011432726e-05,
+            "no_option": "No",
+            "no_score": -12.921892166137695,
+            "p_no_binary": 2.443992553887727e-06,
+            "p_yes_binary": 0.9999975560074462,
+            "pred_process_valid": true,
+            "readout_confidence": 12.921875119354809,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 12.921875119354809,
+            "yes_option": "Yes",
+            "yes_score": -1.7046782886609435e-05
+          }
+        },
+        "zero_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4769,
+            "label_entropy": 0.0002122317070524382,
+            "no_option": "No",
+            "no_score": -10.937716484069824,
+            "p_no_binary": 1.777855992219012e-05,
+            "p_yes_binary": 0.9999822214400779,
+            "pred_process_valid": true,
+            "readout_confidence": 10.937499546693289,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 10.937499546693289,
+            "yes_option": "Yes",
+            "yes_score": -0.0002169373765354976
+          }
+        },
+        "zero_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4587,
+            "label_entropy": 0.019260301018133412,
+            "no_option": "No",
+            "no_score": -5.877925395965576,
+            "p_no_binary": 0.002800926658221352,
+            "p_yes_binary": 0.9971990733417787,
+            "pred_process_valid": true,
+            "readout_confidence": 5.875000110594556,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 5.875000110594556,
+            "yes_option": "Yes",
+            "yes_score": -0.0029252853710204363
+          }
+        },
+        "zero_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4790,
+            "label_entropy": 0.04454514134960982,
+            "no_option": "No",
+            "no_score": -4.885293960571289,
+            "p_no_binary": 0.007577240399441201,
+            "p_yes_binary": 0.9924227596005588,
+            "pred_process_valid": true,
+            "readout_confidence": 4.875000115483999,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 4.875000115483999,
+            "yes_option": "Yes",
+            "yes_score": -0.01029384508728981
+          }
+        }
+      },
+      "prompt_contains_manual_label_gold_or_error_span": false,
+      "prompt_variant": "self_check",
+      "run_id": "E146_model_card_hf_profile",
+      "sampling_profile": "NG_model_card_hf_profile",
+      "task_id": "aime25_geometry_reflection_p2",
+      "threshold_policies": {
+        "e137_chosen": {
+          "earliest_trigger": {
+            "char_end": 1017,
+            "detector": "wrong_word_regex",
+            "score": -6.940587520599365,
+            "span_text": "not quite right",
+            "stage": "detected_error_marker_end"
+          },
+          "excerpt": "$.\nThis is a trapezoid if $DE \\parallel FG$, which is true as both lie on the sides of the triangle.\nArea $(DEGF) = \\text{Area}(\\triangle AEG) - \\text{Area}(\\triangle AFD) - \\text{Area}(\\triangle ADE)$ is not quite right.\nUsing the coordinates for a trapezoid area formula: $\\text{Area} = \\frac{1}{2} |(x_D y_E - y_D x_E) + (x_E y_G - y_E x_G) + (x_G y_F - y_G x_F) + (x_F y_D - y_F x_D)|$.\n$x_D y_E - y_D x_E = 4(0) - 0(20) = 0$.\n$x_E y_G ",
+          "min_score": -7.404973983764648,
+          "min_score_row": {
+            "char_end": 1257,
+            "detector": "post_error_window",
+            "score": -7.404973983764648,
+            "span_text": ".\nUsing the coordinates for a trapezoid area formula: $\\text{Area} = \\frac{1}{2} |(x_D y_E - y_D x_E) + (x_E y_G - y_E x_G) + (x_G y_F - y_G x_F) + (x_F y_D - y_F x_D)|$.\n$x_D y_E - y_D x_E = 4(0) - 0(20) = 0$.\n$x_E y_G - y_E x_G = 20(65\\si",
+            "stage": "post_error_240chars"
+          },
+          "threshold": -4.1925506591796875,
+          "trigger": true
+        },
+        "zero": {
+          "earliest_trigger": {
+            "char_end": 1017,
+            "detector": "wrong_word_regex",
+            "score": -6.940587520599365,
+            "span_text": "not quite right",
+            "stage": "detected_error_marker_end"
+          },
+          "excerpt": "$.\nThis is a trapezoid if $DE \\parallel FG$, which is true as both lie on the sides of the triangle.\nArea $(DEGF) = \\text{Area}(\\triangle AEG) - \\text{Area}(\\triangle AFD) - \\text{Area}(\\triangle ADE)$ is not quite right.\nUsing the coordinates for a trapezoid area formula: $\\text{Area} = \\frac{1}{2} |(x_D y_E - y_D x_E) + (x_E y_G - y_E x_G) + (x_G y_F - y_G x_F) + (x_F y_D - y_F x_D)|$.\n$x_D y_E - y_D x_E = 4(0) - 0(20) = 0$.\n$x_E y_G ",
+          "min_score": -7.404973983764648,
+          "min_score_row": {
+            "char_end": 1257,
+            "detector": "post_error_window",
+            "score": -7.404973983764648,
+            "span_text": ".\nUsing the coordinates for a trapezoid area formula: $\\text{Area} = \\frac{1}{2} |(x_D y_E - y_D x_E) + (x_E y_G - y_E x_G) + (x_G y_F - y_G x_F) + (x_F y_D - y_F x_D)|$.\n$x_D y_E - y_D x_E = 4(0) - 0(20) = 0$.\n$x_E y_G - y_E x_G = 20(65\\si",
+            "stage": "post_error_240chars"
+          },
+          "threshold": 0.0,
+          "trigger": true
+        }
+      },
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460009,
+      "base_completion_accept": false,
+      "base_completion_score": -2.330331325531006,
+      "base_completion_yes_minus_no": -0.5000000596046448,
+      "manual_acpi_strict": true,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "manual_repair_present": true,
+      "model_key": "gemma4_26b_a4b_it",
+      "offline_prefix_selection_label_informed": true,
+      "policy_decisions": {
+        "e137_chosen_default_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4815,
+            "label_entropy": 0.00204365762399034,
+            "no_option": "No",
+            "no_score": -8.437788963317871,
+            "p_no_binary": 0.00021654401505744877,
+            "p_yes_binary": 0.9997834559849426,
+            "pred_process_valid": true,
+            "readout_confidence": 8.437500160915079,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 8.437500160915079,
+            "yes_option": "Yes",
+            "yes_score": -0.00028880240279249847
+          }
+        },
+        "e137_chosen_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4967,
+            "label_entropy": 0.029396678332515153,
+            "no_option": "No",
+            "no_score": -5.390917778015137,
+            "p_no_binary": 0.004609571965713727,
+            "p_yes_binary": 0.9953904280342863,
+            "pred_process_valid": true,
+            "readout_confidence": 5.375000046566129,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 5.375000046566129,
+            "yes_option": "Yes",
+            "yes_score": -0.015917731449007988
+          }
+        },
+        "e137_chosen_strict_any_wrong_step_global": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4831,
+            "label_entropy": 0.5166848105591234,
+            "no_option": "No",
+            "no_score": -0.243026003241539,
+            "p_no_binary": 0.7879311981328135,
+            "p_yes_binary": 0.2120688018671865,
+            "pred_process_valid": false,
+            "readout_confidence": 1.3125000149011612,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -1.3125000149011612,
+            "yes_option": "Yes",
+            "yes_score": -1.5555260181427002
+          }
+        },
+        "e137_chosen_strict_any_wrong_step_local": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4988,
+            "label_entropy": 0.03815239220646106,
+            "no_option": "No",
+            "no_score": -0.009213312529027462,
+            "p_no_binary": 0.9937100987071644,
+            "p_yes_binary": 0.006289901292835641,
+            "pred_process_valid": false,
+            "readout_confidence": 5.062500135041773,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -5.062500135041773,
+            "yes_option": "Yes",
+            "yes_score": -5.071713447570801
+          }
+        },
+        "zero_default_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4815,
+            "label_entropy": 0.00204365762399034,
+            "no_option": "No",
+            "no_score": -8.437788963317871,
+            "p_no_binary": 0.00021654401505744877,
+            "p_yes_binary": 0.9997834559849426,
+            "pred_process_valid": true,
+            "readout_confidence": 8.437500160915079,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 8.437500160915079,
+            "yes_option": "Yes",
+            "yes_score": -0.00028880240279249847
+          }
+        },
+        "zero_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4967,
+            "label_entropy": 0.029396678332515153,
+            "no_option": "No",
+            "no_score": -5.390917778015137,
+            "p_no_binary": 0.004609571965713727,
+            "p_yes_binary": 0.9953904280342863,
+            "pred_process_valid": true,
+            "readout_confidence": 5.375000046566129,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 5.375000046566129,
+            "yes_option": "Yes",
+            "yes_score": -0.015917731449007988
+          }
+        },
+        "zero_strict_any_wrong_step_global": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4831,
+            "label_entropy": 0.5166848105591234,
+            "no_option": "No",
+            "no_score": -0.243026003241539,
+            "p_no_binary": 0.7879311981328135,
+            "p_yes_binary": 0.2120688018671865,
+            "pred_process_valid": false,
+            "readout_confidence": 1.3125000149011612,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -1.3125000149011612,
+            "yes_option": "Yes",
+            "yes_score": -1.5555260181427002
+          }
+        },
+        "zero_strict_any_wrong_step_local": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 4988,
+            "label_entropy": 0.03815239220646106,
+            "no_option": "No",
+            "no_score": -0.009213312529027462,
+            "p_no_binary": 0.9937100987071644,
+            "p_yes_binary": 0.006289901292835641,
+            "pred_process_valid": false,
+            "readout_confidence": 5.062500135041773,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -5.062500135041773,
+            "yes_option": "Yes",
+            "yes_score": -5.071713447570801
+          }
+        }
+      },
+      "prompt_contains_manual_label_gold_or_error_span": false,
+      "prompt_variant": "self_check",
+      "run_id": "E146_model_card_hf_profile",
+      "sampling_profile": "NG_model_card_hf_profile",
+      "task_id": "aime25_geometry_reflection_p2",
+      "threshold_policies": {
+        "e137_chosen": {
+          "earliest_trigger": {
+            "char_end": 850,
+            "detector": "wrong_word_regex",
+            "score": -7.1279191970825195,
+            "span_text": "incorrect",
+            "stage": "detected_error_marker_end"
+          },
+          "excerpt": "$AC$, $DEGF$ is a trapezoid if $DE \\parallel FG$, but they are on different lines. We use the area formula for a quadrilateral with vertices on the sides of an angle:\nArea($DEGF$) = Area($AEG$) - Area($ADF$) is incorrect because $D, E, F, G$ do not form a simple subtraction.\nThe vertices are $D$ (on $AB$), $E$ (on $AB$), $G$ (on $AC$), $F$ (on $AC$). Wait, the points are $A, D, E, B$ and $A, F, G, C$.\nThe quadrilateral $DEGF$ has vertic",
+          "min_score": -8.674016952514648,
+          "min_score_row": {
+            "char_end": 1090,
+            "detector": "post_error_window",
+            "score": -8.674016952514648,
+            "span_text": " because $D, E, F, G$ do not form a simple subtraction.\nThe vertices are $D$ (on $AB$), $E$ (on $AB$), $G$ (on $AC$), $F$ (on $AC$). Wait, the points are $A, D, E, B$ and $A, F, G, C$.\nThe quadrilateral $DEGF$ has vertices $D(4,0)$, $E(20,0",
+            "stage": "post_error_240chars"
+          },
+          "threshold": -4.1925506591796875,
+          "trigger": true
+        },
+        "zero": {
+          "earliest_trigger": {
+            "char_end": 850,
+            "detector": "wrong_word_regex",
+            "score": -7.1279191970825195,
+            "span_text": "incorrect",
+            "stage": "detected_error_marker_end"
+          },
+          "excerpt": "$AC$, $DEGF$ is a trapezoid if $DE \\parallel FG$, but they are on different lines. We use the area formula for a quadrilateral with vertices on the sides of an angle:\nArea($DEGF$) = Area($AEG$) - Area($ADF$) is incorrect because $D, E, F, G$ do not form a simple subtraction.\nThe vertices are $D$ (on $AB$), $E$ (on $AB$), $G$ (on $AC$), $F$ (on $AC$). Wait, the points are $A, D, E, B$ and $A, F, G, C$.\nThe quadrilateral $DEGF$ has vertic",
+          "min_score": -8.674016952514648,
+          "min_score_row": {
+            "char_end": 1090,
+            "detector": "post_error_window",
+            "score": -8.674016952514648,
+            "span_text": " because $D, E, F, G$ do not form a simple subtraction.\nThe vertices are $D$ (on $AB$), $E$ (on $AB$), $G$ (on $AC$), $F$ (on $AC$). Wait, the points are $A, D, E, B$ and $A, F, G, C$.\nThe quadrilateral $DEGF$ has vertices $D(4,0)$, $E(20,0",
+            "stage": "post_error_240chars"
+          },
+          "threshold": 0.0,
+          "trigger": true
+        }
+      },
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460010,
+      "base_completion_accept": true,
+      "base_completion_score": -2.0925896167755127,
+      "base_completion_yes_minus_no": 6.56249990942888,
+      "manual_acpi_strict": true,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "manual_repair_present": true,
+      "model_key": "gemma4_26b_a4b_it",
+      "offline_prefix_selection_label_informed": true,
+      "policy_decisions": {
+        "e137_chosen_default_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 6694,
+            "label_entropy": 1.597968004057766e-05,
+            "no_option": "No",
+            "no_score": -13.734387397766113,
+            "p_no_binary": 1.0845171132291104e-06,
+            "p_yes_binary": 0.9999989154828868,
+            "pred_process_valid": true,
+            "readout_confidence": 13.734374642453076,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 13.734374642453076,
+            "yes_option": "Yes",
+            "yes_score": -1.2755313036905136e-05
+          }
+        },
+        "e137_chosen_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 6861,
+            "label_entropy": 0.00025197845344125495,
+            "no_option": "No",
+            "no_score": -10.75008773803711,
+            "p_no_binary": 2.1444956006898462e-05,
+            "p_yes_binary": 0.9999785550439931,
+            "pred_process_valid": true,
+            "readout_confidence": 10.749999646250217,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 10.749999646250217,
+            "yes_option": "Yes",
+            "yes_score": -8.809178689261898e-05
+          }
+        },
+        "e137_chosen_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 6710,
+            "label_entropy": 0.10941059196777496,
+            "no_option": "No",
+            "no_score": -3.7735021114349365,
+            "p_no_binary": 0.022977367359293347,
+            "p_yes_binary": 0.9770226326407067,
+            "pred_process_valid": true,
+            "readout_confidence": 3.750000113621354,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 3.750000113621354,
+            "yes_option": "Yes",
+            "yes_score": -0.02350199781358242
+          }
+        },
+        "e137_chosen_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 6882,
+            "label_entropy": 0.6758732891550641,
+            "no_option": "No",
+            "no_score": -0.8985028266906738,
+            "p_no_binary": 0.4073334000459302,
+            "p_yes_binary": 0.5926665999540697,
+            "pred_process_valid": true,
+            "readout_confidence": 0.375,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 0.375,
+            "yes_option": "Yes",
+            "yes_score": -0.5235028266906738
+          }
+        },
+        "zero_default_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 6694,
+            "label_entropy": 1.597968004057766e-05,
+            "no_option": "No",
+            "no_score": -13.734387397766113,
+            "p_no_binary": 1.0845171132291104e-06,
+            "p_yes_binary": 0.9999989154828868,
+            "pred_process_valid": true,
+            "readout_confidence": 13.734374642453076,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 13.734374642453076,
+            "yes_option": "Yes",
+            "yes_score": -1.2755313036905136e-05
+          }
+        },
+        "zero_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 6861,
+            "label_entropy": 0.00025197845344125495,
+            "no_option": "No",
+            "no_score": -10.75008773803711,
+            "p_no_binary": 2.1444956006898462e-05,
+            "p_yes_binary": 0.9999785550439931,
+            "pred_process_valid": true,
+            "readout_confidence": 10.749999646250217,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 10.749999646250217,
+            "yes_option": "Yes",
+            "yes_score": -8.809178689261898e-05
+          }
+        },
+        "zero_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 6710,
+            "label_entropy": 0.10941059196777496,
+            "no_option": "No",
+            "no_score": -3.7735021114349365,
+            "p_no_binary": 0.022977367359293347,
+            "p_yes_binary": 0.9770226326407067,
+            "pred_process_valid": true,
+            "readout_confidence": 3.750000113621354,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 3.750000113621354,
+            "yes_option": "Yes",
+            "yes_score": -0.02350199781358242
+          }
+        },
+        "zero_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 6882,
+            "label_entropy": 0.6758732891550641,
+            "no_option": "No",
+            "no_score": -0.8985028266906738,
+            "p_no_binary": 0.4073334000459302,
+            "p_yes_binary": 0.5926665999540697,
+            "pred_process_valid": true,
+            "readout_confidence": 0.375,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 0.375,
+            "yes_option": "Yes",
+            "yes_score": -0.5235028266906738
+          }
+        }
+      },
+      "prompt_contains_manual_label_gold_or_error_span": false,
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E146_model_card_hf_profile",
+      "sampling_profile": "NG_model_card_hf_profile",
+      "task_id": "aime25_geometry_reflection_p2",
+      "threshold_policies": {
+        "e137_chosen": {
+          "earliest_trigger": {
+            "char_end": 355,
+            "detector": "wrong_word_regex",
+            "score": -6.732329368591309,
+            "span_text": "No,",
+            "stage": "detected_error_marker_end"
+          },
+          "excerpt": "a formula for triangles relative to the side lengths.\nLet $AB = 4+16+8 = 28$ and $AC = 13+52+26 = 91$.\nLet the area of $\\triangle ABC$ be $S$.\nThe area of $\\triangle ADE$ is $S \\cdot \\frac{AD \\cdot AE}{AB \\cdot AC}$? No, the points are on the sides.\nArea $(\\triangle ADE) = S \\cdot \\frac{AD \\cdot AE}{AB \\cdot AC}$ is incorrect. The formula for a triangle $APQ$ where $P$ is on $AB$ and $Q$ is on $AC$ is $\\text{Area}(APQ) = S \\cdot \\frac{A",
+          "min_score": -8.80372142791748,
+          "min_score_row": {
+            "char_end": 1078,
+            "detector": "post_repair_window",
+            "score": -8.80372142791748,
+            "span_text": "correct because $D, E$ are on $AB$ and $F, G$ are on $AC$.\nThe area of quadrilateral $DEGF$ is $\\text{Area}(AEG) - \\text{Area}(ADF)$? No.\nThe vertices are $D(4,0), E(20,0), G(x_G, y_G), F(x_F, y_F)$ in a sense.\nThe area of $DEGF$ is $\\text{Area}(A",
+            "stage": "post_repair_240chars"
+          },
+          "threshold": -4.1925506591796875,
+          "trigger": true
+        },
+        "zero": {
+          "earliest_trigger": {
+            "char_end": 355,
+            "detector": "wrong_word_regex",
+            "score": -6.732329368591309,
+            "span_text": "No,",
+            "stage": "detected_error_marker_end"
+          },
+          "excerpt": "a formula for triangles relative to the side lengths.\nLet $AB = 4+16+8 = 28$ and $AC = 13+52+26 = 91$.\nLet the area of $\\triangle ABC$ be $S$.\nThe area of $\\triangle ADE$ is $S \\cdot \\frac{AD \\cdot AE}{AB \\cdot AC}$? No, the points are on the sides.\nArea $(\\triangle ADE) = S \\cdot \\frac{AD \\cdot AE}{AB \\cdot AC}$ is incorrect. The formula for a triangle $APQ$ where $P$ is on $AB$ and $Q$ is on $AC$ is $\\text{Area}(APQ) = S \\cdot \\frac{A",
+          "min_score": -8.80372142791748,
+          "min_score_row": {
+            "char_end": 1078,
+            "detector": "post_repair_window",
+            "score": -8.80372142791748,
+            "span_text": "correct because $D, E$ are on $AB$ and $F, G$ are on $AC$.\nThe area of quadrilateral $DEGF$ is $\\text{Area}(AEG) - \\text{Area}(ADF)$? No.\nThe vertices are $D(4,0), E(20,0), G(x_G, y_G), F(x_F, y_F)$ in a sense.\nThe area of $DEGF$ is $\\text{Area}(A",
+            "stage": "post_repair_240chars"
+          },
+          "threshold": 0.0,
+          "trigger": true
+        }
+      },
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460021,
+      "base_completion_accept": true,
+      "base_completion_score": -1.7161054611206055,
+      "base_completion_yes_minus_no": 7.687500011175871,
+      "manual_acpi_strict": true,
+      "manual_acpi_unrepaired": true,
+      "manual_error_type": "wrong_factorization_unrepaired_symmetric_count",
+      "manual_process_valid_repaired": false,
+      "manual_process_valid_strict": false,
+      "manual_repair_present": false,
+      "model_key": "gemma4_26b_a4b_it",
+      "offline_prefix_selection_label_informed": true,
+      "policy_decisions": {
+        "e137_chosen_default_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_default_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "e137_chosen_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": false,
+          "metrics": null
+        },
+        "zero_default_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 948,
+            "label_entropy": 0.00028249056090232257,
+            "no_option": "No",
+            "no_score": -10.625041007995605,
+            "p_no_binary": 2.4300237826203363e-05,
+            "p_yes_binary": 0.9999756997621738,
+            "pred_process_valid": true,
+            "readout_confidence": 10.625000120046025,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 10.625000120046025,
+            "yes_option": "Yes",
+            "yes_score": -4.088794958079234e-05
+          }
+        },
+        "zero_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 1138,
+            "label_entropy": 0.00011954795251876793,
+            "no_option": "No",
+            "no_score": -11.56272029876709,
+            "p_no_binary": 9.516251463325323e-06,
+            "p_yes_binary": 0.9999904837485366,
+            "pred_process_valid": true,
+            "readout_confidence": 11.562500024258043,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 11.562500024258043,
+            "yes_option": "Yes",
+            "yes_score": -0.00022027450904715806
+          }
+        },
+        "zero_strict_any_wrong_step_global": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 964,
+            "label_entropy": 0.010666830105377096,
+            "no_option": "No",
+            "no_score": -6.566065311431885,
+            "p_no_binary": 0.0014103582657683104,
+            "p_yes_binary": 0.9985896417342318,
+            "pred_process_valid": true,
+            "readout_confidence": 6.562500163912773,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 6.562500163912773,
+            "yes_option": "Yes",
+            "yes_score": -0.0035651475191116333
+          }
+        },
+        "zero_strict_any_wrong_step_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 1159,
+            "label_entropy": 0.0033724354442925975,
+            "no_option": "No",
+            "no_score": -7.875864028930664,
+            "p_no_binary": 0.0003799845992547853,
+            "p_yes_binary": 0.9996200154007453,
+            "pred_process_valid": true,
+            "readout_confidence": 7.87499977753032,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 7.87499977753032,
+            "yes_option": "Yes",
+            "yes_score": -0.0008642514003440738
+          }
+        }
+      },
+      "prompt_contains_manual_label_gold_or_error_span": false,
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E146_model_card_hf_profile",
+      "sampling_profile": "NG_model_card_hf_profile",
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "threshold_policies": {
+        "e137_chosen": {
+          "earliest_trigger": null,
+          "excerpt": null,
+          "min_score": -2.216026782989502,
+          "min_score_row": {
+            "char_end": 527,
+            "detector": "post_error_window",
+            "score": -2.216026782989502,
+            "span_text": " = 0$\n\nFor this product to be zero, at least one of the factors must be zero:\n1.  $3x - 2y = 0 \\implies 3x = 2y$. Since $\\gcd(3, 2) = 1$, $x$ must be a multiple of 2 and $y$ must be a multiple of 3. We can write $x = 2k$ and $y = 3k$ for so",
+            "stage": "post_error_240chars"
+          },
+          "threshold": -4.1925506591796875,
+          "trigger": false
+        },
+        "zero": {
+          "earliest_trigger": {
+            "char_end": 287,
+            "detector": "factorization_regex",
+            "score": -2.052642583847046,
+            "span_text": "(3x - 2y)(4x + 3y)",
+            "stage": "detected_error_marker_end"
+          },
+          "excerpt": " \\dots, 100\\}$ satisfying $12x^2 - xy - 6y^2 = 0$, we first factor the quadratic equation.\n\nThe expression $12x^2 - xy - 6y^2$ is a homogeneous quadratic form. We can factor it as:\n$12x^2 - xy - 6y^2 = (3x - 2y)(4x + 3y) = 0$\n\nFor this product to be zero, at least one of the factors must be zero:\n1.  $3x - 2y = 0 \\implies 3x = 2y$. Since $\\gcd(3, 2) = 1$, $x$ must be a multiple of 2 and $y$ must be a multiple of 3. We can write $x = 2k$",
+          "min_score": -2.216026782989502,
+          "min_score_row": {
+            "char_end": 527,
+            "detector": "post_error_window",
+            "score": -2.216026782989502,
+            "span_text": " = 0$\n\nFor this product to be zero, at least one of the factors must be zero:\n1.  $3x - 2y = 0 \\implies 3x = 2y$. Since $\\gcd(3, 2) = 1$, $x$ must be a multiple of 2 and $y$ must be a multiple of 3. We can write $x = 2k$ and $y = 3k$ for so",
+            "stage": "post_error_240chars"
+          },
+          "threshold": 0.0,
+          "trigger": true
+        }
+      },
+      "trace_class": "unrepaired_acpi"
+    },
+    {
+      "audit_idx": 1460028,
+      "base_completion_accept": false,
+      "base_completion_score": -2.401146411895752,
+      "base_completion_yes_minus_no": -4.75,
+      "manual_acpi_strict": true,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "self_corrected_wrong_counting_step",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "manual_repair_present": true,
+      "model_key": "gemma4_26b_a4b_it",
+      "offline_prefix_selection_label_informed": true,
+      "policy_decisions": {
+        "e137_chosen_default_global": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2025,
+            "label_entropy": 0.20841673933658325,
+            "no_option": "No",
+            "no_score": -0.05879750847816467,
+            "p_no_binary": 0.9465966747198243,
+            "p_yes_binary": 0.053403325280175794,
+            "pred_process_valid": false,
+            "readout_confidence": 2.875000089406967,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -2.875000089406967,
+            "yes_option": "Yes",
+            "yes_score": -2.933797597885132
+          }
+        },
+        "e137_chosen_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2181,
+            "label_entropy": 0.41930675356969543,
+            "no_option": "No",
+            "no_score": -1.9647140502929688,
+            "p_no_binary": 0.14804720179063335,
+            "p_yes_binary": 0.8519527982093668,
+            "pred_process_valid": true,
+            "readout_confidence": 1.7499999701976776,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 1.7499999701976776,
+            "yes_option": "Yes",
+            "yes_score": -0.21471408009529114
+          }
+        },
+        "e137_chosen_strict_any_wrong_step_global": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2041,
+            "label_entropy": 0.09932977470253943,
+            "no_option": "No",
+            "no_score": -0.09379726648330688,
+            "p_no_binary": 0.9796676454700793,
+            "p_yes_binary": 0.020332354529920653,
+            "pred_process_valid": false,
+            "readout_confidence": 3.8749999403953552,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -3.8749999403953552,
+            "yes_option": "Yes",
+            "yes_score": -3.968797206878662
+          }
+        },
+        "e137_chosen_strict_any_wrong_step_local": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2202,
+            "label_entropy": 0.2272058723511307,
+            "no_option": "No",
+            "no_score": -0.08700200915336609,
+            "p_no_binary": 0.9399133515091156,
+            "p_yes_binary": 0.060086648490884395,
+            "pred_process_valid": false,
+            "readout_confidence": 2.7500000298023224,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -2.7500000298023224,
+            "yes_option": "Yes",
+            "yes_score": -2.8370020389556885
+          }
+        },
+        "zero_default_global": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2025,
+            "label_entropy": 0.20841673933658325,
+            "no_option": "No",
+            "no_score": -0.05879750847816467,
+            "p_no_binary": 0.9465966747198243,
+            "p_yes_binary": 0.053403325280175794,
+            "pred_process_valid": false,
+            "readout_confidence": 2.875000089406967,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -2.875000089406967,
+            "yes_option": "Yes",
+            "yes_score": -2.933797597885132
+          }
+        },
+        "zero_default_local": {
+          "accept": true,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2181,
+            "label_entropy": 0.41930675356969543,
+            "no_option": "No",
+            "no_score": -1.9647140502929688,
+            "p_no_binary": 0.14804720179063335,
+            "p_yes_binary": 0.8519527982093668,
+            "pred_process_valid": true,
+            "readout_confidence": 1.7499999701976776,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": 1.7499999701976776,
+            "yes_option": "Yes",
+            "yes_score": -0.21471408009529114
+          }
+        },
+        "zero_strict_any_wrong_step_global": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2041,
+            "label_entropy": 0.09932977470253943,
+            "no_option": "No",
+            "no_score": -0.09379726648330688,
+            "p_no_binary": 0.9796676454700793,
+            "p_yes_binary": 0.020332354529920653,
+            "pred_process_valid": false,
+            "readout_confidence": 3.8749999403953552,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -3.8749999403953552,
+            "yes_option": "Yes",
+            "yes_score": -3.968797206878662
+          }
+        },
+        "zero_strict_any_wrong_step_local": {
+          "accept": false,
+          "called": true,
+          "metrics": {
+            "input_tokens": 2202,
+            "label_entropy": 0.2272058723511307,
+            "no_option": "No",
+            "no_score": -0.08700200915336609,
+            "p_no_binary": 0.9399133515091156,
+            "p_yes_binary": 0.060086648490884395,
+            "pred_process_valid": false,
+            "readout_confidence": 2.7500000298023224,
+            "truncated_left_tokens": 0,
+            "yes_minus_no": -2.7500000298023224,
+            "yes_option": "Yes",
+            "yes_score": -2.8370020389556885
+          }
+        }
+      },
+      "prompt_contains_manual_label_gold_or_error_span": false,
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E146_model_card_hf_profile",
+      "sampling_profile": "NG_model_card_hf_profile",
+      "task_id": "aime25_perm_div22_p5",
+      "threshold_policies": {
+        "e137_chosen": {
+          "earliest_trigger": {
+            "char_end": 2023,
+            "detector": "counting_error_regex",
+            "score": -5.423535346984863,
+            "span_text": "incorrect",
+            "stage": "detected_error_marker_end"
+          },
+          "excerpt": "{\\{A, B\\}} (4! \\times (\\text{number of even digits in } B) \\times 3!)$.\nActually, more simply: $N = \\sum_{\\{A, B\\}} 4! \\times (\\text{number of even digits in } B \\text{ that can be at position 8}) \\times 3!$ is incorrect.\nThe total number of permutations for a fixed set $B$ is $4! \\times 4!$. The number of these where $d_8$ is even is $4! \\times (\\text{count of even digits in } B) \\times 3!$.\nLet $e_B$ be the number of even digits in $B",
+          "min_score": -5.642266273498535,
+          "min_score_row": {
+            "char_end": 2263,
+            "detector": "post_error_window",
+            "score": -5.642266273498535,
+            "span_text": ".\nThe total number of permutations for a fixed set $B$ is $4! \\times 4!$. The number of these where $d_8$ is even is $4! \\times (\\text{count of even digits in } B) \\times 3!$.\nLet $e_B$ be the number of even digits in $B$. Total $N = \\sum_{",
+            "stage": "post_error_240chars"
+          },
+          "threshold": -4.1925506591796875,
+          "trigger": true
+        },
+        "zero": {
+          "earliest_trigger": {
+            "char_end": 2023,
+            "detector": "counting_error_regex",
+            "score": -5.423535346984863,
+            "span_text": "incorrect",
+            "stage": "detected_error_marker_end"
+          },
+          "excerpt": "{\\{A, B\\}} (4! \\times (\\text{number of even digits in } B) \\times 3!)$.\nActually, more simply: $N = \\sum_{\\{A, B\\}} 4! \\times (\\text{number of even digits in } B \\text{ that can be at position 8}) \\times 3!$ is incorrect.\nThe total number of permutations for a fixed set $B$ is $4! \\times 4!$. The number of these where $d_8$ is even is $4! \\times (\\text{count of even digits in } B) \\times 3!$.\nLet $e_B$ be the number of even digits in $B",
+          "min_score": -5.642266273498535,
+          "min_score_row": {
+            "char_end": 2263,
+            "detector": "post_error_window",
+            "score": -5.642266273498535,
+            "span_text": ".\nThe total number of permutations for a fixed set $B$ is $4! \\times 4!$. The number of these where $d_8$ is even is $4! \\times (\\text{count of even digits in } B) \\times 3!$.\nLet $e_B$ be the number of even digits in $B$. Total $N = \\sum_{",
+            "stage": "post_error_240chars"
+          },
+          "threshold": 0.0,
+          "trigger": true
+        }
+      },
+      "trace_class": "repaired_acpi"
+    }
+  ],
+  "scope_note_zh": "E138 是自然 E119/E146 上的后验 hidden-trigger 检查迁移实验；它比较阈值策略与二次检查 objective，但不是在线生成时插入检查。",
+  "source_audit_jsonl": "data/processed/e119_e146_process_audit_official_20260430.jsonl",
+  "source_e131_result": "results/E131_e119_e146_hidden_localization/gemma4_26b_a4b_it_e131_hidden_localization_mixed_chat.json",
+  "source_e137_json": "results/E137_hidden_trigger_threshold_calibration/e137_hidden_trigger_threshold_calibration.json",
+  "started_at": "2026-04-30T22:07:53",
+  "summary": [
+    {
+      "base_accept_rate": 0.75,
+      "base_invalid_accept_rate": 0.6,
+      "base_valid_accept_rate": 1.0,
+      "e137_chosen_default_global_accept_rate": 0.9375,
+      "e137_chosen_default_global_invalid_accept_rate": 0.9,
+      "e137_chosen_default_global_valid_accept_rate": 1.0,
+      "e137_chosen_default_local_accept_rate": 1.0,
+      "e137_chosen_default_local_invalid_accept_rate": 1.0,
+      "e137_chosen_default_local_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 0.75,
+      "e137_chosen_strict_any_wrong_step_global_invalid_accept_rate": 0.6,
+      "e137_chosen_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 0.6875,
+      "e137_chosen_strict_any_wrong_step_local_invalid_accept_rate": 0.5,
+      "e137_chosen_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "e137_chosen_trigger_rate": 0.5,
+      "n": 16,
+      "slice": "all",
+      "slice_type": "all",
+      "strict_invalid_n": 10,
+      "strict_valid_n": 6,
+      "zero_default_global_accept_rate": 0.9375,
+      "zero_default_global_invalid_accept_rate": 0.9,
+      "zero_default_global_valid_accept_rate": 1.0,
+      "zero_default_local_accept_rate": 1.0,
+      "zero_default_local_invalid_accept_rate": 1.0,
+      "zero_default_local_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_accept_rate": 0.75,
+      "zero_strict_any_wrong_step_global_invalid_accept_rate": 0.6,
+      "zero_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_accept_rate": 0.625,
+      "zero_strict_any_wrong_step_local_invalid_accept_rate": 0.5,
+      "zero_strict_any_wrong_step_local_valid_accept_rate": 0.8333333333333334,
+      "zero_trigger_rate": 0.875
+    },
+    {
+      "base_accept_rate": 0.625,
+      "base_invalid_accept_rate": 0.5,
+      "base_valid_accept_rate": 1.0,
+      "e137_chosen_default_global_accept_rate": 0.875,
+      "e137_chosen_default_global_invalid_accept_rate": 0.8333333333333334,
+      "e137_chosen_default_global_valid_accept_rate": 1.0,
+      "e137_chosen_default_local_accept_rate": 1.0,
+      "e137_chosen_default_local_invalid_accept_rate": 1.0,
+      "e137_chosen_default_local_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 0.625,
+      "e137_chosen_strict_any_wrong_step_global_invalid_accept_rate": 0.5,
+      "e137_chosen_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 0.625,
+      "e137_chosen_strict_any_wrong_step_local_invalid_accept_rate": 0.5,
+      "e137_chosen_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "e137_chosen_trigger_rate": 0.5,
+      "n": 8,
+      "slice": "answer_first_no_gold",
+      "slice_type": "prompt_variant",
+      "strict_invalid_n": 6,
+      "strict_valid_n": 2,
+      "zero_default_global_accept_rate": 0.875,
+      "zero_default_global_invalid_accept_rate": 0.8333333333333334,
+      "zero_default_global_valid_accept_rate": 1.0,
+      "zero_default_local_accept_rate": 1.0,
+      "zero_default_local_invalid_accept_rate": 1.0,
+      "zero_default_local_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_accept_rate": 0.625,
+      "zero_strict_any_wrong_step_global_invalid_accept_rate": 0.5,
+      "zero_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_accept_rate": 0.5,
+      "zero_strict_any_wrong_step_local_invalid_accept_rate": 0.5,
+      "zero_strict_any_wrong_step_local_valid_accept_rate": 0.5,
+      "zero_trigger_rate": 1.0
+    },
+    {
+      "base_accept_rate": 1.0,
+      "base_invalid_accept_rate": 1.0,
+      "base_valid_accept_rate": 1.0,
+      "e137_chosen_default_global_accept_rate": 1.0,
+      "e137_chosen_default_global_invalid_accept_rate": 1.0,
+      "e137_chosen_default_global_valid_accept_rate": 1.0,
+      "e137_chosen_default_local_accept_rate": 1.0,
+      "e137_chosen_default_local_invalid_accept_rate": 1.0,
+      "e137_chosen_default_local_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_invalid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 0.6666666666666666,
+      "e137_chosen_strict_any_wrong_step_local_invalid_accept_rate": 0.0,
+      "e137_chosen_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "e137_chosen_trigger_rate": 0.3333333333333333,
+      "n": 3,
+      "slice": "neutral",
+      "slice_type": "prompt_variant",
+      "strict_invalid_n": 1,
+      "strict_valid_n": 2,
+      "zero_default_global_accept_rate": 1.0,
+      "zero_default_global_invalid_accept_rate": 1.0,
+      "zero_default_global_valid_accept_rate": 1.0,
+      "zero_default_local_accept_rate": 1.0,
+      "zero_default_local_invalid_accept_rate": 1.0,
+      "zero_default_local_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_invalid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_accept_rate": 0.6666666666666666,
+      "zero_strict_any_wrong_step_local_invalid_accept_rate": 0.0,
+      "zero_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "zero_trigger_rate": 0.6666666666666666
+    },
+    {
+      "base_accept_rate": 0.8,
+      "base_invalid_accept_rate": 0.6666666666666666,
+      "base_valid_accept_rate": 1.0,
+      "e137_chosen_default_global_accept_rate": 1.0,
+      "e137_chosen_default_global_invalid_accept_rate": 1.0,
+      "e137_chosen_default_global_valid_accept_rate": 1.0,
+      "e137_chosen_default_local_accept_rate": 1.0,
+      "e137_chosen_default_local_invalid_accept_rate": 1.0,
+      "e137_chosen_default_local_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 0.8,
+      "e137_chosen_strict_any_wrong_step_global_invalid_accept_rate": 0.6666666666666666,
+      "e137_chosen_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 0.8,
+      "e137_chosen_strict_any_wrong_step_local_invalid_accept_rate": 0.6666666666666666,
+      "e137_chosen_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "e137_chosen_trigger_rate": 0.6,
+      "n": 5,
+      "slice": "self_check",
+      "slice_type": "prompt_variant",
+      "strict_invalid_n": 3,
+      "strict_valid_n": 2,
+      "zero_default_global_accept_rate": 1.0,
+      "zero_default_global_invalid_accept_rate": 1.0,
+      "zero_default_global_valid_accept_rate": 1.0,
+      "zero_default_local_accept_rate": 1.0,
+      "zero_default_local_invalid_accept_rate": 1.0,
+      "zero_default_local_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_accept_rate": 0.8,
+      "zero_strict_any_wrong_step_global_invalid_accept_rate": 0.6666666666666666,
+      "zero_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_accept_rate": 0.8,
+      "zero_strict_any_wrong_step_local_invalid_accept_rate": 0.6666666666666666,
+      "zero_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "zero_trigger_rate": 0.8
+    },
+    {
+      "base_accept_rate": 0.8,
+      "base_invalid_accept_rate": 0.5,
+      "base_valid_accept_rate": 1.0,
+      "e137_chosen_default_global_accept_rate": 1.0,
+      "e137_chosen_default_global_invalid_accept_rate": 1.0,
+      "e137_chosen_default_global_valid_accept_rate": 1.0,
+      "e137_chosen_default_local_accept_rate": 1.0,
+      "e137_chosen_default_local_invalid_accept_rate": 1.0,
+      "e137_chosen_default_local_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 0.8,
+      "e137_chosen_strict_any_wrong_step_global_invalid_accept_rate": 0.5,
+      "e137_chosen_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 0.8,
+      "e137_chosen_strict_any_wrong_step_local_invalid_accept_rate": 0.5,
+      "e137_chosen_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "e137_chosen_trigger_rate": 0.3,
+      "n": 10,
+      "slice": "E119_uniform_legacy_baseline",
+      "slice_type": "run_id",
+      "strict_invalid_n": 4,
+      "strict_valid_n": 6,
+      "zero_default_global_accept_rate": 1.0,
+      "zero_default_global_invalid_accept_rate": 1.0,
+      "zero_default_global_valid_accept_rate": 1.0,
+      "zero_default_local_accept_rate": 1.0,
+      "zero_default_local_invalid_accept_rate": 1.0,
+      "zero_default_local_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_accept_rate": 0.8,
+      "zero_strict_any_wrong_step_global_invalid_accept_rate": 0.5,
+      "zero_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_accept_rate": 0.7,
+      "zero_strict_any_wrong_step_local_invalid_accept_rate": 0.5,
+      "zero_strict_any_wrong_step_local_valid_accept_rate": 0.8333333333333334,
+      "zero_trigger_rate": 0.8
+    },
+    {
+      "base_accept_rate": 0.6666666666666666,
+      "base_invalid_accept_rate": 0.6666666666666666,
+      "base_valid_accept_rate": null,
+      "e137_chosen_default_global_accept_rate": 0.8333333333333334,
+      "e137_chosen_default_global_invalid_accept_rate": 0.8333333333333334,
+      "e137_chosen_default_local_accept_rate": 1.0,
+      "e137_chosen_default_local_invalid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 0.6666666666666666,
+      "e137_chosen_strict_any_wrong_step_global_invalid_accept_rate": 0.6666666666666666,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 0.5,
+      "e137_chosen_strict_any_wrong_step_local_invalid_accept_rate": 0.5,
+      "e137_chosen_trigger_rate": 0.8333333333333334,
+      "n": 6,
+      "slice": "E146_model_card_hf_profile",
+      "slice_type": "run_id",
+      "strict_invalid_n": 6,
+      "strict_valid_n": 0,
+      "zero_default_global_accept_rate": 0.8333333333333334,
+      "zero_default_global_invalid_accept_rate": 0.8333333333333334,
+      "zero_default_local_accept_rate": 1.0,
+      "zero_default_local_invalid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_accept_rate": 0.6666666666666666,
+      "zero_strict_any_wrong_step_global_invalid_accept_rate": 0.6666666666666666,
+      "zero_strict_any_wrong_step_local_accept_rate": 0.5,
+      "zero_strict_any_wrong_step_local_invalid_accept_rate": 0.5,
+      "zero_trigger_rate": 1.0
+    },
+    {
+      "base_accept_rate": 0.6666666666666666,
+      "base_invalid_accept_rate": 0.6666666666666666,
+      "base_valid_accept_rate": null,
+      "e137_chosen_default_global_accept_rate": 0.8333333333333334,
+      "e137_chosen_default_global_invalid_accept_rate": 0.8333333333333334,
+      "e137_chosen_default_local_accept_rate": 1.0,
+      "e137_chosen_default_local_invalid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 0.6666666666666666,
+      "e137_chosen_strict_any_wrong_step_global_invalid_accept_rate": 0.6666666666666666,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 0.5,
+      "e137_chosen_strict_any_wrong_step_local_invalid_accept_rate": 0.5,
+      "e137_chosen_trigger_rate": 0.8333333333333334,
+      "n": 6,
+      "slice": "NG_model_card_hf_profile",
+      "slice_type": "sampling_profile",
+      "strict_invalid_n": 6,
+      "strict_valid_n": 0,
+      "zero_default_global_accept_rate": 0.8333333333333334,
+      "zero_default_global_invalid_accept_rate": 0.8333333333333334,
+      "zero_default_local_accept_rate": 1.0,
+      "zero_default_local_invalid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_accept_rate": 0.6666666666666666,
+      "zero_strict_any_wrong_step_global_invalid_accept_rate": 0.6666666666666666,
+      "zero_strict_any_wrong_step_local_accept_rate": 0.5,
+      "zero_strict_any_wrong_step_local_invalid_accept_rate": 0.5,
+      "zero_trigger_rate": 1.0
+    },
+    {
+      "base_accept_rate": 0.8,
+      "base_invalid_accept_rate": 0.5,
+      "base_valid_accept_rate": 1.0,
+      "e137_chosen_default_global_accept_rate": 1.0,
+      "e137_chosen_default_global_invalid_accept_rate": 1.0,
+      "e137_chosen_default_global_valid_accept_rate": 1.0,
+      "e137_chosen_default_local_accept_rate": 1.0,
+      "e137_chosen_default_local_invalid_accept_rate": 1.0,
+      "e137_chosen_default_local_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 0.8,
+      "e137_chosen_strict_any_wrong_step_global_invalid_accept_rate": 0.5,
+      "e137_chosen_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 0.8,
+      "e137_chosen_strict_any_wrong_step_local_invalid_accept_rate": 0.5,
+      "e137_chosen_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "e137_chosen_trigger_rate": 0.3,
+      "n": 10,
+      "slice": "NG_uniform_legacy_baseline",
+      "slice_type": "sampling_profile",
+      "strict_invalid_n": 4,
+      "strict_valid_n": 6,
+      "zero_default_global_accept_rate": 1.0,
+      "zero_default_global_invalid_accept_rate": 1.0,
+      "zero_default_global_valid_accept_rate": 1.0,
+      "zero_default_local_accept_rate": 1.0,
+      "zero_default_local_invalid_accept_rate": 1.0,
+      "zero_default_local_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_accept_rate": 0.8,
+      "zero_strict_any_wrong_step_global_invalid_accept_rate": 0.5,
+      "zero_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_accept_rate": 0.7,
+      "zero_strict_any_wrong_step_local_invalid_accept_rate": 0.5,
+      "zero_strict_any_wrong_step_local_valid_accept_rate": 0.8333333333333334,
+      "zero_trigger_rate": 0.8
+    },
+    {
+      "base_accept_rate": 0.5714285714285714,
+      "base_invalid_accept_rate": 0.5714285714285714,
+      "base_valid_accept_rate": null,
+      "e137_chosen_default_global_accept_rate": 1.0,
+      "e137_chosen_default_global_invalid_accept_rate": 1.0,
+      "e137_chosen_default_local_accept_rate": 1.0,
+      "e137_chosen_default_local_invalid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 0.5714285714285714,
+      "e137_chosen_strict_any_wrong_step_global_invalid_accept_rate": 0.5714285714285714,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 0.42857142857142855,
+      "e137_chosen_strict_any_wrong_step_local_invalid_accept_rate": 0.42857142857142855,
+      "e137_chosen_trigger_rate": 1.0,
+      "n": 7,
+      "slice": "aime25_geometry_reflection_p2",
+      "slice_type": "task_id",
+      "strict_invalid_n": 7,
+      "strict_valid_n": 0,
+      "zero_default_global_accept_rate": 1.0,
+      "zero_default_global_invalid_accept_rate": 1.0,
+      "zero_default_local_accept_rate": 1.0,
+      "zero_default_local_invalid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_accept_rate": 0.5714285714285714,
+      "zero_strict_any_wrong_step_global_invalid_accept_rate": 0.5714285714285714,
+      "zero_strict_any_wrong_step_local_accept_rate": 0.42857142857142855,
+      "zero_strict_any_wrong_step_local_invalid_accept_rate": 0.42857142857142855,
+      "zero_trigger_rate": 1.0
+    },
+    {
+      "base_accept_rate": 1.0,
+      "base_invalid_accept_rate": 1.0,
+      "base_valid_accept_rate": 1.0,
+      "e137_chosen_default_global_accept_rate": 1.0,
+      "e137_chosen_default_global_invalid_accept_rate": 1.0,
+      "e137_chosen_default_global_valid_accept_rate": 1.0,
+      "e137_chosen_default_local_accept_rate": 1.0,
+      "e137_chosen_default_local_invalid_accept_rate": 1.0,
+      "e137_chosen_default_local_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_invalid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_invalid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "e137_chosen_trigger_rate": 0.0,
+      "n": 5,
+      "slice": "aime25_integer_pairs_quad_p4",
+      "slice_type": "task_id",
+      "strict_invalid_n": 2,
+      "strict_valid_n": 3,
+      "zero_default_global_accept_rate": 1.0,
+      "zero_default_global_invalid_accept_rate": 1.0,
+      "zero_default_global_valid_accept_rate": 1.0,
+      "zero_default_local_accept_rate": 1.0,
+      "zero_default_local_invalid_accept_rate": 1.0,
+      "zero_default_local_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_invalid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_invalid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "zero_trigger_rate": 0.8
+    },
+    {
+      "base_accept_rate": 0.75,
+      "base_invalid_accept_rate": 0.0,
+      "base_valid_accept_rate": 1.0,
+      "e137_chosen_default_global_accept_rate": 0.75,
+      "e137_chosen_default_global_invalid_accept_rate": 0.0,
+      "e137_chosen_default_global_valid_accept_rate": 1.0,
+      "e137_chosen_default_local_accept_rate": 1.0,
+      "e137_chosen_default_local_invalid_accept_rate": 1.0,
+      "e137_chosen_default_local_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 0.75,
+      "e137_chosen_strict_any_wrong_step_global_invalid_accept_rate": 0.0,
+      "e137_chosen_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 0.75,
+      "e137_chosen_strict_any_wrong_step_local_invalid_accept_rate": 0.0,
+      "e137_chosen_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "e137_chosen_trigger_rate": 0.25,
+      "n": 4,
+      "slice": "aime25_perm_div22_p5",
+      "slice_type": "task_id",
+      "strict_invalid_n": 1,
+      "strict_valid_n": 3,
+      "zero_default_global_accept_rate": 0.75,
+      "zero_default_global_invalid_accept_rate": 0.0,
+      "zero_default_global_valid_accept_rate": 1.0,
+      "zero_default_local_accept_rate": 1.0,
+      "zero_default_local_invalid_accept_rate": 1.0,
+      "zero_default_local_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_accept_rate": 0.75,
+      "zero_strict_any_wrong_step_global_invalid_accept_rate": 0.0,
+      "zero_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_accept_rate": 0.5,
+      "zero_strict_any_wrong_step_local_invalid_accept_rate": 0.0,
+      "zero_strict_any_wrong_step_local_valid_accept_rate": 0.6666666666666666,
+      "zero_trigger_rate": 0.75
+    },
+    {
+      "base_accept_rate": 0.5,
+      "base_invalid_accept_rate": 0.5,
+      "base_valid_accept_rate": null,
+      "e137_chosen_default_global_accept_rate": 0.875,
+      "e137_chosen_default_global_invalid_accept_rate": 0.875,
+      "e137_chosen_default_local_accept_rate": 1.0,
+      "e137_chosen_default_local_invalid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 0.5,
+      "e137_chosen_strict_any_wrong_step_global_invalid_accept_rate": 0.5,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 0.375,
+      "e137_chosen_strict_any_wrong_step_local_invalid_accept_rate": 0.375,
+      "e137_chosen_trigger_rate": 1.0,
+      "n": 8,
+      "slice": "repaired_acpi",
+      "slice_type": "trace_class",
+      "strict_invalid_n": 8,
+      "strict_valid_n": 0,
+      "zero_default_global_accept_rate": 0.875,
+      "zero_default_global_invalid_accept_rate": 0.875,
+      "zero_default_local_accept_rate": 1.0,
+      "zero_default_local_invalid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_accept_rate": 0.5,
+      "zero_strict_any_wrong_step_global_invalid_accept_rate": 0.5,
+      "zero_strict_any_wrong_step_local_accept_rate": 0.375,
+      "zero_strict_any_wrong_step_local_invalid_accept_rate": 0.375,
+      "zero_trigger_rate": 1.0
+    },
+    {
+      "base_accept_rate": 1.0,
+      "base_invalid_accept_rate": null,
+      "base_valid_accept_rate": 1.0,
+      "e137_chosen_default_global_accept_rate": 1.0,
+      "e137_chosen_default_global_valid_accept_rate": 1.0,
+      "e137_chosen_default_local_accept_rate": 1.0,
+      "e137_chosen_default_local_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_valid_accept_rate": 1.0,
+      "e137_chosen_trigger_rate": 0.0,
+      "n": 6,
+      "slice": "strict_valid",
+      "slice_type": "trace_class",
+      "strict_invalid_n": 0,
+      "strict_valid_n": 6,
+      "zero_default_global_accept_rate": 1.0,
+      "zero_default_global_valid_accept_rate": 1.0,
+      "zero_default_local_accept_rate": 1.0,
+      "zero_default_local_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_valid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_accept_rate": 0.8333333333333334,
+      "zero_strict_any_wrong_step_local_valid_accept_rate": 0.8333333333333334,
+      "zero_trigger_rate": 0.6666666666666666
+    },
+    {
+      "base_accept_rate": 1.0,
+      "base_invalid_accept_rate": 1.0,
+      "base_valid_accept_rate": null,
+      "e137_chosen_default_global_accept_rate": 1.0,
+      "e137_chosen_default_global_invalid_accept_rate": 1.0,
+      "e137_chosen_default_local_accept_rate": 1.0,
+      "e137_chosen_default_local_invalid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_global_invalid_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_accept_rate": 1.0,
+      "e137_chosen_strict_any_wrong_step_local_invalid_accept_rate": 1.0,
+      "e137_chosen_trigger_rate": 0.0,
+      "n": 2,
+      "slice": "unrepaired_acpi",
+      "slice_type": "trace_class",
+      "strict_invalid_n": 2,
+      "strict_valid_n": 0,
+      "zero_default_global_accept_rate": 1.0,
+      "zero_default_global_invalid_accept_rate": 1.0,
+      "zero_default_local_accept_rate": 1.0,
+      "zero_default_local_invalid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_global_invalid_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_accept_rate": 1.0,
+      "zero_strict_any_wrong_step_local_invalid_accept_rate": 1.0,
+      "zero_trigger_rate": 1.0
+    }
+  ],
+  "thresholds": {
+    "e137_chosen": -4.1925506591796875,
+    "zero": 0.0
+  },
+  "used_chat_template": true
+}

@@ -1,0 +1,1663 @@
+{
+  "args": {
+    "chat_template": "auto",
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "k": 2,
+    "max_new_tokens": 320,
+    "max_tasks": 24,
+    "model_key": "gemma4_e4b_it",
+    "out_dir": "data/raw/e30_non_discount_lexical_grid_trace_pool",
+    "out_suffix": "e30_non_discount",
+    "prompt_style": "concise",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "routes": "zh->zh,zh->en",
+    "seed": 2026042731,
+    "tasks_yaml": "configs/e30_non_discount_lexical_grid.yaml",
+    "temperature": 0.85,
+    "top_p": 0.95
+  },
+  "model_spec": {
+    "class": "instruct",
+    "family": "gemma",
+    "notes": "downloaded via HF mirror on 2026-04-27; current Google small open model control; may require newer transformers or multimodal text loader",
+    "path": "/home/Awei/LLM/Model/base/gemma4_e4b_it",
+    "priority": "P0",
+    "remote_repo": "google/gemma-4-E4B-it",
+    "status": "local_downloaded"
+  },
+  "rows": [
+    {
+      "completion": "设男生人数为 $2x$，女生人数为 $3x$。\n已知男生和女生的人数比为 $2:3$，所以设人数分别为 $2x$ 和 $3x$。\n已知社团共有 30 名学生，所以 $2x + 3x = 30$。\n合并同类项得 $5x = 30$。\n解得 $x = \\frac{30}{5} = 6$。\n男生人数为 $2x$，代入 $x=6$ 得 $2 \\times 6 = 12$ 名。\n女生人数为 $3x$，代入 $x=6$ 得 $3 \\times 6 = 18$ 名。\n检查总人数：$12 + 18 = 30$ 名，符合题意。\n\nFinal answer: 12",
+      "created_at": "2026-04-27T19:35:26",
+      "gold_answer": "12",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n一个社团里男生和女生的人数比是2:3。如果社团共有30名学生，男生有多少名？<turn|>\n<|turn>model\n",
+      "raw_completion": "设男生人数为 $2x$，女生人数为 $3x$。\n已知男生和女生的人数比为 $2:3$，所以设人数分别为 $2x$ 和 $3x$。\n已知社团共有 30 名学生，所以 $2x + 3x = 30$。\n合并同类项得 $5x = 30$。\n解得 $x = \\frac{30}{5} = 6$。\n男生人数为 $2x$，代入 $x=6$ 得 $2 \\times 6 = 12$ 名。\n女生人数为 $3x$，代入 $x=6$ 得 $3 \\times 6 = 18$ 名。\n检查总人数：$12 + 18 = 30$ 名，符合题意。\n\nFinal answer: 12",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "ratio_boys_girls_2_3",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "设男生人数为 $2x$，女生人数为 $3x$。\n根据题意，男生和女生的人数比为 $2:3$，所以设 $2x$ 和 $3x$。\n社团共有 30 名学生，因此 $2x + 3x = 30$。\n合并同类项，得到 $5x = 30$。\n解得 $x = 30 / 5 = 6$。\n男生人数为 $2x$，代入 $x=6$，得到 $2 \\times 6 = 12$。\n女生人数为 $3x$，代入 $x=6$，得到 $3 \\times 6 = 18$。\n检查总人数：$12 + 18 = 30$，符合题意。\n男生人数是 12 名。\n\nFinal answer: 12",
+      "created_at": "2026-04-27T19:35:31",
+      "gold_answer": "12",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n一个社团里男生和女生的人数比是2:3。如果社团共有30名学生，男生有多少名？<turn|>\n<|turn>model\n",
+      "raw_completion": "设男生人数为 $2x$，女生人数为 $3x$。\n根据题意，男生和女生的人数比为 $2:3$，所以设 $2x$ 和 $3x$。\n社团共有 30 名学生，因此 $2x + 3x = 30$。\n合并同类项，得到 $5x = 30$。\n解得 $x = 30 / 5 = 6$。\n男生人数为 $2x$，代入 $x=6$，得到 $2 \\times 6 = 12$。\n女生人数为 $3x$，代入 $x=6$，得到 $3 \\times 6 = 18$。\n检查总人数：$12 + 18 = 30$，符合题意。\n男生人数是 12 名。\n\nFinal answer: 12",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "ratio_boys_girls_2_3",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "Let $B$ be the number of boys and $G$ be the number of girls.\nThe ratio of boys to girls is $B:G = 2:3$.\nThe total number of students is $B + G = 30$.\nThe total parts in the ratio is $2 + 3 = 5$ parts.\nThe value of one part is the total students divided by the total parts: $30 / 5 = 6$ students per part.\nThe number of boys is 2 parts: $2 \\times 6 = 12$.\nThe number of girls is 3 parts: $3 \\times 6 = 18$.\nCheck the total: $12 + 18 = 30$.\n\nFinal answer: 12",
+      "created_at": "2026-04-27T19:35:36",
+      "gold_answer": "12",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一个社团里男生和女生的人数比是2:3。如果社团共有30名学生，男生有多少名？<turn|>\n<|turn>model\n",
+      "raw_completion": "Let $B$ be the number of boys and $G$ be the number of girls.\nThe ratio of boys to girls is $B:G = 2:3$.\nThe total number of students is $B + G = 30$.\nThe total parts in the ratio is $2 + 3 = 5$ parts.\nThe value of one part is the total students divided by the total parts: $30 / 5 = 6$ students per part.\nThe number of boys is 2 parts: $2 \\times 6 = 12$.\nThe number of girls is 3 parts: $3 \\times 6 = 18$.\nCheck the total: $12 + 18 = 30$.\n\nFinal answer: 12",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "ratio_boys_girls_2_3",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The ratio of boys to girls is 2:3.\nThe total number of parts in the ratio is $2 + 3 = 5$.\nThe total number of students is 30.\nThe value of one part is the total students divided by the total parts: $30 / 5 = 6$.\nThe number of boys corresponds to 2 parts of the ratio.\nNumber of boys = $2 \\times 6 = 12$.\nThe number of girls would be $3 \\times 6 = 18$.\nCheck: $12 + 18 = 30$.\nThe question asks for the number of boys.\n\nFinal answer: 12",
+      "created_at": "2026-04-27T19:35:40",
+      "gold_answer": "12",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一个社团里男生和女生的人数比是2:3。如果社团共有30名学生，男生有多少名？<turn|>\n<|turn>model\n",
+      "raw_completion": "The ratio of boys to girls is 2:3.\nThe total number of parts in the ratio is $2 + 3 = 5$.\nThe total number of students is 30.\nThe value of one part is the total students divided by the total parts: $30 / 5 = 6$.\nThe number of boys corresponds to 2 parts of the ratio.\nNumber of boys = $2 \\times 6 = 12$.\nThe number of girls would be $3 \\times 6 = 18$.\nCheck: $12 + 18 = 30$.\nThe question asks for the number of boys.\n\nFinal answer: 12",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "ratio_boys_girls_2_3",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "总人数为 30 名。\n男生占总人数的 $\\frac{2}{3}$。\n要计算男生人数，需要将总人数乘以男生所占的比例。\n男生人数 = 总人数 $\\times$ 男生比例\n男生人数 = $30 \\times \\frac{2}{3}$\n男生人数 = $\\frac{30 \\times 2}{3}$\n男生人数 = $\\frac{60}{3}$\n男生人数 = $20$ 名。\n\nFinal answer: 20",
+      "created_at": "2026-04-27T19:35:43",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n一个社团里男生占总人数的2/3。如果社团共有30名学生，男生有多少名？<turn|>\n<|turn>model\n",
+      "raw_completion": "总人数为 30 名。\n男生占总人数的 $\\frac{2}{3}$。\n要计算男生人数，需要将总人数乘以男生所占的比例。\n男生人数 = 总人数 $\\times$ 男生比例\n男生人数 = $30 \\times \\frac{2}{3}$\n男生人数 = $\\frac{30 \\times 2}{3}$\n男生人数 = $\\frac{60}{3}$\n男生人数 = $20$ 名。\n\nFinal answer: 20",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "ratio_boys_total_2_3",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "已知社团总人数为 30 名。\n已知男生占总人数的 $\\frac{2}{3}$。\n要计算男生人数，需要将总人数乘以男生所占的比例。\n男生人数 = 总人数 $\\times$ 男生比例\n男生人数 = $30 \\times \\frac{2}{3}$\n可以先计算 $30$ 除以 $3$，得到 $10$。\n然后将 $10$ 乘以 $2$。\n男生人数 = $10 \\times 2 = 20$。\n\nFinal answer: 20",
+      "created_at": "2026-04-27T19:35:46",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n一个社团里男生占总人数的2/3。如果社团共有30名学生，男生有多少名？<turn|>\n<|turn>model\n",
+      "raw_completion": "已知社团总人数为 30 名。\n已知男生占总人数的 $\\frac{2}{3}$。\n要计算男生人数，需要将总人数乘以男生所占的比例。\n男生人数 = 总人数 $\\times$ 男生比例\n男生人数 = $30 \\times \\frac{2}{3}$\n可以先计算 $30$ 除以 $3$，得到 $10$。\n然后将 $10$ 乘以 $2$。\n男生人数 = $10 \\times 2 = 20$。\n\nFinal answer: 20",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "ratio_boys_total_2_3",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "Total students in the club is 30.\nThe fraction of male students is 2/3.\nTo find the number of male students, multiply the total number of students by the fraction of males.\nNumber of male students = Total students $\\times$ Fraction of male students.\nNumber of male students = $30 \\times \\frac{2}{3}$.\n$30 \\times \\frac{2}{3} = \\frac{30 \\times 2}{3}$.\n$\\frac{60}{3} = 20$.\nThere are 20 male students in the club.\n\nFinal answer: 20",
+      "created_at": "2026-04-27T19:35:50",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一个社团里男生占总人数的2/3。如果社团共有30名学生，男生有多少名？<turn|>\n<|turn>model\n",
+      "raw_completion": "Total students in the club is 30.\nThe fraction of male students is 2/3.\nTo find the number of male students, multiply the total number of students by the fraction of males.\nNumber of male students = Total students $\\times$ Fraction of male students.\nNumber of male students = $30 \\times \\frac{2}{3}$.\n$30 \\times \\frac{2}{3} = \\frac{30 \\times 2}{3}$.\n$\\frac{60}{3} = 20$.\nThere are 20 male students in the club.\n\nFinal answer: 20",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "ratio_boys_total_2_3",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "Total students in the club is 30.\nThe fraction of male students is 2/3.\nTo find the number of male students, multiply the total number of students by the fraction of male students.\nNumber of boys = Total students $\\times$ Fraction of boys.\nNumber of boys = $30 \\times \\frac{2}{3}$.\nCalculate the result: $30 \\div 3 = 10$.\nThen multiply by 2: $10 \\times 2 = 20$.\nThere are 20 male students in the club.\n\nFinal answer: 20",
+      "created_at": "2026-04-27T19:35:54",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一个社团里男生占总人数的2/3。如果社团共有30名学生，男生有多少名？<turn|>\n<|turn>model\n",
+      "raw_completion": "Total students in the club is 30.\nThe fraction of male students is 2/3.\nTo find the number of male students, multiply the total number of students by the fraction of male students.\nNumber of boys = Total students $\\times$ Fraction of boys.\nNumber of boys = $30 \\times \\frac{2}{3}$.\nCalculate the result: $30 \\div 3 = 10$.\nThen multiply by 2: $10 \\times 2 = 20$.\nThere are 20 male students in the club.\n\nFinal answer: 20",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "ratio_boys_total_2_3",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "已知男生和女生的比例是 2:3。\n已知社团中有 12 名男生。\n设男生人数为 $2x$，女生人数为 $3x$。\n根据已知条件， $2x = 12$。\n解得 $x = 12 / 2 = 6$。\n计算女生人数：$3x = 3 \\times 6 = 18$ 名。\n计算社团总人数：男生人数 + 女生人数 = $12 + 18 = 30$ 名。\n\nFinal answer: 30",
+      "created_at": "2026-04-27T19:35:57",
+      "gold_answer": "30",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n一个社团里男生和女生的人数比是2:3。如果有12名男生，社团共有多少名学生？<turn|>\n<|turn>model\n",
+      "raw_completion": "已知男生和女生的比例是 2:3。\n已知社团中有 12 名男生。\n设男生人数为 $2x$，女生人数为 $3x$。\n根据已知条件， $2x = 12$。\n解得 $x = 12 / 2 = 6$。\n计算女生人数：$3x = 3 \\times 6 = 18$ 名。\n计算社团总人数：男生人数 + 女生人数 = $12 + 18 = 30$ 名。\n\nFinal answer: 30",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "ratio_boys_girls_same_answer",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "已知男生和女生的人数比为 $2:3$。\n设男生人数为 $2x$，女生人数为 $3x$。\n已知男生人数为 $12$ 名，所以 $2x = 12$。\n解得 $x = 12 / 2 = 6$。\n女生人数为 $3x = 3 \\times 6 = 18$ 名。\n社团共有学生人数 $=$ 男生人数 $+$ 女生人数。\n总人数 $= 12 + 18 = 30$ 名。\n\nFinal answer: 30",
+      "created_at": "2026-04-27T19:36:01",
+      "gold_answer": "30",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n一个社团里男生和女生的人数比是2:3。如果有12名男生，社团共有多少名学生？<turn|>\n<|turn>model\n",
+      "raw_completion": "已知男生和女生的人数比为 $2:3$。\n设男生人数为 $2x$，女生人数为 $3x$。\n已知男生人数为 $12$ 名，所以 $2x = 12$。\n解得 $x = 12 / 2 = 6$。\n女生人数为 $3x = 3 \\times 6 = 18$ 名。\n社团共有学生人数 $=$ 男生人数 $+$ 女生人数。\n总人数 $= 12 + 18 = 30$ 名。\n\nFinal answer: 30",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "ratio_boys_girls_same_answer",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The ratio of boys to girls is 2:3.\nLet $B$ be the number of boys and $G$ be the number of girls.\nWe have the ratio $B/G = 2/3$.\nWe are given that the number of boys, $B$, is 12.\nSubstitute $B=12$ into the ratio equation: $12/G = 2/3$.\nCross-multiply to solve for $G$: $2G = 12 \\times 3$.\n$2G = 36$.\n$G = 36 / 2$.\n$G = 18$.\nThe total number of students is the sum of boys and girls: Total $= B + G$.\nTotal $= 12 + 18$.\nTotal $= 30$.\n\nFinal answer: 30",
+      "created_at": "2026-04-27T19:36:06",
+      "gold_answer": "30",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一个社团里男生和女生的人数比是2:3。如果有12名男生，社团共有多少名学生？<turn|>\n<|turn>model\n",
+      "raw_completion": "The ratio of boys to girls is 2:3.\nLet $B$ be the number of boys and $G$ be the number of girls.\nWe have the ratio $B/G = 2/3$.\nWe are given that the number of boys, $B$, is 12.\nSubstitute $B=12$ into the ratio equation: $12/G = 2/3$.\nCross-multiply to solve for $G$: $2G = 12 \\times 3$.\n$2G = 36$.\n$G = 36 / 2$.\n$G = 18$.\nThe total number of students is the sum of boys and girls: Total $= B + G$.\nTotal $= 12 + 18$.\nTotal $= 30$.\n\nFinal answer: 30",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "ratio_boys_girls_same_answer",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The ratio of boys to girls is 2:3.\nLet $B$ be the number of boys and $G$ be the number of girls.\nWe have $\\frac{B}{G} = \\frac{2}{3}$.\nWe are given that the number of boys ($B$) is 12.\nSubstitute $B=12$ into the ratio equation: $\\frac{12}{G} = \\frac{2}{3}$.\nCross-multiply to solve for $G$: $2G = 12 \\times 3$.\n$2G = 36$.\n$G = \\frac{36}{2}$.\n$G = 18$.\nThe total number of students is $B + G$.\nTotal students = $12 + 18$.\nTotal students = 30.\n\nFinal answer: 30",
+      "created_at": "2026-04-27T19:36:11",
+      "gold_answer": "30",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一个社团里男生和女生的人数比是2:3。如果有12名男生，社团共有多少名学生？<turn|>\n<|turn>model\n",
+      "raw_completion": "The ratio of boys to girls is 2:3.\nLet $B$ be the number of boys and $G$ be the number of girls.\nWe have $\\frac{B}{G} = \\frac{2}{3}$.\nWe are given that the number of boys ($B$) is 12.\nSubstitute $B=12$ into the ratio equation: $\\frac{12}{G} = \\frac{2}{3}$.\nCross-multiply to solve for $G$: $2G = 12 \\times 3$.\n$2G = 36$.\n$G = \\frac{36}{2}$.\n$G = 18$.\nThe total number of students is $B + G$.\nTotal students = $12 + 18$.\nTotal students = 30.\n\nFinal answer: 30",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "ratio_boys_girls_same_answer",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "大于3的整数是 $4, 5, 6, 7, \\dots$\n小于等于7的整数是 $\\dots, 5, 6, 7$\n同时满足条件的整数是 $4, 5, 6, 7$。\n这些整数个数为 4 个。\n\nFinal answer: 4",
+      "created_at": "2026-04-27T19:36:13",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n列出大于3且小于等于7的整数。一共有多少个？<turn|>\n<|turn>model\n",
+      "raw_completion": "大于3的整数是 $4, 5, 6, 7, \\dots$\n小于等于7的整数是 $\\dots, 5, 6, 7$\n同时满足条件的整数是 $4, 5, 6, 7$。\n这些整数个数为 4 个。\n\nFinal answer: 4",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "inequality_more_than",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "大于3的整数是从4开始的。\n小于等于7的整数到7结束。\n需要列出的整数是4, 5, 6, 7。\n数一数这些整数的数量。\n共有4个整数。\n\nFinal answer: 4",
+      "created_at": "2026-04-27T19:36:15",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n列出大于3且小于等于7的整数。一共有多少个？<turn|>\n<|turn>model\n",
+      "raw_completion": "大于3的整数是从4开始的。\n小于等于7的整数到7结束。\n需要列出的整数是4, 5, 6, 7。\n数一数这些整数的数量。\n共有4个整数。\n\nFinal answer: 4",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "inequality_more_than",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The integers must be greater than 3.\nThe integers must be less than or equal to 7.\nThe possible integers are 4, 5, 6, and 7.\nCounting these integers gives the total number.\nThere are four such integers.\n\nFinal answer: 4",
+      "created_at": "2026-04-27T19:36:17",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n列出大于3且小于等于7的整数。一共有多少个？<turn|>\n<|turn>model\n",
+      "raw_completion": "The integers must be greater than 3.\nThe integers must be less than or equal to 7.\nThe possible integers are 4, 5, 6, and 7.\nCounting these integers gives the total number.\nThere are four such integers.\n\nFinal answer: 4",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "inequality_more_than",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The integers greater than 3 are 4, 5, 6, 7, ...\nThe integers less than or equal to 7 are ..., 5, 6, 7.\nWe are looking for integers $x$ such that $3 < x \\le 7$.\nThe integers satisfying this condition are 4, 5, 6, and 7.\nCounting these integers:\nThere is 4.\nThere is 5.\nThere is 6.\nThere is 7.\nThe total count is 4.\n\nFinal answer: 4",
+      "created_at": "2026-04-27T19:36:20",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n列出大于3且小于等于7的整数。一共有多少个？<turn|>\n<|turn>model\n",
+      "raw_completion": "The integers greater than 3 are 4, 5, 6, 7, ...\nThe integers less than or equal to 7 are ..., 5, 6, 7.\nWe are looking for integers $x$ such that $3 < x \\le 7$.\nThe integers satisfying this condition are 4, 5, 6, and 7.\nCounting these integers:\nThere is 4.\nThere is 5.\nThere is 6.\nThere is 7.\nThe total count is 4.\n\nFinal answer: 4",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "inequality_more_than",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1. 找出所有大于或等于 3 的整数。\n2. 找出所有小于 7 的整数。\n3. 寻找同时满足这两个条件的整数。\n4. 这些整数是 3, 4, 5, 6。\n5. 统计这些整数的数量。\n6. 共有 4 个这样的整数。\n\nFinal answer: 4",
+      "created_at": "2026-04-27T19:36:22",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n列出至少为3且小于7的整数。一共有多少个？<turn|>\n<|turn>model\n",
+      "raw_completion": "1. 找出所有大于或等于 3 的整数。\n2. 找出所有小于 7 的整数。\n3. 寻找同时满足这两个条件的整数。\n4. 这些整数是 3, 4, 5, 6。\n5. 统计这些整数的数量。\n6. 共有 4 个这样的整数。\n\nFinal answer: 4",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "inequality_at_least",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1.  确定要求的整数范围：整数必须大于或等于 3，并且小于 7。\n2.  列出所有符合条件的整数：这些整数是 3, 4, 5, 和 6。\n3.  计算符合条件的整数个数：将列表中的元素数量进行计数。\n4.  结果为 4。\n\nFinal answer: 4",
+      "created_at": "2026-04-27T19:36:25",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n列出至少为3且小于7的整数。一共有多少个？<turn|>\n<|turn>model\n",
+      "raw_completion": "1.  确定要求的整数范围：整数必须大于或等于 3，并且小于 7。\n2.  列出所有符合条件的整数：这些整数是 3, 4, 5, 和 6。\n3.  计算符合条件的整数个数：将列表中的元素数量进行计数。\n4.  结果为 4。\n\nFinal answer: 4",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "inequality_at_least",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The condition is that the integers must be greater than or equal to 3.\nThe second condition is that the integers must be less than 7.\nPossible integers satisfying $x \\ge 3$ and $x < 7$ are $3, 4, 5, 6$.\nThe integers listed are 3, 4, 5, and 6.\nTo find the total count, we count these integers.\nThere are four integers in this set.\n\nFinal answer: 4",
+      "created_at": "2026-04-27T19:36:28",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n列出至少为3且小于7的整数。一共有多少个？<turn|>\n<|turn>model\n",
+      "raw_completion": "The condition is that the integers must be greater than or equal to 3.\nThe second condition is that the integers must be less than 7.\nPossible integers satisfying $x \\ge 3$ and $x < 7$ are $3, 4, 5, 6$.\nThe integers listed are 3, 4, 5, and 6.\nTo find the total count, we count these integers.\nThere are four integers in this set.\n\nFinal answer: 4",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "inequality_at_least",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The requirement is to list integers that are greater than or equal to 3 and strictly less than 7.\nThe integers must satisfy $3 \\le x < 7$.\nListing these integers gives: 3, 4, 5, and 6.\nThe next integer, 7, is not less than 7.\nCounting the listed integers: There are four integers.\n\nFinal answer: 4",
+      "created_at": "2026-04-27T19:36:30",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n列出至少为3且小于7的整数。一共有多少个？<turn|>\n<|turn>model\n",
+      "raw_completion": "The requirement is to list integers that are greater than or equal to 3 and strictly less than 7.\nThe integers must satisfy $3 \\le x < 7$.\nListing these integers gives: 3, 4, 5, and 6.\nThe next integer, 7, is not less than 7.\nCounting the listed integers: There are four integers.\n\nFinal answer: 4",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "inequality_at_least",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "该数是一个整数，满足条件大于 3 且不超过 7。\n数学表达式为 $3 < \\text{数} \\le 7$。\n满足此条件的整数是大于 3 的最小整数，即 4。\n满足此条件的整数是小于或等于 7 的最大整数，即 7。\n因此，可能的取值集合是 $\\{4, 5, 6, 7\\}$。\n计算集合中的元素个数即为可能的取值数量。\n集合 $\\{4, 5, 6, 7\\}$ 包含 4 个元素。\n\nFinal answer: 4",
+      "created_at": "2026-04-27T19:36:34",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n一个数是大于3且不超过7的整数。它有多少个可能取值？<turn|>\n<|turn>model\n",
+      "raw_completion": "该数是一个整数，满足条件大于 3 且不超过 7。\n数学表达式为 $3 < \\text{数} \\le 7$。\n满足此条件的整数是大于 3 的最小整数，即 4。\n满足此条件的整数是小于或等于 7 的最大整数，即 7。\n因此，可能的取值集合是 $\\{4, 5, 6, 7\\}$。\n计算集合中的元素个数即为可能的取值数量。\n集合 $\\{4, 5, 6, 7\\}$ 包含 4 个元素。\n\nFinal answer: 4",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "inequality_no_more_than",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "首先确定范围是大于3的整数，即 $x > 3$。\n其次确定范围是不超过7的整数，即 $x \\le 7$。\n因此，我们寻找满足 $3 < x \\le 7$ 的整数。\n这些整数包括 4, 5, 6, 和 7。\n统计这些可能取值的数量。\n数量是 4 个。\n\nFinal answer: 4",
+      "created_at": "2026-04-27T19:36:36",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n一个数是大于3且不超过7的整数。它有多少个可能取值？<turn|>\n<|turn>model\n",
+      "raw_completion": "首先确定范围是大于3的整数，即 $x > 3$。\n其次确定范围是不超过7的整数，即 $x \\le 7$。\n因此，我们寻找满足 $3 < x \\le 7$ 的整数。\n这些整数包括 4, 5, 6, 和 7。\n统计这些可能取值的数量。\n数量是 4 个。\n\nFinal answer: 4",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "inequality_no_more_than",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The number must be an integer.\nThe condition is greater than 3.\nThe condition is less than or equal to 7.\nWe are looking for integers $x$ such that $3 < x \\le 7$.\nThe integers satisfying $x > 3$ are $4, 5, 6, 7, 8, \\dots$.\nThe integers satisfying $x \\le 7$ are $\\dots, 5, 6, 7$.\nThe intersection of these two sets is $\\{4, 5, 6, 7\\}$.\nThe possible values are 4, 5, 6, and 7.\nCounting these values gives the number of possibilities.\nThere are 4 possible values.\n\nFinal answer: 4",
+      "created_at": "2026-04-27T19:36:41",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一个数是大于3且不超过7的整数。它有多少个可能取值？<turn|>\n<|turn>model\n",
+      "raw_completion": "The number must be an integer.\nThe condition is greater than 3.\nThe condition is less than or equal to 7.\nWe are looking for integers $x$ such that $3 < x \\le 7$.\nThe integers satisfying $x > 3$ are $4, 5, 6, 7, 8, \\dots$.\nThe integers satisfying $x \\le 7$ are $\\dots, 5, 6, 7$.\nThe intersection of these two sets is $\\{4, 5, 6, 7\\}$.\nThe possible values are 4, 5, 6, and 7.\nCounting these values gives the number of possibilities.\nThere are 4 possible values.\n\nFinal answer: 4",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "inequality_no_more_than",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The number must be an integer.\nThe number must be greater than 3.\nThe number must be less than or equal to 7.\nPossible integers greater than 3 are 4, 5, 6, 7, ...\nApplying the upper limit, the possible values are 4, 5, 6, and 7.\nCounting these values gives the total number of possibilities.\nThere are four possible values.\n\nFinal answer: 4",
+      "created_at": "2026-04-27T19:36:44",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一个数是大于3且不超过7的整数。它有多少个可能取值？<turn|>\n<|turn>model\n",
+      "raw_completion": "The number must be an integer.\nThe number must be greater than 3.\nThe number must be less than or equal to 7.\nPossible integers greater than 3 are 4, 5, 6, 7, ...\nApplying the upper limit, the possible values are 4, 5, 6, and 7.\nCounting these values gives the total number of possibilities.\nThere are four possible values.\n\nFinal answer: 4",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "inequality_no_more_than",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1.  区间 $[2, 8)$ 表示包含 $2$ 且不包含 $8$ 的所有实数。\n2.  我们需要找出在这个区间内的所有整数。\n3.  第一个整数是 $2$。\n4.  接下来的整数是 $3, 4, 5, 6, 7$。\n5.  下一个整数是 $8$，但 $8$ 不在区间 $[2, 8)$ 内。\n6.  因此，区间 $[2, 8)$ 内的整数集合是 $\\{2, 3, 4, 5, 6, 7\\}$。\n7.  计算集合中元素的个数：$7 - 2 + 1 = 6$。\n\nFinal answer: 6",
+      "created_at": "2026-04-27T19:36:48",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n区间[2, 8)中有多少个整数？<turn|>\n<|turn>model\n",
+      "raw_completion": "1.  区间 $[2, 8)$ 表示包含 $2$ 且不包含 $8$ 的所有实数。\n2.  我们需要找出在这个区间内的所有整数。\n3.  第一个整数是 $2$。\n4.  接下来的整数是 $3, 4, 5, 6, 7$。\n5.  下一个整数是 $8$，但 $8$ 不在区间 $[2, 8)$ 内。\n6.  因此，区间 $[2, 8)$ 内的整数集合是 $\\{2, 3, 4, 5, 6, 7\\}$。\n7.  计算集合中元素的个数：$7 - 2 + 1 = 6$。\n\nFinal answer: 6",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "interval_closed_open",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "区间 $[2, 8)$ 表示包含 $2$ 但不包含 $8$ 的所有实数。\n我们需要找出在这个区间内的所有整数。\n最小的整数是 $2$。\n最大的整数是小于 $8$ 的最大整数，即 $7$。\n需要数出从 $2$ 到 $7$ 的所有整数。\n这些整数是 $2, 3, 4, 5, 6, 7$。\n数量可以通过公式（最大值 - 最小值 + 1）计算得出。\n数量 $= 7 - 2 + 1 = 6$。\n\nFinal answer: 6",
+      "created_at": "2026-04-27T19:36:52",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n区间[2, 8)中有多少个整数？<turn|>\n<|turn>model\n",
+      "raw_completion": "区间 $[2, 8)$ 表示包含 $2$ 但不包含 $8$ 的所有实数。\n我们需要找出在这个区间内的所有整数。\n最小的整数是 $2$。\n最大的整数是小于 $8$ 的最大整数，即 $7$。\n需要数出从 $2$ 到 $7$ 的所有整数。\n这些整数是 $2, 3, 4, 5, 6, 7$。\n数量可以通过公式（最大值 - 最小值 + 1）计算得出。\n数量 $= 7 - 2 + 1 = 6$。\n\nFinal answer: 6",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "interval_closed_open",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The given interval is $[2, 8)$.\nThis notation means the interval includes 2 but excludes 8.\nThe integers greater than or equal to 2 are $2, 3, 4, \\dots$.\nThe integers strictly less than 8 are $\\dots, 5, 6, 7$.\nWe need the integers that satisfy $2 \\le x < 8$.\nListing these integers gives: $2, 3, 4, 5, 6, 7$.\nTo count them, we use the formula: largest integer minus smallest integer plus one.\nCount = $7 - 2 + 1$.\nCount = $5 + 1$.\nCount = $6$.\n\nFinal answer: 6",
+      "created_at": "2026-04-27T19:36:56",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n区间[2, 8)中有多少个整数？<turn|>\n<|turn>model\n",
+      "raw_completion": "The given interval is $[2, 8)$.\nThis notation means the interval includes 2 but excludes 8.\nThe integers greater than or equal to 2 are $2, 3, 4, \\dots$.\nThe integers strictly less than 8 are $\\dots, 5, 6, 7$.\nWe need the integers that satisfy $2 \\le x < 8$.\nListing these integers gives: $2, 3, 4, 5, 6, 7$.\nTo count them, we use the formula: largest integer minus smallest integer plus one.\nCount = $7 - 2 + 1$.\nCount = $5 + 1$.\nCount = $6$.\n\nFinal answer: 6",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "interval_closed_open",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The given interval is $[2, 8)$.\nThis means the set includes all numbers $x$ such that $2 \\le x < 8$.\nThe integers in this interval are those whole numbers meeting this condition.\nThe smallest integer is 2.\nThe largest integer must be less than 8, so it is 7.\nThe integers are 2, 3, 4, 5, 6, and 7.\nTo count them, we use the formula: last integer - first integer + 1.\nCount = $7 - 2 + 1$.\nCount = $5 + 1$.\nCount = 6.\n\nFinal answer: 6",
+      "created_at": "2026-04-27T19:37:00",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n区间[2, 8)中有多少个整数？<turn|>\n<|turn>model\n",
+      "raw_completion": "The given interval is $[2, 8)$.\nThis means the set includes all numbers $x$ such that $2 \\le x < 8$.\nThe integers in this interval are those whole numbers meeting this condition.\nThe smallest integer is 2.\nThe largest integer must be less than 8, so it is 7.\nThe integers are 2, 3, 4, 5, 6, and 7.\nTo count them, we use the formula: last integer - first integer + 1.\nCount = $7 - 2 + 1$.\nCount = $5 + 1$.\nCount = 6.\n\nFinal answer: 6",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "interval_closed_open",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1. 区间表示法 $(2, 8]$ 表示包含大于 2 的所有实数，以及小于或等于 8 的所有实数。\n2. 我们需要找出落在这个区间内的所有整数。\n3. 整数必须严格大于 2，即 $\\text{整数} > 2$。\n4. 整数必须小于或等于 8，即 $\\text{整数} \\le 8$。\n5. 满足这两个条件的最小整数是 3。\n6. 满足这两个条件的最大的整数是 8。\n7. 包含的整数序列为 $3, 4, 5, 6, 7, 8$。\n8. 计算这些整数的个数：$8 - 3 + 1$。\n9. $8 - 3 + 1 = 6$。\n\nFinal answer: 6",
+      "created_at": "2026-04-27T19:37:06",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n区间(2, 8]中有多少个整数？<turn|>\n<|turn>model\n",
+      "raw_completion": "1. 区间表示法 $(2, 8]$ 表示包含大于 2 的所有实数，以及小于或等于 8 的所有实数。\n2. 我们需要找出落在这个区间内的所有整数。\n3. 整数必须严格大于 2，即 $\\text{整数} > 2$。\n4. 整数必须小于或等于 8，即 $\\text{整数} \\le 8$。\n5. 满足这两个条件的最小整数是 3。\n6. 满足这两个条件的最大的整数是 8。\n7. 包含的整数序列为 $3, 4, 5, 6, 7, 8$。\n8. 计算这些整数的个数：$8 - 3 + 1$。\n9. $8 - 3 + 1 = 6$。\n\nFinal answer: 6",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "interval_open_closed",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "首先，理解区间 $(2, 8]$ 的含义。\n开区间 $(2, \\cdot)$ 表示大于 2 的数。\n闭区间 $(\\cdot, 8]$ 表示小于或等于 8 的数。\n因此，该区间包含所有大于 2 且小于或等于 8 的实数。\n我们寻找该区间内的整数。\n大于 2 的最小整数是 3。\n小于或等于 8 的最大整数是 8。\n所以，该区间内的整数是 $\\{3, 4, 5, 6, 7, 8\\}$。\n要计算整数的个数，我们使用公式：最大整数 - 最小整数 + 1。\n个数 $= 8 - 3 + 1$。\n个数 $= 6$。\n\nFinal answer: 6",
+      "created_at": "2026-04-27T19:37:10",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n区间(2, 8]中有多少个整数？<turn|>\n<|turn>model\n",
+      "raw_completion": "首先，理解区间 $(2, 8]$ 的含义。\n开区间 $(2, \\cdot)$ 表示大于 2 的数。\n闭区间 $(\\cdot, 8]$ 表示小于或等于 8 的数。\n因此，该区间包含所有大于 2 且小于或等于 8 的实数。\n我们寻找该区间内的整数。\n大于 2 的最小整数是 3。\n小于或等于 8 的最大整数是 8。\n所以，该区间内的整数是 $\\{3, 4, 5, 6, 7, 8\\}$。\n要计算整数的个数，我们使用公式：最大整数 - 最小整数 + 1。\n个数 $= 8 - 3 + 1$。\n个数 $= 6$。\n\nFinal answer: 6",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "interval_open_closed",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The given interval is $(2, 8]$.\nThis means the numbers $x$ such that $2 < x \\le 8$.\nWe need to find the integers within this range.\nThe smallest integer greater than 2 is 3.\nThe largest integer less than or equal to 8 is 8.\nThe integers are 3, 4, 5, 6, 7, and 8.\nTo count them, we use the formula: Last integer - First integer + 1.\nNumber of integers = $8 - 3 + 1$.\nNumber of integers = $5 + 1$.\nNumber of integers = 6.\n\nFinal answer: 6",
+      "created_at": "2026-04-27T19:37:15",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n区间(2, 8]中有多少个整数？<turn|>\n<|turn>model\n",
+      "raw_completion": "The given interval is $(2, 8]$.\nThis means the numbers $x$ such that $2 < x \\le 8$.\nWe need to find the integers within this range.\nThe smallest integer greater than 2 is 3.\nThe largest integer less than or equal to 8 is 8.\nThe integers are 3, 4, 5, 6, 7, and 8.\nTo count them, we use the formula: Last integer - First integer + 1.\nNumber of integers = $8 - 3 + 1$.\nNumber of integers = $5 + 1$.\nNumber of integers = 6.\n\nFinal answer: 6",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "interval_open_closed",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The interval is $(2, 8]$.\nThis means $2 < x \\le 8$.\nWe are looking for integers $x$ that satisfy this condition.\nThe smallest integer greater than 2 is 3.\nThe largest integer less than or equal to 8 is 8.\nThe integers are 3, 4, 5, 6, 7, and 8.\nWe can count these integers directly.\nAlternatively, the count is $8 - 3 + 1$.\n$8 - 3 = 5$.\n$5 + 1 = 6$.\n\nFinal answer: 6",
+      "created_at": "2026-04-27T19:37:18",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n区间(2, 8]中有多少个整数？<turn|>\n<|turn>model\n",
+      "raw_completion": "The interval is $(2, 8]$.\nThis means $2 < x \\le 8$.\nWe are looking for integers $x$ that satisfy this condition.\nThe smallest integer greater than 2 is 3.\nThe largest integer less than or equal to 8 is 8.\nThe integers are 3, 4, 5, 6, 7, and 8.\nWe can count these integers directly.\nAlternatively, the count is $8 - 3 + 1$.\n$8 - 3 = 5$.\n$5 + 1 = 6$.\n\nFinal answer: 6",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "interval_open_closed",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "我们需要找到满足 $2 < x < 8$ 且 $x$ 是整数的数字。\n第一个大于 2 的整数是 3。\n最后一个小于 8 的整数是 7。\n这些整数依次是 3, 4, 5, 6, 7。\n数一数这些整数的个数，共有 5 个。\n\nFinal answer: 5",
+      "created_at": "2026-04-27T19:37:21",
+      "gold_answer": "5",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n严格介于2和8之间的整数有多少个？<turn|>\n<|turn>model\n",
+      "raw_completion": "我们需要找到满足 $2 < x < 8$ 且 $x$ 是整数的数字。\n第一个大于 2 的整数是 3。\n最后一个小于 8 的整数是 7。\n这些整数依次是 3, 4, 5, 6, 7。\n数一数这些整数的个数，共有 5 个。\n\nFinal answer: 5",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "interval_between_exclusive",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1. 题目要求找出严格介于 2 和 8 之间的整数。\n2. 严格介于 2 和 8 之间意味着这些整数必须大于 2 且小于 8。\n3. 我们列出满足 $2 < x < 8$ 的整数。\n4. 这些整数依次是 3, 4, 5, 6, 7。\n5. 统计这些整数的数量。\n6. 共有 5 个整数。\n\nFinal answer: 5",
+      "created_at": "2026-04-27T19:37:24",
+      "gold_answer": "5",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n严格介于2和8之间的整数有多少个？<turn|>\n<|turn>model\n",
+      "raw_completion": "1. 题目要求找出严格介于 2 和 8 之间的整数。\n2. 严格介于 2 和 8 之间意味着这些整数必须大于 2 且小于 8。\n3. 我们列出满足 $2 < x < 8$ 的整数。\n4. 这些整数依次是 3, 4, 5, 6, 7。\n5. 统计这些整数的数量。\n6. 共有 5 个整数。\n\nFinal answer: 5",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "interval_between_exclusive",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The integers strictly between 2 and 8 are sought.\nThis means the integers must be greater than 2 and less than 8.\nThe set of integers starts from 3.\nThe set of integers ends at 7.\nThe integers are 3, 4, 5, 6, and 7.\nTo count them, we can use the formula: last - first + 1.\nNumber of integers = $7 - 3 + 1$.\nNumber of integers = $4 + 1$.\nNumber of integers = 5.\n\nFinal answer: 5",
+      "created_at": "2026-04-27T19:37:27",
+      "gold_answer": "5",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n严格介于2和8之间的整数有多少个？<turn|>\n<|turn>model\n",
+      "raw_completion": "The integers strictly between 2 and 8 are sought.\nThis means the integers must be greater than 2 and less than 8.\nThe set of integers starts from 3.\nThe set of integers ends at 7.\nThe integers are 3, 4, 5, 6, and 7.\nTo count them, we can use the formula: last - first + 1.\nNumber of integers = $7 - 3 + 1$.\nNumber of integers = $4 + 1$.\nNumber of integers = 5.\n\nFinal answer: 5",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "interval_between_exclusive",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The integers strictly between 2 and 8 are the numbers greater than 2 and less than 8.\nThese integers are 3, 4, 5, 6, and 7.\nTo count them, we can subtract the lower bound from the upper bound and then subtract 1.\nUpper bound is 8, lower bound is 2.\n$8 - 2 - 1 = 5$.\nAlternatively, by listing, there are 5 integers.\n\nFinal answer: 5",
+      "created_at": "2026-04-27T19:37:30",
+      "gold_answer": "5",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n严格介于2和8之间的整数有多少个？<turn|>\n<|turn>model\n",
+      "raw_completion": "The integers strictly between 2 and 8 are the numbers greater than 2 and less than 8.\nThese integers are 3, 4, 5, 6, and 7.\nTo count them, we can subtract the lower bound from the upper bound and then subtract 1.\nUpper bound is 8, lower bound is 2.\n$8 - 2 - 1 = 5$.\nAlternatively, by listing, there are 5 integers.\n\nFinal answer: 5",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "interval_between_exclusive",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "设最初每人的苹果数为 $x$，则总苹果数为 $4x$。\n现在每人多得到 3 个苹果，则总共增加了 $4 \\times 3 = 12$ 个苹果。\n新的总苹果数是 $4x + 12$。\n新的平均苹果数是 $\\frac{4x + 12}{4} = x + 3$。\n平均苹果数的增加量是新的平均数减去旧的平均数：$(x + 3) - x = 3$。\n\nFinal answer: 3",
+      "created_at": "2026-04-27T19:37:34",
+      "gold_answer": "3",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n4个人每人多得到3个苹果。每人的平均苹果数增加了多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "设最初每人的苹果数为 $x$，则总苹果数为 $4x$。\n现在每人多得到 3 个苹果，则总共增加了 $4 \\times 3 = 12$ 个苹果。\n新的总苹果数是 $4x + 12$。\n新的平均苹果数是 $\\frac{4x + 12}{4} = x + 3$。\n平均苹果数的增加量是新的平均数减去旧的平均数：$(x + 3) - x = 3$。\n\nFinal answer: 3",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "average_each_extra",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "初始时，有 4 个人。\n每人多得到了 3 个苹果。\n平均苹果数是所有苹果总数除以人数。\n增加的苹果总数是 $4 \\times 3 = 12$ 个。\n平均苹果数的增加量等于增加的苹果总数除以人数。\n平均增加量 = $\\frac{12}{4} = 3$。\n或者，平均增加量直接等于每人增加的量，即 3 个。\n\nFinal answer: 3",
+      "created_at": "2026-04-27T19:37:37",
+      "gold_answer": "3",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n4个人每人多得到3个苹果。每人的平均苹果数增加了多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "初始时，有 4 个人。\n每人多得到了 3 个苹果。\n平均苹果数是所有苹果总数除以人数。\n增加的苹果总数是 $4 \\times 3 = 12$ 个。\n平均苹果数的增加量等于增加的苹果总数除以人数。\n平均增加量 = $\\frac{12}{4} = 3$。\n或者，平均增加量直接等于每人增加的量，即 3 个。\n\nFinal answer: 3",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "average_each_extra",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "Four people are involved.\nEach person gains 3 apples.\nThe total number of apples gained is $4 \\times 3 = 12$.\nThe average number of apples is the total number of apples divided by the number of people.\nThe increase in total apples is 12.\nThe increase in the average is $12 / 4$.\nThis simplifies to 3.\nThe average apple count increases by 3.\n\nFinal answer: 3",
+      "created_at": "2026-04-27T19:37:40",
+      "gold_answer": "3",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n4个人每人多得到3个苹果。每人的平均苹果数增加了多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "Four people are involved.\nEach person gains 3 apples.\nThe total number of apples gained is $4 \\times 3 = 12$.\nThe average number of apples is the total number of apples divided by the number of people.\nThe increase in total apples is 12.\nThe increase in the average is $12 / 4$.\nThis simplifies to 3.\nThe average apple count increases by 3.\n\nFinal answer: 3",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "average_each_extra",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "There are 4 people in total.\nEach person receives an additional 3 apples.\nThe total increase in apples is $4 \\times 3 = 12$ apples.\nThe average increase is the total increase divided by the number of people.\nAverage increase = $\\frac{12}{4}$.\nAverage increase = 3.\n\nFinal answer: 3",
+      "created_at": "2026-04-27T19:37:42",
+      "gold_answer": "3",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n4个人每人多得到3个苹果。每人的平均苹果数增加了多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "There are 4 people in total.\nEach person receives an additional 3 apples.\nThe total increase in apples is $4 \\times 3 = 12$ apples.\nThe average increase is the total increase divided by the number of people.\nAverage increase = $\\frac{12}{4}$.\nAverage increase = 3.\n\nFinal answer: 3",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "average_each_extra",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "设原来的苹果总数为 $T$。\n有 4 个人。\n每个人多得到了 3 个苹果。\n总共增加的苹果数是每人增加量的总和。\n增加的苹果总数 = 个人数量 $\\times$ 每人增加的苹果数。\n增加的苹果总数 = $4 \\times 3$。\n增加的苹果总数 = 12。\n\nFinal answer: 12",
+      "created_at": "2026-04-27T19:37:44",
+      "gold_answer": "12",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n4个人每人多得到3个苹果。苹果总数增加了多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "设原来的苹果总数为 $T$。\n有 4 个人。\n每个人多得到了 3 个苹果。\n总共增加的苹果数是每人增加量的总和。\n增加的苹果总数 = 个人数量 $\\times$ 每人增加的苹果数。\n增加的苹果总数 = $4 \\times 3$。\n增加的苹果总数 = 12。\n\nFinal answer: 12",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "total_each_extra",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "设每人原来得到的苹果数为 $x$ 个，现在每人多得到 3 个苹果。\n有 4 个人。\n每人额外得到的苹果数量是 3 个。\n总共额外增加的苹果数量等于人数乘以每人增加的苹果数。\n总增加的苹果数 $= 4 \\times 3$。\n总增加的苹果数 $= 12$ 个。\n\nFinal answer: 12",
+      "created_at": "2026-04-27T19:37:47",
+      "gold_answer": "12",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n4个人每人多得到3个苹果。苹果总数增加了多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "设每人原来得到的苹果数为 $x$ 个，现在每人多得到 3 个苹果。\n有 4 个人。\n每人额外得到的苹果数量是 3 个。\n总共额外增加的苹果数量等于人数乘以每人增加的苹果数。\n总增加的苹果数 $= 4 \\times 3$。\n总增加的苹果数 $= 12$ 个。\n\nFinal answer: 12",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "total_each_extra",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "There are 4 people.\nEach person gets 3 more apples.\nThe total increase is the number of people multiplied by the increase per person.\nCalculation: $4 \\times 3$.\nThe total increase is 12.\n\nFinal answer: 12",
+      "created_at": "2026-04-27T19:37:49",
+      "gold_answer": "12",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n4个人每人多得到3个苹果。苹果总数增加了多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "There are 4 people.\nEach person gets 3 more apples.\nThe total increase is the number of people multiplied by the increase per person.\nCalculation: $4 \\times 3$.\nThe total increase is 12.\n\nFinal answer: 12",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "total_each_extra",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "There are 4 people.\nEach person gets 3 more apples.\nThe increase is the number of people multiplied by the increase per person.\nCalculation: $4 \\times 3$.\n$4 \\times 3 = 12$.\nThe total number of apples increased by 12.\n\nFinal answer: 12",
+      "created_at": "2026-04-27T19:37:51",
+      "gold_answer": "12",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n4个人每人多得到3个苹果。苹果总数增加了多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "There are 4 people.\nEach person gets 3 more apples.\nThe increase is the number of people multiplied by the increase per person.\nCalculation: $4 \\times 3$.\n$4 \\times 3 = 12$.\nThe total number of apples increased by 12.\n\nFinal answer: 12",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "total_each_extra",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "设原始总分为 $S$，学生人数为 $N=5$。\n原始平均分 $\\text{Avg}_{\\text{old}} = S/5$。\n总分增加了 20 分，新的总分 $S' = S + 20$。\n新的平均分 $\\text{Avg}_{\\text{new}} = S'/5 = (S+20)/5 = S/5 + 20/5$。\n平均分的增量 $\\Delta \\text{Avg} = \\text{Avg}_{\\text{new}} - \\text{Avg}_{\\text{old}}$。\n$\\Delta \\text{Avg} = (S/5 + 4) - S/5 = 4$。\n平均分的增量等于总分增量除以人数。\n\nFinal answer: 4",
+      "created_at": "2026-04-27T19:37:55",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n5名学生的总分增加了20分。班级平均分增加了多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "设原始总分为 $S$，学生人数为 $N=5$。\n原始平均分 $\\text{Avg}_{\\text{old}} = S/5$。\n总分增加了 20 分，新的总分 $S' = S + 20$。\n新的平均分 $\\text{Avg}_{\\text{new}} = S'/5 = (S+20)/5 = S/5 + 20/5$。\n平均分的增量 $\\Delta \\text{Avg} = \\text{Avg}_{\\text{new}} - \\text{Avg}_{\\text{old}}$。\n$\\Delta \\text{Avg} = (S/5 + 4) - S/5 = 4$。\n平均分的增量等于总分增量除以人数。\n\nFinal answer: 4",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "average_total_to_average",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "已知学生人数 $N = 5$。\n已知总分增加量 $\\Delta S = 20$ 分。\n平均分的增量 $\\Delta A$ 等于总分增量除以学生人数。\n$\\Delta A = \\frac{\\Delta S}{N}$。\n代入数值：\n$\\Delta A = \\frac{20}{5}$。\n$\\Delta A = 4$ 分。\n\nFinal answer: 4",
+      "created_at": "2026-04-27T19:37:58",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n5名学生的总分增加了20分。班级平均分增加了多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "已知学生人数 $N = 5$。\n已知总分增加量 $\\Delta S = 20$ 分。\n平均分的增量 $\\Delta A$ 等于总分增量除以学生人数。\n$\\Delta A = \\frac{\\Delta S}{N}$。\n代入数值：\n$\\Delta A = \\frac{20}{5}$。\n$\\Delta A = 4$ 分。\n\nFinal answer: 4",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "average_total_to_average",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "There are 5 students in total.\nThe total score increased by 20 points.\nTo find the increase in average score, divide the total increase by the number of students.\nAverage increase = Total increase / Number of students.\nAverage increase = 20 / 5.\nAverage increase = 4.\n\nFinal answer: 4",
+      "created_at": "2026-04-27T19:38:00",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n5名学生的总分增加了20分。班级平均分增加了多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "There are 5 students in total.\nThe total score increased by 20 points.\nTo find the increase in average score, divide the total increase by the number of students.\nAverage increase = Total increase / Number of students.\nAverage increase = 20 / 5.\nAverage increase = 4.\n\nFinal answer: 4",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "average_total_to_average",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "Let $N$ be the number of students, so $N=5$.\nLet $S_{old}$ be the original total score.\nLet $S_{new}$ be the new total score.\nWe are given that the total score increased by 20 points: $S_{new} = S_{old} + 20$.\nThe old average score, $\\bar{X}_{old}$, is $\\frac{S_{old}}{N}$.\nThe new average score, $\\bar{X}_{new}$, is $\\frac{S_{new}}{N}$.\nThe increase in the average score is $\\Delta \\bar{X} = \\bar{X}_{new} - \\bar{X}_{old}$.\n$\\Delta \\bar{X} = \\frac{S_{new}}{N} - \\frac{S_{old}}{N}$.\n$\\Delta \\bar{X} = \\frac{S_{new} - S_{old}}{N}$.\nSubstitute the given increase in total score: $\\Delta \\bar{X} = \\frac{20}{5}$.\nCalculate the result: $\\Delta \\bar{X} = 4$.\n\nFinal answer: 4",
+      "created_at": "2026-04-27T19:38:07",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n5名学生的总分增加了20分。班级平均分增加了多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "Let $N$ be the number of students, so $N=5$.\nLet $S_{old}$ be the original total score.\nLet $S_{new}$ be the new total score.\nWe are given that the total score increased by 20 points: $S_{new} = S_{old} + 20$.\nThe old average score, $\\bar{X}_{old}$, is $\\frac{S_{old}}{N}$.\nThe new average score, $\\bar{X}_{new}$, is $\\frac{S_{new}}{N}$.\nThe increase in the average score is $\\Delta \\bar{X} = \\bar{X}_{new} - \\bar{X}_{old}$.\n$\\Delta \\bar{X} = \\frac{S_{new}}{N} - \\frac{S_{old}}{N}$.\n$\\Delta \\bar{X} = \\frac{S_{new} - S_{old}}{N}$.\nSubstitute the given increase in total score: $\\Delta \\bar{X} = \\frac{20}{5}$.\nCalculate the result: $\\Delta \\bar{X} = 4$.\n\nFinal answer: 4",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "average_total_to_average",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1. 已知圆的直径 $d = 10$ 厘米。\n2. 圆的半径 $r$ 等于直径的一半，所以 $r = d/2 = 10/2 = 5$ 厘米。\n3. 圆的面积公式为 $A = \\pi r^2$。\n4. 将半径代入面积公式：$A = \\pi (5)^2$。\n5. 计算平方：$A = 25\\pi$。\n6. 单位是平方厘米。\n\nFinal answer: 25\\pi",
+      "created_at": "2026-04-27T19:38:11",
+      "gold_answer": "25pi",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n一个圆的直径是10厘米。它的面积是多少（用π表示）？<turn|>\n<|turn>model\n",
+      "raw_completion": "1. 已知圆的直径 $d = 10$ 厘米。\n2. 圆的半径 $r$ 等于直径的一半，所以 $r = d/2 = 10/2 = 5$ 厘米。\n3. 圆的面积公式为 $A = \\pi r^2$。\n4. 将半径代入面积公式：$A = \\pi (5)^2$。\n5. 计算平方：$A = 25\\pi$。\n6. 单位是平方厘米。\n\nFinal answer: 25\\pi",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "geometry_diameter_area",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "已知圆的直径 $d = 10$ 厘米。\n圆的半径 $r$ 是直径的一半，所以 $r = d/2 = 10/2 = 5$ 厘米。\n圆的面积 $A$ 的计算公式是 $A = \\pi r^2$。\n将半径代入公式：$A = \\pi (5)^2$。\n计算平方项：$A = 25\\pi$。\n因此，该圆的面积是 $25\\pi$ 平方厘米。\n\nFinal answer: 25\\pi",
+      "created_at": "2026-04-27T19:38:14",
+      "gold_answer": "25pi",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n一个圆的直径是10厘米。它的面积是多少（用π表示）？<turn|>\n<|turn>model\n",
+      "raw_completion": "已知圆的直径 $d = 10$ 厘米。\n圆的半径 $r$ 是直径的一半，所以 $r = d/2 = 10/2 = 5$ 厘米。\n圆的面积 $A$ 的计算公式是 $A = \\pi r^2$。\n将半径代入公式：$A = \\pi (5)^2$。\n计算平方项：$A = 25\\pi$。\n因此，该圆的面积是 $25\\pi$ 平方厘米。\n\nFinal answer: 25\\pi",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "geometry_diameter_area",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The diameter ($d$) of the circle is 10 cm.\nThe radius ($r$) is half of the diameter: $r = d/2 = 10/2 = 5$ cm.\nThe formula for the area ($A$) of a circle is $A = \\pi r^2$.\nSubstitute the radius into the area formula: $A = \\pi (5)^2$.\nCalculate the square of the radius: $A = \\pi (25)$.\nThe area is $25\\pi$ square centimeters.\n\nFinal answer: 25\\pi",
+      "created_at": "2026-04-27T19:38:18",
+      "gold_answer": "25pi",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一个圆的直径是10厘米。它的面积是多少（用π表示）？<turn|>\n<|turn>model\n",
+      "raw_completion": "The diameter ($d$) of the circle is 10 cm.\nThe radius ($r$) is half of the diameter: $r = d/2 = 10/2 = 5$ cm.\nThe formula for the area ($A$) of a circle is $A = \\pi r^2$.\nSubstitute the radius into the area formula: $A = \\pi (5)^2$.\nCalculate the square of the radius: $A = \\pi (25)$.\nThe area is $25\\pi$ square centimeters.\n\nFinal answer: 25\\pi",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "geometry_diameter_area",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The diameter ($d$) of the circle is 10 cm.\nThe radius ($r$) is half of the diameter: $r = d/2$.\n$r = 10 \\text{ cm} / 2 = 5 \\text{ cm}$.\nThe formula for the area ($A$) of a circle is $A = \\pi r^2$.\nSubstitute the radius into the area formula: $A = \\pi (5)^2$.\nCalculate the square of the radius: $5^2 = 25$.\nTherefore, the area is $A = 25\\pi$.\nThe unit for area is square centimeters ($\\text{cm}^2$).\n\nFinal answer: 25\\pi cm^2",
+      "created_at": "2026-04-27T19:38:22",
+      "gold_answer": "25pi",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一个圆的直径是10厘米。它的面积是多少（用π表示）？<turn|>\n<|turn>model\n",
+      "raw_completion": "The diameter ($d$) of the circle is 10 cm.\nThe radius ($r$) is half of the diameter: $r = d/2$.\n$r = 10 \\text{ cm} / 2 = 5 \\text{ cm}$.\nThe formula for the area ($A$) of a circle is $A = \\pi r^2$.\nSubstitute the radius into the area formula: $A = \\pi (5)^2$.\nCalculate the square of the radius: $5^2 = 25$.\nTherefore, the area is $A = 25\\pi$.\nThe unit for area is square centimeters ($\\text{cm}^2$).\n\nFinal answer: 25\\pi cm^2",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "geometry_diameter_area",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "圆的面积公式是 $A = \\pi r^2$，其中 $r$ 是圆的半径。\n已知圆的半径 $r = 10$ 厘米。\n将半径代入公式：$A = \\pi (10)^2$。\n计算 $10$ 的平方：$10^2 = 10 \\times 10 = 100$。\n所以，圆的面积是 $A = 100\\pi$ 平方厘米。\n\nFinal answer: 100\\pi",
+      "created_at": "2026-04-27T19:38:25",
+      "gold_answer": "100pi",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n一个圆的半径是10厘米。它的面积是多少（用π表示）？<turn|>\n<|turn>model\n",
+      "raw_completion": "圆的面积公式是 $A = \\pi r^2$，其中 $r$ 是圆的半径。\n已知圆的半径 $r = 10$ 厘米。\n将半径代入公式：$A = \\pi (10)^2$。\n计算 $10$ 的平方：$10^2 = 10 \\times 10 = 100$。\n所以，圆的面积是 $A = 100\\pi$ 平方厘米。\n\nFinal answer: 100\\pi",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "geometry_radius_area",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "圆的面积公式为 $A = \\pi r^2$，其中 $r$ 是圆的半径。\n已知圆的半径 $r = 10$ 厘米。\n将半径代入面积公式：$A = \\pi (10)^2$。\n计算半径的平方：$10^2 = 100$。\n所以，圆的面积 $A = 100\\pi$ 平方厘米。\n\nFinal answer: 100\\pi",
+      "created_at": "2026-04-27T19:38:28",
+      "gold_answer": "100pi",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n一个圆的半径是10厘米。它的面积是多少（用π表示）？<turn|>\n<|turn>model\n",
+      "raw_completion": "圆的面积公式为 $A = \\pi r^2$，其中 $r$ 是圆的半径。\n已知圆的半径 $r = 10$ 厘米。\n将半径代入面积公式：$A = \\pi (10)^2$。\n计算半径的平方：$10^2 = 100$。\n所以，圆的面积 $A = 100\\pi$ 平方厘米。\n\nFinal answer: 100\\pi",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "geometry_radius_area",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The formula for the area of a circle is $A = \\pi r^2$.\nThe given radius ($r$) is 10 centimeters.\nSubstitute the radius into the area formula.\n$A = \\pi (10)^2$.\nCalculate the square of the radius.\n$10^2 = 100$.\nSo, the area is $A = 100\\pi$.\nThe units for the area are square centimeters ($\\text{cm}^2$).\n\nFinal answer: 100\\pi",
+      "created_at": "2026-04-27T19:38:31",
+      "gold_answer": "100pi",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一个圆的半径是10厘米。它的面积是多少（用π表示）？<turn|>\n<|turn>model\n",
+      "raw_completion": "The formula for the area of a circle is $A = \\pi r^2$.\nThe given radius ($r$) is 10 centimeters.\nSubstitute the radius into the area formula.\n$A = \\pi (10)^2$.\nCalculate the square of the radius.\n$10^2 = 100$.\nSo, the area is $A = 100\\pi$.\nThe units for the area are square centimeters ($\\text{cm}^2$).\n\nFinal answer: 100\\pi",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "geometry_radius_area",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The formula for the area of a circle is $A = \\pi r^2$.\nThe given radius ($r$) is 10 cm.\nSubstitute the radius into the area formula.\n$A = \\pi (10)^2$.\nCalculate the square of the radius.\n$10^2 = 10 \\times 10 = 100$.\nSubstitute this value back into the area equation.\n$A = 100\\pi$.\nThe unit for the area is square centimeters ($\\text{cm}^2$).\n\nFinal answer: $100\\pi$",
+      "created_at": "2026-04-27T19:38:35",
+      "gold_answer": "100pi",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一个圆的半径是10厘米。它的面积是多少（用π表示）？<turn|>\n<|turn>model\n",
+      "raw_completion": "The formula for the area of a circle is $A = \\pi r^2$.\nThe given radius ($r$) is 10 cm.\nSubstitute the radius into the area formula.\n$A = \\pi (10)^2$.\nCalculate the square of the radius.\n$10^2 = 10 \\times 10 = 100$.\nSubstitute this value back into the area equation.\n$A = 100\\pi$.\nThe unit for the area is square centimeters ($\\text{cm}^2$).\n\nFinal answer: $100\\pi$",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "geometry_radius_area",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "关于y轴对称的几何变换规则是：将点 $(x, y)$ 变换为 $(-x, y)$。\n给定点 $A$ 的坐标是 $(2, 3)$。\n根据对称规则，新的x坐标取原x坐标的相反数，即 $-2$。\n新的y坐标保持不变，仍为 $3$。\n因此，像点 $A'$ 的坐标是 $(-2, 3)$。\n\nFinal answer: (-2, 3)",
+      "created_at": "2026-04-27T19:38:38",
+      "gold_answer": "(-2,3)",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n点A在(2, 3)。将A关于y轴对称，像点坐标是多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "关于y轴对称的几何变换规则是：将点 $(x, y)$ 变换为 $(-x, y)$。\n给定点 $A$ 的坐标是 $(2, 3)$。\n根据对称规则，新的x坐标取原x坐标的相反数，即 $-2$。\n新的y坐标保持不变，仍为 $3$。\n因此，像点 $A'$ 的坐标是 $(-2, 3)$。\n\nFinal answer: (-2, 3)",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "geometry_reflection_line",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "点A的坐标是 $(2, 3)$。\n将一个点 $(x, y)$ 关于 $y$ 轴对称，其新的坐标为 $(-x, y)$。\n将点 $A(2, 3)$ 代入对称公式。\n新的 $x$ 坐标为 $-2$。\n新的 $y$ 坐标为 $3$。\n因此，对称后的像点坐标是 $(-2, 3)$。\n\nFinal answer: (-2, 3)",
+      "created_at": "2026-04-27T19:38:41",
+      "gold_answer": "(-2,3)",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n点A在(2, 3)。将A关于y轴对称，像点坐标是多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "点A的坐标是 $(2, 3)$。\n将一个点 $(x, y)$ 关于 $y$ 轴对称，其新的坐标为 $(-x, y)$。\n将点 $A(2, 3)$ 代入对称公式。\n新的 $x$ 坐标为 $-2$。\n新的 $y$ 坐标为 $3$。\n因此，对称后的像点坐标是 $(-2, 3)$。\n\nFinal answer: (-2, 3)",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "geometry_reflection_line",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "A的坐标是 $(2, 3)$。\n关于y轴对称的规则是将点的x坐标取反，y坐标保持不变。\n即，$(x, y) \\rightarrow (-x, y)$。\n将点A的x坐标2取反得到-2。\n将点A的y坐标3保持不变。\n因此，对称后的像点坐标是 $(-2, 3)$。\n\nFinal answer: (-2, 3)",
+      "created_at": "2026-04-27T19:38:44",
+      "gold_answer": "(-2,3)",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n点A在(2, 3)。将A关于y轴对称，像点坐标是多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "A的坐标是 $(2, 3)$。\n关于y轴对称的规则是将点的x坐标取反，y坐标保持不变。\n即，$(x, y) \\rightarrow (-x, y)$。\n将点A的x坐标2取反得到-2。\n将点A的y坐标3保持不变。\n因此，对称后的像点坐标是 $(-2, 3)$。\n\nFinal answer: (-2, 3)",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "geometry_reflection_line",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The coordinates of point A are (2, 3).\nReflection across the y-axis changes the sign of the x-coordinate.\nThe y-coordinate remains the same during this reflection.\nIf A is $(x, y)$, its reflection across the y-axis is $(-x, y)$.\nSubstituting the coordinates of A: $x=2$ and $y=3$.\nThe new x-coordinate will be $-2$.\nThe new y-coordinate will remain $3$.\nThe image point's coordinates are $(-2, 3)$.\n\nFinal answer: (-2, 3)",
+      "created_at": "2026-04-27T19:38:47",
+      "gold_answer": "(-2,3)",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n点A在(2, 3)。将A关于y轴对称，像点坐标是多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "The coordinates of point A are (2, 3).\nReflection across the y-axis changes the sign of the x-coordinate.\nThe y-coordinate remains the same during this reflection.\nIf A is $(x, y)$, its reflection across the y-axis is $(-x, y)$.\nSubstituting the coordinates of A: $x=2$ and $y=3$.\nThe new x-coordinate will be $-2$.\nThe new y-coordinate will remain $3$.\nThe image point's coordinates are $(-2, 3)$.\n\nFinal answer: (-2, 3)",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "geometry_reflection_line",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1. 首先确定“打”的含义，通常指一打等于12个。\n2. 题目中提到卖出了3打袜子。\n3. 因此，总数是 $3 \\times 12$。\n4. 计算 $3 \\times 12$ 的结果，得到36。\n5. 袜子通常是成双销售或计数的单位，因此36个袜子相当于36双袜子（假设每只袜子算作一“双”的组成部分，或者更直接地，3打的袜子就是36双）。\n\nFinal answer: 36",
+      "created_at": "2026-04-27T19:38:51",
+      "gold_answer": "18",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n一家商店卖出3打袜子。相当于多少双袜子？<turn|>\n<|turn>model\n",
+      "raw_completion": "1. 首先确定“打”的含义，通常指一打等于12个。\n2. 题目中提到卖出了3打袜子。\n3. 因此，总数是 $3 \\times 12$。\n4. 计算 $3 \\times 12$ 的结果，得到36。\n5. 袜子通常是成双销售或计数的单位，因此36个袜子相当于36双袜子（假设每只袜子算作一“双”的组成部分，或者更直接地，3打的袜子就是36双）。\n\nFinal answer: 36",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "unit_dozen_pairs",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "一打等于十二个。\n三打袜子意味着 $3 \\times 12$ 个袜子。\n$3 \\times 12 = 36$。\n因此，卖出了 36 双袜子。\n\nFinal answer: 36",
+      "created_at": "2026-04-27T19:38:52",
+      "gold_answer": "18",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n一家商店卖出3打袜子。相当于多少双袜子？<turn|>\n<|turn>model\n",
+      "raw_completion": "一打等于十二个。\n三打袜子意味着 $3 \\times 12$ 个袜子。\n$3 \\times 12 = 36$。\n因此，卖出了 36 双袜子。\n\nFinal answer: 36",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "unit_dozen_pairs",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "One dozen is equal to twelve items.\nThree dozens mean $3 \\times 12$.\nMultiply three by twelve.\n$3 \\times 12 = 36$.\nThe store sold 36 pairs of socks.\n\nFinal answer: 36",
+      "created_at": "2026-04-27T19:38:54",
+      "gold_answer": "18",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一家商店卖出3打袜子。相当于多少双袜子？<turn|>\n<|turn>model\n",
+      "raw_completion": "One dozen is equal to twelve items.\nThree dozens mean $3 \\times 12$.\nMultiply three by twelve.\n$3 \\times 12 = 36$.\nThe store sold 36 pairs of socks.\n\nFinal answer: 36",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "unit_dozen_pairs",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "A dozen is equal to 12.\nThree dozen means 3 groups of 12.\nCalculate the total number of pairs: $3 \\times 12$.\n$3 \\times 12$ equals 36.\nThe store sold 36 pairs of socks.\n\nFinal answer: 36",
+      "created_at": "2026-04-27T19:38:56",
+      "gold_answer": "18",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一家商店卖出3打袜子。相当于多少双袜子？<turn|>\n<|turn>model\n",
+      "raw_completion": "A dozen is equal to 12.\nThree dozen means 3 groups of 12.\nCalculate the total number of pairs: $3 \\times 12$.\n$3 \\times 12$ equals 36.\nThe store sold 36 pairs of socks.\n\nFinal answer: 36",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "unit_dozen_pairs",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "每双袜子包含两只。\n商店卖出了18双袜子。\n要计算总共的袜子数量，需要将双数乘以每双的只数。\n总只数 = 18（双） $\\times$ 2（只/双）。\n总只数 = 36。\n\nFinal answer: 36",
+      "created_at": "2026-04-27T19:38:58",
+      "gold_answer": "36",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n一家商店卖出18双袜子。相当于多少只袜子？<turn|>\n<|turn>model\n",
+      "raw_completion": "每双袜子包含两只。\n商店卖出了18双袜子。\n要计算总共的袜子数量，需要将双数乘以每双的只数。\n总只数 = 18（双） $\\times$ 2（只/双）。\n总只数 = 36。\n\nFinal answer: 36",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "unit_pairs_socks",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "每双袜子包含两只袜子。\n已知商店卖出了18双袜子。\n要计算总共的袜子数量，需要将双数的数量乘以每双的只数。\n计算过程为：$18 \\text{ (双)} \\times 2 \\text{ (只/双)}$。\n$18 \\times 2 = 36$。\n因此，卖出18双袜子相当于36只袜子。\n\nFinal answer: 36",
+      "created_at": "2026-04-27T19:39:00",
+      "gold_answer": "36",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n一家商店卖出18双袜子。相当于多少只袜子？<turn|>\n<|turn>model\n",
+      "raw_completion": "每双袜子包含两只袜子。\n已知商店卖出了18双袜子。\n要计算总共的袜子数量，需要将双数的数量乘以每双的只数。\n计算过程为：$18 \\text{ (双)} \\times 2 \\text{ (只/双)}$。\n$18 \\times 2 = 36$。\n因此，卖出18双袜子相当于36只袜子。\n\nFinal answer: 36",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "unit_pairs_socks",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "Each pair has two socks.\nTo find the total number of single socks, multiply the number of pairs by 2.\nNumber of pairs = 18.\nNumber of socks per pair = 2.\nCalculation: $18 \\times 2$.\n$18 \\times 2 = 36$.\nThe total number of socks is 36.\n\nFinal answer: 36",
+      "created_at": "2026-04-27T19:39:03",
+      "gold_answer": "36",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一家商店卖出18双袜子。相当于多少只袜子？<turn|>\n<|turn>model\n",
+      "raw_completion": "Each pair has two socks.\nTo find the total number of single socks, multiply the number of pairs by 2.\nNumber of pairs = 18.\nNumber of socks per pair = 2.\nCalculation: $18 \\times 2$.\n$18 \\times 2 = 36$.\nThe total number of socks is 36.\n\nFinal answer: 36",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "unit_pairs_socks",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "A pair of socks consists of two individual socks.\nThe store sold 18 pairs of socks.\nTo find the total number of individual socks, multiply the number of pairs by 2.\nCalculation: $18 \\text{ pairs} \\times 2 \\text{ socks/pair}$.\n$18 \\times 2 = 36$.\nTherefore, 18 pairs of socks is equivalent to 36 individual socks.\n\nFinal answer: 36",
+      "created_at": "2026-04-27T19:39:05",
+      "gold_answer": "36",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一家商店卖出18双袜子。相当于多少只袜子？<turn|>\n<|turn>model\n",
+      "raw_completion": "A pair of socks consists of two individual socks.\nThe store sold 18 pairs of socks.\nTo find the total number of individual socks, multiply the number of pairs by 2.\nCalculation: $18 \\text{ pairs} \\times 2 \\text{ socks/pair}$.\n$18 \\times 2 = 36$.\nTherefore, 18 pairs of socks is equivalent to 36 individual socks.\n\nFinal answer: 36",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "unit_pairs_socks",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1. 已知总数额为 $0.3$ 亿元。\n2. 已知换算关系：$1$ 亿元 $= 100$ 个百万元。\n3. 我们可以建立比例关系来求解。\n4. $0.3$ 亿元对应的百万元数额 $=$ $0.3 \\times (1 \\text{ 亿元} \\text{ 对应的百万元数})$。\n5. 替换已知值：$0.3 \\times 100$ 个百万元。\n6. 计算乘积：$0.3 \\times 100 = 30$。\n7. 因此，该数额等于 $30$ 个百万元。\n\nFinal answer: 30",
+      "created_at": "2026-04-27T19:39:10",
+      "gold_answer": "30",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n一个数额是0.3亿元，其中1亿元等于100个百万元。它等于多少个百万元？<turn|>\n<|turn>model\n",
+      "raw_completion": "1. 已知总数额为 $0.3$ 亿元。\n2. 已知换算关系：$1$ 亿元 $= 100$ 个百万元。\n3. 我们可以建立比例关系来求解。\n4. $0.3$ 亿元对应的百万元数额 $=$ $0.3 \\times (1 \\text{ 亿元} \\text{ 对应的百万元数})$。\n5. 替换已知值：$0.3 \\times 100$ 个百万元。\n6. 计算乘积：$0.3 \\times 100 = 30$。\n7. 因此，该数额等于 $30$ 个百万元。\n\nFinal answer: 30",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "unit_million_yi",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "已知一个数额为 0.3 亿元。\n已知 1 亿元等于 100 个百万元。\n因此，0.3 亿元的百万元数额等于 $0.3 \\times 100$ 个百万元。\n计算 $0.3 \\times 100$ 得到 30。\n所以，该数额等于 30 个百万元。\n\nFinal answer: 30",
+      "created_at": "2026-04-27T19:39:13",
+      "gold_answer": "30",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n一个数额是0.3亿元，其中1亿元等于100个百万元。它等于多少个百万元？<turn|>\n<|turn>model\n",
+      "raw_completion": "已知一个数额为 0.3 亿元。\n已知 1 亿元等于 100 个百万元。\n因此，0.3 亿元的百万元数额等于 $0.3 \\times 100$ 个百万元。\n计算 $0.3 \\times 100$ 得到 30。\n所以，该数额等于 30 个百万元。\n\nFinal answer: 30",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "unit_million_yi",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "Step 1: Identify the given amount. The amount is $0.3$ billion yuan.\nStep 2: Identify the conversion rate. $1$ billion yuan equals $100$ million yuan.\nStep 3: Set up the calculation. To find the amount in million yuan, multiply the amount in billion yuan by the conversion factor.\nStep 4: Perform the multiplication. $0.3 \\times 100$.\nStep 5: Calculate the result. $0.3 \\times 100 = 30$.\nStep 6: State the final unit. The amount is $30$ million yuan.\n\nFinal answer: 30",
+      "created_at": "2026-04-27T19:39:17",
+      "gold_answer": "30",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一个数额是0.3亿元，其中1亿元等于100个百万元。它等于多少个百万元？<turn|>\n<|turn>model\n",
+      "raw_completion": "Step 1: Identify the given amount. The amount is $0.3$ billion yuan.\nStep 2: Identify the conversion rate. $1$ billion yuan equals $100$ million yuan.\nStep 3: Set up the calculation. To find the amount in million yuan, multiply the amount in billion yuan by the conversion factor.\nStep 4: Perform the multiplication. $0.3 \\times 100$.\nStep 5: Calculate the result. $0.3 \\times 100 = 30$.\nStep 6: State the final unit. The amount is $30$ million yuan.\n\nFinal answer: 30",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "unit_million_yi",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The given amount is 0.3亿元.\nWe are given the conversion: 1亿元 = 100个百万元.\nWe need to find the equivalent amount in \"百万元\".\nWe can set up a proportion or use multiplication.\nAmount in 百万元 = Given amount in 亿元 $\\times$ Conversion factor.\nAmount in 百万元 = $0.3 \\times 100$.\nAmount in 百万元 = 30.\n\nFinal answer: 30",
+      "created_at": "2026-04-27T19:39:19",
+      "gold_answer": "30",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一个数额是0.3亿元，其中1亿元等于100个百万元。它等于多少个百万元？<turn|>\n<|turn>model\n",
+      "raw_completion": "The given amount is 0.3亿元.\nWe are given the conversion: 1亿元 = 100个百万元.\nWe need to find the equivalent amount in \"百万元\".\nWe can set up a proportion or use multiplication.\nAmount in 百万元 = Given amount in 亿元 $\\times$ Conversion factor.\nAmount in 百万元 = $0.3 \\times 100$.\nAmount in 百万元 = 30.\n\nFinal answer: 30",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "unit_million_yi",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "这是一个组合问题，因为委员会的成员顺序不重要。\n我们可以使用组合公式 $C(n, k) = \\frac{n!}{k!(n-k)!}$ 来求解。\n其中 $n$ 是学生总数，即 5。\n$k$ 是需要选出的委员会人数，即 2。\n代入公式：$C(5, 2) = \\frac{5!}{2!(5-2)!}$。\n计算阶乘：$5! = 5 \\times 4 \\times 3 \\times 2 \\times 1 = 120$；$2! = 2 \\times 1 = 2$；$(5-2)! = 3! = 3 \\times 2 \\times 1 = 6$。\n代入数值：$C(5, 2) = \\frac{120}{2 \\times 6} = \\frac{120}{12}$。\n最终结果是 10 种选法。\n\nFinal answer: 10",
+      "created_at": "2026-04-27T19:39:26",
+      "gold_answer": "10",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n从5名学生中选2名组成不区分顺序的委员会。有多少种选法？<turn|>\n<|turn>model\n",
+      "raw_completion": "这是一个组合问题，因为委员会的成员顺序不重要。\n我们可以使用组合公式 $C(n, k) = \\frac{n!}{k!(n-k)!}$ 来求解。\n其中 $n$ 是学生总数，即 5。\n$k$ 是需要选出的委员会人数，即 2。\n代入公式：$C(5, 2) = \\frac{5!}{2!(5-2)!}$。\n计算阶乘：$5! = 5 \\times 4 \\times 3 \\times 2 \\times 1 = 120$；$2! = 2 \\times 1 = 2$；$(5-2)! = 3! = 3 \\times 2 \\times 1 = 6$。\n代入数值：$C(5, 2) = \\frac{120}{2 \\times 6} = \\frac{120}{12}$。\n最终结果是 10 种选法。\n\nFinal answer: 10",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "comb_choose_unordered",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "这是一个组合问题，因为委员会的成员顺序不重要（不区分顺序）。\n我们需要从 $n=5$ 名学生中选择 $k=2$ 名。\n使用的组合公式为 $C(n, k) = \\frac{n!}{k!(n-k)!}$。\n代入数值：$C(5, 2) = \\frac{5!}{2!(5-2)!} = \\frac{5!}{2!3!}$。\n计算阶乘：$5! = 5 \\times 4 \\times 3 \\times 2 \\times 1 = 120$；$2! = 2$；$3! = 3 \\times 2 \\times 1 = 6$。\n代入公式：$C(5, 2) = \\frac{120}{2 \\times 6} = \\frac{120}{12}$。\n结果为 $10$。\n\nFinal answer: 10",
+      "created_at": "2026-04-27T19:39:31",
+      "gold_answer": "10",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n从5名学生中选2名组成不区分顺序的委员会。有多少种选法？<turn|>\n<|turn>model\n",
+      "raw_completion": "这是一个组合问题，因为委员会的成员顺序不重要（不区分顺序）。\n我们需要从 $n=5$ 名学生中选择 $k=2$ 名。\n使用的组合公式为 $C(n, k) = \\frac{n!}{k!(n-k)!}$。\n代入数值：$C(5, 2) = \\frac{5!}{2!(5-2)!} = \\frac{5!}{2!3!}$。\n计算阶乘：$5! = 5 \\times 4 \\times 3 \\times 2 \\times 1 = 120$；$2! = 2$；$3! = 3 \\times 2 \\times 1 = 6$。\n代入公式：$C(5, 2) = \\frac{120}{2 \\times 6} = \\frac{120}{12}$。\n结果为 $10$。\n\nFinal answer: 10",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "comb_choose_unordered",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The total number of students is $n=5$.\nThe number of students to be selected is $k=2$.\nSince the order does not matter, we use combinations.\nThe formula for combinations is $C(n, k) = \\frac{n!}{k!(n-k)!}$.\nSubstitute the values: $C(5, 2) = \\frac{5!}{2!(5-2)!}$.\n$C(5, 2) = \\frac{5!}{2!3!}$.\nCalculate the factorials: $5! = 120$, $2! = 2$, $3! = 6$.\n$C(5, 2) = \\frac{120}{2 \\times 6}$.\n$C(5, 2) = \\frac{120}{12}$.\n$C(5, 2) = 10$.\n\nFinal answer: 10",
+      "created_at": "2026-04-27T19:39:37",
+      "gold_answer": "10",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n从5名学生中选2名组成不区分顺序的委员会。有多少种选法？<turn|>\n<|turn>model\n",
+      "raw_completion": "The total number of students is $n=5$.\nThe number of students to be selected is $k=2$.\nSince the order does not matter, we use combinations.\nThe formula for combinations is $C(n, k) = \\frac{n!}{k!(n-k)!}$.\nSubstitute the values: $C(5, 2) = \\frac{5!}{2!(5-2)!}$.\n$C(5, 2) = \\frac{5!}{2!3!}$.\nCalculate the factorials: $5! = 120$, $2! = 2$, $3! = 6$.\n$C(5, 2) = \\frac{120}{2 \\times 6}$.\n$C(5, 2) = \\frac{120}{12}$.\n$C(5, 2) = 10$.\n\nFinal answer: 10",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "comb_choose_unordered",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The problem asks for the number of ways to choose 2 students from a group of 5, where the order of selection does not matter.\nThis is a combination problem, denoted as \"5 choose 2\" or $\\binom{5}{2}$.\nThe formula for combinations is $\\binom{n}{k} = \\frac{n!}{k!(n-k)!}$.\nHere, $n=5$ (total students) and $k=2$ (students to be chosen).\nSubstitute the values into the formula: $\\binom{5}{2} = \\frac{5!}{2!(5-2)!}$.\nSimplify the factorials: $\\binom{5}{2} = \\frac{5!}{2!3!}$.\nExpand the factorials: $\\binom{5}{2} = \\frac{5 \\times 4 \\times 3 \\times 2 \\times 1}{(2 \\times 1)(3 \\times 2 \\times 1)}$.\nCancel out $3!$: $\\binom{5}{2} = \\frac{5 \\times 4}{2 \\times 1}$.\nCalculate the result: $\\binom{5}{2} = \\frac{20}{2} = 10$.\n\nFinal answer: 10",
+      "created_at": "2026-04-27T19:39:44",
+      "gold_answer": "10",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n从5名学生中选2名组成不区分顺序的委员会。有多少种选法？<turn|>\n<|turn>model\n",
+      "raw_completion": "The problem asks for the number of ways to choose 2 students from a group of 5, where the order of selection does not matter.\nThis is a combination problem, denoted as \"5 choose 2\" or $\\binom{5}{2}$.\nThe formula for combinations is $\\binom{n}{k} = \\frac{n!}{k!(n-k)!}$.\nHere, $n=5$ (total students) and $k=2$ (students to be chosen).\nSubstitute the values into the formula: $\\binom{5}{2} = \\frac{5!}{2!(5-2)!}$.\nSimplify the factorials: $\\binom{5}{2} = \\frac{5!}{2!3!}$.\nExpand the factorials: $\\binom{5}{2} = \\frac{5 \\times 4 \\times 3 \\times 2 \\times 1}{(2 \\times 1)(3 \\times 2 \\times 1)}$.\nCancel out $3!$: $\\binom{5}{2} = \\frac{5 \\times 4}{2 \\times 1}$.\nCalculate the result: $\\binom{5}{2} = \\frac{20}{2} = 10$.\n\nFinal answer: 10",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "comb_choose_unordered",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "总共有5名学生。\n需要从这5名学生中选出主席和秘书。\n这是一个有顺序的排列问题，因为主席和秘书的职位是不同的。\n从5人中选1名担任主席，有5种选择。\n在选择了主席后，剩下4名学生可以选择担任秘书。\n因此，总的任命方式数是主席的选择数乘以秘书的选择数。\n任命方式数 = $5 \\times 4$\n任命方式数 = 20。\n\nFinal answer: 20",
+      "created_at": "2026-04-27T19:39:47",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n从5名学生中选出一名主席和一名秘书，不能由同一人兼任。有多少种任命方式？<turn|>\n<|turn>model\n",
+      "raw_completion": "总共有5名学生。\n需要从这5名学生中选出主席和秘书。\n这是一个有顺序的排列问题，因为主席和秘书的职位是不同的。\n从5人中选1名担任主席，有5种选择。\n在选择了主席后，剩下4名学生可以选择担任秘书。\n因此，总的任命方式数是主席的选择数乘以秘书的选择数。\n任命方式数 = $5 \\times 4$\n任命方式数 = 20。\n\nFinal answer: 20",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "comb_assign_ordered",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "这是一个排列问题，因为主席和秘书的职位是不同的，顺序是重要的。\n从5名学生中选出1名主席，有5种选择。\n在选出主席后，还剩下4名学生可以选择做秘书。\n因此，任命方式的总数是主席的选择数乘以秘书的选择数。\n总任命方式数 = $5 \\times 4$。\n总任命方式数 = 20。\n\nFinal answer: 20",
+      "created_at": "2026-04-27T19:39:50",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n从5名学生中选出一名主席和一名秘书，不能由同一人兼任。有多少种任命方式？<turn|>\n<|turn>model\n",
+      "raw_completion": "这是一个排列问题，因为主席和秘书的职位是不同的，顺序是重要的。\n从5名学生中选出1名主席，有5种选择。\n在选出主席后，还剩下4名学生可以选择做秘书。\n因此，任命方式的总数是主席的选择数乘以秘书的选择数。\n总任命方式数 = $5 \\times 4$。\n总任命方式数 = 20。\n\nFinal answer: 20",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "comb_assign_ordered",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The selection involves two distinct roles: President and Secretary.\nThe total number of students available is 5.\nWe need to choose 2 students from 5, and the order matters (President $\\neq$ Secretary).\nThis is a permutation problem, specifically $P(n, k)$, where $n=5$ and $k=2$.\nAlternatively, we can use the multiplication principle.\nFor the President role, there are 5 choices.\nSince the same person cannot be Secretary, there are 4 remaining choices for Secretary.\nThe total number of ways is the product of the choices for each position.\nTotal ways = (Choices for President) $\\times$ (Choices for Secretary).\nTotal ways = $5 \\times 4$.\nTotal ways = 20.\n\nFinal answer: 20",
+      "created_at": "2026-04-27T19:39:54",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n从5名学生中选出一名主席和一名秘书，不能由同一人兼任。有多少种任命方式？<turn|>\n<|turn>model\n",
+      "raw_completion": "The selection involves two distinct roles: President and Secretary.\nThe total number of students available is 5.\nWe need to choose 2 students from 5, and the order matters (President $\\neq$ Secretary).\nThis is a permutation problem, specifically $P(n, k)$, where $n=5$ and $k=2$.\nAlternatively, we can use the multiplication principle.\nFor the President role, there are 5 choices.\nSince the same person cannot be Secretary, there are 4 remaining choices for Secretary.\nThe total number of ways is the product of the choices for each position.\nTotal ways = (Choices for President) $\\times$ (Choices for Secretary).\nTotal ways = $5 \\times 4$.\nTotal ways = 20.\n\nFinal answer: 20",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "comb_assign_ordered",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "There are 5 students in total.\nWe need to select a President and a Secretary.\nThe roles are distinct (President $\\neq$ Secretary).\nThe same person cannot hold both positions.\nThis is a permutation problem since order matters.\nFor the President, there are 5 choices.\nOnce the President is chosen, there are 4 remaining students for Secretary.\nThe total number of ways is the product of the choices.\nTotal ways = $5 \\times 4$.\nTotal ways = 20.\n\nFinal answer: 20",
+      "created_at": "2026-04-27T19:39:58",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n从5名学生中选出一名主席和一名秘书，不能由同一人兼任。有多少种任命方式？<turn|>\n<|turn>model\n",
+      "raw_completion": "There are 5 students in total.\nWe need to select a President and a Secretary.\nThe roles are distinct (President $\\neq$ Secretary).\nThe same person cannot hold both positions.\nThis is a permutation problem since order matters.\nFor the President, there are 5 choices.\nOnce the President is chosen, there are 4 remaining students for Secretary.\nThe total number of ways is the product of the choices.\nTotal ways = $5 \\times 4$.\nTotal ways = 20.\n\nFinal answer: 20",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "comb_assign_ordered",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1. 组成两位代码意味着需要选择两个位置：第一个位置和第二个位置。\n2. 允许重复，所以每个位置的选择都是独立的。\n3. 可选的字母集合是 $\\{A, B, C\\}$，共有 3 个元素。\n4. 对于第一个位置，有 3 种选择（A、B 或 C）。\n5. 对于第二个位置，也有 3 种选择（A、B 或 C），因为允许重复。\n6. 总代码数是第一个位置的选择数乘以第二个位置的选择数。\n7. 计算：$3 \\times 3 = 9$。\n\nFinal answer: 9",
+      "created_at": "2026-04-27T19:40:01",
+      "gold_answer": "9",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n用A、B、C三个字母组成两位代码，允许重复。有多少种代码？<turn|>\n<|turn>model\n",
+      "raw_completion": "1. 组成两位代码意味着需要选择两个位置：第一个位置和第二个位置。\n2. 允许重复，所以每个位置的选择都是独立的。\n3. 可选的字母集合是 $\\{A, B, C\\}$，共有 3 个元素。\n4. 对于第一个位置，有 3 种选择（A、B 或 C）。\n5. 对于第二个位置，也有 3 种选择（A、B 或 C），因为允许重复。\n6. 总代码数是第一个位置的选择数乘以第二个位置的选择数。\n7. 计算：$3 \\times 3 = 9$。\n\nFinal answer: 9",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "comb_with_replacement",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1. 这是一个排列组合问题，我们需要组成两位代码。\n2. 代码由两个位置构成：第一个位置和第二个位置。\n3. 每个位置都可以使用字母 A、B 或 C，共有 3 个选择。\n4. 由于允许重复，第一个位置的选择不影响第二个位置的选择。\n5. 第一个位置有 3 种选择（A, B, 或 C）。\n6. 第二个位置有 3 种选择（A, B, 或 C）。\n7. 总代码数是两个位置选择数的乘积。\n8. 总代码数 = (第一个位置的选择数) $\\times$ (第二个位置的选择数)。\n9. 总代码数 = $3 \\times 3 = 9$。\n\nFinal answer: 9",
+      "created_at": "2026-04-27T19:40:06",
+      "gold_answer": "9",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n用A、B、C三个字母组成两位代码，允许重复。有多少种代码？<turn|>\n<|turn>model\n",
+      "raw_completion": "1. 这是一个排列组合问题，我们需要组成两位代码。\n2. 代码由两个位置构成：第一个位置和第二个位置。\n3. 每个位置都可以使用字母 A、B 或 C，共有 3 个选择。\n4. 由于允许重复，第一个位置的选择不影响第二个位置的选择。\n5. 第一个位置有 3 种选择（A, B, 或 C）。\n6. 第二个位置有 3 种选择（A, B, 或 C）。\n7. 总代码数是两个位置选择数的乘积。\n8. 总代码数 = (第一个位置的选择数) $\\times$ (第二个位置的选择数)。\n9. 总代码数 = $3 \\times 3 = 9$。\n\nFinal answer: 9",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "comb_with_replacement",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "We have three available letters: A, B, and C.\nWe need to form a two-digit code.\nThe code has two positions (first digit and second digit).\nRepetition of letters is allowed.\nFor the first position, there are 3 choices (A, B, or C).\nFor the second position, there are also 3 choices (A, B, or C).\nTo find the total number of codes, we multiply the number of choices for each position.\nTotal codes = (Choices for first position) $\\times$ (Choices for second position).\nTotal codes = $3 \\times 3$.\nTotal codes = 9.\n\nFinal answer: 9",
+      "created_at": "2026-04-27T19:40:10",
+      "gold_answer": "9",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n用A、B、C三个字母组成两位代码，允许重复。有多少种代码？<turn|>\n<|turn>model\n",
+      "raw_completion": "We have three available letters: A, B, and C.\nWe need to form a two-digit code.\nThe code has two positions (first digit and second digit).\nRepetition of letters is allowed.\nFor the first position, there are 3 choices (A, B, or C).\nFor the second position, there are also 3 choices (A, B, or C).\nTo find the total number of codes, we multiply the number of choices for each position.\nTotal codes = (Choices for first position) $\\times$ (Choices for second position).\nTotal codes = $3 \\times 3$.\nTotal codes = 9.\n\nFinal answer: 9",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "comb_with_replacement",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "There are three possible choices for the first digit (A, B, or C).\nSince repetition is allowed, there are also three possible choices for the second digit (A, B, or C).\nThe total number of combinations is the product of the choices for each position.\nNumber of options for the first digit = 3.\nNumber of options for the second digit = 3.\nTotal codes = (Options for first digit) $\\times$ (Options for second digit).\nTotal codes = $3 \\times 3$.\nTotal codes = 9.\n\nFinal answer: 9",
+      "created_at": "2026-04-27T19:40:13",
+      "gold_answer": "9",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n用A、B、C三个字母组成两位代码，允许重复。有多少种代码？<turn|>\n<|turn>model\n",
+      "raw_completion": "There are three possible choices for the first digit (A, B, or C).\nSince repetition is allowed, there are also three possible choices for the second digit (A, B, or C).\nThe total number of combinations is the product of the choices for each position.\nNumber of options for the first digit = 3.\nNumber of options for the second digit = 3.\nTotal codes = (Options for first digit) $\\times$ (Options for second digit).\nTotal codes = $3 \\times 3$.\nTotal codes = 9.\n\nFinal answer: 9",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "comb_with_replacement",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "表达式 $7x^3$ 可以看作是 $7 \\cdot x^3$。\n在乘法中，常数因子 $7$ 是 $x^3$ 的系数。\n因此，$x^3$ 的系数是 $7$。\n\nFinal answer: 7",
+      "created_at": "2026-04-27T19:40:15",
+      "gold_answer": "7",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n在表达式7x^3中，x^3的系数是多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "表达式 $7x^3$ 可以看作是 $7 \\cdot x^3$。\n在乘法中，常数因子 $7$ 是 $x^3$ 的系数。\n因此，$x^3$ 的系数是 $7$。\n\nFinal answer: 7",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "algebra_coefficient",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1. 表达式是 $7x^3$。\n2. 表达式中包含一个变量部分 $x^3$。\n3. 系数是与变量部分相乘的常数因子。\n4. 在 $7x^3$ 中，常数因子是 $7$。\n5. 因此，$x^3$ 的系数是 $7$。\n\nFinal answer: 7",
+      "created_at": "2026-04-27T19:40:17",
+      "gold_answer": "7",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n在表达式7x^3中，x^3的系数是多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "1. 表达式是 $7x^3$。\n2. 表达式中包含一个变量部分 $x^3$。\n3. 系数是与变量部分相乘的常数因子。\n4. 在 $7x^3$ 中，常数因子是 $7$。\n5. 因此，$x^3$ 的系数是 $7$。\n\nFinal answer: 7",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "algebra_coefficient",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The expression is $7x^3$.\nWe are looking for the coefficient of the term $x^3$.\nIn a term like $ax^n$, $a$ is the coefficient.\nHere, the variable part is $x^3$, so $n=3$.\nThe constant multiplying $x^3$ is $7$.\nTherefore, $7$ is the coefficient of $x^3$.\n\nFinal answer: 7",
+      "created_at": "2026-04-27T19:40:20",
+      "gold_answer": "7",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n在表达式7x^3中，x^3的系数是多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "The expression is $7x^3$.\nWe are looking for the coefficient of the term $x^3$.\nIn a term like $ax^n$, $a$ is the coefficient.\nHere, the variable part is $x^3$, so $n=3$.\nThe constant multiplying $x^3$ is $7$.\nTherefore, $7$ is the coefficient of $x^3$.\n\nFinal answer: 7",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "algebra_coefficient",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The expression is $7x^3$.\nThe term is $x^3$.\nThe coefficient is the numerical factor multiplying the variable part.\nIn this case, the numerical factor is $7$.\n\nFinal answer: 7",
+      "created_at": "2026-04-27T19:40:21",
+      "gold_answer": "7",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n在表达式7x^3中，x^3的系数是多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "The expression is $7x^3$.\nThe term is $x^3$.\nThe coefficient is the numerical factor multiplying the variable part.\nIn this case, the numerical factor is $7$.\n\nFinal answer: 7",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "algebra_coefficient",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1. 观察给定的表达式是 $7x^3$。\n2. 在代数表达式中，变量（这里是 $x$）的指数指的是该变量的幂次。\n3. 在 $7x^3$ 中，$7$ 是系数，它与 $x$ 的幂次无关。\n4. $x^3$ 表示 $x$ 自身相乘了 3 次，即 $x \\times x \\times x$。\n5. 因此，变量 $x$ 的指数是 3。\n\nFinal answer: 3",
+      "created_at": "2026-04-27T19:40:24",
+      "gold_answer": "3",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n在表达式7x^3中，x的指数是多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "1. 观察给定的表达式是 $7x^3$。\n2. 在代数表达式中，变量（这里是 $x$）的指数指的是该变量的幂次。\n3. 在 $7x^3$ 中，$7$ 是系数，它与 $x$ 的幂次无关。\n4. $x^3$ 表示 $x$ 自身相乘了 3 次，即 $x \\times x \\times x$。\n5. 因此，变量 $x$ 的指数是 3。\n\nFinal answer: 3",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "algebra_exponent",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "表达式为 $7x^3$。\n在幂的形式 $ax^n$ 中，$x$ 的指数是 $n$。\n观察 $7x^3$，我们可以看到 $x$ 的上方有一个上标 $3$。\n这个上标就是 $x$ 的指数。\n因此，$x$ 的指数是 $3$。\n\nFinal answer: 3",
+      "created_at": "2026-04-27T19:40:27",
+      "gold_answer": "3",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n在表达式7x^3中，x的指数是多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "表达式为 $7x^3$。\n在幂的形式 $ax^n$ 中，$x$ 的指数是 $n$。\n观察 $7x^3$，我们可以看到 $x$ 的上方有一个上标 $3$。\n这个上标就是 $x$ 的指数。\n因此，$x$ 的指数是 $3$。\n\nFinal answer: 3",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "algebra_exponent",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The expression is $7x^3$.\nWe need to identify the exponent of $x$ in this expression.\nThe term is a monomial, which has a coefficient and a variable raised to a power.\nThe variable part is $x^3$.\nThe exponent is the small number written above and to the right of the base.\nIn $x^3$, the base is $x$.\nThe exponent is $3$.\n\nFinal answer: 3",
+      "created_at": "2026-04-27T19:40:29",
+      "gold_answer": "3",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n在表达式7x^3中，x的指数是多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "The expression is $7x^3$.\nWe need to identify the exponent of $x$ in this expression.\nThe term is a monomial, which has a coefficient and a variable raised to a power.\nThe variable part is $x^3$.\nThe exponent is the small number written above and to the right of the base.\nIn $x^3$, the base is $x$.\nThe exponent is $3$.\n\nFinal answer: 3",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "algebra_exponent",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The expression is $7x^3$.\nThe term is $x^3$.\nThe variable is $x$.\nThe exponent indicates how many times the base is multiplied by itself.\nIn $x^3$, $x$ is multiplied by itself three times ($x \\cdot x \\cdot x$).\nThe number written above and to the right of the base is the exponent.\nIn this case, the exponent is 3.\n\nFinal answer: 3",
+      "created_at": "2026-04-27T19:40:32",
+      "gold_answer": "3",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n在表达式7x^3中，x的指数是多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "The expression is $7x^3$.\nThe term is $x^3$.\nThe variable is $x$.\nThe exponent indicates how many times the base is multiplied by itself.\nIn $x^3$, $x$ is multiplied by itself three times ($x \\cdot x \\cdot x$).\nThe number written above and to the right of the base is the exponent.\nIn this case, the exponent is 3.\n\nFinal answer: 3",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "algebra_exponent",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "设函数为 $f(x) = x^2 + 1$。\n首先，求函数的导数 $f'(x)$。\n根据幂函数的求导法则，$\\frac{d}{dx}(x^n) = nx^{n-1}$，常数的导数为零。\n因此，$f'(x) = \\frac{d}{dx}(x^2) + \\frac{d}{dx}(1) = 2x + 0 = 2x$。\n接下来，计算 $f'(3)$。\n将 $x=3$ 代入 $f'(x)$ 的表达式中。\n$f'(3) = 2(3) = 6$。\n\nFinal answer: 6",
+      "created_at": "2026-04-27T19:40:36",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n对于f(x)=x^2+1，f'(3)是多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "设函数为 $f(x) = x^2 + 1$。\n首先，求函数的导数 $f'(x)$。\n根据幂函数的求导法则，$\\frac{d}{dx}(x^n) = nx^{n-1}$，常数的导数为零。\n因此，$f'(x) = \\frac{d}{dx}(x^2) + \\frac{d}{dx}(1) = 2x + 0 = 2x$。\n接下来，计算 $f'(3)$。\n将 $x=3$ 代入 $f'(x)$ 的表达式中。\n$f'(3) = 2(3) = 6$。\n\nFinal answer: 6",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "calculus_derivative_at_point",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "1. 给定函数 $f(x) = x^2 + 1$。\n2. 需要求函数在 $x=3$ 处的导数值 $f'(3)$。\n3. 首先，求函数 $f(x)$ 的导数 $f'(x)$。\n4. 根据幂函数的求导法则，$\\frac{d}{dx}(x^n) = nx^{n-1}$。\n5. $f'(x) = \\frac{d}{dx}(x^2 + 1) = \\frac{d}{dx}(x^2) + \\frac{d}{dx}(1)$。\n6. $\\frac{d}{dx}(x^2) = 2x^{2-1} = 2x$。\n7. $\\frac{d}{dx}(1) = 0$（常数的导数为零）。\n8. 因此，$f'(x) = 2x + 0 = 2x$。\n9. 最后，将 $x=3$ 代入导数函数 $f'(x)$。\n10. $f'(3) = 2 \\times 3$。\n11. $f'(3) = 6$。\n\nFinal answer: 6",
+      "created_at": "2026-04-27T19:40:43",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。<turn|>\n<|turn>user\n对于f(x)=x^2+1，f'(3)是多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "1. 给定函数 $f(x) = x^2 + 1$。\n2. 需要求函数在 $x=3$ 处的导数值 $f'(3)$。\n3. 首先，求函数 $f(x)$ 的导数 $f'(x)$。\n4. 根据幂函数的求导法则，$\\frac{d}{dx}(x^n) = nx^{n-1}$。\n5. $f'(x) = \\frac{d}{dx}(x^2 + 1) = \\frac{d}{dx}(x^2) + \\frac{d}{dx}(1)$。\n6. $\\frac{d}{dx}(x^2) = 2x^{2-1} = 2x$。\n7. $\\frac{d}{dx}(1) = 0$（常数的导数为零）。\n8. 因此，$f'(x) = 2x + 0 = 2x$。\n9. 最后，将 $x=3$ 代入导数函数 $f'(x)$。\n10. $f'(3) = 2 \\times 3$。\n11. $f'(3) = 6$。\n\nFinal answer: 6",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "calculus_derivative_at_point",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "First, find the derivative of the function $f(x) = x^2 + 1$.\nUsing the power rule, the derivative $f'(x)$ is $2x$.\nNext, substitute $x=3$ into the derivative function.\n$f'(3) = 2(3)$.\nCalculate the result.\n$f'(3) = 6$.\n\nFinal answer: 6",
+      "created_at": "2026-04-27T19:40:46",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n对于f(x)=x^2+1，f'(3)是多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "First, find the derivative of the function $f(x) = x^2 + 1$.\nUsing the power rule, the derivative $f'(x)$ is $2x$.\nNext, substitute $x=3$ into the derivative function.\n$f'(3) = 2(3)$.\nCalculate the result.\n$f'(3) = 6$.\n\nFinal answer: 6",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "calculus_derivative_at_point",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The function is given by $f(x) = x^2 + 1$.\nFirst, find the derivative of $f(x)$, denoted as $f'(x)$.\nUsing the power rule, the derivative of $x^n$ is $nx^{n-1}$.\nThe derivative of $x^2$ is $2x^{2-1} = 2x$.\nThe derivative of the constant $1$ is $0$.\nSo, the derivative function is $f'(x) = 2x + 0 = 2x$.\nNext, evaluate the derivative at $x=3$.\nSubstitute $x=3$ into $f'(x)$.\n$f'(3) = 2(3)$.\n$f'(3) = 6$.\n\nFinal answer: 6",
+      "created_at": "2026-04-27T19:40:50",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n对于f(x)=x^2+1，f'(3)是多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "The function is given by $f(x) = x^2 + 1$.\nFirst, find the derivative of $f(x)$, denoted as $f'(x)$.\nUsing the power rule, the derivative of $x^n$ is $nx^{n-1}$.\nThe derivative of $x^2$ is $2x^{2-1} = 2x$.\nThe derivative of the constant $1$ is $0$.\nSo, the derivative function is $f'(x) = 2x + 0 = 2x$.\nNext, evaluate the derivative at $x=3$.\nSubstitute $x=3$ into $f'(x)$.\n$f'(3) = 2(3)$.\n$f'(3) = 6$.\n\nFinal answer: 6",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "calculus_derivative_at_point",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    }
+  ]
+}

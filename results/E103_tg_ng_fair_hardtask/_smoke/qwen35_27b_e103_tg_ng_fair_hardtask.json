@@ -1,0 +1,218 @@
+{
+  "args": {
+    "batch_size": 1,
+    "checkpoint_jsonl": "logs/e103_smoke_qwen35_checkpoint_20260429.jsonl",
+    "device": "auto",
+    "dtype": "bfloat16",
+    "k": 1,
+    "local_files_only": true,
+    "max_new_tokens": 64,
+    "model_key": "qwen35_27b",
+    "modes": [
+      "NG_baseline",
+      "TG_official"
+    ],
+    "out_dir": "results/E103_tg_ng_fair_hardtask/_smoke",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "seed": 20260429,
+    "task_ids": [
+      "aime25_base_divisor_p1"
+    ],
+    "tasks_yaml": "/home/Awei/P02_multilingual_process_lens/configs/e26_aime_hard_tasks.yaml",
+    "variants": [
+      "neutral"
+    ]
+  },
+  "created_at": "2026-04-29T20:39:40",
+  "cuda_visible_devices": "0,1,2,3",
+  "host": "hpc-node-01",
+  "mode_specs": [
+    {
+      "mode_label": "NG_baseline",
+      "sampling_note": "E49 non-thinking baseline",
+      "temperature": 0.7,
+      "thinking": false,
+      "top_k": 50,
+      "top_p": 0.95
+    },
+    {
+      "mode_label": "TG_official",
+      "sampling_note": "E91 Qwen thinking recommendation without unsupported presence_penalty",
+      "temperature": 1.0,
+      "thinking": true,
+      "top_k": 20,
+      "top_p": 0.95
+    }
+  ],
+  "model_key": "qwen35_27b",
+  "model_spec": {
+    "class": "post_trained_hybrid",
+    "family": "qwen35",
+    "loader_risk": "large model; conditional_generation_or_multimodal config may require transformers 5.x and AutoModelForImageTextToText fallback",
+    "notes": "core local P0 medium frontier model; downloaded via HF mirror on 2026-04-27; requires multi-GPU device_map=auto for full bf16 weights",
+    "path": "/home/Awei/LLM/Model/base/qwen35_27b",
+    "priority": "P0_core_frontier_medium",
+    "remote_repo": "Qwen/Qwen3.5-27B",
+    "status": "local_downloaded"
+  },
+  "prompt_variants": {
+    "neutral": "Solve the following AIME-style problem carefully. Show the reasoning needed to justify the result. End with exactly one line `Final answer: <integer>`.\n\nProblem: {problem}"
+  },
+  "rows": [
+    {
+      "add_special_tokens": false,
+      "completion": "To find the sum of all integer bases $b > 9$ for which $17_b$ is a divisor of $97_b$, we proceed with the following steps:\n\n### Step 1: Convert the numbers to base 10\nThe notation $d_k d_{k-1} \\",
+      "completion_chars": 194,
+      "created_at": "2026-04-29T20:39:36",
+      "experiment": "E103_tg_ng_fair_hardtask",
+      "explicit_final_marker_found": false,
+      "fallback_extracted_final": "-1",
+      "fallback_extraction_method": "tail_last_number",
+      "fallback_final_correct": false,
+      "generated_tokens": 64,
+      "gold_answer": "70",
+      "gold_answer_in_prompt": false,
+      "hit_max_new_tokens": true,
+      "known_trap_note_in_prompt": false,
+      "manual_acpi_strict": null,
+      "manual_acpi_unrepaired": null,
+      "manual_audit_status": "not_final_correct",
+      "manual_process_valid_repaired": null,
+      "manual_process_valid_strict": null,
+      "manual_repair_present": null,
+      "mode_label": "NG_baseline",
+      "model_key": "qwen35_27b",
+      "problem": "Find the sum of all integer bases $b>9$ for which $17_{b}$ is a divisor of $97_{b}$.",
+      "prompt_variant": "neutral",
+      "repair_marker_count": 0,
+      "sample_idx": 0,
+      "sampling_note": "E49 non-thinking baseline",
+      "strict_extracted_final": "",
+      "strict_extraction_method": "no_explicit_final",
+      "strict_final_correct": false,
+      "task_id": "aime25_base_divisor_p1",
+      "temperature": 0.7,
+      "thinking": false,
+      "top_k": 50,
+      "top_p": 0.95,
+      "trap_note_not_in_prompt": "Base notation: 17_b and 97_b are numbers in base b, not decimal subscripts.",
+      "used_chat_template": true
+    },
+    {
+      "add_special_tokens": false,
+      "completion": "The problem asks for the sum of all integer bases $b > 9$ such that $17_b$ divides $97_b$.\n\nFirst, let's write out the values of these numbers in base 10 (or simply as polynomials in $b$).\nThe notation $17_b",
+      "completion_chars": 207,
+      "created_at": "2026-04-29T20:39:40",
+      "experiment": "E103_tg_ng_fair_hardtask",
+      "explicit_final_marker_found": false,
+      "fallback_extracted_final": "17",
+      "fallback_extraction_method": "tail_last_number",
+      "fallback_final_correct": false,
+      "generated_tokens": 64,
+      "gold_answer": "70",
+      "gold_answer_in_prompt": false,
+      "hit_max_new_tokens": true,
+      "known_trap_note_in_prompt": false,
+      "manual_acpi_strict": null,
+      "manual_acpi_unrepaired": null,
+      "manual_audit_status": "not_final_correct",
+      "manual_process_valid_repaired": null,
+      "manual_process_valid_strict": null,
+      "manual_repair_present": null,
+      "mode_label": "TG_official",
+      "model_key": "qwen35_27b",
+      "problem": "Find the sum of all integer bases $b>9$ for which $17_{b}$ is a divisor of $97_{b}$.",
+      "prompt_variant": "neutral",
+      "repair_marker_count": 0,
+      "sample_idx": 0,
+      "sampling_note": "E91 Qwen thinking recommendation without unsupported presence_penalty",
+      "strict_extracted_final": "",
+      "strict_extraction_method": "no_explicit_final",
+      "strict_final_correct": false,
+      "task_id": "aime25_base_divisor_p1",
+      "temperature": 1.0,
+      "thinking": true,
+      "top_k": 20,
+      "top_p": 0.95,
+      "trap_note_not_in_prompt": "Base notation: 17_b and 97_b are numbers in base b, not decimal subscripts.",
+      "used_chat_template": true
+    }
+  ],
+  "scope_note_en": "E103 is a small TG/NG fairness probe; strict and fallback correctness must be reported separately.",
+  "scope_note_zh": "E103 是小样本 TG/NG 公平对照；strict_final_correct 与 fallback_final_correct 必须分开报告。",
+  "started_at": "2026-04-29T20:39:24",
+  "summary": {
+    "by_mode": {
+      "NG_baseline": {
+        "explicit_final_marker_rate": 0.0,
+        "fallback_final_correct": 0,
+        "hit_max_rate": 1.0,
+        "mean_generated_tokens": 64.0,
+        "mean_repair_markers": 0.0,
+        "n": 1,
+        "needs_audit": 0,
+        "strict_final_correct": 0
+      },
+      "TG_official": {
+        "explicit_final_marker_rate": 0.0,
+        "fallback_final_correct": 0,
+        "hit_max_rate": 1.0,
+        "mean_generated_tokens": 64.0,
+        "mean_repair_markers": 0.0,
+        "n": 1,
+        "needs_audit": 0,
+        "strict_final_correct": 0
+      }
+    },
+    "by_mode_task": {
+      "NG_baseline|aime25_base_divisor_p1": {
+        "explicit_final_marker_rate": 0.0,
+        "fallback_final_correct": 0,
+        "hit_max_rate": 1.0,
+        "mean_generated_tokens": 64.0,
+        "mean_repair_markers": 0.0,
+        "n": 1,
+        "needs_audit": 0,
+        "strict_final_correct": 0
+      },
+      "TG_official|aime25_base_divisor_p1": {
+        "explicit_final_marker_rate": 0.0,
+        "fallback_final_correct": 0,
+        "hit_max_rate": 1.0,
+        "mean_generated_tokens": 64.0,
+        "mean_repair_markers": 0.0,
+        "n": 1,
+        "needs_audit": 0,
+        "strict_final_correct": 0
+      }
+    },
+    "by_mode_variant": {
+      "NG_baseline|neutral": {
+        "explicit_final_marker_rate": 0.0,
+        "fallback_final_correct": 0,
+        "hit_max_rate": 1.0,
+        "mean_generated_tokens": 64.0,
+        "mean_repair_markers": 0.0,
+        "n": 1,
+        "needs_audit": 0,
+        "strict_final_correct": 0
+      },
+      "TG_official|neutral": {
+        "explicit_final_marker_rate": 0.0,
+        "fallback_final_correct": 0,
+        "hit_max_rate": 1.0,
+        "mean_generated_tokens": 64.0,
+        "mean_repair_markers": 0.0,
+        "n": 1,
+        "needs_audit": 0,
+        "strict_final_correct": 0
+      }
+    },
+    "leakage_audit": {
+      "gold_answer_in_prompt_rows": 0,
+      "known_trap_note_in_prompt_rows": 0,
+      "passed": true
+    },
+    "n": 2
+  }
+}

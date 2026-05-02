@@ -1,0 +1,183 @@
+{
+  "created_at": "2026-05-01T15:25:43",
+  "inputs": {
+    "qwen_checkpoint": "logs/e162_repair_qwen35_27b_checkpoint_20260501.jsonl",
+    "smoke_json": "results/E162_low_confidence_error_prompt_repair/gemma4_31b_it_e162_baseline_regenerate_prefix_continue_generic_error_prompt_localized_error_prompt_oracle_error_prompt_random_location_prompt_smoke_first_sample_20260501.json",
+    "status_file": "logs/e162_low_confidence_error_prompt_status_20260501.jsonl"
+  },
+  "notes": [
+    "Completed final files and checkpoint rows are separated by evidence_level.",
+    "Checkpoint rows are provisional and should be replaced by final JSON summaries when the queue completes."
+  ],
+  "row_count": 67,
+  "running_status_tail": [
+    {
+      "status": "start",
+      "step": "e162_build_case_bank",
+      "ts": "2026-05-01T14:56:27+08:00"
+    },
+    {
+      "status": "done",
+      "step": "e162_build_case_bank",
+      "ts": "2026-05-01T14:56:27+08:00"
+    },
+    {
+      "status": "start",
+      "step": "e162_static_audit",
+      "ts": "2026-05-01T14:56:27+08:00"
+    },
+    {
+      "status": "done",
+      "step": "e162_static_audit",
+      "ts": "2026-05-01T14:56:30+08:00"
+    },
+    {
+      "status": "start",
+      "step": "e162_repair_qwen35_27b",
+      "ts": "2026-05-01T14:56:30+08:00"
+    }
+  ],
+  "summary": {
+    "by_evidence_level": {
+      "completed_final_file": {
+        "error_mentioned": 1,
+        "final_correct": 2,
+        "final_marker_found": 6,
+        "hit_max": 0,
+        "label::answer_repaired_from_wrong_source": 2,
+        "label::final_wrong": 4,
+        "n": 6,
+        "source_answer_repeated": 4
+      },
+      "provisional_checkpoint": {
+        "error_mentioned": 44,
+        "final_correct": 57,
+        "final_marker_found": 57,
+        "hit_max": 4,
+        "label::final_correct_process_repair_not_visible": 15,
+        "label::incomplete_generation": 4,
+        "label::process_error_identified_or_repaired_final_correct": 42,
+        "n": 61,
+        "source_answer_repeated": 57
+      }
+    },
+    "by_evidence_level_and_family": {
+      "completed_final_file::multilingual_semantic": {
+        "error_mentioned": 1,
+        "final_correct": 2,
+        "hit_max": 0,
+        "n": 6
+      },
+      "provisional_checkpoint::algebra_sign_symmetry": {
+        "error_mentioned": 15,
+        "final_correct": 21,
+        "hit_max": 3,
+        "n": 24
+      },
+      "provisional_checkpoint::code_boundary_zero": {
+        "error_mentioned": 20,
+        "final_correct": 24,
+        "hit_max": 0,
+        "n": 24
+      },
+      "provisional_checkpoint::counting_complement": {
+        "error_mentioned": 9,
+        "final_correct": 12,
+        "hit_max": 1,
+        "n": 13
+      }
+    },
+    "by_evidence_level_and_variant": {
+      "completed_final_file::baseline_regenerate": {
+        "error_mentioned": 0,
+        "final_correct": 0,
+        "hit_max": 0,
+        "label::final_wrong": 1,
+        "n": 1
+      },
+      "completed_final_file::generic_error_prompt": {
+        "error_mentioned": 0,
+        "final_correct": 0,
+        "hit_max": 0,
+        "label::final_wrong": 1,
+        "n": 1
+      },
+      "completed_final_file::localized_error_prompt": {
+        "error_mentioned": 1,
+        "final_correct": 1,
+        "hit_max": 0,
+        "label::answer_repaired_from_wrong_source": 1,
+        "n": 1
+      },
+      "completed_final_file::oracle_error_prompt": {
+        "error_mentioned": 0,
+        "final_correct": 1,
+        "hit_max": 0,
+        "label::answer_repaired_from_wrong_source": 1,
+        "n": 1
+      },
+      "completed_final_file::prefix_continue": {
+        "error_mentioned": 0,
+        "final_correct": 0,
+        "hit_max": 0,
+        "label::final_wrong": 1,
+        "n": 1
+      },
+      "completed_final_file::random_location_prompt": {
+        "error_mentioned": 0,
+        "final_correct": 0,
+        "hit_max": 0,
+        "label::final_wrong": 1,
+        "n": 1
+      },
+      "provisional_checkpoint::baseline_regenerate": {
+        "error_mentioned": 0,
+        "final_correct": 9,
+        "hit_max": 2,
+        "label::final_correct_process_repair_not_visible": 9,
+        "label::incomplete_generation": 2,
+        "n": 11
+      },
+      "provisional_checkpoint::generic_error_prompt": {
+        "error_mentioned": 9,
+        "final_correct": 9,
+        "hit_max": 1,
+        "label::final_correct_process_repair_not_visible": 1,
+        "label::incomplete_generation": 1,
+        "label::process_error_identified_or_repaired_final_correct": 8,
+        "n": 10
+      },
+      "provisional_checkpoint::localized_error_prompt": {
+        "error_mentioned": 10,
+        "final_correct": 9,
+        "hit_max": 1,
+        "label::incomplete_generation": 1,
+        "label::process_error_identified_or_repaired_final_correct": 9,
+        "n": 10
+      },
+      "provisional_checkpoint::oracle_error_prompt": {
+        "error_mentioned": 10,
+        "final_correct": 10,
+        "hit_max": 0,
+        "label::process_error_identified_or_repaired_final_correct": 10,
+        "n": 10
+      },
+      "provisional_checkpoint::prefix_continue": {
+        "error_mentioned": 7,
+        "final_correct": 10,
+        "hit_max": 0,
+        "label::final_correct_process_repair_not_visible": 3,
+        "label::process_error_identified_or_repaired_final_correct": 7,
+        "n": 10
+      },
+      "provisional_checkpoint::random_location_prompt": {
+        "error_mentioned": 8,
+        "final_correct": 10,
+        "hit_max": 0,
+        "label::final_correct_process_repair_not_visible": 2,
+        "label::process_error_identified_or_repaired_final_correct": 8,
+        "n": 10
+      }
+    }
+  }
+}

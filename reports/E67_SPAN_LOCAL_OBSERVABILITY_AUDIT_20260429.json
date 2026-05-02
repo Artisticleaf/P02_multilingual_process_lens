@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-04-29T04:05:27",
+  "passed": true,
+  "checks": [
+    {
+      "check": "E61 span metadata rows",
+      "ok": true,
+      "detail": "48"
+    },
+    {
+      "check": "qwen35_27b E61 result exists",
+      "ok": true,
+      "detail": "results/E61_language_error_grid/qwen35_27b_e61_language_error_grid_chat.json"
+    },
+    {
+      "check": "gemma4_31b_it E61 result exists",
+      "ok": true,
+      "detail": "results/E61_language_error_grid/gemma4_31b_it_e61_language_error_grid_chat.json"
+    },
+    {
+      "check": "gemma4_26b_a4b_it E61 result exists",
+      "ok": true,
+      "detail": "results/E61_language_error_grid/gemma4_26b_a4b_it_e61_language_error_grid_chat.json"
+    },
+    {
+      "check": "glm47_flash_candidate E61 result exists",
+      "ok": true,
+      "detail": "results/E61_language_error_grid/glm47_flash_candidate_e61_language_error_grid_chat.json"
+    },
+    {
+      "check": "qwen35_27b E65 result exists",
+      "ok": true,
+      "detail": "results/E65_mechanistic_layer_sweep/qwen35_27b_e65_e61_layer_sweep.json"
+    },
+    {
+      "check": "gemma4_31b_it E65 result exists",
+      "ok": true,
+      "detail": "results/E65_mechanistic_layer_sweep/gemma4_31b_it_e65_e61_layer_sweep.json"
+    },
+    {
+      "check": "gemma4_26b_a4b_it E65 result exists",
+      "ok": true,
+      "detail": "results/E65_mechanistic_layer_sweep/gemma4_26b_a4b_it_e65_e61_layer_sweep.json"
+    },
+    {
+      "check": "glm47_flash_candidate E65 result exists",
+      "ok": true,
+      "detail": "results/E65_mechanistic_layer_sweep/glm47_flash_candidate_e65_e61_layer_sweep.json"
+    }
+  ],
+  "result_path": "results/E67_span_local_observability/e67_span_local_observability.json",
+  "leakage_boundary_zh": "error_span 只用于离线分组分析；E61/E65 的模型 prompt 没有插入 error_span/support_span。"
+}

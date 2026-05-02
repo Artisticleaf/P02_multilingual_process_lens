@@ -1,0 +1,14 @@
+{
+  "case_count": 42,
+  "issues": [],
+  "passed": true,
+  "prompt_rows_checked": 252,
+  "variants": [
+    "baseline_regenerate",
+    "prefix_continue",
+    "generic_error_prompt",
+    "localized_error_prompt",
+    "oracle_error_prompt",
+    "random_location_prompt"
+  ]
+}

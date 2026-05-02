@@ -1,0 +1,156 @@
+{
+  "audit_rows": 20,
+  "audited_jsonl": "data/processed/e104_tg_ng_process_audit_official_20260429.jsonl",
+  "by_mode": {
+    "NG_baseline": {
+      "audit_rows": 8,
+      "explicit_final_marker_found": 8,
+      "fallback_final_correct": 8,
+      "hit_max_new_tokens": 1,
+      "repaired_acpi": 2,
+      "strict_acpi": 2,
+      "strict_final_correct": 8,
+      "strict_valid": 6,
+      "unfinished_tg": 0,
+      "unrepaired_acpi": 0
+    },
+    "NG_matched_sampling": {
+      "audit_rows": 7,
+      "explicit_final_marker_found": 7,
+      "fallback_final_correct": 7,
+      "hit_max_new_tokens": 2,
+      "repaired_acpi": 1,
+      "strict_acpi": 1,
+      "strict_final_correct": 7,
+      "strict_valid": 6,
+      "unfinished_tg": 0,
+      "unrepaired_acpi": 0
+    },
+    "TG_official": {
+      "audit_rows": 5,
+      "explicit_final_marker_found": 0,
+      "fallback_final_correct": 5,
+      "hit_max_new_tokens": 5,
+      "repaired_acpi": 0,
+      "strict_acpi": 0,
+      "strict_final_correct": 0,
+      "strict_valid": 0,
+      "unfinished_tg": 5,
+      "unrepaired_acpi": 0
+    }
+  },
+  "by_mode_variant": {
+    "NG_baseline|answer_first_no_gold": {
+      "audit_rows": 2,
+      "explicit_final_marker_found": 2,
+      "fallback_final_correct": 2,
+      "hit_max_new_tokens": 0,
+      "repaired_acpi": 2,
+      "strict_acpi": 2,
+      "strict_final_correct": 2,
+      "strict_valid": 0,
+      "unfinished_tg": 0,
+      "unrepaired_acpi": 0
+    },
+    "NG_baseline|neutral": {
+      "audit_rows": 3,
+      "explicit_final_marker_found": 3,
+      "fallback_final_correct": 3,
+      "hit_max_new_tokens": 0,
+      "repaired_acpi": 0,
+      "strict_acpi": 0,
+      "strict_final_correct": 3,
+      "strict_valid": 3,
+      "unfinished_tg": 0,
+      "unrepaired_acpi": 0
+    },
+    "NG_baseline|self_check": {
+      "audit_rows": 3,
+      "explicit_final_marker_found": 3,
+      "fallback_final_correct": 3,
+      "hit_max_new_tokens": 1,
+      "repaired_acpi": 0,
+      "strict_acpi": 0,
+      "strict_final_correct": 3,
+      "strict_valid": 3,
+      "unfinished_tg": 0,
+      "unrepaired_acpi": 0
+    },
+    "NG_matched_sampling|answer_first_no_gold": {
+      "audit_rows": 1,
+      "explicit_final_marker_found": 1,
+      "fallback_final_correct": 1,
+      "hit_max_new_tokens": 0,
+      "repaired_acpi": 1,
+      "strict_acpi": 1,
+      "strict_final_correct": 1,
+      "strict_valid": 0,
+      "unfinished_tg": 0,
+      "unrepaired_acpi": 0
+    },
+    "NG_matched_sampling|neutral": {
+      "audit_rows": 3,
+      "explicit_final_marker_found": 3,
+      "fallback_final_correct": 3,
+      "hit_max_new_tokens": 1,
+      "repaired_acpi": 0,
+      "strict_acpi": 0,
+      "strict_final_correct": 3,
+      "strict_valid": 3,
+      "unfinished_tg": 0,
+      "unrepaired_acpi": 0
+    },
+    "NG_matched_sampling|self_check": {
+      "audit_rows": 3,
+      "explicit_final_marker_found": 3,
+      "fallback_final_correct": 3,
+      "hit_max_new_tokens": 1,
+      "repaired_acpi": 0,
+      "strict_acpi": 0,
+      "strict_final_correct": 3,
+      "strict_valid": 3,
+      "unfinished_tg": 0,
+      "unrepaired_acpi": 0
+    },
+    "TG_official|answer_first_no_gold": {
+      "audit_rows": 1,
+      "explicit_final_marker_found": 0,
+      "fallback_final_correct": 1,
+      "hit_max_new_tokens": 1,
+      "repaired_acpi": 0,
+      "strict_acpi": 0,
+      "strict_final_correct": 0,
+      "strict_valid": 0,
+      "unfinished_tg": 1,
+      "unrepaired_acpi": 0
+    },
+    "TG_official|neutral": {
+      "audit_rows": 1,
+      "explicit_final_marker_found": 0,
+      "fallback_final_correct": 1,
+      "hit_max_new_tokens": 1,
+      "repaired_acpi": 0,
+      "strict_acpi": 0,
+      "strict_final_correct": 0,
+      "strict_valid": 0,
+      "unfinished_tg": 1,
+      "unrepaired_acpi": 0
+    },
+    "TG_official|self_check": {
+      "audit_rows": 3,
+      "explicit_final_marker_found": 0,
+      "fallback_final_correct": 3,
+      "hit_max_new_tokens": 3,
+      "repaired_acpi": 0,
+      "strict_acpi": 0,
+      "strict_final_correct": 0,
+      "strict_valid": 0,
+      "unfinished_tg": 3,
+      "unrepaired_acpi": 0
+    }
+  },
+  "created_at": "2026-04-29T21:33:31",
+  "input_sheet": "data/processed/e104_tg_ng_process_audit_sheet_20260429.jsonl",
+  "scope_note_en": "TG fallback-correct rows without an explicit final marker are not strict final decisions and are not counted as strict ACPI.",
+  "scope_note_zh": "TG fallback-correct 但无 explicit final marker 的行不计入 strict final-decision，也不计入 strict ACPI。"
+}

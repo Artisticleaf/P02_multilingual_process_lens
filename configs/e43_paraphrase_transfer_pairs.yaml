@@ -1,0 +1,85 @@
+pairs:
+- id: e43_each_vs_total_a
+  task_id: each_vs_total
+  paraphrase_tag: a
+  valid_idx: 430001
+  bad_idx: 430002
+  support_span: the class total is 4*6
+  error_span: each means the whole group read 6 pages total
+- id: e43_each_vs_total_b
+  task_id: each_vs_total
+  paraphrase_tag: b
+  valid_idx: 430003
+  bad_idx: 430004
+  support_span: Across 4 students, multiply 6 by 4
+  error_span: split 6 pages among the 4 students
+- id: e43_percent_increase_vs_percent_of_a
+  task_id: percent_increase_vs_percent_of
+  paraphrase_tag: a
+  valid_idx: 430005
+  bad_idx: 430006
+  support_span: adds 20% of 50
+  error_span: the new price is only 20% of the old price
+- id: e43_percent_increase_vs_percent_of_b
+  task_id: percent_increase_vs_percent_of
+  paraphrase_tag: b
+  valid_idx: 430007
+  bad_idx: 430008
+  support_span: multiply by 1.20
+  error_span: multiply by 0.20
+- id: e43_prob_without_replacement_a
+  task_id: prob_without_replacement
+  paraphrase_tag: a
+  valid_idx: 430009
+  bad_idx: 430010
+  support_span: 2 red balls remain out of 4
+  error_span: the first red ball is replaced before the second draw
+- id: e43_prob_without_replacement_b
+  task_id: prob_without_replacement
+  paraphrase_tag: b
+  valid_idx: 430011
+  bad_idx: 430012
+  support_span: not putting it back, the bag has 2 red among 4 total
+  error_span: leaves the same 3 red among 5 total
+- id: e43_reciprocal_vs_additive_inverse_a
+  task_id: reciprocal_vs_additive_inverse
+  paraphrase_tag: a
+  valid_idx: 430013
+  bad_idx: 430014
+  support_span: multiplies by 4 to make 1
+  error_span: reciprocal means the additive inverse
+- id: e43_reciprocal_vs_additive_inverse_b
+  task_id: reciprocal_vs_additive_inverse
+  paraphrase_tag: b
+  valid_idx: 430015
+  bad_idx: 430016
+  support_span: flip 4 to 1 divided by 4
+  error_span: change the sign of 4
+- id: e43_zh_exclusive_interval_a
+  task_id: zh_exclusive_interval
+  paraphrase_tag: a
+  valid_idx: 430017
+  bad_idx: 430018
+  support_span: 不包含端点2和6
+  error_span: 包含2和6
+- id: e43_zh_exclusive_interval_b
+  task_id: zh_exclusive_interval
+  paraphrase_tag: b
+  valid_idx: 430019
+  bad_idx: 430020
+  support_span: 严格在2和6之间的整数是3、4、5
+  error_span: 把边界2、6算进去
+- id: e43_zh_perimeter_vs_area_a
+  task_id: zh_perimeter_vs_area
+  paraphrase_tag: a
+  valid_idx: 430021
+  bad_idx: 430022
+  support_span: 四条边长度之和
+  error_span: 周长就是面积
+- id: e43_zh_perimeter_vs_area_b
+  task_id: zh_perimeter_vs_area
+  paraphrase_tag: b
+  valid_idx: 430023
+  bad_idx: 430024
+  support_span: 把长和宽各算两次
+  error_span: 把长乘宽

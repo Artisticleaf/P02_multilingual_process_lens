@@ -1,0 +1,95 @@
+{
+  "args": {
+    "chat_template": "never",
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "k": 1,
+    "max_new_tokens": 120,
+    "max_tasks": 1,
+    "model_key": "qwen35_9b",
+    "out_dir": "tmp/trace_prompt_probe",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "temperature": 0.7,
+    "top_p": 0.95
+  },
+  "model_spec": {
+    "class": "post_trained_hybrid",
+    "family": "qwen35",
+    "loader_risk": "conditional_generation_or_multimodal; may require AutoModelForImageTextToText/AutoProcessor rather than AutoModelForCausalLM",
+    "notes": "latest small Qwen candidate; architecture may differ from standard Transformer",
+    "path": "/home/Awei/LLM/Model/base/qwen35_9b",
+    "priority": "P0",
+    "remote_repo": "Qwen/Qwen3.5-9B",
+    "status": "local_downloaded"
+  },
+  "rows": [
+    {
+      "completion": "Step 1: Subtract 3 from both sides of the equation.\n2x = 11 - 3\n2x = 8\nStep 2: Divide both sides by 2.\nx = 8 / 2\nx = 4\nFinal answer: 4\n\n<think>\n\n</think>\n\nTo solve the equation $2x + 3 = 11$, we first isolate the term containing the variable by subtracting 3 from both sides of the equation, resulting in $2x = 8$. Next, we solve for $x$ by",
+      "created_at": "2026-04-27T02:23:21",
+      "gold_answer": "4",
+      "input_lang": "en",
+      "model_key": "qwen35_9b",
+      "prompt": "Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: Solve 2x + 3 = 11.\nReasoning:",
+      "raw_completion": "\nStep 1: Subtract 3 from both sides of the equation.\n2x = 11 - 3\n2x = 8\nStep 2: Divide both sides by 2.\nx = 8 / 2\nx = 4\nFinal answer: 4\n\n<think>\n\n</think>\n\nTo solve the equation $2x + 3 = 11$, we first isolate the term containing the variable by subtracting 3 from both sides of the equation, resulting in $2x = 8$. Next, we solve for $x$ by",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "lin_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "为了解方程 2x + 3 = 11，首先将常数项 3 移到等号右边，变为减法运算，得到 2x = 11 - 3。计算右边的减法，得到 2x = 8。最后，将等式两边同时除以系数 2，得到 x = 8 / 2。计算除法，得出 x = 4。\n\nFinal answer: 4",
+      "created_at": "2026-04-27T02:23:23",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "qwen35_9b",
+      "prompt": "请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：求解 2x + 3 = 11。\n推理：",
+      "raw_completion": "\n\n为了解方程 2x + 3 = 11，首先将常数项 3 移到等号右边，变为减法运算，得到 2x = 11 - 3。计算右边的减法，得到 2x = 8。最后，将等式两边同时除以系数 2，得到 x = 8 / 2。计算除法，得出 x = 4。\n\nFinal answer: 4",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "lin_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "We are given the linear equation 2x + 3 = 11. To solve for x, we first isolate the term containing x by subtracting 3 from both sides of the equation. This gives us 2x = 11 - 3, which simplifies to 2x = 8. Next, we divide both sides of the equation by 2 to solve for x. This results in x = 8 / 2, which simplifies to x = 4.\nFinal answer: 4\n---",
+      "created_at": "2026-04-27T02:23:26",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "qwen35_9b",
+      "prompt": "Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 求解 2x + 3 = 11。\nReasoning:",
+      "raw_completion": "\nWe are given the linear equation 2x + 3 = 11. To solve for x, we first isolate the term containing x by subtracting 3 from both sides of the equation. This gives us 2x = 11 - 3, which simplifies to 2x = 8. Next, we divide both sides of the equation by 2 to solve for x. This results in x = 8 / 2, which simplifies to x = 4.\nFinal answer: 4\n---\nProblem: 求解 2x",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "lin_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": true
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "为了解方程 $2x + 3 = 11$，我们首先需要将常数项移到等号右边。\n将等式两边同时减去 3，得到 $2x = 11 - 3$。\n计算右边的减法，得到 $2x = 8$。\n接下来，为了解出 $x$，我们需要将等式两边同时除以 2。\n计算得到 $x = 8 / 2$。\n最终得出 $x = 4$。\n\nFinal answer: 4",
+      "created_at": "2026-04-27T02:23:28",
+      "gold_answer": "4",
+      "input_lang": "en",
+      "model_key": "qwen35_9b",
+      "prompt": "请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：Solve 2x + 3 = 11.\n推理：",
+      "raw_completion": "\n\n为了解方程 $2x + 3 = 11$，我们首先需要将常数项移到等号右边。\n将等式两边同时减去 3，得到 $2x = 11 - 3$。\n计算右边的减法，得到 $2x = 8$。\n接下来，为了解出 $x$，我们需要将等式两边同时除以 2。\n计算得到 $x = 8 / 2$。\n最终得出 $x = 4$。\n\nFinal answer: 4",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "lin_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    }
+  ]
+}

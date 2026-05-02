@@ -1,0 +1,11 @@
+[2026-04-27T02:17:30] loading tokenizer: qwen35_9b -> /home/Awei/LLM/Model/base/qwen35_9b
+[2026-04-27T02:17:30] loading model dtype=bfloat16 device=cuda
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/427 [00:00<?, ?it/s]Loading weights: 100%|██████████| 427/427 [00:00<00:00, 14292.75it/s]
+[2026-04-27T02:17:33] tokenization
+[2026-04-27T02:17:33] contextual bridge
+[2026-04-27T02:17:36] process verifier margins
+[2026-04-27T02:17:37] residual patching pairs=4 layers=[8, 16, 24, 31]
+[2026-04-27T02:17:43] wrote /home/Awei/P02_multilingual_process_lens/results/E01_anchor_matrix/qwen35_9b_anchor_smoke.json
+SUMMARY model=qwen35_9b bridge_best_layer=24 top1=1.0 proc_acc=0.75 invalid_fc_false_accept=0.0

@@ -1,0 +1,10 @@
+[2026-04-27T18:05:54] loading tokenizer: qwen35_9b -> /home/Awei/LLM/Model/base/qwen35_9b
+[2026-04-27T18:05:54] loading model dtype=bfloat16 device=cuda
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/427 [00:00<?, ?it/s]Loading weights: 100%|██████████| 427/427 [00:00<00:00, 13711.81it/s]
+[2026-04-27T18:06:15] wrote /home/Awei/P02_multilingual_process_lens/results/S6_lexical_grid_absolute_verifier/qwen35_9b_manual_trace_verifier.json; eval_rows=24
+SUMMARY model=qwen35_9b mode=process_only prompt=en acc=0.667 false_accept=0.6666666666666666 proc_inv_false_accept=0.6666666666666666
+SUMMARY model=qwen35_9b mode=process_only prompt=zh acc=0.500 false_accept=1.0 proc_inv_false_accept=1.0
+SUMMARY model=qwen35_9b mode=training_candidate prompt=en acc=0.667 false_accept=0.6666666666666666 proc_inv_false_accept=0.6666666666666666
+SUMMARY model=qwen35_9b mode=training_candidate prompt=zh acc=0.667 false_accept=0.6666666666666666 proc_inv_false_accept=0.6666666666666666

@@ -1,0 +1,67 @@
+{
+  "created_at": "2026-05-01T15:30:00+08:00",
+  "scope": "E162 full queue launch plus E164 concrete family design; running checkpoints are excluded from completed evidence counts.",
+  "nodes": [
+    {
+      "id": "experiment.E162_low_confidence_error_prompt_repair",
+      "type": "experiment",
+      "status": "running",
+      "zh": "E162 已通过样本库构造和静态审计，并在 tmux 中全量排队运行。",
+      "en": "E162 passed case-bank construction and static audit and is running in tmux."
+    },
+    {
+      "id": "experiment.E164_concrete_high_value_family_bank",
+      "type": "planned_experiment",
+      "status": "design_ready_pending_jsonl_build",
+      "zh": "E164 已完成 7 个高价值 family 的具体样本规格，等待转成 JSONL、静态审计和 smoke。",
+      "en": "E164 has concrete case specifications for 7 high-value families and awaits JSONL build, static audit, and smoke."
+    },
+    {
+      "id": "claim.localized_error_signal_upper_bound",
+      "type": "claim",
+      "status": "smoke_supported_full_run_pending",
+      "zh": "如果能定位可疑局部 span，non-thinking 模型可能比泛泛重审更容易修复过程或答案。",
+      "en": "If a suspicious local span can be identified, non-thinking models may repair process or answer better than with a generic warning."
+    },
+    {
+      "id": "claim.hidden_monitor_not_yet_proven",
+      "type": "claim_boundary",
+      "status": "explicit_boundary",
+      "zh": "localized_error_prompt 不是隐藏层纠错；它只是未来 hidden monitor 能定位 span 时的行为上界。",
+      "en": "localized_error_prompt is not hidden-layer correction; it is a behavioral upper bound for a future hidden monitor that can localize spans."
+    },
+    {
+      "id": "claim.high_value_acpi_surfaces",
+      "type": "claim",
+      "status": "design_supported_evidence_pending",
+      "zh": "证明有效性、多语言语义、图定义、代码边界、长表格、集合/Venn、几何约束是更适合诱发和审计 ACPI 的高价值场景。",
+      "en": "Proof validity, multilingual semantics, graph definitions, code boundaries, long tables, set/Venn counting, and geometry constraints are high-value surfaces for inducing and auditing ACPI."
+    }
+  ],
+  "edges": [
+    {
+      "source": "experiment.E162_low_confidence_error_prompt_repair",
+      "relation": "tests",
+      "target": "claim.localized_error_signal_upper_bound",
+      "zh": "E162 用 baseline、续写、泛泛提示、局部提示、oracle 提示和随机位置对照测试局部错误信号的行为上界。"
+    },
+    {
+      "source": "experiment.E162_low_confidence_error_prompt_repair",
+      "relation": "constrains",
+      "target": "claim.hidden_monitor_not_yet_proven",
+      "zh": "E162 的 localized prompt 仍然是显式文本干预，不能直接证明 hidden residual/MLP/attention 具备定位能力。"
+    },
+    {
+      "source": "experiment.E164_concrete_high_value_family_bank",
+      "relation": "prepares_evidence_for",
+      "target": "claim.high_value_acpi_surfaces",
+      "zh": "E164 以每题三类 trace 的方式准备更高价值的 ACPI、修复和 hidden replay 样本。"
+    },
+    {
+      "source": "claim.high_value_acpi_surfaces",
+      "relation": "feeds",
+      "target": "claim.localized_error_signal_upper_bound",
+      "zh": "高价值 family 的错误 span 更局部、更可验证，因此适合测试局部提示是否能真正提升 non-thinking 修复。"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s]Loading weights: 100%|██████████| 443/443 [00:00<00:00, 15304.40it/s]
+wrote /home/Awei/P02_multilingual_process_lens/data/raw/e26_aime_hard_trace_pool_concise/qwen3_14b_base_trace_pool_smoke_v2_aime_hard_concise.json; rows=6

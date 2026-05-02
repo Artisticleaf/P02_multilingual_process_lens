@@ -1,0 +1,36 @@
+{
+  "audit_rows": 20,
+  "by_mode": {
+    "NG_baseline": {
+      "explicit_final_marker_found": 9,
+      "fallback_final_correct": 8,
+      "generated": 9,
+      "hit_max_new_tokens": 2,
+      "strict_final_correct": 8
+    },
+    "NG_matched_sampling": {
+      "explicit_final_marker_found": 9,
+      "fallback_final_correct": 7,
+      "generated": 9,
+      "hit_max_new_tokens": 4,
+      "strict_final_correct": 7
+    },
+    "TG_official": {
+      "explicit_final_marker_found": 0,
+      "fallback_final_correct": 5,
+      "generated": 9,
+      "hit_max_new_tokens": 9,
+      "strict_final_correct": 0
+    }
+  },
+  "created_at": "2026-04-29T21:31:34",
+  "generated_total": 27,
+  "input_json": "results/E103_tg_ng_fair_hardtask/qwen35_27b_e103_tg_ng_fair_hardtask.json",
+  "leakage_audit": {
+    "gold_answer_in_prompt_rows": 0,
+    "known_trap_note_in_prompt_rows": 0,
+    "passed": true
+  },
+  "note_zh": "E104 只列出 E103 中 strict 或 fallback final-correct 的 trace；strict 与 fallback 必须分开解释。",
+  "out_jsonl": "data/processed/e104_tg_ng_process_audit_sheet_20260429.jsonl"
+}

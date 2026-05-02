@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-04-29T03:08:08",
+  "passed": true,
+  "checks": [
+    {
+      "check": "input exists gemma4_26b_a4b_it_e60_objective_ladder_chat.json",
+      "ok": true,
+      "detail": "results/E60_objective_ladder/gemma4_26b_a4b_it_e60_objective_ladder_chat.json"
+    },
+    {
+      "check": "input exists gemma4_31b_it_e60_objective_ladder_chat.json",
+      "ok": true,
+      "detail": "results/E60_objective_ladder/gemma4_31b_it_e60_objective_ladder_chat.json"
+    },
+    {
+      "check": "input exists glm47_flash_candidate_e60_objective_ladder_chat.json",
+      "ok": true,
+      "detail": "results/E60_objective_ladder/glm47_flash_candidate_e60_objective_ladder_chat.json"
+    },
+    {
+      "check": "input exists qwen35_27b_e60_objective_ladder_chat.json",
+      "ok": true,
+      "detail": "results/E60_objective_ladder/qwen35_27b_e60_objective_ladder_chat.json"
+    },
+    {
+      "check": "input exists gemma4_26b_a4b_it_e61_language_error_grid_chat.json",
+      "ok": true,
+      "detail": "results/E61_language_error_grid/gemma4_26b_a4b_it_e61_language_error_grid_chat.json"
+    },
+    {
+      "check": "input exists gemma4_31b_it_e61_language_error_grid_chat.json",
+      "ok": true,
+      "detail": "results/E61_language_error_grid/gemma4_31b_it_e61_language_error_grid_chat.json"
+    },
+    {
+      "check": "input exists glm47_flash_candidate_e61_language_error_grid_chat.json",
+      "ok": true,
+      "detail": "results/E61_language_error_grid/glm47_flash_candidate_e61_language_error_grid_chat.json"
+    },
+    {
+      "check": "input exists qwen35_27b_e61_language_error_grid_chat.json",
+      "ok": true,
+      "detail": "results/E61_language_error_grid/qwen35_27b_e61_language_error_grid_chat.json"
+    }
+  ],
+  "result_path": "results/E66_contrastive_label_calibration/e66_contrastive_label_calibration.json",
+  "leakage_boundary_zh": "E66 是后处理校准；它只读取模型对 A/B 的分数，不改变 prompt，也不使用人工错误 span。"
+}

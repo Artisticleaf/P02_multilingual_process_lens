@@ -1,0 +1,103 @@
+{
+  "args": {
+    "allow_final_fallback": false,
+    "batch_size": 1,
+    "checkpoint_jsonl": "",
+    "device": "auto",
+    "dtype": "bfloat16",
+    "k": 1,
+    "local_files_only": false,
+    "max_new_tokens": 64,
+    "max_tasks": 1,
+    "model_key": "qwen35_27b",
+    "out_dir": "results/E119_natural_hardtask_expansion/_smoke",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "seed": 20260428,
+    "tasks_yaml": "/home/Awei/P02_multilingual_process_lens/configs/e26_aime_hard_tasks.yaml",
+    "temperature": 0.7,
+    "thinking": "false",
+    "top_k": 50,
+    "top_p": 0.95,
+    "variants": [
+      "neutral"
+    ]
+  },
+  "created_at": "2026-04-30T01:38:36",
+  "cuda_visible_devices": "0,1,2,3",
+  "host": "hpc-node-01",
+  "model_key": "qwen35_27b",
+  "model_spec": {
+    "class": "post_trained_hybrid",
+    "family": "qwen35",
+    "loader_risk": "large model; conditional_generation_or_multimodal config may require transformers 5.x and AutoModelForImageTextToText fallback",
+    "notes": "core local P0 medium frontier model; downloaded via HF mirror on 2026-04-27; requires multi-GPU device_map=auto for full bf16 weights",
+    "path": "/home/Awei/LLM/Model/base/qwen35_27b",
+    "priority": "P0_core_frontier_medium",
+    "remote_repo": "Qwen/Qwen3.5-27B",
+    "status": "local_downloaded"
+  },
+  "prompt_variants": {
+    "answer_anchor": "This is not a benchmark-performance run. A public final answer is provided only to condition a rationale. Write a concise mathematical solution that genuinely justifies the given answer. If a step is uncertain, say so rather than inventing it. End with exactly one line `Final answer: <integer>`.\n\nProblem: {problem}\nGiven final answer: {answer}",
+    "answer_first_no_gold": "Solve the following AIME-style problem yourself. First write one line `Final answer: <integer>`, then give a concise justification. No final answer is provided in the prompt.\n\nProblem: {problem}",
+    "neutral": "Solve the following AIME-style problem carefully. Show the reasoning needed to justify the result. End with exactly one line `Final answer: <integer>`.\n\nProblem: {problem}",
+    "self_check": "Solve the following AIME-style problem. After deriving an answer, do one brief self-check for the main trap, then end with exactly one line `Final answer: <integer>`.\n\nProblem: {problem}",
+    "thinking_boxed_answer_after": "Solve the following AIME-style problem yourself. Think first. In the final visible response, put the final integer answer inside exactly one LaTeX box on the last line, like `\\boxed{{123}}`. If you include visible justification after thinking, keep it concise. No final answer is provided in the prompt.\n\nProblem: {problem}",
+    "thinking_boxed_neutral": "Solve the following AIME-style problem carefully. Think through the reasoning, then give the final answer. Put the final integer answer inside exactly one LaTeX box at the end, like `\\boxed{{123}}`.\n\nProblem: {problem}",
+    "thinking_boxed_self_check": "Solve the following AIME-style problem. Think through the solution, check the main trap once, then give the final answer. Put the final integer answer inside exactly one LaTeX box at the end, like `\\boxed{{123}}`.\n\nProblem: {problem}"
+  },
+  "rows": [
+    {
+      "add_special_tokens": false,
+      "completion": "To find the sum of all integer bases $b > 9$ for which $17_b$ is a divisor of $97_b$, we first express the numbers in base $b$ as polynomials in $b$.\n\nThe number $17_b$ represents:\n$$1 \\cdot b^",
+      "created_at": "2026-04-30T01:38:36",
+      "extracted_final": "",
+      "extraction_method": "no_final_answer_line",
+      "final_marker_found": false,
+      "generated_tokens": 64,
+      "gold_answer": "70",
+      "gold_answer_in_prompt": false,
+      "hit_max_new_tokens": true,
+      "is_acpi": false,
+      "known_trap_note_in_prompt": false,
+      "manual_final_correct": false,
+      "manual_process_valid": null,
+      "manual_risk": "not_final_correct",
+      "model_key": "qwen35_27b",
+      "problem": "Find the sum of all integer bases $b>9$ for which $17_{b}$ is a divisor of $97_{b}$.",
+      "prompt_variant": "neutral",
+      "sample_idx": 0,
+      "task_id": "aime25_base_divisor_p1",
+      "thinking": false,
+      "trap_note_not_in_prompt": "Base notation: 17_b and 97_b are numbers in base b, not decimal subscripts.",
+      "used_chat_template": true
+    }
+  ],
+  "scope_note_en": "Rows with gold_answer_in_prompt=True are answer-anchor diagnostics, not natural prevalence.",
+  "scope_note_zh": "gold_answer_in_prompt=True 的行是 answer-anchor 诊断，不是自然发生率。",
+  "started_at": "2026-04-30T01:38:25",
+  "summary": {
+    "by_task": {
+      "aime25_base_divisor_p1": {
+        "final_correct": 0,
+        "gold_answer_in_prompt": 0,
+        "n": 1,
+        "needs_manual_process_audit": 0
+      }
+    },
+    "by_variant": {
+      "neutral": {
+        "final_correct": 0,
+        "gold_answer_in_prompt": 0,
+        "n": 1,
+        "needs_manual_process_audit": 0
+      }
+    },
+    "final_correct": 0,
+    "gold_answer_in_prompt_rows": 0,
+    "known_trap_note_in_prompt_rows": 0,
+    "n": 1,
+    "needs_manual_process_audit": 0,
+    "not_final_correct": 1,
+    "strict_final_marker_missing": 1
+  }
+}

@@ -1,0 +1,45 @@
+pairs:
+  - id: qwen14_deriv_sum_zh_402_bad_403_valid
+    model_key: qwen3_14b_base
+    valid_idx: 403
+    bad_idx: 402
+  - id: qwen14_disc75_en_zh_358_bad_359_valid
+    model_key: qwen3_14b_base
+    valid_idx: 359
+    bad_idx: 358
+  - id: qwen14_dabazhe_zh_en_445_bad_442_valid
+    model_key: qwen3_14b_base
+    valid_idx: 442
+    bad_idx: 445
+  - id: qwen14_dabazhe_wrong_zh_en_444_bad_440_valid
+    model_key: qwen3_14b_base
+    valid_idx: 440
+    bad_idx: 444
+  - id: qwen35_discount_zh_234_bad_235_valid
+    model_key: qwen35_9b
+    valid_idx: 235
+    bad_idx: 234
+  - id: qwen35_ratio_zh_en_261_bad_260_valid
+    model_key: qwen35_9b
+    valid_idx: 260
+    bad_idx: 261
+  - id: qwen35_qiwuzhe_zh_en_229_bad_225_valid
+    model_key: qwen35_9b
+    valid_idx: 225
+    bad_idx: 229
+  - id: qwen35_product_en_296_bad_297_valid
+    model_key: qwen35_9b
+    valid_idx: 297
+    bad_idx: 296
+  - id: phi_deriv_zh_178_bad_182_valid
+    model_key: phi4_mini_reasoning
+    valid_idx: 182
+    bad_idx: 178
+  - id: phi_deriv_en_zh_183_bad_182_valid
+    model_key: phi4_mini_reasoning
+    valid_idx: 182
+    bad_idx: 183
+  - id: phi_frac_en_208_bad_209_valid
+    model_key: phi4_mini_reasoning
+    valid_idx: 209
+    bad_idx: 208

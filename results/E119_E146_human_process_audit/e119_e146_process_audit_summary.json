@@ -1,0 +1,344 @@
+{
+  "audit_policy_zh": {
+    "fallback_only": "没有严格 Final answer 标记、只由 fallback parser 抽到正确数字的截断行，不算 strict final decision。",
+    "repair_aware": "如果后文明确丢弃错误步骤并给出自洽正确证明，则 repair-aware 口径下记为修复后有效。",
+    "strict_process": "如果可见 trace 中明确写出错误最终答案、错误关键公式、错误中间结论，即使后面修复，也按 strict trace-selection 口径记为过程无效。",
+    "unrepaired": "如果最终答案正确但保留证明仍依赖错误关键步骤，则记为 unrepaired ACPI。"
+  },
+  "borderline_not_counted": {
+    "1460059": "出现“14 such sets? No”的自问自答，但更像即时反问而不是提交的错误步骤；主统计保守不计入 strict ACPI。"
+  },
+  "buckets": {
+    "model:gemma4_26b_a4b_it": {
+      "audited_final_or_fallback_correct_rows": 66,
+      "borderline_not_counted_rows": 0,
+      "fallback_only_unfinished_rows": 0,
+      "hit_max_rows": 2,
+      "repaired_strict_acpi_rows": 8,
+      "strict_acpi_rows": 10,
+      "strict_final_decision_rows": 66,
+      "strict_valid_rows": 56,
+      "unrepaired_acpi_rows": 2
+    },
+    "model:gemma4_31b_it": {
+      "audited_final_or_fallback_correct_rows": 63,
+      "borderline_not_counted_rows": 1,
+      "fallback_only_unfinished_rows": 0,
+      "hit_max_rows": 0,
+      "repaired_strict_acpi_rows": 16,
+      "strict_acpi_rows": 16,
+      "strict_final_decision_rows": 63,
+      "strict_valid_rows": 47,
+      "unrepaired_acpi_rows": 0
+    },
+    "model:glm47_flash_candidate": {
+      "audited_final_or_fallback_correct_rows": 17,
+      "borderline_not_counted_rows": 0,
+      "fallback_only_unfinished_rows": 0,
+      "hit_max_rows": 3,
+      "repaired_strict_acpi_rows": 1,
+      "strict_acpi_rows": 1,
+      "strict_final_decision_rows": 17,
+      "strict_valid_rows": 16,
+      "unrepaired_acpi_rows": 0
+    },
+    "model:qwen35_27b": {
+      "audited_final_or_fallback_correct_rows": 55,
+      "borderline_not_counted_rows": 0,
+      "fallback_only_unfinished_rows": 1,
+      "hit_max_rows": 7,
+      "repaired_strict_acpi_rows": 19,
+      "strict_acpi_rows": 19,
+      "strict_final_decision_rows": 54,
+      "strict_valid_rows": 35,
+      "unrepaired_acpi_rows": 0
+    },
+    "overall:overall": {
+      "audited_final_or_fallback_correct_rows": 201,
+      "borderline_not_counted_rows": 1,
+      "fallback_only_unfinished_rows": 1,
+      "hit_max_rows": 12,
+      "repaired_strict_acpi_rows": 44,
+      "strict_acpi_rows": 46,
+      "strict_final_decision_rows": 200,
+      "strict_valid_rows": 154,
+      "unrepaired_acpi_rows": 2
+    },
+    "prompt_variant:answer_first_no_gold": {
+      "audited_final_or_fallback_correct_rows": 59,
+      "borderline_not_counted_rows": 1,
+      "fallback_only_unfinished_rows": 0,
+      "hit_max_rows": 5,
+      "repaired_strict_acpi_rows": 30,
+      "strict_acpi_rows": 32,
+      "strict_final_decision_rows": 59,
+      "strict_valid_rows": 27,
+      "unrepaired_acpi_rows": 2
+    },
+    "prompt_variant:neutral": {
+      "audited_final_or_fallback_correct_rows": 70,
+      "borderline_not_counted_rows": 0,
+      "fallback_only_unfinished_rows": 1,
+      "hit_max_rows": 4,
+      "repaired_strict_acpi_rows": 5,
+      "strict_acpi_rows": 5,
+      "strict_final_decision_rows": 69,
+      "strict_valid_rows": 64,
+      "unrepaired_acpi_rows": 0
+    },
+    "prompt_variant:self_check": {
+      "audited_final_or_fallback_correct_rows": 72,
+      "borderline_not_counted_rows": 0,
+      "fallback_only_unfinished_rows": 0,
+      "hit_max_rows": 3,
+      "repaired_strict_acpi_rows": 9,
+      "strict_acpi_rows": 9,
+      "strict_final_decision_rows": 72,
+      "strict_valid_rows": 63,
+      "unrepaired_acpi_rows": 0
+    },
+    "run:E119_uniform_legacy_baseline": {
+      "audited_final_or_fallback_correct_rows": 104,
+      "borderline_not_counted_rows": 0,
+      "fallback_only_unfinished_rows": 0,
+      "hit_max_rows": 8,
+      "repaired_strict_acpi_rows": 20,
+      "strict_acpi_rows": 21,
+      "strict_final_decision_rows": 104,
+      "strict_valid_rows": 83,
+      "unrepaired_acpi_rows": 1
+    },
+    "run:E146_model_card_hf_profile": {
+      "audited_final_or_fallback_correct_rows": 97,
+      "borderline_not_counted_rows": 1,
+      "fallback_only_unfinished_rows": 1,
+      "hit_max_rows": 4,
+      "repaired_strict_acpi_rows": 24,
+      "strict_acpi_rows": 25,
+      "strict_final_decision_rows": 96,
+      "strict_valid_rows": 71,
+      "unrepaired_acpi_rows": 1
+    },
+    "sampling_profile:NG_model_card_hf_profile": {
+      "audited_final_or_fallback_correct_rows": 97,
+      "borderline_not_counted_rows": 1,
+      "fallback_only_unfinished_rows": 1,
+      "hit_max_rows": 4,
+      "repaired_strict_acpi_rows": 24,
+      "strict_acpi_rows": 25,
+      "strict_final_decision_rows": 96,
+      "strict_valid_rows": 71,
+      "unrepaired_acpi_rows": 1
+    },
+    "sampling_profile:NG_uniform_legacy_baseline": {
+      "audited_final_or_fallback_correct_rows": 104,
+      "borderline_not_counted_rows": 0,
+      "fallback_only_unfinished_rows": 0,
+      "hit_max_rows": 8,
+      "repaired_strict_acpi_rows": 20,
+      "strict_acpi_rows": 21,
+      "strict_final_decision_rows": 104,
+      "strict_valid_rows": 83,
+      "unrepaired_acpi_rows": 1
+    },
+    "task:aime25_base_divisor_p1": {
+      "audited_final_or_fallback_correct_rows": 39,
+      "borderline_not_counted_rows": 0,
+      "fallback_only_unfinished_rows": 0,
+      "hit_max_rows": 0,
+      "repaired_strict_acpi_rows": 4,
+      "strict_acpi_rows": 4,
+      "strict_final_decision_rows": 39,
+      "strict_valid_rows": 35,
+      "unrepaired_acpi_rows": 0
+    },
+    "task:aime25_geometry_reflection_p2": {
+      "audited_final_or_fallback_correct_rows": 17,
+      "borderline_not_counted_rows": 0,
+      "fallback_only_unfinished_rows": 0,
+      "hit_max_rows": 3,
+      "repaired_strict_acpi_rows": 17,
+      "strict_acpi_rows": 17,
+      "strict_final_decision_rows": 17,
+      "strict_valid_rows": 0,
+      "unrepaired_acpi_rows": 0
+    },
+    "task:aime25_icecream_ordered_assign_p3": {
+      "audited_final_or_fallback_correct_rows": 36,
+      "borderline_not_counted_rows": 0,
+      "fallback_only_unfinished_rows": 0,
+      "hit_max_rows": 1,
+      "repaired_strict_acpi_rows": 4,
+      "strict_acpi_rows": 4,
+      "strict_final_decision_rows": 36,
+      "strict_valid_rows": 32,
+      "unrepaired_acpi_rows": 0
+    },
+    "task:aime25_integer_pairs_quad_p4": {
+      "audited_final_or_fallback_correct_rows": 37,
+      "borderline_not_counted_rows": 0,
+      "fallback_only_unfinished_rows": 0,
+      "hit_max_rows": 0,
+      "repaired_strict_acpi_rows": 7,
+      "strict_acpi_rows": 9,
+      "strict_final_decision_rows": 37,
+      "strict_valid_rows": 28,
+      "unrepaired_acpi_rows": 2
+    },
+    "task:aime25_perm_div22_p5": {
+      "audited_final_or_fallback_correct_rows": 33,
+      "borderline_not_counted_rows": 1,
+      "fallback_only_unfinished_rows": 1,
+      "hit_max_rows": 5,
+      "repaired_strict_acpi_rows": 5,
+      "strict_acpi_rows": 5,
+      "strict_final_decision_rows": 32,
+      "strict_valid_rows": 27,
+      "unrepaired_acpi_rows": 0
+    },
+    "task:aime25_trapezoid_incircle_p6": {
+      "audited_final_or_fallback_correct_rows": 39,
+      "borderline_not_counted_rows": 0,
+      "fallback_only_unfinished_rows": 0,
+      "hit_max_rows": 3,
+      "repaired_strict_acpi_rows": 7,
+      "strict_acpi_rows": 7,
+      "strict_final_decision_rows": 39,
+      "strict_valid_rows": 32,
+      "unrepaired_acpi_rows": 0
+    },
+    "thinking:False": {
+      "audited_final_or_fallback_correct_rows": 201,
+      "borderline_not_counted_rows": 1,
+      "fallback_only_unfinished_rows": 1,
+      "hit_max_rows": 12,
+      "repaired_strict_acpi_rows": 44,
+      "strict_acpi_rows": 46,
+      "strict_final_decision_rows": 200,
+      "strict_valid_rows": 154,
+      "unrepaired_acpi_rows": 2
+    }
+  },
+  "created_at": "2026-04-30T14:32:33",
+  "generated_total": 252,
+  "input_sheets": [
+    "data/processed/e119_natural_hardtask_final_correct_audit_sheet_20260430.jsonl",
+    "data/processed/e146_qwen_gemma_model_card_final_correct_audit_sheet_20260430.jsonl"
+  ],
+  "leakage_audit": {
+    "E119_uniform_legacy_baseline": {
+      "gold_answer_in_prompt_rows": 0,
+      "known_trap_note_in_prompt_rows": 0,
+      "note_zh": "Gold answer is used only offline for final-correct filtering; prompt variants are no-gold.",
+      "passed": true
+    },
+    "E146_model_card_hf_profile": {
+      "gold_answer_in_prompt_rows": 0,
+      "known_trap_note_in_prompt_rows": 0,
+      "note_zh": "Gold answer is used only offline for final-correct filtering; prompt variants are no-gold.",
+      "passed": true
+    }
+  },
+  "mode": "NG only; thinking=false",
+  "outputs": {
+    "official_json": "reports/E119_E146_PROCESS_AUDIT_20260430.json",
+    "official_jsonl": "data/processed/e119_e146_process_audit_official_20260430.jsonl",
+    "official_md": "reports/E119_E146_PROCESS_AUDIT_20260430.md",
+    "summary_copy": "results/E119_E146_human_process_audit/e119_e146_process_audit_summary.json"
+  },
+  "rates": {
+    "strict_acpi_per_audited_final_or_fallback_correct": {
+      "high": 0.2916939986390255,
+      "low": 0.17618715868366255,
+      "rate": 0.22885572139303484
+    },
+    "strict_acpi_per_generated": {
+      "high": 0.23487990394480932,
+      "low": 0.1397327927716536,
+      "rate": 0.18253968253968253
+    },
+    "strict_acpi_per_strict_final_decision": {
+      "high": 0.2930830436530359,
+      "low": 0.17709343259068808,
+      "rate": 0.23
+    },
+    "unrepaired_acpi_per_audited_final_or_fallback_correct": {
+      "high": 0.03554765196043719,
+      "low": 0.002732971824604618,
+      "rate": 0.009950248756218905
+    },
+    "unrepaired_acpi_per_generated": {
+      "high": 0.028470498115104995,
+      "low": 0.002179181795412531,
+      "rate": 0.007936507936507936
+    },
+    "unrepaired_acpi_per_strict_final_decision": {
+      "high": 0.0357217617161768,
+      "low": 0.0027466581335444384,
+      "rate": 0.01
+    }
+  },
+  "scope": "E119/E146 non-thinking natural hard-task final-correct process audit",
+  "source_summaries": {
+    "E119_uniform_legacy_baseline": "results/E119_natural_hardtask_expansion/e119_audit_sheet_summary.json",
+    "E146_model_card_hf_profile": "results/E146_qwen_gemma_ng_model_card_hf_profile/e146_audit_sheet_summary.json"
+  },
+  "strict_acpi_examples_by_error_type": {
+    "self_corrected_wrong_counting_step": [
+      1190057,
+      1460028
+    ],
+    "self_corrected_wrong_factorization": [
+      1460053
+    ],
+    "self_corrected_wrong_geometry_or_shoelace_step": [
+      1190007,
+      1190008,
+      1190009,
+      1190038,
+      1190039,
+      1190040,
+      1190041,
+      1190069,
+      1460007,
+      1460008,
+      1460009,
+      1460010,
+      1460040,
+      1460041,
+      1460042,
+      1460043
+    ],
+    "wrong_factorization_unrepaired_symmetric_count": [
+      1190020,
+      1460021
+    ],
+    "wrong_initial_or_intermediate_final_answer_repaired": [
+      1190046,
+      1190052,
+      1190063,
+      1190085,
+      1190086,
+      1190091,
+      1190096,
+      1190097,
+      1190098,
+      1190103,
+      1190104,
+      1460054,
+      1460065,
+      1460066,
+      1460071,
+      1460072,
+      1460073,
+      1460078,
+      1460079,
+      1460084,
+      1460085,
+      1460090,
+      1460091,
+      1460096,
+      1460097
+    ]
+  }
+}

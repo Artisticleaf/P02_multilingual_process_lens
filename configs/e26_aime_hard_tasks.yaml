@@ -1,0 +1,37 @@
+tasks:
+  - id: aime25_base_divisor_p1
+    source: TianHongZXY/AIME2025 test[0]
+    en: Find the sum of all integer bases $b>9$ for which $17_{b}$ is a divisor of $97_{b}$.
+    zh: 求所有满足 $b>9$ 且 $17_b$ 能整除 $97_b$ 的整数进制 $b$ 之和。
+    answer: "70"
+    trap: "Base notation: 17_b and 97_b are numbers in base b, not decimal subscripts."
+  - id: aime25_geometry_reflection_p2
+    source: TianHongZXY/AIME2025 test[1]
+    en: On $\triangle ABC$ points $A,D,E$, and $B$ lie in that order on side $\overline{AB}$ with $AD=4, DE=16$, and $EB=8$. Points $A,F,G$, and $C$ lie in that order on side $\overline{AC}$ with $AF=13, FG=52$, and $GC=26$. Let $M$ be the reflection of $D$ through $F$, and let $N$ be the reflection of $G$ through $E$. Quadrilateral $DEGF$ has area 288. Find the area of heptagon $AFNBCEM$.
+    zh: 在 $\triangle ABC$ 中，点 $A,D,E,B$ 按此顺序位于边 $\overline{AB}$ 上，且 $AD=4, DE=16, EB=8$。点 $A,F,G,C$ 按此顺序位于边 $\overline{AC}$ 上，且 $AF=13, FG=52, GC=26$。令 $M$ 为点 $D$ 关于点 $F$ 的中心对称点，令 $N$ 为点 $G$ 关于点 $E$ 的中心对称点。四边形 $DEGF$ 的面积为 288。求七边形 $AFNBCEM$ 的面积。
+    answer: "588"
+    trap: "Reflection through a point means central reflection, not mirror reflection across a line."
+  - id: aime25_icecream_ordered_assign_p3
+    source: TianHongZXY/AIME2025 test[2]
+    en: The 9 members of a baseball team went to an ice cream parlor after their game. Each player had a single-scoop cone of chocolate, vanilla, or strawberry ice cream. At least one player chose each flavor, and the number of players who chose chocolate was greater than the number of players who chose vanilla, which was greater than the number of players who chose strawberry. Let $N$ be the number of different assignments of flavors to players that meet these conditions. Find the remainder when $N$ is divided by 1000.
+    zh: 一支棒球队的 9 名队员赛后去冰淇淋店。每名队员都选择一球装的巧克力、香草或草莓冰淇淋。每种口味至少有一人选择，并且选择巧克力的人数大于选择香草的人数，选择香草的人数又大于选择草莓的人数。令 $N$ 为满足这些条件的不同分配方案数。求 $N$ 除以 1000 的余数。
+    answer: "16"
+    trap: "Assignments are to labeled players; counts alone are not the final count."
+  - id: aime25_integer_pairs_quad_p4
+    source: TianHongZXY/AIME2025 test[3]
+    en: Find the number of ordered pairs $(x,y)$, where both $x$ and $y$ are integers between $-100$ and $100$, inclusive, such that $12x^{2}-xy-6y^{2}=0$.
+    zh: 求有序整数对 $(x,y)$ 的个数，其中 $x$ 与 $y$ 都是不小于 $-100$ 且不大于 $100$ 的整数，并且满足 $12x^{2}-xy-6y^{2}=0$。
+    answer: "117"
+    trap: "Ordered pairs include zero cases and sign constraints; do not count only positive ratios."
+  - id: aime25_perm_div22_p5
+    source: TianHongZXY/AIME2025 test[4]
+    en: There are $8!=40320$ eight-digit positive integers that use each of the digits $1,2,3,4,5,6,7,8$ exactly once. Let $N$ be the number of these integers that are divisible by 22. Find the difference between $N$ and 2025.
+    zh: 使用数字 $1,2,3,4,5,6,7,8$ 且每个数字恰好使用一次的八位正整数共有 $8!=40320$ 个。令 $N$ 为这些整数中能被 22 整除的个数。求 $N$ 与 2025 的差。
+    answer: "279"
+    trap: "Divisible by 22 means divisible by 2 and 11; the requested value is the absolute difference."
+  - id: aime25_trapezoid_incircle_p6
+    source: TianHongZXY/AIME2025 test[5]
+    en: An isosceles trapezoid has an inscribed circle tangent to each of its four sides. The radius of the circle is 3, and the area of the trapezoid is 72. Let the parallel sides of the trapezoid have lengths $r$ and $s$, with $r \neq s$. Find $r^{2}+s^{2}$.
+    zh: 一个等腰梯形有内切圆，且该圆与梯形四条边都相切。内切圆半径为 3，梯形面积为 72。设两条平行边的长度分别为 $r$ 和 $s$，且 $r \neq s$。求 $r^2+s^2$。
+    answer: "504"
+    trap: "Tangential trapezoid constraints link bases and legs; do not treat r and s as radius variables."

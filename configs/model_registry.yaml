@@ -1,0 +1,156 @@
+models:
+  qwen3_8b_base:
+    family: qwen
+    status: local
+    path: /home/Awei/LLM/Model/base/Qwen3-8B-Base
+    class: base
+    priority: P1_legacy_anchor
+    notes: clean local Qwen anchor; demoted from P0 after 2026-04-28 P0 refresh
+  qwen3_14b_base:
+    family: qwen
+    status: local
+    path: /home/Awei/LLM/Model/base/Qwen3-14B-Base
+    class: base
+    priority: P1_legacy_anchor
+    notes: larger clean Qwen anchor; useful for mechanism controls but no longer P0 frontier evidence
+  deepseek_r1_0528_qwen3_8b:
+    family: deepseek_qwen
+    status: local
+    path: /home/Awei/LLM/Model/base/DeepSeek-R1-0528-Qwen3-8B
+    class: distilled_reasoning
+    priority: P1_distill_control
+    notes: Qwen3-8B architecture with DeepSeek tokenizer config; useful control, not P0 frontier evidence
+  qwen25_math_7b_instruct:
+    family: qwen25_math
+    status: local
+    path: /home/Awei/LLM/Model/base/Qwen2.5-Math-7B-Instruct
+    class: instruct_math
+    priority: P2_legacy_math_control
+    notes: older math-specialized local control; E49-E52 conclusions are downgraded to bottleneck/seed diagnostics, not frontier evidence
+  llama32_3b:
+    family: llama
+    status: local
+    path: /home/Awei/LLM/Model/base/Llama-3.2-3B
+    class: base_or_instruct_unknown
+    priority: P2_negative_control
+    notes: low-capacity negative control; do not overgeneralize or use for frontier claims
+  qwen35_9b:
+    family: qwen35
+    status: local_downloaded
+    path: /home/Awei/LLM/Model/base/qwen35_9b
+    class: post_trained_hybrid
+    priority: P1_small_transfer
+    notes: small Qwen3.5 transfer/control model; demoted from P0 because current P0 focuses on strongest local medium models
+    remote_repo: Qwen/Qwen3.5-9B
+    loader_risk: conditional_generation_or_multimodal; may require AutoModelForImageTextToText/AutoProcessor
+      rather than AutoModelForCausalLM
+  qwen35_27b:
+    family: qwen35
+    status: local_downloaded
+    path: /home/Awei/LLM/Model/base/qwen35_27b
+    class: post_trained_hybrid
+    priority: P0_core_frontier_medium
+    notes: core local P0 medium frontier model; downloaded via HF mirror on 2026-04-27; requires multi-GPU device_map=auto for full bf16 weights
+    remote_repo: Qwen/Qwen3.5-27B
+    loader_risk: large model; conditional_generation_or_multimodal config may require transformers 5.x and AutoModelForImageTextToText fallback
+  ministral3_8b_reasoning:
+    family: mistral
+    status: local_downloaded
+    path: /home/Awei/LLM/Model/base/ministral3_8b_reasoning
+    class: reasoning
+    priority: P1_small_external_control
+    notes: non-Qwen reasoning control; too small to carry P0 frontier claims
+    remote_repo: mistralai/Ministral-3-8B-Reasoning-2512
+    loader_risk: conditional_generation_or_multimodal; may require AutoModelForImageTextToText/AutoProcessor
+      rather than AutoModelForCausalLM
+  gemma4_e4b_it:
+    family: gemma
+    status: local_downloaded
+    path: /home/Awei/LLM/Model/base/gemma4_e4b_it
+    class: instruct
+    priority: P1_small_external_control
+    notes: downloaded via HF mirror on 2026-04-27; Google small control; too small to carry P0 frontier claims
+    remote_repo: google/gemma-4-E4B-it
+  gemma4_26b_a4b_it:
+    family: gemma
+    status: local_downloaded
+    path: /home/Awei/LLM/Model/base/gemma4_26b_a4b_it
+    class: instruct_moe
+    priority: P0_core_frontier_medium
+    notes: core local P0 medium frontier model; Google medium Gemma 4 26B-A4B instruction model; downloaded via HF mirror on 2026-04-27; use multi-GPU device_map=auto for verifier/generation
+    remote_repo: google/gemma-4-26B-A4B-it
+    loader_risk: large model; multimodal/text config may require AutoModelForImageTextToText fallback
+  gemma4_31b_it:
+    family: gemma
+    status: local_downloaded
+    path: /home/Awei/LLM/Model/base/gemma4_31b_it
+    class: instruct
+    priority: P0_core_frontier_medium
+    notes: core local P0 medium frontier model; Google medium Gemma 4 31B instruction model; downloaded via HF mirror on 2026-04-27; use multi-GPU device_map=auto for verifier/generation
+    remote_repo: google/gemma-4-31B-it
+    loader_risk: large model; multimodal/text config may require AutoModelForImageTextToText fallback
+  phi4_mini_reasoning:
+    family: phi
+    status: local_downloaded
+    path: /home/Awei/LLM/Model/base/phi4_mini_reasoning
+    class: distilled_reasoning
+    priority: P1_small_external_control
+    notes: DeepSeek-R1 synthetic math distillation control; useful non-Qwen small control, not P0 frontier evidence
+    remote_repo: microsoft/Phi-4-mini-reasoning
+    loader_risk: standard causal LM likely supported
+  glm46v_flash:
+    family: glm
+    status: local_downloaded
+    path: /home/Awei/LLM/Model/base/glm46v_flash
+    class: vision_text_posttrained
+    priority: P1_small_external_control
+    notes: GLM/Z.ai small-ish control; pure text ability may be weaker; keep as external control, not current P0 core
+    remote_repo: zai-org/GLM-4.6V-Flash
+    loader_risk: conditional_generation_or_multimodal; may require AutoModelForImageTextToText/AutoProcessor
+      rather than AutoModelForCausalLM
+  exaone45_33b_candidate:
+    family: exaone
+    status: local_downloaded_backend_blocked
+    path: /home/Awei/LLM/Model/base/exaone45_33b
+    class: instruction_or_reasoning_candidate
+    priority: P0_candidate_blocked_not_official_evidence
+    notes: User-approved external P0 candidate; downloaded via hf-mirror on 2026-04-28. E62 static license/tokenizer checks passed, but current Transformers 4.57.1 AutoConfig does not recognize exaone4_5 and the local README requests forked Transformers/vLLM; keep out of official evidence until backend is upgraded and E62 passes.
+    remote_repo: LGAI-EXAONE/EXAONE-4.5-33B
+    planned_local_path: /home/Awei/LLM/Model/base/exaone45_33b
+    loader_risk: backend_blocked_current_env; EXAONE 1.2-NC permits research/education only, and current HF/vLLM environment is not sufficient for official hidden-state experiments
+  mistral_small4_candidate:
+    family: mistral
+    status: remote_candidate_not_downloaded
+    path: mistralai/Mistral-Small-4
+    class: moe_or_compact_instruction_candidate
+    priority: P0_candidate_external_medium_or_P1_if_total_too_large
+    notes: Mistral Small 4 family is a strong external candidate if an open-weight 24B-30B or sparse medium variant is deployable locally; exact repo name and size must be verified before download
+    remote_repo: mistralai/Mistral-Small-4
+    loader_risk: not_local; candidate only until exact open-weight checkpoint, size, and loader support are confirmed
+  xiaomi_mimo_v2_flash_candidate:
+    family: xiaomi_mimo
+    status: remote_candidate_not_downloaded
+    path: XiaomiMiMo/MiMo-V2-Flash
+    class: sparse_reasoning_candidate
+    priority: P0_candidate_if_resource_feasible
+    notes: competitive external reasoning candidate; may be much larger total-parameter MoE despite small active parameters, so deployment feasibility must be checked
+    remote_repo: XiaomiMiMo/MiMo-V2-Flash
+    loader_risk: not_local; likely resource and loader risk, use only after separate backend smoke test
+  nemotron_cascade2_30b_a3b_candidate:
+    family: nemotron
+    status: local_downloaded_backend_blocked
+    path: /home/Awei/LLM/Model/base/nemotron_cascade2_30b_a3b
+    class: sparse_reasoning_candidate
+    priority: P0_candidate_blocked_not_official_evidence
+    notes: NVIDIA 30B-A3B open MoE with strong reasoning/agentic focus; downloaded via hf-mirror on 2026-04-28. E62 static checks passed, but HF dynamic loading failed because mamba-ssm is not importable; keep out of official evidence until dependency/backend smoke passes.
+    remote_repo: nvidia/Nemotron-Cascade-2-30B-A3B
+    loader_risk: backend_blocked_current_env; custom nemotron_h architecture requires mamba-ssm for HF dynamic hidden-state experiments
+  glm47_flash_candidate:
+    family: glm
+    status: local_smoke_passed
+    path: /home/Awei/LLM/Model/base/glm47_flash
+    class: sparse_or_flash_candidate
+    priority: P0_expanded_frontier_medium
+    notes: Z.ai/GLM recent 30B-A3B flash candidate; downloaded via hf-mirror on 2026-04-28. E62 passed license, tokenizer/chat-template, AutoConfig, HF dynamic option-logprob, hidden-state output, layer discovery, and vLLM static checks; admitted into expanded P0 evidence for E63 replication.
+    remote_repo: zai-org/GLM-4.7-Flash
+    loader_risk: smoke_passed_current_env; use four-GPU HF device_map=auto for official hidden-state/verifier experiments

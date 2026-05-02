@@ -1,0 +1,9 @@
+[2026-04-28T00:22:51] loading tokenizer: qwen3_14b_base -> /home/Awei/LLM/Model/base/Qwen3-14B-Base
+[2026-04-28T00:22:52] loading model dtype=bfloat16 device=cuda
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s]Loading weights: 100%|██████████| 443/443 [00:00<00:00, 15647.09it/s]
+[2026-04-28T00:24:35] wrote results/E39_surface_semantic_generalization_absolute_verifier/qwen3_14b_base_manual_trace_verifier.json; eval_rows=288
+SUMMARY model=qwen3_14b_base mode=process_only prompt=en acc=0.806 false_accept=0.2222222222222222 proc_inv_false_accept=0.2222222222222222
+SUMMARY model=qwen3_14b_base mode=process_only prompt=zh acc=0.875 false_accept=0.25 proc_inv_false_accept=0.25
+SUMMARY model=qwen3_14b_base mode=training_candidate prompt=en acc=0.653 false_accept=0.4166666666666667 proc_inv_false_accept=0.3611111111111111
+SUMMARY model=qwen3_14b_base mode=training_candidate prompt=zh acc=0.472 false_accept=0.6333333333333333 proc_inv_false_accept=0.6388888888888888

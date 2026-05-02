@@ -1,0 +1,3 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s]Loading weights: 100%|██████████| 443/443 [00:00<00:00, 15359.18it/s]
+wrote data/raw/e30_non_discount_lexical_grid_trace_pool/qwen3_14b_base_trace_pool_smoke_v2_e30_non_discount.json; rows=96

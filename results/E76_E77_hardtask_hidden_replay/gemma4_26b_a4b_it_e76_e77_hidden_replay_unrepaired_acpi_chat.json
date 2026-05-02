@@ -1,0 +1,155 @@
+{
+  "args": {
+    "device": "auto",
+    "dtype": "bfloat16",
+    "layer": null,
+    "local_files_only": true,
+    "max_model_len": 8192,
+    "max_rows": null,
+    "model_key": "gemma4_26b_a4b_it",
+    "out_dir": "/home/Awei/P02_multilingual_process_lens/results/E76_E77_hardtask_hidden_replay",
+    "prompt_format": "official_if_chat",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "target_mode": "unrepaired_acpi"
+  },
+  "created_at": "2026-04-29T10:38:44",
+  "cuda_visible_devices": "0,1,2,3",
+  "direction_source": "E61 all rows valid_mean_minus_invalid_mean at E65 best layer",
+  "experiment": "E76_E77_hardtask_hidden_replay",
+  "host": "hpc-node-01",
+  "layer": 17,
+  "leakage_audit": {
+    "error_spans_in_prompt_rows": 0,
+    "hard_task_labels_in_prompt_rows": 0,
+    "note_zh": "hard-task 人工标签和 span 只用于离线选择分析 token；模型输入为原始 problem prompt + saved completion。"
+  },
+  "model_key": "gemma4_26b_a4b_it",
+  "model_spec": {
+    "class": "instruct_moe",
+    "family": "gemma",
+    "loader_risk": "large model; multimodal/text config may require AutoModelForImageTextToText fallback",
+    "notes": "core local P0 medium frontier model; Google medium Gemma 4 26B-A4B instruction model; downloaded via HF mirror on 2026-04-27; use multi-GPU device_map=auto for verifier/generation",
+    "path": "/home/Awei/LLM/Model/base/gemma4_26b_a4b_it",
+    "priority": "P0_core_frontier_medium",
+    "remote_repo": "google/gemma-4-26B-A4B-it",
+    "status": "local_downloaded"
+  },
+  "rows": [
+    {
+      "input_tokens": 875,
+      "manual_audit_idx": 28,
+      "manual_error_span": "(3x - 2y)(4x + 3y) = 0",
+      "manual_error_type": "unrepaired_wrong_factorization_sign",
+      "manual_process_valid_repaired": false,
+      "manual_process_valid_strict": false,
+      "prompt_variant": "answer_first_no_gold",
+      "source_model": "gemma4_26b_a4b_it",
+      "stage_scores": [
+        {
+          "char_end": 540,
+          "span_text": "(3x - 2y)(4x + 3y) = 0",
+          "stage": "error_span_end",
+          "token_index_full": 162,
+          "token_index_used": 162,
+          "validity_score": -10.578845977783203
+        },
+        {
+          "char_end": 2207,
+          "span_text": "\nFinal answer: 117",
+          "stage": "first_final_answer_end",
+          "token_index_full": 874,
+          "token_index_used": 874,
+          "validity_score": -5.427553653717041
+        },
+        {
+          "char_end": 2207,
+          "span_text": "\nFinal answer: 117",
+          "stage": "last_final_answer_end",
+          "token_index_full": 874,
+          "token_index_used": 874,
+          "validity_score": -5.427553653717041
+        },
+        {
+          "char_end": 2207,
+          "span_text": "in Case 2) - (Solutions in both)\nTotal = $67 + 51 - 1 = 117$.\n\nFinal answer: 117",
+          "stage": "completion_end",
+          "token_index_full": 874,
+          "token_index_used": 874,
+          "validity_score": -5.427553653717041
+        }
+      ],
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "trace_class": "unrepaired_acpi",
+      "truncated_left_tokens": 0
+    },
+    {
+      "input_tokens": 674,
+      "manual_audit_idx": 29,
+      "manual_error_span": "(4x + y)(3x - y) = 0",
+      "manual_error_type": "unrepaired_wrong_factorization",
+      "manual_process_valid_repaired": false,
+      "manual_process_valid_strict": false,
+      "prompt_variant": "answer_first_no_gold",
+      "source_model": "gemma4_26b_a4b_it",
+      "stage_scores": [
+        {
+          "char_end": 589,
+          "span_text": "(4x + y)(3x - y) = 0",
+          "stage": "error_span_end",
+          "token_index_full": 196,
+          "token_index_used": 196,
+          "validity_score": -10.729616165161133
+        },
+        {
+          "char_end": 1727,
+          "span_text": "\nFinal answer: 117",
+          "stage": "first_final_answer_end",
+          "token_index_full": 673,
+          "token_index_used": 673,
+          "validity_score": -6.146899700164795
+        },
+        {
+          "char_end": 1727,
+          "span_text": "\nFinal answer: 117",
+          "stage": "last_final_answer_end",
+          "token_index_full": 673,
+          "token_index_used": 673,
+          "validity_score": -6.146899700164795
+        },
+        {
+          "char_end": 873,
+          "span_text": "check",
+          "stage": "repair_trigger_end",
+          "token_index_full": 319,
+          "token_index_used": 319,
+          "validity_score": -15.053558349609375
+        },
+        {
+          "char_end": 1727,
+          "span_text": "- (Number in Intersection)\nTotal pairs = $51 + 67 - 1 = 117$.\n\nFinal answer: 117",
+          "stage": "completion_end",
+          "token_index_full": 673,
+          "token_index_used": 673,
+          "validity_score": -6.146899700164795
+        }
+      ],
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "trace_class": "unrepaired_acpi",
+      "truncated_left_tokens": 0
+    }
+  ],
+  "scope_note_zh": "E76/E77 是 teacher-forced hidden replay；它复现已保存可见路径的 hidden 轨迹，不声称重采样随机路径 bit-level 可复现。",
+  "started_at": "2026-04-29T10:38:24",
+  "summary": {
+    "n_rows": 2,
+    "stage_mean_scores": {
+      "completion_end": -5.787226676940918,
+      "error_span_end": -10.654231071472168,
+      "first_final_answer_end": -5.787226676940918,
+      "last_final_answer_end": -5.787226676940918,
+      "repair_trigger_end": -15.053558349609375
+    }
+  },
+  "target_mode": "unrepaired_acpi",
+  "used_chat_template": true
+}

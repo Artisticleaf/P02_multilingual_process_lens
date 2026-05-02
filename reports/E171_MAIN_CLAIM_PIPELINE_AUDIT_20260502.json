@@ -1,0 +1,29 @@
+{
+  "definition_cleanup": {
+    "hidden_generic_warning_zh": "hidden_generic_warning 是由 hidden monitor 触发导出的文字条件，只说 prefix 某处有风险，不给位置。",
+    "hidden_localized_warning_zh": "hidden_localized_warning 是由 hidden monitor 选出的自动边界可见 span，再把该 span 作为文字提醒给模型。",
+    "hidden_signal_en": "A hidden signal is the component-state risk score read after teacher-forced causal prefill over residual, MLP, token-mixer/attention, and norm outputs.",
+    "hidden_signal_zh": "hidden signal 是 teacher-forced causal prefill 后读取的 residual/MLP/token-mixer(attention)/norm component 状态及其 E61 validity-direction 风险分数。",
+    "not_proven_by_e167_zh": "E167 不能直接证明 hidden signal 能让模型做对原本不会做的题；E171 才以原题 baseline 错误为入口检验这个 claim。"
+  },
+  "errors": [],
+  "experiment": "E171_main_claim_pipeline_audit",
+  "passed": true,
+  "pipeline_guards": [
+    "Baseline prompts use only the original problem and a generic non-thinking solve template.",
+    "Rescue cases are built only from same-model original-problem baseline failures.",
+    "Hidden trigger selection uses the E166 calibrated component key and threshold on the model's own wrong trace.",
+    "No oracle/manual span is included in E171 repair variants.",
+    "The .pt cache stores component vectors, directions, centers, and prefix metadata for later residual/MLP/attention/norm analysis."
+  ],
+  "required_scripts": [
+    "scripts/build_e171_main_claim_task_bank.py",
+    "scripts/smoke_e171_main_claim_prompt.py",
+    "scripts/run_e171_baseline_nonthinking.py",
+    "scripts/run_e171_hidden_rescue_from_baseline.py",
+    "scripts/summarize_e171_main_claim_hidden_rescue.py"
+  ],
+  "task_bank": "data/processed/e171_main_claim_task_bank_20260502.jsonl",
+  "tasks": 59,
+  "warnings": []
+}

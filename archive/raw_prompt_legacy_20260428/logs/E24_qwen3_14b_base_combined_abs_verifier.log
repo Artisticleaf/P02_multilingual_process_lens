@@ -1,0 +1,4 @@
+[2026-04-27T12:57:31] loading tokenizer: qwen3_14b_base -> /home/Awei/LLM/Model/base/Qwen3-14B-Base
+[2026-04-27T12:57:32] loading model dtype=bfloat16 device=cuda
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s]Loading weights: 100%|██████████| 443/443 [00:00<00:00, 14280.59it/s]

@@ -1,0 +1,36 @@
+pairs:
+  - id: e31_ratio_boys_girls_bad310002_valid310001
+    model_key: qwen35_9b
+    bad_idx: 310002
+    valid_idx: 310001
+    error_span: "男生占全班的2/3"
+    support_span: "男生占总人数的2/5"
+    layers: [0, 4, 8, 12, 14, 16, 20, 24, 28, 31]
+  - id: e31_inequality_boundary_bad310008_valid310007
+    model_key: qwen35_9b
+    bad_idx: 310008
+    valid_idx: 310007
+    error_span: "between 3 and 7, inclusive"
+    support_span: "greater than 3 and no more than 7"
+    layers: [0, 4, 8, 12, 14, 16, 20, 24, 28, 31]
+  - id: e31_unit_dozen_pairs_bad310014_valid310013
+    model_key: qwen35_9b
+    bad_idx: 310014
+    valid_idx: 310013
+    error_span: "一打袜子等于12双袜子"
+    support_span: "一打等于12只袜子"
+    layers: [0, 4, 8, 12, 14, 16, 20, 24, 28, 31]
+  - id: e31_geometry_diameter_bad310020_valid310019
+    model_key: qwen35_9b
+    bad_idx: 310020
+    valid_idx: 310019
+    error_span: "半径是10厘米"
+    support_span: "半径是10÷2=5厘米"
+    layers: [0, 4, 8, 12, 14, 16, 20, 24, 28, 31]
+  - id: e31_comb_unordered_bad310026_valid310025
+    model_key: qwen35_9b
+    bad_idx: 310026
+    valid_idx: 310025
+    error_span: "the order matters"
+    support_span: "The committee is unordered"
+    layers: [0, 4, 8, 12, 14, 16, 20, 24, 28, 31]

@@ -1,0 +1,85 @@
+tasks:
+  - id: disc_25_off_direct
+    en: A $80 jacket is discounted by 25%. What is the sale price?
+    zh: 一件80美元的夹克优惠25%后售价是多少？
+    answer: "60"
+    family: discount
+    lexical_form: off25_pay75
+    trap: "25% off means pay 75%; do not call it 打八折 or 80% discount."
+  - id: disc_pay75_en
+    en: An $80 jacket is sold for 75% of its original price. What is the sale price?
+    zh: 一件80美元的夹克按原价的75%出售，售价是多少？
+    answer: "60"
+    family: discount
+    lexical_form: pay75_explicit
+    trap: "Pay 75% is not 75% off."
+  - id: disc_zh_qiwu_price
+    en: An $80 jacket is sold at 75% of its original price. What is the sale price?
+    zh: 一件80美元的夹克打七五折后售价是多少？
+    answer: "60"
+    family: discount
+    lexical_form: Chinese_qiwu_pay75
+    trap: "Chinese 七五折 means pay 75%, not 75% off."
+  - id: disc_75_off_direct
+    en: A $80 jacket is discounted by 75%. What is the sale price?
+    zh: 一件80美元的夹克优惠75%后售价是多少？
+    answer: "20"
+    family: discount
+    lexical_form: off75_pay25
+    trap: "75% off means pay 25%; contrast with 七五折."
+  - id: disc_pay25_explicit
+    en: An $80 jacket is sold for 25% of its original price. What is the sale price?
+    zh: 一件80美元的夹克按原价的25%出售，售价是多少？
+    answer: "20"
+    family: discount
+    lexical_form: pay25_explicit
+    trap: "Pay 25% has the same final answer as 75% off but different wording."
+  - id: seq_dabazhe_pay80
+    en: A price starts at $80, increases by 25%, then is sold for 80% of the new price. What is the final price?
+    zh: 一个80美元的价格先上涨25%，再打八折，最终价格是多少？
+    answer: "80"
+    family: sequential_discount
+    lexical_form: Chinese_dabazhe_pay80
+    trap: "打八折 means pay 80%, not 80% off."
+  - id: seq_20_off_pay80
+    en: A price starts at $80, increases by 25%, then receives a 20% discount. What is the final price?
+    zh: 一个80美元的价格先上涨25%，再优惠20%，最终价格是多少？
+    answer: "80"
+    family: sequential_discount
+    lexical_form: off20_pay80
+    trap: "20% off after the increase means pay 80% of 100."
+  - id: seq_80_discount_pay20
+    en: A price starts at $80, increases by 25%, then receives an 80% discount. What is the final price?
+    zh: 一个80美元的价格先上涨25%，再优惠80%，最终价格是多少？
+    answer: "20"
+    family: sequential_discount
+    lexical_form: off80_pay20
+    trap: "80% discount means pay 20%; this is the control opposite of 打八折."
+  - id: ratio_boys_total_control
+    en: Boys are 3/8 of a class. If there are 24 boys, how many girls are there?
+    zh: 男生占全班人数的3/8。如果有24名男生，女生有多少名？
+    answer: "40"
+    family: ratio
+    lexical_form: boys_total
+    trap: "3/8 is boys over total, not boys over girls."
+  - id: ratio_boys_girls_control
+    en: The ratio of boys to girls is 3:5. If there are 24 boys, how many girls are there?
+    zh: 男生和女生的比例是3:5。如果有24名男生，女生有多少名？
+    answer: "40"
+    family: ratio
+    lexical_form: boys_girls
+    trap: "3:5 is boys:girls; contrast with boys being 3/8 of total."
+  - id: deriv_sum_control
+    en: Differentiate x^2 + 3x.
+    zh: 求 x^2 + 3x 的导数。
+    answer: "2x+3"
+    family: derivative
+    lexical_form: linear_term
+    trap: "The derivative of 3x is 3; do not treat 3x as a constant."
+  - id: deriv_coeff_control
+    en: Differentiate 3x^2 + x.
+    zh: 求 3x^2 + x 的导数。
+    answer: "6x+1"
+    family: derivative
+    lexical_form: coefficient
+    trap: "Use the coefficient correctly."

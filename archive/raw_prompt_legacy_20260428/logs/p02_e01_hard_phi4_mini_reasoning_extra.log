@@ -1,0 +1,12 @@
+/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+[2026-04-27T02:37:46] loading tokenizer: phi4_mini_reasoning -> /home/Awei/LLM/Model/base/phi4_mini_reasoning
+[2026-04-27T02:37:47] loading model dtype=bfloat16 device=cuda
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 291.01it/s]
+[2026-04-27T02:37:48] tokenization
+[2026-04-27T02:37:48] contextual bridge
+[2026-04-27T02:37:49] process verifier margins
+[2026-04-27T02:37:50] residual patching pairs=5 layers=[8, 16, 24, 31]
+[2026-04-27T02:37:51] wrote /home/Awei/P02_multilingual_process_lens/results/E01_anchor_matrix_hard/phi4_mini_reasoning_anchor_smoke.json
+SUMMARY model=phi4_mini_reasoning bridge_best_layer=14 top1=0.9444444444444444 proc_acc=0.55 invalid_fc_false_accept=0.9

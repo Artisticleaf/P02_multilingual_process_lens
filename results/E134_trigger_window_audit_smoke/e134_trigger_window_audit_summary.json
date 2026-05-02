@@ -1,0 +1,29 @@
+{
+  "experiment": "E134_trigger_window_audit",
+  "created_at": "2026-04-30T17:55:13",
+  "source_scored_json": "results/E132_E133_suspicious_confidence_probe_smoke/qwen35_27b_e132_e133_max10_chat.json",
+  "out_jsonl": "data/processed/e134_trigger_window_audit_sheet_smoke_20260430.jsonl",
+  "rows": 11,
+  "threshold": 0.0,
+  "radius": 240,
+  "by_variant": {
+    "suspicious_valid_marker": 2,
+    "low_conf_valid": 2,
+    "repaired_strict_invalid": 7
+  },
+  "by_stage": {
+    "suspicion_marker_end": 4,
+    "error_span_end": 1,
+    "completion_end": 2,
+    "first_final_answer_end": 2,
+    "post_error_240chars": 1,
+    "first_claim_end": 1
+  },
+  "by_preliminary_label": {
+    "marker_only_prefix_control_not_policy_trigger": 4,
+    "true_error_near_error_candidate": 3,
+    "strict_invalid_after_repair_or_completion_candidate": 2,
+    "true_error_candidate": 2
+  },
+  "note_zh": "E134 是窗口审计表，不把人工标签写回模型 prompt。preliminary_label 只用于审计排序，不是最终人工结论。"
+}

@@ -1,0 +1,14 @@
+/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+[2026-04-27T12:25:35] loading verifier=qwen3_14b_base on cuda; pairs=2
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 526.93it/s]
+pair=qwen35_e18_discount_234_bad_181000_valid prompt=en order=bad_A target=A pred=A margin=2.125
+pair=qwen35_e18_discount_234_bad_181000_valid prompt=en order=bad_B target=B pred=B margin=1.500
+pair=qwen35_e18_discount_234_bad_181000_valid prompt=zh order=bad_A target=A pred=A margin=3.625
+pair=qwen35_e18_discount_234_bad_181000_valid prompt=zh order=bad_B target=B pred=B margin=1.250
+pair=qwen35_e18_discount_234_bad_181001_valid prompt=en order=bad_A target=A pred=A margin=2.125
+pair=qwen35_e18_discount_234_bad_181001_valid prompt=en order=bad_B target=B pred=B margin=1.875
+pair=qwen35_e18_discount_234_bad_181001_valid prompt=zh order=bad_A target=A pred=A margin=2.500
+pair=qwen35_e18_discount_234_bad_181001_valid prompt=zh order=bad_B target=B pred=B margin=2.125
+wrote results/E23_e18_clean_sibling_contrastive/qwen3_14b_base_contrastive_acpi_verifier.json; rows=8 acc=1.000 mean_margin=2.141

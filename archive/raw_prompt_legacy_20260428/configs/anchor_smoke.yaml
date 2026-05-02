@@ -1,0 +1,72 @@
+run:
+  seed: 20260427
+  dtype: bfloat16
+  max_pairs: 12
+  max_process_cases: 8
+  layers: auto
+terms:
+  - en: derivative
+    zh: 导数
+  - en: prime number
+    zh: 质数
+  - en: fraction
+    zh: 分数
+  - en: equation
+    zh: 方程
+  - en: remainder
+    zh: 余数
+  - en: probability
+    zh: 概率
+  - en: angle
+    zh: 角度
+  - en: triangle
+    zh: 三角形
+  - en: average
+    zh: 平均数
+  - en: integer
+    zh: 整数
+  - en: factor
+    zh: 因数
+  - en: square root
+    zh: 平方根
+process_cases:
+  - id: linear_valid
+    problem: Solve 2x + 3 = 11.
+    trace: Subtract 3 from both sides to get 2x = 8. Divide by 2, so x = 4.
+    process_valid: true
+    final_correct: true
+  - id: linear_invalid_final_correct
+    problem: Solve 2x + 3 = 11.
+    trace: Subtract 3 from both sides and write 2x = 9. Divide by 2 but report x = 4.
+    process_valid: false
+    final_correct: true
+  - id: area_valid
+    problem: A triangle has base 8 and height 5. What is its area?
+    trace: The area of a triangle is base times height divided by 2. Thus 8 times 5 divided by 2 equals 20.
+    process_valid: true
+    final_correct: true
+  - id: area_invalid_final_correct
+    problem: A triangle has base 8 and height 5. What is its area?
+    trace: The area is base times height, so 8 times 5 equals 40. Therefore the answer is 20.
+    process_valid: false
+    final_correct: true
+  - id: derivative_valid
+    problem: Differentiate x^2 + 3x.
+    trace: The derivative of x^2 is 2x and the derivative of 3x is 3, so the derivative is 2x + 3.
+    process_valid: true
+    final_correct: true
+  - id: derivative_invalid_final_correct
+    problem: Differentiate x^2 + 3x.
+    trace: The derivative of x^2 is x and the derivative of 3x is 2, so the derivative is 2x + 3.
+    process_valid: false
+    final_correct: true
+  - id: probability_valid
+    problem: A bag has 3 red balls and 2 blue balls. What is the probability of drawing a red ball?
+    trace: There are 5 balls in total and 3 are red, so the probability is 3/5.
+    process_valid: true
+    final_correct: true
+  - id: probability_invalid_final_correct
+    problem: A bag has 3 red balls and 2 blue balls. What is the probability of drawing a red ball?
+    trace: There are 3 minus 2 equals 1 ball in total, so the probability is 3/5.
+    process_valid: false
+    final_correct: true

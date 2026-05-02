@@ -1,0 +1,17 @@
+[2026-04-27T19:45:53] loading model=gemma4_e4b_it device=cuda rows=2
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/2076 [00:00<?, ?it/s]Loading weights:  76%|███████▌  | 1572/2076 [00:00<00:00, 15718.85it/s]Loading weights: 100%|██████████| 2076/2076 [00:00<00:00, 15901.24it/s]
+[transformers] The following generation flags are not valid and may be ignored: ['top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+idx=300310 mode=locate_only prompt=en proc=True span_ok=True judge=None out=None.
+idx=300310 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=4. ```
+idx=300310 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 
+idx=300310 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=True out=4 题目：一个数是大于3且不超过7的整数。它有多少个可能取值？ 推理过程：The problem asks for the number of possible integer v
+idx=300311 mode=locate_only prompt=en proc=False span_ok=False judge=None out=The reasoning trace is correct.
+idx=300311 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=4.
+idx=300311 mode=locate_then_judge prompt=en proc=False span_ok=True judge=None out=4 Reasoning trace: The problem asks for the number of integer values between 3 and 7, incl
+idx=300311 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=True out=4 题目：一个数是大于3且不超过7的整数。它有多少个可能取值？ 推理过程：一个数是大于3且不超过7的整数。它有多少个可能取值？ Span: 4 题目：一个数是大于3且不超过7的整数
+[2026-04-27T19:46:05] wrote results/E30_non_discount_error_span_verifier/gemma4_e4b_it_error_span_extraction_verifier.json; eval_rows=8
+SUMMARY mode=locate_only prompt=en span_acc=0.5 invalid_hit=0.0 judge_acc=None loc_but_accept=None
+SUMMARY mode=locate_only prompt=zh span_acc=0.0 invalid_hit=0.0 judge_acc=None loc_but_accept=None
+SUMMARY mode=locate_then_judge prompt=en span_acc=0.5 invalid_hit=1.0 judge_acc=None loc_but_accept=None
+SUMMARY mode=locate_then_judge prompt=zh span_acc=0.0 invalid_hit=0.0 judge_acc=0.5 loc_but_accept=0.0

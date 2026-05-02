@@ -1,0 +1,415 @@
+{
+  "created_at": "2026-04-29T01:14:17",
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "check": "E60 result exists for qwen35_27b",
+      "ok": true,
+      "detail": "results/E60_objective_ladder/qwen35_27b_e60_objective_ladder_chat.json"
+    },
+    {
+      "check": "qwen35_27b row count",
+      "ok": true,
+      "detail": "rows=360"
+    },
+    {
+      "check": "qwen35_27b chat template used",
+      "ok": true,
+      "detail": "True"
+    },
+    {
+      "check": "qwen35_27b prompt format",
+      "ok": true,
+      "detail": "official_if_chat"
+    },
+    {
+      "check": "qwen35_27b leakage audit zero",
+      "ok": true,
+      "detail": "{'gold_label_in_prompt_rows': 0, 'known_error_span_annotation_in_prompt_rows': 0, 'manual_correction_in_prompt_rows': 0, 'note_zh': '错误句子本身作为 trace 内容出现，这是被审计对象；error_span/support_span/manual_correction 不进入 prompt。'}"
+    },
+    {
+      "check": "qwen35_27b objective counts",
+      "ok": true,
+      "detail": "{('pointwise', 'plain_yes_no'): 60, ('pointwise', 'careful_yes_no'): 60, ('pointwise', 'answer_blind_yes_no'): 60, ('pointwise', 'locate_then_judge_yes_no'): 60, ('contrastive', 'sibling_comparison'): 60, ('contrastive', 'careful_sibling_comparison'): 60}"
+    },
+    {
+      "check": "qwen35_27b E60 plain reproduces E42",
+      "ok": true,
+      "detail": "E60=0.5/1.0 E42=0.5/1.0"
+    },
+    {
+      "check": "qwen35_27b E60 plain reproduces E54",
+      "ok": true,
+      "detail": "E60=0.6666666666666666/1.0 E54=0.6666666666666666/1.0"
+    },
+    {
+      "check": "E60 result exists for gemma4_31b_it",
+      "ok": true,
+      "detail": "results/E60_objective_ladder/gemma4_31b_it_e60_objective_ladder_chat.json"
+    },
+    {
+      "check": "gemma4_31b_it row count",
+      "ok": true,
+      "detail": "rows=360"
+    },
+    {
+      "check": "gemma4_31b_it chat template used",
+      "ok": true,
+      "detail": "True"
+    },
+    {
+      "check": "gemma4_31b_it prompt format",
+      "ok": true,
+      "detail": "official_if_chat"
+    },
+    {
+      "check": "gemma4_31b_it leakage audit zero",
+      "ok": true,
+      "detail": "{'gold_label_in_prompt_rows': 0, 'known_error_span_annotation_in_prompt_rows': 0, 'manual_correction_in_prompt_rows': 0, 'note_zh': '错误句子本身作为 trace 内容出现，这是被审计对象；error_span/support_span/manual_correction 不进入 prompt。'}"
+    },
+    {
+      "check": "gemma4_31b_it objective counts",
+      "ok": true,
+      "detail": "{('pointwise', 'plain_yes_no'): 60, ('pointwise', 'careful_yes_no'): 60, ('pointwise', 'answer_blind_yes_no'): 60, ('pointwise', 'locate_then_judge_yes_no'): 60, ('contrastive', 'sibling_comparison'): 60, ('contrastive', 'careful_sibling_comparison'): 60}"
+    },
+    {
+      "check": "gemma4_31b_it E60 plain reproduces E42",
+      "ok": true,
+      "detail": "E60=0.5/1.0 E42=0.5/1.0"
+    },
+    {
+      "check": "gemma4_31b_it E60 plain reproduces E54",
+      "ok": true,
+      "detail": "E60=0.6666666666666666/1.0 E54=0.6666666666666666/1.0"
+    },
+    {
+      "check": "E60 result exists for gemma4_26b_a4b_it",
+      "ok": true,
+      "detail": "results/E60_objective_ladder/gemma4_26b_a4b_it_e60_objective_ladder_chat.json"
+    },
+    {
+      "check": "gemma4_26b_a4b_it row count",
+      "ok": true,
+      "detail": "rows=360"
+    },
+    {
+      "check": "gemma4_26b_a4b_it chat template used",
+      "ok": true,
+      "detail": "True"
+    },
+    {
+      "check": "gemma4_26b_a4b_it prompt format",
+      "ok": true,
+      "detail": "official_if_chat"
+    },
+    {
+      "check": "gemma4_26b_a4b_it leakage audit zero",
+      "ok": true,
+      "detail": "{'gold_label_in_prompt_rows': 0, 'known_error_span_annotation_in_prompt_rows': 0, 'manual_correction_in_prompt_rows': 0, 'note_zh': '错误句子本身作为 trace 内容出现，这是被审计对象；error_span/support_span/manual_correction 不进入 prompt。'}"
+    },
+    {
+      "check": "gemma4_26b_a4b_it objective counts",
+      "ok": true,
+      "detail": "{('pointwise', 'plain_yes_no'): 60, ('pointwise', 'careful_yes_no'): 60, ('pointwise', 'answer_blind_yes_no'): 60, ('pointwise', 'locate_then_judge_yes_no'): 60, ('contrastive', 'sibling_comparison'): 60, ('contrastive', 'careful_sibling_comparison'): 60}"
+    },
+    {
+      "check": "gemma4_26b_a4b_it E60 plain reproduces E42",
+      "ok": true,
+      "detail": "E60=0.5/1.0 E42=0.5/1.0"
+    },
+    {
+      "check": "gemma4_26b_a4b_it E60 plain reproduces E54",
+      "ok": true,
+      "detail": "E60=0.5/0.9444444444444444 E54=0.5/0.9444444444444444"
+    },
+    {
+      "check": "E60 prompt source does not insert support_span",
+      "ok": true,
+      "detail": "support_span"
+    },
+    {
+      "check": "E60 prompt source does not insert error_span",
+      "ok": true,
+      "detail": "error_span"
+    },
+    {
+      "check": "E60 prompt source does not insert manual_correction",
+      "ok": true,
+      "detail": "manual_correction"
+    },
+    {
+      "check": "E60 prompt source does not insert known_error_spans",
+      "ok": true,
+      "detail": "known_error_spans"
+    },
+    {
+      "check": "E60 prompt source does not insert manual_process_valid",
+      "ok": true,
+      "detail": "manual_process_valid"
+    }
+  ],
+  "summary_table": [
+    {
+      "model": "qwen35_27b",
+      "objective": "plain_yes_no",
+      "objective_type": "pointwise",
+      "n": 60,
+      "accuracy": 0.7,
+      "acpi_accept_rate": 0.6,
+      "valid_accept_rate": 1.0,
+      "yes_rate": 0.8,
+      "mean_margin": 2.77916664625518
+    },
+    {
+      "model": "qwen35_27b",
+      "objective": "careful_yes_no",
+      "objective_type": "pointwise",
+      "n": 60,
+      "accuracy": 0.9666666666666667,
+      "acpi_accept_rate": 0.03333333333333333,
+      "valid_accept_rate": 0.9666666666666667,
+      "yes_rate": 0.5,
+      "mean_margin": 0.4083333221497014
+    },
+    {
+      "model": "qwen35_27b",
+      "objective": "answer_blind_yes_no",
+      "objective_type": "pointwise",
+      "n": 60,
+      "accuracy": 0.9,
+      "acpi_accept_rate": 0.13333333333333333,
+      "valid_accept_rate": 0.9333333333333333,
+      "yes_rate": 0.5333333333333333,
+      "mean_margin": 0.23958332515321673
+    },
+    {
+      "model": "qwen35_27b",
+      "objective": "locate_then_judge_yes_no",
+      "objective_type": "pointwise",
+      "n": 60,
+      "accuracy": 0.9666666666666667,
+      "acpi_accept_rate": 0.06666666666666667,
+      "valid_accept_rate": 1.0,
+      "yes_rate": 0.5333333333333333,
+      "mean_margin": -0.48333331594864526
+    },
+    {
+      "model": "qwen35_27b",
+      "objective": "sibling_comparison",
+      "objective_type": "contrastive",
+      "n": 60,
+      "accuracy": 1.0,
+      "mean_target_margin": 6.089583327601091,
+      "pred_A_rate": 0.5
+    },
+    {
+      "model": "qwen35_27b",
+      "objective": "careful_sibling_comparison",
+      "objective_type": "contrastive",
+      "n": 60,
+      "accuracy": 1.0,
+      "mean_target_margin": 5.752083344891919,
+      "pred_A_rate": 0.5
+    },
+    {
+      "model": "gemma4_31b_it",
+      "objective": "plain_yes_no",
+      "objective_type": "pointwise",
+      "n": 60,
+      "accuracy": 0.7,
+      "acpi_accept_rate": 0.6,
+      "valid_accept_rate": 1.0,
+      "yes_rate": 0.8,
+      "mean_margin": 16.703157445646994
+    },
+    {
+      "model": "gemma4_31b_it",
+      "objective": "careful_yes_no",
+      "objective_type": "pointwise",
+      "n": 60,
+      "accuracy": 0.9333333333333333,
+      "acpi_accept_rate": 0.13333333333333333,
+      "valid_accept_rate": 1.0,
+      "yes_rate": 0.5666666666666667,
+      "mean_margin": 4.754003827033321
+    },
+    {
+      "model": "gemma4_31b_it",
+      "objective": "answer_blind_yes_no",
+      "objective_type": "pointwise",
+      "n": 60,
+      "accuracy": 0.8833333333333333,
+      "acpi_accept_rate": 0.23333333333333334,
+      "valid_accept_rate": 1.0,
+      "yes_rate": 0.6166666666666667,
+      "mean_margin": 5.6790526571022255
+    },
+    {
+      "model": "gemma4_31b_it",
+      "objective": "locate_then_judge_yes_no",
+      "objective_type": "pointwise",
+      "n": 60,
+      "accuracy": 0.9333333333333333,
+      "acpi_accept_rate": 0.13333333333333333,
+      "valid_accept_rate": 1.0,
+      "yes_rate": 0.5666666666666667,
+      "mean_margin": 5.805110547205131
+    },
+    {
+      "model": "gemma4_31b_it",
+      "objective": "sibling_comparison",
+      "objective_type": "contrastive",
+      "n": 60,
+      "accuracy": 1.0,
+      "mean_target_margin": 19.64777823053349,
+      "pred_A_rate": 0.5
+    },
+    {
+      "model": "gemma4_31b_it",
+      "objective": "careful_sibling_comparison",
+      "objective_type": "contrastive",
+      "n": 60,
+      "accuracy": 1.0,
+      "mean_target_margin": 15.249951185767229,
+      "pred_A_rate": 0.5
+    },
+    {
+      "model": "gemma4_26b_a4b_it",
+      "objective": "plain_yes_no",
+      "objective_type": "pointwise",
+      "n": 60,
+      "accuracy": 0.7333333333333333,
+      "acpi_accept_rate": 0.5,
+      "valid_accept_rate": 0.9666666666666667,
+      "yes_rate": 0.7333333333333333,
+      "mean_margin": 9.963545833843266
+    },
+    {
+      "model": "gemma4_26b_a4b_it",
+      "objective": "careful_yes_no",
+      "objective_type": "pointwise",
+      "n": 60,
+      "accuracy": 0.8333333333333334,
+      "acpi_accept_rate": 0.3,
+      "valid_accept_rate": 0.9666666666666667,
+      "yes_rate": 0.6333333333333333,
+      "mean_margin": 5.949496687524998
+    },
+    {
+      "model": "gemma4_26b_a4b_it",
+      "objective": "answer_blind_yes_no",
+      "objective_type": "pointwise",
+      "n": 60,
+      "accuracy": 0.8833333333333333,
+      "acpi_accept_rate": 0.2,
+      "valid_accept_rate": 0.9666666666666667,
+      "yes_rate": 0.5833333333333334,
+      "mean_margin": 5.321784699267703
+    },
+    {
+      "model": "gemma4_26b_a4b_it",
+      "objective": "locate_then_judge_yes_no",
+      "objective_type": "pointwise",
+      "n": 60,
+      "accuracy": 0.8666666666666667,
+      "acpi_accept_rate": 0.23333333333333334,
+      "valid_accept_rate": 0.9666666666666667,
+      "yes_rate": 0.6,
+      "mean_margin": 5.506267081301691
+    },
+    {
+      "model": "gemma4_26b_a4b_it",
+      "objective": "sibling_comparison",
+      "objective_type": "contrastive",
+      "n": 60,
+      "accuracy": 1.0,
+      "mean_target_margin": 10.7260271065509,
+      "pred_A_rate": 0.5
+    },
+    {
+      "model": "gemma4_26b_a4b_it",
+      "objective": "careful_sibling_comparison",
+      "objective_type": "contrastive",
+      "n": 60,
+      "accuracy": 1.0,
+      "mean_target_margin": 9.870317882908827,
+      "pred_A_rate": 0.5
+    }
+  ],
+  "mean_by_objective": [
+    {
+      "objective": "plain_yes_no",
+      "objective_type": "pointwise",
+      "models": [
+        "qwen35_27b",
+        "gemma4_31b_it",
+        "gemma4_26b_a4b_it"
+      ],
+      "mean_accuracy": 0.711111111111111,
+      "mean_acpi_accept_rate": 0.5666666666666667,
+      "mean_valid_accept_rate": 0.9888888888888889,
+      "mean_yes_rate": 0.7777777777777778
+    },
+    {
+      "objective": "careful_yes_no",
+      "objective_type": "pointwise",
+      "models": [
+        "qwen35_27b",
+        "gemma4_31b_it",
+        "gemma4_26b_a4b_it"
+      ],
+      "mean_accuracy": 0.9111111111111111,
+      "mean_acpi_accept_rate": 0.15555555555555556,
+      "mean_valid_accept_rate": 0.9777777777777777,
+      "mean_yes_rate": 0.5666666666666667
+    },
+    {
+      "objective": "answer_blind_yes_no",
+      "objective_type": "pointwise",
+      "models": [
+        "qwen35_27b",
+        "gemma4_31b_it",
+        "gemma4_26b_a4b_it"
+      ],
+      "mean_accuracy": 0.8888888888888888,
+      "mean_acpi_accept_rate": 0.18888888888888888,
+      "mean_valid_accept_rate": 0.9666666666666667,
+      "mean_yes_rate": 0.5777777777777778
+    },
+    {
+      "objective": "locate_then_judge_yes_no",
+      "objective_type": "pointwise",
+      "models": [
+        "qwen35_27b",
+        "gemma4_31b_it",
+        "gemma4_26b_a4b_it"
+      ],
+      "mean_accuracy": 0.9222222222222223,
+      "mean_acpi_accept_rate": 0.14444444444444443,
+      "mean_valid_accept_rate": 0.9888888888888889,
+      "mean_yes_rate": 0.5666666666666667
+    },
+    {
+      "objective": "sibling_comparison",
+      "objective_type": "contrastive",
+      "models": [
+        "qwen35_27b",
+        "gemma4_31b_it",
+        "gemma4_26b_a4b_it"
+      ],
+      "mean_accuracy": 1.0,
+      "mean_target_margin": 12.154462888228494
+    },
+    {
+      "objective": "careful_sibling_comparison",
+      "objective_type": "contrastive",
+      "models": [
+        "qwen35_27b",
+        "gemma4_31b_it",
+        "gemma4_26b_a4b_it"
+      ],
+      "mean_accuracy": 1.0,
+      "mean_target_margin": 10.290784137855992
+    }
+  ]
+}

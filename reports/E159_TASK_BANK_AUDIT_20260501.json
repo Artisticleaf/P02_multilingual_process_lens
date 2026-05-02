@@ -1,0 +1,20 @@
+{
+  "candidate_solutions": 80,
+  "checked_expected_gold_rows": 40,
+  "families": {
+    "algebra_sign_symmetry": 4,
+    "code_boundary_zero": 4,
+    "counting_complement": 4,
+    "graph_definition": 4,
+    "multilingual_semantic": 4,
+    "probability_conditioning": 4,
+    "proof_invalid_lemma": 4,
+    "table_zero_swap": 4,
+    "temporal_boundary": 4,
+    "unit_roundtrip": 4
+  },
+  "issues": [],
+  "passed": true,
+  "program_check_rows": 33,
+  "tasks": 40
+}

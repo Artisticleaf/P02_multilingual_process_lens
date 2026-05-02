@@ -1,0 +1,62 @@
+/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+[2026-04-27T04:08:22] loading qwen3_14b_base on cuda
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 480.54it/s]
+row task=disc_zh_75_price route=en->en gold=60 pred_avg=60 margin_avg=1.738
+row task=disc_zh_75_price route=zh->zh gold=60 pred_avg=60 margin_avg=1.541
+row task=disc_zh_75_price route=zh->en gold=60 pred_avg=60 margin_avg=0.256
+row task=disc_zh_75_price route=en->zh gold=60 pred_avg=60 margin_avg=1.708
+row task=disc_en_25_off route=en->en gold=60 pred_avg=60 margin_avg=2.141
+row task=disc_en_25_off route=zh->zh gold=60 pred_avg=60 margin_avg=1.299
+row task=disc_en_25_off route=zh->en gold=60 pred_avg=60 margin_avg=1.569
+row task=disc_en_25_off route=en->zh gold=60 pred_avg=60 margin_avg=1.917
+row task=disc_en_75_off route=en->en gold=20 pred_avg=20 margin_avg=1.887
+row task=disc_en_75_off route=zh->zh gold=20 pred_avg=20 margin_avg=1.329
+row task=disc_en_75_off route=zh->en gold=20 pred_avg=20 margin_avg=1.556
+row task=disc_en_75_off route=en->zh gold=20 pred_avg=20 margin_avg=1.750
+row task=ratio_boys_girls route=en->en gold=40 pred_avg=40 margin_avg=1.580
+row task=ratio_boys_girls route=zh->zh gold=40 pred_avg=40 margin_avg=2.273
+row task=ratio_boys_girls route=zh->en gold=40 pred_avg=40 margin_avg=1.344
+row task=ratio_boys_girls route=en->zh gold=40 pred_avg=40 margin_avg=2.652
+row task=ratio_boys_total route=en->en gold=40 pred_avg=40 margin_avg=0.823
+row task=ratio_boys_total route=zh->zh gold=40 pred_avg=24 margin_avg=-0.524
+row task=ratio_boys_total route=zh->en gold=40 pred_avg=40 margin_avg=0.674
+row task=ratio_boys_total route=en->zh gold=40 pred_avg=15 margin_avg=-0.601
+row task=ratio_girls_boys route=en->en gold=40 pred_avg=40 margin_avg=1.745
+row task=ratio_girls_boys route=zh->zh gold=40 pred_avg=40 margin_avg=1.722
+row task=ratio_girls_boys route=zh->en gold=40 pred_avg=40 margin_avg=1.539
+row task=ratio_girls_boys route=en->zh gold=40 pred_avg=40 margin_avg=2.388
+row task=avg_simple route=en->en gold=11 pred_avg=11 margin_avg=2.037
+row task=avg_simple route=zh->zh gold=11 pred_avg=11 margin_avg=1.865
+row task=avg_simple route=zh->en gold=11 pred_avg=11 margin_avg=2.507
+row task=avg_simple route=en->zh gold=11 pred_avg=11 margin_avg=2.538
+row task=avg_weighted route=en->en gold=85 pred_avg=85 margin_avg=0.875
+row task=avg_weighted route=zh->zh gold=85 pred_avg=85 margin_avg=1.650
+row task=avg_weighted route=zh->en gold=85 pred_avg=85 margin_avg=0.667
+row task=avg_weighted route=en->zh gold=85 pred_avg=85 margin_avg=1.567
+row task=deriv_sum route=en->en gold=2x+3 pred_avg=2x + 3 margin_avg=-0.491
+row task=deriv_sum route=zh->zh gold=2x+3 pred_avg=2x + 3 margin_avg=-1.086
+row task=deriv_sum route=zh->en gold=2x+3 pred_avg=2x + 3 margin_avg=-0.714
+row task=deriv_sum route=en->zh gold=2x+3 pred_avg=2x + 3 margin_avg=-0.934
+row task=deriv_product_equiv route=en->en gold=2x+3 pred_avg=2x + 3 margin_avg=-0.637
+row task=deriv_product_equiv route=zh->zh gold=2x+3 pred_avg=2x + 3 margin_avg=-0.982
+row task=deriv_product_equiv route=zh->en gold=2x+3 pred_avg=2x + 3 margin_avg=-0.756
+row task=deriv_product_equiv route=en->zh gold=2x+3 pred_avg=2x + 3 margin_avg=-0.775
+row task=deriv_coeff route=en->en gold=6x+1 pred_avg=6x + 1 margin_avg=-0.540
+row task=deriv_coeff route=zh->zh gold=6x+1 pred_avg=6x + 1 margin_avg=-0.917
+row task=deriv_coeff route=zh->en gold=6x+1 pred_avg=6x + 1 margin_avg=-0.739
+row task=deriv_coeff route=en->zh gold=6x+1 pred_avg=6x + 1 margin_avg=-0.847
+row task=rem_137_9 route=en->en gold=2 pred_avg=2 margin_avg=1.562
+row task=rem_137_9 route=zh->zh gold=2 pred_avg=1 margin_avg=-3.775
+row task=rem_137_9 route=zh->en gold=2 pred_avg=1 margin_avg=-2.313
+row task=rem_137_9 route=en->zh gold=2 pred_avg=8 margin_avg=-0.500
+row task=frac_simplify route=en->en gold=3/4 pred_avg=3/4 margin_avg=0.563
+row task=frac_simplify route=zh->zh gold=3/4 pred_avg=3/4 margin_avg=1.093
+row task=frac_simplify route=zh->en gold=3/4 pred_avg=3/4 margin_avg=0.694
+row task=frac_simplify route=en->zh gold=3/4 pred_avg=3/4 margin_avg=1.235
+row task=percent_then_discount route=en->en gold=80 pred_avg=80 margin_avg=0.731
+row task=percent_then_discount route=zh->zh gold=80 pred_avg=80 margin_avg=0.671
+row task=percent_then_discount route=zh->en gold=80 pred_avg=80 margin_avg=1.021
+row task=percent_then_discount route=en->zh gold=80 pred_avg=80 margin_avg=0.880
+wrote /home/Awei/P02_multilingual_process_lens/results/E07_semantic_trap_answer_probe/qwen3_14b_base_semantic_trap_answer_probe.json; rows=56 acc_avg=0.696 mean_margin=0.722

@@ -1,0 +1,118 @@
+{
+  "args": {
+    "batch_size": 1,
+    "checkpoint_jsonl": "logs/e105_smoke_qwen35_checkpoint_20260429.jsonl",
+    "device": "auto",
+    "dtype": "bfloat16",
+    "k": 1,
+    "local_files_only": true,
+    "max_time": 120.0,
+    "model_key": "qwen35_27b",
+    "out_dir": "results/E105_tg_closure_policy/_smoke",
+    "policies": [
+      "budgeted_final_4096"
+    ],
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "seed": 20260429,
+    "task_ids": [
+      "aime25_base_divisor_p1"
+    ],
+    "tasks_yaml": "/home/Awei/P02_multilingual_process_lens/configs/e26_aime_hard_tasks.yaml"
+  },
+  "created_at": "2026-04-29T21:54:17",
+  "cuda_visible_devices": "0,1,2,3",
+  "host": "hpc-node-01",
+  "model_key": "qwen35_27b",
+  "model_spec": {
+    "class": "post_trained_hybrid",
+    "family": "qwen35",
+    "loader_risk": "large model; conditional_generation_or_multimodal config may require transformers 5.x and AutoModelForImageTextToText fallback",
+    "notes": "core local P0 medium frontier model; downloaded via HF mirror on 2026-04-27; requires multi-GPU device_map=auto for full bf16 weights",
+    "path": "/home/Awei/LLM/Model/base/qwen35_27b",
+    "priority": "P0_core_frontier_medium",
+    "remote_repo": "Qwen/Qwen3.5-27B",
+    "status": "local_downloaded"
+  },
+  "policy_specs": {
+    "budgeted_final_4096": {
+      "max_new_tokens": 4096,
+      "note_zh": "限制推理步数并要求提交，测试收口策略是否比单纯加 token 更有效。",
+      "policy_id": "budgeted_final_4096",
+      "prompt_template": "Solve the following AIME-style problem. Use at most 12 concise reasoning steps; avoid repeated re-checking. After those steps, commit to one answer. End with exactly one line `Final answer: <integer>` and stop.\n\nProblem: {problem}",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    }
+  },
+  "rows": [
+    {
+      "add_special_tokens": false,
+      "completion": "The problem asks for the sum of all integer bases $b > 9$ such that $17_b$ divides $97_b$.\nLet's write the numbers in base 10.\n$17_b = 1 \\cdot b + 7 = b + 7$.\n$97_b = 9 \\cdot b + 7 = 9b + 7$.\nWe are looking for $b > 9$ such that $b+7$ divides $9b+7$.\nLet $k$ be the integer such that $9b + 7 = k(b + 7)$.\nSo we need to find $b$ such that $\\frac{9b+7}{b+7}$ is an integer.\nWe can perform polynomial division or algebraic manipulation.\n$9b + 7 = 9(b+7) - 63 + 7 = 9(b+7) - 56$.\nSo $\\frac{9b+7}{b+7} = 9 - \\frac{56}{b+7}$.\nFor this to be an integer, $b+7$ must be a divisor of $56$.\nSince $b$ is a base, $b$ is an integer. The problem states $b > 9$.\nSo $b+7 > 9+7 = 16$.\nWe need to find all divisors of $56$ that are strictly greater than $16$.\nLet's list the divisors of $56$.\n$56 = 1 \\times 56$\n$56 = 2 \\times 28$\n$56 = 4 \\times 14$\n$56 = 7 \\times 8$\nThe divisors are $1, 2, 4, 7, 8, 14, 28, 56$.\nWe need divisors $d$ such that $d = b+7 > 16$.\nThe divisors greater than 16 are $28$ and $56$.\nSo the possible values for $b+7$ are $28$ and $56$.\nIf $b+7 = 28$, then $b = 21$.\nIf $b+7 = 56$, then $b = 49$.\nWe must check if these bases are valid for the digits used.\nThe digits used in the representation are 1, 7, 9.\nSo the base $b$ must be strictly greater than the largest digit.\nThe largest digit is 9.\nSo we need $b > 9$.\nOur condition $b+7 > 16$ implies $b > 9$, so this condition is satisfied.\nActually, let's double check.\nIf $b=21$, digits 1, 7, 9 are valid since $9 < 21$.\nIf $b=49$, digits 1, 7, 9 are valid since $9 < 49$.\nAre there any other constraints?\nThe problem says \"integer bases $b>9$\".\nThe digits in $17_b$ are 1 and 7. For this to be a valid representation, $b > 7$.\nThe digits in $97_b$ are 9 and 7. For this to be a valid representation, $b > 9$.\nSince we are given $b>9$, the representation is valid.\nWe found $b=21$ and $b=49$.\nLet's check the divisibility.\nFor $b=21$:\n$17_{21} = 21 + 7 = 28$.\n$97_{21} = 9(21) + 7 = 189 + 7 = 196$.\nIs $196$ divisible by $28$?\n$196 / 28 = 7$. Yes.\nFor $b=49$:\n$17_{49} = 49 + 7 = 56$.\n$97_{49} = 9(49) + 7 = 441 + 7 = 448$.\nIs $448$ divisible by $56$?\n$56 \\times 10 = 560$.\n$56 \\times 8 = (50+6) \\times 8 = 400 + 48 = 448$.\nYes.\n\nAre there any other divisors?\nDivisors of 56: 1, 2, 4, 7, 8, 14, 28, 56.\nWe need $b+7 > 16$.\nDivisors $> 16$:\n28: $b = 21$. $21 > 9$. OK.\n56: $b = 49$. $49 > 9$. OK.\nNext divisor? No, 56 is the largest.\nWait, let's re-read carefully.\n\"integer bases $b>9$\".\n\"17_b is a divisor of 97_b\".\nThe digits are $d_1, d_0$.\nIn $17_b$, digits are 1, 7.\nIn $97_b$, digits are 9, 7.\nBase $b$ must be greater than any digit used. So $b > 9$.\nThe calculation $\\frac{9b+7}{b+7} = 9 - \\frac{56}{b+7}$ requires $b+7$ to divide 56.\nWe listed divisors of 56.\nDivisors: 1, 2, 4, 7, 8, 14, 28, 56.\nCondition $b > 9 \\implies b+7 > 16$.\nSo $b+7$ can be 28 or 56.\nIf $b+7 = 28 \\implies b = 21$.\nIf $b+7 = 56 \\implies b = 49$.\nWe need to check if $b$ can be smaller, but the problem says $b > 9$.\nHowever, is it possible that $17_b$ or $97_b$ interpretation changes?\nNo, standard notation.\nIs it possible that $b$ could be negative? \"integer bases\". Usually base is positive integer $b \\ge 2$. The problem specifies $b > 9$, so positive.\nSum of such bases.\nSum $= 21 + 49$.\n$21 + 49 = 70$.\n\nLet's quickly check edge cases.\nCould $b+7$ be a negative divisor of 56?\nIf $b+7 = -k$, then $b = -k-7$.\nSince $b > 9$, $b$ must be positive. So $b+7$ must be positive.\nSo we only consider positive divisors.\nDid I miss any divisor?\n$56 = 2^3 \\cdot 7$.\nNumber of divisors is $(3+1)(1+1) = 8$.\nDivisors: 1, 2, 4, 8, 7, 14, 28, 56.\nSorted: 1, 2, 4, 7, 8, 14, 28, 56.\nThose $> 16$: 28, 56.\nWait, is 14 $> 16$? No.\nIs 14 $> 16$? No.\nIs 8 $> 16$? No.\nSo only 28 and 56.\nWait, if $b+7 = 14$, then $b=7$. But we need $b > 9$. So 14 is excluded.\nIf $b+7 = 8$, then $b=1$. Excluded.\nIf $b+7 = 7$, then $b=0$. Excluded.\nSo my list is correct.\n$b$ values are 21 and 49.\nSum is 70.\n\nLet's double check the question wording again.\n\"sum of all integer bases $b>9$\".\n\"17_b is a divisor of 97_b\".\nIs it possible that $97_b$ is interpreted differently? No.\nIs it possible that $17_b$ divides $97_b$ means something else? No.\nJust simple algebra.\n$9b+7 = k(b+7)$.\n$9b+7 = kb + 7k$.\n$(9-k)b = 7k - 7 = 7(k-1)$.\n$b = \\frac{7(k-1)}{9-k}$.\nSince $b > 9$, let's analyze $k$.\nSince $b+7 > 0$ and $9b+7 > 0$, and $b+7$ divides $9b+7$, $k$ must be positive.\nAlso $b = 9 - \\frac{56}{b+7}$.\nSince $b$ is an integer, $b+7$ divides",
+      "completion_chars": 4453,
+      "created_at": "2026-04-29T21:54:17",
+      "experiment": "E105_tg_closure_policy",
+      "explicit_final_marker_found": false,
+      "fallback_extracted_final": "70",
+      "fallback_extraction_method": "answer_phrase_line_last_number",
+      "fallback_final_correct": true,
+      "generated_tokens": 2064,
+      "gold_answer": "70",
+      "gold_answer_in_prompt": false,
+      "hit_max_new_tokens": false,
+      "known_trap_note_in_prompt": false,
+      "manual_audit_status": "needs_audit",
+      "max_new_tokens": 4096,
+      "model_key": "qwen35_27b",
+      "policy_id": "budgeted_final_4096",
+      "policy_note_zh": "限制推理步数并要求提交，测试收口策略是否比单纯加 token 更有效。",
+      "problem": "Find the sum of all integer bases $b>9$ for which $17_{b}$ is a divisor of $97_{b}$.",
+      "repair_marker_count": 13,
+      "sample_idx": 0,
+      "strict_extracted_final": "",
+      "strict_extraction_method": "no_explicit_final",
+      "strict_final_correct": false,
+      "task_id": "aime25_base_divisor_p1",
+      "temperature": 1.0,
+      "thinking": true,
+      "top_k": 20,
+      "top_p": 0.95,
+      "trap_note_not_in_prompt": "Base notation: 17_b and 97_b are numbers in base b, not decimal subscripts.",
+      "used_chat_template": true
+    }
+  ],
+  "scope_note_en": "E105 is a Qwen TG closure-policy diagnostic; strict and fallback correctness must be reported separately.",
+  "scope_note_zh": "E105 是 Qwen TG 收口策略小样本诊断；strict final 与 fallback 必须分开报告。",
+  "started_at": "2026-04-29T21:52:09",
+  "summary": {
+    "by_policy": {
+      "budgeted_final_4096": {
+        "explicit_final_marker_rate": 0.0,
+        "fallback_final_correct": 1,
+        "hit_max_rate": 0.0,
+        "mean_generated_tokens": 2064.0,
+        "mean_repair_markers": 13.0,
+        "n": 1,
+        "needs_audit": 1,
+        "strict_final_correct": 0
+      }
+    },
+    "by_policy_task": {
+      "budgeted_final_4096|aime25_base_divisor_p1": {
+        "explicit_final_marker_rate": 0.0,
+        "fallback_final_correct": 1,
+        "hit_max_rate": 0.0,
+        "mean_generated_tokens": 2064.0,
+        "mean_repair_markers": 13.0,
+        "n": 1,
+        "needs_audit": 1,
+        "strict_final_correct": 0
+      }
+    },
+    "leakage_audit": {
+      "gold_answer_in_prompt_rows": 0,
+      "known_trap_note_in_prompt_rows": 0,
+      "passed": true
+    },
+    "n": 1
+  }
+}

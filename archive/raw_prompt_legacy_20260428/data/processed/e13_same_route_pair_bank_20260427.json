@@ -1,0 +1,1115 @@
+{
+  "manual_jsonl": "data/processed/manual_e05_audit_combined_20260427.jsonl",
+  "args": {
+    "manual_jsonl": "data/processed/manual_e05_audit_combined_20260427.jsonl",
+    "out_json": "data/processed/e13_same_route_pair_bank_20260427.json",
+    "out_report": "reports/E13_same_route_pair_mining_summary.md",
+    "acpi_only": false
+  },
+  "summary": {
+    "audited_rows": 154,
+    "candidate_pairs": 41,
+    "scope_counts": {
+      "same_route": 7,
+      "same_reason_lang": 21,
+      "same_task": 13
+    }
+  },
+  "pairs": [
+    {
+      "id": "qwen3_14b_base_deriv_sum_zh_to_zh_402_bad_403_valid",
+      "scope": "same_route",
+      "score": 9.0,
+      "model_key": "qwen3_14b_base",
+      "task_id": "deriv_sum",
+      "route_bad": "zh->zh",
+      "route_valid": "zh->zh",
+      "bad_idx": 402,
+      "valid_idx": 403,
+      "bad_risk": "acpi_unmarked_wrong_derivative_rule",
+      "valid_risk": "valid_clean",
+      "bad_final_correct": true,
+      "bad_format_valid": true,
+      "valid_format_valid": true,
+      "paper_grade_acpi": true,
+      "bad_earliest_error": "3 是常数，常数的导数为 0，所以 (3x)'=3",
+      "bad_sentence_labels": [
+        "OK: (x^2)'=2x.",
+        "ERROR: says 3 is constant and constant derivative is 0 as justification for (3x)'=3.",
+        "FINAL: 2x+3 is correct despite the bad justification."
+      ],
+      "valid_sentence_labels": [
+        "OK: solution path is mathematically valid.",
+        "OK: final answer matches gold."
+      ]
+    },
+    {
+      "id": "qwen35_9b_disc_en_25_off_zh_to_zh_234_bad_235_valid",
+      "scope": "same_route",
+      "score": 7.5,
+      "model_key": "qwen35_9b",
+      "task_id": "disc_en_25_off",
+      "route_bad": "zh->zh",
+      "route_valid": "zh->zh",
+      "bad_idx": 234,
+      "valid_idx": 235,
+      "bad_risk": "acpi_unmarked_discount_word_mismatch",
+      "valid_risk": "valid_correct_but_raw_or_visible_spill",
+      "bad_final_correct": true,
+      "bad_format_valid": true,
+      "valid_format_valid": false,
+      "paper_grade_acpi": true,
+      "bad_earliest_error": "打八折，即原价的75%",
+      "bad_sentence_labels": [
+        "ERROR: says 打八折 while equating it to 75%; 八折 means 80%.",
+        "OK: final value 60 matches 25% off/pay75%."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible mathematical solution path is valid.",
+        "FORMAT: output is not a clean training trajectory."
+      ]
+    },
+    {
+      "id": "qwen3_14b_base_deriv_sum_zh_to_zh_402_bad_406_valid",
+      "scope": "same_reason_lang",
+      "score": 7.0,
+      "model_key": "qwen3_14b_base",
+      "task_id": "deriv_sum",
+      "route_bad": "zh->zh",
+      "route_valid": "en->zh",
+      "bad_idx": 402,
+      "valid_idx": 406,
+      "bad_risk": "acpi_unmarked_wrong_derivative_rule",
+      "valid_risk": "valid_clean",
+      "bad_final_correct": true,
+      "bad_format_valid": true,
+      "valid_format_valid": true,
+      "paper_grade_acpi": true,
+      "bad_earliest_error": "3 是常数，常数的导数为 0，所以 (3x)'=3",
+      "bad_sentence_labels": [
+        "OK: (x^2)'=2x.",
+        "ERROR: says 3 is constant and constant derivative is 0 as justification for (3x)'=3.",
+        "FINAL: 2x+3 is correct despite the bad justification."
+      ],
+      "valid_sentence_labels": [
+        "OK: solution path is mathematically valid.",
+        "OK: final answer matches gold."
+      ]
+    },
+    {
+      "id": "qwen3_14b_base_deriv_sum_zh_to_zh_402_bad_407_valid",
+      "scope": "same_reason_lang",
+      "score": 7.0,
+      "model_key": "qwen3_14b_base",
+      "task_id": "deriv_sum",
+      "route_bad": "zh->zh",
+      "route_valid": "en->zh",
+      "bad_idx": 402,
+      "valid_idx": 407,
+      "bad_risk": "acpi_unmarked_wrong_derivative_rule",
+      "valid_risk": "valid_clean",
+      "bad_final_correct": true,
+      "bad_format_valid": true,
+      "valid_format_valid": true,
+      "paper_grade_acpi": true,
+      "bad_earliest_error": "3 是常数，常数的导数为 0，所以 (3x)'=3",
+      "bad_sentence_labels": [
+        "OK: (x^2)'=2x.",
+        "ERROR: says 3 is constant and constant derivative is 0 as justification for (3x)'=3.",
+        "FINAL: 2x+3 is correct despite the bad justification."
+      ],
+      "valid_sentence_labels": [
+        "OK: solution path is mathematically valid.",
+        "OK: final answer matches gold."
+      ]
+    },
+    {
+      "id": "qwen3_14b_base_percent_then_discount_zh_to_en_445_bad_440_valid",
+      "scope": "same_reason_lang",
+      "score": 7.0,
+      "model_key": "qwen3_14b_base",
+      "task_id": "percent_then_discount",
+      "route_bad": "zh->en",
+      "route_valid": "en->en",
+      "bad_idx": 445,
+      "valid_idx": 440,
+      "bad_risk": "acpi_lexical_mismatch_dabazhe_80_percent_discount",
+      "valid_risk": "valid_clean",
+      "bad_final_correct": true,
+      "bad_format_valid": true,
+      "valid_format_valid": true,
+      "paper_grade_acpi": true,
+      "bad_earliest_error": "apply an 80% discount",
+      "bad_sentence_labels": [
+        "OK: 80*1.25=100.",
+        "ERROR: says apply an 80% discount, which in English means pay 20%, not multiply by 0.80.",
+        "FINAL: expression is correct/evaluable to 80."
+      ],
+      "valid_sentence_labels": [
+        "OK: sequential percent operations are correct."
+      ]
+    },
+    {
+      "id": "qwen3_14b_base_percent_then_discount_zh_to_en_445_bad_441_valid",
+      "scope": "same_reason_lang",
+      "score": 7.0,
+      "model_key": "qwen3_14b_base",
+      "task_id": "percent_then_discount",
+      "route_bad": "zh->en",
+      "route_valid": "en->en",
+      "bad_idx": 445,
+      "valid_idx": 441,
+      "bad_risk": "acpi_lexical_mismatch_dabazhe_80_percent_discount",
+      "valid_risk": "valid_clean",
+      "bad_final_correct": true,
+      "bad_format_valid": true,
+      "valid_format_valid": true,
+      "paper_grade_acpi": true,
+      "bad_earliest_error": "apply an 80% discount",
+      "bad_sentence_labels": [
+        "OK: 80*1.25=100.",
+        "ERROR: says apply an 80% discount, which in English means pay 20%, not multiply by 0.80.",
+        "FINAL: expression is correct/evaluable to 80."
+      ],
+      "valid_sentence_labels": [
+        "OK: sequential percent operations are correct."
+      ]
+    },
+    {
+      "id": "qwen3_14b_base_disc_en_75_off_en_to_zh_358_bad_359_valid",
+      "scope": "same_route",
+      "score": 6.5,
+      "model_key": "qwen3_14b_base",
+      "task_id": "disc_en_75_off",
+      "route_bad": "en->zh",
+      "route_valid": "en->zh",
+      "bad_idx": 358,
+      "valid_idx": 359,
+      "bad_risk": "semantic_drift_75off_to_qiwuzhe_final_wrong",
+      "valid_risk": "valid_clean",
+      "bad_final_correct": false,
+      "bad_format_valid": true,
+      "valid_format_valid": true,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "打七五折，就是原价的75%",
+      "bad_sentence_labels": [
+        "ERROR: maps 75% off to 七五折/pay 75%.",
+        "ERROR: computes 80*75%=60 for an English 75% off problem.",
+        "FINAL: final answer 60 is wrong; gold is 20."
+      ],
+      "valid_sentence_labels": [
+        "OK: solution path is mathematically valid.",
+        "OK: final answer matches gold."
+      ]
+    },
+    {
+      "id": "qwen35_9b_disc_en_25_off_zh_to_zh_234_bad_232_valid",
+      "scope": "same_task",
+      "score": 6.0,
+      "model_key": "qwen35_9b",
+      "task_id": "disc_en_25_off",
+      "route_bad": "zh->zh",
+      "route_valid": "en->en",
+      "bad_idx": 234,
+      "valid_idx": 232,
+      "bad_risk": "acpi_unmarked_discount_word_mismatch",
+      "valid_risk": "valid_clean",
+      "bad_final_correct": true,
+      "bad_format_valid": true,
+      "valid_format_valid": true,
+      "paper_grade_acpi": true,
+      "bad_earliest_error": "打八折，即原价的75%",
+      "bad_sentence_labels": [
+        "ERROR: says 打八折 while equating it to 75%; 八折 means 80%.",
+        "OK: final value 60 matches 25% off/pay75%."
+      ],
+      "valid_sentence_labels": [
+        "OK: solution path is mathematically valid.",
+        "OK: final answer matches gold."
+      ]
+    },
+    {
+      "id": "qwen35_9b_ratio_boys_total_zh_to_en_261_bad_260_valid",
+      "scope": "same_route",
+      "score": 6.0,
+      "model_key": "qwen35_9b",
+      "task_id": "ratio_boys_total",
+      "route_bad": "zh->en",
+      "route_valid": "zh->en",
+      "bad_idx": 261,
+      "valid_idx": 260,
+      "bad_risk": "acpi_self_corrected_arithmetic_step",
+      "valid_risk": "valid_clean",
+      "bad_final_correct": true,
+      "bad_format_valid": false,
+      "valid_format_valid": true,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "64 - 2 = 62",
+      "bad_sentence_labels": [
+        "OK: total=24*(8/3)=64.",
+        "ERROR: writes 64 - 2 = 62.",
+        "FIX: immediately notes it should be 64 - 24 = 40.",
+        "FINAL: 40 correct, but strict process contains an error."
+      ],
+      "valid_sentence_labels": [
+        "OK: solution path is mathematically valid.",
+        "OK: final answer matches gold."
+      ]
+    },
+    {
+      "id": "qwen3_14b_base_percent_then_discount_zh_to_en_445_bad_442_valid",
+      "scope": "same_task",
+      "score": 6.0,
+      "model_key": "qwen3_14b_base",
+      "task_id": "percent_then_discount",
+      "route_bad": "zh->en",
+      "route_valid": "zh->zh",
+      "bad_idx": 445,
+      "valid_idx": 442,
+      "bad_risk": "acpi_lexical_mismatch_dabazhe_80_percent_discount",
+      "valid_risk": "valid_clean",
+      "bad_final_correct": true,
+      "bad_format_valid": true,
+      "valid_format_valid": true,
+      "paper_grade_acpi": true,
+      "bad_earliest_error": "apply an 80% discount",
+      "bad_sentence_labels": [
+        "OK: 80*1.25=100.",
+        "ERROR: says apply an 80% discount, which in English means pay 20%, not multiply by 0.80.",
+        "FINAL: expression is correct/evaluable to 80."
+      ],
+      "valid_sentence_labels": [
+        "OK: dabazhe is correctly interpreted as paying 80%."
+      ]
+    },
+    {
+      "id": "qwen35_9b_disc_en_25_off_zh_to_zh_234_bad_238_valid",
+      "scope": "same_reason_lang",
+      "score": 5.5,
+      "model_key": "qwen35_9b",
+      "task_id": "disc_en_25_off",
+      "route_bad": "zh->zh",
+      "route_valid": "en->zh",
+      "bad_idx": 234,
+      "valid_idx": 238,
+      "bad_risk": "acpi_unmarked_discount_word_mismatch",
+      "valid_risk": "valid_correct_but_raw_or_visible_spill",
+      "bad_final_correct": true,
+      "bad_format_valid": true,
+      "valid_format_valid": false,
+      "paper_grade_acpi": true,
+      "bad_earliest_error": "打八折，即原价的75%",
+      "bad_sentence_labels": [
+        "ERROR: says 打八折 while equating it to 75%; 八折 means 80%.",
+        "OK: final value 60 matches 25% off/pay75%."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible mathematical solution path is valid.",
+        "FORMAT: output is not a clean training trajectory."
+      ]
+    },
+    {
+      "id": "phi4_mini_reasoning_deriv_sum_zh_to_zh_178_bad_182_valid",
+      "scope": "same_reason_lang",
+      "score": 5.0,
+      "model_key": "phi4_mini_reasoning",
+      "task_id": "deriv_sum",
+      "route_bad": "zh->zh",
+      "route_valid": "en->zh",
+      "bad_idx": 178,
+      "valid_idx": 182,
+      "bad_risk": "acpi_truncated_wrong_derivative_rule",
+      "valid_risk": "truncated_valid_or_no_clean_final",
+      "bad_final_correct": true,
+      "bad_format_valid": false,
+      "valid_format_valid": false,
+      "paper_grade_acpi": true,
+      "bad_earliest_error": "x 的导数是0",
+      "bad_sentence_labels": [
+        "ERROR: says derivative of x is 0 while justifying (3x)'.",
+        "OK: later/elsewhere states 3x derivative is 3 and answer 2x+3.",
+        "FORMAT: formal final answer truncates."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible reasoning reaches the right value.",
+        "FORMAT: final-answer line is missing/truncated or raw output was trimmed."
+      ]
+    },
+    {
+      "id": "phi4_mini_reasoning_deriv_sum_en_to_zh_183_bad_182_valid",
+      "scope": "same_route",
+      "score": 5.0,
+      "model_key": "phi4_mini_reasoning",
+      "task_id": "deriv_sum",
+      "route_bad": "en->zh",
+      "route_valid": "en->zh",
+      "bad_idx": 183,
+      "valid_idx": 182,
+      "bad_risk": "late_confusion_constant_vs_linear_derivative_truncated",
+      "valid_risk": "truncated_valid_or_no_clean_final",
+      "bad_final_correct": true,
+      "bad_format_valid": false,
+      "valid_format_valid": false,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "如果函数中有一个常数项，比如3x，那它的导数就是0",
+      "bad_sentence_labels": [
+        "OK: definition derivation yields 2x+3.",
+        "ERROR: later suggests 3x may have derivative 0 as if it were a constant term.",
+        "FORMAT: truncated."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible reasoning reaches the right value.",
+        "FORMAT: final-answer line is missing/truncated or raw output was trimmed."
+      ]
+    },
+    {
+      "id": "qwen35_9b_disc_zh_75_price_zh_to_en_229_bad_225_valid",
+      "scope": "same_reason_lang",
+      "score": 4.5,
+      "model_key": "qwen35_9b",
+      "task_id": "disc_zh_75_price",
+      "route_bad": "zh->en",
+      "route_valid": "en->en",
+      "bad_idx": 229,
+      "valid_idx": 225,
+      "bad_risk": "semantic_drift_qiwuzhe_to_75off_final_wrong",
+      "valid_risk": "valid_clean",
+      "bad_final_correct": false,
+      "bad_format_valid": true,
+      "valid_format_valid": true,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "discount is 75% off",
+      "bad_sentence_labels": [
+        "ERROR: says item is 75% off.",
+        "ERROR: computes pay 25%=20.",
+        "FINAL: gold is 60."
+      ],
+      "valid_sentence_labels": [
+        "OK: solution path is mathematically valid.",
+        "OK: final answer matches gold."
+      ]
+    },
+    {
+      "id": "qwen3_14b_base_disc_en_75_off_en_to_zh_358_bad_354_valid",
+      "scope": "same_reason_lang",
+      "score": 4.5,
+      "model_key": "qwen3_14b_base",
+      "task_id": "disc_en_75_off",
+      "route_bad": "en->zh",
+      "route_valid": "zh->zh",
+      "bad_idx": 358,
+      "valid_idx": 354,
+      "bad_risk": "semantic_drift_75off_to_qiwuzhe_final_wrong",
+      "valid_risk": "valid_clean",
+      "bad_final_correct": false,
+      "bad_format_valid": true,
+      "valid_format_valid": true,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "打七五折，就是原价的75%",
+      "bad_sentence_labels": [
+        "ERROR: maps 75% off to 七五折/pay 75%.",
+        "ERROR: computes 80*75%=60 for an English 75% off problem.",
+        "FINAL: final answer 60 is wrong; gold is 20."
+      ],
+      "valid_sentence_labels": [
+        "OK: solution path is mathematically valid.",
+        "OK: final answer matches gold."
+      ]
+    },
+    {
+      "id": "qwen3_14b_base_disc_en_75_off_en_to_zh_358_bad_355_valid",
+      "scope": "same_reason_lang",
+      "score": 4.5,
+      "model_key": "qwen3_14b_base",
+      "task_id": "disc_en_75_off",
+      "route_bad": "en->zh",
+      "route_valid": "zh->zh",
+      "bad_idx": 358,
+      "valid_idx": 355,
+      "bad_risk": "semantic_drift_75off_to_qiwuzhe_final_wrong",
+      "valid_risk": "valid_clean",
+      "bad_final_correct": false,
+      "bad_format_valid": true,
+      "valid_format_valid": true,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "打七五折，就是原价的75%",
+      "bad_sentence_labels": [
+        "ERROR: maps 75% off to 七五折/pay 75%.",
+        "ERROR: computes 80*75%=60 for an English 75% off problem.",
+        "FINAL: final answer 60 is wrong; gold is 20."
+      ],
+      "valid_sentence_labels": [
+        "OK: solution path is mathematically valid.",
+        "OK: final answer matches gold."
+      ]
+    },
+    {
+      "id": "phi4_mini_reasoning_deriv_sum_zh_to_zh_178_bad_180_valid",
+      "scope": "same_task",
+      "score": 4.0,
+      "model_key": "phi4_mini_reasoning",
+      "task_id": "deriv_sum",
+      "route_bad": "zh->zh",
+      "route_valid": "zh->en",
+      "bad_idx": 178,
+      "valid_idx": 180,
+      "bad_risk": "acpi_truncated_wrong_derivative_rule",
+      "valid_risk": "truncated_valid_or_no_clean_final",
+      "bad_final_correct": true,
+      "bad_format_valid": false,
+      "valid_format_valid": false,
+      "paper_grade_acpi": true,
+      "bad_earliest_error": "x 的导数是0",
+      "bad_sentence_labels": [
+        "ERROR: says derivative of x is 0 while justifying (3x)'.",
+        "OK: later/elsewhere states 3x derivative is 3 and answer 2x+3.",
+        "FORMAT: formal final answer truncates."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible reasoning reaches the right value.",
+        "FORMAT: final-answer line is missing/truncated or raw output was trimmed."
+      ]
+    },
+    {
+      "id": "phi4_mini_reasoning_deriv_sum_zh_to_zh_178_bad_181_valid",
+      "scope": "same_task",
+      "score": 4.0,
+      "model_key": "phi4_mini_reasoning",
+      "task_id": "deriv_sum",
+      "route_bad": "zh->zh",
+      "route_valid": "zh->en",
+      "bad_idx": 178,
+      "valid_idx": 181,
+      "bad_risk": "acpi_truncated_wrong_derivative_rule",
+      "valid_risk": "truncated_valid_or_no_clean_final",
+      "bad_final_correct": true,
+      "bad_format_valid": false,
+      "valid_format_valid": false,
+      "paper_grade_acpi": true,
+      "bad_earliest_error": "x 的导数是0",
+      "bad_sentence_labels": [
+        "ERROR: says derivative of x is 0 while justifying (3x)'.",
+        "OK: later/elsewhere states 3x derivative is 3 and answer 2x+3.",
+        "FORMAT: formal final answer truncates."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible reasoning reaches the right value.",
+        "FORMAT: final-answer line is missing/truncated or raw output was trimmed."
+      ]
+    },
+    {
+      "id": "phi4_mini_reasoning_frac_simplify_en_to_en_208_bad_209_valid",
+      "scope": "same_route",
+      "score": 4.0,
+      "model_key": "phi4_mini_reasoning",
+      "task_id": "frac_simplify",
+      "route_bad": "en->en",
+      "route_valid": "en->en",
+      "bad_idx": 208,
+      "valid_idx": 209,
+      "bad_risk": "nonsense_spill_after_correct_fraction_start",
+      "valid_risk": "truncated_valid_or_no_clean_final",
+      "bad_final_correct": null,
+      "bad_format_valid": false,
+      "valid_format_valid": false,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "615-02-1208",
+      "bad_sentence_labels": [
+        "OK: identifies GCD 2.",
+        "FORMAT/ERROR: nonsensical spill interrupts division step.",
+        "FINAL: no clean final answer."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible reasoning reaches the right value.",
+        "FORMAT: final-answer line is missing/truncated or raw output was trimmed."
+      ]
+    },
+    {
+      "id": "qwen35_9b_deriv_product_equiv_en_to_en_296_bad_297_valid",
+      "scope": "same_route",
+      "score": 4.0,
+      "model_key": "qwen35_9b",
+      "task_id": "deriv_product_equiv",
+      "route_bad": "en->en",
+      "route_valid": "en->en",
+      "bad_idx": 296,
+      "valid_idx": 297,
+      "bad_risk": "wrong_derivative_and_after_final_template",
+      "valid_risk": "valid_correct_but_after_final_spill_or_trim",
+      "bad_final_correct": false,
+      "bad_format_valid": false,
+      "valid_format_valid": false,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "Final answer: $3x^2 + 6x$",
+      "bad_sentence_labels": [
+        "ERROR: final answer is derivative-like but actually not derivative of x(x+3).",
+        "FORMAT: assistant/template spill after final."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible mathematical solution path is valid.",
+        "FORMAT: output is not a clean training trajectory."
+      ]
+    },
+    {
+      "id": "qwen35_9b_disc_zh_75_price_zh_to_en_228_bad_225_valid",
+      "scope": "same_reason_lang",
+      "score": 4.0,
+      "model_key": "qwen35_9b",
+      "task_id": "disc_zh_75_price",
+      "route_bad": "zh->en",
+      "route_valid": "en->en",
+      "bad_idx": 228,
+      "valid_idx": 225,
+      "bad_risk": "semantic_drift_qiwuzhe_to_75off_final_wrong_repeated",
+      "valid_risk": "valid_clean",
+      "bad_final_correct": false,
+      "bad_format_valid": false,
+      "valid_format_valid": true,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "discount rate is 75% off",
+      "bad_sentence_labels": [
+        "ERROR: 七五折/pay 75% is misread as 75% off/pay 25%.",
+        "FINAL: 20 is wrong; gold is 60.",
+        "FORMAT: repeats the same wrong reasoning after final."
+      ],
+      "valid_sentence_labels": [
+        "OK: solution path is mathematically valid.",
+        "OK: final answer matches gold."
+      ]
+    },
+    {
+      "id": "qwen35_9b_ratio_boys_total_zh_to_en_261_bad_257_valid",
+      "scope": "same_reason_lang",
+      "score": 4.0,
+      "model_key": "qwen35_9b",
+      "task_id": "ratio_boys_total",
+      "route_bad": "zh->en",
+      "route_valid": "en->en",
+      "bad_idx": 261,
+      "valid_idx": 257,
+      "bad_risk": "acpi_self_corrected_arithmetic_step",
+      "valid_risk": "valid_clean",
+      "bad_final_correct": true,
+      "bad_format_valid": false,
+      "valid_format_valid": true,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "64 - 2 = 62",
+      "bad_sentence_labels": [
+        "OK: total=24*(8/3)=64.",
+        "ERROR: writes 64 - 2 = 62.",
+        "FIX: immediately notes it should be 64 - 24 = 40.",
+        "FINAL: 40 correct, but strict process contains an error."
+      ],
+      "valid_sentence_labels": [
+        "OK: solution path is mathematically valid.",
+        "OK: final answer matches gold."
+      ]
+    },
+    {
+      "id": "qwen3_14b_base_percent_then_discount_zh_to_en_444_bad_440_valid",
+      "scope": "same_reason_lang",
+      "score": 4.0,
+      "model_key": "qwen3_14b_base",
+      "task_id": "percent_then_discount",
+      "route_bad": "zh->en",
+      "route_valid": "en->en",
+      "bad_idx": 444,
+      "valid_idx": 440,
+      "bad_risk": "semantic_drift_dabazhe_as_80_percent_discount_final_wrong",
+      "valid_risk": "valid_clean",
+      "bad_final_correct": false,
+      "bad_format_valid": false,
+      "valid_format_valid": true,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "apply an 80% discount",
+      "bad_sentence_labels": [
+        "ERROR: translates 打八折 as an 80% discount.",
+        "ERROR: final answer 60; gold is 80."
+      ],
+      "valid_sentence_labels": [
+        "OK: sequential percent operations are correct."
+      ]
+    },
+    {
+      "id": "qwen3_14b_base_percent_then_discount_zh_to_en_444_bad_441_valid",
+      "scope": "same_reason_lang",
+      "score": 4.0,
+      "model_key": "qwen3_14b_base",
+      "task_id": "percent_then_discount",
+      "route_bad": "zh->en",
+      "route_valid": "en->en",
+      "bad_idx": 444,
+      "valid_idx": 441,
+      "bad_risk": "semantic_drift_dabazhe_as_80_percent_discount_final_wrong",
+      "valid_risk": "valid_clean",
+      "bad_final_correct": false,
+      "bad_format_valid": false,
+      "valid_format_valid": true,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "apply an 80% discount",
+      "bad_sentence_labels": [
+        "ERROR: translates 打八折 as an 80% discount.",
+        "ERROR: final answer 60; gold is 80."
+      ],
+      "valid_sentence_labels": [
+        "OK: sequential percent operations are correct."
+      ]
+    },
+    {
+      "id": "qwen35_9b_disc_zh_75_price_zh_to_en_229_bad_226_valid",
+      "scope": "same_task",
+      "score": 3.5,
+      "model_key": "qwen35_9b",
+      "task_id": "disc_zh_75_price",
+      "route_bad": "zh->en",
+      "route_valid": "zh->zh",
+      "bad_idx": 229,
+      "valid_idx": 226,
+      "bad_risk": "semantic_drift_qiwuzhe_to_75off_final_wrong",
+      "valid_risk": "valid_clean",
+      "bad_final_correct": false,
+      "bad_format_valid": true,
+      "valid_format_valid": true,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "discount is 75% off",
+      "bad_sentence_labels": [
+        "ERROR: says item is 75% off.",
+        "ERROR: computes pay 25%=20.",
+        "FINAL: gold is 60."
+      ],
+      "valid_sentence_labels": [
+        "OK: solution path is mathematically valid.",
+        "OK: final answer matches gold."
+      ]
+    },
+    {
+      "id": "qwen35_9b_disc_zh_75_price_zh_to_en_228_bad_226_valid",
+      "scope": "same_task",
+      "score": 3.0,
+      "model_key": "qwen35_9b",
+      "task_id": "disc_zh_75_price",
+      "route_bad": "zh->en",
+      "route_valid": "zh->zh",
+      "bad_idx": 228,
+      "valid_idx": 226,
+      "bad_risk": "semantic_drift_qiwuzhe_to_75off_final_wrong_repeated",
+      "valid_risk": "valid_clean",
+      "bad_final_correct": false,
+      "bad_format_valid": false,
+      "valid_format_valid": true,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "discount rate is 75% off",
+      "bad_sentence_labels": [
+        "ERROR: 七五折/pay 75% is misread as 75% off/pay 25%.",
+        "FINAL: 20 is wrong; gold is 60.",
+        "FORMAT: repeats the same wrong reasoning after final."
+      ],
+      "valid_sentence_labels": [
+        "OK: solution path is mathematically valid.",
+        "OK: final answer matches gold."
+      ]
+    },
+    {
+      "id": "qwen35_9b_disc_zh_75_price_zh_to_en_229_bad_224_valid",
+      "scope": "same_reason_lang",
+      "score": 3.0,
+      "model_key": "qwen35_9b",
+      "task_id": "disc_zh_75_price",
+      "route_bad": "zh->en",
+      "route_valid": "en->en",
+      "bad_idx": 229,
+      "valid_idx": 224,
+      "bad_risk": "semantic_drift_qiwuzhe_to_75off_final_wrong",
+      "valid_risk": "valid_correct_but_raw_or_visible_spill",
+      "bad_final_correct": false,
+      "bad_format_valid": true,
+      "valid_format_valid": false,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "discount is 75% off",
+      "bad_sentence_labels": [
+        "ERROR: says item is 75% off.",
+        "ERROR: computes pay 25%=20.",
+        "FINAL: gold is 60."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible mathematical solution path is valid.",
+        "FORMAT: output is not a clean training trajectory."
+      ]
+    },
+    {
+      "id": "qwen3_14b_base_percent_then_discount_zh_to_en_444_bad_442_valid",
+      "scope": "same_task",
+      "score": 3.0,
+      "model_key": "qwen3_14b_base",
+      "task_id": "percent_then_discount",
+      "route_bad": "zh->en",
+      "route_valid": "zh->zh",
+      "bad_idx": 444,
+      "valid_idx": 442,
+      "bad_risk": "semantic_drift_dabazhe_as_80_percent_discount_final_wrong",
+      "valid_risk": "valid_clean",
+      "bad_final_correct": false,
+      "bad_format_valid": false,
+      "valid_format_valid": true,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "apply an 80% discount",
+      "bad_sentence_labels": [
+        "ERROR: translates 打八折 as an 80% discount.",
+        "ERROR: final answer 60; gold is 80."
+      ],
+      "valid_sentence_labels": [
+        "OK: dabazhe is correctly interpreted as paying 80%."
+      ]
+    },
+    {
+      "id": "deepseek_r1_0528_qwen3_8b_disc_zh_75_price_zh_to_en_4_bad_0_valid",
+      "scope": "same_reason_lang",
+      "score": 2.5,
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "disc_zh_75_price",
+      "route_bad": "zh->en",
+      "route_valid": "en->en",
+      "bad_idx": 4,
+      "valid_idx": 0,
+      "bad_risk": "self_corrected_discount_semantic_confusion",
+      "valid_risk": "truncated_valid_or_no_clean_final",
+      "bad_final_correct": true,
+      "bad_format_valid": false,
+      "valid_format_valid": false,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "translates 七五折 as 75% discount",
+      "bad_sentence_labels": [
+        "ERROR: initial translation treats 七五折 like 75% discount/off.",
+        "FIX: later states Chinese 打七五折 means pay 75% of original.",
+        "OK: computes 80*0.75=60."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible reasoning reaches the right value.",
+        "FORMAT: final-answer line is missing/truncated or raw output was trimmed."
+      ]
+    },
+    {
+      "id": "deepseek_r1_0528_qwen3_8b_disc_zh_75_price_en_to_zh_6_bad_2_valid",
+      "scope": "same_reason_lang",
+      "score": 2.5,
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "disc_zh_75_price",
+      "route_bad": "en->zh",
+      "route_valid": "zh->zh",
+      "bad_idx": 6,
+      "valid_idx": 2,
+      "bad_risk": "self_corrected_75_percent_surface_confusion",
+      "valid_risk": "truncated_valid_or_no_clean_final",
+      "bad_final_correct": true,
+      "bad_format_valid": false,
+      "valid_format_valid": false,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "折扣是75% off",
+      "bad_sentence_labels": [
+        "ERROR: says the discount is 75% off.",
+        "FIX: later distinguishes sold at 75% from 75% off.",
+        "OK: final computation uses 0.75*80=60."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible reasoning reaches the right value.",
+        "FORMAT: final-answer line is missing/truncated or raw output was trimmed."
+      ]
+    },
+    {
+      "id": "phi4_mini_reasoning_deriv_sum_zh_to_zh_179_bad_182_valid",
+      "scope": "same_reason_lang",
+      "score": 2.5,
+      "model_key": "phi4_mini_reasoning",
+      "task_id": "deriv_sum",
+      "route_bad": "zh->zh",
+      "route_valid": "en->zh",
+      "bad_idx": 179,
+      "valid_idx": 182,
+      "bad_risk": "self_corrected_derivative_rule_error_truncated",
+      "valid_risk": "truncated_valid_or_no_clean_final",
+      "bad_final_correct": true,
+      "bad_format_valid": false,
+      "valid_format_valid": false,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "3x的导数，因为3是常数项，所以导数是0",
+      "bad_sentence_labels": [
+        "ERROR: says 3x derivative is 0 and whole derivative is 2x.",
+        "FIX: later corrects to derivative of 3x is 3.",
+        "FORMAT: truncates before clean final."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible reasoning reaches the right value.",
+        "FORMAT: final-answer line is missing/truncated or raw output was trimmed."
+      ]
+    },
+    {
+      "id": "qwen35_9b_disc_zh_75_price_zh_to_en_228_bad_224_valid",
+      "scope": "same_reason_lang",
+      "score": 2.5,
+      "model_key": "qwen35_9b",
+      "task_id": "disc_zh_75_price",
+      "route_bad": "zh->en",
+      "route_valid": "en->en",
+      "bad_idx": 228,
+      "valid_idx": 224,
+      "bad_risk": "semantic_drift_qiwuzhe_to_75off_final_wrong_repeated",
+      "valid_risk": "valid_correct_but_raw_or_visible_spill",
+      "bad_final_correct": false,
+      "bad_format_valid": false,
+      "valid_format_valid": false,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "discount rate is 75% off",
+      "bad_sentence_labels": [
+        "ERROR: 七五折/pay 75% is misread as 75% off/pay 25%.",
+        "FINAL: 20 is wrong; gold is 60.",
+        "FORMAT: repeats the same wrong reasoning after final."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible mathematical solution path is valid.",
+        "FORMAT: output is not a clean training trajectory."
+      ]
+    },
+    {
+      "id": "qwen35_9b_ratio_boys_total_zh_to_en_261_bad_256_valid",
+      "scope": "same_reason_lang",
+      "score": 2.5,
+      "model_key": "qwen35_9b",
+      "task_id": "ratio_boys_total",
+      "route_bad": "zh->en",
+      "route_valid": "en->en",
+      "bad_idx": 261,
+      "valid_idx": 256,
+      "bad_risk": "acpi_self_corrected_arithmetic_step",
+      "valid_risk": "valid_correct_but_after_final_spill_or_trim",
+      "bad_final_correct": true,
+      "bad_format_valid": false,
+      "valid_format_valid": false,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "64 - 2 = 62",
+      "bad_sentence_labels": [
+        "OK: total=24*(8/3)=64.",
+        "ERROR: writes 64 - 2 = 62.",
+        "FIX: immediately notes it should be 64 - 24 = 40.",
+        "FINAL: 40 correct, but strict process contains an error."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible mathematical solution path is valid.",
+        "FORMAT: output is not a clean training trajectory."
+      ]
+    },
+    {
+      "id": "phi4_mini_reasoning_deriv_sum_en_to_zh_183_bad_180_valid",
+      "scope": "same_task",
+      "score": 2.0,
+      "model_key": "phi4_mini_reasoning",
+      "task_id": "deriv_sum",
+      "route_bad": "en->zh",
+      "route_valid": "zh->en",
+      "bad_idx": 183,
+      "valid_idx": 180,
+      "bad_risk": "late_confusion_constant_vs_linear_derivative_truncated",
+      "valid_risk": "truncated_valid_or_no_clean_final",
+      "bad_final_correct": true,
+      "bad_format_valid": false,
+      "valid_format_valid": false,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "如果函数中有一个常数项，比如3x，那它的导数就是0",
+      "bad_sentence_labels": [
+        "OK: definition derivation yields 2x+3.",
+        "ERROR: later suggests 3x may have derivative 0 as if it were a constant term.",
+        "FORMAT: truncated."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible reasoning reaches the right value.",
+        "FORMAT: final-answer line is missing/truncated or raw output was trimmed."
+      ]
+    },
+    {
+      "id": "phi4_mini_reasoning_deriv_sum_en_to_zh_183_bad_181_valid",
+      "scope": "same_task",
+      "score": 2.0,
+      "model_key": "phi4_mini_reasoning",
+      "task_id": "deriv_sum",
+      "route_bad": "en->zh",
+      "route_valid": "zh->en",
+      "bad_idx": 183,
+      "valid_idx": 181,
+      "bad_risk": "late_confusion_constant_vs_linear_derivative_truncated",
+      "valid_risk": "truncated_valid_or_no_clean_final",
+      "bad_final_correct": true,
+      "bad_format_valid": false,
+      "valid_format_valid": false,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "如果函数中有一个常数项，比如3x，那它的导数就是0",
+      "bad_sentence_labels": [
+        "OK: definition derivation yields 2x+3.",
+        "ERROR: later suggests 3x may have derivative 0 as if it were a constant term.",
+        "FORMAT: truncated."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible reasoning reaches the right value.",
+        "FORMAT: final-answer line is missing/truncated or raw output was trimmed."
+      ]
+    },
+    {
+      "id": "qwen35_9b_deriv_product_equiv_en_to_en_296_bad_300_valid",
+      "scope": "same_reason_lang",
+      "score": 2.0,
+      "model_key": "qwen35_9b",
+      "task_id": "deriv_product_equiv",
+      "route_bad": "en->en",
+      "route_valid": "zh->en",
+      "bad_idx": 296,
+      "valid_idx": 300,
+      "bad_risk": "wrong_derivative_and_after_final_template",
+      "valid_risk": "valid_correct_but_after_final_spill_or_trim",
+      "bad_final_correct": false,
+      "bad_format_valid": false,
+      "valid_format_valid": false,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "Final answer: $3x^2 + 6x$",
+      "bad_sentence_labels": [
+        "ERROR: final answer is derivative-like but actually not derivative of x(x+3).",
+        "FORMAT: assistant/template spill after final."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible mathematical solution path is valid.",
+        "FORMAT: output is not a clean training trajectory."
+      ]
+    },
+    {
+      "id": "qwen35_9b_deriv_product_equiv_en_to_en_296_bad_301_valid",
+      "scope": "same_reason_lang",
+      "score": 2.0,
+      "model_key": "qwen35_9b",
+      "task_id": "deriv_product_equiv",
+      "route_bad": "en->en",
+      "route_valid": "zh->en",
+      "bad_idx": 296,
+      "valid_idx": 301,
+      "bad_risk": "wrong_derivative_and_after_final_template",
+      "valid_risk": "valid_correct_but_after_final_spill_or_trim",
+      "bad_final_correct": false,
+      "bad_format_valid": false,
+      "valid_format_valid": false,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "Final answer: $3x^2 + 6x$",
+      "bad_sentence_labels": [
+        "ERROR: final answer is derivative-like but actually not derivative of x(x+3).",
+        "FORMAT: assistant/template spill after final."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible mathematical solution path is valid.",
+        "FORMAT: output is not a clean training trajectory."
+      ]
+    },
+    {
+      "id": "deepseek_r1_0528_qwen3_8b_disc_zh_75_price_zh_to_en_4_bad_2_valid",
+      "scope": "same_task",
+      "score": 1.5,
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "disc_zh_75_price",
+      "route_bad": "zh->en",
+      "route_valid": "zh->zh",
+      "bad_idx": 4,
+      "valid_idx": 2,
+      "bad_risk": "self_corrected_discount_semantic_confusion",
+      "valid_risk": "truncated_valid_or_no_clean_final",
+      "bad_final_correct": true,
+      "bad_format_valid": false,
+      "valid_format_valid": false,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "translates 七五折 as 75% discount",
+      "bad_sentence_labels": [
+        "ERROR: initial translation treats 七五折 like 75% discount/off.",
+        "FIX: later states Chinese 打七五折 means pay 75% of original.",
+        "OK: computes 80*0.75=60."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible reasoning reaches the right value.",
+        "FORMAT: final-answer line is missing/truncated or raw output was trimmed."
+      ]
+    },
+    {
+      "id": "deepseek_r1_0528_qwen3_8b_disc_zh_75_price_en_to_zh_6_bad_0_valid",
+      "scope": "same_task",
+      "score": 1.5,
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "disc_zh_75_price",
+      "route_bad": "en->zh",
+      "route_valid": "en->en",
+      "bad_idx": 6,
+      "valid_idx": 0,
+      "bad_risk": "self_corrected_75_percent_surface_confusion",
+      "valid_risk": "truncated_valid_or_no_clean_final",
+      "bad_final_correct": true,
+      "bad_format_valid": false,
+      "valid_format_valid": false,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "折扣是75% off",
+      "bad_sentence_labels": [
+        "ERROR: says the discount is 75% off.",
+        "FIX: later distinguishes sold at 75% from 75% off.",
+        "OK: final computation uses 0.75*80=60."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible reasoning reaches the right value.",
+        "FORMAT: final-answer line is missing/truncated or raw output was trimmed."
+      ]
+    },
+    {
+      "id": "phi4_mini_reasoning_deriv_sum_zh_to_zh_179_bad_180_valid",
+      "scope": "same_task",
+      "score": 1.5,
+      "model_key": "phi4_mini_reasoning",
+      "task_id": "deriv_sum",
+      "route_bad": "zh->zh",
+      "route_valid": "zh->en",
+      "bad_idx": 179,
+      "valid_idx": 180,
+      "bad_risk": "self_corrected_derivative_rule_error_truncated",
+      "valid_risk": "truncated_valid_or_no_clean_final",
+      "bad_final_correct": true,
+      "bad_format_valid": false,
+      "valid_format_valid": false,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "3x的导数，因为3是常数项，所以导数是0",
+      "bad_sentence_labels": [
+        "ERROR: says 3x derivative is 0 and whole derivative is 2x.",
+        "FIX: later corrects to derivative of 3x is 3.",
+        "FORMAT: truncates before clean final."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible reasoning reaches the right value.",
+        "FORMAT: final-answer line is missing/truncated or raw output was trimmed."
+      ]
+    },
+    {
+      "id": "phi4_mini_reasoning_deriv_sum_zh_to_zh_179_bad_181_valid",
+      "scope": "same_task",
+      "score": 1.5,
+      "model_key": "phi4_mini_reasoning",
+      "task_id": "deriv_sum",
+      "route_bad": "zh->zh",
+      "route_valid": "zh->en",
+      "bad_idx": 179,
+      "valid_idx": 181,
+      "bad_risk": "self_corrected_derivative_rule_error_truncated",
+      "valid_risk": "truncated_valid_or_no_clean_final",
+      "bad_final_correct": true,
+      "bad_format_valid": false,
+      "valid_format_valid": false,
+      "paper_grade_acpi": false,
+      "bad_earliest_error": "3x的导数，因为3是常数项，所以导数是0",
+      "bad_sentence_labels": [
+        "ERROR: says 3x derivative is 0 and whole derivative is 2x.",
+        "FIX: later corrects to derivative of 3x is 3.",
+        "FORMAT: truncates before clean final."
+      ],
+      "valid_sentence_labels": [
+        "OK: visible reasoning reaches the right value.",
+        "FORMAT: final-answer line is missing/truncated or raw output was trimmed."
+      ]
+    }
+  ]
+}

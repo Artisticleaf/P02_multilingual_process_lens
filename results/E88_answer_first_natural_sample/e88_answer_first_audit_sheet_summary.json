@@ -1,0 +1,34 @@
+{
+  "audit_sheet": "data/processed/e88_answer_first_final_correct_audit_sheet_20260429.jsonl",
+  "by_model": {
+    "gemma4_26b_a4b_it": {
+      "final_correct": 36,
+      "generated": 48
+    },
+    "gemma4_31b_it": {
+      "final_correct": 19,
+      "generated": 48
+    },
+    "glm47_flash_candidate": {
+      "final_correct": 5,
+      "generated": 48
+    },
+    "qwen35_27b": {
+      "final_correct": 3,
+      "generated": 48
+    }
+  },
+  "created_at": "2026-04-29T13:51:59",
+  "input_files": [
+    "results/E88_answer_first_natural_sample/gemma4_26b_a4b_it_e49_answer_first_no_gold_hard_task_conditioning.json",
+    "results/E88_answer_first_natural_sample/gemma4_31b_it_e49_answer_first_no_gold_hard_task_conditioning.json",
+    "results/E88_answer_first_natural_sample/glm47_flash_candidate_e49_answer_first_no_gold_hard_task_conditioning.json",
+    "results/E88_answer_first_natural_sample/qwen35_27b_e49_answer_first_no_gold_hard_task_conditioning.json"
+  ],
+  "leakage_audit": {
+    "gold_answer_in_prompt_rows": 0,
+    "known_trap_note_in_prompt_rows": 0,
+    "note_zh": "E88 使用 answer_first_no_gold prompt；gold 只用于离线判定 final-correct 并筛出待人工过程审计行。"
+  },
+  "n_final_correct_rows": 63
+}

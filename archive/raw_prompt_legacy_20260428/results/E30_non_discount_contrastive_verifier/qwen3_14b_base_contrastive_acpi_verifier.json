@@ -1,0 +1,132 @@
+{
+  "args": {
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "local_files_only": false,
+    "manual_jsonl": "data/processed/e30_non_discount_verifier_subset_20260427.jsonl",
+    "model_key": "qwen3_14b_base",
+    "out_dir": "results/E30_non_discount_contrastive_verifier",
+    "pairs_yaml": "configs/e30_non_discount_verifier_pairs.yaml",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml"
+  },
+  "created_at": "2026-04-27T19:44:59",
+  "cuda_visible_devices": "0",
+  "host": "hpc-node-01",
+  "model_spec": {
+    "class": "base",
+    "family": "qwen",
+    "notes": "larger clean Qwen anchor; may need 2 GPUs if memory is tight",
+    "path": "/home/Awei/LLM/Model/base/Qwen3-14B-Base",
+    "priority": "P0",
+    "status": "local"
+  },
+  "rows": [
+    {
+      "a_avg_logprob": -1.747555136680603,
+      "b_avg_logprob": -0.997555136680603,
+      "bad_idx": 300311,
+      "bad_risk": "acpi_strict_lower_rephrased_as_between_inclusive_but_list_excludes_3",
+      "correct": false,
+      "margin_target_minus_other": -0.75,
+      "order": "bad_A",
+      "pair_id": "e30_inequality_no_more_than_between_inclusive",
+      "pred": "B",
+      "prompt_lang": "en",
+      "target": "A",
+      "trace_model_key": "qwen3_14b_base",
+      "valid_idx": 300310,
+      "valid_risk": "valid_clean",
+      "verifier_model_key": "qwen3_14b_base"
+    },
+    {
+      "a_avg_logprob": -1.5797052383422852,
+      "b_avg_logprob": -1.0797052383422852,
+      "bad_idx": 300311,
+      "bad_risk": "acpi_strict_lower_rephrased_as_between_inclusive_but_list_excludes_3",
+      "correct": true,
+      "margin_target_minus_other": 0.5,
+      "order": "bad_B",
+      "pair_id": "e30_inequality_no_more_than_between_inclusive",
+      "pred": "B",
+      "prompt_lang": "en",
+      "target": "B",
+      "trace_model_key": "qwen3_14b_base",
+      "valid_idx": 300310,
+      "valid_risk": "valid_clean",
+      "verifier_model_key": "qwen3_14b_base"
+    },
+    {
+      "a_avg_logprob": -1.4804973602294922,
+      "b_avg_logprob": -1.3554973602294922,
+      "bad_idx": 300311,
+      "bad_risk": "acpi_strict_lower_rephrased_as_between_inclusive_but_list_excludes_3",
+      "correct": false,
+      "margin_target_minus_other": -0.125,
+      "order": "bad_A",
+      "pair_id": "e30_inequality_no_more_than_between_inclusive",
+      "pred": "B",
+      "prompt_lang": "zh",
+      "target": "A",
+      "trace_model_key": "qwen3_14b_base",
+      "valid_idx": 300310,
+      "valid_risk": "valid_clean",
+      "verifier_model_key": "qwen3_14b_base"
+    },
+    {
+      "a_avg_logprob": -1.3977018594741821,
+      "b_avg_logprob": -1.2727018594741821,
+      "bad_idx": 300311,
+      "bad_risk": "acpi_strict_lower_rephrased_as_between_inclusive_but_list_excludes_3",
+      "correct": true,
+      "margin_target_minus_other": 0.125,
+      "order": "bad_B",
+      "pair_id": "e30_inequality_no_more_than_between_inclusive",
+      "pred": "B",
+      "prompt_lang": "zh",
+      "target": "B",
+      "trace_model_key": "qwen3_14b_base",
+      "valid_idx": 300310,
+      "valid_risk": "valid_clean",
+      "verifier_model_key": "qwen3_14b_base"
+    }
+  ],
+  "started_at": "2026-04-27T19:44:52",
+  "summary": [
+    {
+      "acc": 0.5,
+      "mean_margin": -0.0625,
+      "n": 4,
+      "slice": "all",
+      "slice_type": "all"
+    },
+    {
+      "acc": 0.5,
+      "mean_margin": -0.0625,
+      "n": 4,
+      "slice": "e30_inequality_no_more_than_between_inclusive",
+      "slice_type": "pair"
+    },
+    {
+      "acc": 0.5,
+      "mean_margin": -0.125,
+      "n": 2,
+      "slice": "en",
+      "slice_type": "prompt_lang"
+    },
+    {
+      "acc": 0.5,
+      "mean_margin": 0.0,
+      "n": 2,
+      "slice": "zh",
+      "slice_type": "prompt_lang"
+    },
+    {
+      "acc": 0.5,
+      "mean_margin": -0.0625,
+      "n": 4,
+      "slice": "qwen3_14b_base",
+      "slice_type": "trace_model"
+    }
+  ],
+  "verifier_model_key": "qwen3_14b_base"
+}

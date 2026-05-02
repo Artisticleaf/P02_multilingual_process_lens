@@ -1,0 +1,29 @@
+[2026-04-27T13:23:51] loading verifier=qwen35_27b on auto; pairs=6
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:   0%|          | 1/851 [00:00<02:43,  5.20it/s]Loading weights:   3%|▎         | 27/851 [00:00<00:07, 111.84it/s]Loading weights:   5%|▌         | 46/851 [00:00<00:05, 135.44it/s]Loading weights:   8%|▊         | 67/851 [00:00<00:04, 160.54it/s]Loading weights:  11%|█         | 93/851 [00:00<00:03, 191.57it/s]Loading weights:  13%|█▎        | 114/851 [00:00<00:03, 184.85it/s]Loading weights:  16%|█▌        | 134/851 [00:00<00:03, 185.04it/s]Loading weights:  18%|█▊        | 154/851 [00:00<00:03, 176.59it/s]Loading weights:  22%|██▏       | 186/851 [00:01<00:03, 212.00it/s]Loading weights:  24%|██▍       | 208/851 [00:01<00:03, 192.76it/s]Loading weights:  28%|██▊       | 238/851 [00:01<00:02, 218.48it/s]Loading weights:  31%|███       | 261/851 [00:01<00:03, 191.59it/s]Loading weights:  34%|███▍      | 289/851 [00:01<00:02, 213.76it/s]Loading weights:  37%|███▋      | 312/851 [00:01<00:02, 188.28it/s]Loading weights:  40%|████      | 342/851 [00:01<00:02, 214.37it/s]Loading weights:  43%|████▎     | 365/851 [00:01<00:02, 197.39it/s]Loading weights:  46%|████▋     | 394/851 [00:02<00:02, 216.34it/s]Loading weights:  49%|████▉     | 417/851 [00:02<00:02, 213.61it/s]Loading weights:  52%|█████▏    | 440/851 [00:02<00:01, 208.17it/s]Loading weights:  55%|█████▍    | 464/851 [00:02<00:01, 214.76it/s]Loading weights:  57%|█████▋    | 486/851 [00:02<00:01, 213.98it/s]Loading weights:  60%|█████▉    | 508/851 [00:02<00:01, 202.45it/s]Loading weights:  62%|██████▏   | 529/851 [00:02<00:01, 195.39it/s]Loading weights:  65%|██████▌   | 556/851 [00:02<00:01, 215.29it/s]Loading weights:  68%|██████▊   | 578/851 [00:03<00:01, 187.08it/s]Loading weights:  72%|███████▏  | 609/851 [00:03<00:01, 216.33it/s]Loading weights:  74%|███████▍  | 632/851 [00:03<00:01, 191.20it/s]Loading weights:  78%|███████▊  | 663/851 [00:03<00:00, 215.35it/s]Loading weights:  81%|████████  | 686/851 [00:03<00:00, 198.23it/s]Loading weights:  84%|████████▍ | 713/851 [00:03<00:00, 215.96it/s]Loading weights:  86%|████████▋ | 736/851 [00:03<00:00, 195.38it/s]Loading weights:  89%|████████▉ | 759/851 [00:03<00:00, 204.02it/s]Loading weights:  92%|█████████▏| 783/851 [00:03<00:00, 212.11it/s]Loading weights:  95%|█████████▍| 805/851 [00:04<00:00, 208.08it/s]Loading weights:  97%|█████████▋| 827/851 [00:04<00:00, 201.43it/s]Loading weights: 100%|█████████▉| 848/851 [00:04<00:00, 194.46it/s]Loading weights: 100%|██████████| 851/851 [00:04<00:00, 196.10it/s]
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=en order=bad_A target=A pred=A margin=1.890
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=en order=bad_B target=B pred=B margin=2.671
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=zh order=bad_A target=A pred=A margin=3.125
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=zh order=bad_B target=B pred=B margin=3.250
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=en order=bad_A target=A pred=A margin=0.875
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=en order=bad_B target=B pred=B margin=0.375
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=zh order=bad_A target=A pred=A margin=0.625
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=zh order=bad_B target=B pred=B margin=1.375
+pair=qwen14_e18_dabazhe_zh_en_92_bad_91_valid prompt=en order=bad_A target=A pred=A margin=0.375
+pair=qwen14_e18_dabazhe_zh_en_92_bad_91_valid prompt=en order=bad_B target=B pred=B margin=0.250
+pair=qwen14_e18_dabazhe_zh_en_92_bad_91_valid prompt=zh order=bad_A target=A pred=A margin=0.500
+pair=qwen14_e18_dabazhe_zh_en_92_bad_91_valid prompt=zh order=bad_B target=B pred=B margin=0.625
+pair=qwen14_e18_dabazhe_zh_en_92_bad_94_valid prompt=en order=bad_A target=A pred=A margin=0.625
+pair=qwen14_e18_dabazhe_zh_en_92_bad_94_valid prompt=en order=bad_B target=B pred=A margin=-0.375
+pair=qwen14_e18_dabazhe_zh_en_92_bad_94_valid prompt=zh order=bad_A target=A pred=A margin=0.625
+pair=qwen14_e18_dabazhe_zh_en_92_bad_94_valid prompt=zh order=bad_B target=B pred=A margin=-0.750
+pair=qwen35_e18_discount_234_bad_181000_valid prompt=en order=bad_A target=A pred=A margin=1.250
+pair=qwen35_e18_discount_234_bad_181000_valid prompt=en order=bad_B target=B pred=B margin=0.500
+pair=qwen35_e18_discount_234_bad_181000_valid prompt=zh order=bad_A target=A pred=A margin=1.500
+pair=qwen35_e18_discount_234_bad_181000_valid prompt=zh order=bad_B target=B pred=A margin=0.000
+pair=qwen35_e18_discount_234_bad_181001_valid prompt=en order=bad_A target=A pred=A margin=1.000
+pair=qwen35_e18_discount_234_bad_181001_valid prompt=en order=bad_B target=B pred=B margin=0.875
+pair=qwen35_e18_discount_234_bad_181001_valid prompt=zh order=bad_A target=A pred=A margin=1.500
+pair=qwen35_e18_discount_234_bad_181001_valid prompt=zh order=bad_B target=B pred=B margin=0.750
+wrote results/E27_transfer_contrastive_verifier/qwen35_27b_contrastive_acpi_verifier.json; rows=24 acc=0.875 mean_margin=0.976

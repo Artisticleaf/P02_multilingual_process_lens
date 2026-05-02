@@ -1,0 +1,28 @@
+pairs:
+  - id: gemma4_s6_25off_bad49_valid48
+    model_key: gemma4_e4b_it
+    bad_idx: 600049
+    valid_idx: 600048
+    error_span: "打八折（即支付 $100\\% - 25\\% = 75\\%$ 的价格）"
+    support_span: "剩余百分比：$100\\% - 25\\% = 75\\%$；售价 $= 80 \\times 0.75 = 60$ 美元"
+    final_span_bad: "Final answer: 60美元"
+    final_span_valid: "Final answer: 60美元"
+    layers: [8, 14, 20, 28, 36]
+  - id: gemma4_s6_dabazhe_bad70_valid71
+    model_key: gemma4_e4b_it
+    bad_idx: 600070
+    valid_idx: 600071
+    error_span: "apply an 80% discount (or multiply by 0.8)"
+    support_span: "apply a discount of 20% (i.e., pay 80% of the price)"
+    final_span_bad: "Final answer: 80"
+    final_span_valid: "Final answer: $80"
+    layers: [8, 14, 20, 28, 36]
+  - id: qwen14_s6_pay75_bad150_valid151
+    model_key: qwen3_14b_base
+    bad_idx: 600150
+    valid_idx: 600151
+    error_span: "sold at a 75% discount of its original price"
+    support_span: "sold at 75% of the original price"
+    final_span_bad: "Final answer: $60"
+    final_span_valid: "Final answer: 60"
+    layers: [9, 14, 20, 25, 30]

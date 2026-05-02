@@ -1,0 +1,150 @@
+{
+  "aggregate": {
+    "models": {
+      "qwen35_9b": {
+        "n_variants": 5,
+        "n_clean_variants": 5,
+        "best_by_pair": [
+          {
+            "pair_id": "e36_ineq_corrective_list_qwen35_9b",
+            "variant": "后续正确列表",
+            "best_is_clean": true,
+            "best_layer": 18,
+            "best_v2b": 0.0624997615814209,
+            "best_b2v": -0.0625,
+            "best_score": 0.1249997615814209,
+            "base_valid_margin": 3.4375,
+            "base_bad_margin": 2.75,
+            "valid_span_text": "4, 5, 6, and 7",
+            "bad_span_text": "4, 5, 6, and 7"
+          },
+          {
+            "pair_id": "e36_ineq_full_clause_qwen35_9b",
+            "variant": "错误短语+后续修正子句",
+            "best_is_clean": true,
+            "best_layer": 8,
+            "best_v2b": 0.1875,
+            "best_b2v": -2.5625001192092896,
+            "best_score": 2.7500001192092896,
+            "base_valid_margin": 3.4375,
+            "base_bad_margin": 2.75,
+            "valid_span_text": "greater than 3 and no more than 7, so the integers are 4, 5, 6, and 7",
+            "bad_span_text": "between 3 and 7, inclusive. Start by listing the integers greater than 3 and no more than 7"
+          },
+          {
+            "pair_id": "e36_ineq_full_condition_qwen35_9b",
+            "variant": "完整条件短语",
+            "best_is_clean": true,
+            "best_layer": 8,
+            "best_v2b": 0.1875,
+            "best_b2v": -0.6875,
+            "best_score": 0.875,
+            "base_valid_margin": 3.4375,
+            "base_bad_margin": 2.75,
+            "valid_span_text": "greater than 3 and no more than 7",
+            "bad_span_text": "between 3 and 7, inclusive"
+          },
+          {
+            "pair_id": "e36_ineq_lower_bound_qwen35_9b",
+            "variant": "下界短语",
+            "best_is_clean": true,
+            "best_layer": 14,
+            "best_v2b": 0.0625,
+            "best_b2v": -0.25,
+            "best_score": 0.3125,
+            "base_valid_margin": 3.4375,
+            "base_bad_margin": 2.75,
+            "valid_span_text": "greater than 3",
+            "bad_span_text": "between 3 and 7"
+          },
+          {
+            "pair_id": "e36_ineq_upper_bound_qwen35_9b",
+            "variant": "上界/端点短语",
+            "best_is_clean": true,
+            "best_layer": 4,
+            "best_v2b": 0.125,
+            "best_b2v": -1.8125,
+            "best_score": 1.9375,
+            "base_valid_margin": 3.4375,
+            "base_bad_margin": 2.75,
+            "valid_span_text": "no more than 7",
+            "bad_span_text": "inclusive"
+          }
+        ],
+        "input_path": "/home/Awei/P02_multilingual_process_lens/results/E36_inequality_boundary_span_variants/qwen35_9b_real_acpi_span_patch.json"
+      },
+      "qwen3_14b_base": {
+        "n_variants": 5,
+        "n_clean_variants": 3,
+        "best_by_pair": [
+          {
+            "pair_id": "e36_ineq_corrective_list_qwen14",
+            "variant": "后续正确列表",
+            "best_is_clean": false,
+            "best_layer": 6,
+            "best_v2b": -2.0,
+            "best_b2v": -2.5,
+            "best_score": 0.5,
+            "base_valid_margin": 2.625,
+            "base_bad_margin": 2.5,
+            "valid_span_text": "4, 5, 6, and 7",
+            "bad_span_text": "4, 5, 6, and 7"
+          },
+          {
+            "pair_id": "e36_ineq_full_clause_qwen14",
+            "variant": "错误短语+后续修正子句",
+            "best_is_clean": true,
+            "best_layer": 20,
+            "best_v2b": 0.25,
+            "best_b2v": -0.7499998807907104,
+            "best_score": 0.9999998807907104,
+            "base_valid_margin": 2.625,
+            "base_bad_margin": 2.5,
+            "valid_span_text": "greater than 3 and no more than 7, so the integers are 4, 5, 6, and 7",
+            "bad_span_text": "between 3 and 7, inclusive. Start by listing the integers greater than 3 and no more than 7"
+          },
+          {
+            "pair_id": "e36_ineq_full_condition_qwen14",
+            "variant": "完整条件短语",
+            "best_is_clean": true,
+            "best_layer": 18,
+            "best_v2b": 0.25,
+            "best_b2v": -0.25,
+            "best_score": 0.5,
+            "base_valid_margin": 2.625,
+            "base_bad_margin": 2.5,
+            "valid_span_text": "greater than 3 and no more than 7",
+            "bad_span_text": "between 3 and 7, inclusive"
+          },
+          {
+            "pair_id": "e36_ineq_lower_bound_qwen14",
+            "variant": "下界短语",
+            "best_is_clean": false,
+            "best_layer": 22,
+            "best_v2b": 0.375,
+            "best_b2v": 0.0,
+            "best_score": 0.375,
+            "base_valid_margin": 2.625,
+            "base_bad_margin": 2.5,
+            "valid_span_text": "greater than 3",
+            "bad_span_text": "between 3 and 7"
+          },
+          {
+            "pair_id": "e36_ineq_upper_bound_qwen14",
+            "variant": "上界/端点短语",
+            "best_is_clean": true,
+            "best_layer": 12,
+            "best_v2b": 0.125,
+            "best_b2v": -1.5,
+            "best_score": 1.625,
+            "base_valid_margin": 2.625,
+            "base_bad_margin": 2.5,
+            "valid_span_text": "no more than 7",
+            "bad_span_text": "inclusive"
+          }
+        ],
+        "input_path": "/home/Awei/P02_multilingual_process_lens/results/E36_inequality_boundary_span_variants/qwen3_14b_base_real_acpi_span_patch.json"
+      }
+    }
+  }
+}

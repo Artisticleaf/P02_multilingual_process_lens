@@ -1,0 +1,68 @@
+[2026-04-27T13:09:37] loading qwen3_14b_base for layerwise lens on cuda
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s]Loading weights: 100%|██████████| 443/443 [00:00<00:00, 15043.57it/s]
+absolute idx=234 lang=en final=10.000
+absolute idx=234 lang=zh final=-7.000
+absolute idx=235 lang=en final=12.625
+absolute idx=235 lang=zh final=-5.875
+absolute idx=260 lang=en final=12.000
+absolute idx=260 lang=zh final=-6.625
+absolute idx=261 lang=en final=11.562
+absolute idx=261 lang=zh final=-6.125
+absolute idx=402 lang=en final=11.875
+absolute idx=402 lang=zh final=-6.250
+absolute idx=403 lang=en final=12.250
+absolute idx=403 lang=zh final=-5.750
+absolute idx=442 lang=en final=12.000
+absolute idx=442 lang=zh final=-6.000
+absolute idx=445 lang=en final=12.375
+absolute idx=445 lang=zh final=-6.625
+absolute idx=180091 lang=en final=10.875
+absolute idx=180091 lang=zh final=-6.875
+absolute idx=180092 lang=en final=11.500
+absolute idx=180092 lang=zh final=-6.625
+absolute idx=180093 lang=en final=11.500
+absolute idx=180093 lang=zh final=-6.750
+absolute idx=180094 lang=en final=11.000
+absolute idx=180094 lang=zh final=-7.000
+absolute idx=181000 lang=en final=12.750
+absolute idx=181000 lang=zh final=-6.250
+absolute idx=181001 lang=en final=12.500
+absolute idx=181001 lang=zh final=-5.750
+contrastive pair=qwen14_deriv_sum_zh_402_bad_403_valid lang=en order=bad_A final=-1.781
+contrastive pair=qwen14_deriv_sum_zh_402_bad_403_valid lang=en order=bad_B final=2.031
+contrastive pair=qwen14_deriv_sum_zh_402_bad_403_valid lang=zh order=bad_A final=0.125
+contrastive pair=qwen14_deriv_sum_zh_402_bad_403_valid lang=zh order=bad_B final=0.188
+contrastive pair=qwen14_dabazhe_zh_en_445_bad_442_valid lang=en order=bad_A final=-1.781
+contrastive pair=qwen14_dabazhe_zh_en_445_bad_442_valid lang=en order=bad_B final=2.219
+contrastive pair=qwen14_dabazhe_zh_en_445_bad_442_valid lang=zh order=bad_A final=0.812
+contrastive pair=qwen14_dabazhe_zh_en_445_bad_442_valid lang=zh order=bad_B final=0.250
+contrastive pair=qwen35_discount_zh_234_bad_235_valid lang=en order=bad_A final=0.094
+contrastive pair=qwen35_discount_zh_234_bad_235_valid lang=en order=bad_B final=2.375
+contrastive pair=qwen35_discount_zh_234_bad_235_valid lang=zh order=bad_A final=2.438
+contrastive pair=qwen35_discount_zh_234_bad_235_valid lang=zh order=bad_B final=0.875
+contrastive pair=qwen35_ratio_zh_en_261_bad_260_valid lang=en order=bad_A final=-0.406
+contrastive pair=qwen35_ratio_zh_en_261_bad_260_valid lang=en order=bad_B final=2.703
+contrastive pair=qwen35_ratio_zh_en_261_bad_260_valid lang=zh order=bad_A final=1.375
+contrastive pair=qwen35_ratio_zh_en_261_bad_260_valid lang=zh order=bad_B final=0.812
+contrastive pair=qwen14_e18_dabazhe_zh_en_92_bad_91_valid lang=en order=bad_A final=-2.188
+contrastive pair=qwen14_e18_dabazhe_zh_en_92_bad_91_valid lang=en order=bad_B final=1.281
+contrastive pair=qwen14_e18_dabazhe_zh_en_92_bad_91_valid lang=zh order=bad_A final=-0.688
+contrastive pair=qwen14_e18_dabazhe_zh_en_92_bad_91_valid lang=zh order=bad_B final=-0.688
+contrastive pair=qwen14_e18_dabazhe_zh_en_92_bad_94_valid lang=en order=bad_A final=-1.688
+contrastive pair=qwen14_e18_dabazhe_zh_en_92_bad_94_valid lang=en order=bad_B final=1.188
+contrastive pair=qwen14_e18_dabazhe_zh_en_92_bad_94_valid lang=zh order=bad_A final=0.125
+contrastive pair=qwen14_e18_dabazhe_zh_en_92_bad_94_valid lang=zh order=bad_B final=-1.000
+contrastive pair=qwen14_e18_dabazhe_final_wrong_93_bad_91_valid lang=en order=bad_A final=-1.938
+contrastive pair=qwen14_e18_dabazhe_final_wrong_93_bad_91_valid lang=en order=bad_B final=2.094
+contrastive pair=qwen14_e18_dabazhe_final_wrong_93_bad_91_valid lang=zh order=bad_A final=0.000
+contrastive pair=qwen14_e18_dabazhe_final_wrong_93_bad_91_valid lang=zh order=bad_B final=0.062
+contrastive pair=qwen35_e18_discount_234_bad_181000_valid lang=en order=bad_A final=-0.625
+contrastive pair=qwen35_e18_discount_234_bad_181000_valid lang=en order=bad_B final=2.625
+contrastive pair=qwen35_e18_discount_234_bad_181000_valid lang=zh order=bad_A final=2.375
+contrastive pair=qwen35_e18_discount_234_bad_181000_valid lang=zh order=bad_B final=0.500
+contrastive pair=qwen35_e18_discount_234_bad_181001_valid lang=en order=bad_A final=-0.531
+contrastive pair=qwen35_e18_discount_234_bad_181001_valid lang=en order=bad_B final=2.844
+contrastive pair=qwen35_e18_discount_234_bad_181001_valid lang=zh order=bad_A final=1.750
+contrastive pair=qwen35_e18_discount_234_bad_181001_valid lang=zh order=bad_B final=1.000
+wrote /home/Awei/P02_multilingual_process_lens/results/E25_layerwise_verifier_lens/qwen3_14b_base_layerwise_verifier_lens.json; absolute=28 contrastive=36

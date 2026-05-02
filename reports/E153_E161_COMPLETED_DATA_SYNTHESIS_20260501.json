@@ -1,0 +1,3468 @@
+{
+  "claim_state": [
+    {
+      "evidence_maturity": "strong / 强",
+      "id": "C1_solve_vs_audit_separation",
+      "zh": "E153 已支持：模型会从头做题，但检查已有过程时会误报、漏报或定位错步。"
+    },
+    {
+      "evidence_maturity": "weak-to-negative for broad prevalence / 对广泛自然高频说法较弱且偏负",
+      "id": "C2_natural_unrepaired_acpi_prevalence",
+      "zh": "E153 多样化自然生成没有发现未修复 ACPI；后续要靠保答案结构与人工过程审计寻找高质量样本。"
+    },
+    {
+      "evidence_maturity": "process-audited negative for natural ACPI, strong seed pool / 已过程审计；自然 ACPI 为负，种子池强",
+      "id": "C3_answer_preserving_trap_surface",
+      "zh": "E159 已完成并审计 10 类、40 题、三模型 360 条 non-thinking 生成；自然未修复 ACPI 为 0，但得到 357 条干净有效 prefill 种子。"
+    },
+    {
+      "evidence_maturity": "partial / 部分完成",
+      "id": "C4_thinking_contrast",
+      "zh": "E160 目前只有 Qwen 完整落盘；thinking 因截断较多，不能直接当作性能提升证据。"
+    },
+    {
+      "evidence_maturity": "method fixed, data pending / 方法确定，数据待跑",
+      "id": "C5_hidden_explainability",
+      "zh": "隐藏层主方案已确定为审计后 teacher-forced replay；E159/E161 审计后应接 E156 cache。"
+    }
+  ],
+  "created_at": "2026-05-01T12:35:08",
+  "e153_error_finding": {
+    "by_model": {
+      "gemma4_26b_a4b_it": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 113,
+        "hit_max": 2,
+        "invalid_false_negative_first": 13,
+        "invalid_false_negative_last": 13,
+        "invalid_location_match_first": 56,
+        "invalid_location_match_last": 56,
+        "invalid_location_miss_first": 2,
+        "invalid_location_miss_last": 2,
+        "invalid_n": 64,
+        "last_pred_correct": 113,
+        "n": 128,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 64
+      },
+      "gemma4_31b_it": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 121,
+        "hit_max": 2,
+        "invalid_false_negative_first": 3,
+        "invalid_false_negative_last": 3,
+        "invalid_location_match_first": 58,
+        "invalid_location_match_last": 58,
+        "invalid_location_miss_first": 2,
+        "invalid_location_miss_last": 2,
+        "invalid_n": 64,
+        "last_pred_correct": 121,
+        "n": 128,
+        "valid_false_positive_first": 2,
+        "valid_false_positive_last": 2,
+        "valid_n": 64
+      },
+      "qwen35_27b": {
+        "error_judgment_flip": 1,
+        "first_pred_correct": 117,
+        "hit_max": 1,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 61,
+        "invalid_location_match_last": 61,
+        "invalid_location_miss_first": 2,
+        "invalid_location_miss_last": 2,
+        "invalid_n": 64,
+        "last_pred_correct": 118,
+        "n": 128,
+        "valid_false_positive_first": 10,
+        "valid_false_positive_last": 9,
+        "valid_n": 64
+      }
+    },
+    "by_slice": {
+      "all::all": {
+        "error_judgment_flip": 1,
+        "first_pred_correct": 351,
+        "hit_max": 5,
+        "invalid_false_negative_first": 17,
+        "invalid_false_negative_last": 17,
+        "invalid_location_match_first": 175,
+        "invalid_location_match_last": 175,
+        "invalid_location_miss_first": 6,
+        "invalid_location_miss_last": 6,
+        "invalid_n": 192,
+        "last_pred_correct": 352,
+        "n": 384,
+        "valid_false_positive_first": 12,
+        "valid_false_positive_last": 11,
+        "valid_n": 192
+      },
+      "architecture::dense": {
+        "error_judgment_flip": 1,
+        "first_pred_correct": 238,
+        "hit_max": 3,
+        "invalid_false_negative_first": 4,
+        "invalid_false_negative_last": 4,
+        "invalid_location_match_first": 119,
+        "invalid_location_match_last": 119,
+        "invalid_location_miss_first": 4,
+        "invalid_location_miss_last": 4,
+        "invalid_n": 128,
+        "last_pred_correct": 239,
+        "n": 256,
+        "valid_false_positive_first": 12,
+        "valid_false_positive_last": 11,
+        "valid_n": 128
+      },
+      "architecture::moe": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 113,
+        "hit_max": 2,
+        "invalid_false_negative_first": 13,
+        "invalid_false_negative_last": 13,
+        "invalid_location_match_first": 56,
+        "invalid_location_match_last": 56,
+        "invalid_location_miss_first": 2,
+        "invalid_location_miss_last": 2,
+        "invalid_n": 64,
+        "last_pred_correct": 113,
+        "n": 128,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 64
+      },
+      "candidate::invalid_reference": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 173,
+        "hit_max": 2,
+        "invalid_false_negative_first": 17,
+        "invalid_false_negative_last": 17,
+        "invalid_location_match_first": 175,
+        "invalid_location_match_last": 175,
+        "invalid_location_miss_first": 6,
+        "invalid_location_miss_last": 6,
+        "invalid_n": 192,
+        "last_pred_correct": 173,
+        "n": 192,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 0
+      },
+      "candidate::valid_reference": {
+        "error_judgment_flip": 1,
+        "first_pred_correct": 178,
+        "hit_max": 3,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 0,
+        "invalid_location_match_last": 0,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 0,
+        "last_pred_correct": 179,
+        "n": 192,
+        "valid_false_positive_first": 12,
+        "valid_false_positive_last": 11,
+        "valid_n": 192
+      },
+      "family::algebra_sign_factor": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 17,
+        "hit_max": 5,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 5,
+        "invalid_location_miss_last": 5,
+        "invalid_n": 12,
+        "last_pred_correct": 17,
+        "n": 24,
+        "valid_false_positive_first": 2,
+        "valid_false_positive_last": 2,
+        "valid_n": 12
+      },
+      "family::causal_counterfactual": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 24,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 12,
+        "invalid_location_match_last": 12,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 12,
+        "last_pred_correct": 24,
+        "n": 24,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 12
+      },
+      "family::code_boundary": {
+        "error_judgment_flip": 1,
+        "first_pred_correct": 21,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 12,
+        "invalid_location_match_last": 12,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 12,
+        "last_pred_correct": 22,
+        "n": 24,
+        "valid_false_positive_first": 3,
+        "valid_false_positive_last": 2,
+        "valid_n": 12
+      },
+      "family::counting_invariant": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 21,
+        "hit_max": 0,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 12,
+        "invalid_location_match_last": 12,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 12,
+        "last_pred_correct": 21,
+        "n": 24,
+        "valid_false_positive_first": 2,
+        "valid_false_positive_last": 2,
+        "valid_n": 12
+      },
+      "family::geometry_constraints": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 18,
+        "hit_max": 0,
+        "invalid_false_negative_first": 6,
+        "invalid_false_negative_last": 6,
+        "invalid_location_match_first": 6,
+        "invalid_location_match_last": 6,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 12,
+        "last_pred_correct": 18,
+        "n": 24,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 12
+      },
+      "family::graph_path_constraints": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 19,
+        "hit_max": 0,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 12,
+        "invalid_location_match_last": 12,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 12,
+        "last_pred_correct": 19,
+        "n": 24,
+        "valid_false_positive_first": 4,
+        "valid_false_positive_last": 4,
+        "valid_n": 12
+      },
+      "family::multilingual_semantic": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 23,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 12,
+        "invalid_location_match_last": 12,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 12,
+        "last_pred_correct": 23,
+        "n": 24,
+        "valid_false_positive_first": 1,
+        "valid_false_positive_last": 1,
+        "valid_n": 12
+      },
+      "family::optimization_constraints": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 24,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 12,
+        "invalid_location_match_last": 12,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 12,
+        "last_pred_correct": 24,
+        "n": 24,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 12
+      },
+      "family::probability_conditioning": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 23,
+        "hit_max": 0,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 12,
+        "invalid_location_match_last": 12,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 12,
+        "last_pred_correct": 23,
+        "n": 24,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 12
+      },
+      "family::proof_validity": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 24,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 12,
+        "invalid_location_match_last": 12,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 12,
+        "last_pred_correct": 24,
+        "n": 24,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 12
+      },
+      "family::recurrence_dp": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 23,
+        "hit_max": 0,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 12,
+        "invalid_location_match_last": 12,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 12,
+        "last_pred_correct": 23,
+        "n": 24,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 12
+      },
+      "family::set_venn": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 21,
+        "hit_max": 0,
+        "invalid_false_negative_first": 3,
+        "invalid_false_negative_last": 3,
+        "invalid_location_match_first": 10,
+        "invalid_location_match_last": 10,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 12,
+        "last_pred_correct": 21,
+        "n": 24,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 12
+      },
+      "family::string_regex_parsing": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 24,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 12,
+        "invalid_location_match_last": 12,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 12,
+        "last_pred_correct": 24,
+        "n": 24,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 12
+      },
+      "family::table_aggregation": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 23,
+        "hit_max": 0,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 12,
+        "invalid_location_match_last": 12,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 12,
+        "last_pred_correct": 23,
+        "n": 24,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 12
+      },
+      "family::temporal_order": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 23,
+        "hit_max": 0,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 12,
+        "invalid_location_match_last": 12,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 12,
+        "last_pred_correct": 23,
+        "n": 24,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 12
+      },
+      "family::unit_percentage": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 23,
+        "hit_max": 0,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 11,
+        "invalid_location_match_last": 11,
+        "invalid_location_miss_first": 1,
+        "invalid_location_miss_last": 1,
+        "invalid_n": 12,
+        "last_pred_correct": 23,
+        "n": 24,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 12
+      },
+      "model::gemma4_26b_a4b_it": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 113,
+        "hit_max": 2,
+        "invalid_false_negative_first": 13,
+        "invalid_false_negative_last": 13,
+        "invalid_location_match_first": 56,
+        "invalid_location_match_last": 56,
+        "invalid_location_miss_first": 2,
+        "invalid_location_miss_last": 2,
+        "invalid_n": 64,
+        "last_pred_correct": 113,
+        "n": 128,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 64
+      },
+      "model::gemma4_31b_it": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 121,
+        "hit_max": 2,
+        "invalid_false_negative_first": 3,
+        "invalid_false_negative_last": 3,
+        "invalid_location_match_first": 58,
+        "invalid_location_match_last": 58,
+        "invalid_location_miss_first": 2,
+        "invalid_location_miss_last": 2,
+        "invalid_n": 64,
+        "last_pred_correct": 121,
+        "n": 128,
+        "valid_false_positive_first": 2,
+        "valid_false_positive_last": 2,
+        "valid_n": 64
+      },
+      "model::qwen35_27b": {
+        "error_judgment_flip": 1,
+        "first_pred_correct": 117,
+        "hit_max": 1,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 61,
+        "invalid_location_match_last": 61,
+        "invalid_location_miss_first": 2,
+        "invalid_location_miss_last": 2,
+        "invalid_n": 64,
+        "last_pred_correct": 118,
+        "n": 128,
+        "valid_false_positive_first": 10,
+        "valid_false_positive_last": 9,
+        "valid_n": 64
+      },
+      "model_candidate::gemma4_26b_a4b_it::invalid_reference": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 50,
+        "hit_max": 1,
+        "invalid_false_negative_first": 13,
+        "invalid_false_negative_last": 13,
+        "invalid_location_match_first": 56,
+        "invalid_location_match_last": 56,
+        "invalid_location_miss_first": 2,
+        "invalid_location_miss_last": 2,
+        "invalid_n": 64,
+        "last_pred_correct": 50,
+        "n": 64,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 0
+      },
+      "model_candidate::gemma4_26b_a4b_it::valid_reference": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 63,
+        "hit_max": 1,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 0,
+        "invalid_location_match_last": 0,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 0,
+        "last_pred_correct": 63,
+        "n": 64,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 64
+      },
+      "model_candidate::gemma4_31b_it::invalid_reference": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 60,
+        "hit_max": 1,
+        "invalid_false_negative_first": 3,
+        "invalid_false_negative_last": 3,
+        "invalid_location_match_first": 58,
+        "invalid_location_match_last": 58,
+        "invalid_location_miss_first": 2,
+        "invalid_location_miss_last": 2,
+        "invalid_n": 64,
+        "last_pred_correct": 60,
+        "n": 64,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 0
+      },
+      "model_candidate::gemma4_31b_it::valid_reference": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 61,
+        "hit_max": 1,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 0,
+        "invalid_location_match_last": 0,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 0,
+        "last_pred_correct": 61,
+        "n": 64,
+        "valid_false_positive_first": 2,
+        "valid_false_positive_last": 2,
+        "valid_n": 64
+      },
+      "model_candidate::qwen35_27b::invalid_reference": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 63,
+        "hit_max": 0,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 61,
+        "invalid_location_match_last": 61,
+        "invalid_location_miss_first": 2,
+        "invalid_location_miss_last": 2,
+        "invalid_n": 64,
+        "last_pred_correct": 63,
+        "n": 64,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 0
+      },
+      "model_candidate::qwen35_27b::valid_reference": {
+        "error_judgment_flip": 1,
+        "first_pred_correct": 54,
+        "hit_max": 1,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 0,
+        "invalid_location_match_last": 0,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 0,
+        "last_pred_correct": 55,
+        "n": 64,
+        "valid_false_positive_first": 10,
+        "valid_false_positive_last": 9,
+        "valid_n": 64
+      },
+      "model_family::gemma4_26b_a4b_it::algebra_sign_factor": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 5,
+        "hit_max": 2,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 1,
+        "invalid_location_match_last": 1,
+        "invalid_location_miss_first": 1,
+        "invalid_location_miss_last": 1,
+        "invalid_n": 4,
+        "last_pred_correct": 5,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_26b_a4b_it::causal_counterfactual": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_26b_a4b_it::code_boundary": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_26b_a4b_it::counting_invariant": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 7,
+        "hit_max": 0,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 7,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_26b_a4b_it::geometry_constraints": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 5,
+        "hit_max": 0,
+        "invalid_false_negative_first": 3,
+        "invalid_false_negative_last": 3,
+        "invalid_location_match_first": 1,
+        "invalid_location_match_last": 1,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 5,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_26b_a4b_it::graph_path_constraints": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 7,
+        "hit_max": 0,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 7,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_26b_a4b_it::multilingual_semantic": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_26b_a4b_it::optimization_constraints": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_26b_a4b_it::probability_conditioning": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 7,
+        "hit_max": 0,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 7,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_26b_a4b_it::proof_validity": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_26b_a4b_it::recurrence_dp": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 7,
+        "hit_max": 0,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 7,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_26b_a4b_it::set_venn": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 6,
+        "hit_max": 0,
+        "invalid_false_negative_first": 2,
+        "invalid_false_negative_last": 2,
+        "invalid_location_match_first": 3,
+        "invalid_location_match_last": 3,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 6,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_26b_a4b_it::string_regex_parsing": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_26b_a4b_it::table_aggregation": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 7,
+        "hit_max": 0,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 7,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_26b_a4b_it::temporal_order": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 7,
+        "hit_max": 0,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 7,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_26b_a4b_it::unit_percentage": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 7,
+        "hit_max": 0,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 3,
+        "invalid_location_match_last": 3,
+        "invalid_location_miss_first": 1,
+        "invalid_location_miss_last": 1,
+        "invalid_n": 4,
+        "last_pred_correct": 7,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_31b_it::algebra_sign_factor": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 6,
+        "hit_max": 2,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 1,
+        "invalid_location_match_last": 1,
+        "invalid_location_miss_first": 2,
+        "invalid_location_miss_last": 2,
+        "invalid_n": 4,
+        "last_pred_correct": 6,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_31b_it::causal_counterfactual": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_31b_it::code_boundary": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_31b_it::counting_invariant": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_31b_it::geometry_constraints": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 6,
+        "hit_max": 0,
+        "invalid_false_negative_first": 2,
+        "invalid_false_negative_last": 2,
+        "invalid_location_match_first": 2,
+        "invalid_location_match_last": 2,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 6,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_31b_it::graph_path_constraints": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 6,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 6,
+        "n": 8,
+        "valid_false_positive_first": 2,
+        "valid_false_positive_last": 2,
+        "valid_n": 4
+      },
+      "model_family::gemma4_31b_it::multilingual_semantic": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_31b_it::optimization_constraints": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_31b_it::probability_conditioning": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_31b_it::proof_validity": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_31b_it::recurrence_dp": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_31b_it::set_venn": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 7,
+        "hit_max": 0,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 3,
+        "invalid_location_match_last": 3,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 7,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_31b_it::string_regex_parsing": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_31b_it::table_aggregation": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_31b_it::temporal_order": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::gemma4_31b_it::unit_percentage": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::qwen35_27b::algebra_sign_factor": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 6,
+        "hit_max": 1,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 2,
+        "invalid_location_match_last": 2,
+        "invalid_location_miss_first": 2,
+        "invalid_location_miss_last": 2,
+        "invalid_n": 4,
+        "last_pred_correct": 6,
+        "n": 8,
+        "valid_false_positive_first": 2,
+        "valid_false_positive_last": 2,
+        "valid_n": 4
+      },
+      "model_family::qwen35_27b::causal_counterfactual": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::qwen35_27b::code_boundary": {
+        "error_judgment_flip": 1,
+        "first_pred_correct": 5,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 6,
+        "n": 8,
+        "valid_false_positive_first": 3,
+        "valid_false_positive_last": 2,
+        "valid_n": 4
+      },
+      "model_family::qwen35_27b::counting_invariant": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 6,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 6,
+        "n": 8,
+        "valid_false_positive_first": 2,
+        "valid_false_positive_last": 2,
+        "valid_n": 4
+      },
+      "model_family::qwen35_27b::geometry_constraints": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 7,
+        "hit_max": 0,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 3,
+        "invalid_location_match_last": 3,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 7,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::qwen35_27b::graph_path_constraints": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 6,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 6,
+        "n": 8,
+        "valid_false_positive_first": 2,
+        "valid_false_positive_last": 2,
+        "valid_n": 4
+      },
+      "model_family::qwen35_27b::multilingual_semantic": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 7,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 7,
+        "n": 8,
+        "valid_false_positive_first": 1,
+        "valid_false_positive_last": 1,
+        "valid_n": 4
+      },
+      "model_family::qwen35_27b::optimization_constraints": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::qwen35_27b::probability_conditioning": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::qwen35_27b::proof_validity": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::qwen35_27b::recurrence_dp": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::qwen35_27b::set_venn": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::qwen35_27b::string_regex_parsing": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::qwen35_27b::table_aggregation": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::qwen35_27b::temporal_order": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_family::qwen35_27b::unit_percentage": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 8,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 4,
+        "invalid_location_match_last": 4,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 4,
+        "last_pred_correct": 8,
+        "n": 8,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 4
+      },
+      "model_prompt::gemma4_26b_a4b_it::find_problem_global": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 59,
+        "hit_max": 2,
+        "invalid_false_negative_first": 3,
+        "invalid_false_negative_last": 3,
+        "invalid_location_match_first": 28,
+        "invalid_location_match_last": 28,
+        "invalid_location_miss_first": 0,
+        "invalid_location_miss_last": 0,
+        "invalid_n": 32,
+        "last_pred_correct": 59,
+        "n": 64,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 32
+      },
+      "model_prompt::gemma4_26b_a4b_it::find_problem_localize_only": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 54,
+        "hit_max": 0,
+        "invalid_false_negative_first": 10,
+        "invalid_false_negative_last": 10,
+        "invalid_location_match_first": 28,
+        "invalid_location_match_last": 28,
+        "invalid_location_miss_first": 2,
+        "invalid_location_miss_last": 2,
+        "invalid_n": 32,
+        "last_pred_correct": 54,
+        "n": 64,
+        "valid_false_positive_first": 0,
+        "valid_false_positive_last": 0,
+        "valid_n": 32
+      },
+      "model_prompt::gemma4_31b_it::find_problem_global": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 59,
+        "hit_max": 2,
+        "invalid_false_negative_first": 2,
+        "invalid_false_negative_last": 2,
+        "invalid_location_match_first": 28,
+        "invalid_location_match_last": 28,
+        "invalid_location_miss_first": 1,
+        "invalid_location_miss_last": 1,
+        "invalid_n": 32,
+        "last_pred_correct": 59,
+        "n": 64,
+        "valid_false_positive_first": 1,
+        "valid_false_positive_last": 1,
+        "valid_n": 32
+      },
+      "model_prompt::gemma4_31b_it::find_problem_localize_only": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 62,
+        "hit_max": 0,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 30,
+        "invalid_location_match_last": 30,
+        "invalid_location_miss_first": 1,
+        "invalid_location_miss_last": 1,
+        "invalid_n": 32,
+        "last_pred_correct": 62,
+        "n": 64,
+        "valid_false_positive_first": 1,
+        "valid_false_positive_last": 1,
+        "valid_n": 32
+      },
+      "model_prompt::qwen35_27b::find_problem_global": {
+        "error_judgment_flip": 1,
+        "first_pred_correct": 60,
+        "hit_max": 1,
+        "invalid_false_negative_first": 1,
+        "invalid_false_negative_last": 1,
+        "invalid_location_match_first": 30,
+        "invalid_location_match_last": 30,
+        "invalid_location_miss_first": 1,
+        "invalid_location_miss_last": 1,
+        "invalid_n": 32,
+        "last_pred_correct": 61,
+        "n": 64,
+        "valid_false_positive_first": 3,
+        "valid_false_positive_last": 2,
+        "valid_n": 32
+      },
+      "model_prompt::qwen35_27b::find_problem_localize_only": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 57,
+        "hit_max": 0,
+        "invalid_false_negative_first": 0,
+        "invalid_false_negative_last": 0,
+        "invalid_location_match_first": 31,
+        "invalid_location_match_last": 31,
+        "invalid_location_miss_first": 1,
+        "invalid_location_miss_last": 1,
+        "invalid_n": 32,
+        "last_pred_correct": 57,
+        "n": 64,
+        "valid_false_positive_first": 7,
+        "valid_false_positive_last": 7,
+        "valid_n": 32
+      },
+      "prompt::find_problem_global": {
+        "error_judgment_flip": 1,
+        "first_pred_correct": 178,
+        "hit_max": 5,
+        "invalid_false_negative_first": 6,
+        "invalid_false_negative_last": 6,
+        "invalid_location_match_first": 86,
+        "invalid_location_match_last": 86,
+        "invalid_location_miss_first": 2,
+        "invalid_location_miss_last": 2,
+        "invalid_n": 96,
+        "last_pred_correct": 179,
+        "n": 192,
+        "valid_false_positive_first": 4,
+        "valid_false_positive_last": 3,
+        "valid_n": 96
+      },
+      "prompt::find_problem_localize_only": {
+        "error_judgment_flip": 0,
+        "first_pred_correct": 173,
+        "hit_max": 0,
+        "invalid_false_negative_first": 11,
+        "invalid_false_negative_last": 11,
+        "invalid_location_match_first": 89,
+        "invalid_location_match_last": 89,
+        "invalid_location_miss_first": 4,
+        "invalid_location_miss_last": 4,
+        "invalid_n": 96,
+        "last_pred_correct": 173,
+        "n": 192,
+        "valid_false_positive_first": 8,
+        "valid_false_positive_last": 8,
+        "valid_n": 96
+      }
+    },
+    "source": "results/E153_nonthinking_error_finding/e153_error_finding_audit_summary_20260501.json"
+  },
+  "e153_generation": {
+    "by_model": {
+      "gemma4_26b_a4b_it": {
+        "ambiguous_problem_boundary": 1,
+        "auto_final_correct": 89,
+        "causal_prefill_usable": 96,
+        "clean_valid_prefill_candidate": 95,
+        "language_trait_use": 15,
+        "manual_acpi_unrepaired": 0,
+        "manual_final_correct": 95,
+        "manual_process_valid_strict": 95,
+        "mean_generated_tokens": 533.0,
+        "n": 96,
+        "posthoc_rationalization": 0,
+        "repair_or_rethink_marker": 1
+      },
+      "gemma4_31b_it": {
+        "auto_final_correct": 88,
+        "causal_prefill_usable": 96,
+        "clean_valid_prefill_candidate": 90,
+        "language_trait_use": 14,
+        "manual_acpi_unrepaired": 0,
+        "manual_final_correct": 93,
+        "manual_process_valid_strict": 93,
+        "n": 96,
+        "posthoc_rationalization": 0,
+        "repair_or_rethink_marker": 0
+      },
+      "qwen35_27b": {
+        "auto_final_correct": 90,
+        "causal_prefill_usable": 96,
+        "clean_valid_prefill_candidate": 89,
+        "language_trait_use": 19,
+        "manual_acpi_unrepaired": 0,
+        "manual_final_correct": 96,
+        "manual_process_valid_strict": 96,
+        "n": 96,
+        "posthoc_rationalization": 0,
+        "repair_or_rethink_marker": 4
+      }
+    },
+    "sources": [
+      "results/E153_nonthinking_difficult_scenario_generation/e153_dense_generation_audit_summary_20260501.json",
+      "results/E153_nonthinking_difficult_scenario_generation/e153_moe_generation_audit_summary_20260501.json"
+    ]
+  },
+  "e159_e160_qwen_compare": {
+    "by_family_confusion": {
+      "algebra_sign_symmetry": {
+        "nt_correct__th_correct": 11,
+        "nt_correct__th_wrong": 1
+      },
+      "code_boundary_zero": {
+        "nt_correct__th_correct": 12
+      },
+      "counting_complement": {
+        "nt_correct__th_correct": 11,
+        "nt_correct__th_wrong": 1
+      },
+      "graph_definition": {
+        "nt_correct__th_correct": 12
+      },
+      "multilingual_semantic": {
+        "nt_correct__th_correct": 11,
+        "nt_correct__th_wrong": 1
+      },
+      "probability_conditioning": {
+        "nt_correct__th_correct": 11,
+        "nt_correct__th_wrong": 1
+      },
+      "proof_invalid_lemma": {
+        "nt_correct__th_correct": 12
+      },
+      "table_zero_swap": {
+        "nt_correct__th_correct": 12
+      },
+      "temporal_boundary": {
+        "nt_correct__th_correct": 10,
+        "nt_correct__th_wrong": 2
+      },
+      "unit_roundtrip": {
+        "nt_correct__th_correct": 6,
+        "nt_wrong__th_wrong": 6
+      }
+    },
+    "confusion": {
+      "nt_correct__th_correct": 108,
+      "nt_correct__th_wrong": 6,
+      "nt_wrong__th_wrong": 6
+    },
+    "shared_rows": 120,
+    "thinking_hit_max_when_nonthinking_correct": [
+      {
+        "family": "algebra_sign_symmetry",
+        "gold_answer": "127",
+        "prompt_variant": "solve_neutral",
+        "task_id": "e159_algebra_sign_symmetry_01",
+        "thinking_extracted_final": "95",
+        "thinking_final_marker_found": false
+      },
+      {
+        "family": "counting_complement",
+        "gold_answer": "32",
+        "prompt_variant": "solve_self_check",
+        "task_id": "e159_counting_complement_01",
+        "thinking_extracted_final": "21",
+        "thinking_final_marker_found": false
+      },
+      {
+        "family": "multilingual_semantic",
+        "gold_answer": "7",
+        "prompt_variant": "solve_self_check",
+        "task_id": "e159_multilingual_semantic_01",
+        "thinking_extracted_final": "-8",
+        "thinking_final_marker_found": false
+      },
+      {
+        "family": "probability_conditioning",
+        "gold_answer": "2/3",
+        "prompt_variant": "solve_terse",
+        "task_id": "e159_probability_conditioning_02",
+        "thinking_extracted_final": "2/",
+        "thinking_final_marker_found": true
+      }
+    ]
+  },
+  "e159_generation": [
+    {
+      "by_family": {
+        "algebra_sign_symmetry": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "code_boundary_zero": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "counting_complement": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "graph_definition": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "multilingual_semantic": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "probability_conditioning": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "proof_invalid_lemma": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "table_zero_swap": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "temporal_boundary": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "unit_roundtrip": {
+          "final_correct": 6,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        }
+      },
+      "by_variant": {
+        "solve_neutral": {
+          "final_correct": 38,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 40
+        },
+        "solve_self_check": {
+          "final_correct": 38,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 40
+        },
+        "solve_terse": {
+          "final_correct": 38,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 40
+        }
+      },
+      "final_answer_line_count_hist": {
+        "1": 120
+      },
+      "final_correct": 114,
+      "generated": 120,
+      "hit_max": 0,
+      "leakage_audit": {
+        "error_span_in_prompt_rows": 0,
+        "gold_answer_in_prompt_rows": 0,
+        "manual_label_in_prompt_rows": 0,
+        "passed": true,
+        "trap_note_in_prompt_rows": 0
+      },
+      "missing_final_marker": 0,
+      "mode": "nonthinking",
+      "model_key": "gemma4_26b_a4b_it",
+      "path": "results/E159_answer_preserving_difficult_generation/gemma4_26b_a4b_it_E159_answer_preserving_generation_nonthinking_solve_neutral_solve_terse_solve_self_check_k1.json",
+      "repair_marker_rows_auto": 57,
+      "selected_tasks": 40,
+      "wrong_rows": [
+        {
+          "extracted_final": "100 meters",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "100",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_neutral",
+          "task_id": "e159_unit_roundtrip_01"
+        },
+        {
+          "extracted_final": "100 meters",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "100",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_terse",
+          "task_id": "e159_unit_roundtrip_01"
+        },
+        {
+          "extracted_final": "100 meters",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "100",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_self_check",
+          "task_id": "e159_unit_roundtrip_01"
+        },
+        {
+          "extracted_final": "3 kilometers",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "3",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_neutral",
+          "task_id": "e159_unit_roundtrip_03"
+        },
+        {
+          "extracted_final": "3 km",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "3",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_terse",
+          "task_id": "e159_unit_roundtrip_03"
+        },
+        {
+          "extracted_final": "3 kilometers",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "3",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_self_check",
+          "task_id": "e159_unit_roundtrip_03"
+        }
+      ]
+    },
+    {
+      "by_family": {
+        "algebra_sign_symmetry": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "code_boundary_zero": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "counting_complement": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "graph_definition": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "multilingual_semantic": {
+          "final_correct": 9,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "probability_conditioning": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "proof_invalid_lemma": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "table_zero_swap": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "temporal_boundary": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "unit_roundtrip": {
+          "final_correct": 7,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        }
+      },
+      "by_variant": {
+        "solve_neutral": {
+          "final_correct": 37,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 40
+        },
+        "solve_self_check": {
+          "final_correct": 38,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 40
+        },
+        "solve_terse": {
+          "final_correct": 37,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 40
+        }
+      },
+      "final_answer_line_count_hist": {
+        "1": 120
+      },
+      "final_correct": 112,
+      "generated": 120,
+      "hit_max": 0,
+      "leakage_audit": {
+        "error_span_in_prompt_rows": 0,
+        "gold_answer_in_prompt_rows": 0,
+        "manual_label_in_prompt_rows": 0,
+        "passed": true,
+        "trap_note_in_prompt_rows": 0
+      },
+      "missing_final_marker": 0,
+      "mode": "nonthinking",
+      "model_key": "gemma4_31b_it",
+      "path": "results/E159_answer_preserving_difficult_generation/gemma4_31b_it_E159_answer_preserving_generation_nonthinking_solve_neutral_solve_terse_solve_self_check_k1.json",
+      "repair_marker_rows_auto": 48,
+      "selected_tasks": 40,
+      "wrong_rows": [
+        {
+          "extracted_final": "5",
+          "family": "multilingual_semantic",
+          "final_marker_found": true,
+          "gold_answer": "7",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_neutral",
+          "task_id": "e159_multilingual_semantic_01"
+        },
+        {
+          "extracted_final": "5",
+          "family": "multilingual_semantic",
+          "final_marker_found": true,
+          "gold_answer": "7",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_terse",
+          "task_id": "e159_multilingual_semantic_01"
+        },
+        {
+          "extracted_final": "5",
+          "family": "multilingual_semantic",
+          "final_marker_found": true,
+          "gold_answer": "7",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_self_check",
+          "task_id": "e159_multilingual_semantic_01"
+        },
+        {
+          "extracted_final": "100 meters",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "100",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_neutral",
+          "task_id": "e159_unit_roundtrip_01"
+        },
+        {
+          "extracted_final": "100m",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "100",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_terse",
+          "task_id": "e159_unit_roundtrip_01"
+        },
+        {
+          "extracted_final": "3 km",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "3",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_neutral",
+          "task_id": "e159_unit_roundtrip_03"
+        },
+        {
+          "extracted_final": "3 km",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "3",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_terse",
+          "task_id": "e159_unit_roundtrip_03"
+        },
+        {
+          "extracted_final": "3 km",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "3",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_self_check",
+          "task_id": "e159_unit_roundtrip_03"
+        }
+      ]
+    },
+    {
+      "by_family": {
+        "algebra_sign_symmetry": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "code_boundary_zero": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "counting_complement": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "graph_definition": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "multilingual_semantic": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "probability_conditioning": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "proof_invalid_lemma": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "table_zero_swap": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "temporal_boundary": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "unit_roundtrip": {
+          "final_correct": 6,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        }
+      },
+      "by_variant": {
+        "solve_neutral": {
+          "final_correct": 38,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 40
+        },
+        "solve_self_check": {
+          "final_correct": 38,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 40
+        },
+        "solve_terse": {
+          "final_correct": 38,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 40
+        }
+      },
+      "final_answer_line_count_hist": {
+        "1": 120
+      },
+      "final_correct": 114,
+      "generated": 120,
+      "hit_max": 0,
+      "leakage_audit": {
+        "error_span_in_prompt_rows": 0,
+        "gold_answer_in_prompt_rows": 0,
+        "manual_label_in_prompt_rows": 0,
+        "passed": true,
+        "trap_note_in_prompt_rows": 0
+      },
+      "missing_final_marker": 0,
+      "mode": "nonthinking",
+      "model_key": "qwen35_27b",
+      "path": "results/E159_answer_preserving_difficult_generation/qwen35_27b_E159_answer_preserving_generation_nonthinking_solve_neutral_solve_terse_solve_self_check_k1.json",
+      "repair_marker_rows_auto": 58,
+      "selected_tasks": 40,
+      "wrong_rows": [
+        {
+          "extracted_final": "100 meters",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "100",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_neutral",
+          "task_id": "e159_unit_roundtrip_01"
+        },
+        {
+          "extracted_final": "100 meters",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "100",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_terse",
+          "task_id": "e159_unit_roundtrip_01"
+        },
+        {
+          "extracted_final": "100 meters",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "100",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_self_check",
+          "task_id": "e159_unit_roundtrip_01"
+        },
+        {
+          "extracted_final": "3 kilometers",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "3",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_neutral",
+          "task_id": "e159_unit_roundtrip_03"
+        },
+        {
+          "extracted_final": "3 km",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "3",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_terse",
+          "task_id": "e159_unit_roundtrip_03"
+        },
+        {
+          "extracted_final": "3 km",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "3",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_self_check",
+          "task_id": "e159_unit_roundtrip_03"
+        }
+      ]
+    }
+  ],
+  "e159_process_acpi_audit": {
+    "acpi_strict": 0,
+    "acpi_unrepaired": 0,
+    "audit_actor": "assistant_single_pass_process_audit",
+    "by_family": {
+      "algebra_sign_symmetry": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 36,
+        "manual_final_correct_audit": 36,
+        "n": 36,
+        "process_valid_strict": 36,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 36
+      },
+      "code_boundary_zero": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 36,
+        "manual_final_correct_audit": 36,
+        "n": 36,
+        "process_valid_strict": 36,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 36
+      },
+      "counting_complement": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 36,
+        "manual_final_correct_audit": 36,
+        "n": 36,
+        "process_valid_strict": 36,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 36
+      },
+      "graph_definition": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 36,
+        "manual_final_correct_audit": 36,
+        "n": 36,
+        "process_valid_strict": 36,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 36
+      },
+      "multilingual_semantic": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 33,
+        "manual_final_correct_audit": 33,
+        "n": 36,
+        "process_valid_strict": 33,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 33
+      },
+      "probability_conditioning": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 36,
+        "manual_final_correct_audit": 36,
+        "n": 36,
+        "process_valid_strict": 36,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 36
+      },
+      "proof_invalid_lemma": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 36,
+        "manual_final_correct_audit": 36,
+        "n": 36,
+        "process_valid_strict": 36,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 36
+      },
+      "table_zero_swap": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 36,
+        "manual_final_correct_audit": 36,
+        "n": 36,
+        "process_valid_strict": 36,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 36
+      },
+      "temporal_boundary": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 36,
+        "manual_final_correct_audit": 36,
+        "n": 36,
+        "process_valid_strict": 36,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 36
+      },
+      "unit_roundtrip": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 36,
+        "manual_final_correct_audit": 36,
+        "n": 36,
+        "process_valid_strict": 36,
+        "runner_false_negative_format": 17,
+        "runner_final_correct": 19
+      }
+    },
+    "by_model": {
+      "gemma4_26b_a4b_it": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 120,
+        "manual_final_correct_audit": 120,
+        "n": 120,
+        "process_valid_strict": 120,
+        "runner_false_negative_format": 6,
+        "runner_final_correct": 114
+      },
+      "gemma4_31b_it": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 117,
+        "manual_final_correct_audit": 117,
+        "n": 120,
+        "process_valid_strict": 117,
+        "runner_false_negative_format": 5,
+        "runner_final_correct": 112
+      },
+      "qwen35_27b": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 120,
+        "manual_final_correct_audit": 120,
+        "n": 120,
+        "process_valid_strict": 120,
+        "runner_false_negative_format": 6,
+        "runner_final_correct": 114
+      }
+    },
+    "by_model_family": {
+      "gemma4_26b_a4b_it::algebra_sign_symmetry": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "gemma4_26b_a4b_it::code_boundary_zero": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "gemma4_26b_a4b_it::counting_complement": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "gemma4_26b_a4b_it::graph_definition": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "gemma4_26b_a4b_it::multilingual_semantic": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "gemma4_26b_a4b_it::probability_conditioning": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "gemma4_26b_a4b_it::proof_invalid_lemma": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "gemma4_26b_a4b_it::table_zero_swap": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "gemma4_26b_a4b_it::temporal_boundary": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "gemma4_26b_a4b_it::unit_roundtrip": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 6,
+        "runner_final_correct": 6
+      },
+      "gemma4_31b_it::algebra_sign_symmetry": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "gemma4_31b_it::code_boundary_zero": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "gemma4_31b_it::counting_complement": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "gemma4_31b_it::graph_definition": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "gemma4_31b_it::multilingual_semantic": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 9,
+        "manual_final_correct_audit": 9,
+        "n": 12,
+        "process_valid_strict": 9,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 9
+      },
+      "gemma4_31b_it::probability_conditioning": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "gemma4_31b_it::proof_invalid_lemma": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "gemma4_31b_it::table_zero_swap": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "gemma4_31b_it::temporal_boundary": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "gemma4_31b_it::unit_roundtrip": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 5,
+        "runner_final_correct": 7
+      },
+      "qwen35_27b::algebra_sign_symmetry": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "qwen35_27b::code_boundary_zero": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "qwen35_27b::counting_complement": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "qwen35_27b::graph_definition": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "qwen35_27b::multilingual_semantic": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "qwen35_27b::probability_conditioning": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "qwen35_27b::proof_invalid_lemma": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "qwen35_27b::table_zero_swap": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "qwen35_27b::temporal_boundary": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 0,
+        "runner_final_correct": 12
+      },
+      "qwen35_27b::unit_roundtrip": {
+        "acpi_strict": 0,
+        "acpi_unrepaired": 0,
+        "clean_valid_prefill_candidate": 12,
+        "manual_final_correct_audit": 12,
+        "n": 12,
+        "process_valid_strict": 12,
+        "runner_false_negative_format": 6,
+        "runner_final_correct": 6
+      }
+    },
+    "clean_valid_prefill_candidate": 357,
+    "created_at": "2026-05-01T12:31:17",
+    "examples": {
+      "acpi_unrepaired": [],
+      "format_false_negative": [
+        {
+          "family": "unit_roundtrip",
+          "gold_answer": "100",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_neutral",
+          "runner_extracted_final": "100 meters",
+          "task_id": "e159_unit_roundtrip_01"
+        },
+        {
+          "family": "unit_roundtrip",
+          "gold_answer": "100",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_terse",
+          "runner_extracted_final": "100 meters",
+          "task_id": "e159_unit_roundtrip_01"
+        },
+        {
+          "family": "unit_roundtrip",
+          "gold_answer": "100",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_self_check",
+          "runner_extracted_final": "100 meters",
+          "task_id": "e159_unit_roundtrip_01"
+        },
+        {
+          "family": "unit_roundtrip",
+          "gold_answer": "3",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_neutral",
+          "runner_extracted_final": "3 kilometers",
+          "task_id": "e159_unit_roundtrip_03"
+        },
+        {
+          "family": "unit_roundtrip",
+          "gold_answer": "3",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_terse",
+          "runner_extracted_final": "3 km",
+          "task_id": "e159_unit_roundtrip_03"
+        },
+        {
+          "family": "unit_roundtrip",
+          "gold_answer": "3",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_self_check",
+          "runner_extracted_final": "3 kilometers",
+          "task_id": "e159_unit_roundtrip_03"
+        },
+        {
+          "family": "unit_roundtrip",
+          "gold_answer": "100",
+          "invalid_spans": [],
+          "model_key": "gemma4_31b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_neutral",
+          "runner_extracted_final": "100 meters",
+          "task_id": "e159_unit_roundtrip_01"
+        },
+        {
+          "family": "unit_roundtrip",
+          "gold_answer": "100",
+          "invalid_spans": [],
+          "model_key": "gemma4_31b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_terse",
+          "runner_extracted_final": "100m",
+          "task_id": "e159_unit_roundtrip_01"
+        },
+        {
+          "family": "unit_roundtrip",
+          "gold_answer": "3",
+          "invalid_spans": [],
+          "model_key": "gemma4_31b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_neutral",
+          "runner_extracted_final": "3 km",
+          "task_id": "e159_unit_roundtrip_03"
+        },
+        {
+          "family": "unit_roundtrip",
+          "gold_answer": "3",
+          "invalid_spans": [],
+          "model_key": "gemma4_31b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_terse",
+          "runner_extracted_final": "3 km",
+          "task_id": "e159_unit_roundtrip_03"
+        },
+        {
+          "family": "unit_roundtrip",
+          "gold_answer": "3",
+          "invalid_spans": [],
+          "model_key": "gemma4_31b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_self_check",
+          "runner_extracted_final": "3 km",
+          "task_id": "e159_unit_roundtrip_03"
+        },
+        {
+          "family": "unit_roundtrip",
+          "gold_answer": "100",
+          "invalid_spans": [],
+          "model_key": "qwen35_27b",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_neutral",
+          "runner_extracted_final": "100 meters",
+          "task_id": "e159_unit_roundtrip_01"
+        },
+        {
+          "family": "unit_roundtrip",
+          "gold_answer": "100",
+          "invalid_spans": [],
+          "model_key": "qwen35_27b",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_terse",
+          "runner_extracted_final": "100 meters",
+          "task_id": "e159_unit_roundtrip_01"
+        },
+        {
+          "family": "unit_roundtrip",
+          "gold_answer": "100",
+          "invalid_spans": [],
+          "model_key": "qwen35_27b",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_self_check",
+          "runner_extracted_final": "100 meters",
+          "task_id": "e159_unit_roundtrip_01"
+        },
+        {
+          "family": "unit_roundtrip",
+          "gold_answer": "3",
+          "invalid_spans": [],
+          "model_key": "qwen35_27b",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_neutral",
+          "runner_extracted_final": "3 kilometers",
+          "task_id": "e159_unit_roundtrip_03"
+        },
+        {
+          "family": "unit_roundtrip",
+          "gold_answer": "3",
+          "invalid_spans": [],
+          "model_key": "qwen35_27b",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_terse",
+          "runner_extracted_final": "3 km",
+          "task_id": "e159_unit_roundtrip_03"
+        },
+        {
+          "family": "unit_roundtrip",
+          "gold_answer": "3",
+          "invalid_spans": [],
+          "model_key": "qwen35_27b",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_self_check",
+          "runner_extracted_final": "3 km",
+          "task_id": "e159_unit_roundtrip_03"
+        }
+      ],
+      "process_invalid_final_wrong": [
+        {
+          "family": "multilingual_semantic",
+          "gold_answer": "7",
+          "invalid_spans": [
+            "interprets `zhi duo wei 3` as multiple/divisible by 3"
+          ],
+          "model_key": "gemma4_31b_it",
+          "note_zh": "多语言语义误读：`zhi duo wei 3` 在本题应为 `at most 3`，不是 3 的倍数。 Final answer is also wrong, so this is not ACPI.",
+          "prompt_variant": "solve_neutral",
+          "runner_extracted_final": "5",
+          "task_id": "e159_multilingual_semantic_01"
+        },
+        {
+          "family": "multilingual_semantic",
+          "gold_answer": "7",
+          "invalid_spans": [
+            "interprets `zhi duo wei 3` as multiple/divisible by 3"
+          ],
+          "model_key": "gemma4_31b_it",
+          "note_zh": "多语言语义误读：`zhi duo wei 3` 在本题应为 `at most 3`，不是 3 的倍数。 Final answer is also wrong, so this is not ACPI.",
+          "prompt_variant": "solve_terse",
+          "runner_extracted_final": "5",
+          "task_id": "e159_multilingual_semantic_01"
+        },
+        {
+          "family": "multilingual_semantic",
+          "gold_answer": "7",
+          "invalid_spans": [
+            "interprets `zhi duo wei 3` as multiple/divisible by 3"
+          ],
+          "model_key": "gemma4_31b_it",
+          "note_zh": "多语言语义误读：`zhi duo wei 3` 在本题应为 `at most 3`，不是 3 的倍数。 Final answer is also wrong, so this is not ACPI.",
+          "prompt_variant": "solve_self_check",
+          "runner_extracted_final": "5",
+          "task_id": "e159_multilingual_semantic_01"
+        }
+      ],
+      "reviewed_warnings": [
+        {
+          "family": "algebra_sign_symmetry",
+          "flags": [
+            "repair_or_check_language_present",
+            "sqrt_y2_branch_equivalence_reviewed"
+          ],
+          "gold_answer": "127",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "`sqrt(81y^2)` handling reviewed; with both ± branches, using ±9y does not change the solution set.",
+          "prompt_variant": "solve_neutral",
+          "runner_extracted_final": "127",
+          "task_id": "e159_algebra_sign_symmetry_01"
+        },
+        {
+          "family": "algebra_sign_symmetry",
+          "flags": [
+            "sqrt_y2_branch_equivalence_reviewed"
+          ],
+          "gold_answer": "127",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "`sqrt(81y^2)` handling reviewed; with both ± branches, using ±9y does not change the solution set.",
+          "prompt_variant": "solve_terse",
+          "runner_extracted_final": "127",
+          "task_id": "e159_algebra_sign_symmetry_01"
+        },
+        {
+          "family": "algebra_sign_symmetry",
+          "flags": [
+            "repair_or_check_language_present"
+          ],
+          "gold_answer": "127",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_self_check",
+          "runner_extracted_final": "127",
+          "task_id": "e159_algebra_sign_symmetry_01"
+        },
+        {
+          "family": "algebra_sign_symmetry",
+          "flags": [
+            "repair_or_check_language_present"
+          ],
+          "gold_answer": "2,20",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_neutral",
+          "runner_extracted_final": "2,20",
+          "task_id": "e159_algebra_sign_symmetry_02"
+        },
+        {
+          "family": "algebra_sign_symmetry",
+          "flags": [
+            "repair_or_check_language_present"
+          ],
+          "gold_answer": "2,20",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_terse",
+          "runner_extracted_final": "2,20",
+          "task_id": "e159_algebra_sign_symmetry_02"
+        },
+        {
+          "family": "algebra_sign_symmetry",
+          "flags": [
+            "repair_or_check_language_present"
+          ],
+          "gold_answer": "2,20",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_self_check",
+          "runner_extracted_final": "2,20",
+          "task_id": "e159_algebra_sign_symmetry_02"
+        },
+        {
+          "family": "algebra_sign_symmetry",
+          "flags": [
+            "repair_or_check_language_present"
+          ],
+          "gold_answer": "0",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_neutral",
+          "runner_extracted_final": "0",
+          "task_id": "e159_algebra_sign_symmetry_03"
+        },
+        {
+          "family": "algebra_sign_symmetry",
+          "flags": [
+            "repair_or_check_language_present"
+          ],
+          "gold_answer": "0",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_self_check",
+          "runner_extracted_final": "0",
+          "task_id": "e159_algebra_sign_symmetry_03"
+        },
+        {
+          "family": "algebra_sign_symmetry",
+          "flags": [
+            "repair_or_check_language_present"
+          ],
+          "gold_answer": "2",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_neutral",
+          "runner_extracted_final": "2",
+          "task_id": "e159_algebra_sign_symmetry_04"
+        },
+        {
+          "family": "algebra_sign_symmetry",
+          "flags": [
+            "repair_or_check_language_present"
+          ],
+          "gold_answer": "2",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_terse",
+          "runner_extracted_final": "2",
+          "task_id": "e159_algebra_sign_symmetry_04"
+        },
+        {
+          "family": "algebra_sign_symmetry",
+          "flags": [
+            "repair_or_check_language_present"
+          ],
+          "gold_answer": "2",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_self_check",
+          "runner_extracted_final": "2",
+          "task_id": "e159_algebra_sign_symmetry_04"
+        },
+        {
+          "family": "code_boundary_zero",
+          "flags": [
+            "repair_or_check_language_present"
+          ],
+          "gold_answer": "-20",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_neutral",
+          "runner_extracted_final": "-20",
+          "task_id": "e159_code_boundary_zero_01"
+        },
+        {
+          "family": "code_boundary_zero",
+          "flags": [
+            "repair_or_check_language_present"
+          ],
+          "gold_answer": "-20",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_self_check",
+          "runner_extracted_final": "-20",
+          "task_id": "e159_code_boundary_zero_01"
+        },
+        {
+          "family": "code_boundary_zero",
+          "flags": [
+            "repair_or_check_language_present"
+          ],
+          "gold_answer": "-4",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_self_check",
+          "runner_extracted_final": "-4",
+          "task_id": "e159_code_boundary_zero_02"
+        },
+        {
+          "family": "code_boundary_zero",
+          "flags": [
+            "repair_or_check_language_present"
+          ],
+          "gold_answer": "-10",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_neutral",
+          "runner_extracted_final": "-10",
+          "task_id": "e159_code_boundary_zero_03"
+        },
+        {
+          "family": "code_boundary_zero",
+          "flags": [
+            "repair_or_check_language_present"
+          ],
+          "gold_answer": "-10",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_self_check",
+          "runner_extracted_final": "-10",
+          "task_id": "e159_code_boundary_zero_03"
+        },
+        {
+          "family": "code_boundary_zero",
+          "flags": [
+            "repair_or_check_language_present"
+          ],
+          "gold_answer": "2",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_neutral",
+          "runner_extracted_final": "2",
+          "task_id": "e159_code_boundary_zero_04"
+        },
+        {
+          "family": "code_boundary_zero",
+          "flags": [
+            "repair_or_check_language_present"
+          ],
+          "gold_answer": "2",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_terse",
+          "runner_extracted_final": "2",
+          "task_id": "e159_code_boundary_zero_04"
+        },
+        {
+          "family": "code_boundary_zero",
+          "flags": [
+            "repair_or_check_language_present"
+          ],
+          "gold_answer": "2",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_self_check",
+          "runner_extracted_final": "2",
+          "task_id": "e159_code_boundary_zero_04"
+        },
+        {
+          "family": "counting_complement",
+          "flags": [
+            "repair_or_check_language_present"
+          ],
+          "gold_answer": "32",
+          "invalid_spans": [],
+          "model_key": "gemma4_26b_a4b_it",
+          "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+          "prompt_variant": "solve_neutral",
+          "runner_extracted_final": "32",
+          "task_id": "e159_counting_complement_01"
+        }
+      ]
+    },
+    "inputs": [
+      "gemma4_26b_a4b_it_E159_answer_preserving_generation_nonthinking_solve_neutral_solve_terse_solve_self_check_k1.json",
+      "gemma4_31b_it_E159_answer_preserving_generation_nonthinking_solve_neutral_solve_terse_solve_self_check_k1.json",
+      "qwen35_27b_E159_answer_preserving_generation_nonthinking_solve_neutral_solve_terse_solve_self_check_k1.json"
+    ],
+    "manual_final_correct_audit": 357,
+    "n": 360,
+    "needs_second_human_review_for_paper": true,
+    "outputs": {
+      "jsonl": "data/processed/e159_generation_process_acpi_audit_20260501.jsonl",
+      "report": "reports/E159_GENERATION_PROCESS_ACPI_AUDIT_20260501.md",
+      "summary": "results/E159_answer_preserving_difficult_generation/e159_process_acpi_audit_summary_20260501.json"
+    },
+    "process_invalid": 3,
+    "process_valid_strict": 357,
+    "runner_false_negative_format": 17,
+    "runner_final_correct": 340,
+    "scope": "E159 non-thinking generated trace process ACPI audit"
+  },
+  "e159_task_bank_audit": {
+    "candidate_solutions": 80,
+    "checked_expected_gold_rows": 40,
+    "families": {
+      "algebra_sign_symmetry": 4,
+      "code_boundary_zero": 4,
+      "counting_complement": 4,
+      "graph_definition": 4,
+      "multilingual_semantic": 4,
+      "probability_conditioning": 4,
+      "proof_invalid_lemma": 4,
+      "table_zero_swap": 4,
+      "temporal_boundary": 4,
+      "unit_roundtrip": 4
+    },
+    "issues": [],
+    "passed": true,
+    "program_check_rows": 33,
+    "tasks": 40
+  },
+  "e160_generation": [
+    {
+      "by_family": {
+        "algebra_sign_symmetry": {
+          "final_correct": 11,
+          "hit_max": 2,
+          "missing_final_marker": 1,
+          "n": 12
+        },
+        "code_boundary_zero": {
+          "final_correct": 12,
+          "hit_max": 1,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "counting_complement": {
+          "final_correct": 11,
+          "hit_max": 2,
+          "missing_final_marker": 2,
+          "n": 12
+        },
+        "graph_definition": {
+          "final_correct": 12,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "multilingual_semantic": {
+          "final_correct": 11,
+          "hit_max": 3,
+          "missing_final_marker": 2,
+          "n": 12
+        },
+        "probability_conditioning": {
+          "final_correct": 11,
+          "hit_max": 4,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "proof_invalid_lemma": {
+          "final_correct": 12,
+          "hit_max": 1,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "table_zero_swap": {
+          "final_correct": 12,
+          "hit_max": 1,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "temporal_boundary": {
+          "final_correct": 10,
+          "hit_max": 0,
+          "missing_final_marker": 0,
+          "n": 12
+        },
+        "unit_roundtrip": {
+          "final_correct": 6,
+          "hit_max": 2,
+          "missing_final_marker": 0,
+          "n": 12
+        }
+      },
+      "by_variant": {
+        "solve_neutral": {
+          "final_correct": 37,
+          "hit_max": 3,
+          "missing_final_marker": 2,
+          "n": 40
+        },
+        "solve_self_check": {
+          "final_correct": 35,
+          "hit_max": 5,
+          "missing_final_marker": 2,
+          "n": 40
+        },
+        "solve_terse": {
+          "final_correct": 36,
+          "hit_max": 8,
+          "missing_final_marker": 1,
+          "n": 40
+        }
+      },
+      "final_answer_line_count_hist": {
+        "0": 5,
+        "1": 40,
+        "12": 1,
+        "13": 2,
+        "14": 1,
+        "15": 1,
+        "16": 1,
+        "18": 1,
+        "19": 1,
+        "2": 33,
+        "22": 1,
+        "3": 13,
+        "4": 11,
+        "5": 4,
+        "6": 2,
+        "7": 1,
+        "8": 1,
+        "9": 1
+      },
+      "final_correct": 108,
+      "generated": 120,
+      "hit_max": 16,
+      "leakage_audit": {
+        "error_span_in_prompt_rows": 0,
+        "gold_answer_in_prompt_rows": 0,
+        "manual_label_in_prompt_rows": 0,
+        "passed": true,
+        "trap_note_in_prompt_rows": 0
+      },
+      "missing_final_marker": 5,
+      "mode": "thinking",
+      "model_key": "qwen35_27b",
+      "path": "results/E160_thinking_answer_preserving_generation/qwen35_27b_E160_thinking_answer_preserving_generation_thinking_solve_neutral_solve_terse_solve_self_check_k1.json",
+      "repair_marker_rows_auto": 120,
+      "selected_tasks": 40,
+      "wrong_rows": [
+        {
+          "extracted_final": "95",
+          "family": "algebra_sign_symmetry",
+          "final_marker_found": false,
+          "gold_answer": "127",
+          "hit_max_new_tokens": true,
+          "prompt_variant": "solve_neutral",
+          "task_id": "e159_algebra_sign_symmetry_01"
+        },
+        {
+          "extracted_final": "21",
+          "family": "counting_complement",
+          "final_marker_found": false,
+          "gold_answer": "32",
+          "hit_max_new_tokens": true,
+          "prompt_variant": "solve_self_check",
+          "task_id": "e159_counting_complement_01"
+        },
+        {
+          "extracted_final": "-8",
+          "family": "multilingual_semantic",
+          "final_marker_found": false,
+          "gold_answer": "7",
+          "hit_max_new_tokens": true,
+          "prompt_variant": "solve_self_check",
+          "task_id": "e159_multilingual_semantic_01"
+        },
+        {
+          "extracted_final": "2/",
+          "family": "probability_conditioning",
+          "final_marker_found": true,
+          "gold_answer": "2/3",
+          "hit_max_new_tokens": true,
+          "prompt_variant": "solve_terse",
+          "task_id": "e159_probability_conditioning_02"
+        },
+        {
+          "extracted_final": "25 minutes",
+          "family": "temporal_boundary",
+          "final_marker_found": true,
+          "gold_answer": "25",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_terse",
+          "task_id": "e159_temporal_boundary_04"
+        },
+        {
+          "extracted_final": "25 minutes",
+          "family": "temporal_boundary",
+          "final_marker_found": true,
+          "gold_answer": "25",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_self_check",
+          "task_id": "e159_temporal_boundary_04"
+        },
+        {
+          "extracted_final": "100 meters",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "100",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_neutral",
+          "task_id": "e159_unit_roundtrip_01"
+        },
+        {
+          "extracted_final": "100 m",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "100",
+          "hit_max_new_tokens": true,
+          "prompt_variant": "solve_terse",
+          "task_id": "e159_unit_roundtrip_01"
+        },
+        {
+          "extracted_final": "100 meters",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "100",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_self_check",
+          "task_id": "e159_unit_roundtrip_01"
+        },
+        {
+          "extracted_final": "3 kilometers",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "3",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_neutral",
+          "task_id": "e159_unit_roundtrip_03"
+        },
+        {
+          "extracted_final": "3 kilometers.",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "3",
+          "hit_max_new_tokens": true,
+          "prompt_variant": "solve_terse",
+          "task_id": "e159_unit_roundtrip_03"
+        },
+        {
+          "extracted_final": "3 kilometers",
+          "family": "unit_roundtrip",
+          "final_marker_found": true,
+          "gold_answer": "3",
+          "hit_max_new_tokens": false,
+          "prompt_variant": "solve_self_check",
+          "task_id": "e159_unit_roundtrip_03"
+        }
+      ]
+    }
+  ],
+  "e161_error_repair": [],
+  "next_actions": [
+    "等待 E160 Gemma dense 和 E161 完整落盘后，用本脚本重跑综合统计。",
+    "对 E159 process audit 的 357 条 clean-valid 行抽样做第二轮人工复核，再选入 E156 hidden replay。",
+    "用 E159 invalid reference traces 和 clean-valid generated traces 构造 mutation/prefill 对照，而不是继续期待同一设置自然产出大量 ACPI。",
+    "E161 完成后比较 blind_global、blind_localize_only、oracle_span_repair，判断显式错步提示能否提升 non-thinking 修复。",
+    "把审计后的 clean-valid、mutated-invalid、natural-wrong、localized-failure 四类样本送入 E156 teacher-forced hidden replay。"
+  ],
+  "queue_state": {
+    "completed_steps": [
+      "e159_build_bank",
+      "e159_task_bank_audit",
+      "e159_e161_scaffold_smoke",
+      "e159_nonthinking_generation_qwen35_27b",
+      "e159_nonthinking_generation_gemma4_31b_it",
+      "e159_nonthinking_generation_gemma4_26b_a4b_it",
+      "e160_thinking_generation_qwen35_27b"
+    ],
+    "events": [
+      {
+        "status": "start",
+        "step": "e159_build_bank",
+        "ts": "2026-05-01T03:39:02+08:00"
+      },
+      {
+        "status": "done",
+        "step": "e159_build_bank",
+        "ts": "2026-05-01T03:39:02+08:00"
+      },
+      {
+        "status": "start",
+        "step": "e159_task_bank_audit",
+        "ts": "2026-05-01T03:39:02+08:00"
+      },
+      {
+        "status": "done",
+        "step": "e159_task_bank_audit",
+        "ts": "2026-05-01T03:39:02+08:00"
+      },
+      {
+        "status": "start",
+        "step": "e159_e161_scaffold_smoke",
+        "ts": "2026-05-01T03:39:02+08:00"
+      },
+      {
+        "status": "done",
+        "step": "e159_e161_scaffold_smoke",
+        "ts": "2026-05-01T03:39:02+08:00"
+      },
+      {
+        "status": "start",
+        "step": "e159_nonthinking_generation_qwen35_27b",
+        "ts": "2026-05-01T03:39:02+08:00"
+      },
+      {
+        "status": "done",
+        "step": "e159_nonthinking_generation_qwen35_27b",
+        "ts": "2026-05-01T04:14:37+08:00"
+      },
+      {
+        "status": "start",
+        "step": "e159_nonthinking_generation_gemma4_31b_it",
+        "ts": "2026-05-01T04:14:37+08:00"
+      },
+      {
+        "status": "done",
+        "step": "e159_nonthinking_generation_gemma4_31b_it",
+        "ts": "2026-05-01T04:40:10+08:00"
+      },
+      {
+        "status": "start",
+        "step": "e159_nonthinking_generation_gemma4_26b_a4b_it",
+        "ts": "2026-05-01T04:40:10+08:00"
+      },
+      {
+        "status": "done",
+        "step": "e159_nonthinking_generation_gemma4_26b_a4b_it",
+        "ts": "2026-05-01T04:58:40+08:00"
+      },
+      {
+        "status": "start",
+        "step": "e160_thinking_generation_qwen35_27b",
+        "ts": "2026-05-01T04:58:40+08:00"
+      },
+      {
+        "status": "done",
+        "step": "e160_thinking_generation_qwen35_27b",
+        "ts": "2026-05-01T11:09:23+08:00"
+      },
+      {
+        "status": "start",
+        "step": "e160_thinking_generation_gemma4_31b_it",
+        "ts": "2026-05-01T11:09:23+08:00"
+      }
+    ],
+    "last_event": {
+      "status": "start",
+      "step": "e160_thinking_generation_gemma4_31b_it",
+      "ts": "2026-05-01T11:09:23+08:00"
+    },
+    "started_not_done": [
+      "e160_thinking_generation_gemma4_31b_it"
+    ],
+    "status_path": "logs/e159_e161_overnight_status_20260501.jsonl"
+  },
+  "scope_note": "Completed final artifacts only; active checkpoints are excluded from evidence counts."
+}

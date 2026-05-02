@@ -1,0 +1,560 @@
+{
+  "audit": {
+    "all_checks_passed": true,
+    "note_zh": "E90 prompt 未注入 gold、标签或人工 error span；缓存的是 verifier prompt 的关键 prefix 激活。"
+  },
+  "created_at": "2026-04-29T14:06:11",
+  "experiment": "E90_component_activation_cache",
+  "models": [
+    {
+      "best_hidden_layer": 17,
+      "component_cache_shape": [
+        10,
+        35,
+        2816
+      ],
+      "component_keys": [
+        "15:input_norm_output",
+        "15:mlp_output",
+        "15:post_attention_norm_output",
+        "15:post_feedforward_norm_output",
+        "15:pre_mlp_norm_output",
+        "15:residual_hidden_state",
+        "15:token_mixer_output",
+        "16:input_norm_output",
+        "16:mlp_output",
+        "16:post_attention_norm_output",
+        "16:post_feedforward_norm_output",
+        "16:pre_mlp_norm_output",
+        "16:residual_hidden_state",
+        "16:token_mixer_output",
+        "17:input_norm_output",
+        "17:mlp_output",
+        "17:post_attention_norm_output",
+        "17:post_feedforward_norm_output",
+        "17:pre_mlp_norm_output",
+        "17:residual_hidden_state",
+        "17:token_mixer_output",
+        "18:input_norm_output",
+        "18:mlp_output",
+        "18:post_attention_norm_output",
+        "18:post_feedforward_norm_output",
+        "18:pre_mlp_norm_output",
+        "18:residual_hidden_state",
+        "18:token_mixer_output",
+        "19:input_norm_output",
+        "19:mlp_output",
+        "19:post_attention_norm_output",
+        "19:post_feedforward_norm_output",
+        "19:pre_mlp_norm_output",
+        "19:residual_hidden_state",
+        "19:token_mixer_output"
+      ],
+      "file": "results/E90_hardtask_component_activation_cache/gemma4_26b_a4b_it_e90_component_cache_unrepaired_acpi_chat.json",
+      "leakage_audit": {
+        "error_spans_in_prompt_rows": 0,
+        "gold_answer_in_prompt_rows": 0,
+        "labels_in_prompt_rows": 0,
+        "note_zh": "E61 标签只用于离线训练 component validity direction；E57 人工标签/span 只用于离线选择 prefix。prompt 只含 problem 与 visible trace prefix。"
+      },
+      "model_key": "gemma4_26b_a4b_it",
+      "selected_hidden_layers": [
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "stage_table": [
+        {
+          "accept_rate": 1.0,
+          "best_hidden_layer": 17,
+          "input_norm_output": -2.437329053878784,
+          "mean_yes_minus_no": 7.125000076834112,
+          "mlp_output": 0.0387358907610178,
+          "n": 2,
+          "post_attention_norm_output": 0.6118429005146027,
+          "post_feedforward_norm_output": -3.9828726053237915,
+          "pre_mlp_norm_output": -0.04331806115806103,
+          "residual_hidden_state": -0.9019853174686432,
+          "stage": "completion_end",
+          "token_mixer_output": -0.18511200696229935
+        },
+        {
+          "accept_rate": 1.0,
+          "best_hidden_layer": 17,
+          "input_norm_output": -1.573285311460495,
+          "mean_yes_minus_no": 4.624999992549419,
+          "mlp_output": 0.04412367753684521,
+          "n": 2,
+          "post_attention_norm_output": 2.0596001148223877,
+          "post_feedforward_norm_output": -2.835778832435608,
+          "pre_mlp_norm_output": 0.03229640447534621,
+          "residual_hidden_state": -0.9588356614112854,
+          "stage": "error_span_end",
+          "token_mixer_output": 1.0725618302822113
+        },
+        {
+          "accept_rate": 1.0,
+          "best_hidden_layer": 17,
+          "input_norm_output": -2.437329053878784,
+          "mean_yes_minus_no": 7.125000076834112,
+          "mlp_output": 0.0387358907610178,
+          "n": 2,
+          "post_attention_norm_output": 0.6118429005146027,
+          "post_feedforward_norm_output": -3.9828726053237915,
+          "pre_mlp_norm_output": -0.04331806115806103,
+          "residual_hidden_state": -0.9019853174686432,
+          "stage": "first_final_answer_end",
+          "token_mixer_output": -0.18511200696229935
+        },
+        {
+          "accept_rate": 1.0,
+          "best_hidden_layer": 17,
+          "input_norm_output": -2.437329053878784,
+          "mean_yes_minus_no": 7.125000076834112,
+          "mlp_output": 0.0387358907610178,
+          "n": 2,
+          "post_attention_norm_output": 0.6118429005146027,
+          "post_feedforward_norm_output": -3.9828726053237915,
+          "pre_mlp_norm_output": -0.04331806115806103,
+          "residual_hidden_state": -0.9019853174686432,
+          "stage": "last_final_answer_end",
+          "token_mixer_output": -0.18511200696229935
+        },
+        {
+          "accept_rate": 0.0,
+          "best_hidden_layer": 17,
+          "input_norm_output": -2.8152172565460205,
+          "mean_yes_minus_no": -3.0,
+          "mlp_output": 0.04124937579035759,
+          "n": 1,
+          "post_attention_norm_output": -0.060485225170850754,
+          "post_feedforward_norm_output": -5.891446590423584,
+          "pre_mlp_norm_output": -0.08736877888441086,
+          "residual_hidden_state": -2.6225943565368652,
+          "stage": "post_repair_240chars",
+          "token_mixer_output": 0.083279088139534
+        },
+        {
+          "accept_rate": 0.0,
+          "best_hidden_layer": 17,
+          "input_norm_output": -0.8507242798805237,
+          "mean_yes_minus_no": -5.437500007450581,
+          "mlp_output": 0.04345967620611191,
+          "n": 1,
+          "post_attention_norm_output": 1.3587524890899658,
+          "post_feedforward_norm_output": -2.2530722618103027,
+          "pre_mlp_norm_output": 0.048159562051296234,
+          "residual_hidden_state": -0.2632901072502136,
+          "stage": "repair_trigger_end",
+          "token_mixer_output": 0.6422487497329712
+        }
+      ],
+      "target_mode": "unrepaired_acpi",
+      "top_deltas": {
+        "error_span_end_to_completion_end": [
+          {
+            "abs_delta": 2.7921323776245117,
+            "component": "16:input_norm_output",
+            "delta": -2.7921323776245117
+          },
+          {
+            "abs_delta": 2.5722367763519287,
+            "component": "19:post_feedforward_norm_output",
+            "delta": -2.5722367763519287
+          },
+          {
+            "abs_delta": 2.5717112869024277,
+            "component": "18:token_mixer_output",
+            "delta": -2.5717112869024277
+          },
+          {
+            "abs_delta": 2.280599355697632,
+            "component": "15:post_feedforward_norm_output",
+            "delta": -2.280599355697632
+          },
+          {
+            "abs_delta": 2.013226866722107,
+            "component": "18:post_attention_norm_output",
+            "delta": -2.013226866722107
+          },
+          {
+            "abs_delta": 1.6482072472572327,
+            "component": "18:post_feedforward_norm_output",
+            "delta": -1.6482072472572327
+          },
+          {
+            "abs_delta": 1.447757214307785,
+            "component": "17:post_attention_norm_output",
+            "delta": -1.447757214307785
+          },
+          {
+            "abs_delta": 1.4204352349042892,
+            "component": "19:input_norm_output",
+            "delta": -1.4204352349042892
+          }
+        ],
+        "error_span_end_to_post_repair_240chars": [
+          {
+            "abs_delta": 3.98360013961792,
+            "component": "19:residual_hidden_state",
+            "delta": -3.98360013961792
+          },
+          {
+            "abs_delta": 3.938435196876526,
+            "component": "19:post_feedforward_norm_output",
+            "delta": -3.938435196876526
+          },
+          {
+            "abs_delta": 3.5775035321712494,
+            "component": "18:post_feedforward_norm_output",
+            "delta": -3.5775035321712494
+          },
+          {
+            "abs_delta": 3.055667757987976,
+            "component": "17:post_feedforward_norm_output",
+            "delta": -3.055667757987976
+          },
+          {
+            "abs_delta": 2.9444841742515564,
+            "component": "18:residual_hidden_state",
+            "delta": -2.9444841742515564
+          },
+          {
+            "abs_delta": 2.8431344032287598,
+            "component": "16:input_norm_output",
+            "delta": -2.8431344032287598
+          },
+          {
+            "abs_delta": 2.6991968154907227,
+            "component": "15:input_norm_output",
+            "delta": -2.6991968154907227
+          },
+          {
+            "abs_delta": 2.3658591210842133,
+            "component": "18:input_norm_output",
+            "delta": -2.3658591210842133
+          }
+        ],
+        "first_final_answer_end_to_repair_trigger_end": [
+          {
+            "abs_delta": 2.3890933990478516,
+            "component": "19:post_feedforward_norm_output",
+            "delta": 2.3890933990478516
+          },
+          {
+            "abs_delta": 2.2162271589040756,
+            "component": "18:token_mixer_output",
+            "delta": 2.2162271589040756
+          },
+          {
+            "abs_delta": 1.7298003435134888,
+            "component": "17:post_feedforward_norm_output",
+            "delta": 1.7298003435134888
+          },
+          {
+            "abs_delta": 1.6546058654785156,
+            "component": "15:post_feedforward_norm_output",
+            "delta": 1.6546058654785156
+          },
+          {
+            "abs_delta": 1.5866047739982605,
+            "component": "17:input_norm_output",
+            "delta": 1.5866047739982605
+          },
+          {
+            "abs_delta": 1.4647413492202759,
+            "component": "18:post_attention_norm_output",
+            "delta": 1.4647413492202759
+          },
+          {
+            "abs_delta": 1.4060912430286407,
+            "component": "18:input_norm_output",
+            "delta": 1.4060912430286407
+          },
+          {
+            "abs_delta": 1.276612401008606,
+            "component": "16:post_feedforward_norm_output",
+            "delta": 1.276612401008606
+          }
+        ]
+      }
+    },
+    {
+      "best_hidden_layer": 34,
+      "component_cache_shape": [
+        54,
+        35,
+        5376
+      ],
+      "component_keys": [
+        "32:input_norm_output",
+        "32:mlp_output",
+        "32:post_attention_norm_output",
+        "32:post_feedforward_norm_output",
+        "32:pre_mlp_norm_output",
+        "32:residual_hidden_state",
+        "32:token_mixer_output",
+        "33:input_norm_output",
+        "33:mlp_output",
+        "33:post_attention_norm_output",
+        "33:post_feedforward_norm_output",
+        "33:pre_mlp_norm_output",
+        "33:residual_hidden_state",
+        "33:token_mixer_output",
+        "34:input_norm_output",
+        "34:mlp_output",
+        "34:post_attention_norm_output",
+        "34:post_feedforward_norm_output",
+        "34:pre_mlp_norm_output",
+        "34:residual_hidden_state",
+        "34:token_mixer_output",
+        "35:input_norm_output",
+        "35:mlp_output",
+        "35:post_attention_norm_output",
+        "35:post_feedforward_norm_output",
+        "35:pre_mlp_norm_output",
+        "35:residual_hidden_state",
+        "35:token_mixer_output",
+        "36:input_norm_output",
+        "36:mlp_output",
+        "36:post_attention_norm_output",
+        "36:post_feedforward_norm_output",
+        "36:pre_mlp_norm_output",
+        "36:residual_hidden_state",
+        "36:token_mixer_output"
+      ],
+      "file": "results/E90_hardtask_component_activation_cache/gemma4_31b_it_e90_component_cache_repaired_acpi_chat.json",
+      "leakage_audit": {
+        "error_spans_in_prompt_rows": 0,
+        "gold_answer_in_prompt_rows": 0,
+        "labels_in_prompt_rows": 0,
+        "note_zh": "E61 标签只用于离线训练 component validity direction；E57 人工标签/span 只用于离线选择 prefix。prompt 只含 problem 与 visible trace prefix。"
+      },
+      "model_key": "gemma4_31b_it",
+      "selected_hidden_layers": [
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "stage_table": [
+        {
+          "accept_rate": 0.1111111111111111,
+          "best_hidden_layer": 34,
+          "input_norm_output": -6.510683483547634,
+          "mean_yes_minus_no": -9.06249999659672,
+          "mlp_output": -2.993618779712253,
+          "n": 9,
+          "post_attention_norm_output": -1.1501331859164767,
+          "post_feedforward_norm_output": -4.299249384138319,
+          "pre_mlp_norm_output": -2.36525387234158,
+          "residual_hidden_state": -1.430996576944987,
+          "stage": "completion_end",
+          "token_mixer_output": -1.262812442249722
+        },
+        {
+          "accept_rate": 0.8888888888888888,
+          "best_hidden_layer": 34,
+          "input_norm_output": -4.250768687989977,
+          "mean_yes_minus_no": 8.12847226061313,
+          "mlp_output": -0.12649175193574694,
+          "n": 9,
+          "post_attention_norm_output": 0.47970553239186603,
+          "post_feedforward_norm_output": 0.29722868071662056,
+          "pre_mlp_norm_output": -0.8677178621292114,
+          "residual_hidden_state": 0.3733644551701016,
+          "stage": "error_span_end",
+          "token_mixer_output": 0.5541733569569058
+        },
+        {
+          "accept_rate": 1.0,
+          "best_hidden_layer": 34,
+          "input_norm_output": -4.2158215045928955,
+          "mean_yes_minus_no": 10.972222226439044,
+          "mlp_output": -0.07315444284015232,
+          "n": 9,
+          "post_attention_norm_output": 0.6727995077768961,
+          "post_feedforward_norm_output": 0.4824954933590359,
+          "pre_mlp_norm_output": -0.7939113643434312,
+          "residual_hidden_state": 0.8129293852382236,
+          "stage": "first_final_answer_end",
+          "token_mixer_output": 0.7814304365052117
+        },
+        {
+          "accept_rate": 0.1111111111111111,
+          "best_hidden_layer": 34,
+          "input_norm_output": -6.510683483547634,
+          "mean_yes_minus_no": -9.06249999659672,
+          "mlp_output": -2.993618779712253,
+          "n": 9,
+          "post_attention_norm_output": -1.1501331859164767,
+          "post_feedforward_norm_output": -4.299249384138319,
+          "pre_mlp_norm_output": -2.36525387234158,
+          "residual_hidden_state": -1.430996576944987,
+          "stage": "last_final_answer_end",
+          "token_mixer_output": -1.262812442249722
+        },
+        {
+          "accept_rate": 0.0,
+          "best_hidden_layer": 34,
+          "input_norm_output": -6.62660280863444,
+          "mean_yes_minus_no": -13.010416450809746,
+          "mlp_output": -2.819262875450982,
+          "n": 9,
+          "post_attention_norm_output": -1.740745226542155,
+          "post_feedforward_norm_output": -4.422547181447347,
+          "pre_mlp_norm_output": -2.329217553138733,
+          "residual_hidden_state": -3.1996429761250815,
+          "stage": "post_repair_240chars",
+          "token_mixer_output": -1.811624440881941
+        },
+        {
+          "accept_rate": 0.1111111111111111,
+          "best_hidden_layer": 34,
+          "input_norm_output": -5.354739295111762,
+          "mean_yes_minus_no": -11.180555468482453,
+          "mlp_output": -2.4375933673646717,
+          "n": 9,
+          "post_attention_norm_output": -1.493769473499722,
+          "post_feedforward_norm_output": -3.7611677911546497,
+          "pre_mlp_norm_output": -1.984969761636522,
+          "residual_hidden_state": -2.8773176670074463,
+          "stage": "repair_trigger_end",
+          "token_mixer_output": -1.5649457971254985
+        }
+      ],
+      "target_mode": "repaired_acpi",
+      "top_deltas": {
+        "error_span_end_to_completion_end": [
+          {
+            "abs_delta": 4.5964780648549395,
+            "component": "34:post_feedforward_norm_output",
+            "delta": -4.5964780648549395
+          },
+          {
+            "abs_delta": 4.3733486202028065,
+            "component": "32:residual_hidden_state",
+            "delta": 4.3733486202028065
+          },
+          {
+            "abs_delta": 4.046946315301789,
+            "component": "35:input_norm_output",
+            "delta": -4.046946315301789
+          },
+          {
+            "abs_delta": 3.8951840168899956,
+            "component": "36:post_feedforward_norm_output",
+            "delta": -3.8951840168899956
+          },
+          {
+            "abs_delta": 3.892132432924377,
+            "component": "36:residual_hidden_state",
+            "delta": -3.892132432924377
+          },
+          {
+            "abs_delta": 3.4772802119453745,
+            "component": "35:token_mixer_output",
+            "delta": -3.4772802119453745
+          },
+          {
+            "abs_delta": 3.349516308969922,
+            "component": "36:input_norm_output",
+            "delta": -3.349516308969922
+          },
+          {
+            "abs_delta": 3.0417272978358803,
+            "component": "35:pre_mlp_norm_output",
+            "delta": -3.0417272978358803
+          }
+        ],
+        "error_span_end_to_post_repair_240chars": [
+          {
+            "abs_delta": 4.912524082594448,
+            "component": "36:residual_hidden_state",
+            "delta": -4.912524082594448
+          },
+          {
+            "abs_delta": 4.719775862163967,
+            "component": "34:post_feedforward_norm_output",
+            "delta": -4.719775862163967
+          },
+          {
+            "abs_delta": 4.22301427854432,
+            "component": "36:post_feedforward_norm_output",
+            "delta": -4.22301427854432
+          },
+          {
+            "abs_delta": 3.932995585931672,
+            "component": "35:input_norm_output",
+            "delta": -3.932995585931672
+          },
+          {
+            "abs_delta": 3.636845903264152,
+            "component": "35:residual_hidden_state",
+            "delta": -3.636845903264152
+          },
+          {
+            "abs_delta": 3.573007431295183,
+            "component": "34:residual_hidden_state",
+            "delta": -3.573007431295183
+          },
+          {
+            "abs_delta": 2.8159119519922466,
+            "component": "36:input_norm_output",
+            "delta": -2.8159119519922466
+          },
+          {
+            "abs_delta": 2.692771123515235,
+            "component": "34:mlp_output",
+            "delta": -2.692771123515235
+          }
+        ],
+        "first_final_answer_end_to_repair_trigger_end": [
+          {
+            "abs_delta": 5.682487307323349,
+            "component": "36:residual_hidden_state",
+            "delta": -5.682487307323349
+          },
+          {
+            "abs_delta": 4.597774853308995,
+            "component": "36:post_feedforward_norm_output",
+            "delta": -4.597774853308995
+          },
+          {
+            "abs_delta": 4.243663284513685,
+            "component": "34:post_feedforward_norm_output",
+            "delta": -4.243663284513685
+          },
+          {
+            "abs_delta": 3.975400974353155,
+            "component": "35:residual_hidden_state",
+            "delta": -3.975400974353155
+          },
+          {
+            "abs_delta": 3.69024705224567,
+            "component": "34:residual_hidden_state",
+            "delta": -3.69024705224567
+          },
+          {
+            "abs_delta": 3.425686758425501,
+            "component": "35:input_norm_output",
+            "delta": -3.425686758425501
+          },
+          {
+            "abs_delta": 2.8574486805333033,
+            "component": "36:input_norm_output",
+            "delta": -2.8574486805333033
+          },
+          {
+            "abs_delta": 2.8436351782745786,
+            "component": "35:post_feedforward_norm_output",
+            "delta": -2.8436351782745786
+          }
+        ]
+      }
+    }
+  ]
+}

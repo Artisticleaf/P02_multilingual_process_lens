@@ -1,0 +1,168 @@
+{
+  "E106_E114": [
+    {
+      "acpi_base_accept": 0.4583333333333333,
+      "acpi_base_accept_ci": [
+        0.3257502185455351,
+        0.5970916690505266
+      ],
+      "acpi_gated_accept": 0.0,
+      "acpi_gated_accept_ci": [
+        0.0,
+        0.0741026511527422
+      ],
+      "confidence_auc": 0.83203125,
+      "direction_cosine": 0.9349098776777586,
+      "hidden_auc": 0.9696180555555556,
+      "leakage_audit": {
+        "gold_label_in_prompt_rows": 0,
+        "known_error_span_annotation_in_prompt_rows": 0,
+        "known_error_span_in_prompt_rows": 0,
+        "manual_correction_in_prompt_rows": 0,
+        "note_zh": "E61/E53/E57/E88/E104 的人工标签、错误 span 和修复标签只用于离线分组、prefix 截断与评分；strict verifier prompt 只包含 problem 与 visible trace。",
+        "passed": true
+      },
+      "mode": "MI-DV",
+      "model_key": "gemma4_26b_a4b_it",
+      "partial_corr": 0.736845832237465,
+      "plain_yes_no_accuracy": 0.6979166666666666,
+      "valid_base_accept": 0.8541666666666666,
+      "valid_gated_accept": 0.7916666666666666
+    },
+    {
+      "acpi_base_accept": 0.4583333333333333,
+      "acpi_base_accept_ci": [
+        0.3257502185455351,
+        0.5970916690505266
+      ],
+      "acpi_gated_accept": 0.0,
+      "acpi_gated_accept_ci": [
+        0.0,
+        0.0741026511527422
+      ],
+      "confidence_auc": 0.9913194444444444,
+      "direction_cosine": 0.9888919331133366,
+      "hidden_auc": 1.0,
+      "leakage_audit": {
+        "gold_label_in_prompt_rows": 0,
+        "known_error_span_annotation_in_prompt_rows": 0,
+        "known_error_span_in_prompt_rows": 0,
+        "manual_correction_in_prompt_rows": 0,
+        "note_zh": "E61/E53/E57/E88/E104 的人工标签、错误 span 和修复标签只用于离线分组、prefix 截断与评分；strict verifier prompt 只包含 problem 与 visible trace。",
+        "passed": true
+      },
+      "mode": "MI-DV",
+      "model_key": "gemma4_31b_it",
+      "partial_corr": 0.8118621471710343,
+      "plain_yes_no_accuracy": 0.7708333333333334,
+      "valid_base_accept": 1.0,
+      "valid_gated_accept": 1.0
+    },
+    {
+      "acpi_base_accept": 0.4583333333333333,
+      "acpi_base_accept_ci": [
+        0.3257502185455351,
+        0.5970916690505266
+      ],
+      "acpi_gated_accept": 0.041666666666666664,
+      "acpi_gated_accept_ci": [
+        0.011501652078965613,
+        0.13975911147771472
+      ],
+      "confidence_auc": 0.9778645833333334,
+      "direction_cosine": 0.993970570464929,
+      "hidden_auc": 0.9969618055555556,
+      "leakage_audit": {
+        "gold_label_in_prompt_rows": 0,
+        "known_error_span_annotation_in_prompt_rows": 0,
+        "known_error_span_in_prompt_rows": 0,
+        "manual_correction_in_prompt_rows": 0,
+        "note_zh": "E61/E53/E57/E88/E104 的人工标签、错误 span 和修复标签只用于离线分组、prefix 截断与评分；strict verifier prompt 只包含 problem 与 visible trace。",
+        "passed": true
+      },
+      "mode": "MI-DV",
+      "model_key": "glm47_flash_candidate",
+      "partial_corr": 0.6502869035837874,
+      "plain_yes_no_accuracy": 0.7708333333333334,
+      "valid_base_accept": 1.0,
+      "valid_gated_accept": 0.9583333333333334
+    },
+    {
+      "acpi_base_accept": 0.375,
+      "acpi_base_accept_ci": [
+        0.2521507240406812,
+        0.5163749387475043
+      ],
+      "acpi_gated_accept": 0.0,
+      "acpi_gated_accept_ci": [
+        0.0,
+        0.0741026511527422
+      ],
+      "confidence_auc": 0.8882378472222222,
+      "direction_cosine": 0.9765381390849749,
+      "hidden_auc": 1.0,
+      "leakage_audit": {
+        "gold_label_in_prompt_rows": 0,
+        "known_error_span_annotation_in_prompt_rows": 0,
+        "known_error_span_in_prompt_rows": 0,
+        "manual_correction_in_prompt_rows": 0,
+        "note_zh": "E61/E53/E57/E88/E104 的人工标签、错误 span 和修复标签只用于离线分组、prefix 截断与评分；strict verifier prompt 只包含 problem 与 visible trace。",
+        "passed": true
+      },
+      "mode": "MI-DV",
+      "model_key": "qwen35_27b",
+      "partial_corr": 0.8820947976025357,
+      "plain_yes_no_accuracy": 0.7916666666666666,
+      "valid_base_accept": 0.9583333333333334,
+      "valid_gated_accept": 0.9583333333333334
+    }
+  ],
+  "E116_E118": {
+    "available": true,
+    "component_cache_shape": [
+      61,
+      15,
+      5120
+    ],
+    "eos_threshold": -6.903161441578584,
+    "leakage_audit": {
+      "generation_performed": false,
+      "gold_answer_in_prompt_rows": 0,
+      "known_trap_note_in_prompt_rows": 0,
+      "manual_labels_in_prompt_rows": 0,
+      "manual_spans_in_prompt_rows": 0,
+      "note_zh": "E116-E118 只复放已保存的原始 prompt+completion；gold/final labels 只用于离线分组、阈值诊断和 policy simulation。",
+      "passed": true
+    },
+    "mode": "MI-TG",
+    "model_key": "qwen35_27b",
+    "selected_stop_key": "34:residual_hidden_state",
+    "selected_stop_threshold": 10.453490327386294,
+    "stop_direction_summary": {
+      "negative_mean": -8.43792901319616,
+      "negative_n": 17,
+      "positive_mean": 29.34490966796875,
+      "positive_n": 6,
+      "threshold": 10.453490327386294
+    },
+    "summary_E117_stop_policy": {
+      "either_stop_rate": 0.6,
+      "eos_stop_rate": 0.4,
+      "final_correct_candidates": 9,
+      "final_correct_retained_if_either_stop": 6,
+      "hidden_stop_rate": 0.4,
+      "hitmax_candidates": 8,
+      "mean_token_savings_if_either_stop": 1318.3333333333333,
+      "n": 10
+    }
+  },
+  "E83": {
+    "available": false
+  },
+  "created_at": "2026-04-30T01:35:07",
+  "experiment": "E120_unified_audit_package",
+  "notes": [
+    "E120 is an appendix/audit synthesis, not a new model run.",
+    "All mode labels must remain separated in paper-facing claims."
+  ]
+}

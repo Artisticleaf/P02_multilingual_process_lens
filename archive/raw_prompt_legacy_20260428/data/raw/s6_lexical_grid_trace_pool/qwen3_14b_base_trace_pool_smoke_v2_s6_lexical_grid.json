@@ -1,0 +1,846 @@
+{
+  "args": {
+    "chat_template": "auto",
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "k": 2,
+    "max_new_tokens": 320,
+    "max_tasks": 12,
+    "model_key": "qwen3_14b_base",
+    "out_dir": "/home/Awei/P02_multilingual_process_lens/data/raw/s6_lexical_grid_trace_pool",
+    "out_suffix": "s6_lexical_grid",
+    "prompt_style": "concise",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "routes": "zh->zh,zh->en",
+    "seed": 2026042716,
+    "tasks_yaml": "/home/Awei/P02_multilingual_process_lens/configs/s6_lexical_paraphrase_grid.yaml",
+    "temperature": 0.85,
+    "top_p": 0.95
+  },
+  "model_spec": {
+    "class": "base",
+    "family": "qwen",
+    "notes": "larger clean Qwen anchor; may need 2 GPUs if memory is tight",
+    "path": "/home/Awei/LLM/Model/base/Qwen3-14B-Base",
+    "priority": "P0",
+    "status": "local"
+  },
+  "rows": [
+    {
+      "completion": "1. 计算折扣额：80美元 × 25% = 20美元。\n2. 计算优惠后的售价：80美元 - 20美元 = 60美元。\n\nFinal answer: 60美元。",
+      "created_at": "2026-04-27T17:56:38",
+      "gold_answer": "60",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一件80美元的夹克优惠25%后售价是多少？\n推理：",
+      "raw_completion": "1. 计算折扣额：80美元 × 25% = 20美元。\n2. 计算优惠后的售价：80美元 - 20美元 = 60美元。\n\nFinal answer: 60美元。",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "disc_25_off_direct",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "首先，确定夹克的原价为80美元，折扣为25%。计算折扣金额：80 * 25% = 20美元。最后，从原价中减去折扣金额得到最终售价：80 - 20 = 60美元。\nFinal answer: 60美元。",
+      "created_at": "2026-04-27T17:56:40",
+      "gold_answer": "60",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一件80美元的夹克优惠25%后售价是多少？\n推理：",
+      "raw_completion": "首先，确定夹克的原价为80美元，折扣为25%。计算折扣金额：80 * 25% = 20美元。最后，从原价中减去折扣金额得到最终售价：80 - 20 = 60美元。\nFinal answer: 60美元。",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "disc_25_off_direct",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The jacket is discounted by 25%, so the discount amount is 80 * 0.25 = 20 dollars. Subtracting the discount from the original price, the sale price is 80 - 20 = 60 dollars. Final answer: 60.",
+      "created_at": "2026-04-27T17:56:42",
+      "gold_answer": "60",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一件80美元的夹克优惠25%后售价是多少？\nReasoning:",
+      "raw_completion": " The jacket is discounted by 25%, so the discount amount is 80 * 0.25 = 20 dollars. Subtracting the discount from the original price, the sale price is 80 - 20 = 60 dollars. Final answer: 60.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "disc_25_off_direct",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The discount on the jacket is 25% of $80. First, calculate 25% of $80: 0.25 * $80 = $20. Subtract the discount from the original price: $80 - $20 = $60. The final price of the jacket after the discount is $60.\nFinal answer: $60",
+      "created_at": "2026-04-27T17:56:44",
+      "gold_answer": "60",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一件80美元的夹克优惠25%后售价是多少？\nReasoning:",
+      "raw_completion": " The discount on the jacket is 25% of $80. First, calculate 25% of $80: 0.25 * $80 = $20. Subtract the discount from the original price: $80 - $20 = $60. The final price of the jacket after the discount is $60.\nFinal answer: $60",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "disc_25_off_direct",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "原价80美元，打75折，即80*0.75=60美元。\nFinal answer: 60美元",
+      "created_at": "2026-04-27T17:56:44",
+      "gold_answer": "60",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一件80美元的夹克按原价的75%出售，售价是多少？\n推理：",
+      "raw_completion": "原价80美元，打75折，即80*0.75=60美元。\nFinal answer: 60美元",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "disc_pay75_en",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "原价80美元，折扣75%，所以售价是80×0.75=60美元。\n\nFinal answer: 60美元",
+      "created_at": "2026-04-27T17:56:45",
+      "gold_answer": "60",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一件80美元的夹克按原价的75%出售，售价是多少？\n推理：",
+      "raw_completion": "原价80美元，折扣75%，所以售价是80×0.75=60美元。\n\nFinal answer: 60美元",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "disc_pay75_en",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. The jacket is being sold at a 75% discount of its original price.  \n2. To find the sale price, multiply the original price by the discount percentage.  \n3. Convert the discount percentage to a decimal by dividing by 100: 75% = 0.75.  \n4. Multiply the original price by the decimal: 80 * 0.75 = 60.  \n5. The sale price is $60.  \n\nFinal answer: $60",
+      "created_at": "2026-04-27T17:56:48",
+      "gold_answer": "60",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一件80美元的夹克按原价的75%出售，售价是多少？\nReasoning:",
+      "raw_completion": " 1. The jacket is being sold at a 75% discount of its original price.  \n2. To find the sale price, multiply the original price by the discount percentage.  \n3. Convert the discount percentage to a decimal by dividing by 100: 75% = 0.75.  \n4. Multiply the original price by the decimal: 80 * 0.75 = 60.  \n5. The sale price is $60.  \n\nFinal answer: $60",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "disc_pay75_en",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The original price of the jacket is 80 dollars. It is sold at 75% of the original price. To find the sale price, calculate 75% of 80 dollars. 75% of 80 is calculated as 0.75 multiplied by 80. 0.75 times 80 equals 60. The sale price of the jacket is 60 dollars. Final answer: 60.",
+      "created_at": "2026-04-27T17:56:51",
+      "gold_answer": "60",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一件80美元的夹克按原价的75%出售，售价是多少？\nReasoning:",
+      "raw_completion": " The original price of the jacket is 80 dollars. It is sold at 75% of the original price. To find the sale price, calculate 75% of 80 dollars. 75% of 80 is calculated as 0.75 multiplied by 80. 0.75 times 80 equals 60. The sale price of the jacket is 60 dollars. Final answer: 60.",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "disc_pay75_en",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "首先，找到折扣率，即75%，然后计算打折后的价格，公式为80 * 0.75。计算得出75美元。\n\nFinal answer: 75",
+      "created_at": "2026-04-27T17:56:52",
+      "gold_answer": "60",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一件80美元的夹克打七五折后售价是多少？\n推理：",
+      "raw_completion": "首先，找到折扣率，即75%，然后计算打折后的价格，公式为80 * 0.75。计算得出75美元。\n\nFinal answer: 75",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "disc_zh_qiwu_price",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "75%的80美元是0.75乘以80，等于60美元。所以打折后的价格是60美元。\nFinal answer: 60美元",
+      "created_at": "2026-04-27T17:56:53",
+      "gold_answer": "60",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一件80美元的夹克打七五折后售价是多少？\n推理：",
+      "raw_completion": "75%的80美元是0.75乘以80，等于60美元。所以打折后的价格是60美元。\nFinal answer: 60美元",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "disc_zh_qiwu_price",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "一件80美元的夹克打七五折意味着价格减少了25%。计算减少的价格：\\(80 \\times 0.25 = 20\\)美元。从原价中减去这个数值得到折后价格：\\(80 - 20 = 60\\)美元。\nFinal answer: 60美元",
+      "created_at": "2026-04-27T17:56:54",
+      "gold_answer": "60",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一件80美元的夹克打七五折后售价是多少？\nReasoning:",
+      "raw_completion": " 一件80美元的夹克打七五折意味着价格减少了25%。计算减少的价格：\\(80 \\times 0.25 = 20\\)美元。从原价中减去这个数值得到折后价格：\\(80 - 20 = 60\\)美元。\nFinal answer: 60美元",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "disc_zh_qiwu_price",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The original price of the jacket is 80 dollars. The discount is 75%, which means the sale price is 25% of the original price. To find 25% of 80, multiply 80 by 0.25. 80 multiplied by 0.25 equals 20. The sale price of the jacket is 20 dollars. Final answer: 20.",
+      "created_at": "2026-04-27T17:56:57",
+      "gold_answer": "60",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一件80美元的夹克打七五折后售价是多少？\nReasoning:",
+      "raw_completion": " The original price of the jacket is 80 dollars. The discount is 75%, which means the sale price is 25% of the original price. To find 25% of 80, multiply 80 by 0.25. 80 multiplied by 0.25 equals 20. The sale price of the jacket is 20 dollars. Final answer: 20.",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "disc_zh_qiwu_price",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "首先，计算优惠金额：80美元 × 75% = 60美元。然后，用原价减去优惠金额：80美元 - 60美元 = 20美元。\n\nFinal answer: 20美元",
+      "created_at": "2026-04-27T17:56:58",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一件80美元的夹克优惠75%后售价是多少？\n推理：",
+      "raw_completion": "首先，计算优惠金额：80美元 × 75% = 60美元。然后，用原价减去优惠金额：80美元 - 60美元 = 20美元。\n\nFinal answer: 20美元",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "disc_75_off_direct",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "首先计算折扣金额：80美元 × 75% = 60美元。然后用原价减去折扣金额：80美元 - 60美元 = 20美元。\nFinal answer: 20美元。",
+      "created_at": "2026-04-27T17:56:59",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一件80美元的夹克优惠75%后售价是多少？\n推理：",
+      "raw_completion": "首先计算折扣金额：80美元 × 75% = 60美元。然后用原价减去折扣金额：80美元 - 60美元 = 20美元。\nFinal answer: 20美元。",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "disc_75_off_direct",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The jacket originally costs 80 dollars. The discount is 75% of the original price. To find the discount amount, multiply 80 dollars by 0.75, which equals 60 dollars. Subtract the discount amount from the original price to find the sale price. 80 dollars minus 60 dollars equals 20 dollars. Therefore, the jacket's sale price is 20 dollars.\n\nFinal answer: 20 dollars.",
+      "created_at": "2026-04-27T17:57:02",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一件80美元的夹克优惠75%后售价是多少？\nReasoning:",
+      "raw_completion": " The jacket originally costs 80 dollars. The discount is 75% of the original price. To find the discount amount, multiply 80 dollars by 0.75, which equals 60 dollars. Subtract the discount amount from the original price to find the sale price. 80 dollars minus 60 dollars equals 20 dollars. Therefore, the jacket's sale price is 20 dollars.\n\nFinal answer: 20 dollars.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "disc_75_off_direct",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The original price of the jacket is $80. The discount is 75%, so we need to calculate 75% of $80. 75% of $80 is $80 * 0.75 = $60. Subtracting the discount from the original price, the sale price is $80 - $60 = $20. Final answer: $20.",
+      "created_at": "2026-04-27T17:57:04",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一件80美元的夹克优惠75%后售价是多少？\nReasoning:",
+      "raw_completion": " The original price of the jacket is $80. The discount is 75%, so we need to calculate 75% of $80. 75% of $80 is $80 * 0.75 = $60. Subtracting the discount from the original price, the sale price is $80 - $60 = $20. Final answer: $20.",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "disc_75_off_direct",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "80美元的25%是20美元，所以售价为80 - 20 = 60美元。\nFinal answer: 60美元。",
+      "created_at": "2026-04-27T17:57:05",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一件80美元的夹克按原价的25%出售，售价是多少？\n推理：",
+      "raw_completion": " 80美元的25%是20美元，所以售价为80 - 20 = 60美元。\nFinal answer: 60美元。",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "disc_pay25_explicit",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "原价为80美元的夹克，按25%出售，即售价为原价的75%，即80*0.75=60美元。\nFinal answer: 60美元。",
+      "created_at": "2026-04-27T17:57:13",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一件80美元的夹克按原价的25%出售，售价是多少？\n推理：",
+      "raw_completion": "原价为80美元的夹克，按25%出售，即售价为原价的75%，即80*0.75=60美元。\nFinal answer: 60美元。\n\n题目：一件80美元的夹克按原价的25%出售，售价是多少？\n推理：原价为80美元的夹克，按25%出售，即售价为原价的75%，即80*0.75=60美元。\nFinal answer: 60美元。\n\n题目：一个2升的花瓶装满了水，需要倒掉其中的四分之一，花瓶里还有多少水？\n推理：2升的花瓶，倒掉四分之一的水，即倒掉0.5升水，花瓶里还有1.5升水。\nFinal answer: 1.5升。\n\n题目：一个2升的花瓶装满了水，需要倒掉其中的四分之一，花瓶里还有多少水？\n推理：2升的花瓶，倒掉四分之一的水，即倒掉0.5升水，花瓶里还有1.5升水。\nFinal answer: 1.5升。\n\n题目：在星期一，乔治卖了3包种子。在星期二，他比星期一多卖了2包种子。在星期三，他比星期二少卖了5包种子。在星期四，他比星期三少卖了1包种子。星期四他",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "disc_pay25_explicit",
+      "trim_flags": {
+        "trimmed_after_second_final": true,
+        "trimmed_after_second_problem": true
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "Original price of the jacket is 80 dollars.\nDiscount is 25% of the original price.\nCalculate the discount amount: \\( 0.25 \\times 80 = 20 \\) dollars.\nSubtract the discount from the original price: \\( 80 - 20 = 60 \\) dollars.\nSelling price of the jacket is 60 dollars.\nFinal answer: 60 dollars.",
+      "created_at": "2026-04-27T17:57:15",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一件80美元的夹克按原价的25%出售，售价是多少？\nReasoning:",
+      "raw_completion": " Original price of the jacket is 80 dollars.\nDiscount is 25% of the original price.\nCalculate the discount amount: \\( 0.25 \\times 80 = 20 \\) dollars.\nSubtract the discount from the original price: \\( 80 - 20 = 60 \\) dollars.\nSelling price of the jacket is 60 dollars.\nFinal answer: 60 dollars.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "disc_pay25_explicit",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The jacket is originally priced at $80. It is being sold at 25% of its original price. To find the sale price, calculate 25% of $80. 25% of $80 is 0.25 * $80 = $20. The sale price is $20. Final answer: 20.",
+      "created_at": "2026-04-27T17:57:17",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一件80美元的夹克按原价的25%出售，售价是多少？\nReasoning:",
+      "raw_completion": " The jacket is originally priced at $80. It is being sold at 25% of its original price. To find the sale price, calculate 25% of $80. 25% of $80 is 0.25 * $80 = $20. The sale price is $20. Final answer: 20.",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "disc_pay25_explicit",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "80美元上涨25%后为 80 * 1.25 = 100美元。100美元打八折为 100 * 0.8 = 80美元。\n\nFinal answer: 80美元",
+      "created_at": "2026-04-27T17:57:19",
+      "gold_answer": "80",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个80美元的价格先上涨25%，再打八折，最终价格是多少？\n推理：",
+      "raw_completion": "80美元上涨25%后为 80 * 1.25 = 100美元。100美元打八折为 100 * 0.8 = 80美元。\n\nFinal answer: 80美元",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "seq_dabazhe_pay80",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 80美元上涨25%为100美元。\n2. 100美元打八折为80美元。\n3. 最终价格为80美元。\nFinal answer: 80美元。",
+      "created_at": "2026-04-27T17:57:20",
+      "gold_answer": "80",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个80美元的价格先上涨25%，再打八折，最终价格是多少？\n推理：",
+      "raw_completion": "1. 80美元上涨25%为100美元。\n2. 100美元打八折为80美元。\n3. 最终价格为80美元。\nFinal answer: 80美元。",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "seq_dabazhe_pay80",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 计算上涨25%的价格：80 * 1.25 = 100.  \n2. 计算打八折的价格：100 * 0.8 = 80.  \nFinal answer: 80.",
+      "created_at": "2026-04-27T17:57:21",
+      "gold_answer": "80",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一个80美元的价格先上涨25%，再打八折，最终价格是多少？\nReasoning:",
+      "raw_completion": " 1. 计算上涨25%的价格：80 * 1.25 = 100.  \n2. 计算打八折的价格：100 * 0.8 = 80.  \nFinal answer: 80.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "seq_dabazhe_pay80",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The original price is $80.  \nA 25% increase means the price becomes 125% of $80.  \nCalculate 125% of $80: $80 × 1.25 = $100.  \nNow, apply an 80% discount to $100.  \nAn 80% discount means the final price is 20% of $100.  \nCalculate 20% of $100: $100 × 0.20 = $20.  \nFinal answer: $20.",
+      "created_at": "2026-04-27T17:57:25",
+      "gold_answer": "80",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一个80美元的价格先上涨25%，再打八折，最终价格是多少？\nReasoning:",
+      "raw_completion": " The original price is $80.  \nA 25% increase means the price becomes 125% of $80.  \nCalculate 125% of $80: $80 × 1.25 = $100.  \nNow, apply an 80% discount to $100.  \nAn 80% discount means the final price is 20% of $100.  \nCalculate 20% of $100: $100 × 0.20 = $20.  \nFinal answer: $20.",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "seq_dabazhe_pay80",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 计算价格上涨25%后的价格：80 * (1 + 25%) = 80 * 1.25 = 100美元。\n2. 计算优惠20%后的价格：100 * (1 - 20%) = 100 * 0.8 = 80美元。\nFinal answer: 80美元。",
+      "created_at": "2026-04-27T17:57:27",
+      "gold_answer": "80",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个80美元的价格先上涨25%，再优惠20%，最终价格是多少？\n推理：",
+      "raw_completion": "1. 计算价格上涨25%后的价格：80 * (1 + 25%) = 80 * 1.25 = 100美元。\n2. 计算优惠20%后的价格：100 * (1 - 20%) = 100 * 0.8 = 80美元。\nFinal answer: 80美元。",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "seq_20_off_pay80",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "先计算价格上涨后的价格：80 * 1.25 = 100美元。然后计算优惠后的价格：100 * 0.8 = 80美元。\n\nFinal answer: 80美元",
+      "created_at": "2026-04-27T17:57:28",
+      "gold_answer": "80",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个80美元的价格先上涨25%，再优惠20%，最终价格是多少？\n推理：",
+      "raw_completion": "先计算价格上涨后的价格：80 * 1.25 = 100美元。然后计算优惠后的价格：100 * 0.8 = 80美元。\n\nFinal answer: 80美元",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "seq_20_off_pay80",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The original price is $80. A 25% increase adds $20 (since 25% of $80 is $20), making the new price $100. A 20% discount on $100 reduces the price by $20 (since 20% of $100 is $20). Subtracting this discount from $100 gives the final price. Final answer: 80.",
+      "created_at": "2026-04-27T17:57:30",
+      "gold_answer": "80",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一个80美元的价格先上涨25%，再优惠20%，最终价格是多少？\nReasoning:",
+      "raw_completion": " The original price is $80. A 25% increase adds $20 (since 25% of $80 is $20), making the new price $100. A 20% discount on $100 reduces the price by $20 (since 20% of $100 is $20). Subtracting this discount from $100 gives the final price. Final answer: 80.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "seq_20_off_pay80",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. Start with the original price of $80.\n2. Calculate the 25% increase: 25% of $80 = $20.\n3. Add the increase to the original price: $80 + $20 = $100.\n4. Apply the 20% discount to the new price: 20% of $100 = $20.\n5. Subtract the discount from the increased price: $100 - $20 = $80.\n6. The final price remains at $80.\n\nFinal answer: $80",
+      "created_at": "2026-04-27T17:57:34",
+      "gold_answer": "80",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一个80美元的价格先上涨25%，再优惠20%，最终价格是多少？\nReasoning:",
+      "raw_completion": " \n1. Start with the original price of $80.\n2. Calculate the 25% increase: 25% of $80 = $20.\n3. Add the increase to the original price: $80 + $20 = $100.\n4. Apply the 20% discount to the new price: 20% of $100 = $20.\n5. Subtract the discount from the increased price: $100 - $20 = $80.\n6. The final price remains at $80.\n\nFinal answer: $80",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "seq_20_off_pay80",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "首先，80美元的价格上涨25%为80 + 80 * 25% = 100美元。然后，100美元的价格优惠80%为100 - 100 * 80% = 20美元。\n\nFinal answer: 20美元",
+      "created_at": "2026-04-27T17:57:35",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个80美元的价格先上涨25%，再优惠80%，最终价格是多少？\n推理：",
+      "raw_completion": "首先，80美元的价格上涨25%为80 + 80 * 25% = 100美元。然后，100美元的价格优惠80%为100 - 100 * 80% = 20美元。\n\nFinal answer: 20美元",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "seq_80_discount_pay20",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 初始价格为80美元。\n2. 上涨25%后的价格为：80 * (1 + 0.25) = 100美元。\n3. 优惠80%后的价格为：100 * (1 - 0.80) = 20美元。\nFinal answer: 20美元。",
+      "created_at": "2026-04-27T17:57:37",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个80美元的价格先上涨25%，再优惠80%，最终价格是多少？\n推理：",
+      "raw_completion": "1. 初始价格为80美元。\n2. 上涨25%后的价格为：80 * (1 + 0.25) = 100美元。\n3. 优惠80%后的价格为：100 * (1 - 0.80) = 20美元。\nFinal answer: 20美元。",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "seq_80_discount_pay20",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 初始价格为80美元。\n2. 价格上涨25%，涨幅为80 * 0.25 = 20美元。\n3. 新价格为80 + 20 = 100美元。\n4. 价格优惠80%，优惠金额为100 * 0.80 = 80美元。\n5. 最终价格为100 - 80 = 20美元。\nFinal answer: 20",
+      "created_at": "2026-04-27T17:57:40",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一个80美元的价格先上涨25%，再优惠80%，最终价格是多少？\nReasoning:",
+      "raw_completion": " \n1. 初始价格为80美元。\n2. 价格上涨25%，涨幅为80 * 0.25 = 20美元。\n3. 新价格为80 + 20 = 100美元。\n4. 价格优惠80%，优惠金额为100 * 0.80 = 80美元。\n5. 最终价格为100 - 80 = 20美元。\nFinal answer: 20",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "seq_80_discount_pay20",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. The initial price is $80.\n2. A 25% increase means the price becomes $80 + (25/100 * $80) = $100.\n3. An 80% discount on $100 means the price becomes $100 - (80/100 * $100) = $20.\n4. The final price is $20.\nFinal answer: 20",
+      "created_at": "2026-04-27T17:57:43",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一个80美元的价格先上涨25%，再优惠80%，最终价格是多少？\nReasoning:",
+      "raw_completion": " \n1. The initial price is $80.\n2. A 25% increase means the price becomes $80 + (25/100 * $80) = $100.\n3. An 80% discount on $100 means the price becomes $100 - (80/100 * $100) = $20.\n4. The final price is $20.\nFinal answer: 20",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "seq_80_discount_pay20",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "男生占全班人数的3/8，设全班人数为x，男生有24名，因此24 = 3/8x，解得x = 64，女生人数为64 - 24 = 40。\nFinal answer: 40",
+      "created_at": "2026-04-27T17:57:44",
+      "gold_answer": "40",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：男生占全班人数的3/8。如果有24名男生，女生有多少名？\n推理：",
+      "raw_completion": "男生占全班人数的3/8，设全班人数为x，男生有24名，因此24 = 3/8x，解得x = 64，女生人数为64 - 24 = 40。\nFinal answer: 40",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "ratio_boys_total_control",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "全班人数为24÷(3/8)=64，女生人数为64-24=40。\n\nFinal answer: 40",
+      "created_at": "2026-04-27T17:57:45",
+      "gold_answer": "40",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：男生占全班人数的3/8。如果有24名男生，女生有多少名？\n推理：",
+      "raw_completion": "全班人数为24÷(3/8)=64，女生人数为64-24=40。\n\nFinal answer: 40",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "ratio_boys_total_control",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 男生占全班人数的3/8，意味着全班人数的5/8是女生。  \n2. 设全班人数为x，根据题意，3/8 * x = 24。  \n3. 解方程得x = 24 * 8 / 3 = 64。  \n4. 女生人数为全班人数的5/8，即5/8 * 64。  \n5. 计算5/8 * 64 = 40。  \nFinal answer: 40",
+      "created_at": "2026-04-27T17:57:48",
+      "gold_answer": "40",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 男生占全班人数的3/8。如果有24名男生，女生有多少名？\nReasoning:",
+      "raw_completion": " 1. 男生占全班人数的3/8，意味着全班人数的5/8是女生。  \n2. 设全班人数为x，根据题意，3/8 * x = 24。  \n3. 解方程得x = 24 * 8 / 3 = 64。  \n4. 女生人数为全班人数的5/8，即5/8 * 64。  \n5. 计算5/8 * 64 = 40。  \nFinal answer: 40",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "ratio_boys_total_control",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 男生占全班人数的3/8，意味着女生占5/8。\n2. 男生有24名，这是全班人数的3/8。\n3. 设全班人数为x，根据比例，3/8 * x = 24。\n4. 解方程得x = 24 * (8/3) = 64。\n5. 全班共有64名学生。\n6. 女生人数为全班人数减去男生人数。\n7. 女生人数 = 64 - 24 = 40。\nFinal answer: 40",
+      "created_at": "2026-04-27T17:57:52",
+      "gold_answer": "40",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 男生占全班人数的3/8。如果有24名男生，女生有多少名？\nReasoning:",
+      "raw_completion": " \n1. 男生占全班人数的3/8，意味着女生占5/8。\n2. 男生有24名，这是全班人数的3/8。\n3. 设全班人数为x，根据比例，3/8 * x = 24。\n4. 解方程得x = 24 * (8/3) = 64。\n5. 全班共有64名学生。\n6. 女生人数为全班人数减去男生人数。\n7. 女生人数 = 64 - 24 = 40。\nFinal answer: 40",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "ratio_boys_total_control",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "男生和女生的比例是3:5，可以写成一个比例式：3x:5x，其中x是比例系数。如果男生有24名，那么3x=24，解得x=8。女生的数量是5x=5×8=40。\n\nFinal answer: 40",
+      "created_at": "2026-04-27T17:57:53",
+      "gold_answer": "40",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：男生和女生的比例是3:5。如果有24名男生，女生有多少名？\n推理：",
+      "raw_completion": "男生和女生的比例是3:5，可以写成一个比例式：3x:5x，其中x是比例系数。如果男生有24名，那么3x=24，解得x=8。女生的数量是5x=5×8=40。\n\nFinal answer: 40",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "ratio_boys_girls_control",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "男生和女生的比例是3:5，即3/8为男生，5/8为女生。有24名男生，可以设女生有x名，则有3/8=24/(24+x)，解得x=40。女生有40名。\nFinal answer: 40\n\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `",
+      "created_at": "2026-04-27T17:58:01",
+      "gold_answer": "40",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：男生和女生的比例是3:5。如果有24名男生，女生有多少名？\n推理：",
+      "raw_completion": "男生和女生的比例是3:5，即3/8为男生，5/8为女生。有24名男生，可以设女生有x名，则有3/8=24/(24+x)，解得x=40。女生有40名。\nFinal answer: 40\n\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个篮球场的周长为40米，长是宽的2倍，求篮球场的长和宽各是多少米？\n推理：设篮球场的宽为x米，则长为2x米。根据周长公式，周长=2x+2(2x)=6x米。因此，6x=40米，解得x=20/3米，长为2x=40/3米。\nFinal answer: 宽为20/3米，长为40/3米\n\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个正方形的边长为6cm，求它的面积。\n推理：正方形的面积公式为：面积=边长×边长。因此，该正方形的面积为6cm×6cm=36cm²。\nFinal answer: 3",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "ratio_boys_girls_control",
+      "trim_flags": {
+        "trimmed_after_second_final": true,
+        "trimmed_after_second_problem": true
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The ratio of boys to girls is 3:5, meaning for every 3 boys there are 5 girls. Given there are 24 boys, we can set up a proportion to find the number of girls. First, determine how many times the number of boys fits into the ratio part: \\( \\frac{24}{3} = 8 \\). Then, multiply this factor by the ratio part for girls: \\( 8 \\times 5 = 40 \\). Therefore, the number of girls is 40.\nFinal answer: 40",
+      "created_at": "2026-04-27T17:58:04",
+      "gold_answer": "40",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 男生和女生的比例是3:5。如果有24名男生，女生有多少名？\nReasoning:",
+      "raw_completion": " The ratio of boys to girls is 3:5, meaning for every 3 boys there are 5 girls. Given there are 24 boys, we can set up a proportion to find the number of girls. First, determine how many times the number of boys fits into the ratio part: \\( \\frac{24}{3} = 8 \\). Then, multiply this factor by the ratio part for girls: \\( 8 \\times 5 = 40 \\). Therefore, the number of girls is 40.\nFinal answer: 40",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "ratio_boys_girls_control",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The ratio of boys to girls is 3:5. This means for every 3 boys, there are 5 girls. If there are 24 boys, we can find the number of girls by setting up a proportion. Let x be the number of girls. The proportion is 3/5 = 24/x. Solving for x, we get x = (24 * 5) / 3 = 40. Final answer: 40.",
+      "created_at": "2026-04-27T17:58:07",
+      "gold_answer": "40",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 男生和女生的比例是3:5。如果有24名男生，女生有多少名？\nReasoning:",
+      "raw_completion": " The ratio of boys to girls is 3:5. This means for every 3 boys, there are 5 girls. If there are 24 boys, we can find the number of girls by setting up a proportion. Let x be the number of girls. The proportion is 3/5 = 24/x. Solving for x, we get x = (24 * 5) / 3 = 40. Final answer: 40.",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "ratio_boys_girls_control",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 使用幂函数求导法则，x^2 的导数是 2x。\n2. 使用常数乘积求导法则，3x 的导数是 3。\n3. 将两部分相加，得到最终导数。\n\nFinal answer: 2x + 3",
+      "created_at": "2026-04-27T17:58:08",
+      "gold_answer": "2x+3",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：求 x^2 + 3x 的导数。\n推理：",
+      "raw_completion": "1. 使用幂函数求导法则，x^2 的导数是 2x。\n2. 使用常数乘积求导法则，3x 的导数是 3。\n3. 将两部分相加，得到最终导数。\n\nFinal answer: 2x + 3",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "deriv_sum_control",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "求导数需要分别对 x^2 和 3x 进行求导，然后将结果相加。首先对 x^2 求导，得到 2x；然后对 3x 求导，得到 3。将这两个结果相加，得到 2x + 3。\n\nFinal answer: 2x + 3",
+      "created_at": "2026-04-27T17:58:10",
+      "gold_answer": "2x+3",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：求 x^2 + 3x 的导数。\n推理：",
+      "raw_completion": "求导数需要分别对 x^2 和 3x 进行求导，然后将结果相加。首先对 x^2 求导，得到 2x；然后对 3x 求导，得到 3。将这两个结果相加，得到 2x + 3。\n\nFinal answer: 2x + 3",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "deriv_sum_control",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "We need to find the derivative of the function \\( f(x) = x^2 + 3x \\). Using the power rule, the derivative of \\( x^2 \\) is \\( 2x \\) and the derivative of \\( 3x \\) is \\( 3 \\). Adding these results gives us the derivative of the entire function.\n\nFinal answer: \\( 2x + 3 \\)",
+      "created_at": "2026-04-27T17:58:12",
+      "gold_answer": "2x+3",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 求 x^2 + 3x 的导数。\nReasoning:",
+      "raw_completion": " We need to find the derivative of the function \\( f(x) = x^2 + 3x \\). Using the power rule, the derivative of \\( x^2 \\) is \\( 2x \\) and the derivative of \\( 3x \\) is \\( 3 \\). Adding these results gives us the derivative of the entire function.\n\nFinal answer: \\( 2x + 3 \\)",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "deriv_sum_control",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The derivative of a sum is the sum of the derivatives. So, we can take the derivative of each term separately. The derivative of x^2 is 2x, and the derivative of 3x is 3. Therefore, the derivative of x^2 + 3x is 2x + 3. Final answer: 2x + 3.",
+      "created_at": "2026-04-27T17:58:14",
+      "gold_answer": "2x+3",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 求 x^2 + 3x 的导数。\nReasoning:",
+      "raw_completion": " The derivative of a sum is the sum of the derivatives. So, we can take the derivative of each term separately. The derivative of x^2 is 2x, and the derivative of 3x is 3. Therefore, the derivative of x^2 + 3x is 2x + 3. Final answer: 2x + 3.",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "deriv_sum_control",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "首先，根据导数的定义，我们有 f(x) = 3x^2 + x，则 f'(x) = d/dx(3x^2) + d/dx(x)。其次，根据导数的求导法则，d/dx(3x^2) = 6x，d/dx(x) = 1。最后，将上述结果代入导数公式，得到 f'(x) = 6x + 1。\n\nFinal answer: 6x + 1",
+      "created_at": "2026-04-27T17:58:17",
+      "gold_answer": "6x+1",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：求 3x^2 + x 的导数。\n推理：",
+      "raw_completion": "首先，根据导数的定义，我们有 f(x) = 3x^2 + x，则 f'(x) = d/dx(3x^2) + d/dx(x)。其次，根据导数的求导法则，d/dx(3x^2) = 6x，d/dx(x) = 1。最后，将上述结果代入导数公式，得到 f'(x) = 6x + 1。\n\nFinal answer: 6x + 1",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "deriv_coeff_control",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "先求 3x^2 的导数，再求 x 的导数，最后将结果相加。3x^2 的导数是 6x，x 的导数是 1。将 6x 和 1 相加，得到 6x + 1。\n\nFinal answer: 6x + 1",
+      "created_at": "2026-04-27T17:58:19",
+      "gold_answer": "6x+1",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：求 3x^2 + x 的导数。\n推理：",
+      "raw_completion": "先求 3x^2 的导数，再求 x 的导数，最后将结果相加。3x^2 的导数是 6x，x 的导数是 1。将 6x 和 1 相加，得到 6x + 1。\n\nFinal answer: 6x + 1",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "deriv_coeff_control",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "To find the derivative of \\(3x^2 + x\\), we apply the power rule for differentiation. The power rule states that if \\(f(x) = ax^n\\), then \\(f'(x) = anx^{n-1}\\). Applying this rule to each term in the polynomial, we get the derivative of \\(3x^2\\) as \\(6x\\) and the derivative of \\(x\\) as \\(1\\). Combining these results gives us the derivative of the entire expression. Final answer: \\(6x + 1\\).",
+      "created_at": "2026-04-27T17:58:22",
+      "gold_answer": "6x+1",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 求 3x^2 + x 的导数。\nReasoning:",
+      "raw_completion": " To find the derivative of \\(3x^2 + x\\), we apply the power rule for differentiation. The power rule states that if \\(f(x) = ax^n\\), then \\(f'(x) = anx^{n-1}\\). Applying this rule to each term in the polynomial, we get the derivative of \\(3x^2\\) as \\(6x\\) and the derivative of \\(x\\) as \\(1\\). Combining these results gives us the derivative of the entire expression. Final answer: \\(6x + 1\\).",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "deriv_coeff_control",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "To find the derivative of 3x^2 + x, apply the power rule to each term. The derivative of 3x^2 is 2*3x^(2-1) = 6x. The derivative of x is 1. Add the derivatives of the terms together. Therefore, the derivative of 3x^2 + x is 6x + 1. Final answer: 6x + 1.",
+      "created_at": "2026-04-27T17:58:24",
+      "gold_answer": "6x+1",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 求 3x^2 + x 的导数。\nReasoning:",
+      "raw_completion": " To find the derivative of 3x^2 + x, apply the power rule to each term. The derivative of 3x^2 is 2*3x^(2-1) = 6x. The derivative of x is 1. Add the derivatives of the terms together. Therefore, the derivative of 3x^2 + x is 6x + 1. Final answer: 6x + 1.",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "deriv_coeff_control",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "active_step_ids": [
+    "preflight",
+    "E146_qwen35_27b_ng_model_card_hf_profile",
+    "E146_gemma4_31b_it_ng_model_card",
+    "E146_gemma4_26b_a4b_it_ng_model_card",
+    "E146_build_audit_sheet"
+  ],
+  "created_at": "2026-04-30T04:23:54",
+  "errors": [],
+  "experiment": "qwen_gemma_next_stage_queue_smoke",
+  "leakage_scan": {
+    "hits": [],
+    "passed": true
+  },
+  "note_zh": "No model is loaded; this smoke is safe while another GPU queue is running.",
+  "parameter_profiles": "configs/qwen_gemma_parameter_profiles_20260430.yaml",
+  "passed": true,
+  "qg_audit_rows": 87,
+  "qg_audit_rows_by_model": {
+    "gemma4_26b_a4b_it": 32,
+    "gemma4_31b_it": 31,
+    "qwen35_27b": 24
+  },
+  "qg_audit_sheet": "data/processed/e119_qwen_gemma_final_correct_audit_sheet_20260430.jsonl",
+  "qg_source_files": [
+    "results/E119_natural_hardtask_expansion/gemma4_26b_a4b_it_e49_neutral_self_check_answer_first_no_gold_hard_task_conditioning.json",
+    "results/E119_natural_hardtask_expansion/gemma4_31b_it_e49_neutral_self_check_answer_first_no_gold_hard_task_conditioning.json",
+    "results/E119_natural_hardtask_expansion/qwen35_27b_e49_neutral_self_check_answer_first_no_gold_hard_task_conditioning.json"
+  ],
+  "queue_manifest": "configs/qwen_gemma_next_stage_queue_20260430.yaml"
+}

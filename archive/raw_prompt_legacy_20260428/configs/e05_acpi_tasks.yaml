@@ -1,0 +1,71 @@
+tasks:
+  - id: disc_zh_75_price
+    en: An $80 jacket is sold at 75% of its original price. What is the sale price?
+    zh: 一件80美元的夹克打七五折后售价是多少？
+    answer: "60"
+    trap: "Chinese 七五折 means pay 75%, not 75% off."
+  - id: disc_en_25_off
+    en: A $80 jacket is discounted by 25%. What is the sale price?
+    zh: 一件80美元的夹克优惠25%后售价是多少？
+    answer: "60"
+    trap: "25% off means pay 75%."
+  - id: disc_en_75_off
+    en: A $80 jacket is discounted by 75%. What is the sale price?
+    zh: 一件80美元的夹克优惠75%后售价是多少？
+    answer: "20"
+    trap: "75% off means pay 25%; contrasts with 七五折."
+  - id: ratio_boys_girls
+    en: The ratio of boys to girls is 3:5. If there are 24 boys, how many girls are there?
+    zh: 男生和女生的比例是3:5。如果有24名男生，女生有多少名？
+    answer: "40"
+    trap: "Do not confuse boys:girls with boys:total."
+  - id: ratio_boys_total
+    en: Boys are 3/8 of a class. If there are 24 boys, how many girls are there?
+    zh: 男生占全班人数的3/8。如果有24名男生，女生有多少名？
+    answer: "40"
+    trap: "Here 3/8 is boys:total, unlike boys:girls 3:5."
+  - id: ratio_girls_boys
+    en: The ratio of girls to boys is 5:3. If there are 24 boys, how many girls are there?
+    zh: 女生和男生的比例是5:3。如果有24名男生，女生有多少名？
+    answer: "40"
+    trap: "Ratio order is reversed relative to boys:girls."
+  - id: avg_simple
+    en: The average of 6, 10, and x is 9. Find x.
+    zh: 6、10 和 x 的平均数是 9，求 x。
+    answer: "11"
+    trap: "Total is 3*9, not 9+3."
+  - id: avg_weighted
+    en: A student has quiz scores 80, 90, and x. The average is 85. Find x.
+    zh: 一名学生三次测验成绩为80、90和x，平均分是85，求x。
+    answer: "85"
+    trap: "Total is 3*85; do not average 80 and 90 only."
+  - id: deriv_sum
+    en: Differentiate x^2 + 3x.
+    zh: 求 x^2 + 3x 的导数。
+    answer: "2x+3"
+    trap: "Power rule and linear term."
+  - id: deriv_product_equiv
+    en: Differentiate x(x + 3).
+    zh: 求 x(x + 3) 的导数。
+    answer: "2x+3"
+    trap: "Product rule or expansion; same answer as x^2+3x."
+  - id: deriv_coeff
+    en: Differentiate 3x^2 + x.
+    zh: 求 3x^2 + x 的导数。
+    answer: "6x+1"
+    trap: "Coefficient and x derivative."
+  - id: rem_137_9
+    en: What is the remainder when 137 is divided by 9?
+    zh: 137 除以 9 的余数是多少？
+    answer: "2"
+    trap: "Long division late arithmetic error."
+  - id: frac_simplify
+    en: Simplify 6/8.
+    zh: 化简 6/8。
+    answer: "3/4"
+    trap: "Divide by common factor, do not subtract."
+  - id: percent_then_discount
+    en: A price is increased by 25% from $80 and then discounted by 20%. What is the final price?
+    zh: 一个80美元的价格先上涨25%，再打八折，最终价格是多少？
+    answer: "80"
+    trap: "Sequential percentage changes: 80*1.25*0.8."

@@ -1,0 +1,5 @@
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='yarn': {'attn_factor'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='yarn': {'attn_factor'}
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 16545.17it/s]
+wrote /home/Awei/P02_multilingual_process_lens/data/raw/s6_lexical_grid_trace_pool/deepseek_r1_0528_qwen3_8b_trace_pool_smoke_v2_s6_lexical_grid.json; rows=48

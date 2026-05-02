@@ -1,0 +1,8 @@
+[2026-04-27T19:44:52] loading verifier=gemma4_e4b_it on cuda; pairs=1
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/2076 [00:00<?, ?it/s]Loading weights:  83%|████████▎ | 1726/2076 [00:00<00:00, 17255.74it/s]Loading weights: 100%|██████████| 2076/2076 [00:00<00:00, 17518.78it/s]
+pair=e30_inequality_no_more_than_between_inclusive prompt=en order=bad_A target=A pred=A margin=2.079
+pair=e30_inequality_no_more_than_between_inclusive prompt=en order=bad_B target=B pred=A margin=-2.330
+pair=e30_inequality_no_more_than_between_inclusive prompt=zh order=bad_A target=A pred=A margin=0.269
+pair=e30_inequality_no_more_than_between_inclusive prompt=zh order=bad_B target=B pred=A margin=-0.330
+wrote results/E30_non_discount_contrastive_verifier/gemma4_e4b_it_contrastive_acpi_verifier.json; rows=4 acc=0.500 mean_margin=-0.078

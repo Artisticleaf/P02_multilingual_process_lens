@@ -1,0 +1,132 @@
+{
+  "args": {
+    "chat_template": "auto",
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "k": 1,
+    "max_new_tokens": 768,
+    "max_tasks": 3,
+    "model_key": "qwen3_14b_base",
+    "out_dir": "/home/Awei/P02_multilingual_process_lens/data/raw/e26_aime_hard_trace_pool_concise",
+    "out_suffix": "aime_hard_concise",
+    "prompt_style": "concise",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "routes": "en->en,zh->en",
+    "seed": 2026042708,
+    "tasks_yaml": "/home/Awei/P02_multilingual_process_lens/configs/e26_aime_hard_tasks.yaml",
+    "temperature": 0.2,
+    "top_p": 0.9
+  },
+  "model_spec": {
+    "class": "base",
+    "family": "qwen",
+    "notes": "larger clean Qwen anchor; may need 2 GPUs if memory is tight",
+    "path": "/home/Awei/LLM/Model/base/Qwen3-14B-Base",
+    "priority": "P0",
+    "status": "local"
+  },
+  "rows": [
+    {
+      "completion": "First, convert $17_{b}$ and $97_{b}$ to base 10. $17_{b} = 1 \\cdot b + 7 = b + 7$ and $97_{b} = 9 \\cdot b + 7 = 9b + 7$. We need $b + 7$ to divide $9b + 7$. This means there exists an integer $k$ such that $9b + 7 = k(b + 7)$. Rearrange to get $9b + 7 = kb + 7k$, or $9b - kb = 7k - 7$. Factor out $b$ to get $b(9 - k) = 7(k - 1)$. For $b$ to be an integer, $9 - k$ must divide $7(k - 1)$. Since $b > 9$, $9 - k$ must be a positive divisor of 7. The divisors of 7 are 1 and 7. If $9 - k = 1$, then $k = 8$ and $b = 7(8 - 1) = 49$. If $9 - k = 7$, then $k = 2$ and $b = 7(2 - 1) = 7$, but $b > 9$, so this is not valid. Thus, the only valid base is $b = 49$. The sum of all such bases is $49$. Final answer: 49.",
+      "created_at": "2026-04-27T13:17:14",
+      "gold_answer": "70",
+      "input_lang": "en",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: Find the sum of all integer bases $b>9$ for which $17_{b}$ is a divisor of $97_{b}$.\nReasoning:",
+      "raw_completion": " First, convert $17_{b}$ and $97_{b}$ to base 10. $17_{b} = 1 \\cdot b + 7 = b + 7$ and $97_{b} = 9 \\cdot b + 7 = 9b + 7$. We need $b + 7$ to divide $9b + 7$. This means there exists an integer $k$ such that $9b + 7 = k(b + 7)$. Rearrange to get $9b + 7 = kb + 7k$, or $9b - kb = 7k - 7$. Factor out $b$ to get $b(9 - k) = 7(k - 1)$. For $b$ to be an integer, $9 - k$ must divide $7(k - 1)$. Since $b > 9$, $9 - k$ must be a positive divisor of 7. The divisors of 7 are 1 and 7. If $9 - k = 1$, then $k = 8$ and $b = 7(8 - 1) = 49$. If $9 - k = 7$, then $k = 2$ and $b = 7(2 - 1) = 7$, but $b > 9$, so this is not valid. Thus, the only valid base is $b = 49$. The sum of all such bases is $49$. Final answer: 49.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "aime25_base_divisor_p1",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. Convert $17_b$ and $97_b$ to base 10: $17_b = 1 \\cdot b + 7 = b + 7$, $97_b = 9 \\cdot b + 7 = 9b + 7$.\n2. Set up the divisibility condition: $9b + 7$ must be divisible by $b + 7$.\n3. Express the divisibility condition as an equation: $9b + 7 = k(b + 7)$ for some integer $k$.\n4. Simplify the equation: $9b + 7 = kb + 7k$.\n5. Rearrange to isolate terms involving $b$: $9b - kb = 7k - 7$.\n6. Factor out $b$ on the left side: $b(9 - k) = 7(k - 1)$.\n7. Solve for $b$: $b = \\frac{7(k - 1)}{9 - k}$.\n8. Determine the range of $k$ such that $b > 9$: $k$ must be an integer greater than 9.\n9. Test values of $k$ starting from 10: For $k = 10$, $b = \\frac{7(10 - 1)}{9 - 10} = \\frac{63}{-1} = -63$ (not valid).\n10. Continue testing: For $k = 11$, $b = \\frac{7(11 - 1)}{9 - 11} = \\frac{70}{-2} = -35$ (not valid).\n11. Continue testing: For $k = 12$, $b = \\frac{7(12 - 1)}{9 - 12} = \\frac{77}{-3} = -25.67$ (not valid).\n12. Continue testing: For $k = 13$, $b = \\frac{7(13 - 1)}{9 - 13} = \\frac{84}{-4} = -21$ (not valid).\n13. Continue testing: For $k = 14$, $b = \\frac{7(14 - 1)}{9 - 14} = \\frac{91}{-5} = -18.2$ (not valid).\n14. Continue testing: For $k = 15$, $b = \\frac{7(15 - 1)}{9 - 15} = \\frac{98}{-6} = -16.33$ (not valid).\n15. Continue testing: For $k = 16$, $b = \\frac{7(16 - 1)}{9 - 16} = \\frac{105}{-7} = -15$ (not valid).\n16. Continue testing: For $k = 17$, $b = \\frac{7(17 - 1)}{9 - 17} = \\frac{112}{-8} = -14$ (not valid).\n17. Continue testing: For $k = 18$, $b = \\frac{7(18 - 1)}{9 - 18} = \\frac{119}{-9} = -13.22$ (not valid).\n18. Continue testing: For $k = 1",
+      "created_at": "2026-04-27T13:17:34",
+      "gold_answer": "70",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 求所有满足 $b>9$ 且 $17_b$ 能整除 $97_b$ 的整数进制 $b$ 之和。\nReasoning:",
+      "raw_completion": " 1. Convert $17_b$ and $97_b$ to base 10: $17_b = 1 \\cdot b + 7 = b + 7$, $97_b = 9 \\cdot b + 7 = 9b + 7$.\n2. Set up the divisibility condition: $9b + 7$ must be divisible by $b + 7$.\n3. Express the divisibility condition as an equation: $9b + 7 = k(b + 7)$ for some integer $k$.\n4. Simplify the equation: $9b + 7 = kb + 7k$.\n5. Rearrange to isolate terms involving $b$: $9b - kb = 7k - 7$.\n6. Factor out $b$ on the left side: $b(9 - k) = 7(k - 1)$.\n7. Solve for $b$: $b = \\frac{7(k - 1)}{9 - k}$.\n8. Determine the range of $k$ such that $b > 9$: $k$ must be an integer greater than 9.\n9. Test values of $k$ starting from 10: For $k = 10$, $b = \\frac{7(10 - 1)}{9 - 10} = \\frac{63}{-1} = -63$ (not valid).\n10. Continue testing: For $k = 11$, $b = \\frac{7(11 - 1)}{9 - 11} = \\frac{70}{-2} = -35$ (not valid).\n11. Continue testing: For $k = 12$, $b = \\frac{7(12 - 1)}{9 - 12} = \\frac{77}{-3} = -25.67$ (not valid).\n12. Continue testing: For $k = 13$, $b = \\frac{7(13 - 1)}{9 - 13} = \\frac{84}{-4} = -21$ (not valid).\n13. Continue testing: For $k = 14$, $b = \\frac{7(14 - 1)}{9 - 14} = \\frac{91}{-5} = -18.2$ (not valid).\n14. Continue testing: For $k = 15$, $b = \\frac{7(15 - 1)}{9 - 15} = \\frac{98}{-6} = -16.33$ (not valid).\n15. Continue testing: For $k = 16$, $b = \\frac{7(16 - 1)}{9 - 16} = \\frac{105}{-7} = -15$ (not valid).\n16. Continue testing: For $k = 17$, $b = \\frac{7(17 - 1)}{9 - 17} = \\frac{112}{-8} = -14$ (not valid).\n17. Continue testing: For $k = 18$, $b = \\frac{7(18 - 1)}{9 - 18} = \\frac{119}{-9} = -13.22$ (not valid).\n18. Continue testing: For $k = 1",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "aime25_base_divisor_p1",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. Given quadrilateral $DEGF$ has area 288.\n2. $M$ is the reflection of $D$ through $F$, so $FM = FD$.\n3. $N$ is the reflection of $G$ through $E$, so $EN = EG$.\n4. Since $DEGF$ is a quadrilateral, its area can be split into two triangles, $DEF$ and $EFG$.\n5. The area of $DEF$ is half the area of $DEGF$, so $[DEF] = 144$.\n6. Similarly, the area of $EFG$ is also half the area of $DEGF$, so $[EFG] = 144$.\n7. The area of $\\triangle ADE$ is the same as the area of $\\triangle DEF$ because they share the same base $DE$ and height from $A$ to $DE$.\n8. Therefore, $[ADE] = 144$.\n9. The area of $\\triangle AFG$ is the same as the area of $\\triangle EFG$ because they share the same base $FG$ and height from $A$ to $FG$.\n10. Therefore, $[AFG] = 144$.\n11. The area of $\\triangle ABC$ is the sum of the areas of $\\triangle ADE$, $\\triangle DEF$, $\\triangle EFG$, and $\\triangle AFG$.\n12. Therefore, $[ABC] = 144 + 144 + 144 + 144 = 576$.\nFinal answer: 576",
+      "created_at": "2026-04-27T13:17:43",
+      "gold_answer": "588",
+      "input_lang": "en",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: On $\\triangle ABC$ points $A,D,E$, and $B$ lie in that order on side $\\overline{AB}$ with $AD=4, DE=16$, and $EB=8$. Points $A,F,G$, and $C$ lie in that order on side $\\overline{AC}$ with $AF=13, FG=52$, and $GC=26$. Let $M$ be the reflection of $D$ through $F$, and let $N$ be the reflection of $G$ through $E$. Quadrilateral $DEGF$ has area 288. Find the area of heptagon $AFNBCEM$.\nReasoning:",
+      "raw_completion": " \n1. Given quadrilateral $DEGF$ has area 288.\n2. $M$ is the reflection of $D$ through $F$, so $FM = FD$.\n3. $N$ is the reflection of $G$ through $E$, so $EN = EG$.\n4. Since $DEGF$ is a quadrilateral, its area can be split into two triangles, $DEF$ and $EFG$.\n5. The area of $DEF$ is half the area of $DEGF$, so $[DEF] = 144$.\n6. Similarly, the area of $EFG$ is also half the area of $DEGF$, so $[EFG] = 144$.\n7. The area of $\\triangle ADE$ is the same as the area of $\\triangle DEF$ because they share the same base $DE$ and height from $A$ to $DE$.\n8. Therefore, $[ADE] = 144$.\n9. The area of $\\triangle AFG$ is the same as the area of $\\triangle EFG$ because they share the same base $FG$ and height from $A$ to $FG$.\n10. Therefore, $[AFG] = 144$.\n11. The area of $\\triangle ABC$ is the sum of the areas of $\\triangle ADE$, $\\triangle DEF$, $\\triangle EFG$, and $\\triangle AFG$.\n12. Therefore, $[ABC] = 144 + 144 + 144 + 144 = 576$.\nFinal answer: 576",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "aime25_geometry_reflection_p2",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. Calculate the total length of AB: AD + DE + EB = 4 + 16 + 8 = 28.\n2. Calculate the total length of AC: AF + FG + GC = 13 + 52 + 26 = 91.\n3. Since M is the reflection of D over F, AM = 2 * AF = 2 * 13 = 26.\n4. Since N is the reflection of G over E, AN = 2 * AE = 2 * (AD + DE) = 2 * 20 = 40.\n5. The area of quadrilateral DEGF is given as 288.\n6. The area of triangle ADE is (1/2) * AD * DE = (1/2) * 4 * 16 = 32.\n7. The area of triangle AFG is (1/2) * AF * FG = (1/2) * 13 * 52 = 338.\n8. The area of triangle ABC is the sum of the areas of triangles ADE, AFG, and quadrilateral DEGF: 32 + 338 + 288 = 658.\n9. The area of triangle AMN is the same as the area of triangle ADE because M and N are reflections of D and G over F and E respectively, and the triangles are congruent.\n10. The area of triangle AMN is 32.\n11. The area of the seven-sided figure AFNBCEM is the area of triangle ABC minus the area of triangle AMN: 658 - 32 = 626.\nFinal answer: 626.",
+      "created_at": "2026-04-27T13:17:52",
+      "gold_answer": "588",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 在 $\\triangle ABC$ 中，点 $A,D,E,B$ 按此顺序位于边 $\\overline{AB}$ 上，且 $AD=4, DE=16, EB=8$。点 $A,F,G,C$ 按此顺序位于边 $\\overline{AC}$ 上，且 $AF=13, FG=52, GC=26$。令 $M$ 为点 $D$ 关于点 $F$ 的中心对称点，令 $N$ 为点 $G$ 关于点 $E$ 的中心对称点。四边形 $DEGF$ 的面积为 288。求七边形 $AFNBCEM$ 的面积。\nReasoning:",
+      "raw_completion": " \n1. Calculate the total length of AB: AD + DE + EB = 4 + 16 + 8 = 28.\n2. Calculate the total length of AC: AF + FG + GC = 13 + 52 + 26 = 91.\n3. Since M is the reflection of D over F, AM = 2 * AF = 2 * 13 = 26.\n4. Since N is the reflection of G over E, AN = 2 * AE = 2 * (AD + DE) = 2 * 20 = 40.\n5. The area of quadrilateral DEGF is given as 288.\n6. The area of triangle ADE is (1/2) * AD * DE = (1/2) * 4 * 16 = 32.\n7. The area of triangle AFG is (1/2) * AF * FG = (1/2) * 13 * 52 = 338.\n8. The area of triangle ABC is the sum of the areas of triangles ADE, AFG, and quadrilateral DEGF: 32 + 338 + 288 = 658.\n9. The area of triangle AMN is the same as the area of triangle ADE because M and N are reflections of D and G over F and E respectively, and the triangles are congruent.\n10. The area of triangle AMN is 32.\n11. The area of the seven-sided figure AFNBCEM is the area of triangle ABC minus the area of triangle AMN: 658 - 32 = 626.\nFinal answer: 626.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "aime25_geometry_reflection_p2",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "There are 9 players and 3 flavors, with at least one player choosing each flavor. Let the number of players choosing chocolate, vanilla, and strawberry be \\( c \\), \\( v \\), and \\( s \\) respectively. We have \\( c + v + s = 9 \\) and \\( c > v > s \\geq 1 \\). The possible values for \\( s \\) are 1, 2, or 3. For \\( s = 1 \\), \\( v \\) can be 2, 3, or 4, and \\( c \\) is determined. For \\( s = 2 \\), \\( v \\) can be 3, and \\( c \\) is determined. For \\( s = 3 \\), no valid \\( v \\) exists. Summing the multinomial coefficients for each valid combination gives the total number of assignments. The remainder when this total is divided by 1000 is the answer.\n\nFinal answer: 120",
+      "created_at": "2026-04-27T13:17:57",
+      "gold_answer": "16",
+      "input_lang": "en",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: The 9 members of a baseball team went to an ice cream parlor after their game. Each player had a single-scoop cone of chocolate, vanilla, or strawberry ice cream. At least one player chose each flavor, and the number of players who chose chocolate was greater than the number of players who chose vanilla, which was greater than the number of players who chose strawberry. Let $N$ be the number of different assignments of flavors to players that meet these conditions. Find the remainder when $N$ is divided by 1000.\nReasoning:",
+      "raw_completion": " There are 9 players and 3 flavors, with at least one player choosing each flavor. Let the number of players choosing chocolate, vanilla, and strawberry be \\( c \\), \\( v \\), and \\( s \\) respectively. We have \\( c + v + s = 9 \\) and \\( c > v > s \\geq 1 \\). The possible values for \\( s \\) are 1, 2, or 3. For \\( s = 1 \\), \\( v \\) can be 2, 3, or 4, and \\( c \\) is determined. For \\( s = 2 \\), \\( v \\) can be 3, and \\( c \\) is determined. For \\( s = 3 \\), no valid \\( v \\) exists. Summing the multinomial coefficients for each valid combination gives the total number of assignments. The remainder when this total is divided by 1000 is the answer.\n\nFinal answer: 120",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "aime25_icecream_ordered_assign_p3",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. We need to distribute 9 players into 3 groups (chocolate, vanilla, strawberry) with the constraints: at least one player in each group, and chocolate > vanilla > strawberry.\n2. Let \\( c \\) be the number of players choosing chocolate, \\( v \\) be the number of players choosing vanilla, and \\( s \\) be the number of players choosing strawberry.\n3. We have \\( c + v + s = 9 \\) and \\( c > v > s \\geq 1 \\).\n4. Possible values for \\( s \\) are 1, 2, or 3 (since \\( s \\geq 1 \\) and \\( c > v > s \\)).\n5. If \\( s = 1 \\), then \\( v \\) can be 2, 3, or 4 (since \\( v > s \\) and \\( c > v \\)).\n6. If \\( s = 2 \\), then \\( v \\) can be 3 or 4 (since \\( v > s \\) and \\( c > v \\)).\n7. If \\( s = 3 \\), then \\( v \\) can only be 4 (since \\( v > s \\) and \\( c > v \\)).\n8. For each valid combination of \\( s \\) and \\( v \\), \\( c \\) is determined as \\( c = 9 - s - v \\).\n9. The number of ways to assign players to groups is given by the multinomial coefficient \\( \\binom{9}{c, v, s} = \\frac{9!}{c!v!s!} \\).\n10. Sum the multinomial coefficients for all valid combinations of \\( s \\), \\( v \\), and \\( c \\).\n11. Calculate the sum and find the remainder when divided by 1000.\n12. The final answer is the remainder of the sum when divided by 1000.\n\nFinal answer: 120",
+      "created_at": "2026-04-27T13:18:08",
+      "gold_answer": "16",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一支棒球队的 9 名队员赛后去冰淇淋店。每名队员都选择一球装的巧克力、香草或草莓冰淇淋。每种口味至少有一人选择，并且选择巧克力的人数大于选择香草的人数，选择香草的人数又大于选择草莓的人数。令 $N$ 为满足这些条件的不同分配方案数。求 $N$ 除以 1000 的余数。\nReasoning:",
+      "raw_completion": " \n1. We need to distribute 9 players into 3 groups (chocolate, vanilla, strawberry) with the constraints: at least one player in each group, and chocolate > vanilla > strawberry.\n2. Let \\( c \\) be the number of players choosing chocolate, \\( v \\) be the number of players choosing vanilla, and \\( s \\) be the number of players choosing strawberry.\n3. We have \\( c + v + s = 9 \\) and \\( c > v > s \\geq 1 \\).\n4. Possible values for \\( s \\) are 1, 2, or 3 (since \\( s \\geq 1 \\) and \\( c > v > s \\)).\n5. If \\( s = 1 \\), then \\( v \\) can be 2, 3, or 4 (since \\( v > s \\) and \\( c > v \\)).\n6. If \\( s = 2 \\), then \\( v \\) can be 3 or 4 (since \\( v > s \\) and \\( c > v \\)).\n7. If \\( s = 3 \\), then \\( v \\) can only be 4 (since \\( v > s \\) and \\( c > v \\)).\n8. For each valid combination of \\( s \\) and \\( v \\), \\( c \\) is determined as \\( c = 9 - s - v \\).\n9. The number of ways to assign players to groups is given by the multinomial coefficient \\( \\binom{9}{c, v, s} = \\frac{9!}{c!v!s!} \\).\n10. Sum the multinomial coefficients for all valid combinations of \\( s \\), \\( v \\), and \\( c \\).\n11. Calculate the sum and find the remainder when divided by 1000.\n12. The final answer is the remainder of the sum when divided by 1000.\n\nFinal answer: 120",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "aime25_icecream_ordered_assign_p3",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    }
+  ]
+}

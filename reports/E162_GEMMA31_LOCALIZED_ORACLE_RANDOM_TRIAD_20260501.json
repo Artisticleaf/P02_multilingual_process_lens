@@ -1,0 +1,524 @@
+{
+  "experiment": "E162_gemma31_localized_oracle_random_triad",
+  "created_at": "2026-05-01T23:17:00",
+  "n_triples": 38,
+  "variant_stats": {
+    "localized": {
+      "n": 38,
+      "correct": 38,
+      "mean_tokens": 264.60526315789474,
+      "median_tokens": 237.5,
+      "min_tokens": 121,
+      "max_tokens": 646,
+      "p90_tokens": 364
+    },
+    "oracle": {
+      "n": 38,
+      "correct": 38,
+      "mean_tokens": 207.3684210526316,
+      "median_tokens": 172.5,
+      "min_tokens": 42,
+      "max_tokens": 640,
+      "p90_tokens": 365
+    },
+    "random": {
+      "n": 38,
+      "correct": 38,
+      "mean_tokens": 202.10526315789474,
+      "median_tokens": 169.5,
+      "min_tokens": 68,
+      "max_tokens": 609,
+      "p90_tokens": 323
+    }
+  },
+  "deltas": {
+    "localized_minus_oracle": {
+      "mean": 57.23684210526316,
+      "median": 35.0,
+      "min": -37,
+      "max": 191,
+      "abs_le_25": 14,
+      "positive": 33,
+      "negative": 5
+    },
+    "localized_minus_random": {
+      "mean": 62.5,
+      "median": 67.5,
+      "min": -86,
+      "max": 159,
+      "abs_le_25": 4,
+      "positive": 35,
+      "negative": 3
+    },
+    "oracle_minus_random": {
+      "mean": 5.2631578947368425,
+      "median": 19.0,
+      "min": -116,
+      "max": 134,
+      "abs_le_25": 13,
+      "positive": 23,
+      "negative": 15
+    }
+  },
+  "by_family": {
+    "algebra_sign_symmetry": {
+      "n": 4,
+      "localized_mean_tokens": 352.5,
+      "oracle_mean_tokens": 272.75,
+      "random_mean_tokens": 313
+    },
+    "code_boundary_zero": {
+      "n": 4,
+      "localized_mean_tokens": 321.75,
+      "oracle_mean_tokens": 250,
+      "random_mean_tokens": 240.5
+    },
+    "counting_complement": {
+      "n": 4,
+      "localized_mean_tokens": 380.75,
+      "oracle_mean_tokens": 340.75,
+      "random_mean_tokens": 327.5
+    },
+    "graph_definition": {
+      "n": 4,
+      "localized_mean_tokens": 192.75,
+      "oracle_mean_tokens": 145.25,
+      "random_mean_tokens": 124
+    },
+    "multilingual_semantic": {
+      "n": 2,
+      "localized_mean_tokens": 219,
+      "oracle_mean_tokens": 119.5,
+      "random_mean_tokens": 149.5
+    },
+    "probability_conditioning": {
+      "n": 4,
+      "localized_mean_tokens": 349.5,
+      "oracle_mean_tokens": 271.25,
+      "random_mean_tokens": 272.5
+    },
+    "proof_invalid_lemma": {
+      "n": 4,
+      "localized_mean_tokens": 245,
+      "oracle_mean_tokens": 198.25,
+      "random_mean_tokens": 153.25
+    },
+    "table_zero_swap": {
+      "n": 4,
+      "localized_mean_tokens": 161.5,
+      "oracle_mean_tokens": 106,
+      "random_mean_tokens": 115.75
+    },
+    "temporal_boundary": {
+      "n": 4,
+      "localized_mean_tokens": 198.25,
+      "oracle_mean_tokens": 142.5,
+      "random_mean_tokens": 112.25
+    },
+    "unit_roundtrip": {
+      "n": 4,
+      "localized_mean_tokens": 202.25,
+      "oracle_mean_tokens": 183.5,
+      "random_mean_tokens": 186.5
+    }
+  },
+  "representative_examples": [
+    {
+      "case_id": "e162_controlled_acpi_e159_algebra_sign_symmetry_03_invalid_answer_preserving_reference",
+      "task_id": "e159_algebra_sign_symmetry_03",
+      "family": "algebra_sign_symmetry",
+      "localized": {
+        "correct": true,
+        "final": "0",
+        "tokens": 188,
+        "span": "roots of t^2-6t+5 are -1 and -5",
+        "completion_start": "The provided partial solution contains an error in identifying the roots of the quadratic equation $f(t) = t^2 - 6t + 5$.  To find the roots of $t^2 - 6t + 5 = 0$, we can factor the quadratic: $(t - 1)(t - 5) = 0$ Setting each factor to zero gives $t = 1$ and $t = 5$. Thus, the roots are $1$ and $5$, not $-1$ and $-5$.  Since $1$ and $5$ are the roots of $f(t)$, by definition: $f(1) = 0$ $f(5) = 0$  Therefore: $f(1) + f(5) = 0 + 0 = 0$  Final answer: 0"
+      },
+      "oracle": {
+        "correct": true,
+        "final": "0",
+        "tokens": 158,
+        "span": "roots of t^2-6t+5 are -1 and -5",
+        "completion_start": "To find the roots of $f(t) = t^2 - 6t + 5$, we can factor the quadratic equation: $t^2 - 6t + 5 = (t - 1)(t - 5)$. Setting $f(t) = 0$, we find the roots are $t = 1$ and $t = 5$.  Since 1 and 5 are the roots of the function $f(t)$, by definition: $f(1) = 0$ $f(5) = 0$  Therefore, the sum is: $f(1) + f(5) = 0 + 0 = 0$.  Final answer: 0"
+      },
+      "random": {
+        "correct": true,
+        "final": "0",
+        "tokens": 274,
+        "span": "Let f",
+        "completion_start": "The partial solution contains an error in identifying the roots of the quadratic equation $f(t) = t^2 - 6t + 5$.  1.  **Recheck the flagged location and roots:**     The roots of $t^2 - 6t + 5 = 0$ are found by factoring:     $(t - 1)(t - 5) = 0$.     Thus, the roots are $t = 1$ and $t = 5$.     (The partial solution incorrectly stated the roots were $-1$ and $-5$).  2.  **Calculate $f(1)$ and $f(5)$:**     Since $1$ and $5$ are the roots of the function $f(t)$, by definition:     $f(1) = 1^2 - 6(1) + 5 = 1 - 6 + 5 = 0$.     $f(5) = 5^2 - 6(5) + 5 = 25 - 30 + 5 = 0$.  3.  **Find the sum:**     $f(1) + f(5) = 0 + 0 = 0$.  Final answer: 0"
+      }
+    },
+    {
+      "case_id": "e162_controlled_acpi_e159_code_boundary_zero_04_invalid_answer_preserving_reference",
+      "task_id": "e159_code_boundary_zero_04",
+      "family": "code_boundary_zero",
+      "localized": {
+        "correct": true,
+        "final": "2",
+        "tokens": 341,
+        "span": "`[0:5]` excludes both endpoints",
+        "completion_start": "The partial solution provided is incorrect. Let's re-evaluate the Python slicing expressions.  1.  **Analyze `'abcde'[0:5]`**:     *   In Python, the slice `[start:stop]` includes the character at the `start` index and excludes the character at the `stop` index.     *   For `'abcde'[0:5]`, the indices are 0, 1, 2, 3, and 4.     *   The characters are `'a'`, `'b'`, `'c'`, `'d'`, and `'e'`.     *   The resulting string is `'abcde'`, and its length is `5`.  2.  **Analyze `'abcde'[1:4]`**:     *   The slice `[1:4]` includes indices 1, 2, and 3.     *   The characters are `'b'`, `'c'`, and `'d'`.     *   The resulting string is `'bcd'`, and its length is `3`.  3.  **Calculate the difference**:     *   `len('abcde'[0:5]) - len('abcde'[1:4])`     *   `5 - 3 = 2`  Wait, while the partial solution's logic about endpoints was wrong (it claimed `[0:5]` excludes both endpoints and has length 3), the final subtraction result it reached happened to be 2. However, the correct lengths are 5 and 3.  Calculation: $5 - 3 = 2$.  Final answer: 2"
+      },
+      "oracle": {
+        "correct": true,
+        "final": "2",
+        "tokens": 221,
+        "span": "`[0:5]` excludes both endpoints",
+        "completion_start": "The partial solution contains an error regarding how Python slicing works. In Python, a slice `[start:stop]` includes the character at the `start` index and excludes the character at the `stop` index.  1.  Evaluate `'abcde'[0:5]`: This slice starts at index 0 ('a') and goes up to, but does not include, index 5. Since the string has indices 0 through 4, this captures the entire string `'abcde'`. The length is 5. 2.  Evaluate `'abcde'[1:4]`: This slice starts at index 1 ('b') and goes up to, but does not include, index 4 ('e'). It captures characters at indices 1, 2, and 3, which are `'bcd'`. The length is 3. 3.  Calculate the difference: `len('abcde'[0:5]) - len('abcde'[1:4])` = `5 - 3 = 2`.  Final answer: 2"
+      },
+      "random": {
+        "correct": true,
+        "final": "2",
+        "tokens": 201,
+        "span": "What does this Python expression evaluate",
+        "completion_start": "The partial solution contains errors regarding how Python slicing works.  1.  **Rechecking the flagged span:** The expression `len('abcde'[0:5])` evaluates the slice from index 0 up to (but not including) index 5. For the string `'abcde'`, this includes indices 0, 1, 2, 3, and 4. Thus, `'abcde'[0:5]` is `'abcde'`, and its length is 5. 2.  **Evaluating the second part:** The expression `len('abcde'[1:4])` evaluates the slice from index 1 up to (but not including) index 4. This includes indices 1, 2, and 3. Thus, `'abcde'[1:4]` is `'bcd'`, and its length is 3. 3.  **Calculating the difference:** `5 - 3 = 2`.  Final answer: 2"
+      }
+    },
+    {
+      "case_id": "e162_controlled_acpi_e159_probability_conditioning_03_invalid_answer_preserving_reference",
+      "task_id": "e159_probability_conditioning_03",
+      "family": "probability_conditioning",
+      "localized": {
+        "correct": true,
+        "final": "1/3",
+        "tokens": 278,
+        "span": "the other child has probability 1/2",
+        "completion_start": "To recheck the step: \"the other child has probability 1/2\", we must look at the sample space. The possible outcomes for two children are $\\{BB, BG, GB, GG\\}$, each with probability $1/4$. The condition is \"at least one child is a boy\". This restricts the sample space to $S' = \\{BB, BG, GB\\}$. The event \"both are boys\" is $E = \\{BB\\}$. The probability is $P(E|S') = \\frac{|E|}{|S'|} = \\frac{1}{3}$.  The statement \"the other child has probability 1/2\" is a common misconception that treats the children as independent events without accounting for the specific condition \"at least one\". If we knew a *specific* child (e.g., the elder) was a boy, the probability the other is a boy would be $1/2$. However, given that *at least one* is a boy, we are choosing from the set $\\{BB, BG, GB\\}$, making the probability $1/3$.  Correcting the step: Given that at least one child is a boy, the possible configurations are BB, BG, and GB. Only one of these three equally likely outcomes results in both being boys.  Final answer: 1/3"
+      },
+      "oracle": {
+        "correct": true,
+        "final": "1/3",
+        "tokens": 87,
+        "span": "the other child has probability 1/2",
+        "completion_start": "To solve the problem, we identify the sample space of two children: {BB, BG, GB, GG}. The condition \"at least one child is a boy\" restricts the sample space to {BB, BG, GB}. Out of these three equally likely outcomes, only one outcome (BB) consists of two boys. Therefore, the probability is 1/3.  Final answer: 1/3"
+      },
+      "random": {
+        "correct": true,
+        "final": "1/3",
+        "tokens": 119,
+        "span": "A family has two children",
+        "completion_start": "The flagged span `A family has two children` is a correct statement of the problem's premise and is not abnormal.  Continuing the solution: The sample space for two children is $S = \\{BB, BG, GB, GG\\}$. The condition \"at least one child is a boy\" restricts the sample space to $S' = \\{BB, BG, GB\\}$. Out of these 3 equally likely outcomes, only 1 outcome ($BB$) consists of two boys. The probability is therefore $1/3$.  Final answer: 1/3"
+      }
+    },
+    {
+      "case_id": "e162_controlled_acpi_e159_proof_invalid_lemma_04_invalid_answer_preserving_reference",
+      "task_id": "e159_proof_invalid_lemma_04",
+      "family": "proof_invalid_lemma",
+      "localized": {
+        "correct": true,
+        "final": "Yes",
+        "tokens": 237,
+        "span": "12 and 3 are both multiples of 3",
+        "completion_start": "To evaluate the claim \"Every multiple of 12 is a multiple of 3,\" we examine the relationship between 12 and 3.  1.  **Analyze the step:** The flagged span says \"12 and 3 are both multiples of 3.\"     *   $12 = 3 \\times 4$ (True)     *   $3 = 3 \\times 1$ (True)     The step is mathematically correct.  2.  **Verify the logic:**     *   A multiple of 12 can be written as $12n$ for some integer $n$.     *   Since $12 = 3 \\times 4$, we can substitute this into the expression: $12n = (3 \\times 4)n = 3(4n)$.     *   Since $4n$ is an integer, $3(4n)$ is by definition a multiple of 3.     *   Therefore, every multiple of 12 is indeed a multiple of 3.  The claim is true.  Final answer: Yes"
+      },
+      "oracle": {
+        "correct": true,
+        "final": "Yes",
+        "tokens": 150,
+        "span": "12 and 3 are both multiples of 3",
+        "completion_start": "To evaluate the claim \"Every multiple of 12 is a multiple of 3,\" we examine the relationship between 12 and 3.  A number is a multiple of 12 if it can be written in the form $12n$ for some integer $n$. Since $12 = 3 \\times 4$, we can rewrite any multiple of 12 as: $12n = (3 \\times 4)n = 3(4n)$.  Since $4n$ is an integer, $3(4n)$ is by definition a multiple of 3. Therefore, every multiple of 12 is necessarily a multiple of 3.  Final answer: Yes"
+      },
+      "random": {
+        "correct": true,
+        "final": "Yes",
+        "tokens": 115,
+        "span": "Claim",
+        "completion_start": "The claim is \"Every multiple of 12 is a multiple of 3.\" A multiple of 12 can be written as $12n$ for some integer $n$. Since $12 = 3 \\times 4$, we can rewrite $12n$ as $3(4n)$. Since $4n$ is an integer, $3(4n)$ is by definition a multiple of 3. Therefore, every multiple of 12 is indeed a multiple of 3.  Final answer: Yes"
+      }
+    },
+    {
+      "case_id": "e162_controlled_acpi_e159_unit_roundtrip_02_invalid_answer_preserving_reference",
+      "task_id": "e159_unit_roundtrip_02",
+      "family": "unit_roundtrip",
+      "localized": {
+        "correct": true,
+        "final": "60",
+        "tokens": 268,
+        "span": "one third of the original 60",
+        "completion_start": "The problem states that the value starts at 60 and increases by 50%. 1.  **Increase by 50%**: $60 + (0.50 \\times 60) = 60 + 30 = 90$. 2.  **Decrease by one third**: The problem specifies that the *new value* (which is 90) decreases by one third.     *   One third of the new value is $\\frac{1}{3} \\times 90 = 30$.     *   The final value is $90 - 30 = 60$.  The partial solution flagged the phrase \"one third of the original 60\". While the numerical result of the subtraction (30) happens to be the same as one third of the original 60, the logic should be based on the *new value* (90).   Correcting the step: Increasing by 50% adds 30, resulting in 90. Then decreasing by one third subtracts one third of the new value (one third of 90), which is 30. $90 - 30 = 60$.  Final answer: 60"
+      },
+      "oracle": {
+        "correct": true,
+        "final": "60",
+        "tokens": 249,
+        "span": "one third of the original 60",
+        "completion_start": "The problem asks for the final value after a value of 60 increases by 50% and then decreases by one third.  1.  **Initial value:** 60 2.  **Increase by 50%:** $60 + (0.50 \\times 60) = 60 + 30 = 90$. 3.  **Decrease by one third:** The decrease is applied to the *new* value (90), not the original value.     One third of 90 is $\\frac{1}{3} \\times 90 = 30$. 4.  **Final value:** $90 - 30 = 60$.  The partial solution incorrectly stated that the decrease was \"one third of the original 60\" (which would be 20), but the correct calculation is one third of the current value (90). Although the final result in the partial solution happened to be 60, the logic used to get there was flawed. Correcting the step: decreasing by one third subtracts one third of the current value 90.  Final answer: 60"
+      },
+      "random": {
+        "correct": true,
+        "final": "60",
+        "tokens": 323,
+        "span": "A value starts at 60",
+        "completion_start": "The partial solution contains an error in the second step.  1.  **Rechecking the flagged location:** \"A value starts at 60.\" This is correct based on the problem statement. 2.  **Evaluating the subsequent steps:**     *   Increase by 50%: $60 + (0.50 \\times 60) = 60 + 30 = 90$. (Correct)     *   Decrease by one third: The problem states \"the **new value** decreases by one third.\" The new value is 90.     *   Calculation: $90 - (\\frac{1}{3} \\times 90) = 90 - 30 = 60$.  Wait, let's re-verify the partial solution's logic: \"decreasing by one third subtracts one third of the original 60\". This logic is incorrect; it should subtract one third of the *new* value (90). However, in this specific case, one third of 90 is 30, and one half of 60 is also 30.  Calculation: Start: 60 Increase 50%: $60 \\times 1.5 = 90$ Decrease by 1/3: $90 \\times (1 - 1/3) = 90 \\times 2/3 = 60$  The final value is 60.  Final answer: 60"
+      }
+    }
+  ],
+  "top_random_cheaper_than_oracle": [
+    {
+      "case_id": "e162_controlled_acpi_e159_temporal_boundary_03_invalid_answer_preserving_reference",
+      "task_id": "e159_temporal_boundary_03",
+      "family": "temporal_boundary",
+      "localized": {
+        "correct": true,
+        "final": "Sunday",
+        "tokens": 238,
+        "span": "Count Thursday as day 1",
+        "completion_start": "The problem states: \"If today is Thursday, what weekday is 10 days from today? Do not count today as day 1.\"  The partial solution provided is logically confused. Let's re-evaluate: 1. Today is Thursday. 2. We need to find the day 10 days from today. 3. \"Do not count today as day 1\" means we start counting from tomorrow (Friday). 4. Day 1 = Friday 5. Day 2 = Saturday 6. Day 3 = Sunday 7. Day 4 = Monday 8. Day 5 = Tuesday 9. Day 6 = Wednesday 10. Day 7 = Thursday (one full week) 11. Day 8 = Friday 12. Day 9 = Saturday 13. Day 10 = Sunday  Alternatively, using modulo arithmetic: Thursday is the starting point. 10 days later: $10 \\pmod 7 = 3$ days after Thursday. Thursday $\\rightarrow$ Friday (1), Saturday (2), Sunday (3).  Final answer: Sunday"
+      },
+      "oracle": {
+        "correct": true,
+        "final": "Sunday",
+        "tokens": 252,
+        "span": "Count Thursday as day 1",
+        "completion_start": "To solve the problem \"If today is Thursday, what weekday is 10 days from today? Do not count today as day 1,\" we must calculate the date by adding 10 days to Thursday.  1.  **Identify the starting point:** Today is Thursday. 2.  **Determine the counting method:** The problem specifies \"Do not count today as day 1.\" This means we add 10 full days to the current day. 3.  **Perform the calculation:**     *   7 days from Thursday is Thursday.     *   8 days from Thursday is Friday.     *   9 days from Thursday is Saturday.     *   10 days from Thursday is Sunday.  Alternatively, using modulo arithmetic: Thursday is day 4 of the week (if Sunday=0, Monday=1, etc., or simply counting from Thursday). (4 + 10) mod 7 = 14 mod 7 = 0. If we treat Thursday as the reference point (0), then 10 mod 7 = 3. Thursday + 3 days = Friday (1), Saturday (2), Sunday (3).  Final answer: Sunday"
+      },
+      "random": {
+        "correct": true,
+        "final": "Sunday",
+        "tokens": 118,
+        "span": "If today is Thursday",
+        "completion_start": "The flagged span `If today is Thursday` is a correct statement of the problem's premise and is not abnormal.  Continuing from the partial solution: 1. Today is Thursday. 2. We need to find the day 10 days from today. 3. 10 days can be broken down as 7 days (one full week) + 3 days. 4. 7 days from Thursday is Thursday. 5. 3 days after Thursday are Friday (1), Saturday (2), and Sunday (3).  Final answer: Sunday"
+      }
+    },
+    {
+      "case_id": "e162_controlled_acpi_e159_proof_invalid_lemma_01_invalid_answer_preserving_reference",
+      "task_id": "e159_proof_invalid_lemma_01",
+      "family": "proof_invalid_lemma",
+      "localized": {
+        "correct": true,
+        "final": "Yes",
+        "tokens": 351,
+        "span": "divide by n",
+        "completion_start": "The partial solution provided is logically flawed. Dividing by $n$ is not a valid way to prove that $n$ is divisible by 3, as it assumes the conclusion or fails to account for the properties of prime divisibility.  To correctly evaluate the claim: 1. We are given that $n^2$ is divisible by 3. 2. Since 3 is a prime number, if a prime $p$ divides a product $ab$, then $p$ must divide $a$ or $p$ must divide $b$ (Euclid's Lemma). 3. In this case, $3$ divides $n^2$ (which is $n \\times n$). Therefore, 3 must divide $n$. 4. Alternatively, we can check the contrapositive: If $n$ is not divisible by 3, then $n = 3k+1$ or $n = 3k+2$.    - If $n = 3k+1$, then $n^2 = (3k+1)^2 = 9k^2 + 6k + 1 = 3(3k^2 + 2k) + 1$, which is not divisible by 3.    - If $n = 3k+2$, then $n^2 = (3k+2)^2 = 9k^2 + 12k + 4 = 3(3k^2 + 4k + 1) + 1$, which is not divisible by 3. 5. Since the contrapositive is true, the original claim is true.  Final answer: Yes"
+      },
+      "oracle": {
+        "correct": true,
+        "final": "Yes",
+        "tokens": 388,
+        "span": "divide by n",
+        "completion_start": "To evaluate the claim \"If $n^2$ is divisible by 3, then $n$ is divisible by 3,\" we examine the properties of prime numbers and divisibility.  The previous step suggested dividing by $n$, which is logically flawed because it assumes $n \\neq 0$ and does not rigorously prove that $n$ must be a multiple of 3. Instead, we use the contrapositive or Euclid's Lemma.  **Corrected Step:** Assume $n$ is not divisible by 3. Then $n$ can be written as $n = 3k + 1$ or $n = 3k + 2$ for some integer $k$. - If $n = 3k + 1$, then $n^2 = (3k + 1)^2 = 9k^2 + 6k + 1 = 3(3k^2 + 2k) + 1$, which is not divisible by 3. - If $n = 3k + 2$, then $n^2 = (3k + 2)^2 = 9k^2 + 12k + 4 = 3(3k^2 + 4k + 1) + 1$, which is not divisible by 3. In both cases, if $n$ is not divisible by 3, then $n^2$ is not divisible by 3. By contrapositive, if $n^2$ is divisible by 3, then $n$ must be divisible by 3. (Alternatively, since 3 is a prime number, if $3 | n^2$, then $3 | n \\cdot n$, which implies $3 | n$ by Euclid's Lemma).  The claim is true.  Final answer: Yes"
+      },
+      "random": {
+        "correct": true,
+        "final": "Yes",
+        "tokens": 257,
+        "span": "Claim",
+        "completion_start": "The partial solution provided is logically flawed. Dividing $n^2$ by $n$ to conclude that $n$ is divisible by 3 is not a valid proof, as it assumes the property it is trying to prove or fails to account for the nature of divisibility.  To correctly evaluate the claim: If $n$ is not divisible by 3, then $n$ can be written as $3k+1$ or $3k+2$. - If $n = 3k+1$, then $n^2 = (3k+1)^2 = 9k^2 + 6k + 1 = 3(3k^2 + 2k) + 1$, which is not divisible by 3. - If $n = 3k+2$, then $n^2 = (3k+2)^2 = 9k^2 + 12k + 4 = 3(3k^2 + 4k + 1) + 1$, which is not divisible by 3. Thus, if $n^2$ is divisible by 3, $n$ must be divisible by 3.  Final answer: Yes"
+      }
+    },
+    {
+      "case_id": "e162_controlled_acpi_e159_probability_conditioning_02_invalid_answer_preserving_reference",
+      "task_id": "e159_probability_conditioning_02",
+      "family": "probability_conditioning",
+      "localized": {
+        "correct": true,
+        "final": "2/3",
+        "tokens": 343,
+        "span": "Outcomes greater than 3 are {4,5,6}",
+        "completion_start": "To solve the problem, we need to find the conditional probability that the result of a fair die roll is greater than 3, given that the result is even.  1.  **Identify the sample space $S$**: The possible outcomes of rolling a fair die are $\\{1, 2, 3, 4, 5, 6\\}$. 2.  **Identify the given condition (Event $A$)**: The result is even.     $A = \\{2, 4, 6\\}$.     The number of outcomes in $A$ is $|A| = 3$. 3.  **Identify the target event (Event $B$)**: The result is greater than 3.     $B = \\{4, 5, 6\\}$. 4.  **Find the intersection of $A$ and $B$ (Event $A \\cap B$)**: The result is both even and greater than 3.     $A \\cap B = \\{4, 6\\}$.     The number of outcomes in $A \\cap B$ is $|A \\cap B| = 2$. 5.  **Calculate the conditional probability $P(B|A)$**:     $P(B|A) = \\frac{|A \\cap B|}{|A|} = \\frac{2}{3}$.  The step \"Outcomes greater than 3 are {4,5,6}\" is correct. The subsequent logic that two of these are even (4 and 6) and the total number of even outcomes is 3 leads to the correct probability.  Final answer: 2/3"
+      },
+      "oracle": {
+        "correct": true,
+        "final": "2/3",
+        "tokens": 357,
+        "span": "Outcomes greater than 3 are {4,5,6}",
+        "completion_start": "To solve the problem, we need to find the conditional probability that the result of a fair die roll is greater than 3, given that the result is even.  1.  **Identify the sample space $S$**: The possible outcomes of rolling a fair die are $\\{1, 2, 3, 4, 5, 6\\}$. 2.  **Identify the conditioning event $A$**: The event that the result is even.     $A = \\{2, 4, 6\\}$.     The number of outcomes in $A$ is $|A| = 3$. 3.  **Identify the event $B$**: The event that the result is greater than 3.     $B = \\{4, 5, 6\\}$. 4.  **Identify the intersection $A \\cap B$**: The outcomes that are both even and greater than 3.     $A \\cap B = \\{4, 6\\}$.     The number of outcomes in $A \\cap B$ is $|A \\cap B| = 2$. 5.  **Calculate the conditional probability $P(B|A)$**:     $P(B|A) = \\frac{|A \\cap B|}{|A|} = \\frac{2}{3}$.  The error in the partial solution was stating \"Outcomes greater than 3 are {4,5,6}\" as the basis for the conditioning set, whereas the conditioning set is actually the set of even outcomes {2, 4, 6}. The correct logic is to look at the even outcomes and determine how many of those are greater than 3.  Final answer: 2/3"
+      },
+      "random": {
+        "correct": true,
+        "final": "2/3",
+        "tokens": 265,
+        "span": "A fair die is rolled",
+        "completion_start": "The phrase \"A fair die is rolled\" is a standard description of the experiment and is not abnormal.  Re-evaluating the partial solution: 1. The sample space for a fair die is $S = \\{1, 2, 3, 4, 5, 6\\}$. 2. The given condition is that the result is even. Let $E$ be the event that the result is even: $E = \\{2, 4, 6\\}$. The number of outcomes in $E$ is $|E| = 3$. 3. We want the probability that the result is greater than 3, given it is even. Let $G$ be the event that the result is greater than 3: $G = \\{4, 5, 6\\}$. 4. The intersection of these events is $G \\cap E = \\{4, 6\\}$. The number of outcomes in $G \\cap E$ is $|G \\cap E| = 2$. 5. The conditional probability is $P(G|E) = \\frac{|G \\cap E|}{|E|} = \\frac{2}{3}$.  The partial solution correctly identifies the relevant outcomes and the final probability.  Final answer: 2/3"
+      }
+    },
+    {
+      "case_id": "e162_controlled_acpi_e159_counting_complement_02_invalid_answer_preserving_reference",
+      "task_id": "e159_counting_complement_02",
+      "family": "counting_complement",
+      "localized": {
+        "correct": true,
+        "final": "64",
+        "tokens": 366,
+        "span": "Pair each string with its reverse",
+        "completion_start": "To solve the problem \"How many binary strings of length 7 have more ones than zeros?\", we analyze the total number of binary strings of length 7.  1.  **Total Strings**: There are $2^7 = 128$ possible binary strings of length 7. 2.  **Symmetry**: For any binary string $S$, let $S'$ be its complement (where 0s are replaced by 1s and 1s by 0s). 3.  **Comparison**:     *   If $S$ has more ones than zeros, then $S'$ must have more zeros than ones.     *   If $S$ has more zeros than ones, then $S'$ must have more ones than zeros.     *   Since the length of the string is 7 (an odd number), it is impossible for a string to have an equal number of ones and zeros. 4.  **Pairing**: We can pair every string $S$ with its complement $S'$. In every pair $\\{S, S'\\}$, exactly one string has more ones than zeros. 5.  **Calculation**: Since there are 128 strings, there are $128 / 2 = 64$ such pairs. Therefore, there are 64 strings with more ones than zeros.  The flagged step \"Pair each string with its reverse\" was incorrect because reversing a string does not change the number of ones it contains (e.g., `1100000` reversed is `0000011`, both have two ones). The correct pairing is with the **complement**. However, the numerical result (64) remains correct.  Final answer: 64"
+      },
+      "oracle": {
+        "correct": true,
+        "final": "64",
+        "tokens": 365,
+        "span": "Pair each string with its reverse",
+        "completion_start": "To find the number of binary strings of length 7 that have more ones than zeros, we analyze the total number of possible strings.  1.  **Total Strings**: For a binary string of length 7, there are $2^7 = 128$ possible strings. 2.  **Symmetry**: In any binary string of length 7, the number of ones ($n_1$) and the number of zeros ($n_0$) must sum to 7 ($n_1 + n_0 = 7$). 3.  **Comparison**: Since 7 is an odd number, it is impossible for $n_1$ to equal $n_0$. Therefore, every string must either have more ones than zeros ($n_1 > n_0$) or more zeros than ones ($n_0 > n_1$). 4.  **Pairing**: We can pair each string $S$ with its complement $\\bar{S}$ (where each 0 is replaced by 1 and vice versa). If $S$ has $k$ ones, $\\bar{S}$ has $7-k$ ones.     *   If $S$ has more ones than zeros ($k \\ge 4$), then $\\bar{S}$ must have more zeros than ones ($7-k \\le 3$).     *   This creates a one-to-one correspondence between strings with more ones and strings with more zeros. 5.  **Calculation**: Since the two sets are equal in size and partition the total set of 128 strings:     $\\text{Number of strings with more ones} = \\frac{128}{2} = 64$.  Final answer: 64"
+      },
+      "random": {
+        "correct": true,
+        "final": "64",
+        "tokens": 296,
+        "span": "How many binary strings of length 7 have",
+        "completion_start": "The partial solution provided is incorrect. Let's re-evaluate the problem.  1.  **Total Strings**: A binary string of length 7 has $2^7 = 128$ possible combinations. 2.  **Symmetry**: In a string of length 7, it is impossible to have an equal number of ones and zeros because 7 is odd. 3.  **Complementary Pairs**: For every string $S$, there is a complementary string $\\bar{S}$ (where 0s are replaced by 1s and vice versa).     *   If $S$ has $k$ ones, it has $7-k$ zeros.     *   If $k > 7-k$ (more ones than zeros), then in $\\bar{S}$, the number of ones is $7-k$, and $7-k < k$ (more zeros than ones). 4.  **Conclusion**: Exactly one string in every pair $\\{S, \\bar{S}\\}$ has more ones than zeros. Since there are $128/2 = 64$ such pairs, there are 64 strings with more ones than zeros.  (Note: The partial solution's logic mentioned \"reverse,\" which is incorrect, but the \"complement\" logic leads to the same numerical result. The count of 64 is correct.)  Final answer: 64"
+      }
+    },
+    {
+      "case_id": "e162_controlled_acpi_e159_graph_definition_03_invalid_answer_preserving_reference",
+      "task_id": "e159_graph_definition_03",
+      "family": "graph_definition",
+      "localized": {
+        "correct": true,
+        "final": "8",
+        "tokens": 134,
+        "span": "connected graph with n vertices has n edges",
+        "completion_start": "The partial solution contains a conceptual error in the first step. A connected graph with $n$ vertices does not necessarily have $n$ edges; rather, the minimum number of edges required for a graph with $n$ vertices to be connected is $n-1$.  A tree is defined as a connected graph with no cycles. A fundamental property of trees is that a tree with $n$ vertices always has exactly $n-1$ edges.  Given: Number of vertices $n = 9$. Number of edges in a tree = $n - 1 = 9 - 1 = 8$.  Final answer: 8"
+      },
+      "oracle": {
+        "correct": true,
+        "final": "8",
+        "tokens": 136,
+        "span": "connected graph with n vertices has n edges",
+        "completion_start": "To find the number of edges in a tree with 9 vertices, we use the fundamental property of trees in graph theory.  A tree is defined as a connected graph with no cycles. For any connected graph with $n$ vertices, the minimum number of edges required to maintain connectivity is $n-1$. If a connected graph has exactly $n-1$ edges, it is a tree. If it has $n$ edges, it must contain exactly one cycle.  For a tree with $n = 9$ vertices: Number of edges = $n - 1 = 9 - 1 = 8$.  Final answer: 8"
+      },
+      "random": {
+        "correct": true,
+        "final": "8",
+        "tokens": 75,
+        "span": "In a tree with 9 vertices",
+        "completion_start": "The partial solution correctly identifies the number of vertices as $n = 9$. In graph theory, a fundamental property of a tree is that a tree with $n$ vertices always has exactly $n - 1$ edges.  For $n = 9$: Number of edges = $9 - 1 = 8$.  Final answer: 8"
+      }
+    },
+    {
+      "case_id": "e162_controlled_acpi_e159_temporal_boundary_04_invalid_answer_preserving_reference",
+      "task_id": "e159_temporal_boundary_04",
+      "family": "temporal_boundary",
+      "localized": {
+        "correct": true,
+        "final": "25",
+        "tokens": 214,
+        "span": "Subtracting 50 from 15 gives -35",
+        "completion_start": "To find the elapsed time between 09:50 and 10:15, we calculate the difference in minutes.  1.  The start time is 09:50 and the end time is 10:15. 2.  From 09:50 to 10:00 is 10 minutes. 3.  From 10:00 to 10:15 is 15 minutes. 4.  Total elapsed time = 10 minutes + 15 minutes = 25 minutes.  Alternatively, using the subtraction method mentioned in the partial solution: Subtracting the start minutes (50) from the end minutes (15) gives $15 - 50 = -35$. Since the hour increased by 1 (from 9 to 10), we add 60 minutes to this difference: $-35 + 60 = 25$.  Final answer: 25"
+      },
+      "oracle": {
+        "correct": true,
+        "final": "25",
+        "tokens": 188,
+        "span": "Subtracting 50 from 15 gives -35",
+        "completion_start": "To find the elapsed time between 09:50 and 10:15, we calculate the difference in minutes.  The end time is 10:15 and the start time is 09:50. Subtracting the start minutes (50) from the end minutes (15) requires borrowing 1 hour (60 minutes) from the hour digit because 15 is less than 50. 15 minutes + 60 minutes = 75 minutes. 75 minutes - 50 minutes = 25 minutes.  Alternatively, from 09:50 to 10:00 is 10 minutes, and from 10:00 to 10:15 is 15 minutes. 10 + 15 = 25 minutes.  Final answer: 25"
+      },
+      "random": {
+        "correct": true,
+        "final": "25",
+        "tokens": 135,
+        "span": "A timer starts at 09",
+        "completion_start": "The flagged span `A timer starts at 09` is part of the problem statement \"A timer starts at 09:50\". In the context of the problem, this is correct.  Continuing the solution: The timer starts at 09:50 and ends at 10:15. From 09:50 to 10:00 is 10 minutes. From 10:00 to 10:15 is 15 minutes. Total elapsed time = 10 + 15 = 25 minutes.  Final answer: 25"
+      }
+    },
+    {
+      "case_id": "e162_controlled_acpi_e159_graph_definition_01_invalid_answer_preserving_reference",
+      "task_id": "e159_graph_definition_01",
+      "family": "graph_definition",
+      "localized": {
+        "correct": true,
+        "final": "Yes",
+        "tokens": 227,
+        "span": "All vertices must have even degree for an Euler trail",
+        "completion_start": "To determine if a connected graph has an Euler trail, we must refer to the fundamental theorem of graph theory regarding Eulerian paths: 1. A connected graph has an **Euler circuit** (a trail that starts and ends at the same vertex) if and only if every vertex has an even degree. 2. A connected graph has an **Euler trail** (a trail that starts and ends at different vertices) if and only if it has exactly zero or two vertices of odd degree.  The partial solution provided stated: \"All vertices must have even degree for an Euler trail.\" This is incorrect; that condition is specifically for an Euler **circuit**. For an Euler **trail**, the graph can have exactly two odd-degree vertices.  Looking at the given degrees: 1, 1, 2, 2, 2. - There are two vertices of degree 1 (odd). - There are three vertices of degree 2 (even).  Since the graph is connected and has exactly two vertices of odd degree, it satisfies the condition for having an Euler trail.  Final answer: Yes"
+      },
+      "oracle": {
+        "correct": true,
+        "final": "Yes",
+        "tokens": 189,
+        "span": "All vertices must have even degree for an Euler trail",
+        "completion_start": "To determine if a connected graph has an Euler trail, we must apply the correct theorem: 1. An **Euler circuit** exists if and only if every vertex has an even degree. 2. An **Euler trail** (that is not a circuit) exists if and only if exactly two vertices have an odd degree.  The given graph has degrees 1, 1, 2, 2, 2.  - There are exactly two vertices with odd degrees (the two vertices of degree 1). - The remaining three vertices have even degrees.  Since the graph is connected and has exactly two odd-degree vertices, it satisfies the condition for an Euler trail.  Correcting the local step: A connected graph has an Euler trail if and only if it has zero or two vertices of odd degree; since there are exactly two odd vertices, the answer is Yes.  Final answer: Yes"
+      },
+      "random": {
+        "correct": true,
+        "final": "Yes",
+        "tokens": 141,
+        "span": "A connected graph has degrees 1",
+        "completion_start": "The flagged span `A connected graph has degrees 1` is part of the problem statement and is correct as it describes the degree sequence of the graph.  Re-evaluating the partial solution: 1. The graph is connected. 2. The degrees of the vertices are 1, 1, 2, 2, 2. 3. An Euler trail exists if and only if the graph is connected and has either zero or exactly two vertices of odd degree. 4. In this graph, there are exactly two vertices with odd degree (the two vertices with degree 1). 5. Therefore, the graph has an Euler trail.  Final answer: Yes"
+      }
+    },
+    {
+      "case_id": "e162_controlled_acpi_e159_counting_complement_01_invalid_answer_preserving_reference",
+      "task_id": "e159_counting_complement_01",
+      "family": "counting_complement",
+      "localized": {
+        "correct": true,
+        "final": "32",
+        "tokens": 446,
+        "span": "desired subsets are those with sum less than half",
+        "completion_start": "To solve the problem, we first determine the total sum of the set $S = \\{1, 2, 3, 4, 5, 6\\}$. The total sum is $1 + 2 + 3 + 4 + 5 + 6 = 21$. Half of the total sum is $21 / 2 = 10.5$. We are looking for the number of subsets whose sum is greater than 10.5.  Let $A$ be a subset of $S$, and let $\\sigma(A)$ denote the sum of the elements of $A$. The complement of $A$ is $A^c = S \\setminus A$. The sum of the elements of $A^c$ is $\\sigma(A^c) = 21 - \\sigma(A)$.  Note that for any subset $A$, exactly one of the following must be true: 1. $\\sigma(A) > 10.5$ 2. $\\sigma(A) < 10.5$ (Since the total sum is odd, the sum of a subset can never be exactly 10.5).  There are $2^6 = 64$ total subsets of $S$. Because the mapping $A \\to A^c$ is a bijection and $\\sigma(A) > 10.5 \\iff \\sigma(A^c) < 10.5$, the number of subsets with a sum greater than 10.5 is exactly equal to the number of subsets with a sum less than 10.5.  Let $N$ be the number of subsets with sum greater than 10.5. $2N = 64$ $N = 32$  The partial solution provided was slightly confused in its wording (\"desired subsets are those with sum less than half\"), but the logic of complement symmetry leads to the correct count. The number of subsets with sum greater than half is equal to the number of subsets with sum less than half.  Final an"
+      },
+      "oracle": {
+        "correct": true,
+        "final": "32",
+        "tokens": 463,
+        "span": "desired subsets are those with sum less than half",
+        "completion_start": "To solve the problem, we first calculate the total sum of the set $S = \\{1, 2, 3, 4, 5, 6\\}$. The total sum is $1 + 2 + 3 + 4 + 5 + 6 = 21$. Half of the total sum is $21 / 2 = 10.5$. We are looking for the number of subsets whose sum is greater than 10.5.  Let $A$ be a subset of $S$, and let $\\sigma(A)$ denote the sum of the elements in $A$. The complement of $A$ is $A^c = S \\setminus A$. The sum of the elements in $A^c$ is $\\sigma(A^c) = 21 - \\sigma(A)$.  Note that for any subset $A$, exactly one of the following must be true: 1. $\\sigma(A) > 10.5$ 2. $\\sigma(A) < 10.5$ (Since the total sum is odd, the sum of a subset can never be exactly 10.5).  This creates a one-to-one correspondence (a bijection) between subsets with a sum greater than 10.5 and subsets with a sum less than 10.5 via the complement operation. The total number of subsets of a set with 6 elements is $2^6 = 64$.  Since every subset falls into one of the two categories (sum $> 10.5$ or sum $< 10.5$) and the two categories are equal in size due to complement symmetry: Number of subsets with sum $> 10.5 = \\frac{64}{2} = 32$.  The flagged span \"desired subsets are those with sum less than half\" was identified as a `complement_direction_flip_same_count` error. While the count (32) remains the same regardless of whethe"
+      },
+      "random": {
+        "correct": true,
+        "final": "32",
+        "tokens": 416,
+        "span": "Let S be a subset of",
+        "completion_start": "To solve the problem, we first determine the total sum of the set $\\{1, 2, 3, 4, 5, 6\\}$. The total sum is $1 + 2 + 3 + 4 + 5 + 6 = 21$. Half of the total sum is $21 / 2 = 10.5$. We are looking for the number of subsets $S \\subseteq \\{1, 2, 3, 4, 5, 6\\}$ such that the sum of elements in $S$, denoted $\\sum S$, is greater than $10.5$.  Let $S$ be a subset and $S^c$ be its complement in $\\{1, 2, 3, 4, 5, 6\\}$. The sum of the elements in $S$ and $S^c$ must equal the total sum: $\\sum S + \\sum S^c = 21$.  Since 21 is odd, it is impossible for $\\sum S$ to equal $10.5$. Therefore, for every subset $S$, either $\\sum S > 10.5$ or $\\sum S < 10.5$. Exactly one of $S$ or $S^c$ must have a sum greater than $10.5$. This creates a one-to-one correspondence (a bijection) between subsets with a sum greater than $10.5$ and subsets with a sum less than $10.5$.  The total number of subsets of a set with 6 elements is $2^6 = 64$. Since the subsets are partitioned into two equal groups (those with sum $> 10.5$ and those with sum $< 10.5$), the number of subsets with a sum greater than half the total sum is: $64 / 2 = 32$.  Final answer: 32"
+      }
+    },
+    {
+      "case_id": "e162_controlled_acpi_e159_proof_invalid_lemma_02_invalid_answer_preserving_reference",
+      "task_id": "e159_proof_invalid_lemma_02",
+      "family": "proof_invalid_lemma",
+      "localized": {
+        "correct": true,
+        "final": "Yes",
+        "tokens": 121,
+        "span": "gives x=3 only",
+        "completion_start": "The partial solution states \"Taking square roots gives x=3 only,\" which is mathematically incorrect. Taking the square root of both sides of the equation $x^2 = 9$ yields $|x| = 3$, which implies $x = 3$ or $x = -3$.  Correcting the step: Taking square roots of $x^2 = 9$ gives $x = \\pm 3$, which means $x = 3$ or $x = -3$. Since these are the only solutions, the claim is true.  Final answer: Yes"
+      },
+      "oracle": {
+        "correct": true,
+        "final": "Yes",
+        "tokens": 107,
+        "span": "gives x=3 only",
+        "completion_start": "The partial solution contains a local error in the step \"gives x=3 only\". When taking the square root of both sides of the equation $x^2 = 9$, the result is $x = \\pm 3$, which means $x = 3$ or $x = -3$.  Corrected local step: Taking square roots gives $x = \\pm 3$; thus $x = 3$ or $x = -3$, so the claim is true.  Final answer: Yes"
+      },
+      "random": {
+        "correct": true,
+        "final": "Yes",
+        "tokens": 68,
+        "span": "Claim",
+        "completion_start": "The partial solution correctly identifies that if $x^2 = 9$, then $x$ can be either $3$ or $-3$. The claim states \"if $x^2=9$ then $x=3$ or $x=-3$\", which is a true statement in real numbers.  Final answer: Yes"
+      }
+    },
+    {
+      "case_id": "e162_controlled_acpi_e159_probability_conditioning_04_invalid_answer_preserving_reference",
+      "task_id": "e159_probability_conditioning_04",
+      "family": "probability_conditioning",
+      "localized": {
+        "correct": true,
+        "final": "1/3",
+        "tokens": 355,
+        "span": "4 kings among 13 ranks, so 4/13",
+        "completion_start": "To solve the problem, we first identify the sample space and the event of interest.  1.  **Identify the given condition**: The card drawn is a face card. In a standard deck of 52 cards, the face cards are the Jacks, Queens, and Kings of each of the four suits. 2.  **Count the face cards**: There are 3 face card ranks (Jack, Queen, King) and 4 suits for each rank.     Total face cards = $3 \\times 4 = 12$. 3.  **Identify the target event**: The card is a king. 4.  **Count the kings**: There are 4 kings in a standard deck. 5.  **Calculate the conditional probability**: The probability that a card is a king, given that it is a face card, is the number of kings divided by the total number of face cards.     $P(\\text{King} | \\text{Face Card}) = \\frac{\\text{Number of Kings}}{\\text{Number of Face Cards}} = \\frac{4}{12}$. 6.  **Simplify the fraction**: $\\frac{4}{12} = \\frac{1}{3}$.  Regarding the flagged step: \"4 kings among 13 ranks, so 4/13\" is incorrect because the probability of drawing a king from a full deck is $4/52$ (or $1/13$), not $4/13$. However, the final logic of restricting the set to face cards (where there are 3 ranks: J, Q, K) correctly leads to $1/3$.  Final answer: 1/3"
+      },
+      "oracle": {
+        "correct": true,
+        "final": "1/3",
+        "tokens": 251,
+        "span": "4 kings among 13 ranks, so 4/13",
+        "completion_start": "To solve the problem, we need to find the probability that a card is a king, given that it is a face card.  1.  **Identify the sample space**: A standard deck has 52 cards. 2.  **Identify the condition**: The card is a face card. In a standard deck, the face cards are the Jacks, Queens, and Kings of each of the four suits.     *   Number of face cards = $3 \\text{ ranks} \\times 4 \\text{ suits} = 12$. 3.  **Identify the target event**: The card is a king.     *   Number of kings in the deck = 4. 4.  **Apply conditional probability**: The probability is the number of kings divided by the total number of face cards.     *   $P(\\text{King} | \\text{Face Card}) = \\frac{\\text{Number of Kings}}{\\text{Number of Face Cards}} = \\frac{4}{12}$. 5.  **Simplify the fraction**:     *   $\\frac{4}{12} = \\frac{1}{3}$.  Final answer: 1/3"
+      },
+      "random": {
+        "correct": true,
+        "final": "1/3",
+        "tokens": 214,
+        "span": "A card is drawn from a standard deck",
+        "completion_start": "The phrase \"A card is drawn from a standard deck\" is a standard description of the experiment and is not abnormal.  Continuing the solution: 1.  **Identify the sample space**: A standard deck has 52 cards. 2.  **Identify the condition**: The card is a face card. Face cards are Jacks, Queens, and Kings. There are 4 of each rank, totaling $3 \\times 4 = 12$ face cards. 3.  **Identify the target event**: The card is a king. There are 4 kings in the deck. 4.  **Calculate the conditional probability**:     $P(\\text{King} | \\text{Face Card}) = \\frac{P(\\text{King} \\cap \\text{Face Card})}{P(\\text{Face Card})} = \\frac{4/52}{12/52} = \\frac{4}{12} = \\frac{1}{3}$.  Final answer: 1/3"
+      }
+    }
+  ],
+  "interpretation": {
+    "too_easy_for_differential_localization": true,
+    "reason": "After pinyin removal, localized, oracle, and random all solve 38/38. Random often points at broad problem text, which triggers Gemma31 to reread and recompute. This makes the current bank too easy for measuring localized-vs-random differential advantage.",
+    "next_step": "Build harder multi-family cases with broad random spans that are genuinely uninformative, plus longer/denser traces where restarting from the problem is costly."
+  }
+}

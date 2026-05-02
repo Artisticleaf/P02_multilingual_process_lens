@@ -1,0 +1,2160 @@
+{
+  "created_at": "2026-04-30T18:41:30",
+  "experiment": "E136_suspicious_confidence_adaptive_check",
+  "leakage_all_passed": true,
+  "models": [
+    {
+      "acceptance": {
+        "plain_always_global_check": {
+          "all": {
+            "k": 49,
+            "n": 60,
+            "rate": 0.8166666666666667,
+            "wilson95": [
+              0.7008000677353371,
+              0.8944231096286387
+            ]
+          },
+          "strict_invalid": {
+            "k": 5,
+            "n": 12,
+            "rate": 0.4166666666666667,
+            "wilson95": [
+              0.19325746190524654,
+              0.6804926643446272
+            ]
+          },
+          "strict_valid": {
+            "k": 44,
+            "n": 48,
+            "rate": 0.9166666666666666,
+            "wilson95": [
+              0.8044643483893369,
+              0.9671167756500444
+            ]
+          }
+        },
+        "plain_base_no_check": {
+          "all": {
+            "k": 50,
+            "n": 60,
+            "rate": 0.8333333333333334,
+            "wilson95": [
+              0.7196814850279217,
+              0.9068692279867897
+            ]
+          },
+          "strict_invalid": {
+            "k": 6,
+            "n": 12,
+            "rate": 0.5,
+            "wilson95": [
+              0.2537781703934222,
+              0.7462218296065778
+            ]
+          },
+          "strict_valid": {
+            "k": 44,
+            "n": 48,
+            "rate": 0.9166666666666666,
+            "wilson95": [
+              0.8044643483893369,
+              0.9671167756500444
+            ]
+          }
+        },
+        "plain_hidden_global_check": {
+          "all": {
+            "k": 49,
+            "n": 60,
+            "rate": 0.8166666666666667,
+            "wilson95": [
+              0.7008000677353371,
+              0.8944231096286387
+            ]
+          },
+          "strict_invalid": {
+            "k": 5,
+            "n": 12,
+            "rate": 0.4166666666666667,
+            "wilson95": [
+              0.19325746190524654,
+              0.6804926643446272
+            ]
+          },
+          "strict_valid": {
+            "k": 44,
+            "n": 48,
+            "rate": 0.9166666666666666,
+            "wilson95": [
+              0.8044643483893369,
+              0.9671167756500444
+            ]
+          }
+        },
+        "plain_hidden_local_check": {
+          "all": {
+            "k": 53,
+            "n": 60,
+            "rate": 0.8833333333333333,
+            "wilson95": [
+              0.7782097940014187,
+              0.9423235259654995
+            ]
+          },
+          "strict_invalid": {
+            "k": 5,
+            "n": 12,
+            "rate": 0.4166666666666667,
+            "wilson95": [
+              0.19325746190524654,
+              0.6804926643446272
+            ]
+          },
+          "strict_valid": {
+            "k": 48,
+            "n": 48,
+            "rate": 1.0,
+            "wilson95": [
+              0.9258973488472576,
+              0.9999999999999999
+            ]
+          }
+        },
+        "strict_always_global_check": {
+          "all": {
+            "k": 49,
+            "n": 60,
+            "rate": 0.8166666666666667,
+            "wilson95": [
+              0.7008000677353371,
+              0.8944231096286387
+            ]
+          },
+          "strict_invalid": {
+            "k": 5,
+            "n": 12,
+            "rate": 0.4166666666666667,
+            "wilson95": [
+              0.19325746190524654,
+              0.6804926643446272
+            ]
+          },
+          "strict_valid": {
+            "k": 44,
+            "n": 48,
+            "rate": 0.9166666666666666,
+            "wilson95": [
+              0.8044643483893369,
+              0.9671167756500444
+            ]
+          }
+        },
+        "strict_base_no_check": {
+          "all": {
+            "k": 45,
+            "n": 60,
+            "rate": 0.75,
+            "wilson95": [
+              0.6276768905451521,
+              0.8422361442158816
+            ]
+          },
+          "strict_invalid": {
+            "k": 1,
+            "n": 12,
+            "rate": 0.08333333333333333,
+            "wilson95": [
+              0.014864709450773478,
+              0.35388592179859524
+            ]
+          },
+          "strict_valid": {
+            "k": 44,
+            "n": 48,
+            "rate": 0.9166666666666666,
+            "wilson95": [
+              0.8044643483893369,
+              0.9671167756500444
+            ]
+          }
+        },
+        "strict_hidden_global_check": {
+          "all": {
+            "k": 49,
+            "n": 60,
+            "rate": 0.8166666666666667,
+            "wilson95": [
+              0.7008000677353371,
+              0.8944231096286387
+            ]
+          },
+          "strict_invalid": {
+            "k": 5,
+            "n": 12,
+            "rate": 0.4166666666666667,
+            "wilson95": [
+              0.19325746190524654,
+              0.6804926643446272
+            ]
+          },
+          "strict_valid": {
+            "k": 44,
+            "n": 48,
+            "rate": 0.9166666666666666,
+            "wilson95": [
+              0.8044643483893369,
+              0.9671167756500444
+            ]
+          }
+        },
+        "strict_hidden_local_check": {
+          "all": {
+            "k": 53,
+            "n": 60,
+            "rate": 0.8833333333333333,
+            "wilson95": [
+              0.7782097940014187,
+              0.9423235259654995
+            ]
+          },
+          "strict_invalid": {
+            "k": 5,
+            "n": 12,
+            "rate": 0.4166666666666667,
+            "wilson95": [
+              0.19325746190524654,
+              0.6804926643446272
+            ]
+          },
+          "strict_valid": {
+            "k": 48,
+            "n": 48,
+            "rate": 1.0,
+            "wilson95": [
+              0.9258973488472576,
+              0.9999999999999999
+            ]
+          }
+        }
+      },
+      "by_variant": {
+        "clean_valid": {
+          "manual_strict_valid_rate": 1.0,
+          "n": 12,
+          "plain_base_accept": {
+            "k": 11,
+            "n": 12,
+            "rate": 0.9166666666666666,
+            "wilson95": [
+              0.6461140782014047,
+              0.9851352905492264
+            ]
+          },
+          "plain_hidden_local_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "policy_trigger": {
+            "k": 1,
+            "n": 12,
+            "rate": 0.08333333333333333,
+            "wilson95": [
+              0.014864709450773478,
+              0.35388592179859524
+            ]
+          },
+          "strict_base_accept": {
+            "k": 11,
+            "n": 12,
+            "rate": 0.9166666666666666,
+            "wilson95": [
+              0.6461140782014047,
+              0.9851352905492264
+            ]
+          },
+          "strict_hidden_local_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          }
+        },
+        "low_conf_valid": {
+          "manual_strict_valid_rate": 1.0,
+          "n": 12,
+          "plain_base_accept": {
+            "k": 11,
+            "n": 12,
+            "rate": 0.9166666666666666,
+            "wilson95": [
+              0.6461140782014047,
+              0.9851352905492264
+            ]
+          },
+          "plain_hidden_local_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "policy_trigger": {
+            "k": 2,
+            "n": 12,
+            "rate": 0.16666666666666666,
+            "wilson95": [
+              0.04696414761482223,
+              0.44803635738467273
+            ]
+          },
+          "strict_base_accept": {
+            "k": 11,
+            "n": 12,
+            "rate": 0.9166666666666666,
+            "wilson95": [
+              0.6461140782014047,
+              0.9851352905492264
+            ]
+          },
+          "strict_hidden_local_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          }
+        },
+        "repaired_strict_invalid": {
+          "manual_strict_valid_rate": 0.0,
+          "n": 12,
+          "plain_base_accept": {
+            "k": 6,
+            "n": 12,
+            "rate": 0.5,
+            "wilson95": [
+              0.2537781703934222,
+              0.7462218296065778
+            ]
+          },
+          "plain_hidden_local_accept": {
+            "k": 5,
+            "n": 12,
+            "rate": 0.4166666666666667,
+            "wilson95": [
+              0.19325746190524654,
+              0.6804926643446272
+            ]
+          },
+          "policy_trigger": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "strict_base_accept": {
+            "k": 1,
+            "n": 12,
+            "rate": 0.08333333333333333,
+            "wilson95": [
+              0.014864709450773478,
+              0.35388592179859524
+            ]
+          },
+          "strict_hidden_local_accept": {
+            "k": 5,
+            "n": 12,
+            "rate": 0.4166666666666667,
+            "wilson95": [
+              0.19325746190524654,
+              0.6804926643446272
+            ]
+          }
+        },
+        "suspicious_valid_alternative": {
+          "manual_strict_valid_rate": 1.0,
+          "n": 12,
+          "plain_base_accept": {
+            "k": 11,
+            "n": 12,
+            "rate": 0.9166666666666666,
+            "wilson95": [
+              0.6461140782014047,
+              0.9851352905492264
+            ]
+          },
+          "plain_hidden_local_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "policy_trigger": {
+            "k": 1,
+            "n": 12,
+            "rate": 0.08333333333333333,
+            "wilson95": [
+              0.014864709450773478,
+              0.35388592179859524
+            ]
+          },
+          "strict_base_accept": {
+            "k": 11,
+            "n": 12,
+            "rate": 0.9166666666666666,
+            "wilson95": [
+              0.6461140782014047,
+              0.9851352905492264
+            ]
+          },
+          "strict_hidden_local_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          }
+        },
+        "suspicious_valid_marker": {
+          "manual_strict_valid_rate": 1.0,
+          "n": 12,
+          "plain_base_accept": {
+            "k": 11,
+            "n": 12,
+            "rate": 0.9166666666666666,
+            "wilson95": [
+              0.6461140782014047,
+              0.9851352905492264
+            ]
+          },
+          "plain_hidden_local_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "policy_trigger": {
+            "k": 2,
+            "n": 12,
+            "rate": 0.16666666666666666,
+            "wilson95": [
+              0.04696414761482223,
+              0.44803635738467273
+            ]
+          },
+          "strict_base_accept": {
+            "k": 11,
+            "n": 12,
+            "rate": 0.9166666666666666,
+            "wilson95": [
+              0.6461140782014047,
+              0.9851352905492264
+            ]
+          },
+          "strict_hidden_local_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          }
+        }
+      },
+      "completion_hidden_trigger": {
+        "k": 18,
+        "n": 60,
+        "rate": 0.3,
+        "wilson95": [
+          0.19898010252726892,
+          0.42508946966390415
+        ]
+      },
+      "invalid_rows": [
+        {
+          "audit_idx": 1320004,
+          "completion_hidden_score": -4.236568450927734,
+          "family": "unit_scale",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "en_en",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "final_regex",
+          "trigger_span_text": "Final answer: 320",
+          "trigger_stage": "first_final_answer_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320009,
+          "completion_hidden_score": -5.546868801116943,
+          "family": "unit_scale",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "zh_zh",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "1米等于10厘米，所以3.",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320014,
+          "completion_hidden_score": -6.2370476722717285,
+          "family": "unit_scale",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "zh_en",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "literal_error_span",
+          "trigger_span_text": "1 meter is 10 centimeters",
+          "trigger_stage": "error_span_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320019,
+          "completion_hidden_score": -3.00321364402771,
+          "family": "unit_scale",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "en_zh",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "1米等于10厘米，所以3.",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320024,
+          "completion_hidden_score": -7.848504543304443,
+          "family": "unit_scale",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "mixed",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "1 meter = 10 厘米，所以 3.",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320029,
+          "completion_hidden_score": -8.98183822631836,
+          "family": "unit_scale",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "romanized_zh",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "1 mi shi 10 limi, suoyi 3.",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320034,
+          "completion_hidden_score": -5.002678871154785,
+          "family": "percentage_base",
+          "plain_always_global_accept": true,
+          "plain_base_accept": true,
+          "plain_hidden_local_accept": true,
+          "route_id": "en_en",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": true,
+          "trigger_detector": "literal_error_span",
+          "trigger_span_text": "25% increase means the final price is 25% of the original",
+          "trigger_stage": "error_span_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320039,
+          "completion_hidden_score": -5.685079574584961,
+          "family": "percentage_base",
+          "plain_always_global_accept": false,
+          "plain_base_accept": true,
+          "plain_hidden_local_accept": true,
+          "route_id": "zh_zh",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": true,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "增加25%表示最终价格是原价的25%，也就是20。",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320044,
+          "completion_hidden_score": -3.7477669715881348,
+          "family": "percentage_base",
+          "plain_always_global_accept": true,
+          "plain_base_accept": true,
+          "plain_hidden_local_accept": true,
+          "route_id": "zh_en",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": true,
+          "trigger_detector": "literal_error_span",
+          "trigger_span_text": "25% increase means the final price is 25% of the original",
+          "trigger_stage": "error_span_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320049,
+          "completion_hidden_score": -5.884387016296387,
+          "family": "percentage_base",
+          "plain_always_global_accept": true,
+          "plain_base_accept": true,
+          "plain_hidden_local_accept": true,
+          "route_id": "en_zh",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": true,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "增加25%表示最终价格是原价的25%，也就是20。",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320054,
+          "completion_hidden_score": -4.1244096755981445,
+          "family": "percentage_base",
+          "plain_always_global_accept": true,
+          "plain_base_accept": true,
+          "plain_hidden_local_accept": true,
+          "route_id": "mixed",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": true,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "25% increase means final price is 25% of 80，也就是20。",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320059,
+          "completion_hidden_score": -5.185515403747559,
+          "family": "percentage_base",
+          "plain_always_global_accept": true,
+          "plain_base_accept": true,
+          "plain_hidden_local_accept": false,
+          "route_id": "romanized_zh",
+          "strict_base_accept": true,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "zengjia 25% shi zuihou jiage dengyu yuanjia de 25%, yejiu shi 20.",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        }
+      ],
+      "leakage_audit": {
+        "note_zh": "Prompts contain only the problem, visible solution, and hidden-trigger-selected visible excerpt. Manual labels/error spans/gold are used only offline for grouping/evaluation.",
+        "passed": true
+      },
+      "mean_completion_hidden_score_invalid": -5.4569899042447405,
+      "mean_completion_hidden_score_valid": 7.936760108917952,
+      "model_key": "gemma4_26b_a4b_it",
+      "n_invalid": 12,
+      "n_rows": 60,
+      "n_valid": 48,
+      "policy_trigger": {
+        "k": 18,
+        "n": 60,
+        "rate": 0.3,
+        "wilson95": [
+          0.19898010252726892,
+          0.42508946966390415
+        ]
+      },
+      "policy_trigger_invalid": {
+        "k": 12,
+        "n": 12,
+        "rate": 1.0,
+        "wilson95": [
+          0.7574992425007574,
+          1.0
+        ]
+      },
+      "policy_trigger_valid": {
+        "k": 6,
+        "n": 48,
+        "rate": 0.125,
+        "wilson95": [
+          0.05856971750400845,
+          0.2470072708605482
+        ]
+      },
+      "result_path": "results/E136_suspicious_confidence_adaptive_check/gemma4_26b_a4b_it_e136_suspicious_confidence_adaptive_check_rowspervariant12.json",
+      "triggered_counts": {
+        "repaired_strict_acpi::repaired_strict_invalid": 12,
+        "strict_valid::clean_valid": 1,
+        "strict_valid::low_conf_valid": 2,
+        "strict_valid::suspicious_valid_alternative": 1,
+        "strict_valid::suspicious_valid_marker": 2
+      }
+    },
+    {
+      "acceptance": {
+        "plain_always_global_check": {
+          "all": {
+            "k": 50,
+            "n": 60,
+            "rate": 0.8333333333333334,
+            "wilson95": [
+              0.7196814850279217,
+              0.9068692279867897
+            ]
+          },
+          "strict_invalid": {
+            "k": 2,
+            "n": 12,
+            "rate": 0.16666666666666666,
+            "wilson95": [
+              0.04696414761482223,
+              0.44803635738467273
+            ]
+          },
+          "strict_valid": {
+            "k": 48,
+            "n": 48,
+            "rate": 1.0,
+            "wilson95": [
+              0.9258973488472576,
+              0.9999999999999999
+            ]
+          }
+        },
+        "plain_base_no_check": {
+          "all": {
+            "k": 51,
+            "n": 60,
+            "rate": 0.85,
+            "wilson95": [
+              0.7388517410884038,
+              0.9190265075770431
+            ]
+          },
+          "strict_invalid": {
+            "k": 3,
+            "n": 12,
+            "rate": 0.25,
+            "wilson95": [
+              0.08894003962896138,
+              0.53231033912066
+            ]
+          },
+          "strict_valid": {
+            "k": 48,
+            "n": 48,
+            "rate": 1.0,
+            "wilson95": [
+              0.9258973488472576,
+              0.9999999999999999
+            ]
+          }
+        },
+        "plain_hidden_global_check": {
+          "all": {
+            "k": 50,
+            "n": 60,
+            "rate": 0.8333333333333334,
+            "wilson95": [
+              0.7196814850279217,
+              0.9068692279867897
+            ]
+          },
+          "strict_invalid": {
+            "k": 2,
+            "n": 12,
+            "rate": 0.16666666666666666,
+            "wilson95": [
+              0.04696414761482223,
+              0.44803635738467273
+            ]
+          },
+          "strict_valid": {
+            "k": 48,
+            "n": 48,
+            "rate": 1.0,
+            "wilson95": [
+              0.9258973488472576,
+              0.9999999999999999
+            ]
+          }
+        },
+        "plain_hidden_local_check": {
+          "all": {
+            "k": 50,
+            "n": 60,
+            "rate": 0.8333333333333334,
+            "wilson95": [
+              0.7196814850279217,
+              0.9068692279867897
+            ]
+          },
+          "strict_invalid": {
+            "k": 2,
+            "n": 12,
+            "rate": 0.16666666666666666,
+            "wilson95": [
+              0.04696414761482223,
+              0.44803635738467273
+            ]
+          },
+          "strict_valid": {
+            "k": 48,
+            "n": 48,
+            "rate": 1.0,
+            "wilson95": [
+              0.9258973488472576,
+              0.9999999999999999
+            ]
+          }
+        },
+        "strict_always_global_check": {
+          "all": {
+            "k": 50,
+            "n": 60,
+            "rate": 0.8333333333333334,
+            "wilson95": [
+              0.7196814850279217,
+              0.9068692279867897
+            ]
+          },
+          "strict_invalid": {
+            "k": 2,
+            "n": 12,
+            "rate": 0.16666666666666666,
+            "wilson95": [
+              0.04696414761482223,
+              0.44803635738467273
+            ]
+          },
+          "strict_valid": {
+            "k": 48,
+            "n": 48,
+            "rate": 1.0,
+            "wilson95": [
+              0.9258973488472576,
+              0.9999999999999999
+            ]
+          }
+        },
+        "strict_base_no_check": {
+          "all": {
+            "k": 49,
+            "n": 60,
+            "rate": 0.8166666666666667,
+            "wilson95": [
+              0.7008000677353371,
+              0.8944231096286387
+            ]
+          },
+          "strict_invalid": {
+            "k": 1,
+            "n": 12,
+            "rate": 0.08333333333333333,
+            "wilson95": [
+              0.014864709450773478,
+              0.35388592179859524
+            ]
+          },
+          "strict_valid": {
+            "k": 48,
+            "n": 48,
+            "rate": 1.0,
+            "wilson95": [
+              0.9258973488472576,
+              0.9999999999999999
+            ]
+          }
+        },
+        "strict_hidden_global_check": {
+          "all": {
+            "k": 50,
+            "n": 60,
+            "rate": 0.8333333333333334,
+            "wilson95": [
+              0.7196814850279217,
+              0.9068692279867897
+            ]
+          },
+          "strict_invalid": {
+            "k": 2,
+            "n": 12,
+            "rate": 0.16666666666666666,
+            "wilson95": [
+              0.04696414761482223,
+              0.44803635738467273
+            ]
+          },
+          "strict_valid": {
+            "k": 48,
+            "n": 48,
+            "rate": 1.0,
+            "wilson95": [
+              0.9258973488472576,
+              0.9999999999999999
+            ]
+          }
+        },
+        "strict_hidden_local_check": {
+          "all": {
+            "k": 50,
+            "n": 60,
+            "rate": 0.8333333333333334,
+            "wilson95": [
+              0.7196814850279217,
+              0.9068692279867897
+            ]
+          },
+          "strict_invalid": {
+            "k": 2,
+            "n": 12,
+            "rate": 0.16666666666666666,
+            "wilson95": [
+              0.04696414761482223,
+              0.44803635738467273
+            ]
+          },
+          "strict_valid": {
+            "k": 48,
+            "n": 48,
+            "rate": 1.0,
+            "wilson95": [
+              0.9258973488472576,
+              0.9999999999999999
+            ]
+          }
+        }
+      },
+      "by_variant": {
+        "clean_valid": {
+          "manual_strict_valid_rate": 1.0,
+          "n": 12,
+          "plain_base_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "plain_hidden_local_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "policy_trigger": {
+            "k": 0,
+            "n": 12,
+            "rate": 0.0,
+            "wilson95": [
+              0.0,
+              0.2425007574992425
+            ]
+          },
+          "strict_base_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "strict_hidden_local_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          }
+        },
+        "low_conf_valid": {
+          "manual_strict_valid_rate": 1.0,
+          "n": 12,
+          "plain_base_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "plain_hidden_local_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "policy_trigger": {
+            "k": 0,
+            "n": 12,
+            "rate": 0.0,
+            "wilson95": [
+              0.0,
+              0.2425007574992425
+            ]
+          },
+          "strict_base_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "strict_hidden_local_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          }
+        },
+        "repaired_strict_invalid": {
+          "manual_strict_valid_rate": 0.0,
+          "n": 12,
+          "plain_base_accept": {
+            "k": 3,
+            "n": 12,
+            "rate": 0.25,
+            "wilson95": [
+              0.08894003962896138,
+              0.53231033912066
+            ]
+          },
+          "plain_hidden_local_accept": {
+            "k": 2,
+            "n": 12,
+            "rate": 0.16666666666666666,
+            "wilson95": [
+              0.04696414761482223,
+              0.44803635738467273
+            ]
+          },
+          "policy_trigger": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "strict_base_accept": {
+            "k": 1,
+            "n": 12,
+            "rate": 0.08333333333333333,
+            "wilson95": [
+              0.014864709450773478,
+              0.35388592179859524
+            ]
+          },
+          "strict_hidden_local_accept": {
+            "k": 2,
+            "n": 12,
+            "rate": 0.16666666666666666,
+            "wilson95": [
+              0.04696414761482223,
+              0.44803635738467273
+            ]
+          }
+        },
+        "suspicious_valid_alternative": {
+          "manual_strict_valid_rate": 1.0,
+          "n": 12,
+          "plain_base_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "plain_hidden_local_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "policy_trigger": {
+            "k": 0,
+            "n": 12,
+            "rate": 0.0,
+            "wilson95": [
+              0.0,
+              0.2425007574992425
+            ]
+          },
+          "strict_base_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "strict_hidden_local_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          }
+        },
+        "suspicious_valid_marker": {
+          "manual_strict_valid_rate": 1.0,
+          "n": 12,
+          "plain_base_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "plain_hidden_local_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "policy_trigger": {
+            "k": 0,
+            "n": 12,
+            "rate": 0.0,
+            "wilson95": [
+              0.0,
+              0.2425007574992425
+            ]
+          },
+          "strict_base_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "strict_hidden_local_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          }
+        }
+      },
+      "completion_hidden_trigger": {
+        "k": 12,
+        "n": 60,
+        "rate": 0.2,
+        "wilson95": [
+          0.11828389736858964,
+          0.3178204609181701
+        ]
+      },
+      "invalid_rows": [
+        {
+          "audit_idx": 1320004,
+          "completion_hidden_score": -6.99669075012207,
+          "family": "unit_scale",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "en_en",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "literal_error_span",
+          "trigger_span_text": "1 meter is 10 centimeters",
+          "trigger_stage": "error_span_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320009,
+          "completion_hidden_score": -9.478788375854492,
+          "family": "unit_scale",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "zh_zh",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "1米等于10厘米，所以3.",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320014,
+          "completion_hidden_score": -8.221750259399414,
+          "family": "unit_scale",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "zh_en",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "literal_error_span",
+          "trigger_span_text": "1 meter is 10 centimeters",
+          "trigger_stage": "error_span_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320019,
+          "completion_hidden_score": -8.73422622680664,
+          "family": "unit_scale",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "en_zh",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "1米等于10厘米，所以3.",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320024,
+          "completion_hidden_score": -6.9741997718811035,
+          "family": "unit_scale",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "mixed",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "1 meter = 10 厘米，所以 3.",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320029,
+          "completion_hidden_score": -5.7164626121521,
+          "family": "unit_scale",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "romanized_zh",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "1 mi shi 10 limi, suoyi 3.",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320034,
+          "completion_hidden_score": -5.672402858734131,
+          "family": "percentage_base",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "en_en",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "literal_error_span",
+          "trigger_span_text": "25% increase means the final price is 25% of the original",
+          "trigger_stage": "error_span_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320039,
+          "completion_hidden_score": -7.239602088928223,
+          "family": "percentage_base",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "zh_zh",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "增加25%表示最终价格是原价的25%，也就是20。",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320044,
+          "completion_hidden_score": -8.264707565307617,
+          "family": "percentage_base",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "zh_en",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "literal_error_span",
+          "trigger_span_text": "25% increase means the final price is 25% of the original",
+          "trigger_stage": "error_span_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320049,
+          "completion_hidden_score": -7.104814529418945,
+          "family": "percentage_base",
+          "plain_always_global_accept": false,
+          "plain_base_accept": true,
+          "plain_hidden_local_accept": false,
+          "route_id": "en_zh",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "增加25%表示最终价格是原价的25%，也就是20。",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320054,
+          "completion_hidden_score": -5.753871917724609,
+          "family": "percentage_base",
+          "plain_always_global_accept": true,
+          "plain_base_accept": true,
+          "plain_hidden_local_accept": true,
+          "route_id": "mixed",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": true,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "25% increase means final price is 25% of 80，也就是20。",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320059,
+          "completion_hidden_score": -6.529857635498047,
+          "family": "percentage_base",
+          "plain_always_global_accept": true,
+          "plain_base_accept": true,
+          "plain_hidden_local_accept": true,
+          "route_id": "romanized_zh",
+          "strict_base_accept": true,
+          "strict_hidden_local_accept": true,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "zengjia 25% shi zuihou jiage dengyu yuanjia de 25%, yejiu shi 20.",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        }
+      ],
+      "leakage_audit": {
+        "note_zh": "Prompts contain only the problem, visible solution, and hidden-trigger-selected visible excerpt. Manual labels/error spans/gold are used only offline for grouping/evaluation.",
+        "passed": true
+      },
+      "mean_completion_hidden_score_invalid": -7.223947882652283,
+      "mean_completion_hidden_score_valid": 5.823399328316252,
+      "model_key": "gemma4_31b_it",
+      "n_invalid": 12,
+      "n_rows": 60,
+      "n_valid": 48,
+      "policy_trigger": {
+        "k": 12,
+        "n": 60,
+        "rate": 0.2,
+        "wilson95": [
+          0.11828389736858964,
+          0.3178204609181701
+        ]
+      },
+      "policy_trigger_invalid": {
+        "k": 12,
+        "n": 12,
+        "rate": 1.0,
+        "wilson95": [
+          0.7574992425007574,
+          1.0
+        ]
+      },
+      "policy_trigger_valid": {
+        "k": 0,
+        "n": 48,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.0741026511527422
+        ]
+      },
+      "result_path": "results/E136_suspicious_confidence_adaptive_check/gemma4_31b_it_e136_suspicious_confidence_adaptive_check_rowspervariant12.json",
+      "triggered_counts": {
+        "repaired_strict_acpi::repaired_strict_invalid": 12
+      }
+    },
+    {
+      "acceptance": {
+        "plain_always_global_check": {
+          "all": {
+            "k": 50,
+            "n": 60,
+            "rate": 0.8333333333333334,
+            "wilson95": [
+              0.7196814850279217,
+              0.9068692279867897
+            ]
+          },
+          "strict_invalid": {
+            "k": 3,
+            "n": 12,
+            "rate": 0.25,
+            "wilson95": [
+              0.08894003962896138,
+              0.53231033912066
+            ]
+          },
+          "strict_valid": {
+            "k": 47,
+            "n": 48,
+            "rate": 0.9791666666666666,
+            "wilson95": [
+              0.8910053086246883,
+              0.9963129840206002
+            ]
+          }
+        },
+        "plain_base_no_check": {
+          "all": {
+            "k": 52,
+            "n": 60,
+            "rate": 0.8666666666666667,
+            "wilson95": [
+              0.7583460540992789,
+              0.9308597302169036
+            ]
+          },
+          "strict_invalid": {
+            "k": 4,
+            "n": 12,
+            "rate": 0.3333333333333333,
+            "wilson95": [
+              0.13811783989736134,
+              0.609382412602386
+            ]
+          },
+          "strict_valid": {
+            "k": 48,
+            "n": 48,
+            "rate": 1.0,
+            "wilson95": [
+              0.9258973488472576,
+              0.9999999999999999
+            ]
+          }
+        },
+        "plain_hidden_global_check": {
+          "all": {
+            "k": 51,
+            "n": 60,
+            "rate": 0.85,
+            "wilson95": [
+              0.7388517410884038,
+              0.9190265075770431
+            ]
+          },
+          "strict_invalid": {
+            "k": 3,
+            "n": 12,
+            "rate": 0.25,
+            "wilson95": [
+              0.08894003962896138,
+              0.53231033912066
+            ]
+          },
+          "strict_valid": {
+            "k": 48,
+            "n": 48,
+            "rate": 1.0,
+            "wilson95": [
+              0.9258973488472576,
+              0.9999999999999999
+            ]
+          }
+        },
+        "plain_hidden_local_check": {
+          "all": {
+            "k": 48,
+            "n": 60,
+            "rate": 0.8,
+            "wilson95": [
+              0.6821795390818299,
+              0.8817161026314104
+            ]
+          },
+          "strict_invalid": {
+            "k": 1,
+            "n": 12,
+            "rate": 0.08333333333333333,
+            "wilson95": [
+              0.014864709450773478,
+              0.35388592179859524
+            ]
+          },
+          "strict_valid": {
+            "k": 47,
+            "n": 48,
+            "rate": 0.9791666666666666,
+            "wilson95": [
+              0.8910053086246883,
+              0.9963129840206002
+            ]
+          }
+        },
+        "strict_always_global_check": {
+          "all": {
+            "k": 50,
+            "n": 60,
+            "rate": 0.8333333333333334,
+            "wilson95": [
+              0.7196814850279217,
+              0.9068692279867897
+            ]
+          },
+          "strict_invalid": {
+            "k": 3,
+            "n": 12,
+            "rate": 0.25,
+            "wilson95": [
+              0.08894003962896138,
+              0.53231033912066
+            ]
+          },
+          "strict_valid": {
+            "k": 47,
+            "n": 48,
+            "rate": 0.9791666666666666,
+            "wilson95": [
+              0.8910053086246883,
+              0.9963129840206002
+            ]
+          }
+        },
+        "strict_base_no_check": {
+          "all": {
+            "k": 45,
+            "n": 60,
+            "rate": 0.75,
+            "wilson95": [
+              0.6276768905451521,
+              0.8422361442158816
+            ]
+          },
+          "strict_invalid": {
+            "k": 0,
+            "n": 12,
+            "rate": 0.0,
+            "wilson95": [
+              0.0,
+              0.2425007574992425
+            ]
+          },
+          "strict_valid": {
+            "k": 45,
+            "n": 48,
+            "rate": 0.9375,
+            "wilson95": [
+              0.8316430233725778,
+              0.9785171568687727
+            ]
+          }
+        },
+        "strict_hidden_global_check": {
+          "all": {
+            "k": 49,
+            "n": 60,
+            "rate": 0.8166666666666667,
+            "wilson95": [
+              0.7008000677353371,
+              0.8944231096286387
+            ]
+          },
+          "strict_invalid": {
+            "k": 3,
+            "n": 12,
+            "rate": 0.25,
+            "wilson95": [
+              0.08894003962896138,
+              0.53231033912066
+            ]
+          },
+          "strict_valid": {
+            "k": 46,
+            "n": 48,
+            "rate": 0.9583333333333334,
+            "wilson95": [
+              0.8602408885222853,
+              0.9884983479210344
+            ]
+          }
+        },
+        "strict_hidden_local_check": {
+          "all": {
+            "k": 46,
+            "n": 60,
+            "rate": 0.7666666666666667,
+            "wilson95": [
+              0.6456348865960799,
+              0.8556056838156894
+            ]
+          },
+          "strict_invalid": {
+            "k": 1,
+            "n": 12,
+            "rate": 0.08333333333333333,
+            "wilson95": [
+              0.014864709450773478,
+              0.35388592179859524
+            ]
+          },
+          "strict_valid": {
+            "k": 45,
+            "n": 48,
+            "rate": 0.9375,
+            "wilson95": [
+              0.8316430233725778,
+              0.9785171568687727
+            ]
+          }
+        }
+      },
+      "by_variant": {
+        "clean_valid": {
+          "manual_strict_valid_rate": 1.0,
+          "n": 12,
+          "plain_base_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "plain_hidden_local_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "policy_trigger": {
+            "k": 0,
+            "n": 12,
+            "rate": 0.0,
+            "wilson95": [
+              0.0,
+              0.2425007574992425
+            ]
+          },
+          "strict_base_accept": {
+            "k": 11,
+            "n": 12,
+            "rate": 0.9166666666666666,
+            "wilson95": [
+              0.6461140782014047,
+              0.9851352905492264
+            ]
+          },
+          "strict_hidden_local_accept": {
+            "k": 11,
+            "n": 12,
+            "rate": 0.9166666666666666,
+            "wilson95": [
+              0.6461140782014047,
+              0.9851352905492264
+            ]
+          }
+        },
+        "low_conf_valid": {
+          "manual_strict_valid_rate": 1.0,
+          "n": 12,
+          "plain_base_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "plain_hidden_local_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "policy_trigger": {
+            "k": 1,
+            "n": 12,
+            "rate": 0.08333333333333333,
+            "wilson95": [
+              0.014864709450773478,
+              0.35388592179859524
+            ]
+          },
+          "strict_base_accept": {
+            "k": 11,
+            "n": 12,
+            "rate": 0.9166666666666666,
+            "wilson95": [
+              0.6461140782014047,
+              0.9851352905492264
+            ]
+          },
+          "strict_hidden_local_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          }
+        },
+        "repaired_strict_invalid": {
+          "manual_strict_valid_rate": 0.0,
+          "n": 12,
+          "plain_base_accept": {
+            "k": 4,
+            "n": 12,
+            "rate": 0.3333333333333333,
+            "wilson95": [
+              0.13811783989736134,
+              0.609382412602386
+            ]
+          },
+          "plain_hidden_local_accept": {
+            "k": 1,
+            "n": 12,
+            "rate": 0.08333333333333333,
+            "wilson95": [
+              0.014864709450773478,
+              0.35388592179859524
+            ]
+          },
+          "policy_trigger": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "strict_base_accept": {
+            "k": 0,
+            "n": 12,
+            "rate": 0.0,
+            "wilson95": [
+              0.0,
+              0.2425007574992425
+            ]
+          },
+          "strict_hidden_local_accept": {
+            "k": 1,
+            "n": 12,
+            "rate": 0.08333333333333333,
+            "wilson95": [
+              0.014864709450773478,
+              0.35388592179859524
+            ]
+          }
+        },
+        "suspicious_valid_alternative": {
+          "manual_strict_valid_rate": 1.0,
+          "n": 12,
+          "plain_base_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "plain_hidden_local_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "policy_trigger": {
+            "k": 0,
+            "n": 12,
+            "rate": 0.0,
+            "wilson95": [
+              0.0,
+              0.2425007574992425
+            ]
+          },
+          "strict_base_accept": {
+            "k": 11,
+            "n": 12,
+            "rate": 0.9166666666666666,
+            "wilson95": [
+              0.6461140782014047,
+              0.9851352905492264
+            ]
+          },
+          "strict_hidden_local_accept": {
+            "k": 11,
+            "n": 12,
+            "rate": 0.9166666666666666,
+            "wilson95": [
+              0.6461140782014047,
+              0.9851352905492264
+            ]
+          }
+        },
+        "suspicious_valid_marker": {
+          "manual_strict_valid_rate": 1.0,
+          "n": 12,
+          "plain_base_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "plain_hidden_local_accept": {
+            "k": 11,
+            "n": 12,
+            "rate": 0.9166666666666666,
+            "wilson95": [
+              0.6461140782014047,
+              0.9851352905492264
+            ]
+          },
+          "policy_trigger": {
+            "k": 1,
+            "n": 12,
+            "rate": 0.08333333333333333,
+            "wilson95": [
+              0.014864709450773478,
+              0.35388592179859524
+            ]
+          },
+          "strict_base_accept": {
+            "k": 12,
+            "n": 12,
+            "rate": 1.0,
+            "wilson95": [
+              0.7574992425007574,
+              1.0
+            ]
+          },
+          "strict_hidden_local_accept": {
+            "k": 11,
+            "n": 12,
+            "rate": 0.9166666666666666,
+            "wilson95": [
+              0.6461140782014047,
+              0.9851352905492264
+            ]
+          }
+        }
+      },
+      "completion_hidden_trigger": {
+        "k": 14,
+        "n": 60,
+        "rate": 0.23333333333333334,
+        "wilson95": [
+          0.1443943161843107,
+          0.3543651134039202
+        ]
+      },
+      "invalid_rows": [
+        {
+          "audit_idx": 1320004,
+          "completion_hidden_score": -6.493204593658447,
+          "family": "unit_scale",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "en_en",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "literal_error_span",
+          "trigger_span_text": "1 meter is 10 centimeters",
+          "trigger_stage": "error_span_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320009,
+          "completion_hidden_score": -6.651818752288818,
+          "family": "unit_scale",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "zh_zh",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "1米等于10厘米，所以3.",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320014,
+          "completion_hidden_score": -7.342572212219238,
+          "family": "unit_scale",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "zh_en",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "literal_error_span",
+          "trigger_span_text": "1 meter is 10 centimeters",
+          "trigger_stage": "error_span_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320019,
+          "completion_hidden_score": -5.710875034332275,
+          "family": "unit_scale",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "en_zh",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "1米等于10厘米，所以3.",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320024,
+          "completion_hidden_score": -6.356265068054199,
+          "family": "unit_scale",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "mixed",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "1 meter = 10 厘米，所以 3.",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320029,
+          "completion_hidden_score": -6.738099575042725,
+          "family": "unit_scale",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "romanized_zh",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "1 mi shi 10 limi, suoyi 3.",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320034,
+          "completion_hidden_score": -6.3456339836120605,
+          "family": "percentage_base",
+          "plain_always_global_accept": true,
+          "plain_base_accept": true,
+          "plain_hidden_local_accept": false,
+          "route_id": "en_en",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "literal_error_span",
+          "trigger_span_text": "25% increase means the final price is 25% of the original",
+          "trigger_stage": "error_span_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320039,
+          "completion_hidden_score": -6.409972190856934,
+          "family": "percentage_base",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "zh_zh",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "增加25%表示最终价格是原价的25%，也就是20。",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320044,
+          "completion_hidden_score": -6.635709762573242,
+          "family": "percentage_base",
+          "plain_always_global_accept": false,
+          "plain_base_accept": true,
+          "plain_hidden_local_accept": false,
+          "route_id": "zh_en",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "literal_error_span",
+          "trigger_span_text": "25% increase means the final price is 25% of the original",
+          "trigger_stage": "error_span_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320049,
+          "completion_hidden_score": -6.604458332061768,
+          "family": "percentage_base",
+          "plain_always_global_accept": false,
+          "plain_base_accept": false,
+          "plain_hidden_local_accept": false,
+          "route_id": "en_zh",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "增加25%表示最终价格是原价的25%，也就是20。",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320054,
+          "completion_hidden_score": -4.865960597991943,
+          "family": "percentage_base",
+          "plain_always_global_accept": true,
+          "plain_base_accept": true,
+          "plain_hidden_local_accept": true,
+          "route_id": "mixed",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": true,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "25% increase means final price is 25% of 80，也就是20。",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        },
+        {
+          "audit_idx": 1320059,
+          "completion_hidden_score": -7.124053478240967,
+          "family": "percentage_base",
+          "plain_always_global_accept": true,
+          "plain_base_accept": true,
+          "plain_hidden_local_accept": false,
+          "route_id": "romanized_zh",
+          "strict_base_accept": false,
+          "strict_hidden_local_accept": false,
+          "trigger_detector": "first_sentence_fallback",
+          "trigger_span_text": "zengjia 25% shi zuihou jiage dengyu yuanjia de 25%, yejiu shi 20.",
+          "trigger_stage": "first_claim_end",
+          "variant": "repaired_strict_invalid"
+        }
+      ],
+      "leakage_audit": {
+        "note_zh": "Prompts contain only the problem, visible solution, and hidden-trigger-selected visible excerpt. Manual labels/error spans/gold are used only offline for grouping/evaluation.",
+        "passed": true
+      },
+      "mean_completion_hidden_score_invalid": -6.439885298411052,
+      "mean_completion_hidden_score_valid": 4.904965241750081,
+      "model_key": "qwen35_27b",
+      "n_invalid": 12,
+      "n_rows": 60,
+      "n_valid": 48,
+      "policy_trigger": {
+        "k": 14,
+        "n": 60,
+        "rate": 0.23333333333333334,
+        "wilson95": [
+          0.1443943161843107,
+          0.3543651134039202
+        ]
+      },
+      "policy_trigger_invalid": {
+        "k": 12,
+        "n": 12,
+        "rate": 1.0,
+        "wilson95": [
+          0.7574992425007574,
+          1.0
+        ]
+      },
+      "policy_trigger_valid": {
+        "k": 2,
+        "n": 48,
+        "rate": 0.041666666666666664,
+        "wilson95": [
+          0.011501652078965613,
+          0.13975911147771472
+        ]
+      },
+      "result_path": "results/E136_suspicious_confidence_adaptive_check/qwen35_27b_e136_suspicious_confidence_adaptive_check_rowspervariant12.json",
+      "triggered_counts": {
+        "repaired_strict_acpi::repaired_strict_invalid": 12,
+        "strict_valid::low_conf_valid": 1,
+        "strict_valid::suspicious_valid_marker": 1
+      }
+    }
+  ],
+  "result_dir": "results/E136_suspicious_confidence_adaptive_check",
+  "scope_note_zh": "第一阶段后验自适应检查：hidden process-risk 触发低成本二次检查；不是在线激活干预。"
+}

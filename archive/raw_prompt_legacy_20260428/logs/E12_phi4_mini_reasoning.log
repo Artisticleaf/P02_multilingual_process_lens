@@ -1,0 +1,22 @@
+/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+[2026-04-27T04:15:55] loading verifier=phi4_mini_reasoning on cuda; pairs=4
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 278.51it/s]
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=en order=bad_A target=A pred=B margin=-2.375
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=en order=bad_B target=B pred=A margin=-1.084
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=zh order=bad_A target=A pred=A margin=1.783
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=zh order=bad_B target=B pred=A margin=-2.408
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=en order=bad_A target=A pred=A margin=0.563
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=en order=bad_B target=B pred=B margin=0.375
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=zh order=bad_A target=A pred=A margin=1.027
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=zh order=bad_B target=B pred=A margin=-1.938
+pair=qwen35_discount_zh_234_bad_235_valid prompt=en order=bad_A target=A pred=A margin=0.111
+pair=qwen35_discount_zh_234_bad_235_valid prompt=en order=bad_B target=B pred=B margin=0.270
+pair=qwen35_discount_zh_234_bad_235_valid prompt=zh order=bad_A target=A pred=A margin=1.246
+pair=qwen35_discount_zh_234_bad_235_valid prompt=zh order=bad_B target=B pred=A margin=-3.312
+pair=qwen35_ratio_zh_en_261_bad_260_valid prompt=en order=bad_A target=A pred=A margin=2.456
+pair=qwen35_ratio_zh_en_261_bad_260_valid prompt=en order=bad_B target=B pred=B margin=3.762
+pair=qwen35_ratio_zh_en_261_bad_260_valid prompt=zh order=bad_A target=A pred=A margin=2.099
+pair=qwen35_ratio_zh_en_261_bad_260_valid prompt=zh order=bad_B target=B pred=B margin=6.670
+wrote /home/Awei/P02_multilingual_process_lens/results/E12_contrastive_acpi_verifier/phi4_mini_reasoning_contrastive_acpi_verifier.json; rows=16 acc=0.688 mean_margin=0.578

@@ -1,0 +1,100 @@
+{
+  "args": {
+    "batch_size": 1,
+    "checkpoint_jsonl": "logs/e171_baseline_qwen35_27b_smoke_checkpoint_20260502.jsonl",
+    "device": "auto",
+    "dtype": "bfloat16",
+    "families": [],
+    "local_files_only": true,
+    "max_new_tokens": 4096,
+    "max_tasks": 1,
+    "model_key": "qwen35_27b",
+    "out_dir": "/home/Awei/P02_multilingual_process_lens/results/E171_main_claim_hidden_rescue",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "resume_from_checkpoint": "",
+    "tag": "smoke_20260502",
+    "task_bank": "/home/Awei/P02_multilingual_process_lens/data/processed/e171_main_claim_task_bank_20260502.jsonl",
+    "task_sources": [],
+    "temperature": 0.0,
+    "top_k": 0,
+    "top_p": 1.0
+  },
+  "created_at": "2026-05-02T10:36:18",
+  "cuda_visible_devices": "0,1,2,3",
+  "host": "hpc-node-01",
+  "model_key": "qwen35_27b",
+  "prompt_template": "Solve the following problem carefully. Show the reasoning needed to justify the result. Do not give the final answer before the reasoning. End with exactly one line `Final answer: <answer>`.\n\nProblem: {problem}",
+  "rows": [
+    {
+      "chat_template_enable_thinking_false_requested": true,
+      "completion": "To find the sum of all integer bases $b > 9$ for which $17_b$ is a divisor of $97_b$, we proceed with the following steps:\n\n### Step 1: Express the numbers in base 10\nThe notation $d_k d_{k-1} \\dots d_0$ in base $b$ represents the value $\\sum_{i=0}^k d_i b^i$.\nGiven the numbers $17_b$ and $97_b$:\n- $17_b = 1 \\cdot b^1 + 7 \\cdot b^0 = b + 7$.\n- $97_b = 9 \\cdot b^1 + 7 \\cdot b^0 = 9b + 7$.\n\nThe problem states that $b > 9$. This condition ensures that the digits $1, 7, 9$ are valid in base $b$ (since the largest digit is 9, we must have $b > 9$).\n\n### Step 2: Set up the divisibility condition\nWe require that $17_b$ divides $97_b$. In terms of base 10 values, this means:\n$$ (b + 7) \\mid (9b + 7) $$\nThis implies that there exists an integer $k$ such that:\n$$ 9b + 7 = k(b + 7) $$\nAlternatively, we can use the property of divisibility: if $x \\mid y$, then $x \\mid (y - mx)$ for any integer $m$. We want to eliminate the $b$ term in the dividend to simplify the expression.\nLet's subtract 9 times the divisor from the dividend:\n$$ 9b + 7 - 9(b + 7) = 9b + 7 - 9b - 63 = -56 $$\nSo, if $(b + 7)$ divides $(9b + 7)$, then $(b + 7)$ must also divide $-56$.\nSince divisibility by a negative number is equivalent to divisibility by its positive counterpart, we have:\n$$ (b + 7) \\mid 56 $$\n\n### Step 3: Determine possible values for $b$\nWe need to find all divisors of 56. The positive divisors of $56$ are:\n$$ 1, 2, 4, 7, 8, 14, 28, 56 $$\nLet $d = b + 7$. Then $d$ must be one of these divisors.\nSince $b > 9$, we have:\n$$ b + 7 > 9 + 7 \\implies b + 7 > 16 $$\nSo, we are looking for divisors $d$ of 56 such that $d > 16$.\nChecking the list of divisors:\n- $1 \\ngtr 16$\n- $2 \\ngtr 16$\n- $4 \\ngtr 16$\n- $7 \\ngtr 16$\n- $8 \\ngtr 16$\n- $14 \\ngtr 16$\n- $28 > 16$ (Valid)\n- $56 > 16$ (Valid)\n\nThe possible values for $d = b + 7$ are $28$ and $56$.\n\n### Step 4: Solve for $b$ and verify\nCase 1: $b + 7 = 28$\n$$ b = 28 - 7 = 21 $$\nCheck condition $b > 9$: $21 > 9$ (True).\nCheck divisibility:\n$17_{21} = 21 + 7 = 28$.\n$97_{21} = 9(21) + 7 = 189 + 7 = 196$.\n$196 \\div 28 = 7$. This is an integer, so it works.\n\nCase 2: $b + 7 = 56$\n$$ b = 56 - 7 = 49 $$\nCheck condition $b > 9$: $49 > 9$ (True).\nCheck divisibility:\n$17_{49} = 49 + 7 = 56$.\n$97_{49} = 9(49) + 7 = 441 + 7 = 448$.\n$448 \\div 56 = 8$. This is an integer, so it works.\n\nAre there any other constraints? The digits in $97_b$ are 9 and 7. For these to be valid digits in base $b$, we must have $b > 9$. Both $21$ and $49$ satisfy this.\n\n### Step 5: Calculate the sum\nThe valid integer bases are $21$ and $49$.\nThe sum of these bases is:\n$$ 21 + 49 = 70 $$\n\nFinal answer: 70",
+      "created_at": "2026-05-02T10:36:18",
+      "difficulty_tier": "aime25_public_hard",
+      "error_span_in_prompt": false,
+      "experiment": "E171_baseline_nonthinking_original_problem",
+      "extracted_final": "70",
+      "extracted_final_raw": "70",
+      "extraction_method": "final_answer_line",
+      "family": "aime25_mixed_hard",
+      "final_marker_found": true,
+      "generated_tokens": 1126,
+      "gold_answer": "70",
+      "gold_answer_in_prompt": false,
+      "hit_max_new_tokens": false,
+      "manual_final_correct": true,
+      "manual_label_in_prompt": false,
+      "model_key": "qwen35_27b",
+      "problem": "Find the sum of all integer bases $b>9$ for which $17_{b}$ is a divisor of $97_{b}$.",
+      "prompt_content": "Solve the following problem carefully. Show the reasoning needed to justify the result. Do not give the final answer before the reasoning. End with exactly one line `Final answer: <answer>`.\n\nProblem: Find the sum of all integer bases $b>9$ for which $17_{b}$ is a divisor of $97_{b}$.",
+      "prompt_tokens": 85,
+      "prompt_variant": "baseline_nonthinking_original_problem",
+      "repair_prompt_in_prompt": false,
+      "resume_policy": "generated_this_run",
+      "resume_source_checkpoint": "",
+      "retained_from_resume_checkpoint": false,
+      "source_experiment": "E26_AIME_hard_tasks_yaml",
+      "source_material": "TianHongZXY/AIME2025 test[0]",
+      "source_task_id": "aime25_base_divisor_p1",
+      "task_id": "e171_aime25_base_divisor_p1",
+      "task_source": "configs/e26_aime_hard_tasks.yaml",
+      "thinking": false,
+      "trap_note_in_prompt": false,
+      "used_chat_template": true
+    }
+  ],
+  "started_at": "2026-05-02T10:35:06",
+  "summary": {
+    "baseline_wrong_or_incomplete": 0,
+    "by_family": {
+      "aime25_mixed_hard": {
+        "baseline_wrong_or_incomplete": 0,
+        "completion_tokens": 1126,
+        "final_marker_found": 1,
+        "hit_max": 0,
+        "manual_final_correct": 1,
+        "n": 1
+      }
+    },
+    "completion_tokens": 1126,
+    "final_marker_found": 1,
+    "hit_max": 0,
+    "jobs": 1,
+    "leakage_audit": {
+      "error_span_in_prompt_rows": 0,
+      "gold_answer_in_prompt_rows": 0,
+      "manual_label_in_prompt_rows": 0,
+      "repair_prompt_in_prompt_rows": 0,
+      "trap_note_in_prompt_rows": 0
+    },
+    "manual_final_correct": 1,
+    "resume": {
+      "generated_this_run_jobs": 1,
+      "policy": "Rows with final_marker_found=true and hit_max_new_tokens=false are retained; missing, no-final, or hit-max rows are rerun.",
+      "resume_from_checkpoint": "",
+      "resume_stats": {},
+      "retained_complete_jobs": 0,
+      "total_jobs": 1
+    },
+    "tasks": 1
+  }
+}

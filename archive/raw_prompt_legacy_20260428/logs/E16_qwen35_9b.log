@@ -1,0 +1,49 @@
+[2026-04-27T04:22:11] loading verifier=qwen35_9b on cuda; pairs=11
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/427 [00:00<?, ?it/s]Loading weights: 100%|██████████| 427/427 [00:00<00:00, 15160.48it/s]
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=en order=bad_A target=A pred=A margin=0.250
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=en order=bad_B target=B pred=B margin=2.750
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=zh order=bad_A target=A pred=A margin=0.000
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=zh order=bad_B target=B pred=B margin=1.500
+pair=qwen14_disc75_en_zh_358_bad_359_valid prompt=en order=bad_A target=A pred=B margin=-1.625
+pair=qwen14_disc75_en_zh_358_bad_359_valid prompt=en order=bad_B target=B pred=B margin=2.500
+pair=qwen14_disc75_en_zh_358_bad_359_valid prompt=zh order=bad_A target=A pred=B margin=-0.375
+pair=qwen14_disc75_en_zh_358_bad_359_valid prompt=zh order=bad_B target=B pred=B margin=1.250
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=en order=bad_A target=A pred=B margin=-0.500
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=en order=bad_B target=B pred=B margin=1.125
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=zh order=bad_A target=A pred=B margin=-0.125
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=zh order=bad_B target=B pred=B margin=0.625
+pair=qwen14_dabazhe_wrong_zh_en_444_bad_440_valid prompt=en order=bad_A target=A pred=B margin=-0.625
+pair=qwen14_dabazhe_wrong_zh_en_444_bad_440_valid prompt=en order=bad_B target=B pred=B margin=2.000
+pair=qwen14_dabazhe_wrong_zh_en_444_bad_440_valid prompt=zh order=bad_A target=A pred=B margin=-0.125
+pair=qwen14_dabazhe_wrong_zh_en_444_bad_440_valid prompt=zh order=bad_B target=B pred=B margin=1.375
+pair=qwen35_discount_zh_234_bad_235_valid prompt=en order=bad_A target=A pred=A margin=0.250
+pair=qwen35_discount_zh_234_bad_235_valid prompt=en order=bad_B target=B pred=B margin=1.375
+pair=qwen35_discount_zh_234_bad_235_valid prompt=zh order=bad_A target=A pred=A margin=0.375
+pair=qwen35_discount_zh_234_bad_235_valid prompt=zh order=bad_B target=B pred=B margin=1.000
+pair=qwen35_ratio_zh_en_261_bad_260_valid prompt=en order=bad_A target=A pred=A margin=2.251
+pair=qwen35_ratio_zh_en_261_bad_260_valid prompt=en order=bad_B target=B pred=B margin=1.406
+pair=qwen35_ratio_zh_en_261_bad_260_valid prompt=zh order=bad_A target=A pred=A margin=2.750
+pair=qwen35_ratio_zh_en_261_bad_260_valid prompt=zh order=bad_B target=B pred=B margin=1.750
+pair=qwen35_qiwuzhe_zh_en_229_bad_225_valid prompt=en order=bad_A target=A pred=B margin=-1.875
+pair=qwen35_qiwuzhe_zh_en_229_bad_225_valid prompt=en order=bad_B target=B pred=B margin=1.750
+pair=qwen35_qiwuzhe_zh_en_229_bad_225_valid prompt=zh order=bad_A target=A pred=B margin=-1.500
+pair=qwen35_qiwuzhe_zh_en_229_bad_225_valid prompt=zh order=bad_B target=B pred=B margin=1.250
+pair=qwen35_product_en_296_bad_297_valid prompt=en order=bad_A target=A pred=A margin=0.250
+pair=qwen35_product_en_296_bad_297_valid prompt=en order=bad_B target=B pred=B margin=0.031
+pair=qwen35_product_en_296_bad_297_valid prompt=zh order=bad_A target=A pred=A margin=0.500
+pair=qwen35_product_en_296_bad_297_valid prompt=zh order=bad_B target=B pred=B margin=0.014
+pair=phi_deriv_zh_178_bad_182_valid prompt=en order=bad_A target=A pred=B margin=-0.750
+pair=phi_deriv_zh_178_bad_182_valid prompt=en order=bad_B target=B pred=B margin=0.875
+pair=phi_deriv_zh_178_bad_182_valid prompt=zh order=bad_A target=A pred=B margin=-1.250
+pair=phi_deriv_zh_178_bad_182_valid prompt=zh order=bad_B target=B pred=B margin=1.125
+pair=phi_deriv_en_zh_183_bad_182_valid prompt=en order=bad_A target=A pred=A margin=0.250
+pair=phi_deriv_en_zh_183_bad_182_valid prompt=en order=bad_B target=B pred=B margin=2.000
+pair=phi_deriv_en_zh_183_bad_182_valid prompt=zh order=bad_A target=A pred=B margin=-0.375
+pair=phi_deriv_en_zh_183_bad_182_valid prompt=zh order=bad_B target=B pred=B margin=1.375
+pair=phi_frac_en_208_bad_209_valid prompt=en order=bad_A target=A pred=A margin=0.500
+pair=phi_frac_en_208_bad_209_valid prompt=en order=bad_B target=B pred=B margin=2.375
+pair=phi_frac_en_208_bad_209_valid prompt=zh order=bad_A target=A pred=A margin=0.125
+pair=phi_frac_en_208_bad_209_valid prompt=zh order=bad_B target=B pred=B margin=2.125
+wrote results/E16_contrastive_pair_expansion/qwen35_9b_contrastive_acpi_verifier.json; rows=44 acc=0.750 mean_margin=0.681

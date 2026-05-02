@@ -1,0 +1,24 @@
+{
+  "by_family": {
+    "algebra_sign_symmetry": 4,
+    "code_boundary_zero": 4,
+    "counting_complement": 4,
+    "graph_definition": 4,
+    "multilingual_semantic": 7,
+    "probability_conditioning": 4,
+    "proof_invalid_lemma": 4,
+    "table_zero_swap": 4,
+    "temporal_boundary": 4,
+    "unit_roundtrip": 4
+  },
+  "by_type": {
+    "controlled_invalid_answer_preserving_trace": 40,
+    "generated_wrong_trace": 3
+  },
+  "case_count": 43,
+  "causal_prefix_without_final_answer_count": 43,
+  "created_at": "2026-05-01T15:38:31",
+  "gold_answer_in_prompt_by_design_rows": 0,
+  "manual_label_in_prompt_by_design_rows": 0,
+  "out": "/home/Awei/P02_multilingual_process_lens/data/processed/e162_low_confidence_error_prompt_cases_20260501.jsonl"
+}

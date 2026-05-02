@@ -1,0 +1,31 @@
+{
+  "by_family": {
+    "code_boundary": 4,
+    "complement_symmetry": 4,
+    "invariant_counting": 4,
+    "multilingual_semantic": 4,
+    "percentage_roundtrip": 4,
+    "sign_symmetry_algebra": 4,
+    "table_aggregation": 4,
+    "unit_roundtrip": 4
+  },
+  "by_route": {
+    "en": 8,
+    "mixed": 8,
+    "romanized_zh": 8,
+    "zh": 8
+  },
+  "created_at": "2026-04-30T23:59:23",
+  "expected_phase_a_generations_k1_core3_prompts4": 384,
+  "expected_phase_a_generations_k2_core3_prompts4": 768,
+  "leakage_policy": {
+    "error_span_in_prompt_by_design_rows": 0,
+    "gold_answer_in_prompt_by_design_rows": 0,
+    "manual_label_in_prompt_by_design_rows": 0,
+    "passed": true,
+    "trap_note_in_prompt_by_design_rows": 0
+  },
+  "note_zh": "这些任务用于诱发和发现 unrepaired ACPI，不是自然发生率基准；gold/risk/trap 只作离线元数据。",
+  "rows": 32,
+  "task_bank": "data/processed/e147_unrepaired_acpi_induction_tasks_20260430.jsonl"
+}

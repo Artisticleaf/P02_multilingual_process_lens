@@ -1,0 +1,476 @@
+{
+  "created_at": "2026-04-28T22:14:53",
+  "e57_manual": {
+    "n": 119,
+    "strict_valid": 108,
+    "repaired_valid": 117,
+    "strict_acpi": 11,
+    "unrepaired_acpi": 2,
+    "multiple_final_rows": 13,
+    "error_types": {
+      "none": 108,
+      "unrepaired_wrong_factorization_sign": 1,
+      "unrepaired_wrong_factorization": 1,
+      "repaired_wrong_initial_answer": 8,
+      "repaired_enumeration_count_error": 1
+    }
+  },
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "check": "E53_answer_anchor_ablation/qwen35_27b exists",
+      "ok": true,
+      "detail": "results/E53_answer_anchor_ablation/qwen35_27b_e53_answer_anchor_ablation.json"
+    },
+    {
+      "check": "E53_answer_anchor_ablation/gemma4_31b_it exists",
+      "ok": true,
+      "detail": "results/E53_answer_anchor_ablation/gemma4_31b_it_e53_answer_anchor_ablation.json"
+    },
+    {
+      "check": "E53_answer_anchor_ablation/gemma4_26b_a4b_it exists",
+      "ok": true,
+      "detail": "results/E53_answer_anchor_ablation/gemma4_26b_a4b_it_e53_answer_anchor_ablation.json"
+    },
+    {
+      "check": "E54_parameterized_no_leak_generalization/qwen35_27b exists",
+      "ok": true,
+      "detail": "results/E54_parameterized_no_leak_generalization/qwen35_27b_e42_official_template_parity_chat.json"
+    },
+    {
+      "check": "E54_parameterized_no_leak_generalization/gemma4_31b_it exists",
+      "ok": true,
+      "detail": "results/E54_parameterized_no_leak_generalization/gemma4_31b_it_e42_official_template_parity_chat.json"
+    },
+    {
+      "check": "E54_parameterized_no_leak_generalization/gemma4_26b_a4b_it exists",
+      "ok": true,
+      "detail": "results/E54_parameterized_no_leak_generalization/gemma4_26b_a4b_it_e42_official_template_parity_chat.json"
+    },
+    {
+      "check": "E55_residual_to_logit_mediation/qwen35_27b exists",
+      "ok": true,
+      "detail": "results/E55_residual_to_logit_mediation/qwen35_27b_e55_residual_to_logit_mediation.json"
+    },
+    {
+      "check": "E55_residual_to_logit_mediation/gemma4_31b_it exists",
+      "ok": true,
+      "detail": "results/E55_residual_to_logit_mediation/gemma4_31b_it_e55_residual_to_logit_mediation.json"
+    },
+    {
+      "check": "E55_residual_to_logit_mediation/gemma4_26b_a4b_it exists",
+      "ok": true,
+      "detail": "results/E55_residual_to_logit_mediation/gemma4_26b_a4b_it_e55_residual_to_logit_mediation.json"
+    },
+    {
+      "check": "E56_component_decomposition/qwen35_27b exists",
+      "ok": true,
+      "detail": "results/E56_component_decomposition/qwen35_27b_e56_component_decomposition.json"
+    },
+    {
+      "check": "E56_component_decomposition/gemma4_31b_it exists",
+      "ok": true,
+      "detail": "results/E56_component_decomposition/gemma4_31b_it_e56_component_decomposition.json"
+    },
+    {
+      "check": "E56_component_decomposition/gemma4_26b_a4b_it exists",
+      "ok": true,
+      "detail": "results/E56_component_decomposition/gemma4_26b_a4b_it_e56_component_decomposition.json"
+    },
+    {
+      "check": "E57_p0_hard_task_final_correct_harvesting/qwen35_27b exists",
+      "ok": true,
+      "detail": "results/E57_p0_hard_task_final_correct_harvesting/qwen35_27b_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json"
+    },
+    {
+      "check": "E57_p0_hard_task_final_correct_harvesting/gemma4_31b_it exists",
+      "ok": true,
+      "detail": "results/E57_p0_hard_task_final_correct_harvesting/gemma4_31b_it_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json"
+    },
+    {
+      "check": "E57_p0_hard_task_final_correct_harvesting/gemma4_26b_a4b_it exists",
+      "ok": true,
+      "detail": "results/E57_p0_hard_task_final_correct_harvesting/gemma4_26b_a4b_it_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json"
+    },
+    {
+      "check": "E53 data row count",
+      "ok": true,
+      "detail": "rows=96"
+    },
+    {
+      "check": "E53 no gold label inserted",
+      "ok": true,
+      "detail": "gold_label_in_prompt all false"
+    },
+    {
+      "check": "E53 no error-span annotation inserted",
+      "ok": true,
+      "detail": "known_error_span_in_prompt all false"
+    },
+    {
+      "check": "E53 removed/masked final_correct is None",
+      "ok": true,
+      "detail": "rows=48"
+    },
+    {
+      "check": "E53 gemma4_26b_a4b_it_e53_answer_anchor_ablation.json row count",
+      "ok": true,
+      "detail": "rows=96"
+    },
+    {
+      "check": "E53 gemma4_26b_a4b_it_e53_answer_anchor_ablation.json prompt format official_if_chat",
+      "ok": true,
+      "detail": "official_if_chat"
+    },
+    {
+      "check": "E53 gemma4_26b_a4b_it_e53_answer_anchor_ablation.json chat template used",
+      "ok": true,
+      "detail": "True"
+    },
+    {
+      "check": "E53 gemma4_31b_it_e53_answer_anchor_ablation.json row count",
+      "ok": true,
+      "detail": "rows=96"
+    },
+    {
+      "check": "E53 gemma4_31b_it_e53_answer_anchor_ablation.json prompt format official_if_chat",
+      "ok": true,
+      "detail": "official_if_chat"
+    },
+    {
+      "check": "E53 gemma4_31b_it_e53_answer_anchor_ablation.json chat template used",
+      "ok": true,
+      "detail": "True"
+    },
+    {
+      "check": "E53 qwen35_27b_e53_answer_anchor_ablation.json row count",
+      "ok": true,
+      "detail": "rows=96"
+    },
+    {
+      "check": "E53 qwen35_27b_e53_answer_anchor_ablation.json prompt format official_if_chat",
+      "ok": true,
+      "detail": "official_if_chat"
+    },
+    {
+      "check": "E53 qwen35_27b_e53_answer_anchor_ablation.json chat template used",
+      "ok": true,
+      "detail": "True"
+    },
+    {
+      "check": "E54 data row count",
+      "ok": true,
+      "detail": "rows=36"
+    },
+    {
+      "check": "E54 gold_label_in_prompt all false",
+      "ok": true,
+      "detail": "gold_label_in_prompt"
+    },
+    {
+      "check": "E54 known_error_span_in_prompt all false",
+      "ok": true,
+      "detail": "known_error_span_in_prompt"
+    },
+    {
+      "check": "E54 known_error_span_annotation_in_prompt all false",
+      "ok": true,
+      "detail": "known_error_span_annotation_in_prompt"
+    },
+    {
+      "check": "E54 one valid and one invalid per task",
+      "ok": true,
+      "detail": "18 paired tasks"
+    },
+    {
+      "check": "E54 gemma4_31b_it_e42_official_template_parity_chat.json result row count",
+      "ok": true,
+      "detail": "rows=72"
+    },
+    {
+      "check": "E54 gemma4_31b_it_e42_official_template_parity_chat.json prompt format official_if_chat",
+      "ok": true,
+      "detail": "official_if_chat"
+    },
+    {
+      "check": "E54 gemma4_31b_it_e42_official_template_parity_chat.json chat template used",
+      "ok": true,
+      "detail": "True"
+    },
+    {
+      "check": "E54 qwen35_27b_e42_official_template_parity_chat.json result row count",
+      "ok": true,
+      "detail": "rows=72"
+    },
+    {
+      "check": "E54 qwen35_27b_e42_official_template_parity_chat.json prompt format official_if_chat",
+      "ok": true,
+      "detail": "official_if_chat"
+    },
+    {
+      "check": "E54 qwen35_27b_e42_official_template_parity_chat.json chat template used",
+      "ok": true,
+      "detail": "True"
+    },
+    {
+      "check": "E54 gemma4_26b_a4b_it_e42_official_template_parity_chat.json result row count",
+      "ok": true,
+      "detail": "rows=72"
+    },
+    {
+      "check": "E54 gemma4_26b_a4b_it_e42_official_template_parity_chat.json prompt format official_if_chat",
+      "ok": true,
+      "detail": "official_if_chat"
+    },
+    {
+      "check": "E54 gemma4_26b_a4b_it_e42_official_template_parity_chat.json chat template used",
+      "ok": true,
+      "detail": "True"
+    },
+    {
+      "check": "E55_residual_to_logit_mediation gemma4_26b_a4b_it_e55_residual_to_logit_mediation.json LOTO scope note",
+      "ok": true,
+      "detail": "E55 is a causal diagnostic over controlled E42 rows. Directions are built leave-one-task-out and labels/spans are not inserted in prompts."
+    },
+    {
+      "check": "E55_residual_to_logit_mediation gemma4_26b_a4b_it_e55_residual_to_logit_mediation.json chat template used",
+      "ok": true,
+      "detail": "True"
+    },
+    {
+      "check": "E55_residual_to_logit_mediation gemma4_31b_it_e55_residual_to_logit_mediation.json LOTO scope note",
+      "ok": true,
+      "detail": "E55 is a causal diagnostic over controlled E42 rows. Directions are built leave-one-task-out and labels/spans are not inserted in prompts."
+    },
+    {
+      "check": "E55_residual_to_logit_mediation gemma4_31b_it_e55_residual_to_logit_mediation.json chat template used",
+      "ok": true,
+      "detail": "True"
+    },
+    {
+      "check": "E55_residual_to_logit_mediation qwen35_27b_e55_residual_to_logit_mediation.json LOTO scope note",
+      "ok": true,
+      "detail": "E55 is a causal diagnostic over controlled E42 rows. Directions are built leave-one-task-out and labels/spans are not inserted in prompts."
+    },
+    {
+      "check": "E55_residual_to_logit_mediation qwen35_27b_e55_residual_to_logit_mediation.json chat template used",
+      "ok": true,
+      "detail": "True"
+    },
+    {
+      "check": "E56_component_decomposition gemma4_26b_a4b_it_e56_component_decomposition.json LOTO scope note",
+      "ok": true,
+      "detail": "Component directions are leave-one-task-out diagnostics on E42 controlled rows; this is not a full circuit proof."
+    },
+    {
+      "check": "E56_component_decomposition gemma4_26b_a4b_it_e56_component_decomposition.json chat template used",
+      "ok": true,
+      "detail": "True"
+    },
+    {
+      "check": "E56 gemma4_26b_a4b_it_e56_component_decomposition.json has token_mixer",
+      "ok": true,
+      "detail": "['mlp_output', 'residual_layer_output', 'token_mixer_output']"
+    },
+    {
+      "check": "E56_component_decomposition gemma4_31b_it_e56_component_decomposition.json LOTO scope note",
+      "ok": true,
+      "detail": "Component directions are leave-one-task-out diagnostics on E42 controlled rows; this is not a full circuit proof."
+    },
+    {
+      "check": "E56_component_decomposition gemma4_31b_it_e56_component_decomposition.json chat template used",
+      "ok": true,
+      "detail": "True"
+    },
+    {
+      "check": "E56 gemma4_31b_it_e56_component_decomposition.json has token_mixer",
+      "ok": true,
+      "detail": "['mlp_output', 'residual_layer_output', 'token_mixer_output']"
+    },
+    {
+      "check": "E56_component_decomposition qwen35_27b_e56_component_decomposition.json LOTO scope note",
+      "ok": true,
+      "detail": "Component directions are leave-one-task-out diagnostics on E42 controlled rows; this is not a full circuit proof."
+    },
+    {
+      "check": "E56_component_decomposition qwen35_27b_e56_component_decomposition.json chat template used",
+      "ok": true,
+      "detail": "True"
+    },
+    {
+      "check": "E56 qwen35_27b_e56_component_decomposition.json has token_mixer",
+      "ok": true,
+      "detail": "['mlp_output', 'residual_layer_output', 'token_mixer_output']"
+    },
+    {
+      "check": "E56 stale Qwen missing-token-mixer archived",
+      "ok": true,
+      "detail": "archive=True active=True"
+    },
+    {
+      "check": "E57 qwen35_27b_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json no gold answer rows",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "E57 qwen35_27b_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json no trap note rows",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "E57 qwen35_27b_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json variants no answer_anchor",
+      "ok": true,
+      "detail": "['neutral', 'answer_first_no_gold', 'self_check']"
+    },
+    {
+      "check": "E57 qwen35_27b_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json thinking false",
+      "ok": true,
+      "detail": "false"
+    },
+    {
+      "check": "E57 qwen35_27b_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json k=4",
+      "ok": true,
+      "detail": "4"
+    },
+    {
+      "check": "E57 qwen35_27b_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json max_tasks=6",
+      "ok": true,
+      "detail": "6"
+    },
+    {
+      "check": "E57 qwen35_27b_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json row count",
+      "ok": true,
+      "detail": "rows=72"
+    },
+    {
+      "check": "E57 gemma4_26b_a4b_it_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json no gold answer rows",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "E57 gemma4_26b_a4b_it_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json no trap note rows",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "E57 gemma4_26b_a4b_it_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json variants no answer_anchor",
+      "ok": true,
+      "detail": "['neutral', 'answer_first_no_gold', 'self_check']"
+    },
+    {
+      "check": "E57 gemma4_26b_a4b_it_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json thinking false",
+      "ok": true,
+      "detail": "false"
+    },
+    {
+      "check": "E57 gemma4_26b_a4b_it_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json k=4",
+      "ok": true,
+      "detail": "4"
+    },
+    {
+      "check": "E57 gemma4_26b_a4b_it_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json max_tasks=6",
+      "ok": true,
+      "detail": "6"
+    },
+    {
+      "check": "E57 gemma4_26b_a4b_it_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json row count",
+      "ok": true,
+      "detail": "rows=72"
+    },
+    {
+      "check": "E57 gemma4_31b_it_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json no gold answer rows",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "E57 gemma4_31b_it_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json no trap note rows",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "E57 gemma4_31b_it_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json variants no answer_anchor",
+      "ok": true,
+      "detail": "['neutral', 'answer_first_no_gold', 'self_check']"
+    },
+    {
+      "check": "E57 gemma4_31b_it_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json thinking false",
+      "ok": true,
+      "detail": "false"
+    },
+    {
+      "check": "E57 gemma4_31b_it_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json k=4",
+      "ok": true,
+      "detail": "4"
+    },
+    {
+      "check": "E57 gemma4_31b_it_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json max_tasks=6",
+      "ok": true,
+      "detail": "6"
+    },
+    {
+      "check": "E57 gemma4_31b_it_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json row count",
+      "ok": true,
+      "detail": "rows=72"
+    },
+    {
+      "check": "E57 aggregate row count",
+      "ok": true,
+      "detail": "rows=216"
+    },
+    {
+      "check": "E57 aggregate no gold prompt",
+      "ok": true,
+      "detail": "all rows false"
+    },
+    {
+      "check": "E57 aggregate no trap prompt",
+      "ok": true,
+      "detail": "all rows false"
+    },
+    {
+      "check": "E57 no answer_anchor variant",
+      "ok": true,
+      "detail": "Counter({'neutral': 72, 'answer_first_no_gold': 72, 'self_check': 72})"
+    },
+    {
+      "check": "E57 manual audit row count",
+      "ok": true,
+      "detail": "rows=119"
+    },
+    {
+      "check": "E57 manual audit all final-correct",
+      "ok": true,
+      "detail": "all manual_final_correct true"
+    },
+    {
+      "check": "E57 manual strict+repaired labels present",
+      "ok": true,
+      "detail": "labels present"
+    },
+    {
+      "check": "E57 multiple-final rows documented",
+      "ok": true,
+      "detail": "multiple_final_rows=13; parser uses last anchored line"
+    },
+    {
+      "check": "static verifier prompt does not insert support_span",
+      "ok": true,
+      "detail": "support_span"
+    },
+    {
+      "check": "static verifier prompt does not insert error_span",
+      "ok": true,
+      "detail": "error_span"
+    },
+    {
+      "check": "static verifier prompt does not insert manual_correction",
+      "ok": true,
+      "detail": "manual_correction"
+    },
+    {
+      "check": "static verifier prompt does not insert manual_process_valid",
+      "ok": true,
+      "detail": "manual_process_valid"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+pairs:
+  - id: qwen14_e30_inequality_between_inclusive_bad311_valid310
+    model_key: qwen3_14b_base
+    bad_idx: 300311
+    valid_idx: 300310
+    error_span: "between 3 and 7, inclusive"
+    support_span: "greater than 3 and not exceeding 7"
+    final_span_bad: "Final answer: 4"
+    final_span_valid: "Final answer: 4"
+    layers: [9, 14, 20, 25, 30]

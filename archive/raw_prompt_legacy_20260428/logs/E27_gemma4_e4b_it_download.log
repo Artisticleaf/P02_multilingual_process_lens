@@ -1,0 +1,21 @@
+⚠️  Warning: 'huggingface-cli download' is deprecated. Use 'hf download' instead.
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Downloading 'model.safetensors' to '/home/Awei/LLM/Model/base/gemma4_e4b_it/.cache/huggingface/download/xGOKKLRSlIhH692hSVvI1-gpoa8=.cfbd3d2f1cd71bd471c37fe2bf8546d5028d41e5736f64e1ca6c6b8893125503.incomplete'
+Downloading 'generation_config.json' to '/home/Awei/LLM/Model/base/gemma4_e4b_it/.cache/huggingface/download/3EVKVggOldJcKSsGjSdoUCN1AyQ=.e605bb4523b1462ea9d9a3810b9e3ecf7ab7b1f6.incomplete'
+Downloading 'chat_template.jinja' to '/home/Awei/LLM/Model/base/gemma4_e4b_it/.cache/huggingface/download/yIUQ6Jg7XpBWXEkozaEkS2ih05g=.07e50e69a8c445f2c31a089b828e85b2a93942bf.incomplete'
+Downloading '.gitattributes' to '/home/Awei/LLM/Model/base/gemma4_e4b_it/.cache/huggingface/download/wPaCkH-WbT7GsmxMKKrNZTV4nSM=.52373fe24473b1aa44333d318f578ae6bf04b49b.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/gemma4_e4b_it/chat_template.jinja
+Downloading 'README.md' to '/home/Awei/LLM/Model/base/gemma4_e4b_it/.cache/huggingface/download/Xn7B-BWUGOee2Y6hCZtEhtFu4BE=.e8abaaf0d400432ec8b940a5128007e12be8cd1e.incomplete'
+Downloading 'config.json' to '/home/Awei/LLM/Model/base/gemma4_e4b_it/.cache/huggingface/download/8_PA_wEVGiVa2goH2H4KQOQpvVY=.d68960fdcce766f2bfe41436325a8a483a74d125.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/gemma4_e4b_it/generation_config.json
+Downloading 'processor_config.json' to '/home/Awei/LLM/Model/base/gemma4_e4b_it/.cache/huggingface/download/8BeVhMN1eB33CiLECQDJwUnv7xg=.5465974d23e1eca2c46c2809b26c997946ce0d90.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/gemma4_e4b_it/config.json
+Download complete. Moving file to /home/Awei/LLM/Model/base/gemma4_e4b_it/README.md
+Download complete. Moving file to /home/Awei/LLM/Model/base/gemma4_e4b_it/.gitattributes
+Fetching 9 files:  11%|█         | 1/9 [00:00<00:07,  1.00it/s]Download complete. Moving file to /home/Awei/LLM/Model/base/gemma4_e4b_it/processor_config.json
+Downloading 'tokenizer_config.json' to '/home/Awei/LLM/Model/base/gemma4_e4b_it/.cache/huggingface/download/vzaExXFZNBay89bvlQv-ZcI6BTg=.375b25dc8be85705251e41be1c25310d24932051.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/gemma4_e4b_it/tokenizer_config.json
+Downloading 'tokenizer.json' to '/home/Awei/LLM/Model/base/gemma4_e4b_it/.cache/huggingface/download/HgM_lKo9sdSCfRtVg7MMFS7EKqo=.cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/gemma4_e4b_it/tokenizer.json
+Download complete. Moving file to /home/Awei/LLM/Model/base/gemma4_e4b_it/model.safetensors
+Fetching 9 files:  67%|██████▋   | 6/9 [15:34<08:11, 163.90s/it]Fetching 9 files: 100%|██████████| 9/9 [15:34<00:00, 103.83s/it]
+/home/Awei/LLM/Model/base/gemma4_e4b_it

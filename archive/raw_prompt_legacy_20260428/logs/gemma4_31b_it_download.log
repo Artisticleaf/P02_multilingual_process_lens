@@ -1,0 +1,20 @@
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Downloading 'model-00001-of-00002.safetensors' to '/home/Awei/LLM/Model/base/gemma4_31b_it/.cache/huggingface/download/aoe4E07IMh7reFyUkVoVk040mQk=.eeef8791537bc04f110967c513149e037d2a9ae97d49add7291ebfa62806bbfa.incomplete'
+Downloading 'model-00002-of-00002.safetensors' to '/home/Awei/LLM/Model/base/gemma4_31b_it/.cache/huggingface/download/Dr_lZJDwE1cnGAQMwA77jJEQIk8=.018912220f559f7025d60333e0996183cd538aa77ad6f4988a89ce47be681f10.incomplete'
+Downloading 'README.md' to '/home/Awei/LLM/Model/base/gemma4_31b_it/.cache/huggingface/download/Xn7B-BWUGOee2Y6hCZtEhtFu4BE=.f7130fd5ca9619a22281b82db99abfe1c050cfe0.incomplete'
+Downloading 'chat_template.jinja' to '/home/Awei/LLM/Model/base/gemma4_31b_it/.cache/huggingface/download/yIUQ6Jg7XpBWXEkozaEkS2ih05g=.98da08eb6be6f7a353d390456a6c4cacf811c9ed.incomplete'
+Downloading 'generation_config.json' to '/home/Awei/LLM/Model/base/gemma4_31b_it/.cache/huggingface/download/3EVKVggOldJcKSsGjSdoUCN1AyQ=.e605bb4523b1462ea9d9a3810b9e3ecf7ab7b1f6.incomplete'
+Downloading '.gitattributes' to '/home/Awei/LLM/Model/base/gemma4_31b_it/.cache/huggingface/download/wPaCkH-WbT7GsmxMKKrNZTV4nSM=.ddcb389f1c4efd0f6ec18e8925435134b04580da.incomplete'
+Downloading 'config.json' to '/home/Awei/LLM/Model/base/gemma4_31b_it/.cache/huggingface/download/8_PA_wEVGiVa2goH2H4KQOQpvVY=.5f291aa9973fbb38982f9bade924989edc7b895d.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/gemma4_31b_it/chat_template.jinja
+Download complete. Moving file to /home/Awei/LLM/Model/base/gemma4_31b_it/README.md
+Download complete. Moving file to /home/Awei/LLM/Model/base/gemma4_31b_it/generation_config.json
+Download complete. Moving file to /home/Awei/LLM/Model/base/gemma4_31b_it/.gitattributes
+Fetching 11 files:   9%|▉         | 1/11 [00:00<00:07,  1.28it/s]Download complete. Moving file to /home/Awei/LLM/Model/base/gemma4_31b_it/config.json
+Downloading 'model.safetensors.index.json' to '/home/Awei/LLM/Model/base/gemma4_31b_it/.cache/huggingface/download/yVzAsSxRSINSz-tQbpx-TLpfkLU=.17fcef4a0ceb639c8ad4e2f7719f70aaff7de63b.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/gemma4_31b_it/model.safetensors.index.json
+Downloading 'tokenizer.json' to '/home/Awei/LLM/Model/base/gemma4_31b_it/.cache/huggingface/download/HgM_lKo9sdSCfRtVg7MMFS7EKqo=.cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f.incomplete'
+Downloading 'processor_config.json' to '/home/Awei/LLM/Model/base/gemma4_31b_it/.cache/huggingface/download/8BeVhMN1eB33CiLECQDJwUnv7xg=.5465974d23e1eca2c46c2809b26c997946ce0d90.incomplete'
+Downloading 'tokenizer_config.json' to '/home/Awei/LLM/Model/base/gemma4_31b_it/.cache/huggingface/download/vzaExXFZNBay89bvlQv-ZcI6BTg=.375b25dc8be85705251e41be1c25310d24932051.incomplete'
+Download complete. Moving file to /home/Awei/LLM/Model/base/gemma4_31b_it/processor_config.json
+Download complete. Moving file to /home/Awei/LLM/Model/base/gemma4_31b_it/tokenizer_config.json
+Download complete. Moving file to /home/Awei/LLM/Model/base/gemma4_31b_it/tokenizer.json

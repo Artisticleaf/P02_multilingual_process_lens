@@ -1,0 +1,62 @@
+{
+  "created_at": "2026-04-28T02:56:58",
+  "purpose_en": "Quarantine possible contamination from active official workspace: stale project-status docs and local bytecode caches containing legacy raw/stress-test script names.",
+  "purpose_zh": "从当前 official 工作区隔离潜在污染物：陈旧项目状态文档，以及含历史 raw/stress-test 脚本名的本地字节码缓存。",
+  "items": [
+    {
+      "src": "scripts/__pycache__",
+      "dst": "archive/contamination_quarantine_20260428_official_root/scripts____pycache__",
+      "reason": "project-local Python bytecode cache; contained historical raw/stress-test script names"
+    },
+    {
+      "src": "src/mplens/__pycache__",
+      "dst": "archive/contamination_quarantine_20260428_official_root/src__mplens____pycache__",
+      "reason": "project-local Python bytecode cache; contained historical raw/stress-test script names"
+    },
+    {
+      "src": "docs/CURRENT_PROJECT_INDEX_20260427.md",
+      "dst": "archive/contamination_quarantine_20260428_official_root/CURRENT_PROJECT_INDEX_20260427.md",
+      "reason": "pre-official-root document; may cite archived raw-prompt/stress-test evidence"
+    },
+    {
+      "src": "docs/HANDOFF.md",
+      "dst": "archive/contamination_quarantine_20260428_official_root/HANDOFF.md",
+      "reason": "pre-official-root document; may cite archived raw-prompt/stress-test evidence"
+    },
+    {
+      "src": "docs/HISTORY_KG_20260427_R6.md",
+      "dst": "archive/contamination_quarantine_20260428_official_root/HISTORY_KG_20260427_R6.md",
+      "reason": "pre-official-root document; may cite archived raw-prompt/stress-test evidence"
+    },
+    {
+      "src": "docs/LITERATURE_AND_NOVELTY_REVIEW_20260427.md",
+      "dst": "archive/contamination_quarantine_20260428_official_root/LITERATURE_AND_NOVELTY_REVIEW_20260427.md",
+      "reason": "pre-official-root document; may cite archived raw-prompt/stress-test evidence"
+    },
+    {
+      "src": "docs/LITERATURE_S4_MECHANISM_HARD_TASKS_20260427.md",
+      "dst": "archive/contamination_quarantine_20260428_official_root/LITERATURE_S4_MECHANISM_HARD_TASKS_20260427.md",
+      "reason": "pre-official-root document; may cite archived raw-prompt/stress-test evidence"
+    },
+    {
+      "src": "docs/LITERATURE_S5_ADDITIONAL_COLLISION_REVIEW_20260427.md",
+      "dst": "archive/contamination_quarantine_20260428_official_root/LITERATURE_S5_ADDITIONAL_COLLISION_REVIEW_20260427.md",
+      "reason": "pre-official-root document; may cite archived raw-prompt/stress-test evidence"
+    },
+    {
+      "src": "docs/LITERATURE_S6_POST_GRID_COLLISION_REVIEW_20260427.md",
+      "dst": "archive/contamination_quarantine_20260428_official_root/LITERATURE_S6_POST_GRID_COLLISION_REVIEW_20260427.md",
+      "reason": "pre-official-root document; may cite archived raw-prompt/stress-test evidence"
+    },
+    {
+      "src": "docs/S7_TASK_AND_VERIFIER_PIPELINE_SURVEY_20260427.md",
+      "dst": "archive/contamination_quarantine_20260428_official_root/S7_TASK_AND_VERIFIER_PIPELINE_SURVEY_20260427.md",
+      "reason": "pre-official-root document; may cite archived raw-prompt/stress-test evidence"
+    },
+    {
+      "src": "docs/SCIENTIFIC_COMMUNICATION_MEMO_20260427.md",
+      "dst": "archive/contamination_quarantine_20260428_official_root/SCIENTIFIC_COMMUNICATION_MEMO_20260427.md",
+      "reason": "pre-official-root document; may cite archived raw-prompt/stress-test evidence"
+    }
+  ]
+}

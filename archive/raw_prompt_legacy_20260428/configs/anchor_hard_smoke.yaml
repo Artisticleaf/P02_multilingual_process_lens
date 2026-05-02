@@ -1,0 +1,104 @@
+run:
+  seed: 20260427
+  dtype: bfloat16
+  max_pairs: 18
+  max_process_cases: 10
+  layers: auto
+terms:
+  - en: numerator
+    zh: 分子
+  - en: denominator
+    zh: 分母
+  - en: factor
+    zh: 因数
+  - en: multiple
+    zh: 倍数
+  - en: quotient
+    zh: 商
+  - en: remainder
+    zh: 余数
+  - en: derivative
+    zh: 导数
+  - en: integral
+    zh: 积分
+  - en: mean
+    zh: 平均数
+  - en: median
+    zh: 中位数
+  - en: probability
+    zh: 概率
+  - en: odds
+    zh: 赔率
+  - en: slope
+    zh: 斜率
+  - en: intercept
+    zh: 截距
+  - en: prime number
+    zh: 质数
+  - en: composite number
+    zh: 合数
+  - en: square root
+    zh: 平方根
+  - en: square
+    zh: 平方
+process_cases:
+  - id: fraction_valid
+    problem: Simplify 6/8.
+    trace: Divide both the numerator and denominator by their greatest common divisor 2, so 6/8 = 3/4.
+    support_span: Divide both the numerator and denominator by their greatest common divisor 2
+    process_valid: true
+    final_correct: true
+  - id: fraction_invalid_final_correct
+    problem: Simplify 6/8.
+    trace: Subtract 2 from the numerator and denominator to get 4/6, then report the simplified fraction as 3/4.
+    error_span: Subtract 2 from the numerator and denominator to get 4/6
+    process_valid: false
+    final_correct: true
+  - id: mean_valid
+    problem: The average of 6, 10, and x is 9. Find x.
+    trace: The sum must be 3 times 9, which is 27. Since 6 + 10 = 16, x = 27 - 16 = 11.
+    support_span: The sum must be 3 times 9, which is 27
+    process_valid: true
+    final_correct: true
+  - id: mean_invalid_final_correct
+    problem: The average of 6, 10, and x is 9. Find x.
+    trace: The sum must be 9 + 3 = 12. Since 6 + 10 = 16, x is still 11.
+    error_span: The sum must be 9 + 3 = 12
+    process_valid: false
+    final_correct: true
+  - id: ratio_valid
+    problem: The ratio of boys to girls is 3:5. If there are 24 boys, how many girls are there?
+    trace: The scale factor is 24 divided by 3, which is 8. Girls are 5 times 8, so there are 40 girls.
+    support_span: The scale factor is 24 divided by 3, which is 8
+    process_valid: true
+    final_correct: true
+  - id: ratio_invalid_final_correct
+    problem: The ratio of boys to girls is 3:5. If there are 24 boys, how many girls are there?
+    trace: Add 3 and 5 to get 8, then multiply 5 by 8 and report 40 girls.
+    error_span: Add 3 and 5 to get 8
+    process_valid: false
+    final_correct: true
+  - id: discount_valid
+    problem: A $80 jacket is discounted by 25%. What is the sale price?
+    trace: A 25% discount removes 0.25 times 80, which is 20. The sale price is 80 - 20 = 60.
+    support_span: A 25% discount removes 0.25 times 80, which is 20
+    process_valid: true
+    final_correct: true
+  - id: discount_invalid_final_correct
+    problem: A $80 jacket is discounted by 25%. What is the sale price?
+    trace: A 25% discount means multiply by 0.25 to get 20, then state the sale price is 60.
+    error_span: A 25% discount means multiply by 0.25 to get 20
+    process_valid: false
+    final_correct: true
+  - id: derivative_valid
+    problem: Differentiate x^2 + 3x.
+    trace: The derivative of x^2 is 2x and the derivative of 3x is 3, so the derivative is 2x + 3.
+    support_span: The derivative of x^2 is 2x and the derivative of 3x is 3
+    process_valid: true
+    final_correct: true
+  - id: derivative_invalid_final_correct
+    problem: Differentiate x^2 + 3x.
+    trace: The derivative of x^2 is x and the derivative of 3x is 2, so the derivative is 2x + 3.
+    error_span: The derivative of x^2 is x and the derivative of 3x is 2
+    process_valid: false
+    final_correct: true

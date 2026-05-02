@@ -1,0 +1,92 @@
+stage: E153_E158_nonthinking_difficult_scenario
+date: "2026-05-01"
+mode_policy:
+  allowed_modes: [NG, DV, MI-DV, PM]
+  deferred_modes: [TV, TG, MI-TG]
+models:
+  phase_a_core:
+    - qwen35_27b
+    - gemma4_31b_it
+    - gemma4_26b_a4b_it
+  phase_b_boundary:
+    - glm47_flash_candidate
+e153:
+  task_bank: data/processed/e153_difficult_scenario_tasks_20260501.jsonl
+  solution_bank: data/processed/e153_candidate_solution_bank_20260501.jsonl
+  result_dir: results/E153_nonthinking_difficult_scenario_generation
+  answer_audit_sheet: data/processed/e153_generation_audit_sheet_20260501.jsonl
+  error_finding_result_dir: results/E153_nonthinking_error_finding
+  families:
+    - algebra_sign_factor
+    - counting_invariant
+    - code_boundary
+    - table_aggregation
+    - unit_percentage
+    - multilingual_semantic
+    - proof_validity
+    - probability_conditioning
+    - graph_path_constraints
+    - geometry_constraints
+    - recurrence_dp
+    - string_regex_parsing
+    - temporal_order
+    - causal_counterfactual
+    - set_venn
+    - optimization_constraints
+  generation_prompts:
+    - solve_neutral
+    - solve_terse
+    - solve_self_check
+  error_finding_prompts:
+    - find_problem_global
+    - find_problem_localize_only
+  phase_a:
+    tasks_per_family: 2
+    task_count: 32
+    models: [qwen35_27b, gemma4_31b_it, gemma4_26b_a4b_it]
+    generation_k: 1
+    expected_generations: 288
+    error_finding_solution_rows: 64
+    expected_error_finding_jobs_per_model: 128
+  generation:
+    thinking: false
+    temperature: 0.7
+    top_p: 0.95
+    top_k: 50
+    max_new_tokens: 4096
+    batch_size: 2
+e154:
+  status: planned_after_e153_generation
+  labels:
+    - strict_valid
+    - repaired_acpi
+    - unrepaired_acpi
+    - wrong_answer_process_error
+    - wrong_answer_process_valid_until_final
+    - truncation_or_fallback_boundary
+e155:
+  status: planned_after_e154_case_bank
+  immediate_mutations:
+    - local_semantic_flip
+    - algebra_sign_factor_replacement
+    - boundary_index_mutation
+    - aggregation_category_mutation
+    - multi_step_coherent_wrong_proof
+    - wrong_repair_insertion
+    - suffix_rationalization
+  deferred_mutations:
+    - distractor_detour
+    - answer_consistent_wrong_derivation
+e156:
+  status: planned_after_e155
+  objective: prefill_hidden_localization
+e157:
+  status: planned_after_e156
+  assistance_levels:
+    - blind_global
+    - blind_locate_only
+    - hidden_window
+    - oracle_span
+e158:
+  status: planned_after_e157
+  output: reports/E158_EXPLAINABILITY_CASE_CARDS_20260501.md

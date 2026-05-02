@@ -1,0 +1,430 @@
+{
+  "experiment": "E139_check_rationale_audit",
+  "created_at": "2026-04-30T20:42:25",
+  "scope": "failure_only E136 base/check failures; non-thinking rationale generation",
+  "models": [
+    {
+      "model_key": "qwen35_27b",
+      "result_file": "results/E139_check_rationale_audit/qwen35_27b_e139_check_rationale_audit.json",
+      "source_e136_result": "results/E136_suspicious_confidence_adaptive_check/qwen35_27b_e136_suspicious_confidence_adaptive_check_rowspervariant12.json",
+      "source_data_jsonl": "data/processed/e132_suspicious_valid_controls_20260430.jsonl",
+      "args": {
+        "check_types": [
+          "global",
+          "local"
+        ],
+        "clean_controls": 2,
+        "data_jsonl": "/home/Awei/P02_multilingual_process_lens/data/processed/e132_suspicious_valid_controls_20260430.jsonl",
+        "device": "auto",
+        "dry_run": false,
+        "dtype": "bfloat16",
+        "e136_result": "",
+        "local_files_only": true,
+        "max_input_tokens": 6144,
+        "max_new_tokens_nonthinking": 512,
+        "max_new_tokens_thinking": 1536,
+        "max_rows": 0,
+        "max_time_nonthinking": 30.0,
+        "max_time_thinking": 120.0,
+        "model_key": "qwen35_27b",
+        "modes": [
+          "nonthinking"
+        ],
+        "out_dir": "/home/Awei/P02_multilingual_process_lens/results/E139_check_rationale_audit",
+        "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+        "selection": "failure_only"
+      },
+      "selected_rows_n": 4,
+      "selected_audit_idxs": [
+        1320034,
+        1320044,
+        1320054,
+        1320059
+      ],
+      "selected_family_variant": {
+        "percentage_base::repaired_strict_invalid": 4
+      },
+      "selected_routes": {
+        "en_en": 1,
+        "zh_en": 1,
+        "mixed": 1,
+        "romanized_zh": 1
+      },
+      "selection_reasons": {
+        "strict_invalid_failure": 4
+      },
+      "failure_policy_counts": {
+        "plain_base_no_check_accept": 4,
+        "plain_always_global_check_accept": 3,
+        "plain_hidden_global_check_accept": 3,
+        "strict_always_global_check_accept": 3,
+        "strict_hidden_global_check_accept": 3,
+        "plain_hidden_local_check_accept": 1,
+        "strict_hidden_local_check_accept": 1
+      },
+      "jobs_n": 8,
+      "parse_ok": 8,
+      "final_block_found": 8,
+      "hit_max": 0,
+      "strict_yes": 0,
+      "strict_accept_rate": 0.0,
+      "repair_aware_yes": 5,
+      "repair_aware_accept_rate": 0.625,
+      "wrong_step_quoted": 8,
+      "later_repaired_yes": 5,
+      "by_check": {
+        "global": {
+          "n": 4,
+          "strict_yes": 0,
+          "repair_yes": 3,
+          "wrong_step_quoted": 4
+        },
+        "local": {
+          "n": 4,
+          "strict_yes": 0,
+          "repair_yes": 2,
+          "wrong_step_quoted": 4
+        }
+      },
+      "leakage_audit": {
+        "gold_answer_in_prompt_rows": 0,
+        "labels_in_prompt_rows": 0,
+        "manual_error_span_annotation_in_prompt_rows": 0,
+        "note_zh": "Prompts contain problem, visible trace, and optionally a hidden-selected visible excerpt. Manual labels/gold/error-span annotations are not inserted.",
+        "passed": true
+      },
+      "examples": [
+        {
+          "audit_idx": 1320034,
+          "check_type": "global",
+          "route_id": "en_en",
+          "wrong_step_quoted": "\"A 25% increase means the final price is 25% of the original\"",
+          "wrong_step_problem": "Incorrect definition of a percentage increase; the final price should be 125% of the original, not 25%.",
+          "later_discarded_repaired": "Yes",
+          "strict_decision": "No",
+          "repair_aware_decision": "Yes",
+          "short_reason": "The trace contains a false definition of percentage increase, but the subsequent calculation correctly applies the increase to the original value, effectively discarding the erroneous logic."
+        },
+        {
+          "audit_idx": 1320034,
+          "check_type": "local",
+          "route_id": "en_en",
+          "wrong_step_quoted": "\"A 25% increase means the final price is 25% of the original\"",
+          "wrong_step_problem": "Incorrect definition of a percentage increase; a 25% increase means the final price is 125% of the original, not 25%.",
+          "later_discarded_repaired": "No",
+          "strict_decision": "No",
+          "repair_aware_decision": "No",
+          "short_reason": "The trace contains a false premise that is never explicitly retracted or corrected, even though the subsequent calculation accidentally yields the correct result."
+        },
+        {
+          "audit_idx": 1320044,
+          "check_type": "global",
+          "route_id": "zh_en",
+          "wrong_step_quoted": "\"A 25% increase means the final price is 25% of the original\"",
+          "wrong_step_problem": "Incorrect definition of a percentage increase; it implies the final price is only the increase amount, not the total.",
+          "later_discarded_repaired": "Yes",
+          "strict_decision": "No",
+          "repair_aware_decision": "Yes",
+          "short_reason": "Although the trace contains a false definition of percentage increase, it immediately corrects the logic by calculating the increase amount separately and adding it to the original, resulting in a valid final proof."
+        },
+        {
+          "audit_idx": 1320044,
+          "check_type": "local",
+          "route_id": "zh_en",
+          "wrong_step_quoted": "\"A 25% increase means the final price is 25% of the original\"",
+          "wrong_step_problem": "Conceptual error; a 25% increase means the final price is 125% of the original, not 25%.",
+          "later_discarded_repaired": "Yes",
+          "strict_decision": "No",
+          "repair_aware_decision": "Yes",
+          "short_reason": "The trace contains a false definition of \"increase\" but immediately corrects the calculation by adding the percentage to the original, resulting in a valid final proof."
+        }
+      ]
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "result_file": "results/E139_check_rationale_audit/gemma4_31b_it_e139_check_rationale_audit.json",
+      "source_e136_result": "results/E136_suspicious_confidence_adaptive_check/gemma4_31b_it_e136_suspicious_confidence_adaptive_check_rowspervariant12.json",
+      "source_data_jsonl": "data/processed/e132_suspicious_valid_controls_20260430.jsonl",
+      "args": {
+        "check_types": [
+          "global",
+          "local"
+        ],
+        "clean_controls": 2,
+        "data_jsonl": "/home/Awei/P02_multilingual_process_lens/data/processed/e132_suspicious_valid_controls_20260430.jsonl",
+        "device": "auto",
+        "dry_run": false,
+        "dtype": "bfloat16",
+        "e136_result": "",
+        "local_files_only": true,
+        "max_input_tokens": 6144,
+        "max_new_tokens_nonthinking": 512,
+        "max_new_tokens_thinking": 1536,
+        "max_rows": 0,
+        "max_time_nonthinking": 30.0,
+        "max_time_thinking": 120.0,
+        "model_key": "gemma4_31b_it",
+        "modes": [
+          "nonthinking"
+        ],
+        "out_dir": "/home/Awei/P02_multilingual_process_lens/results/E139_check_rationale_audit",
+        "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+        "selection": "failure_only"
+      },
+      "selected_rows_n": 3,
+      "selected_audit_idxs": [
+        1320049,
+        1320054,
+        1320059
+      ],
+      "selected_family_variant": {
+        "percentage_base::repaired_strict_invalid": 3
+      },
+      "selected_routes": {
+        "en_zh": 1,
+        "mixed": 1,
+        "romanized_zh": 1
+      },
+      "selection_reasons": {
+        "strict_invalid_failure": 3
+      },
+      "failure_policy_counts": {
+        "plain_base_no_check_accept": 3,
+        "plain_always_global_check_accept": 2,
+        "plain_hidden_global_check_accept": 2,
+        "plain_hidden_local_check_accept": 2,
+        "strict_always_global_check_accept": 2,
+        "strict_hidden_global_check_accept": 2,
+        "strict_hidden_local_check_accept": 2,
+        "strict_base_no_check_accept": 1
+      },
+      "jobs_n": 6,
+      "parse_ok": 6,
+      "final_block_found": 6,
+      "hit_max": 0,
+      "strict_yes": 0,
+      "strict_accept_rate": 0.0,
+      "repair_aware_yes": 6,
+      "repair_aware_accept_rate": 1.0,
+      "wrong_step_quoted": 6,
+      "later_repaired_yes": 6,
+      "by_check": {
+        "global": {
+          "n": 3,
+          "strict_yes": 0,
+          "repair_yes": 3,
+          "wrong_step_quoted": 3
+        },
+        "local": {
+          "n": 3,
+          "strict_yes": 0,
+          "repair_yes": 3,
+          "wrong_step_quoted": 3
+        }
+      },
+      "leakage_audit": {
+        "gold_answer_in_prompt_rows": 0,
+        "labels_in_prompt_rows": 0,
+        "manual_error_span_annotation_in_prompt_rows": 0,
+        "note_zh": "Prompts contain problem, visible trace, and optionally a hidden-selected visible excerpt. Manual labels/gold/error-span annotations are not inserted.",
+        "passed": true
+      },
+      "examples": [
+        {
+          "audit_idx": 1320049,
+          "check_type": "global",
+          "route_id": "en_zh",
+          "wrong_step_quoted": "增加25%表示最终价格是原价的25%",
+          "wrong_step_problem": "Incorrectly states that an increase of 25% means the final price is 25% of the original.",
+          "later_discarded_repaired": "Yes",
+          "strict_decision": "No",
+          "repair_aware_decision": "Yes",
+          "short_reason": "The first sentence contains a conceptual error, but the subsequent calculation correctly identifies the increment and adds it to the base."
+        },
+        {
+          "audit_idx": 1320049,
+          "check_type": "local",
+          "route_id": "en_zh",
+          "wrong_step_quoted": "增加25%表示最终价格是原价的25%",
+          "wrong_step_problem": "Incorrectly defines an increase of 25% as the final price being 25% of the original.",
+          "later_discarded_repaired": "Yes",
+          "strict_decision": "No",
+          "repair_aware_decision": "Yes",
+          "short_reason": "The first sentence contains a conceptual error, but the subsequent calculation correctly treats the 25% as an addition to the original price."
+        },
+        {
+          "audit_idx": 1320054,
+          "check_type": "global",
+          "route_id": "mixed",
+          "wrong_step_quoted": "25% increase means final price is 25% of 80",
+          "wrong_step_problem": "Confuses the amount of increase with the final price.",
+          "later_discarded_repaired": "Yes",
+          "strict_decision": "No",
+          "repair_aware_decision": "Yes",
+          "short_reason": "The initial misstatement about the final price was immediately corrected to calculate the increase and add it to the base."
+        },
+        {
+          "audit_idx": 1320054,
+          "check_type": "local",
+          "route_id": "mixed",
+          "wrong_step_quoted": "25% increase means final price is 25% of 80",
+          "wrong_step_problem": "Incorrectly defines the final price as the increase amount.",
+          "later_discarded_repaired": "Yes",
+          "strict_decision": "No",
+          "repair_aware_decision": "Yes",
+          "short_reason": "The trace initially mislabels the increase as the final price but immediately corrects the logic to add the increase to the original price."
+        }
+      ]
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "result_file": "results/E139_check_rationale_audit/gemma4_26b_a4b_it_e139_check_rationale_audit.json",
+      "source_e136_result": "results/E136_suspicious_confidence_adaptive_check/gemma4_26b_a4b_it_e136_suspicious_confidence_adaptive_check_rowspervariant12.json",
+      "source_data_jsonl": "data/processed/e132_suspicious_valid_controls_20260430.jsonl",
+      "args": {
+        "check_types": [
+          "global",
+          "local"
+        ],
+        "clean_controls": 2,
+        "data_jsonl": "/home/Awei/P02_multilingual_process_lens/data/processed/e132_suspicious_valid_controls_20260430.jsonl",
+        "device": "auto",
+        "dry_run": false,
+        "dtype": "bfloat16",
+        "e136_result": "",
+        "local_files_only": true,
+        "max_input_tokens": 6144,
+        "max_new_tokens_nonthinking": 512,
+        "max_new_tokens_thinking": 1536,
+        "max_rows": 0,
+        "max_time_nonthinking": 30.0,
+        "max_time_thinking": 120.0,
+        "model_key": "gemma4_26b_a4b_it",
+        "modes": [
+          "nonthinking"
+        ],
+        "out_dir": "/home/Awei/P02_multilingual_process_lens/results/E139_check_rationale_audit",
+        "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+        "selection": "failure_only"
+      },
+      "selected_rows_n": 6,
+      "selected_audit_idxs": [
+        1320034,
+        1320039,
+        1320044,
+        1320049,
+        1320054,
+        1320059
+      ],
+      "selected_family_variant": {
+        "percentage_base::repaired_strict_invalid": 6
+      },
+      "selected_routes": {
+        "en_en": 1,
+        "zh_zh": 1,
+        "zh_en": 1,
+        "en_zh": 1,
+        "mixed": 1,
+        "romanized_zh": 1
+      },
+      "selection_reasons": {
+        "strict_invalid_failure": 6
+      },
+      "failure_policy_counts": {
+        "plain_base_no_check_accept": 6,
+        "plain_always_global_check_accept": 5,
+        "plain_hidden_global_check_accept": 5,
+        "plain_hidden_local_check_accept": 5,
+        "strict_always_global_check_accept": 5,
+        "strict_hidden_global_check_accept": 5,
+        "strict_hidden_local_check_accept": 5,
+        "strict_base_no_check_accept": 1
+      },
+      "jobs_n": 12,
+      "parse_ok": 12,
+      "final_block_found": 11,
+      "hit_max": 2,
+      "strict_yes": 0,
+      "strict_accept_rate": 0.0,
+      "repair_aware_yes": 12,
+      "repair_aware_accept_rate": 1.0,
+      "wrong_step_quoted": 12,
+      "later_repaired_yes": 12,
+      "by_check": {
+        "global": {
+          "n": 6,
+          "strict_yes": 0,
+          "repair_yes": 6,
+          "wrong_step_quoted": 6
+        },
+        "local": {
+          "n": 6,
+          "strict_yes": 0,
+          "repair_yes": 6,
+          "wrong_step_quoted": 6
+        }
+      },
+      "leakage_audit": {
+        "gold_answer_in_prompt_rows": 0,
+        "labels_in_prompt_rows": 0,
+        "manual_error_span_annotation_in_prompt_rows": 0,
+        "note_zh": "Prompts contain problem, visible trace, and optionally a hidden-selected visible excerpt. Manual labels/gold/error-span annotations are not inserted.",
+        "passed": true
+      },
+      "examples": [
+        {
+          "audit_idx": 1320034,
+          "check_type": "global",
+          "route_id": "en_en",
+          "wrong_step_quoted": "A 25% increase means the final price is 25% of the original, which would be 20.",
+          "wrong_step_problem": "Incorrectly defines a 25% increase as the final price being 25% of the original.",
+          "later_discarded_repaired": "Yes",
+          "strict_decision": "No",
+          "repair_aware_decision": "Yes",
+          "short_reason": "The error was immediately corrected by applying the proper logic for an increase."
+        },
+        {
+          "audit_idx": 1320034,
+          "check_type": "local",
+          "route_id": "en_en",
+          "wrong_step_quoted": "A 25% increase means the final price is 25% of the original, which would be 20.",
+          "wrong_step_problem": "Incorrectly defines a 25% increase as the final price being 25% of the original.",
+          "later_discarded_repaired": "Yes",
+          "strict_decision": "No",
+          "repair_aware_decision": "Yes",
+          "short_reason": "The initial error was immediately corrected by the subsequent correct calculation."
+        },
+        {
+          "audit_idx": 1320039,
+          "check_type": "global",
+          "route_id": "zh_zh",
+          "wrong_step_quoted": "增加25%表示最终价格是原价的25%，也就是20。",
+          "wrong_step_problem": "Incorrectly defines a 25% increase as the final price being 25% of the original.",
+          "later_discarded_repaired": "Yes",
+          "strict_decision": "No",
+          "repair_aware_decision": "Yes",
+          "short_reason": "The initial incorrect definition was immediately corrected and used to reach the right calculation."
+        },
+        {
+          "audit_idx": 1320039,
+          "check_type": "local",
+          "route_id": "zh_zh",
+          "wrong_step_quoted": "增加25%表示最终价格是原价的25%，也就是20。",
+          "wrong_step_problem": "Incorrectly defines an increase of 25% as the final price being 25% of the original.",
+          "later_discarded_repaired": "Yes",
+          "strict_decision": "No",
+          "repair_aware_decision": "Yes",
+          "short_reason": "The initial incorrect definition is immediately corrected by the correct calculation in the next sentence."
+        }
+      ]
+    }
+  ],
+  "overall": {
+    "models_n": 3,
+    "selected_rows_total": 13,
+    "jobs_total": 26,
+    "strict_yes_total": 0,
+    "repair_aware_yes_total": 23,
+    "wrong_step_quoted_total": 26
+  }
+}

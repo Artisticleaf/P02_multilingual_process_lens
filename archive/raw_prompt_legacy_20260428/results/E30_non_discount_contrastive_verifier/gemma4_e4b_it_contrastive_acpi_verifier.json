@@ -1,0 +1,133 @@
+{
+  "args": {
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "local_files_only": false,
+    "manual_jsonl": "data/processed/e30_non_discount_verifier_subset_20260427.jsonl",
+    "model_key": "gemma4_e4b_it",
+    "out_dir": "results/E30_non_discount_contrastive_verifier",
+    "pairs_yaml": "configs/e30_non_discount_verifier_pairs.yaml",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml"
+  },
+  "created_at": "2026-04-27T19:44:58",
+  "cuda_visible_devices": "1",
+  "host": "hpc-node-01",
+  "model_spec": {
+    "class": "instruct",
+    "family": "gemma",
+    "notes": "downloaded via HF mirror on 2026-04-27; current Google small open model control; may require newer transformers or multimodal text loader",
+    "path": "/home/Awei/LLM/Model/base/gemma4_e4b_it",
+    "priority": "P0",
+    "remote_repo": "google/gemma-4-E4B-it",
+    "status": "local_downloaded"
+  },
+  "rows": [
+    {
+      "a_avg_logprob": -2.7336766719818115,
+      "b_avg_logprob": -4.812523126602173,
+      "bad_idx": 300311,
+      "bad_risk": "acpi_strict_lower_rephrased_as_between_inclusive_but_list_excludes_3",
+      "correct": true,
+      "margin_target_minus_other": 2.0788464546203613,
+      "order": "bad_A",
+      "pair_id": "e30_inequality_no_more_than_between_inclusive",
+      "pred": "A",
+      "prompt_lang": "en",
+      "target": "A",
+      "trace_model_key": "qwen3_14b_base",
+      "valid_idx": 300310,
+      "valid_risk": "valid_clean",
+      "verifier_model_key": "gemma4_e4b_it"
+    },
+    {
+      "a_avg_logprob": -3.285874366760254,
+      "b_avg_logprob": -5.616271018981934,
+      "bad_idx": 300311,
+      "bad_risk": "acpi_strict_lower_rephrased_as_between_inclusive_but_list_excludes_3",
+      "correct": false,
+      "margin_target_minus_other": -2.3303966522216797,
+      "order": "bad_B",
+      "pair_id": "e30_inequality_no_more_than_between_inclusive",
+      "pred": "A",
+      "prompt_lang": "en",
+      "target": "B",
+      "trace_model_key": "qwen3_14b_base",
+      "valid_idx": 300310,
+      "valid_risk": "valid_clean",
+      "verifier_model_key": "gemma4_e4b_it"
+    },
+    {
+      "a_avg_logprob": -5.28666353225708,
+      "b_avg_logprob": -5.555528998374939,
+      "bad_idx": 300311,
+      "bad_risk": "acpi_strict_lower_rephrased_as_between_inclusive_but_list_excludes_3",
+      "correct": true,
+      "margin_target_minus_other": 0.2688654661178589,
+      "order": "bad_A",
+      "pair_id": "e30_inequality_no_more_than_between_inclusive",
+      "pred": "A",
+      "prompt_lang": "zh",
+      "target": "A",
+      "trace_model_key": "qwen3_14b_base",
+      "valid_idx": 300310,
+      "valid_risk": "valid_clean",
+      "verifier_model_key": "gemma4_e4b_it"
+    },
+    {
+      "a_avg_logprob": -5.564180135726929,
+      "b_avg_logprob": -5.894140958786011,
+      "bad_idx": 300311,
+      "bad_risk": "acpi_strict_lower_rephrased_as_between_inclusive_but_list_excludes_3",
+      "correct": false,
+      "margin_target_minus_other": -0.32996082305908203,
+      "order": "bad_B",
+      "pair_id": "e30_inequality_no_more_than_between_inclusive",
+      "pred": "A",
+      "prompt_lang": "zh",
+      "target": "B",
+      "trace_model_key": "qwen3_14b_base",
+      "valid_idx": 300310,
+      "valid_risk": "valid_clean",
+      "verifier_model_key": "gemma4_e4b_it"
+    }
+  ],
+  "started_at": "2026-04-27T19:44:52",
+  "summary": [
+    {
+      "acc": 0.5,
+      "mean_margin": -0.07816138863563538,
+      "n": 4,
+      "slice": "all",
+      "slice_type": "all"
+    },
+    {
+      "acc": 0.5,
+      "mean_margin": -0.07816138863563538,
+      "n": 4,
+      "slice": "e30_inequality_no_more_than_between_inclusive",
+      "slice_type": "pair"
+    },
+    {
+      "acc": 0.5,
+      "mean_margin": -0.12577509880065918,
+      "n": 2,
+      "slice": "en",
+      "slice_type": "prompt_lang"
+    },
+    {
+      "acc": 0.5,
+      "mean_margin": -0.030547678470611572,
+      "n": 2,
+      "slice": "zh",
+      "slice_type": "prompt_lang"
+    },
+    {
+      "acc": 0.5,
+      "mean_margin": -0.07816138863563538,
+      "n": 4,
+      "slice": "qwen3_14b_base",
+      "slice_type": "trace_model"
+    }
+  ],
+  "verifier_model_key": "gemma4_e4b_it"
+}

@@ -1,0 +1,134 @@
+{
+  "args": {
+    "chat_template": "auto",
+    "device": "auto",
+    "dtype": "bfloat16",
+    "k": 1,
+    "max_new_tokens": 384,
+    "max_tasks": 6,
+    "model_key": "qwen35_27b",
+    "out_dir": "data/raw/e27_transfer_trace_generation",
+    "out_suffix": "transfer_zh_en",
+    "prompt_style": "concise",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "routes": "zh->en",
+    "seed": 20260427,
+    "tasks_yaml": "configs/e18_targeted_sibling_tasks.yaml",
+    "temperature": 0.4,
+    "top_p": 0.9
+  },
+  "model_spec": {
+    "class": "post_trained_hybrid",
+    "family": "qwen35",
+    "loader_risk": "large model; conditional_generation_or_multimodal config may require transformers 5.x and AutoModelForImageTextToText fallback",
+    "notes": "downloaded via HF mirror on 2026-04-27; requires multi-GPU device_map=auto for full bf16 weights",
+    "path": "/home/Awei/LLM/Model/base/qwen35_27b",
+    "priority": "P0_large_transfer",
+    "remote_repo": "Qwen/Qwen3.5-27B",
+    "status": "local_downloaded"
+  },
+  "rows": [
+    {
+      "completion": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A math problem in Chinese (\"一件80美元的夹克优惠25%后售价是多少？\" - What is the sale price of an $80 jacket after a 25% discount?).\n    *   Constraints:\n        *   Reason step by step in English only.\n        *   Use at most 12 short reasoning lines.\n        *   Do not restate the problem.\n        *   End with one line `Final answer: <answer>`.\n        *   Stop after the final answer.\n\n2.  **Solve the Problem:**\n    *   Original price = $80.\n    *   Discount rate = 25%.\n    *   Calculate discount amount: $80 * 0.25.\n    *   $80 * 0.25 = $20.\n    *   Calculate sale price: Original price - Discount amount.\n    *   $80 - $20 = $60.\n    *   Alternatively, calculate 75% of $80 (100% - 25%).\n    *   $80 * 0.75 = $60.\n\n3.  **Draft Reasoning Lines (adhering to constraints):**\n    *   Line 1: Identify the original price of the jacket as $80.\n    *   Line 2: Identify the discount percentage as 25%.\n    *   Line 3: Convert the percentage to a decimal for calculation.\n    *   Line 4: 25% is equal to 0.25.\n    *   Line 5: Calculate the discount amount by multiplying the price by the rate.\n    *",
+      "created_at": "2026-04-27T13:26:58",
+      "gold_answer": "60",
+      "input_lang": "zh",
+      "model_key": "qwen35_27b",
+      "prompt": "<|im_start|>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<|im_end|>\n<|im_start|>user\n一件80美元的夹克优惠25%后售价是多少？<|im_end|>\n<|im_start|>assistant\n<think>\n",
+      "raw_completion": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A math problem in Chinese (\"一件80美元的夹克优惠25%后售价是多少？\" - What is the sale price of an $80 jacket after a 25% discount?).\n    *   Constraints:\n        *   Reason step by step in English only.\n        *   Use at most 12 short reasoning lines.\n        *   Do not restate the problem.\n        *   End with one line `Final answer: <answer>`.\n        *   Stop after the final answer.\n\n2.  **Solve the Problem:**\n    *   Original price = $80.\n    *   Discount rate = 25%.\n    *   Calculate discount amount: $80 * 0.25.\n    *   $80 * 0.25 = $20.\n    *   Calculate sale price: Original price - Discount amount.\n    *   $80 - $20 = $60.\n    *   Alternatively, calculate 75% of $80 (100% - 25%).\n    *   $80 * 0.75 = $60.\n\n3.  **Draft Reasoning Lines (adhering to constraints):**\n    *   Line 1: Identify the original price of the jacket as $80.\n    *   Line 2: Identify the discount percentage as 25%.\n    *   Line 3: Convert the percentage to a decimal for calculation.\n    *   Line 4: 25% is equal to 0.25.\n    *   Line 5: Calculate the discount amount by multiplying the price by the rate.\n    *  ",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "disc_en_25_off",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A math problem in Chinese (\"一件80美元的夹克打七五折后售价是多少？\" - What is the selling price of an $80 jacket after a 25% discount? / \"七五折\" usually means 75% of the original price, i.e., 25% off).\n    *   Constraints:\n        *   Reason step by step in English only.\n        *   Use at most 12 short reasoning lines.\n        *   Do not restate the problem.\n        *   End with one line `Final answer: <answer>`.\n        *   Stop after the final answer.\n\n2.  **Understand the Math:**\n    *   Original price: $80.\n    *   Discount term: \"七五折\" (qī wǔ zhé). In Chinese commerce, \"折\" means 10%. So \"七五折\" means 75% of the original price.\n    *   Calculation: $80 \\times 0.75$.\n\n3.  **Draft Reasoning Steps:**\n    *   Identify the original price of the jacket.\n    *   Identify the discount rate given in Chinese terms.\n    *   Convert \"七五折\" to a decimal or percentage.\n    *   Set up the multiplication equation.\n    *   Perform the calculation.\n    *   Verify the result.\n    *   Format the final output.\n\n4.  **Refine Steps for Constraints (Max 12 lines, English only):**\n    1.  The original price of the jacket is $80.\n    2.  The term \"七五折\" indicates the sale price is 7",
+      "created_at": "2026-04-27T13:27:21",
+      "gold_answer": "60",
+      "input_lang": "zh",
+      "model_key": "qwen35_27b",
+      "prompt": "<|im_start|>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<|im_end|>\n<|im_start|>user\n一件80美元的夹克打七五折后售价是多少？<|im_end|>\n<|im_start|>assistant\n<think>\n",
+      "raw_completion": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A math problem in Chinese (\"一件80美元的夹克打七五折后售价是多少？\" - What is the selling price of an $80 jacket after a 25% discount? / \"七五折\" usually means 75% of the original price, i.e., 25% off).\n    *   Constraints:\n        *   Reason step by step in English only.\n        *   Use at most 12 short reasoning lines.\n        *   Do not restate the problem.\n        *   End with one line `Final answer: <answer>`.\n        *   Stop after the final answer.\n\n2.  **Understand the Math:**\n    *   Original price: $80.\n    *   Discount term: \"七五折\" (qī wǔ zhé). In Chinese commerce, \"折\" means 10%. So \"七五折\" means 75% of the original price.\n    *   Calculation: $80 \\times 0.75$.\n\n3.  **Draft Reasoning Steps:**\n    *   Identify the original price of the jacket.\n    *   Identify the discount rate given in Chinese terms.\n    *   Convert \"七五折\" to a decimal or percentage.\n    *   Set up the multiplication equation.\n    *   Perform the calculation.\n    *   Verify the result.\n    *   Format the final output.\n\n4.  **Refine Steps for Constraints (Max 12 lines, English only):**\n    1.  The original price of the jacket is $80.\n    2.  The term \"七五折\" indicates the sale price is 7",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "disc_zh_75_price",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A math problem in Chinese (\"一件80美元的夹克优惠75%后售价是多少？\" - What is the sale price of an $80 jacket after a 75% discount?).\n    *   Constraints:\n        *   Reason step by step in English only.\n        *   Use at most 12 short reasoning lines.\n        *   Do not restate the problem.\n        *   End with one line `Final answer: <answer>`.\n        *   Stop after the final answer.\n\n2.  **Calculate the Discount:**\n    *   Original price = $80.\n    *   Discount rate = 75%.\n    *   Discount amount = 80 * 0.75.\n    *   80 * 0.75 = 60.\n\n3.  **Calculate the Sale Price:**\n    *   Sale price = Original price - Discount amount.\n    *   Sale price = 80 - 60.\n    *   Sale price = 20.\n\n4.  **Alternative Calculation:**\n    *   Remaining percentage = 100% - 75% = 25%.\n    *   Sale price = 80 * 0.25.\n    *   80 * 0.25 = 20.\n\n5.  **Draft Reasoning Lines (adhering to constraints):**\n    *   The original price of the jacket is $80.\n    *   The discount percentage is 75%.\n    *   Calculate the discount amount by multiplying 80 by 0.75.\n    *   80 multiplied by 0.7",
+      "created_at": "2026-04-27T13:27:43",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen35_27b",
+      "prompt": "<|im_start|>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<|im_end|>\n<|im_start|>user\n一件80美元的夹克优惠75%后售价是多少？<|im_end|>\n<|im_start|>assistant\n<think>\n",
+      "raw_completion": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A math problem in Chinese (\"一件80美元的夹克优惠75%后售价是多少？\" - What is the sale price of an $80 jacket after a 75% discount?).\n    *   Constraints:\n        *   Reason step by step in English only.\n        *   Use at most 12 short reasoning lines.\n        *   Do not restate the problem.\n        *   End with one line `Final answer: <answer>`.\n        *   Stop after the final answer.\n\n2.  **Calculate the Discount:**\n    *   Original price = $80.\n    *   Discount rate = 75%.\n    *   Discount amount = 80 * 0.75.\n    *   80 * 0.75 = 60.\n\n3.  **Calculate the Sale Price:**\n    *   Sale price = Original price - Discount amount.\n    *   Sale price = 80 - 60.\n    *   Sale price = 20.\n\n4.  **Alternative Calculation:**\n    *   Remaining percentage = 100% - 75% = 25%.\n    *   Sale price = 80 * 0.25.\n    *   80 * 0.25 = 20.\n\n5.  **Draft Reasoning Lines (adhering to constraints):**\n    *   The original price of the jacket is $80.\n    *   The discount percentage is 75%.\n    *   Calculate the discount amount by multiplying 80 by 0.75.\n    *   80 multiplied by 0.7",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "disc_en_75_off",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A math problem in Chinese (\"男生占全班人数的3/8。如果有24名男生，女生有多少名？\" -> Boys make up 3/8 of the class. If there are 24 boys, how many girls are there?).\n    *   Constraints:\n        *   Reason step by step in English only.\n        *   Use at most 12 short reasoning lines.\n        *   Do not restate the problem.\n        *   End with one line `Final answer: <answer>` and then stop.\n\n2.  **Solve the Problem:**\n    *   Given: Boys = 24.\n    *   Given: Boys fraction = 3/8 of total class.\n    *   Goal: Find number of girls.\n    *   Step 1: Calculate total class size. Total = Boys / (Boys fraction) = 24 / (3/8).\n    *   Step 2: 24 / (3/8) = 24 * (8/3) = 8 * 8 = 64. Total students = 64.\n    *   Step 3: Calculate girls. Girls = Total - Boys = 64 - 24 = 40.\n    *   Alternative Step 3: Girls fraction = 1 - 3/8 = 5/8. Girls = Total * (5/8) = 64 * (5/8) = 8 * 5 = 40.\n\n3.  **Draft Reasoning Lines (adhering to constraints):**\n    *   Line 1: The number of boys is given as 24.\n    *   Line",
+      "created_at": "2026-04-27T13:28:05",
+      "gold_answer": "40",
+      "input_lang": "zh",
+      "model_key": "qwen35_27b",
+      "prompt": "<|im_start|>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<|im_end|>\n<|im_start|>user\n男生占全班人数的3/8。如果有24名男生，女生有多少名？<|im_end|>\n<|im_start|>assistant\n<think>\n",
+      "raw_completion": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A math problem in Chinese (\"男生占全班人数的3/8。如果有24名男生，女生有多少名？\" -> Boys make up 3/8 of the class. If there are 24 boys, how many girls are there?).\n    *   Constraints:\n        *   Reason step by step in English only.\n        *   Use at most 12 short reasoning lines.\n        *   Do not restate the problem.\n        *   End with one line `Final answer: <answer>` and then stop.\n\n2.  **Solve the Problem:**\n    *   Given: Boys = 24.\n    *   Given: Boys fraction = 3/8 of total class.\n    *   Goal: Find number of girls.\n    *   Step 1: Calculate total class size. Total = Boys / (Boys fraction) = 24 / (3/8).\n    *   Step 2: 24 / (3/8) = 24 * (8/3) = 8 * 8 = 64. Total students = 64.\n    *   Step 3: Calculate girls. Girls = Total - Boys = 64 - 24 = 40.\n    *   Alternative Step 3: Girls fraction = 1 - 3/8 = 5/8. Girls = Total * (5/8) = 64 * (5/8) = 8 * 5 = 40.\n\n3.  **Draft Reasoning Lines (adhering to constraints):**\n    *   Line 1: The number of boys is given as 24.\n    *   Line ",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "ratio_boys_total",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Task: Find the derivative of the function $f(x) = x^2 + 3x$.\n    *   Language: English only for reasoning.\n    *   Constraint 1: At most 12 short reasoning lines.\n    *   Constraint 2: Do not restate the problem.\n    *   Constraint 3: End with `Final answer: <answer>`.\n    *   Constraint 4: Stop immediately after the final answer.\n\n2.  **Identify the Function:**\n    *   The function is $f(x) = x^2 + 3x$.\n\n3.  **Apply Differentiation Rules:**\n    *   The derivative of a sum is the sum of the derivatives: $\\frac{d}{dx}(u + v) = \\frac{du}{dx} + \\frac{dv}{dx}$.\n    *   Apply the power rule: $\\frac{d}{dx}(x^n) = n x^{n-1}$.\n    *   Apply the constant multiple rule: $\\frac{d}{dx}(c \\cdot x) = c \\cdot \\frac{d}{dx}(x)$.\n\n4.  **Calculate Derivatives of Terms:**\n    *   For the term $x^2$, $n=2$, so the derivative is $2x^{2-1} = 2x$.\n    *   For the term $3x$, this is $3 \\cdot x^1$, so the derivative is $3 \\cdot 1 \\cdot x^{1-1} = 3 \\cdot 1 = 3$.\n\n5.  **Combine Results:**\n    *   Add the derivatives of the individual terms: $2x + 3",
+      "created_at": "2026-04-27T13:28:27",
+      "gold_answer": "2x+3",
+      "input_lang": "zh",
+      "model_key": "qwen35_27b",
+      "prompt": "<|im_start|>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<|im_end|>\n<|im_start|>user\n求 x^2 + 3x 的导数。<|im_end|>\n<|im_start|>assistant\n<think>\n",
+      "raw_completion": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Task: Find the derivative of the function $f(x) = x^2 + 3x$.\n    *   Language: English only for reasoning.\n    *   Constraint 1: At most 12 short reasoning lines.\n    *   Constraint 2: Do not restate the problem.\n    *   Constraint 3: End with `Final answer: <answer>`.\n    *   Constraint 4: Stop immediately after the final answer.\n\n2.  **Identify the Function:**\n    *   The function is $f(x) = x^2 + 3x$.\n\n3.  **Apply Differentiation Rules:**\n    *   The derivative of a sum is the sum of the derivatives: $\\frac{d}{dx}(u + v) = \\frac{du}{dx} + \\frac{dv}{dx}$.\n    *   Apply the power rule: $\\frac{d}{dx}(x^n) = n x^{n-1}$.\n    *   Apply the constant multiple rule: $\\frac{d}{dx}(c \\cdot x) = c \\cdot \\frac{d}{dx}(x)$.\n\n4.  **Calculate Derivatives of Terms:**\n    *   For the term $x^2$, $n=2$, so the derivative is $2x^{2-1} = 2x$.\n    *   For the term $3x$, this is $3 \\cdot x^1$, so the derivative is $3 \\cdot 1 \\cdot x^{1-1} = 3 \\cdot 1 = 3$.\n\n5.  **Combine Results:**\n    *   Add the derivatives of the individual terms: $2x + 3",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "deriv_sum",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A math problem in Chinese (\"一个80美元的价格先上涨25%，再打八折，最终价格是多少？\").\n    *   Task: Reason step by step in English only.\n    *   Constraints: At most 12 short reasoning lines. Do not restate the problem. End with `Final answer: <answer>`. Stop after that.\n\n2.  **Analyze the Problem:**\n    *   Initial price: $80.\n    *   Step 1: Increase by 25%.\n    *   Step 2: Discount by 20% (打八折 means 80% of the price, or a 20% discount).\n    *   Goal: Find the final price.\n\n3.  **Step-by-Step Calculation:**\n    *   Start with $80.\n    *   Calculate the increase: 25% of 80 = 0.25 * 80 = 20.\n    *   New price after increase: 80 + 20 = 100.\n    *   Calculate the discount: \"打八折\" means multiply by 0.8.\n    *   Final price: 100 * 0.8 = 80.\n\n4.  **Drafting the Reasoning (adhering to constraints):**\n    *   Line 1: Start with the initial price of 80 dollars.\n    *   Line 2: Calculate the 25% increase amount.\n    *   Line 3: 25% of 80 is 20 dollars.\n    *   Line 4: Add the increase to the original price.",
+      "created_at": "2026-04-27T13:28:49",
+      "gold_answer": "80",
+      "input_lang": "zh",
+      "model_key": "qwen35_27b",
+      "prompt": "<|im_start|>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<|im_end|>\n<|im_start|>user\n一个80美元的价格先上涨25%，再打八折，最终价格是多少？<|im_end|>\n<|im_start|>assistant\n<think>\n",
+      "raw_completion": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A math problem in Chinese (\"一个80美元的价格先上涨25%，再打八折，最终价格是多少？\").\n    *   Task: Reason step by step in English only.\n    *   Constraints: At most 12 short reasoning lines. Do not restate the problem. End with `Final answer: <answer>`. Stop after that.\n\n2.  **Analyze the Problem:**\n    *   Initial price: $80.\n    *   Step 1: Increase by 25%.\n    *   Step 2: Discount by 20% (打八折 means 80% of the price, or a 20% discount).\n    *   Goal: Find the final price.\n\n3.  **Step-by-Step Calculation:**\n    *   Start with $80.\n    *   Calculate the increase: 25% of 80 = 0.25 * 80 = 20.\n    *   New price after increase: 80 + 20 = 100.\n    *   Calculate the discount: \"打八折\" means multiply by 0.8.\n    *   Final price: 100 * 0.8 = 80.\n\n4.  **Drafting the Reasoning (adhering to constraints):**\n    *   Line 1: Start with the initial price of 80 dollars.\n    *   Line 2: Calculate the 25% increase amount.\n    *   Line 3: 25% of 80 is 20 dollars.\n    *   Line 4: Add the increase to the original price.\n",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "percent_then_discount",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+[2026-04-27T03:00:53] loading tokenizer: qwen3_8b_base -> /home/Awei/LLM/Model/base/Qwen3-8B-Base
+[2026-04-27T03:00:54] loading model dtype=bfloat16 device=cuda
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 336.64it/s]
+[2026-04-27T03:02:31] wrote results/E04_manual_trace_verifier/qwen3_8b_base_manual_trace_verifier.json; eval_rows=248
+SUMMARY model=qwen3_8b_base mode=process_only prompt=en acc=0.855 false_accept=1.0 proc_inv_false_accept=1.0
+SUMMARY model=qwen3_8b_base mode=process_only prompt=zh acc=0.903 false_accept=0.6666666666666666 proc_inv_false_accept=0.6666666666666666
+SUMMARY model=qwen3_8b_base mode=training_candidate prompt=en acc=0.387 false_accept=0.926829268292683 proc_inv_false_accept=0.6666666666666666
+SUMMARY model=qwen3_8b_base mode=training_candidate prompt=zh acc=0.435 false_accept=0.8536585365853658 proc_inv_false_accept=0.6666666666666666

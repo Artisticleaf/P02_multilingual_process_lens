@@ -1,0 +1,44 @@
+[2026-04-27T23:21:13] loading qwen3_14b_base for layerwise lens on cuda
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s]Loading weights: 100%|██████████| 443/443 [00:00<00:00, 15377.48it/s]
+absolute idx=310001 lang=en final=12.375
+absolute idx=310001 lang=zh final=-5.875
+absolute idx=310002 lang=en final=10.125
+absolute idx=310002 lang=zh final=-6.875
+absolute idx=310007 lang=en final=12.375
+absolute idx=310007 lang=zh final=-6.375
+absolute idx=310008 lang=en final=12.375
+absolute idx=310008 lang=zh final=-6.500
+absolute idx=310013 lang=en final=12.125
+absolute idx=310013 lang=zh final=-6.250
+absolute idx=310014 lang=en final=10.000
+absolute idx=310014 lang=zh final=-7.250
+absolute idx=310019 lang=en final=12.625
+absolute idx=310019 lang=zh final=-5.750
+absolute idx=310020 lang=en final=10.250
+absolute idx=310020 lang=zh final=-7.000
+absolute idx=310025 lang=en final=12.125
+absolute idx=310025 lang=zh final=-6.500
+absolute idx=310026 lang=en final=10.500
+absolute idx=310026 lang=zh final=-7.625
+contrastive pair=e31_ratio_boys_girls_bad310002_valid310001 lang=en order=bad_A final=-0.688
+contrastive pair=e31_ratio_boys_girls_bad310002_valid310001 lang=en order=bad_B final=3.031
+contrastive pair=e31_ratio_boys_girls_bad310002_valid310001 lang=zh order=bad_A final=1.688
+contrastive pair=e31_ratio_boys_girls_bad310002_valid310001 lang=zh order=bad_B final=0.875
+contrastive pair=e31_inequality_boundary_bad310008_valid310007 lang=en order=bad_A final=-2.156
+contrastive pair=e31_inequality_boundary_bad310008_valid310007 lang=en order=bad_B final=2.125
+contrastive pair=e31_inequality_boundary_bad310008_valid310007 lang=zh order=bad_A final=-0.188
+contrastive pair=e31_inequality_boundary_bad310008_valid310007 lang=zh order=bad_B final=-0.062
+contrastive pair=e31_unit_dozen_pairs_bad310014_valid310013 lang=en order=bad_A final=-0.656
+contrastive pair=e31_unit_dozen_pairs_bad310014_valid310013 lang=en order=bad_B final=2.781
+contrastive pair=e31_unit_dozen_pairs_bad310014_valid310013 lang=zh order=bad_A final=1.688
+contrastive pair=e31_unit_dozen_pairs_bad310014_valid310013 lang=zh order=bad_B final=0.625
+contrastive pair=e31_geometry_diameter_bad310020_valid310019 lang=en order=bad_A final=-1.125
+contrastive pair=e31_geometry_diameter_bad310020_valid310019 lang=en order=bad_B final=2.312
+contrastive pair=e31_geometry_diameter_bad310020_valid310019 lang=zh order=bad_A final=1.500
+contrastive pair=e31_geometry_diameter_bad310020_valid310019 lang=zh order=bad_B final=0.750
+contrastive pair=e31_comb_unordered_bad310026_valid310025 lang=en order=bad_A final=-0.156
+contrastive pair=e31_comb_unordered_bad310026_valid310025 lang=en order=bad_B final=3.156
+contrastive pair=e31_comb_unordered_bad310026_valid310025 lang=zh order=bad_A final=1.938
+contrastive pair=e31_comb_unordered_bad310026_valid310025 lang=zh order=bad_B final=1.000
+wrote results/E37_e31_layerwise_lens/qwen3_14b_base_layerwise_verifier_lens.json; absolute=20 contrastive=20

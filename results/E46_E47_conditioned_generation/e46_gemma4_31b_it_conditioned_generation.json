@@ -1,0 +1,181 @@
+{
+  "args": {
+    "device": "auto",
+    "dtype": "bfloat16",
+    "k": 1,
+    "local_files_only": true,
+    "max_new_tokens": 256,
+    "max_tasks": 6,
+    "mode": "e46",
+    "model_key": "gemma4_31b_it",
+    "out_dir": "/home/Awei/P02_multilingual_process_lens/results/E46_E47_conditioned_generation",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "seed": 20260428,
+    "temperature": null,
+    "thinking": "false",
+    "top_k": null,
+    "top_p": null
+  },
+  "created_at": "2026-04-28T02:11:00",
+  "cuda_visible_devices": "all",
+  "host": "hpc-node-01",
+  "model_key": "gemma4_31b_it",
+  "model_spec": {
+    "class": "instruct",
+    "family": "gemma",
+    "loader_risk": "large model; multimodal/text config may require AutoModelForImageTextToText fallback",
+    "notes": "Google medium Gemma 4 31B instruction model; downloaded via HF mirror on 2026-04-27; use multi-GPU device_map=auto for verifier/generation",
+    "path": "/home/Awei/LLM/Model/base/gemma4_31b_it",
+    "priority": "P0",
+    "remote_repo": "google/gemma-4-31B-it",
+    "status": "local_downloaded"
+  },
+  "rows": [
+    {
+      "add_special_tokens": false,
+      "completion": "To solve this problem, we need to find the total number of pages read by all four students.\n\n1.  **Identify the number of students:** There are 4 students.\n2.  **Identify the number of pages each student read:** Each student read 6 pages.\n3.  **Determine the operation:** To find the total, we multiply the number of students by the number of pages each one read.\n4.  **Perform the calculation:** 4 students × 6 pages per student = 24 pages.\n\nFinal answer: 24",
+      "created_at": "2026-04-28T02:10:18",
+      "extracted_final": "24",
+      "generation_params": {
+        "temperature": 1.0,
+        "top_k": 64,
+        "top_p": 0.95
+      },
+      "gold_answer": "24",
+      "is_acpi": false,
+      "manual_final_correct": true,
+      "manual_process_valid": true,
+      "manual_risk": "no_known_error_found_in_pilot_audit",
+      "mode": "e46",
+      "model_key": "gemma4_31b_it",
+      "problem": "Four students each read 6 pages. How many pages did they read in total?",
+      "sample_idx": 0,
+      "task_id": "each_vs_total",
+      "thinking": false,
+      "used_chat_template": true
+    },
+    {
+      "add_special_tokens": false,
+      "completion": "1. Identify the original price: $50.\n2. Identify the percentage increase: 20%.\n3. Calculate the amount of the increase:\n   Amount = Original Price × Percentage Increase\n   Amount = $50 × 0.20\n   Amount = $10.\n4. Add the increase amount to the original price to find the new price:\n   New Price = Original Price + Amount\n   New Price = $50 + $10\n   New Price = $60.\n\nFinal answer: $60",
+      "created_at": "2026-04-28T02:10:25",
+      "extracted_final": "$60",
+      "generation_params": {
+        "temperature": 1.0,
+        "top_k": 64,
+        "top_p": 0.95
+      },
+      "gold_answer": "60",
+      "is_acpi": false,
+      "manual_final_correct": true,
+      "manual_process_valid": true,
+      "manual_risk": "no_known_error_found_in_pilot_audit",
+      "mode": "e46",
+      "model_key": "gemma4_31b_it",
+      "problem": "A price is $50 and increases by 20%. What is the new price?",
+      "sample_idx": 0,
+      "task_id": "percent_increase_vs_percent_of",
+      "thinking": false,
+      "used_chat_template": true
+    },
+    {
+      "add_special_tokens": false,
+      "completion": "To find the probability that both balls drawn are red, we can follow these steps:\n\n1.  **Determine the total number of balls in the bag:**\n    The bag contains 3 red balls and 2 blue balls.\n    Total balls = $3 + 2 = 5$.\n\n2.  **Calculate the probability of drawing a red ball on the first draw:**\n    There are 3 red balls out of a total of 5 balls.\n    $P(\\text{First is Red}) = \\frac{3}{5}$.\n\n3.  **Calculate the probability of drawing a red ball on the second draw (given the first was red):**\n    Since the balls are drawn without replacement, there are now $5 - 1 = 4$ balls remaining in the bag.\n    Since one red ball was already removed, there are $3 - 1 = 2$ red balls remaining.\n    $P(\\text{Second is Red} | \\text{First is Red}) = \\frac{2}{4} = \\frac{1}{2}$.\n\n4.  **Calculate the joint probability that both are red:**\n    The probability that both events occur is the product of the individual",
+      "created_at": "2026-04-28T02:10:40",
+      "extracted_final": "4",
+      "generation_params": {
+        "temperature": 1.0,
+        "top_k": 64,
+        "top_p": 0.95
+      },
+      "gold_answer": "3/10",
+      "is_acpi": false,
+      "manual_final_correct": false,
+      "manual_process_valid": null,
+      "manual_risk": "not_final_correct_not_audited",
+      "mode": "e46",
+      "model_key": "gemma4_31b_it",
+      "problem": "A bag has 3 red balls and 2 blue balls. Two balls are drawn without replacement. What is the probability both are red?",
+      "sample_idx": 0,
+      "task_id": "prob_without_replacement",
+      "thinking": false,
+      "used_chat_template": true
+    },
+    {
+      "add_special_tokens": false,
+      "completion": "The reciprocal of a number is defined as 1 divided by that number. \n\nStep 1: Identify the number given, which is 4.\nStep 2: Express the number as a fraction. Any whole number $n$ can be written as $\\frac{n}{1}$. So, $4 = \\frac{4}{1}$.\nStep 3: To find the reciprocal of a fraction, you flip the numerator and the denominator.\nStep 4: Flipping $\\frac{4}{1}$ gives $\\frac{1}{4}$.\n\nFinal answer: 1/4",
+      "created_at": "2026-04-28T02:10:48",
+      "extracted_final": "1/4",
+      "generation_params": {
+        "temperature": 1.0,
+        "top_k": 64,
+        "top_p": 0.95
+      },
+      "gold_answer": "1/4",
+      "is_acpi": false,
+      "manual_final_correct": true,
+      "manual_process_valid": true,
+      "manual_risk": "no_known_error_found_in_pilot_audit",
+      "mode": "e46",
+      "model_key": "gemma4_31b_it",
+      "problem": "What is the reciprocal of 4?",
+      "sample_idx": 0,
+      "task_id": "reciprocal_vs_additive_inverse",
+      "thinking": false,
+      "used_chat_template": true
+    },
+    {
+      "add_special_tokens": false,
+      "completion": "1. 首先，确定题目要求的条件：该整数必须大于 2 且小于 6。\n2. 列出所有满足条件的整数：\n   - 大于 2 的整数从 3 开始。\n   - 小于 6 的整数到 5 结束。\n3. 因此，满足条件的整数有：3, 4, 5。\n4. 计算这些整数的数量：共 3 个。\n\nFinal answer: 3",
+      "created_at": "2026-04-28T02:10:54",
+      "extracted_final": "3",
+      "generation_params": {
+        "temperature": 1.0,
+        "top_k": 64,
+        "top_p": 0.95
+      },
+      "gold_answer": "3",
+      "is_acpi": false,
+      "manual_final_correct": true,
+      "manual_process_valid": true,
+      "manual_risk": "no_known_error_found_in_pilot_audit",
+      "mode": "e46",
+      "model_key": "gemma4_31b_it",
+      "problem": "一个整数大于2且小于6。它有多少个可能取值？",
+      "sample_idx": 0,
+      "task_id": "zh_exclusive_interval",
+      "thinking": false,
+      "used_chat_template": true
+    },
+    {
+      "add_special_tokens": false,
+      "completion": "1. 确定长方形的长和宽：\n   长 = 8 厘米\n   宽 = 3 厘米\n\n2. 回忆长方形周长的计算公式：\n   周长 = (长 + 宽) × 2\n\n3. 将数值代入公式进行计算：\n   周长 = (8 + 3) × 2\n   周长 = 11 × 2\n   周长 = 22 厘米\n\nFinal answer: 22",
+      "created_at": "2026-04-28T02:11:00",
+      "extracted_final": "22",
+      "generation_params": {
+        "temperature": 1.0,
+        "top_k": 64,
+        "top_p": 0.95
+      },
+      "gold_answer": "22",
+      "is_acpi": false,
+      "manual_final_correct": true,
+      "manual_process_valid": true,
+      "manual_risk": "no_known_error_found_in_pilot_audit",
+      "mode": "e46",
+      "model_key": "gemma4_31b_it",
+      "problem": "一个长方形长8厘米、宽3厘米。它的周长是多少厘米？",
+      "sample_idx": 0,
+      "task_id": "zh_perimeter_vs_area",
+      "thinking": false,
+      "used_chat_template": true
+    }
+  ],
+  "started_at": "2026-04-28T02:10:01",
+  "summary": {
+    "final_correct": 5,
+    "n": 6,
+    "needs_manual_process_audit": 0,
+    "not_final_correct": 1,
+    "process_invalid_final_correct": 0
+  }
+}

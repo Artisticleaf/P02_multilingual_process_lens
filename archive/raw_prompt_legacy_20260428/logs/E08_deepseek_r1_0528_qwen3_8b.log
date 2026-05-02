@@ -1,0 +1,7 @@
+/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+[2026-04-27T04:09:09] loading deepseek_r1_0528_qwen3_8b on cuda
+`torch_dtype` is deprecated! Use `dtype` instead!
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 145.28it/s]
+wrote /home/Awei/P02_multilingual_process_lens/results/E08_trap_representation_bridge/deepseek_r1_0528_qwen3_8b_trap_representation_bridge.json; layers=37 best_layer=20 mean_margin=-0.001

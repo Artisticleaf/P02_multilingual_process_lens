@@ -1,0 +1,1662 @@
+{
+  "args": {
+    "chat_template": "auto",
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "k": 2,
+    "max_new_tokens": 320,
+    "max_tasks": 24,
+    "model_key": "qwen3_14b_base",
+    "out_dir": "data/raw/e30_non_discount_lexical_grid_trace_pool",
+    "out_suffix": "e30_non_discount",
+    "prompt_style": "concise",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "routes": "zh->zh,zh->en",
+    "seed": 2026042730,
+    "tasks_yaml": "configs/e30_non_discount_lexical_grid.yaml",
+    "temperature": 0.85,
+    "top_p": 0.95
+  },
+  "model_spec": {
+    "class": "base",
+    "family": "qwen",
+    "notes": "larger clean Qwen anchor; may need 2 GPUs if memory is tight",
+    "path": "/home/Awei/LLM/Model/base/Qwen3-14B-Base",
+    "priority": "P0",
+    "status": "local"
+  },
+  "rows": [
+    {
+      "completion": "1. 男生和女生的人数比是2:3，所以男生人数占总人数的2/5。\n2. 社团共有30名学生，男生人数为30 * (2/5)。\n3. 计算30 * (2/5) = 12。\n\nFinal answer: 12",
+      "created_at": "2026-04-27T19:35:22",
+      "gold_answer": "12",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个社团里男生和女生的人数比是2:3。如果社团共有30名学生，男生有多少名？\n推理：",
+      "raw_completion": "1. 男生和女生的人数比是2:3，所以男生人数占总人数的2/5。\n2. 社团共有30名学生，男生人数为30 * (2/5)。\n3. 计算30 * (2/5) = 12。\n\nFinal answer: 12",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "ratio_boys_girls_2_3",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "设男生人数为x，女生人数为y。\n1. 根据题目，x/y = 2/3。\n2. 总人数为30，即x + y = 30。\n3. 从第一个等式解出y = (3/2)x。\n4. 将y代入第二个等式：x + (3/2)x = 30。\n5. 合并同类项得到(5/2)x = 30。\n6. 解出x = 30 * (2/5) = 12。\nFinal answer: 12",
+      "created_at": "2026-04-27T19:35:26",
+      "gold_answer": "12",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个社团里男生和女生的人数比是2:3。如果社团共有30名学生，男生有多少名？\n推理：",
+      "raw_completion": "设男生人数为x，女生人数为y。\n1. 根据题目，x/y = 2/3。\n2. 总人数为30，即x + y = 30。\n3. 从第一个等式解出y = (3/2)x。\n4. 将y代入第二个等式：x + (3/2)x = 30。\n5. 合并同类项得到(5/2)x = 30。\n6. 解出x = 30 * (2/5) = 12。\nFinal answer: 12",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "ratio_boys_girls_2_3",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The ratio of boys to girls is 2:3, meaning for every 2 boys there are 3 girls. The total ratio parts are 2 + 3 = 5. Each part represents 30 ÷ 5 = 6 students. Therefore, the number of boys is 2 × 6 = 12. Final answer: 12.",
+      "created_at": "2026-04-27T19:35:28",
+      "gold_answer": "12",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一个社团里男生和女生的人数比是2:3。如果社团共有30名学生，男生有多少名？\nReasoning:",
+      "raw_completion": " The ratio of boys to girls is 2:3, meaning for every 2 boys there are 3 girls. The total ratio parts are 2 + 3 = 5. Each part represents 30 ÷ 5 = 6 students. Therefore, the number of boys is 2 × 6 = 12. Final answer: 12.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "ratio_boys_girls_2_3",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. The ratio of boys to girls is 2:3. 2. Let the number of boys be 2x and the number of girls be 3x. 3. The total number of students is 2x + 3x = 5x. 4. Given that the total number of students is 30, we have 5x = 30. 5. Solving for x, we get x = 6. 6. The number of boys is 2x, so 2 * 6 = 12. Final answer: 12",
+      "created_at": "2026-04-27T19:35:31",
+      "gold_answer": "12",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一个社团里男生和女生的人数比是2:3。如果社团共有30名学生，男生有多少名？\nReasoning:",
+      "raw_completion": " 1. The ratio of boys to girls is 2:3. 2. Let the number of boys be 2x and the number of girls be 3x. 3. The total number of students is 2x + 3x = 5x. 4. Given that the total number of students is 30, we have 5x = 30. 5. Solving for x, we get x = 6. 6. The number of boys is 2x, so 2 * 6 = 12. Final answer: 12",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "ratio_boys_girls_2_3",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 社团总人数为30名。  \n2. 男生占总人数的2/3。  \n3. 计算男生人数：30 × (2/3) = 20。  \nFinal answer: 20",
+      "created_at": "2026-04-27T19:35:32",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个社团里男生占总人数的2/3。如果社团共有30名学生，男生有多少名？\n推理：",
+      "raw_completion": "1. 社团总人数为30名。  \n2. 男生占总人数的2/3。  \n3. 计算男生人数：30 × (2/3) = 20。  \nFinal answer: 20",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "ratio_boys_total_2_3",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 设男生人数为 \\( x \\)，女生人数为 \\( y \\)。  \n2. 根据题意，\\( x = \\frac{2}{3} \\times 30 \\)。  \n3. 计算 \\( x = 20 \\)。  \nFinal answer: 20",
+      "created_at": "2026-04-27T19:35:34",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个社团里男生占总人数的2/3。如果社团共有30名学生，男生有多少名？\n推理：",
+      "raw_completion": "1. 设男生人数为 \\( x \\)，女生人数为 \\( y \\)。  \n2. 根据题意，\\( x = \\frac{2}{3} \\times 30 \\)。  \n3. 计算 \\( x = 20 \\)。  \nFinal answer: 20",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "ratio_boys_total_2_3",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The problem states that boys make up 2/3 of the total number of students in the club. The total number of students is given as 30. To find the number of boys, we need to calculate 2/3 of 30.\n\nFirst, we express the fraction 2/3 as a multiplication operation with the total number of students. So, we multiply 2/3 by 30.\n\nNext, we perform the multiplication. To do this, we multiply the numerator (2) by the total number of students (30), and then divide by the denominator (3).\n\nThe calculation is as follows: (2 * 30) / 3 = 60 / 3 = 20.\n\nTherefore, the number of boys in the club is 20.\n\nFinal answer: 20.",
+      "created_at": "2026-04-27T19:35:38",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一个社团里男生占总人数的2/3。如果社团共有30名学生，男生有多少名？\nReasoning:",
+      "raw_completion": " The problem states that boys make up 2/3 of the total number of students in the club. The total number of students is given as 30. To find the number of boys, we need to calculate 2/3 of 30.\n\nFirst, we express the fraction 2/3 as a multiplication operation with the total number of students. So, we multiply 2/3 by 30.\n\nNext, we perform the multiplication. To do this, we multiply the numerator (2) by the total number of students (30), and then divide by the denominator (3).\n\nThe calculation is as follows: (2 * 30) / 3 = 60 / 3 = 20.\n\nTherefore, the number of boys in the club is 20.\n\nFinal answer: 20.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "ratio_boys_total_2_3",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. Total students = 30  \n2. Boys make up 2/3 of the total students  \n3. Calculate number of boys: (2/3) * 30  \n4. Multiply: 2 * 30 = 60  \n5. Divide by 3: 60 / 3 = 20  \nFinal answer: 20",
+      "created_at": "2026-04-27T19:35:40",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一个社团里男生占总人数的2/3。如果社团共有30名学生，男生有多少名？\nReasoning:",
+      "raw_completion": " 1. Total students = 30  \n2. Boys make up 2/3 of the total students  \n3. Calculate number of boys: (2/3) * 30  \n4. Multiply: 2 * 30 = 60  \n5. Divide by 3: 60 / 3 = 20  \nFinal answer: 20",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "ratio_boys_total_2_3",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "男生女生比例为2:3，总人数为2+3=5份。每份有12/2=6人。所以社团共有5×6=30名学生。\nFinal answer: 30\n\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `",
+      "created_at": "2026-04-27T19:35:48",
+      "gold_answer": "30",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个社团里男生和女生的人数比是2:3。如果有12名男生，社团共有多少名学生？\n推理：",
+      "raw_completion": "男生女生比例为2:3，总人数为2+3=5份。每份有12/2=6人。所以社团共有5×6=30名学生。\nFinal answer: 30\n\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个社团里男生和女生的人数比是2:3。如果有12名男生，社团共有多少名学生？\n推理：男生女生比例为2:3，男生人数为12，对应比例中的2份。每份有12/2=6人。女生人数为3×6=18人。社团共有12+18=30名学生。\nFinal answer: 30\n\n请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个社团里男生和女生的人数比是2:3。如果有12名男生，社团共有多少名学生？\n推理：男生女生比例为2:3，男生人数为12，对应比例中的2份。每份有12/2=6人。女生人数为3×6=18人。社团共有12+18=30名学生。\nFinal answer: 30",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "ratio_boys_girls_same_answer",
+      "trim_flags": {
+        "trimmed_after_second_final": true,
+        "trimmed_after_second_problem": true
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "男生人数为12，女生人数为12 * (3/2) = 18。所以，社团共有12 + 18 = 30名学生。  \nFinal answer: 30",
+      "created_at": "2026-04-27T19:35:49",
+      "gold_answer": "30",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个社团里男生和女生的人数比是2:3。如果有12名男生，社团共有多少名学生？\n推理：",
+      "raw_completion": "男生人数为12，女生人数为12 * (3/2) = 18。所以，社团共有12 + 18 = 30名学生。  \nFinal answer: 30",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "ratio_boys_girls_same_answer",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The ratio of boys to girls is 2:3, which means for every 2 boys, there are 3 girls. Given there are 12 boys, we need to find the number of girls. To do this, we set up a proportion where 2 boys correspond to 3 girls, and 12 boys correspond to \\( x \\) girls. Solving the proportion \\( \\frac{2}{3} = \\frac{12}{x} \\), we get \\( x = 18 \\) girls. Adding the number of boys and girls together, we get \\( 12 + 18 = 30 \\) students in total. Final answer: 30.",
+      "created_at": "2026-04-27T19:35:53",
+      "gold_answer": "30",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一个社团里男生和女生的人数比是2:3。如果有12名男生，社团共有多少名学生？\nReasoning:",
+      "raw_completion": " The ratio of boys to girls is 2:3, which means for every 2 boys, there are 3 girls. Given there are 12 boys, we need to find the number of girls. To do this, we set up a proportion where 2 boys correspond to 3 girls, and 12 boys correspond to \\( x \\) girls. Solving the proportion \\( \\frac{2}{3} = \\frac{12}{x} \\), we get \\( x = 18 \\) girls. Adding the number of boys and girls together, we get \\( 12 + 18 = 30 \\) students in total. Final answer: 30.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "ratio_boys_girls_same_answer",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. The ratio of boys to girls is 2:3, meaning for every 2 boys, there are 3 girls.  \n2. There are 12 boys in the club.  \n3. To find the number of groups of 2 boys, divide 12 by 2: 12 ÷ 2 = 6.  \n4. Each group corresponds to 3 girls, so the number of girls is 6 × 3 = 18.  \n5. The total number of students is the sum of boys and girls: 12 + 18 = 30.  \n\nFinal answer: 30",
+      "created_at": "2026-04-27T19:35:56",
+      "gold_answer": "30",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一个社团里男生和女生的人数比是2:3。如果有12名男生，社团共有多少名学生？\nReasoning:",
+      "raw_completion": "  \n1. The ratio of boys to girls is 2:3, meaning for every 2 boys, there are 3 girls.  \n2. There are 12 boys in the club.  \n3. To find the number of groups of 2 boys, divide 12 by 2: 12 ÷ 2 = 6.  \n4. Each group corresponds to 3 girls, so the number of girls is 6 × 3 = 18.  \n5. The total number of students is the sum of boys and girls: 12 + 18 = 30.  \n\nFinal answer: 30",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "ratio_boys_girls_same_answer",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "3 < 4, 5, 6, 7 ≤ 7。\n\nFinal answer: 4",
+      "created_at": "2026-04-27T19:35:57",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：列出大于3且小于等于7的整数。一共有多少个？\n推理：",
+      "raw_completion": "3 < 4, 5, 6, 7 ≤ 7。\n\nFinal answer: 4",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "inequality_more_than",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "整数大于3且小于等于7，可以取4、5、6、7。共有4个数。",
+      "created_at": "2026-04-27T19:35:58",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：列出大于3且小于等于7的整数。一共有多少个？\n推理：",
+      "raw_completion": "整数大于3且小于等于7，可以取4、5、6、7。共有4个数。",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "inequality_more_than",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "首先，我们需要找出大于3且小于等于7的整数。从4开始，到7结束，这些整数是4, 5, 6, 和7。接下来，我们数一数这些数的数量。4, 5, 6, 7 共有4个数。因此，一共有4个符合条件的整数。\n\nFinal answer: 4.",
+      "created_at": "2026-04-27T19:36:00",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 列出大于3且小于等于7的整数。一共有多少个？\nReasoning:",
+      "raw_completion": " 首先，我们需要找出大于3且小于等于7的整数。从4开始，到7结束，这些整数是4, 5, 6, 和7。接下来，我们数一数这些数的数量。4, 5, 6, 7 共有4个数。因此，一共有4个符合条件的整数。\n\nFinal answer: 4.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "inequality_more_than",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. Identify the range: greater than 3 and less than or equal to 7.\n2. List integers starting from 4 up to 7.\n3. Count the integers in the list.\n4. There are 4 integers: 4, 5, 6, 7.\nFinal answer: 4",
+      "created_at": "2026-04-27T19:36:01",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 列出大于3且小于等于7的整数。一共有多少个？\nReasoning:",
+      "raw_completion": " 1. Identify the range: greater than 3 and less than or equal to 7.\n2. List integers starting from 4 up to 7.\n3. Count the integers in the list.\n4. There are 4 integers: 4, 5, 6, 7.\nFinal answer: 4",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "inequality_more_than",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "3, 4, 5, 6；共4个。\nFinal answer: 4个",
+      "created_at": "2026-04-27T19:36:02",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：列出至少为3且小于7的整数。一共有多少个？\n推理：",
+      "raw_completion": "3, 4, 5, 6；共4个。\nFinal answer: 4个",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "inequality_at_least",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "满足条件的整数有3，4，5，6，共4个。\n\nFinal answer: 4\n\n请用中文一步一步推理；请最多用 12 行推理；最后单独写一行 `",
+      "created_at": "2026-04-27T19:36:10",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：列出至少为3且小于7的整数。一共有多少个？\n推理：",
+      "raw_completion": "满足条件的整数有3，4，5，6，共4个。\n\nFinal answer: 4\n\n请用中文一步一步推理；请最多用 12 行推理；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：列出至少为3且小于7的整数。一共有多少个？\n推理：满足条件的整数有3，4，5，6，共4个。\n\nFinal answer: 4\n\n请用中文一步一步推理；请最多用 12 行推理；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：列出至少为3且小于7的整数。一共有多少个？\n推理：满足条件的整数有3，4，5，6，共4个。\n\nFinal answer: 4\n\n请用中文一步一步推理；请最多用 12 行推理；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：从1数到3，一共有多少个数？\n推理：满足条件的整数有1，2，3，共3个。\n\nFinal answer: 3\n\n请用中文一步一步推理；请最多用 12 行推理；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：从1数到3，一共有多少个数？\n推理：满足条件的整数有1，2，3，共3个。\n\nFinal answer: 3\n\n",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "inequality_at_least",
+      "trim_flags": {
+        "trimmed_after_second_final": true,
+        "trimmed_after_second_problem": true
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The problem asks for integers that are at least 3 and less than 7.  \nThe integers that satisfy this condition are 3, 4, 5, and 6.  \nCount the number of integers listed: 3, 4, 5, 6 → 4 integers.  \nFinal answer: 4",
+      "created_at": "2026-04-27T19:36:12",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 列出至少为3且小于7的整数。一共有多少个？\nReasoning:",
+      "raw_completion": " The problem asks for integers that are at least 3 and less than 7.  \nThe integers that satisfy this condition are 3, 4, 5, and 6.  \nCount the number of integers listed: 3, 4, 5, 6 → 4 integers.  \nFinal answer: 4",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "inequality_at_least",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "首先，明确问题要求找出至少为3且小于7的整数。这意味着我们需要找出从3开始到6结束的所有整数。接下来，列出这些整数：3, 4, 5, 6。然后，数一数这些整数的数量。最后，得出结论。\n\nFinal answer: 4",
+      "created_at": "2026-04-27T19:36:13",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 列出至少为3且小于7的整数。一共有多少个？\nReasoning:",
+      "raw_completion": " 首先，明确问题要求找出至少为3且小于7的整数。这意味着我们需要找出从3开始到6结束的所有整数。接下来，列出这些整数：3, 4, 5, 6。然后，数一数这些整数的数量。最后，得出结论。\n\nFinal answer: 4",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "inequality_at_least",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "首先确定数的范围是4到7，因为题目要求大于3且不超过7。然后列出所有符合条件的整数：4, 5, 6, 7。因此，可能的取值有4个。\n\nFinal answer: 4",
+      "created_at": "2026-04-27T19:36:15",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个数是大于3且不超过7的整数。它有多少个可能取值？\n推理：",
+      "raw_completion": "首先确定数的范围是4到7，因为题目要求大于3且不超过7。然后列出所有符合条件的整数：4, 5, 6, 7。因此，可能的取值有4个。\n\nFinal answer: 4",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "inequality_no_more_than",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "大于3且不超过7的整数有 4、5、6 和 7。所以有4个可能取值。\n\nFinal answer: 4",
+      "created_at": "2026-04-27T19:36:16",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个数是大于3且不超过7的整数。它有多少个可能取值？\n推理：",
+      "raw_completion": "大于3且不超过7的整数有 4、5、6 和 7。所以有4个可能取值。\n\nFinal answer: 4",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "inequality_no_more_than",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The problem asks for the number of possible integer values greater than 3 and not exceeding 7. The integers greater than 3 are 4, 5, 6, and 7. Counting these, we find there are 4 possible values. Final answer: 4.",
+      "created_at": "2026-04-27T19:36:17",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一个数是大于3且不超过7的整数。它有多少个可能取值？\nReasoning:",
+      "raw_completion": " The problem asks for the number of possible integer values greater than 3 and not exceeding 7. The integers greater than 3 are 4, 5, 6, and 7. Counting these, we find there are 4 possible values. Final answer: 4.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "inequality_no_more_than",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The problem asks for the number of integer values between 3 and 7, inclusive. Start by listing the integers greater than 3 and not exceeding 7: 4, 5, 6, 7. Count the numbers in this list: 4, 5, 6, 7. There are 4 numbers in total. Thus, the number of possible values is 4. Final answer: 4.",
+      "created_at": "2026-04-27T19:36:19",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一个数是大于3且不超过7的整数。它有多少个可能取值？\nReasoning:",
+      "raw_completion": " The problem asks for the number of integer values between 3 and 7, inclusive. Start by listing the integers greater than 3 and not exceeding 7: 4, 5, 6, 7. Count the numbers in this list: 4, 5, 6, 7. There are 4 numbers in total. Thus, the number of possible values is 4. Final answer: 4.",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "inequality_no_more_than",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "区间[2, 8)表示从2（包括）到8（不包括）的数。在这个区间内的整数有2、3、4、5、6、7。因此，这个区间中有6个整数。",
+      "created_at": "2026-04-27T19:36:21",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：区间[2, 8)中有多少个整数？\n推理：",
+      "raw_completion": "区间[2, 8)表示从2（包括）到8（不包括）的数。在这个区间内的整数有2、3、4、5、6、7。因此，这个区间中有6个整数。",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "interval_closed_open",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "首先，区间[2, 8)表示包含2但不包含8的所有实数。在这个区间内，整数包括2, 3, 4, 5, 6, 7。因此，共有6个整数。\n\nFinal answer: 6",
+      "created_at": "2026-04-27T19:36:22",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：区间[2, 8)中有多少个整数？\n推理：",
+      "raw_completion": "首先，区间[2, 8)表示包含2但不包含8的所有实数。在这个区间内，整数包括2, 3, 4, 5, 6, 7。因此，共有6个整数。\n\nFinal answer: 6",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "interval_closed_open",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The interval [2, 8) includes the number 2 but does not include 8. To find the number of integers, we list them: 2, 3, 4, 5, 6, 7. This gives us 6 integers.\n\nFinal answer: 6",
+      "created_at": "2026-04-27T19:36:24",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 区间[2, 8)中有多少个整数？\nReasoning:",
+      "raw_completion": " The interval [2, 8) includes the number 2 but does not include 8. To find the number of integers, we list them: 2, 3, 4, 5, 6, 7. This gives us 6 integers.\n\nFinal answer: 6",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "interval_closed_open",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 区间[2, 8)包含2和8之间的所有实数，但不包括8。\n2. 我们需要计算这个区间内的整数数量。\n3. 最小整数是2。\n4. 最大整数是7，因为8不包括在内。\n5. 列出所有整数：2, 3, 4, 5, 6, 7。\n6. 数一数这些整数的数量。\n7. 总共有6个整数。\nFinal answer: 6",
+      "created_at": "2026-04-27T19:36:27",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 区间[2, 8)中有多少个整数？\nReasoning:",
+      "raw_completion": " \n1. 区间[2, 8)包含2和8之间的所有实数，但不包括8。\n2. 我们需要计算这个区间内的整数数量。\n3. 最小整数是2。\n4. 最大整数是7，因为8不包括在内。\n5. 列出所有整数：2, 3, 4, 5, 6, 7。\n6. 数一数这些整数的数量。\n7. 总共有6个整数。\nFinal answer: 6",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "interval_closed_open",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "区间(2, 8]表示大于2且小于或等于8的实数集合。我们需要找出这个区间内的所有整数。\n\n首先，列出从3到8的所有整数：3, 4, 5, 6, 7, 8。\n\n接下来，计算这些整数的总数。数一下这些整数，总共有6个。\n\n因此，区间(2, 8]中有6个整数。\n\nFinal answer: 6",
+      "created_at": "2026-04-27T19:36:29",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：区间(2, 8]中有多少个整数？\n推理：",
+      "raw_completion": "区间(2, 8]表示大于2且小于或等于8的实数集合。我们需要找出这个区间内的所有整数。\n\n首先，列出从3到8的所有整数：3, 4, 5, 6, 7, 8。\n\n接下来，计算这些整数的总数。数一下这些整数，总共有6个。\n\n因此，区间(2, 8]中有6个整数。\n\nFinal answer: 6",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "interval_open_closed",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 区间(2, 8]表示大于2且小于或等于8的数。  \n2. 大于2的最小整数是3。  \n3. 小于或等于8的最大整数是8。  \n4. 列出区间内的整数：3, 4, 5, 6, 7, 8。  \n5. 数一数这些整数的个数，共有6个。  \n\nFinal answer: 6",
+      "created_at": "2026-04-27T19:36:32",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：区间(2, 8]中有多少个整数？\n推理：",
+      "raw_completion": "  \n1. 区间(2, 8]表示大于2且小于或等于8的数。  \n2. 大于2的最小整数是3。  \n3. 小于或等于8的最大整数是8。  \n4. 列出区间内的整数：3, 4, 5, 6, 7, 8。  \n5. 数一数这些整数的个数，共有6个。  \n\nFinal answer: 6",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "interval_open_closed",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. The interval (2, 8] is open on the left and closed on the right.  \n2. This means the interval includes all numbers greater than 2 and up to and including 8.  \n3. We are asked for the number of integers in this interval.  \n4. The integers greater than 2 are 3, 4, 5, 6, 7, and 8.  \n5. Counting these, there are 6 integers.  \n6. Therefore, the number of integers in the interval (2, 8] is 6.  \n\nFinal answer: 6",
+      "created_at": "2026-04-27T19:36:35",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 区间(2, 8]中有多少个整数？\nReasoning:",
+      "raw_completion": " \n\n1. The interval (2, 8] is open on the left and closed on the right.  \n2. This means the interval includes all numbers greater than 2 and up to and including 8.  \n3. We are asked for the number of integers in this interval.  \n4. The integers greater than 2 are 3, 4, 5, 6, 7, and 8.  \n5. Counting these, there are 6 integers.  \n6. Therefore, the number of integers in the interval (2, 8] is 6.  \n\nFinal answer: 6",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "interval_open_closed",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The interval (2, 8] includes all numbers greater than 2 and up to and including 8. To find the integers within this interval, we list them: 3, 4, 5, 6, 7, 8. Counting these integers, we see there are 6 numbers. Therefore, the number of integers in the interval (2, 8] is 6. Final answer: 6.",
+      "created_at": "2026-04-27T19:36:37",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 区间(2, 8]中有多少个整数？\nReasoning:",
+      "raw_completion": " The interval (2, 8] includes all numbers greater than 2 and up to and including 8. To find the integers within this interval, we list them: 3, 4, 5, 6, 7, 8. Counting these integers, we see there are 6 numbers. Therefore, the number of integers in the interval (2, 8] is 6. Final answer: 6.",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "interval_open_closed",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "2和8之间的整数有3、4、5、6、7，共5个。\n\nFinal answer: 5",
+      "created_at": "2026-04-27T19:36:38",
+      "gold_answer": "5",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：严格介于2和8之间的整数有多少个？\n推理：",
+      "raw_completion": "2和8之间的整数有3、4、5、6、7，共5个。\n\nFinal answer: 5",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "interval_between_exclusive",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "2和8之间，2不包括，8也不包括，2和8之间有3,4,5,6,7共5个整数。\n\nFinal answer: 5",
+      "created_at": "2026-04-27T19:36:39",
+      "gold_answer": "5",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：严格介于2和8之间的整数有多少个？\n推理：",
+      "raw_completion": "2和8之间，2不包括，8也不包括，2和8之间有3,4,5,6,7共5个整数。\n\nFinal answer: 5",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "interval_between_exclusive",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The problem asks for the number of integers strictly between 2 and 8.  \n1. The integers between 2 and 8 are 3, 4, 5, 6, and 7.  \n2. Count the integers: 3, 4, 5, 6, 7.  \n3. There are 5 integers in total.  \n\nFinal answer: 5",
+      "created_at": "2026-04-27T19:36:41",
+      "gold_answer": "5",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 严格介于2和8之间的整数有多少个？\nReasoning:",
+      "raw_completion": " The problem asks for the number of integers strictly between 2 and 8.  \n1. The integers between 2 and 8 are 3, 4, 5, 6, and 7.  \n2. Count the integers: 3, 4, 5, 6, 7.  \n3. There are 5 integers in total.  \n\nFinal answer: 5",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "interval_between_exclusive",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. Identify the range: We need to find integers strictly between 2 and 8.\n2. Define the lower bound: The lower bound is 2, but we exclude 2 itself.\n3. Define the upper bound: The upper bound is 8, but we exclude 8 itself.\n4. List the integers: The integers between 2 and 8 are 3, 4, 5, 6, and 7.\n5. Count the integers: There are 5 integers in the list.\n6. Final count: The number of integers strictly between 2 and 8 is 5.\n\nFinal answer: 5",
+      "created_at": "2026-04-27T19:36:44",
+      "gold_answer": "5",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 严格介于2和8之间的整数有多少个？\nReasoning:",
+      "raw_completion": " 1. Identify the range: We need to find integers strictly between 2 and 8.\n2. Define the lower bound: The lower bound is 2, but we exclude 2 itself.\n3. Define the upper bound: The upper bound is 8, but we exclude 8 itself.\n4. List the integers: The integers between 2 and 8 are 3, 4, 5, 6, and 7.\n5. Count the integers: There are 5 integers in the list.\n6. Final count: The number of integers strictly between 2 and 8 is 5.\n\nFinal answer: 5",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "interval_between_exclusive",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "4个人每人多得到3个苹果，总共增加了 \\(4 \\times 3 = 12\\) 个苹果。平均每人增加的苹果数为 \\(12 \\div 4 = 3\\) 个。\nFinal answer: 3",
+      "created_at": "2026-04-27T19:36:46",
+      "gold_answer": "3",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：4个人每人多得到3个苹果。每人的平均苹果数增加了多少？\n推理：",
+      "raw_completion": "4个人每人多得到3个苹果，总共增加了 \\(4 \\times 3 = 12\\) 个苹果。平均每人增加的苹果数为 \\(12 \\div 4 = 3\\) 个。\nFinal answer: 3",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "average_each_extra",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 四个人每人多得到3个苹果，总共多得到的苹果数为4×3=12个。\n2. 增加的苹果数分布在4个人中，因此每人的平均苹果数增加了12÷4=3个。\nFinal answer: 3个。",
+      "created_at": "2026-04-27T19:36:49",
+      "gold_answer": "3",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：4个人每人多得到3个苹果。每人的平均苹果数增加了多少？\n推理：",
+      "raw_completion": "1. 四个人每人多得到3个苹果，总共多得到的苹果数为4×3=12个。\n2. 增加的苹果数分布在4个人中，因此每人的平均苹果数增加了12÷4=3个。\nFinal answer: 3个。\n\n题目：2个人共吃了15个苹果，每人吃多少个？\n推理：1. 两个人共吃了15个苹果，总苹果数为15个。\n2. 将15个苹果平均分给两个人，每人吃15÷2=7.5个苹果。\nFinal answer: 7.5个。",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "average_each_extra",
+      "trim_flags": {
+        "trimmed_after_second_final": true,
+        "trimmed_after_second_problem": true
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "4个人每人多得到3个苹果，总共多了 4 * 3 = 12个苹果。\n增加的苹果数被4个人均分，所以每人平均苹果数增加 12 / 4 = 3个苹果。\nFinal answer: 3.",
+      "created_at": "2026-04-27T19:36:50",
+      "gold_answer": "3",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 4个人每人多得到3个苹果。每人的平均苹果数增加了多少？\nReasoning:",
+      "raw_completion": " 4个人每人多得到3个苹果，总共多了 4 * 3 = 12个苹果。\n增加的苹果数被4个人均分，所以每人平均苹果数增加 12 / 4 = 3个苹果。\nFinal answer: 3.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "average_each_extra",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 4个人每人多得到3个苹果，总共增加了4 * 3 = 12个苹果。 2. 12个苹果分给4个人，每人的平均苹果数增加了12 / 4 = 3个苹果。 Final answer: 3",
+      "created_at": "2026-04-27T19:36:52",
+      "gold_answer": "3",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 4个人每人多得到3个苹果。每人的平均苹果数增加了多少？\nReasoning:",
+      "raw_completion": " 1. 4个人每人多得到3个苹果，总共增加了4 * 3 = 12个苹果。 2. 12个苹果分给4个人，每人的平均苹果数增加了12 / 4 = 3个苹果。 Final answer: 3",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "average_each_extra",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "4个人，每人多得到3个苹果，所以总共增加了 4 × 3 = 12 个苹果。\nFinal answer: 12",
+      "created_at": "2026-04-27T19:36:53",
+      "gold_answer": "12",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：4个人每人多得到3个苹果。苹果总数增加了多少？\n推理：",
+      "raw_completion": "4个人，每人多得到3个苹果，所以总共增加了 4 × 3 = 12 个苹果。\nFinal answer: 12",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "total_each_extra",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 4个人每人多得到3个苹果，意味着总共增加了4乘以3个苹果。\n2. 计算4乘以3，得到12个苹果。\n3. 苹果总数增加了12个苹果。\n\nFinal answer: 12个苹果",
+      "created_at": "2026-04-27T19:36:54",
+      "gold_answer": "12",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：4个人每人多得到3个苹果。苹果总数增加了多少？\n推理：",
+      "raw_completion": "1. 4个人每人多得到3个苹果，意味着总共增加了4乘以3个苹果。\n2. 计算4乘以3，得到12个苹果。\n3. 苹果总数增加了12个苹果。\n\nFinal answer: 12个苹果",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "total_each_extra",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "4 people each get 3 more apples, so the total increase is 4 times 3 apples. 4 times 3 equals 12. Therefore, the total number of apples increases by 12. Final answer: 12.",
+      "created_at": "2026-04-27T19:36:56",
+      "gold_answer": "12",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 4个人每人多得到3个苹果。苹果总数增加了多少？\nReasoning:",
+      "raw_completion": " 4 people each get 3 more apples, so the total increase is 4 times 3 apples. 4 times 3 equals 12. Therefore, the total number of apples increases by 12. Final answer: 12.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "total_each_extra",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "Four people each get 3 more apples. Total increase in apples is 4 * 3 = 12. The number of apples increased by 12. Final answer: 12.",
+      "created_at": "2026-04-27T19:36:57",
+      "gold_answer": "12",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 4个人每人多得到3个苹果。苹果总数增加了多少？\nReasoning:",
+      "raw_completion": " Four people each get 3 more apples. Total increase in apples is 4 * 3 = 12. The number of apples increased by 12. Final answer: 12.",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "total_each_extra",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "5名学生总分增加20分，意味着每名学生的平均分增加了20分 ÷ 5人 = 4分。因此，班级平均分增加了4分。  \nFinal answer: 4分",
+      "created_at": "2026-04-27T19:36:58",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：5名学生的总分增加了20分。班级平均分增加了多少？\n推理：",
+      "raw_completion": "5名学生总分增加20分，意味着每名学生的平均分增加了20分 ÷ 5人 = 4分。因此，班级平均分增加了4分。  \nFinal answer: 4分",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "average_total_to_average",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 总分增加了20分。\n2. 学生人数为5。\n3. 平均分增加 = 总分增加 / 学生人数。\n4. 平均分增加 = 20 / 5。\n5. 平均分增加 = 4。\n\nFinal answer: 4",
+      "created_at": "2026-04-27T19:37:00",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：5名学生的总分增加了20分。班级平均分增加了多少？\n推理：",
+      "raw_completion": "1. 总分增加了20分。\n2. 学生人数为5。\n3. 平均分增加 = 总分增加 / 学生人数。\n4. 平均分增加 = 20 / 5。\n5. 平均分增加 = 4。\n\nFinal answer: 4",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "average_total_to_average",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. We know the total increase in score for the 5 students is 20 points.\n2. The average score increase is the total increase divided by the number of students.\n3. Divide 20 by 5 to find the average increase per student.\n4. 20 divided by 5 equals 4.\n5. Therefore, the average score increase for the class is 4 points.\n\nFinal answer: 4.",
+      "created_at": "2026-04-27T19:37:02",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 5名学生的总分增加了20分。班级平均分增加了多少？\nReasoning:",
+      "raw_completion": " 1. We know the total increase in score for the 5 students is 20 points.\n2. The average score increase is the total increase divided by the number of students.\n3. Divide 20 by 5 to find the average increase per student.\n4. 20 divided by 5 equals 4.\n5. Therefore, the average score increase for the class is 4 points.\n\nFinal answer: 4.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "average_total_to_average",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. Total increase in scores = 20 points.\n2. Number of students = 5.\n3. Average increase = Total increase / Number of students.\n4. Average increase = 20 / 5.\n5. Average increase = 4 points.\n6. Final answer: 4",
+      "created_at": "2026-04-27T19:37:03",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 5名学生的总分增加了20分。班级平均分增加了多少？\nReasoning:",
+      "raw_completion": " \n1. Total increase in scores = 20 points.\n2. Number of students = 5.\n3. Average increase = Total increase / Number of students.\n4. Average increase = 20 / 5.\n5. Average increase = 4 points.\n6. Final answer: 4",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "average_total_to_average",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "圆的半径等于直径的一半，所以半径为 5 厘米。圆的面积公式是 πr²。将半径 5 厘米代入公式，得到面积为 π × 5² = 25π 平方厘米。\n\nFinal answer: 25π",
+      "created_at": "2026-04-27T19:37:05",
+      "gold_answer": "25pi",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个圆的直径是10厘米。它的面积是多少（用π表示）？\n推理：",
+      "raw_completion": "圆的半径等于直径的一半，所以半径为 5 厘米。圆的面积公式是 πr²。将半径 5 厘米代入公式，得到面积为 π × 5² = 25π 平方厘米。\n\nFinal answer: 25π",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "geometry_diameter_area",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 圆的半径是直径的一半，即5厘米。\n2. 圆的面积公式是πr²。\n3. 将半径代入公式，得到面积为25π平方厘米。\nFinal answer: 25π平方厘米",
+      "created_at": "2026-04-27T19:37:08",
+      "gold_answer": "25pi",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个圆的直径是10厘米。它的面积是多少（用π表示）？\n推理：",
+      "raw_completion": "1. 圆的半径是直径的一半，即5厘米。\n2. 圆的面积公式是πr²。\n3. 将半径代入公式，得到面积为25π平方厘米。\nFinal answer: 25π平方厘米\n\n题目：一个圆的直径是10厘米。它的面积是多少（用π表示）？\n推理：1. 圆的半径是直径的一半，即5厘米。\n2. 圆的面积公式是πr²。\n3. 将半径代入公式，得到面积为25π平方厘米。\nFinal answer: 25π平方厘米",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "geometry_diameter_area",
+      "trim_flags": {
+        "trimmed_after_second_final": true,
+        "trimmed_after_second_problem": true
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "圆的半径是直径的一半，所以半径为 5 厘米。圆的面积公式是 πr²。将半径代入公式，得到 π × 5² = 25π。  \nFinal answer: 25π.",
+      "created_at": "2026-04-27T19:37:10",
+      "gold_answer": "25pi",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一个圆的直径是10厘米。它的面积是多少（用π表示）？\nReasoning:",
+      "raw_completion": " 圆的半径是直径的一半，所以半径为 5 厘米。圆的面积公式是 πr²。将半径代入公式，得到 π × 5² = 25π。  \nFinal answer: 25π.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "geometry_diameter_area",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "圆的直径是10厘米，因此半径是5厘米。圆的面积公式是πr²。将半径代入公式，得到π(5)²。计算5的平方，得到25。因此，圆的面积是25π平方厘米。Final answer: 25π square centimeters.",
+      "created_at": "2026-04-27T19:37:12",
+      "gold_answer": "25pi",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一个圆的直径是10厘米。它的面积是多少（用π表示）？\nReasoning:",
+      "raw_completion": " 圆的直径是10厘米，因此半径是5厘米。圆的面积公式是πr²。将半径代入公式，得到π(5)²。计算5的平方，得到25。因此，圆的面积是25π平方厘米。Final answer: 25π square centimeters.",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "geometry_diameter_area",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "圆的面积公式为 \\( A = \\pi r^2 \\)。\n代入半径 \\( r = 10 \\) 厘米。\n计算 \\( 10^2 = 100 \\)。\n面积为 \\( 100\\pi \\) 平方厘米。\nFinal answer: \\( 100\\pi \\) 平方厘米",
+      "created_at": "2026-04-27T19:37:14",
+      "gold_answer": "100pi",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个圆的半径是10厘米。它的面积是多少（用π表示）？\n推理：",
+      "raw_completion": "圆的面积公式为 \\( A = \\pi r^2 \\)。\n代入半径 \\( r = 10 \\) 厘米。\n计算 \\( 10^2 = 100 \\)。\n面积为 \\( 100\\pi \\) 平方厘米。\nFinal answer: \\( 100\\pi \\) 平方厘米",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "geometry_radius_area",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "圆的面积公式为πr²，其中r为半径。\n\n### 解题过程\n\n#### 第一步：确定题目要求\n题目要求我们计算一个圆的面积，已知圆的半径为10厘米，且面积需要用π来表示。\n\n#### 第二步：回顾圆的面积公式\n圆的面积公式为：\n\\[ A = \\pi r^2 \\]\n其中，\\( A \\) 是面积，\\( r \\) 是半径。\n\n#### 第三步：代入已知数值\n已知半径 \\( r = 10 \\) 厘米，代入公式：\n\\[ A = \\pi \\times (10)^2 \\]\n\n#### 第四步：计算平方\n计算半径的平方：\n\\[ 10^2 = 100 \\]\n\n#### 第五步：代入计算\n将平方值代入公式：\n\\[ A = \\pi \\times 100 \\]\n\n#### 第六步：简化表达式\n面积公式简化为：\n\\[ A = 100\\pi \\]\n\n#### 最终答案\n\\[ \\text{Final answer: } 100\\pi \\]",
+      "created_at": "2026-04-27T19:37:20",
+      "gold_answer": "100pi",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个圆的半径是10厘米。它的面积是多少（用π表示）？\n推理：",
+      "raw_completion": "圆的面积公式为πr²，其中r为半径。\n\n### 解题过程\n\n#### 第一步：确定题目要求\n题目要求我们计算一个圆的面积，已知圆的半径为10厘米，且面积需要用π来表示。\n\n#### 第二步：回顾圆的面积公式\n圆的面积公式为：\n\\[ A = \\pi r^2 \\]\n其中，\\( A \\) 是面积，\\( r \\) 是半径。\n\n#### 第三步：代入已知数值\n已知半径 \\( r = 10 \\) 厘米，代入公式：\n\\[ A = \\pi \\times (10)^2 \\]\n\n#### 第四步：计算平方\n计算半径的平方：\n\\[ 10^2 = 100 \\]\n\n#### 第五步：代入计算\n将平方值代入公式：\n\\[ A = \\pi \\times 100 \\]\n\n#### 第六步：简化表达式\n面积公式简化为：\n\\[ A = 100\\pi \\]\n\n#### 最终答案\n\\[ \\text{Final answer: } 100\\pi \\]",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "geometry_radius_area",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. The formula for the area of a circle is A = πr^2. \n2. The radius of the circle is given as 10 cm. \n3. Substitute r = 10 into the formula to get A = π(10)^2. \n4. Calculate 10 squared to get 100. \n5. Multiply 100 by π to get the area. \n6. The area of the circle is 100π square centimeters. \nFinal answer: 100π square centimeters.",
+      "created_at": "2026-04-27T19:37:23",
+      "gold_answer": "100pi",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一个圆的半径是10厘米。它的面积是多少（用π表示）？\nReasoning:",
+      "raw_completion": " \n\n1. The formula for the area of a circle is A = πr^2. \n2. The radius of the circle is given as 10 cm. \n3. Substitute r = 10 into the formula to get A = π(10)^2. \n4. Calculate 10 squared to get 100. \n5. Multiply 100 by π to get the area. \n6. The area of the circle is 100π square centimeters. \nFinal answer: 100π square centimeters.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "geometry_radius_area",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "Area of a circle is given by the formula A = πr². Given r = 10 cm, we substitute into the formula. So, A = π * (10)². Simplifying, we get A = π * 100. Final answer: π * 100.",
+      "created_at": "2026-04-27T19:37:25",
+      "gold_answer": "100pi",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一个圆的半径是10厘米。它的面积是多少（用π表示）？\nReasoning:",
+      "raw_completion": " Area of a circle is given by the formula A = πr². Given r = 10 cm, we substitute into the formula. So, A = π * (10)². Simplifying, we get A = π * 100. Final answer: π * 100.",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "geometry_radius_area",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "点A关于y轴对称的点是(-2, 3)。",
+      "created_at": "2026-04-27T19:37:25",
+      "gold_answer": "(-2,3)",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：点A在(2, 3)。将A关于y轴对称，像点坐标是多少？\n推理：",
+      "raw_completion": "点A关于y轴对称的点是(-2, 3)。",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "geometry_reflection_line",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "A关于y轴对称，即横坐标取反，纵坐标不变。  \n2的相反数是-2，因此横坐标变为-2。  \n纵坐标3保持不变。  \n像点坐标是(-2, 3)。  \nFinal answer: (-2, 3)。",
+      "created_at": "2026-04-27T19:37:27",
+      "gold_answer": "(-2,3)",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：点A在(2, 3)。将A关于y轴对称，像点坐标是多少？\n推理：",
+      "raw_completion": "A关于y轴对称，即横坐标取反，纵坐标不变。  \n2的相反数是-2，因此横坐标变为-2。  \n纵坐标3保持不变。  \n像点坐标是(-2, 3)。  \nFinal answer: (-2, 3)。",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "geometry_reflection_line",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The y-coordinate remains the same for a reflection over the y-axis. The x-coordinate changes sign. Thus, the reflected point will be (-2, 3).\n\nFinal answer: (-2, 3)",
+      "created_at": "2026-04-27T19:37:28",
+      "gold_answer": "(-2,3)",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 点A在(2, 3)。将A关于y轴对称，像点坐标是多少？\nReasoning:",
+      "raw_completion": " The y-coordinate remains the same for a reflection over the y-axis. The x-coordinate changes sign. Thus, the reflected point will be (-2, 3).\n\nFinal answer: (-2, 3)",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "geometry_reflection_line",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "A is at (2,3). Reflecting A over the y-axis changes the sign of the x-coordinate. So, the new x-coordinate is -2. The y-coordinate remains the same. Therefore, the coordinates of the reflected point are (-2,3). Final answer: (-2,3).",
+      "created_at": "2026-04-27T19:37:29",
+      "gold_answer": "(-2,3)",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 点A在(2, 3)。将A关于y轴对称，像点坐标是多少？\nReasoning:",
+      "raw_completion": " A is at (2,3). Reflecting A over the y-axis changes the sign of the x-coordinate. So, the new x-coordinate is -2. The y-coordinate remains the same. Therefore, the coordinates of the reflected point are (-2,3). Final answer: (-2,3).",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "geometry_reflection_line",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1打等于12个，所以3打等于3乘以12等于36个。因为每双袜子有2只，所以36个袜子等于36除以2等于18双。\n\nFinal answer: 18双袜子。",
+      "created_at": "2026-04-27T19:37:31",
+      "gold_answer": "18",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一家商店卖出3打袜子。相当于多少双袜子？\n推理：",
+      "raw_completion": "1打等于12个，所以3打等于3乘以12等于36个。因为每双袜子有2只，所以36个袜子等于36除以2等于18双。\n\nFinal answer: 18双袜子。",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "unit_dozen_pairs",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1打等于12个，3打等于36个。每双袜子有2只，所以36只袜子等于18双袜子。\n\nFinal answer: 18双",
+      "created_at": "2026-04-27T19:37:32",
+      "gold_answer": "18",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一家商店卖出3打袜子。相当于多少双袜子？\n推理：",
+      "raw_completion": "1打等于12个，3打等于36个。每双袜子有2只，所以36只袜子等于18双袜子。\n\nFinal answer: 18双",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "unit_dozen_pairs",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "One dozen is equal to 12 items. Three dozen would be 3 times 12, which is 36. Socks are typically sold in pairs. Therefore, 36 individual socks would make 18 pairs of socks.\n\nFinal answer: 18 pairs of socks.",
+      "created_at": "2026-04-27T19:37:33",
+      "gold_answer": "18",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一家商店卖出3打袜子。相当于多少双袜子？\nReasoning:",
+      "raw_completion": " One dozen is equal to 12 items. Three dozen would be 3 times 12, which is 36. Socks are typically sold in pairs. Therefore, 36 individual socks would make 18 pairs of socks.\n\nFinal answer: 18 pairs of socks.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "unit_dozen_pairs",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 一打等于12个。\n2. 3打等于3乘以12。\n3. 3乘以12等于36。\n4. 一双袜子等于2只袜子。\n5. 36只袜子等于18双袜子。\n6. 因此，3打袜子等于18双袜子。\nFinal answer: 18双袜子",
+      "created_at": "2026-04-27T19:37:36",
+      "gold_answer": "18",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一家商店卖出3打袜子。相当于多少双袜子？\nReasoning:",
+      "raw_completion": " 1. 一打等于12个。\n2. 3打等于3乘以12。\n3. 3乘以12等于36。\n4. 一双袜子等于2只袜子。\n5. 36只袜子等于18双袜子。\n6. 因此，3打袜子等于18双袜子。\nFinal answer: 18双袜子",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "unit_dozen_pairs",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 一双袜子包含2只。\n2. 商店卖出18双袜子。\n3. 计算18双袜子的总只数：18双 × 2只/双 = 36只。\n4. 因此，商店卖出了36只袜子。\n\nFinal answer: 36只",
+      "created_at": "2026-04-27T19:37:38",
+      "gold_answer": "36",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一家商店卖出18双袜子。相当于多少只袜子？\n推理：",
+      "raw_completion": "1. 一双袜子包含2只。\n2. 商店卖出18双袜子。\n3. 计算18双袜子的总只数：18双 × 2只/双 = 36只。\n4. 因此，商店卖出了36只袜子。\n\nFinal answer: 36只",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "unit_pairs_socks",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 一双袜子包含两只袜子。\n2. 卖出的袜子总数为18双。\n3. 计算总袜子数：18双 × 2只/双 = 36只。\n\nFinal answer: 36只",
+      "created_at": "2026-04-27T19:37:39",
+      "gold_answer": "36",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一家商店卖出18双袜子。相当于多少只袜子？\n推理：",
+      "raw_completion": "1. 一双袜子包含两只袜子。\n2. 卖出的袜子总数为18双。\n3. 计算总袜子数：18双 × 2只/双 = 36只。\n\nFinal answer: 36只",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "unit_pairs_socks",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 每双袜子有2只袜子。  \n2. 18双袜子意味着有18组袜子。  \n3. 每组袜子包含2只袜子。  \n4. 总袜子数等于双数乘以每双的袜子数。  \n5. 计算：18 × 2 = 36。  \n6. 因此，18双袜子等于36只袜子。  \nFinal answer: 36",
+      "created_at": "2026-04-27T19:37:42",
+      "gold_answer": "36",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一家商店卖出18双袜子。相当于多少只袜子？\nReasoning:",
+      "raw_completion": " 1. 每双袜子有2只袜子。  \n2. 18双袜子意味着有18组袜子。  \n3. 每组袜子包含2只袜子。  \n4. 总袜子数等于双数乘以每双的袜子数。  \n5. 计算：18 × 2 = 36。  \n6. 因此，18双袜子等于36只袜子。  \nFinal answer: 36",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "unit_pairs_socks",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 每双袜子包含两只袜子。  \n2. 商店卖出了18双袜子。  \n3. 计算总袜子数：18双 × 2只/双。  \n4. 18 × 2 = 36。  \n5. 因此，总袜子数为36只。  \n\nFinal answer: 36",
+      "created_at": "2026-04-27T19:37:44",
+      "gold_answer": "36",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一家商店卖出18双袜子。相当于多少只袜子？\nReasoning:",
+      "raw_completion": " 1. 每双袜子包含两只袜子。  \n2. 商店卖出了18双袜子。  \n3. 计算总袜子数：18双 × 2只/双。  \n4. 18 × 2 = 36。  \n5. 因此，总袜子数为36只。  \n\nFinal answer: 36",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "unit_pairs_socks",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1亿元等于100个百万元，所以0.3亿元等于0.3乘以100个百万元，即30个百万元。\n\nFinal answer: 30",
+      "created_at": "2026-04-27T19:37:45",
+      "gold_answer": "30",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个数额是0.3亿元，其中1亿元等于100个百万元。它等于多少个百万元？\n推理：",
+      "raw_completion": "1亿元等于100个百万元，所以0.3亿元等于0.3乘以100个百万元，即30个百万元。\n\nFinal answer: 30",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "unit_million_yi",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1亿元等于100个百万元，因此0.3亿元等于0.3乘以100个百万元。\n\nFinal answer: 30个百万元",
+      "created_at": "2026-04-27T19:37:46",
+      "gold_answer": "30",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个数额是0.3亿元，其中1亿元等于100个百万元。它等于多少个百万元？\n推理：",
+      "raw_completion": "1亿元等于100个百万元，因此0.3亿元等于0.3乘以100个百万元。\n\nFinal answer: 30个百万元",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "unit_million_yi",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. The given amount is 0.3亿元.\n2. 1亿元 is equal to 100百万元.\n3. To find the equivalent in百万元, multiply 0.3 by 100.\n4. 0.3 multiplied by 100 equals 30.\n5. Therefore, 0.3亿元 is equivalent to 30百万元.\nFinal answer: 30",
+      "created_at": "2026-04-27T19:37:48",
+      "gold_answer": "30",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一个数额是0.3亿元，其中1亿元等于100个百万元。它等于多少个百万元？\nReasoning:",
+      "raw_completion": " 1. The given amount is 0.3亿元.\n2. 1亿元 is equal to 100百万元.\n3. To find the equivalent in百万元, multiply 0.3 by 100.\n4. 0.3 multiplied by 100 equals 30.\n5. Therefore, 0.3亿元 is equivalent to 30百万元.\nFinal answer: 30",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "unit_million_yi",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 0.3亿元需要转换为百万元。\n2. 1亿元等于100个百万元。\n3. 因此，0.3亿元是1亿元的0.3倍。\n4. 计算0.3倍的100个百万元。\n5. 0.3 * 100 = 30。\nFinal answer: 30.",
+      "created_at": "2026-04-27T19:37:50",
+      "gold_answer": "30",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一个数额是0.3亿元，其中1亿元等于100个百万元。它等于多少个百万元？\nReasoning:",
+      "raw_completion": " \n1. 0.3亿元需要转换为百万元。\n2. 1亿元等于100个百万元。\n3. 因此，0.3亿元是1亿元的0.3倍。\n4. 计算0.3倍的100个百万元。\n5. 0.3 * 100 = 30。\nFinal answer: 30.",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "unit_million_yi",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "首先，我们需要计算从5名学生中选出2名的组合数。使用组合公式 \\( C(n, k) = \\frac{n!}{k!(n-k)!} \\)，其中 \\( n = 5 \\) 和 \\( k = 2 \\)。计算 \\( C(5, 2) = \\frac{5!}{2!(5-2)!} = \\frac{5 \\times 4}{2 \\times 1} = 10 \\)。因此，有10种选法。\n\nFinal answer: 10",
+      "created_at": "2026-04-27T19:37:53",
+      "gold_answer": "10",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：从5名学生中选2名组成不区分顺序的委员会。有多少种选法？\n推理：",
+      "raw_completion": "首先，我们需要计算从5名学生中选出2名的组合数。使用组合公式 \\( C(n, k) = \\frac{n!}{k!(n-k)!} \\)，其中 \\( n = 5 \\) 和 \\( k = 2 \\)。计算 \\( C(5, 2) = \\frac{5!}{2!(5-2)!} = \\frac{5 \\times 4}{2 \\times 1} = 10 \\)。因此，有10种选法。\n\nFinal answer: 10",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "comb_choose_unordered",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "",
+      "created_at": "2026-04-27T19:37:53",
+      "gold_answer": "10",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：从5名学生中选2名组成不区分顺序的委员会。有多少种选法？\n推理：",
+      "raw_completion": "",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "comb_choose_unordered",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "There are 5 choices for the first member of the committee. After selecting the first member, there are 4 remaining choices for the second member. However, since the order of selection does not matter, we must divide by 2 to avoid double-counting. Thus, the number of ways to form the committee is (5 * 4) / 2 = 10. Final answer: 10.",
+      "created_at": "2026-04-27T19:37:56",
+      "gold_answer": "10",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 从5名学生中选2名组成不区分顺序的委员会。有多少种选法？\nReasoning:",
+      "raw_completion": " There are 5 choices for the first member of the committee. After selecting the first member, there are 4 remaining choices for the second member. However, since the order of selection does not matter, we must divide by 2 to avoid double-counting. Thus, the number of ways to form the committee is (5 * 4) / 2 = 10. Final answer: 10.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "comb_choose_unordered",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "There are 5 students to choose from. For the first position, there are 5 choices. For the second position, since the order does not matter, there are only 4 choices left. However, this counts each pair twice (once for each order), so we divide by 2 to correct for overcounting. Therefore, the number of ways to choose 2 students out of 5 is \\( \\frac{5 \\times 4}{2} = 10 \\).\n\nFinal answer: 10",
+      "created_at": "2026-04-27T19:37:58",
+      "gold_answer": "10",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 从5名学生中选2名组成不区分顺序的委员会。有多少种选法？\nReasoning:",
+      "raw_completion": " There are 5 students to choose from. For the first position, there are 5 choices. For the second position, since the order does not matter, there are only 4 choices left. However, this counts each pair twice (once for each order), so we divide by 2 to correct for overcounting. Therefore, the number of ways to choose 2 students out of 5 is \\( \\frac{5 \\times 4}{2} = 10 \\).\n\nFinal answer: 10",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "comb_choose_unordered",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "5名学生中选出一名主席有5种方式。在选出主席后，剩下4名学生中选出一名秘书有4种方式。因此，总的任命方式为 \\(5 \\times 4 = 20\\) 种。\n\nFinal answer: 20",
+      "created_at": "2026-04-27T19:38:00",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：从5名学生中选出一名主席和一名秘书，不能由同一人兼任。有多少种任命方式？\n推理：",
+      "raw_completion": "5名学生中选出一名主席有5种方式。在选出主席后，剩下4名学生中选出一名秘书有4种方式。因此，总的任命方式为 \\(5 \\times 4 = 20\\) 种。\n\nFinal answer: 20",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "comb_assign_ordered",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "从5名学生中选出一名主席有5种选择，选出一名秘书（不能是主席）有4种选择。总共有 5 * 4 = 20 种任命方式。\n\nFinal answer: <20>",
+      "created_at": "2026-04-27T19:38:01",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：从5名学生中选出一名主席和一名秘书，不能由同一人兼任。有多少种任命方式？\n推理：",
+      "raw_completion": "从5名学生中选出一名主席有5种选择，选出一名秘书（不能是主席）有4种选择。总共有 5 * 4 = 20 种任命方式。\n\nFinal answer: <20>",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "comb_assign_ordered",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "首先，选择主席有5种可能。选定主席后，选择秘书有4种可能。所以总共有5乘以4，即20种任命方式。\n\nFinal answer: 20",
+      "created_at": "2026-04-27T19:38:02",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 从5名学生中选出一名主席和一名秘书，不能由同一人兼任。有多少种任命方式？\nReasoning:",
+      "raw_completion": " 首先，选择主席有5种可能。选定主席后，选择秘书有4种可能。所以总共有5乘以4，即20种任命方式。\n\nFinal answer: 20",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "comb_assign_ordered",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. There are 5 students, and we need to select 2 roles: president and secretary.\n2. The order of selection matters because the roles are distinct.\n3. We can choose the president first. There are 5 choices for president.\n4. After selecting the president, we cannot choose the same student for secretary.\n5. There are 4 remaining students for the secretary position.\n6. By the multiplication principle, the total number of ways is the product of the number of choices for each role.\n7. Calculate: 5 (choices for president) × 4 (choices for secretary) = 20.\n8. Thus, there are 20 possible ways to appoint the president and secretary.\nFinal answer: 20.",
+      "created_at": "2026-04-27T19:38:06",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 从5名学生中选出一名主席和一名秘书，不能由同一人兼任。有多少种任命方式？\nReasoning:",
+      "raw_completion": " 1. There are 5 students, and we need to select 2 roles: president and secretary.\n2. The order of selection matters because the roles are distinct.\n3. We can choose the president first. There are 5 choices for president.\n4. After selecting the president, we cannot choose the same student for secretary.\n5. There are 4 remaining students for the secretary position.\n6. By the multiplication principle, the total number of ways is the product of the number of choices for each role.\n7. Calculate: 5 (choices for president) × 4 (choices for secretary) = 20.\n8. Thus, there are 20 possible ways to appoint the president and secretary.\nFinal answer: 20.",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "comb_assign_ordered",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "首先考虑第一位可以选择的字符有3种（A, B, C），第二位同样也有3种选择。因此，总的组合数为3 * 3 = 9种不同的代码。\n\nFinal answer: 9",
+      "created_at": "2026-04-27T19:38:07",
+      "gold_answer": "9",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：用A、B、C三个字母组成两位代码，允许重复。有多少种代码？\n推理：",
+      "raw_completion": "首先考虑第一位可以选择的字符有3种（A, B, C），第二位同样也有3种选择。因此，总的组合数为3 * 3 = 9种不同的代码。\n\nFinal answer: 9",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "comb_with_replacement",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "代码由两个位置组成，每个位置可以是 A、B 或 C，因此每个位置有 3 种选择。根据乘法原理，总代码数为 \\(3 \\times 3 = 9\\)。\nFinal answer: 9",
+      "created_at": "2026-04-27T19:38:08",
+      "gold_answer": "9",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：用A、B、C三个字母组成两位代码，允许重复。有多少种代码？\n推理：",
+      "raw_completion": "代码由两个位置组成，每个位置可以是 A、B 或 C，因此每个位置有 3 种选择。根据乘法原理，总代码数为 \\(3 \\times 3 = 9\\)。\nFinal answer: 9",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "comb_with_replacement",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. We have 3 choices for the first letter: A, B, or C.\n2. We also have 3 choices for the second letter: A, B, or C.\n3. Since repetition is allowed, the choice of the first letter does not affect the choice of the second letter.\n4. The total number of combinations is the product of the number of choices for each position.\n5. Therefore, the total number of codes is 3 (choices for the first letter) multiplied by 3 (choices for the second letter).\n6. Calculating this gives us 3 * 3 = 9.\nFinal answer: 9",
+      "created_at": "2026-04-27T19:38:12",
+      "gold_answer": "9",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 用A、B、C三个字母组成两位代码，允许重复。有多少种代码？\nReasoning:",
+      "raw_completion": " 1. We have 3 choices for the first letter: A, B, or C.\n2. We also have 3 choices for the second letter: A, B, or C.\n3. Since repetition is allowed, the choice of the first letter does not affect the choice of the second letter.\n4. The total number of combinations is the product of the number of choices for each position.\n5. Therefore, the total number of codes is 3 (choices for the first letter) multiplied by 3 (choices for the second letter).\n6. Calculating this gives us 3 * 3 = 9.\nFinal answer: 9",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "comb_with_replacement",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. We have 3 choices for the first letter (A, B, C).\n2. For each choice of the first letter, there are 3 choices for the second letter.\n3. This means for each of the 3 first letters, we can pair it with any of the 3 second letters.\n4. Therefore, the total number of combinations is 3 times 3.\n5. Calculating 3 times 3 gives us 9.\nFinal answer: 9.",
+      "created_at": "2026-04-27T19:38:14",
+      "gold_answer": "9",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 用A、B、C三个字母组成两位代码，允许重复。有多少种代码？\nReasoning:",
+      "raw_completion": " 1. We have 3 choices for the first letter (A, B, C).\n2. For each choice of the first letter, there are 3 choices for the second letter.\n3. This means for each of the 3 first letters, we can pair it with any of the 3 second letters.\n4. Therefore, the total number of combinations is 3 times 3.\n5. Calculating 3 times 3 gives us 9.\nFinal answer: 9.",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "comb_with_replacement",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "在表达式7x^3中，7是x^3的系数。\nFinal answer: 7",
+      "created_at": "2026-04-27T19:38:15",
+      "gold_answer": "7",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：在表达式7x^3中，x^3的系数是多少？\n推理：",
+      "raw_completion": "在表达式7x^3中，7是x^3的系数。\nFinal answer: 7",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "algebra_coefficient",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "在表达式7x^3中，x^3的系数是7。\n\nFinal answer: 7",
+      "created_at": "2026-04-27T19:38:15",
+      "gold_answer": "7",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：在表达式7x^3中，x^3的系数是多少？\n推理：",
+      "raw_completion": "在表达式7x^3中，x^3的系数是7。\n\nFinal answer: 7",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "algebra_coefficient",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The expression is `7x^3`. The coefficient of `x^3` is the number multiplied by `x^3`. Here, `7` is multiplied by `x^3`. Therefore, the coefficient is `7`.\n\nFinal answer: 7",
+      "created_at": "2026-04-27T19:38:17",
+      "gold_answer": "7",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 在表达式7x^3中，x^3的系数是多少？\nReasoning:",
+      "raw_completion": " The expression is `7x^3`. The coefficient of `x^3` is the number multiplied by `x^3`. Here, `7` is multiplied by `x^3`. Therefore, the coefficient is `7`.\n\nFinal answer: 7",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "algebra_coefficient",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The expression is 7x^3. The coefficient of x^3 is the number multiplied by x^3. Here, 7 is multiplied by x^3. Therefore, the coefficient of x^3 is 7.  \nFinal answer: 7",
+      "created_at": "2026-04-27T19:38:18",
+      "gold_answer": "7",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 在表达式7x^3中，x^3的系数是多少？\nReasoning:",
+      "raw_completion": " The expression is 7x^3. The coefficient of x^3 is the number multiplied by x^3. Here, 7 is multiplied by x^3. Therefore, the coefficient of x^3 is 7.  \nFinal answer: 7",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "algebra_coefficient",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "这个表达式有3个x，所以指数是3。Final answer: 3",
+      "created_at": "2026-04-27T19:38:19",
+      "gold_answer": "3",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：在表达式7x^3中，x的指数是多少？\n推理：",
+      "raw_completion": "这个表达式有3个x，所以指数是3。Final answer: 3",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "algebra_exponent",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "在表达式7x^3中，x的指数是3。\n\nFinal answer: 3",
+      "created_at": "2026-04-27T19:38:19",
+      "gold_answer": "3",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：在表达式7x^3中，x的指数是多少？\n推理：",
+      "raw_completion": "在表达式7x^3中，x的指数是3。\n\nFinal answer: 3",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "algebra_exponent",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. The expression given is 7x^3.  \n2. In algebra, the exponent of a variable indicates the power to which the variable is raised.  \n3. The variable in this expression is x.  \n4. The term x^3 explicitly shows the exponent of x.  \n5. The exponent here is the number 3.  \n6. Therefore, the exponent of x in the expression is 3.  \nFinal answer: 3.",
+      "created_at": "2026-04-27T19:38:22",
+      "gold_answer": "3",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 在表达式7x^3中，x的指数是多少？\nReasoning:",
+      "raw_completion": " 1. The expression given is 7x^3.  \n2. In algebra, the exponent of a variable indicates the power to which the variable is raised.  \n3. The variable in this expression is x.  \n4. The term x^3 explicitly shows the exponent of x.  \n5. The exponent here is the number 3.  \n6. Therefore, the exponent of x in the expression is 3.  \nFinal answer: 3.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "algebra_exponent",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The expression given is 7x^3. In algebraic terms, the number that appears after the variable x is called the exponent. The exponent indicates how many times the base number (in this case, x) should be multiplied by itself. Here, the base is x and the exponent is 3. Therefore, the exponent of x in the expression 7x^3 is 3. Final answer: 3.",
+      "created_at": "2026-04-27T19:38:24",
+      "gold_answer": "3",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 在表达式7x^3中，x的指数是多少？\nReasoning:",
+      "raw_completion": " The expression given is 7x^3. In algebraic terms, the number that appears after the variable x is called the exponent. The exponent indicates how many times the base number (in this case, x) should be multiplied by itself. Here, the base is x and the exponent is 3. Therefore, the exponent of x in the expression 7x^3 is 3. Final answer: 3.",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "algebra_exponent",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 首先，计算函数f(x)的导数f'(x)。  \n2. f(x) = x^2 + 1，所以f'(x) = 2x。  \n3. 将x = 3代入f'(x)，得到f'(3) = 2 * 3 = 6。  \nFinal answer: 6",
+      "created_at": "2026-04-27T19:38:26",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：对于f(x)=x^2+1，f'(3)是多少？\n推理：",
+      "raw_completion": "1. 首先，计算函数f(x)的导数f'(x)。  \n2. f(x) = x^2 + 1，所以f'(x) = 2x。  \n3. 将x = 3代入f'(x)，得到f'(3) = 2 * 3 = 6。  \nFinal answer: 6",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "calculus_derivative_at_point",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 首先，我们需要找到 f(x) 的导数 f'(x)。\n2. f(x) = x^2 + 1，所以 f'(x) = 2x。\n3. 接下来，我们计算 f'(3)。\n4. 将 x = 3 代入 f'(x) = 2x，得到 f'(3) = 2 * 3 = 6。\n5. 因此，f'(3) 的值是 6。\n\nFinal answer: 6",
+      "created_at": "2026-04-27T19:38:29",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；请最多用 12 行推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：对于f(x)=x^2+1，f'(3)是多少？\n推理：",
+      "raw_completion": "1. 首先，我们需要找到 f(x) 的导数 f'(x)。\n2. f(x) = x^2 + 1，所以 f'(x) = 2x。\n3. 接下来，我们计算 f'(3)。\n4. 将 x = 3 代入 f'(x) = 2x，得到 f'(3) = 2 * 3 = 6。\n5. 因此，f'(3) 的值是 6。\n\nFinal answer: 6",
+      "reason_lang": "zh",
+      "sample_idx": 1,
+      "task_id": "calculus_derivative_at_point",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "To find the derivative of the function f(x) = x^2 + 1, we use the power rule. The power rule states that if f(x) = x^n, then f'(x) = n*x^(n-1). Applying this rule to each term in f(x), the derivative of x^2 is 2x, and the derivative of the constant 1 is 0. Thus, the derivative f'(x) = 2x. Now, we evaluate this derivative at x = 3, which gives us f'(3) = 2*3. This simplifies to 6. Final answer: 6.",
+      "created_at": "2026-04-27T19:38:32",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 对于f(x)=x^2+1，f'(3)是多少？\nReasoning:",
+      "raw_completion": " To find the derivative of the function f(x) = x^2 + 1, we use the power rule. The power rule states that if f(x) = x^n, then f'(x) = n*x^(n-1). Applying this rule to each term in f(x), the derivative of x^2 is 2x, and the derivative of the constant 1 is 0. Thus, the derivative f'(x) = 2x. Now, we evaluate this derivative at x = 3, which gives us f'(3) = 2*3. This simplifies to 6. Final answer: 6.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "calculus_derivative_at_point",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "To find the derivative \\( f'(3) \\) of the function \\( f(x) = x^2 + 1 \\), follow these steps:\n\n1. Compute the derivative of \\( f(x) \\). The derivative of \\( x^2 \\) is \\( 2x \\), and the derivative of a constant (1) is 0.\n2. So, \\( f'(x) = 2x \\).\n\nNext, evaluate \\( f'(x) \\) at \\( x = 3 \\):\n\n3. Substitute \\( x = 3 \\) into \\( f'(x) \\).\n4. This gives \\( f'(3) = 2 \\times 3 \\).\n5. Calculate the result: \\( f'(3) = 6 \\).\n\nFinal answer: 6",
+      "created_at": "2026-04-27T19:38:36",
+      "gold_answer": "6",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 对于f(x)=x^2+1，f'(3)是多少？\nReasoning:",
+      "raw_completion": " To find the derivative \\( f'(3) \\) of the function \\( f(x) = x^2 + 1 \\), follow these steps:\n\n1. Compute the derivative of \\( f(x) \\). The derivative of \\( x^2 \\) is \\( 2x \\), and the derivative of a constant (1) is 0.\n2. So, \\( f'(x) = 2x \\).\n\nNext, evaluate \\( f'(x) \\) at \\( x = 3 \\):\n\n3. Substitute \\( x = 3 \\) into \\( f'(x) \\).\n4. This gives \\( f'(3) = 2 \\times 3 \\).\n5. Calculate the result: \\( f'(3) = 6 \\).\n\nFinal answer: 6",
+      "reason_lang": "en",
+      "sample_idx": 1,
+      "task_id": "calculus_derivative_at_point",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    }
+  ]
+}

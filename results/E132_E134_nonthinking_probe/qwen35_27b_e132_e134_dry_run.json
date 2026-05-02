@@ -1,0 +1,28 @@
+{
+  "by_validity_class": {
+    "clean_or_markerless_valid": 8,
+    "low_conf_valid": 4,
+    "repaired_or_subtle_invalid": 4,
+    "suspicious_valid": 8,
+    "unrepaired_invalid": 4,
+    "unusual_valid": 4
+  },
+  "by_variant": {
+    "clean_valid": 4,
+    "low_conf_valid": 4,
+    "markerless_valid_ablation": 4,
+    "repaired_invalid_strict": 4,
+    "suspicious_valid_alternative": 4,
+    "suspicious_valid_marker": 4,
+    "unrepaired_invalid": 4,
+    "unusual_valid": 4
+  },
+  "created_at": "2026-04-30T17:14:26",
+  "experiment": "E132_E134_nonthinking_probe_dry_run",
+  "leakage_audit": {
+    "metadata_labels_in_prompt_rows": 0,
+    "note_zh": "dry-run only inspects data selection; model prompt will contain only problem and completion."
+  },
+  "model_key": "qwen35_27b",
+  "rows": 32
+}

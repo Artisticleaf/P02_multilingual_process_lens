@@ -1,0 +1,615 @@
+{
+  "args": {
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "layers": "9,14,20,25,30",
+    "local_files_only": false,
+    "manual_jsonl": "data/processed/e30_non_discount_verifier_subset_20260427.jsonl",
+    "model_key": "qwen3_14b_base",
+    "out_dir": "results/E30_non_discount_span_patch",
+    "pairs_yaml": "configs/e30_non_discount_span_patch_pairs.yaml",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "spans": "support_error_span,final_answer_span,verdict_pos"
+  },
+  "by_span_layer_pair": [
+    {
+      "layer": 9,
+      "mean_abs_effect": 0.4999999403953552,
+      "mean_bad_to_valid_effect": -0.37499988079071045,
+      "mean_valid_to_bad_effect": -0.625,
+      "n": 1,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "support_error_span"
+    },
+    {
+      "layer": 14,
+      "mean_abs_effect": 0.7499999403953552,
+      "mean_bad_to_valid_effect": -0.49999988079071045,
+      "mean_valid_to_bad_effect": -1.0,
+      "n": 1,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "support_error_span"
+    },
+    {
+      "layer": 20,
+      "mean_abs_effect": 0.062499940395355225,
+      "mean_bad_to_valid_effect": -0.12499988079071045,
+      "mean_valid_to_bad_effect": 0.0,
+      "n": 1,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "support_error_span"
+    },
+    {
+      "layer": 25,
+      "mean_abs_effect": 0.06250005960464478,
+      "mean_bad_to_valid_effect": 1.1920928955078125e-07,
+      "mean_valid_to_bad_effect": -0.125,
+      "n": 1,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "support_error_span"
+    },
+    {
+      "layer": 30,
+      "mean_abs_effect": 0.06250005960464478,
+      "mean_bad_to_valid_effect": 1.1920928955078125e-07,
+      "mean_valid_to_bad_effect": -0.125,
+      "n": 1,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "support_error_span"
+    },
+    {
+      "layer": 9,
+      "mean_abs_effect": 0.12500005960464478,
+      "mean_bad_to_valid_effect": 0.12500011920928955,
+      "mean_valid_to_bad_effect": 0.125,
+      "n": 1,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "final_answer_span"
+    },
+    {
+      "layer": 14,
+      "mean_abs_effect": 0.2500000596046448,
+      "mean_bad_to_valid_effect": 0.37500011920928955,
+      "mean_valid_to_bad_effect": 0.125,
+      "n": 1,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "final_answer_span"
+    },
+    {
+      "layer": 20,
+      "mean_abs_effect": 0.0,
+      "mean_bad_to_valid_effect": 0.0,
+      "mean_valid_to_bad_effect": 0.0,
+      "n": 1,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "final_answer_span"
+    },
+    {
+      "layer": 25,
+      "mean_abs_effect": 0.0625,
+      "mean_bad_to_valid_effect": -0.125,
+      "mean_valid_to_bad_effect": 0.0,
+      "n": 1,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "final_answer_span"
+    },
+    {
+      "layer": 30,
+      "mean_abs_effect": 5.960464477539063e-08,
+      "mean_bad_to_valid_effect": 1.1920928955078125e-07,
+      "mean_valid_to_bad_effect": 0.0,
+      "n": 1,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "final_answer_span"
+    },
+    {
+      "layer": 9,
+      "mean_abs_effect": 0.0,
+      "mean_bad_to_valid_effect": 0.0,
+      "mean_valid_to_bad_effect": 0.0,
+      "n": 1,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "verdict_pos"
+    },
+    {
+      "layer": 14,
+      "mean_abs_effect": 0.0,
+      "mean_bad_to_valid_effect": 0.0,
+      "mean_valid_to_bad_effect": 0.0,
+      "n": 1,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "verdict_pos"
+    },
+    {
+      "layer": 20,
+      "mean_abs_effect": 0.12500005960464478,
+      "mean_bad_to_valid_effect": 0.12500011920928955,
+      "mean_valid_to_bad_effect": -0.125,
+      "n": 1,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "verdict_pos"
+    },
+    {
+      "layer": 25,
+      "mean_abs_effect": 0.12500011920928955,
+      "mean_bad_to_valid_effect": 0.12500011920928955,
+      "mean_valid_to_bad_effect": -0.12500011920928955,
+      "n": 1,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "verdict_pos"
+    },
+    {
+      "layer": 30,
+      "mean_abs_effect": 0.18750005960464478,
+      "mean_bad_to_valid_effect": 0.12500011920928955,
+      "mean_valid_to_bad_effect": -0.25,
+      "n": 1,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "verdict_pos"
+    }
+  ],
+  "created_at": "2026-04-27T19:47:34",
+  "cuda_visible_devices": "0",
+  "host": "hpc-node-01",
+  "model_key": "qwen3_14b_base",
+  "model_spec": {
+    "class": "base",
+    "family": "qwen",
+    "notes": "larger clean Qwen anchor; may need 2 GPUs if memory is tight",
+    "path": "/home/Awei/LLM/Model/base/Qwen3-14B-Base",
+    "priority": "P0",
+    "status": "local"
+  },
+  "pairs": [
+    {
+      "bad_idx": 300311,
+      "error_span": "between 3 and 7, inclusive",
+      "final_span_bad": "Final answer: 4",
+      "final_span_valid": "Final answer: 4",
+      "id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "layers": [
+        9,
+        14,
+        20,
+        25,
+        30
+      ],
+      "model_key": "qwen3_14b_base",
+      "support_span": "greater than 3 and not exceeding 7",
+      "valid_idx": 300310
+    }
+  ],
+  "rows": [
+    {
+      "bad_idx": 300311,
+      "bad_positions": [
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "bad_span_text": "between 3 and 7, inclusive",
+      "bad_to_valid_effect": -0.37499988079071045,
+      "bad_to_valid_margin": 1.625,
+      "base_bad_margin": 2.125,
+      "base_valid_margin": 1.9999998807907104,
+      "layer": 9,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "support_error_span",
+      "valid_idx": 300310,
+      "valid_positions": [
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "valid_span_text": "greater than 3 and not exceeding 7",
+      "valid_to_bad_effect": -0.625,
+      "valid_to_bad_margin": 1.5
+    },
+    {
+      "bad_idx": 300311,
+      "bad_positions": [
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "bad_span_text": "between 3 and 7, inclusive",
+      "bad_to_valid_effect": -0.49999988079071045,
+      "bad_to_valid_margin": 1.5,
+      "base_bad_margin": 2.125,
+      "base_valid_margin": 1.9999998807907104,
+      "layer": 14,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "support_error_span",
+      "valid_idx": 300310,
+      "valid_positions": [
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "valid_span_text": "greater than 3 and not exceeding 7",
+      "valid_to_bad_effect": -1.0,
+      "valid_to_bad_margin": 1.125
+    },
+    {
+      "bad_idx": 300311,
+      "bad_positions": [
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "bad_span_text": "between 3 and 7, inclusive",
+      "bad_to_valid_effect": -0.12499988079071045,
+      "bad_to_valid_margin": 1.875,
+      "base_bad_margin": 2.125,
+      "base_valid_margin": 1.9999998807907104,
+      "layer": 20,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "support_error_span",
+      "valid_idx": 300310,
+      "valid_positions": [
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "valid_span_text": "greater than 3 and not exceeding 7",
+      "valid_to_bad_effect": 0.0,
+      "valid_to_bad_margin": 2.125
+    },
+    {
+      "bad_idx": 300311,
+      "bad_positions": [
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "bad_span_text": "between 3 and 7, inclusive",
+      "bad_to_valid_effect": 1.1920928955078125e-07,
+      "bad_to_valid_margin": 2.0,
+      "base_bad_margin": 2.125,
+      "base_valid_margin": 1.9999998807907104,
+      "layer": 25,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "support_error_span",
+      "valid_idx": 300310,
+      "valid_positions": [
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "valid_span_text": "greater than 3 and not exceeding 7",
+      "valid_to_bad_effect": -0.125,
+      "valid_to_bad_margin": 2.0
+    },
+    {
+      "bad_idx": 300311,
+      "bad_positions": [
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "bad_span_text": "between 3 and 7, inclusive",
+      "bad_to_valid_effect": 1.1920928955078125e-07,
+      "bad_to_valid_margin": 2.0,
+      "base_bad_margin": 2.125,
+      "base_valid_margin": 1.9999998807907104,
+      "layer": 30,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "support_error_span",
+      "valid_idx": 300310,
+      "valid_positions": [
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "valid_span_text": "greater than 3 and not exceeding 7",
+      "valid_to_bad_effect": -0.125,
+      "valid_to_bad_margin": 2.0
+    },
+    {
+      "bad_idx": 300311,
+      "bad_positions": [
+        176,
+        177,
+        178,
+        179,
+        180
+      ],
+      "bad_span_text": "Final answer: 4",
+      "bad_to_valid_effect": 0.12500011920928955,
+      "bad_to_valid_margin": 2.125,
+      "base_bad_margin": 2.125,
+      "base_valid_margin": 1.9999998807907104,
+      "layer": 9,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "final_answer_span",
+      "valid_idx": 300310,
+      "valid_positions": [
+        146,
+        147,
+        148,
+        149,
+        150
+      ],
+      "valid_span_text": "Final answer: 4",
+      "valid_to_bad_effect": 0.125,
+      "valid_to_bad_margin": 2.25
+    },
+    {
+      "bad_idx": 300311,
+      "bad_positions": [
+        176,
+        177,
+        178,
+        179,
+        180
+      ],
+      "bad_span_text": "Final answer: 4",
+      "bad_to_valid_effect": 0.37500011920928955,
+      "bad_to_valid_margin": 2.375,
+      "base_bad_margin": 2.125,
+      "base_valid_margin": 1.9999998807907104,
+      "layer": 14,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "final_answer_span",
+      "valid_idx": 300310,
+      "valid_positions": [
+        146,
+        147,
+        148,
+        149,
+        150
+      ],
+      "valid_span_text": "Final answer: 4",
+      "valid_to_bad_effect": 0.125,
+      "valid_to_bad_margin": 2.25
+    },
+    {
+      "bad_idx": 300311,
+      "bad_positions": [
+        176,
+        177,
+        178,
+        179,
+        180
+      ],
+      "bad_span_text": "Final answer: 4",
+      "bad_to_valid_effect": 0.0,
+      "bad_to_valid_margin": 1.9999998807907104,
+      "base_bad_margin": 2.125,
+      "base_valid_margin": 1.9999998807907104,
+      "layer": 20,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "final_answer_span",
+      "valid_idx": 300310,
+      "valid_positions": [
+        146,
+        147,
+        148,
+        149,
+        150
+      ],
+      "valid_span_text": "Final answer: 4",
+      "valid_to_bad_effect": 0.0,
+      "valid_to_bad_margin": 2.125
+    },
+    {
+      "bad_idx": 300311,
+      "bad_positions": [
+        176,
+        177,
+        178,
+        179,
+        180
+      ],
+      "bad_span_text": "Final answer: 4",
+      "bad_to_valid_effect": -0.125,
+      "bad_to_valid_margin": 1.8749998807907104,
+      "base_bad_margin": 2.125,
+      "base_valid_margin": 1.9999998807907104,
+      "layer": 25,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "final_answer_span",
+      "valid_idx": 300310,
+      "valid_positions": [
+        146,
+        147,
+        148,
+        149,
+        150
+      ],
+      "valid_span_text": "Final answer: 4",
+      "valid_to_bad_effect": 0.0,
+      "valid_to_bad_margin": 2.125
+    },
+    {
+      "bad_idx": 300311,
+      "bad_positions": [
+        176,
+        177,
+        178,
+        179,
+        180
+      ],
+      "bad_span_text": "Final answer: 4",
+      "bad_to_valid_effect": 1.1920928955078125e-07,
+      "bad_to_valid_margin": 2.0,
+      "base_bad_margin": 2.125,
+      "base_valid_margin": 1.9999998807907104,
+      "layer": 30,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "final_answer_span",
+      "valid_idx": 300310,
+      "valid_positions": [
+        146,
+        147,
+        148,
+        149,
+        150
+      ],
+      "valid_span_text": "Final answer: 4",
+      "valid_to_bad_effect": 0.0,
+      "valid_to_bad_margin": 2.125
+    },
+    {
+      "bad_idx": 300311,
+      "bad_positions": [
+        193
+      ],
+      "bad_span_text": "<verdict_pos>",
+      "bad_to_valid_effect": 0.0,
+      "bad_to_valid_margin": 1.9999998807907104,
+      "base_bad_margin": 2.125,
+      "base_valid_margin": 1.9999998807907104,
+      "layer": 9,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "verdict_pos",
+      "valid_idx": 300310,
+      "valid_positions": [
+        163
+      ],
+      "valid_span_text": "<verdict_pos>",
+      "valid_to_bad_effect": 0.0,
+      "valid_to_bad_margin": 2.125
+    },
+    {
+      "bad_idx": 300311,
+      "bad_positions": [
+        193
+      ],
+      "bad_span_text": "<verdict_pos>",
+      "bad_to_valid_effect": 0.0,
+      "bad_to_valid_margin": 1.9999998807907104,
+      "base_bad_margin": 2.125,
+      "base_valid_margin": 1.9999998807907104,
+      "layer": 14,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "verdict_pos",
+      "valid_idx": 300310,
+      "valid_positions": [
+        163
+      ],
+      "valid_span_text": "<verdict_pos>",
+      "valid_to_bad_effect": 0.0,
+      "valid_to_bad_margin": 2.125
+    },
+    {
+      "bad_idx": 300311,
+      "bad_positions": [
+        193
+      ],
+      "bad_span_text": "<verdict_pos>",
+      "bad_to_valid_effect": 0.12500011920928955,
+      "bad_to_valid_margin": 2.125,
+      "base_bad_margin": 2.125,
+      "base_valid_margin": 1.9999998807907104,
+      "layer": 20,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "verdict_pos",
+      "valid_idx": 300310,
+      "valid_positions": [
+        163
+      ],
+      "valid_span_text": "<verdict_pos>",
+      "valid_to_bad_effect": -0.125,
+      "valid_to_bad_margin": 2.0
+    },
+    {
+      "bad_idx": 300311,
+      "bad_positions": [
+        193
+      ],
+      "bad_span_text": "<verdict_pos>",
+      "bad_to_valid_effect": 0.12500011920928955,
+      "bad_to_valid_margin": 2.125,
+      "base_bad_margin": 2.125,
+      "base_valid_margin": 1.9999998807907104,
+      "layer": 25,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "verdict_pos",
+      "valid_idx": 300310,
+      "valid_positions": [
+        163
+      ],
+      "valid_span_text": "<verdict_pos>",
+      "valid_to_bad_effect": -0.12500011920928955,
+      "valid_to_bad_margin": 1.9999998807907104
+    },
+    {
+      "bad_idx": 300311,
+      "bad_positions": [
+        193
+      ],
+      "bad_span_text": "<verdict_pos>",
+      "bad_to_valid_effect": 0.12500011920928955,
+      "bad_to_valid_margin": 2.125,
+      "base_bad_margin": 2.125,
+      "base_valid_margin": 1.9999998807907104,
+      "layer": 30,
+      "pair_id": "qwen14_e30_inequality_between_inclusive_bad311_valid310",
+      "span": "verdict_pos",
+      "valid_idx": 300310,
+      "valid_positions": [
+        163
+      ],
+      "valid_span_text": "<verdict_pos>",
+      "valid_to_bad_effect": -0.25,
+      "valid_to_bad_margin": 1.875
+    }
+  ],
+  "started_at": "2026-04-27T19:47:26"
+}

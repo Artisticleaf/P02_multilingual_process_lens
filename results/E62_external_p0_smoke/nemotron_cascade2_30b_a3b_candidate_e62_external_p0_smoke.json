@@ -1,0 +1,130 @@
+{
+  "args": {
+    "device": "auto",
+    "dtype": "bfloat16",
+    "local_files_only": true,
+    "max_model_len": 2048,
+    "max_new_tokens": 8,
+    "model_key": "nemotron_cascade2_30b_a3b_candidate",
+    "out_dir": "/home/Awei/P02_multilingual_process_lens/results/E62_external_p0_smoke",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "skip_hf_dynamic": false
+  },
+  "checks": [
+    {
+      "name": "license_probe",
+      "ok": true,
+      "seconds": 0.0004506111145019531,
+      "value": {
+        "license_class": "nvidia_open_model_license",
+        "license_exists": false,
+        "license_files": [],
+        "readme_exists": true,
+        "snippets": [
+          "--- library_name: transformers license: other license_name: nvidia-open-model-license license_link: >-   https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/ pipeline_tag: text-generation language:   - en tags:   - nvidia   - nemotron-cascade-2   - reasoning   - general-purpose   - SFT   - RL ---  # Nemotron-Cascade-2-30B-A3B  <p align=\"center\">  [![Technical Report](https://img.shields.io/badge/2603.19220-Technical_Report-blue)](https://arxiv.org/abs/2603.19220) [![SFT Dataset](https://img.s",
+          "--- library_name: transformers license: other license_name: nvidia-open-model-license license_link: >-   https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/ pipeline_tag: text-generation language:   - en tags:   - nvidia   - nemotron-cascade-2   - reasoning   - general-purpose   - SFT   - RL ---  # Nemotron-Cascade-2-30B-A3B  <p align=\"center\">  [![Technical Report](https://img.shields.io/badge/2603.19220-Technical_Report-blue)](https://arxiv.org/abs/2603.19220) [![SFT Dataset](https://img.shields.io/badge",
+          "--- library_name: transformers license: other license_name: nvidia-open-model-license license_link: >-   https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/ pipeline_tag: text-generation language:   - en tags:   - nvidia   - nemotron-cascade-2   - reasoning   - general-purpose   - SFT   - RL ---  # Nemotron-Cascade-2-30B-A3B  <p align=\"center\">  [![Technical Report](https://img.shields.io/badge/2603.19220-Technical_Report-blue)](https://arxiv.org/abs/2603.19220) [![SFT Dataset](https://img.shields.io/badge/🤗-SFT_Datset-blue)](https://huggingface",
+          "_thinking=True) print(prompt) ```  ## Release Date Mar 19, 2026   ## License Your use of this model is governed by the [NVIDIA Open Model License](https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/).   ## Citation ``` @article{Nemotron_Cascade_2,   title={Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation},   author={Yang, Zhuolin and Liu, Zihan and Chen, Yang and Dai, Wenliang and Wang, Boxin and Lin, Sheng-Chieh and Lee, Chankyu and Chen, Yangyi and Jiang, Dongfu and He, Jiafan and Pi, Renjie and Lam, Grace and Lee, Nayeon and Bukha"
+        ],
+        "usage_gate": "custom_open_model_license_review_needed"
+      }
+    },
+    {
+      "name": "static_probe",
+      "ok": true,
+      "seconds": 0.0010340213775634766,
+      "value": {
+        "architectures": [
+          "NemotronHForCausalLM"
+        ],
+        "auto_map": {
+          "AutoConfig": "configuration_nemotron_h.NemotronHConfig",
+          "AutoModel": "modeling_nemotron_h.NemotronHForCausalLM",
+          "AutoModelForCausalLM": "modeling_nemotron_h.NemotronHForCausalLM"
+        },
+        "chat_template_file_exists": true,
+        "config_exists": true,
+        "model_type": "nemotron_h",
+        "path_exists": true,
+        "readme_mentions_transformers_fork": false,
+        "readme_mentions_vllm": true,
+        "safetensor_shards": 13,
+        "safetensor_size_gib": 58.81925021111965,
+        "tokenizer_chat_template_in_config": false,
+        "tokenizer_config_exists": true,
+        "transformers_version_in_config": "4.55.4"
+      }
+    },
+    {
+      "name": "auto_config",
+      "ok": true,
+      "seconds": 0.004178285598754883,
+      "value": {
+        "class": "NemotronHConfig"
+      }
+    },
+    {
+      "name": "tokenizer_chat",
+      "ok": true,
+      "seconds": 1.1586689949035645,
+      "value": {
+        "class": "TokenizersBackend",
+        "has_chat_template": true
+      }
+    },
+    {
+      "name": "vllm_static",
+      "ok": true,
+      "seconds": 0.643336296081543,
+      "value": {
+        "readme_vllm_lines": [
+          "### vLLM setup",
+          "Requires vLLM version >= 0.17.1. The following will create API endpoints at `http://localhost:8000/v1`:",
+          "vllm serve nvidia/Nemotron-Cascade-2-30B-A3B --port 8000 --tensor-parallel-size 1 --gpu-memory-utilization 0.9 --max-model-len 262144 --reasoning-parser nemotron_v3 --mamba-ssm-cache-dtype float32 --port 8000 --trust_remote_code",
+          "vllm serve nvidia/Nemotron-Cascade-2-30B-A3B --port 8000 --tensor-parallel-size 1 --gpu-memory-utilization 0.9 --max-model-len 262144 --reasoning-parser nemotron_v3 --mamba-ssm-cache-dtype float32 --port 8000 --trust_remote_code --enable-auto-tool-choice --tool-call-parser qwen3_coder"
+        ],
+        "vllm_import_ok": true,
+        "vllm_version": "0.12.0"
+      }
+    },
+    {
+      "error": "mamba-ssm is required by the Mamba model but cannot be imported",
+      "error_type": "ImportError",
+      "name": "hf_dynamic",
+      "ok": false,
+      "seconds": 0.9218828678131104,
+      "traceback_tail": "Traceback (most recent call last):\n  File \"/home/Awei/LLM/Model/.cache/hf/modules/transformers_modules/nemotron_cascade2_30b_a3b/modeling_nemotron_h.py\", line 64, in <module>\n    from mamba_ssm.ops.triton.layernorm_gated import rmsnorm_fn\nModuleNotFoundError: No module named 'mamba_ssm'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/Awei/P02_multilingual_process_lens/scripts/run_e62_candidate_smoke.py\", line 35, in safe_call\n    value = fn()\n            ^^^^\n  File \"/home/Awei/P02_multilingual_process_lens/scripts/run_e62_candidate_smoke.py\", line 237, in <lambda>\n    checks.append(safe_call(\"hf_dynamic\", lambda: hf_dynamic_probe(spec, args)))\n                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/Awei/P02_multilingual_process_lens/scripts/run_e62_candidate_smoke.py\", line 148, in hf_dynamic_probe\n    model = load_causal_lm(model_path, dtype=args.dtype, device=args.device, local_files_only=local_only)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/Awei/P02_multilingual_process_lens/src/mplens/modeling.py\", line 60, in load_causal_lm\n    model = AutoModelForCausalLM.from_pretrained(model_path, **kwargs)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/Awei/P02_multilingual_process_lens/.deps/hf5/transformers/models/auto/auto_factory.py\", line 369, in from_pretrained\n    model_class = get_class_from_dynamic_module(\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nImportError: mamba-ssm is required by the Mamba model but cannot be imported\n"
+    }
+  ],
+  "created_at": "2026-04-29T02:32:38",
+  "cuda_visible_devices": "0,1,2,3",
+  "experiment": "E62_external_p0_candidate_smoke",
+  "host": "hpc-node-01",
+  "model_key": "nemotron_cascade2_30b_a3b_candidate",
+  "model_spec": {
+    "class": "sparse_reasoning_candidate",
+    "family": "nemotron",
+    "loader_risk": "local_pending_smoke; custom nemotron_h architecture and vLLM compatibility must be checked in a separate environment",
+    "notes": "NVIDIA 30B-A3B open MoE with strong reasoning/agentic focus; downloaded via hf-mirror on 2026-04-28; candidate only until license check and isolated HF/vLLM smoke test pass",
+    "path": "/home/Awei/LLM/Model/base/nemotron_cascade2_30b_a3b",
+    "priority": "P0_candidate_external_medium",
+    "remote_repo": "nvidia/Nemotron-Cascade-2-30B-A3B",
+    "status": "local_downloaded_pending_smoke"
+  },
+  "started_at": "2026-04-29T02:32:36",
+  "summary": {
+    "architectures": [
+      "NemotronHForCausalLM"
+    ],
+    "auto_config_ok": true,
+    "hf_dynamic_ok": false,
+    "license_class": "nvidia_open_model_license",
+    "license_ok_for_noncommercial_research": true,
+    "model_type": "nemotron_h",
+    "promote_to_expanded_p0": false,
+    "promotion_rule": "license permits noncommercial research, tokenizer/config load, HF dynamic option-logprob, hidden states, and layer discovery all pass",
+    "tokenizer_ok": true,
+    "usage_gate": "custom_open_model_license_review_needed",
+    "vllm_static_ok": true
+  }
+}

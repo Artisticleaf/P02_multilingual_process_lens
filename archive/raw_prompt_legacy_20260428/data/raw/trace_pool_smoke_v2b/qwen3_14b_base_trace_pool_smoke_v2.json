@@ -1,0 +1,569 @@
+{
+  "args": {
+    "chat_template": "auto",
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "k": 1,
+    "max_new_tokens": 160,
+    "max_tasks": 8,
+    "model_key": "qwen3_14b_base",
+    "out_dir": "/home/Awei/P02_multilingual_process_lens/data/raw/trace_pool_smoke_v2b",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "temperature": 0.7,
+    "top_p": 0.95
+  },
+  "model_spec": {
+    "class": "base",
+    "family": "qwen",
+    "notes": "larger clean Qwen anchor; may need 2 GPUs if memory is tight",
+    "path": "/home/Awei/LLM/Model/base/Qwen3-14B-Base",
+    "priority": "P0",
+    "status": "local"
+  },
+  "rows": [
+    {
+      "completion": "Step 1: Start with the equation 2x + 3 = 11.\nStep 2: Subtract 3 from both sides to isolate the term with x: 2x = 11 - 3.\nStep 3: Simplify the right side: 2x = 8.\nStep 4: Divide both sides by 2 to solve for x: x = 8 / 2.\nStep 5: Simplify the right side: x = 4.\nFinal answer: 4.",
+      "created_at": "2026-04-27T02:25:10",
+      "gold_answer": "4",
+      "input_lang": "en",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: Solve 2x + 3 = 11.\nReasoning:",
+      "raw_completion": " Step 1: Start with the equation 2x + 3 = 11.\nStep 2: Subtract 3 from both sides to isolate the term with x: 2x = 11 - 3.\nStep 3: Simplify the right side: 2x = 8.\nStep 4: Divide both sides by 2 to solve for x: x = 8 / 2.\nStep 5: Simplify the right side: x = 4.\nFinal answer: 4.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "lin_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "首先，我们需要将等式两边的常数项进行处理。等式左边是 2x + 3，右边是 11。为了消去等式左边的常数项 3，我们可以从等式两边同时减去 3。这样，等式变为：\n\n2x + 3 - 3 = 11 - 3\n\n简化后得到：\n\n2x = 8\n\n接下来，我们需要解出 x。为了消去等式左边的系数 2，我们可以将等式两边同时除以 2。这样，等式变为：\n\n2x / 2 = 8 / 2\n\n简化后得到：\n\nx = 4\n\nFinal answer: x = 4",
+      "created_at": "2026-04-27T02:25:14",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：求解 2x + 3 = 11。\n推理：",
+      "raw_completion": "首先，我们需要将等式两边的常数项进行处理。等式左边是 2x + 3，右边是 11。为了消去等式左边的常数项 3，我们可以从等式两边同时减去 3。这样，等式变为：\n\n2x + 3 - 3 = 11 - 3\n\n简化后得到：\n\n2x = 8\n\n接下来，我们需要解出 x。为了消去等式左边的系数 2，我们可以将等式两边同时除以 2。这样，等式变为：\n\n2x / 2 = 8 / 2\n\n简化后得到：\n\nx = 4\n\nFinal answer: x = 4",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "lin_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. Start with the equation: 2x + 3 = 11.\n2. Subtract 3 from both sides to isolate the term with x: 2x = 11 - 3.\n3. Simplify the right side: 2x = 8.\n4. Divide both sides by 2 to solve for x: x = 8 / 2.\n5. Simplify the right side: x = 4.\n\nFinal answer: 4.",
+      "created_at": "2026-04-27T02:25:17",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 求解 2x + 3 = 11。\nReasoning:",
+      "raw_completion": " \n1. Start with the equation: 2x + 3 = 11.\n2. Subtract 3 from both sides to isolate the term with x: 2x = 11 - 3.\n3. Simplify the right side: 2x = 8.\n4. Divide both sides by 2 to solve for x: x = 8 / 2.\n5. Simplify the right side: x = 4.\n\nFinal answer: 4.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "lin_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "首先，我们需要解这个线性方程。给定的方程是 2x + 3 = 11。\n\n1. 减去常数项：为了使 x 单独存在，我们先从等式的两边减去 3。\n   2x + 3 - 3 = 11 - 3\n   这简化为 2x = 8。\n\n2. 除以系数：接下来，我们将等式两边同时除以 x 的系数 2 来求得 x 的值。\n   2x / 2 = 8 / 2\n   这简化为 x = 4。\n\nFinal answer: 4",
+      "created_at": "2026-04-27T02:25:20",
+      "gold_answer": "4",
+      "input_lang": "en",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：Solve 2x + 3 = 11.\n推理：",
+      "raw_completion": "首先，我们需要解这个线性方程。给定的方程是 2x + 3 = 11。\n\n1. 减去常数项：为了使 x 单独存在，我们先从等式的两边减去 3。\n   2x + 3 - 3 = 11 - 3\n   这简化为 2x = 8。\n\n2. 除以系数：接下来，我们将等式两边同时除以 x 的系数 2 来求得 x 的值。\n   2x / 2 = 8 / 2\n   这简化为 x = 4。\n\nFinal answer: 4",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "lin_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The area of a triangle can be calculated using the formula: Area = (base * height) / 2. In this case, the base is 8 and the height is 5, so the area would be (8 * 5) / 2 = 20.\n\nFinal answer: 20.",
+      "created_at": "2026-04-27T02:25:22",
+      "gold_answer": "20",
+      "input_lang": "en",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: A triangle has base 8 and height 5. What is its area?\nReasoning:",
+      "raw_completion": " The area of a triangle can be calculated using the formula: Area = (base * height) / 2. In this case, the base is 8 and the height is 5, so the area would be (8 * 5) / 2 = 20.\n\nFinal answer: 20.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "area_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "根据三角形面积公式，面积 = (底 * 高) / 2 = (8 * 5) / 2 = 40 / 2 = 20。\nFinal answer: 20",
+      "created_at": "2026-04-27T02:25:23",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一个三角形的底为8，高为5，面积是多少？\n推理：",
+      "raw_completion": "根据三角形面积公式，面积 = (底 * 高) / 2 = (8 * 5) / 2 = 40 / 2 = 20。\nFinal answer: 20",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "area_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. The area of a triangle is given by the formula (base * height) / 2.\n2. We are given that the base of the triangle is 8 and the height is 5.\n3. Plugging these values into the formula, we get (8 * 5) / 2 = 20.\n4. Therefore, the area of the triangle is 20.\n\nFinal answer: 20.",
+      "created_at": "2026-04-27T02:25:25",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一个三角形的底为8，高为5，面积是多少？\nReasoning:",
+      "raw_completion": " \n1. The area of a triangle is given by the formula (base * height) / 2.\n2. We are given that the base of the triangle is 8 and the height is 5.\n3. Plugging these values into the formula, we get (8 * 5) / 2 = 20.\n4. Therefore, the area of the triangle is 20.\n\nFinal answer: 20.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "area_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "三角形的面积公式是底乘以高除以2。已知底为8，高为5，因此面积为 \\( \\frac{8 \\times 5}{2} = 20 \\)。\n\nFinal answer: 20",
+      "created_at": "2026-04-27T02:25:27",
+      "gold_answer": "20",
+      "input_lang": "en",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：A triangle has base 8 and height 5. What is its area?\n推理：",
+      "raw_completion": "三角形的面积公式是底乘以高除以2。已知底为8，高为5，因此面积为 \\( \\frac{8 \\times 5}{2} = 20 \\)。\n\nFinal answer: 20",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "area_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The bag contains a total of 3 red balls + 2 blue balls = 5 balls. The probability of drawing a red ball is the number of red balls divided by the total number of balls. Therefore, the probability is 3 red balls / 5 total balls = 3/5. Final answer: 3/5.",
+      "created_at": "2026-04-27T02:25:28",
+      "gold_answer": "3/5",
+      "input_lang": "en",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: A bag has 3 red balls and 2 blue balls. What is the probability of drawing a red ball?\nReasoning:",
+      "raw_completion": " The bag contains a total of 3 red balls + 2 blue balls = 5 balls. The probability of drawing a red ball is the number of red balls divided by the total number of balls. Therefore, the probability is 3 red balls / 5 total balls = 3/5. Final answer: 3/5.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "prob_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "首先，袋子里总共有5个球。其中，3个是红球，2个是蓝球。因此，抽到红球的概率是红球的数量除以总球数，即3/5。这意味着每次抽取时，有3/5的概率会抽到红球。\n\nFinal answer: 3/5",
+      "created_at": "2026-04-27T02:25:30",
+      "gold_answer": "3/5",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：袋子里有3个红球和2个蓝球，抽到红球的概率是多少？\n推理：",
+      "raw_completion": "首先，袋子里总共有5个球。其中，3个是红球，2个是蓝球。因此，抽到红球的概率是红球的数量除以总球数，即3/5。这意味着每次抽取时，有3/5的概率会抽到红球。\n\nFinal answer: 3/5",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "prob_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "一共有5个球，其中3个是红球。因此，抽到红球的概率是红球的数量除以总球数，即3/5。  \nFinal answer: 3/5",
+      "created_at": "2026-04-27T02:25:31",
+      "gold_answer": "3/5",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 袋子里有3个红球和2个蓝球，抽到红球的概率是多少？\nReasoning:",
+      "raw_completion": " 一共有5个球，其中3个是红球。因此，抽到红球的概率是红球的数量除以总球数，即3/5。  \nFinal answer: 3/5",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "prob_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "首先，我们需要确定袋子里总共有多少个球。袋子里有3个红球和2个蓝球，所以总共有5个球。\n\n接下来，我们需要计算从袋子里随机抽取一个球时，抽到红球的概率。概率的计算公式是：事件发生的次数除以所有可能事件的总数。\n\n在这个问题中，事件“抽到红球”的次数是3次，因为袋子里有3个红球。所有可能事件的总数是5次，因为袋子里总共有5个球。\n\n因此，抽到红球的概率是3除以5，即3/5。\n\nFinal answer: 3/5",
+      "created_at": "2026-04-27T02:25:35",
+      "gold_answer": "3/5",
+      "input_lang": "en",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：A bag has 3 red balls and 2 blue balls. What is the probability of drawing a red ball?\n推理：",
+      "raw_completion": "首先，我们需要确定袋子里总共有多少个球。袋子里有3个红球和2个蓝球，所以总共有5个球。\n\n接下来，我们需要计算从袋子里随机抽取一个球时，抽到红球的概率。概率的计算公式是：事件发生的次数除以所有可能事件的总数。\n\n在这个问题中，事件“抽到红球”的次数是3次，因为袋子里有3个红球。所有可能事件的总数是5次，因为袋子里总共有5个球。\n\n因此，抽到红球的概率是3除以5，即3/5。\n\nFinal answer: 3/5",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "prob_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "Step 1: Calculate the sum of the given numbers. The average of 6, 10, and x is 9. This means the sum of these numbers divided by 3 equals 9. Therefore, the sum of 6, 10, and x is 3 times 9, which is 27.\n\nStep 2: Set up the equation. The sum of 6, 10, and x is 27, so we can write the equation as 6 + 10 + x = 27.\n\nStep 3: Solve for x. Combine the known numbers: 6 + 10 = 16. Then, subtract 16 from both sides of the equation to solve for x: x =",
+      "created_at": "2026-04-27T02:25:39",
+      "gold_answer": "11",
+      "input_lang": "en",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: The average of 6, 10, and x is 9. Find x.\nReasoning:",
+      "raw_completion": " Step 1: Calculate the sum of the given numbers. The average of 6, 10, and x is 9. This means the sum of these numbers divided by 3 equals 9. Therefore, the sum of 6, 10, and x is 3 times 9, which is 27.\n\nStep 2: Set up the equation. The sum of 6, 10, and x is 27, so we can write the equation as 6 + 10 + x = 27.\n\nStep 3: Solve for x. Combine the known numbers: 6 + 10 = 16. Then, subtract 16 from both sides of the equation to solve for x: x = ",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "avg_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "首先，我们需要知道平均数的计算方法。平均数是所有数的总和除以数的个数。题目中给出了三个数：6、10 和 x，它们的平均数是 9。因此，我们可以列出以下方程：\n\n(6 + 10 + x) / 3 = 9\n\n接下来，我们需要解这个方程来找到 x 的值。首先，将方程两边都乘以 3，以消除分母：\n\n6 + 10 + x = 27\n\n然后，将已知的数相加：\n\n16 + x = 27\n\n最后，解这个方程来找到 x 的值：\n\nx = 27 - 16\nx = 11\n\nFinal",
+      "created_at": "2026-04-27T02:25:43",
+      "gold_answer": "11",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：6、10 和 x 的平均数是 9，求 x。\n推理：",
+      "raw_completion": "首先，我们需要知道平均数的计算方法。平均数是所有数的总和除以数的个数。题目中给出了三个数：6、10 和 x，它们的平均数是 9。因此，我们可以列出以下方程：\n\n(6 + 10 + x) / 3 = 9\n\n接下来，我们需要解这个方程来找到 x 的值。首先，将方程两边都乘以 3，以消除分母：\n\n6 + 10 + x = 27\n\n然后，将已知的数相加：\n\n16 + x = 27\n\n最后，解这个方程来找到 x 的值：\n\nx = 27 - 16\nx = 11\n\nFinal",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "avg_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The average of 6, 10, and x is 9. To find the average, we sum the numbers and divide by the count of numbers. Here, we have three numbers: 6, 10, and x. The sum of these numbers is \\(6 + 10 + x\\). The average is given as 9, so we set up the equation:\n\n\\[\n\\frac{6 + 10 + x}{3} = 9\n\\]\n\nTo solve for x, first multiply both sides of the equation by 3 to eliminate the denominator:\n\n\\[\n6 + 10 + x = 27\n\\]\n\nNext, combine the constants on the left side:\n\n\\[\n16 + x = 27\n\\",
+      "created_at": "2026-04-27T02:25:47",
+      "gold_answer": "11",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 6、10 和 x 的平均数是 9，求 x。\nReasoning:",
+      "raw_completion": " The average of 6, 10, and x is 9. To find the average, we sum the numbers and divide by the count of numbers. Here, we have three numbers: 6, 10, and x. The sum of these numbers is \\(6 + 10 + x\\). The average is given as 9, so we set up the equation:\n\n\\[\n\\frac{6 + 10 + x}{3} = 9\n\\]\n\nTo solve for x, first multiply both sides of the equation by 3 to eliminate the denominator:\n\n\\[\n6 + 10 + x = 27\n\\]\n\nNext, combine the constants on the left side:\n\n\\[\n16 + x = 27\n\\",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "avg_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "首先，根据题目，6, 10, 和 x 的平均值是 9。平均值的计算公式是所有数的和除以数的个数。因此，我们可以列出方程：\n\n\\[\n\\frac{6 + 10 + x}{3} = 9\n\\]\n\n接下来，解这个方程来找到 x 的值。首先，将方程两边都乘以 3，以消去分母：\n\n\\[\n6 + 10 + x = 27\n\\]\n\n然后，将已知的数相加：\n\n\\[\n16 + x = 27\n\\]\n\n最后，解出 x：\n\n\\[\nx = 27 - 16\n\\]\n\\[\nx = 1",
+      "created_at": "2026-04-27T02:25:51",
+      "gold_answer": "11",
+      "input_lang": "en",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：The average of 6, 10, and x is 9. Find x.\n推理：",
+      "raw_completion": "首先，根据题目，6, 10, 和 x 的平均值是 9。平均值的计算公式是所有数的和除以数的个数。因此，我们可以列出方程：\n\n\\[\n\\frac{6 + 10 + x}{3} = 9\n\\]\n\n接下来，解这个方程来找到 x 的值。首先，将方程两边都乘以 3，以消去分母：\n\n\\[\n6 + 10 + x = 27\n\\]\n\n然后，将已知的数相加：\n\n\\[\n16 + x = 27\n\\]\n\n最后，解出 x：\n\n\\[\nx = 27 - 16\n\\]\n\\[\nx = 1",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "avg_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The discount is calculated as 25% of $80, which is (25/100) * $80 = $20. The sale price is the original price minus the discount, so $80 - $20 = $60. Final answer: $60",
+      "created_at": "2026-04-27T02:25:52",
+      "gold_answer": "60",
+      "input_lang": "en",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: A $80 jacket is discounted by 25%. What is the sale price?\nReasoning:",
+      "raw_completion": " The discount is calculated as 25% of $80, which is (25/100) * $80 = $20. The sale price is the original price minus the discount, so $80 - $20 = $60. Final answer: $60",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "percent_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. 原价是80美元。\n2. 折扣是25%，即0.25。\n3. 折扣金额是80美元 * 0.25 = 20美元。\n4. 售价是80美元 - 20美元 = 60美元。\nFinal answer: 60美元",
+      "created_at": "2026-04-27T02:25:54",
+      "gold_answer": "60",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：一件80美元的夹克打七五折后售价是多少？\n推理：",
+      "raw_completion": "1. 原价是80美元。\n2. 折扣是25%，即0.25。\n3. 折扣金额是80美元 * 0.25 = 20美元。\n4. 售价是80美元 - 20美元 = 60美元。\nFinal answer: 60美元",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "percent_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The original price of the jacket is $80. A 25% discount means the jacket is now 75% of its original price. To find the discounted price, multiply the original price by 0.75.  \nFinal answer: 60",
+      "created_at": "2026-04-27T02:25:56",
+      "gold_answer": "60",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 一件80美元的夹克打七五折后售价是多少？\nReasoning:",
+      "raw_completion": " The original price of the jacket is $80. A 25% discount means the jacket is now 75% of its original price. To find the discounted price, multiply the original price by 0.75.  \nFinal answer: 60",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "percent_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "首先，我们需要计算原价的25%是多少。原价是80美元，所以25%的折扣是80美元的25%。计算过程如下：\n\n1. 25%的折扣 = 80美元 × 25% = 80美元 × 0.25 = 20美元\n\n接下来，我们需要从原价中减去折扣金额，得到销售价格。计算过程如下：\n\n2. 销售价格 = 原价 - 折扣金额 = 80美元 - 20美元 = 60美元\n\nFinal answer: 60美元",
+      "created_at": "2026-04-27T02:25:59",
+      "gold_answer": "60",
+      "input_lang": "en",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：A $80 jacket is discounted by 25%. What is the sale price?\n推理：",
+      "raw_completion": "首先，我们需要计算原价的25%是多少。原价是80美元，所以25%的折扣是80美元的25%。计算过程如下：\n\n1. 25%的折扣 = 80美元 × 25% = 80美元 × 0.25 = 20美元\n\n接下来，我们需要从原价中减去折扣金额，得到销售价格。计算过程如下：\n\n2. 销售价格 = 原价 - 折扣金额 = 80美元 - 20美元 = 60美元\n\nFinal answer: 60美元",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "percent_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "First, we need to find out what the ratio of boys to the total number of students is. Since the ratio of boys to girls is 3:5, the ratio of boys to the total number of students is 3:(3+5) = 3:8. Next, we can use this ratio to find out how many girls there are. If there are 24 boys, then we can set up a proportion: 3/8 = 24/x, where x is the number of girls. Cross-multiplying, we get 3x = 8*24, or x = 8*24/3 = 64. So, there are 64 girls.\n\nFinal answer: 64",
+      "created_at": "2026-04-27T02:26:03",
+      "gold_answer": "40",
+      "input_lang": "en",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: The ratio of boys to girls is 3:5. If there are 24 boys, how many girls are there?\nReasoning:",
+      "raw_completion": " First, we need to find out what the ratio of boys to the total number of students is. Since the ratio of boys to girls is 3:5, the ratio of boys to the total number of students is 3:(3+5) = 3:8. Next, we can use this ratio to find out how many girls there are. If there are 24 boys, then we can set up a proportion: 3/8 = 24/x, where x is the number of girls. Cross-multiplying, we get 3x = 8*24, or x = 8*24/3 = 64. So, there are 64 girls.\n\nFinal answer: 64",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "ratio_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "男生和女生的比例是3:5，这意味着每3个男生对应5个女生。如果有24名男生，那么女生的数量可以通过以下步骤计算：\n\n1. 首先，确定男生的比例单位数：24名男生 ÷ 3 = 8。\n2. 然后，计算女生的数量：8 × 5 = 40。\n\nFinal answer: 40",
+      "created_at": "2026-04-27T02:26:05",
+      "gold_answer": "40",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：男生和女生的比例是3:5。如果有24名男生，女生有多少名？\n推理：",
+      "raw_completion": "男生和女生的比例是3:5，这意味着每3个男生对应5个女生。如果有24名男生，那么女生的数量可以通过以下步骤计算：\n\n1. 首先，确定男生的比例单位数：24名男生 ÷ 3 = 8。\n2. 然后，计算女生的数量：8 × 5 = 40。\n\nFinal answer: 40",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "ratio_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "The ratio of boys to girls is 3:5. This means for every 3 boys, there are 5 girls. Since there are 24 boys, we need to determine how many sets of 3 boys are in 24. This is calculated as 24 divided by 3, which equals 8. Now, for each set of 3 boys, there are 5 girls. So, if there are 8 sets, there must be 8 times 5 girls, which equals 40.\n\nFinal answer: 40",
+      "created_at": "2026-04-27T02:26:08",
+      "gold_answer": "40",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 男生和女生的比例是3:5。如果有24名男生，女生有多少名？\nReasoning:",
+      "raw_completion": " The ratio of boys to girls is 3:5. This means for every 3 boys, there are 5 girls. Since there are 24 boys, we need to determine how many sets of 3 boys are in 24. This is calculated as 24 divided by 3, which equals 8. Now, for each set of 3 boys, there are 5 girls. So, if there are 8 sets, there must be 8 times 5 girls, which equals 40.\n\nFinal answer: 40",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "ratio_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "根据题目，男孩和女孩的比例是3:5，这意味着每3个男孩对应5个女孩。已知男孩有24个，我们可以通过以下步骤计算女孩的数量：\n\n1. 确定比例中的单位数量：3个男孩对应5个女孩，因此每3个男孩对应5个女孩。\n2. 计算实际比例中的单位数量：24个男孩是3的8倍（因为24 ÷ 3 = 8）。\n3. 根据比例计算女孩的数量：5个女孩乘以8（因为24 ÷ 3 = 8），得到40个女孩。\n\nFinal answer: 40",
+      "created_at": "2026-04-27T02:26:11",
+      "gold_answer": "40",
+      "input_lang": "en",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：The ratio of boys to girls is 3:5. If there are 24 boys, how many girls are there?\n推理：",
+      "raw_completion": "根据题目，男孩和女孩的比例是3:5，这意味着每3个男孩对应5个女孩。已知男孩有24个，我们可以通过以下步骤计算女孩的数量：\n\n1. 确定比例中的单位数量：3个男孩对应5个女孩，因此每3个男孩对应5个女孩。\n2. 计算实际比例中的单位数量：24个男孩是3的8倍（因为24 ÷ 3 = 8）。\n3. 根据比例计算女孩的数量：5个女孩乘以8（因为24 ÷ 3 = 8），得到40个女孩。\n\nFinal answer: 40",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "ratio_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "To find the remainder when 137 is divided by 9, we can use the division algorithm, which states that for any integers \\(a\\) and \\(b\\) (with \\(b > 0\\)), there exist unique integers \\(q\\) (the quotient) and \\(r\\) (the remainder) such that \\(a = bq + r\\) and \\(0 \\leq r < b\\).\n\n1. First, we need to determine the quotient \\(q\\) when 137 is divided by 9. We do this by performing the division:\n   \\[\n   137 \\div 9 = 15 \\text{ remainder } 2\n   \\]\n   This means that \\(137 = 9 \\times 15 +",
+      "created_at": "2026-04-27T02:26:15",
+      "gold_answer": "2",
+      "input_lang": "en",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: What is the remainder when 137 is divided by 9?\nReasoning:",
+      "raw_completion": " To find the remainder when 137 is divided by 9, we can use the division algorithm, which states that for any integers \\(a\\) and \\(b\\) (with \\(b > 0\\)), there exist unique integers \\(q\\) (the quotient) and \\(r\\) (the remainder) such that \\(a = bq + r\\) and \\(0 \\leq r < b\\).\n\n1. First, we need to determine the quotient \\(q\\) when 137 is divided by 9. We do this by performing the division:\n   \\[\n   137 \\div 9 = 15 \\text{ remainder } 2\n   \\]\n   This means that \\(137 = 9 \\times 15 + ",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "rem_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "137 除以 9 的余数是 2。\n\nFinal answer: 2",
+      "created_at": "2026-04-27T02:26:16",
+      "gold_answer": "2",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：137 除以 9 的余数是多少？\n推理：",
+      "raw_completion": "137 除以 9 的余数是 2。\n\nFinal answer: 2",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "rem_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "First, we need to divide 137 by 9. The quotient is 15 because 9 multiplied by 15 equals 135. Next, we subtract 135 from 137 to find the remainder. 137 minus 135 equals 2. Therefore, the remainder when 137 is divided by 9 is 2.\n\nFinal answer: 2",
+      "created_at": "2026-04-27T02:26:18",
+      "gold_answer": "2",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 137 除以 9 的余数是多少？\nReasoning:",
+      "raw_completion": " First, we need to divide 137 by 9. The quotient is 15 because 9 multiplied by 15 equals 135. Next, we subtract 135 from 137 to find the remainder. 137 minus 135 equals 2. Therefore, the remainder when 137 is divided by 9 is 2.\n\nFinal answer: 2",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "rem_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "137 除以 9 的商为 15，余数为 2。\nFinal answer: 2",
+      "created_at": "2026-04-27T02:26:19",
+      "gold_answer": "2",
+      "input_lang": "en",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：What is the remainder when 137 is divided by 9?\n推理：",
+      "raw_completion": "137 除以 9 的商为 15，余数为 2。\nFinal answer: 2",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "rem_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "1. Identify the function to differentiate: f(x) = x^2 + 3x.  \n2. Apply the power rule to each term:  \n   - For x^2, the derivative is 2x (since the power rule states that the derivative of x^n is nx^(n-1)).  \n   - For 3x, the derivative is 3 (since the derivative of a linear term ax is a).  \n3. Combine the derivatives of the terms: 2x + 3.  \nFinal answer: 2x + 3.",
+      "created_at": "2026-04-27T02:26:22",
+      "gold_answer": "2x+3",
+      "input_lang": "en",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: Differentiate x^2 + 3x.\nReasoning:",
+      "raw_completion": " 1. Identify the function to differentiate: f(x) = x^2 + 3x.  \n2. Apply the power rule to each term:  \n   - For x^2, the derivative is 2x (since the power rule states that the derivative of x^n is nx^(n-1)).  \n   - For 3x, the derivative is 3 (since the derivative of a linear term ax is a).  \n3. Combine the derivatives of the terms: 2x + 3.  \nFinal answer: 2x + 3.",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "deriv_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "首先，我们需要求函数 \\( f(x) = x^2 + 3x \\) 的导数。根据导数的基本规则，我们可以对每一项分别求导。\n\n1. 对 \\( x^2 \\) 求导：根据幂函数的导数规则，\\( \\frac{d}{dx} x^n = n x^{n-1} \\)，所以 \\( \\frac{d}{dx} x^2 = 2x \\)。\n2. 对 \\( 3x \\) 求导：根据常数倍的导数规则，\\( \\frac{d}{dx} (kx) = k \\)，所以 \\( \\frac{d}{dx} 3x = 3 \\)。\n\n将两部分相加",
+      "created_at": "2026-04-27T02:26:26",
+      "gold_answer": "2x+3",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：求 x^2 + 3x 的导数。\n推理：",
+      "raw_completion": "首先，我们需要求函数 \\( f(x) = x^2 + 3x \\) 的导数。根据导数的基本规则，我们可以对每一项分别求导。\n\n1. 对 \\( x^2 \\) 求导：根据幂函数的导数规则，\\( \\frac{d}{dx} x^n = n x^{n-1} \\)，所以 \\( \\frac{d}{dx} x^2 = 2x \\)。\n2. 对 \\( 3x \\) 求导：根据常数倍的导数规则，\\( \\frac{d}{dx} (kx) = k \\)，所以 \\( \\frac{d}{dx} 3x = 3 \\)。\n\n将两部分相加",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "deriv_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "To find the derivative of the function \\( f(x) = x^2 + 3x \\), we apply the basic rules of differentiation. First, we differentiate \\( x^2 \\) using the power rule, which states that the derivative of \\( x^n \\) is \\( n \\cdot x^{n-1} \\). Applying this, the derivative of \\( x^2 \\) is \\( 2x \\). Next, we differentiate \\( 3x \\), which is a linear term. The derivative of a linear term \\( ax \\) is simply \\( a \\), so the derivative of \\( 3x \\) is \\( 3 \\). Finally, we combine these results by adding the derivatives of the individual terms. Therefore, the derivative of \\( f(x) =",
+      "created_at": "2026-04-27T02:26:30",
+      "gold_answer": "2x+3",
+      "input_lang": "zh",
+      "model_key": "qwen3_14b_base",
+      "prompt": "Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 求 x^2 + 3x 的导数。\nReasoning:",
+      "raw_completion": " To find the derivative of the function \\( f(x) = x^2 + 3x \\), we apply the basic rules of differentiation. First, we differentiate \\( x^2 \\) using the power rule, which states that the derivative of \\( x^n \\) is \\( n \\cdot x^{n-1} \\). Applying this, the derivative of \\( x^2 \\) is \\( 2x \\). Next, we differentiate \\( 3x \\), which is a linear term. The derivative of a linear term \\( ax \\) is simply \\( a \\), so the derivative of \\( 3x \\) is \\( 3 \\). Finally, we combine these results by adding the derivatives of the individual terms. Therefore, the derivative of \\( f(x) =",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "deriv_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "根据多项式求导法则，x^2的导数是2x，3x的导数是3，因此原函数的导数是2x + 3。\n\nFinal answer: 2x + 3",
+      "created_at": "2026-04-27T02:26:31",
+      "gold_answer": "2x+3",
+      "input_lang": "en",
+      "model_key": "qwen3_14b_base",
+      "prompt": "请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：Differentiate x^2 + 3x.\n推理：",
+      "raw_completion": "根据多项式求导法则，x^2的导数是2x，3x的导数是3，因此原函数的导数是2x + 3。\n\nFinal answer: 2x + 3",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "deriv_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    }
+  ]
+}

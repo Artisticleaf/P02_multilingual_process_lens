@@ -1,0 +1,143 @@
+created_at: "2026-04-30"
+scope: "Qwen3.5/Gemma4-only reruns and next-stage experiments"
+source_priority:
+  - "local model README/model card"
+  - "local generation_config.json"
+  - "official remote model card/documentation"
+  - "project-specific scientific controls"
+global_controls:
+  dtype: "bfloat16"
+  device: "auto"
+  device_map: "auto"
+  local_files_only: true
+  tokenization_rule: "If chat template renders text, tokenize with add_special_tokens=false."
+  pad_token_rule: "Use tokenizer.pad_token_id when available; fall back to tokenizer.eos_token_id only if pad is missing."
+  leakage_rule: "No gold answer, manual label, known trap note, known error span, or correction annotation in model prompts unless the run is explicitly labeled answer-anchor/non-prevalence."
+  deterministic_verifier_rule: "For option-logprob verifier/replay, do not use sampling parameters; record them as not applicable."
+models:
+  qwen35_27b:
+    family: "Qwen3.5"
+    local_path: "/home/Awei/LLM/Model/base/qwen35_27b"
+    context_length_model_card: 262144
+    min_context_for_thinking_recommended: 128000
+    generation_config:
+      temperature: 0.6
+      top_p: 0.95
+      top_k: 20
+    modes:
+      direct_verifier_nonthinking:
+        enable_thinking: false
+        do_sample: false
+        scoring: "Yes/No or A/B option logprob"
+        max_model_len: 6144
+        note: "Sampling parameters not applicable."
+      ng_uniform_legacy_baseline:
+        enable_thinking: false
+        do_sample: true
+        temperature: 0.7
+        top_p: 0.95
+        top_k: 50
+        max_new_tokens: 4096
+        note: "Historical project-uniform baseline; not official model-card sampling."
+      ng_model_card_reasoning:
+        enable_thinking: false
+        do_sample: true
+        temperature: 1.0
+        top_p: 0.95
+        top_k: 20
+        min_p: 0.0
+        presence_penalty: 1.5
+        repetition_penalty: 1.0
+        max_new_tokens: 8192
+        note: "Official Qwen generation-tip profile for non-thinking reasoning; implement/log presence_penalty support or mark unavailable."
+      tg_model_card_general:
+        enable_thinking: true
+        do_sample: true
+        temperature: 1.0
+        top_p: 0.95
+        top_k: 20
+        min_p: 0.0
+        presence_penalty: 1.5
+        repetition_penalty: 1.0
+        max_new_tokens: 32768
+        note: "Use final-contract prompt and report hit-max, post-final continuation, explicit final marker, and clean stop."
+  gemma4_31b_it:
+    family: "Gemma4"
+    local_path: "/home/Awei/LLM/Model/base/gemma4_31b_it"
+    context_length_model_card: 256000
+    generation_config:
+      temperature: 1.0
+      top_p: 0.95
+      top_k: 64
+      pad_token_id: 0
+      eos_token_id: [1, 106, 50]
+    modes:
+      direct_verifier_nonthinking:
+        enable_thinking: false
+        do_sample: false
+        scoring: "Yes/No or A/B option logprob"
+        max_model_len: 6144
+        note: "Gemma medium models still render an empty thought channel when thinking is disabled."
+      ng_model_card:
+        enable_thinking: false
+        do_sample: true
+        temperature: 1.0
+        top_p: 0.95
+        top_k: 64
+        max_new_tokens: 8192
+      tg_model_card:
+        enable_thinking: true
+        do_sample: true
+        temperature: 1.0
+        top_p: 0.95
+        top_k: 64
+        max_new_tokens: 8192
+        escalation_if_hitmax_rate_gt: 0.30
+        escalated_max_new_tokens: 16384
+  gemma4_26b_a4b_it:
+    family: "Gemma4"
+    local_path: "/home/Awei/LLM/Model/base/gemma4_26b_a4b_it"
+    context_length_model_card: 256000
+    generation_config:
+      temperature: 1.0
+      top_p: 0.95
+      top_k: 64
+      pad_token_id: 0
+      eos_token_id: [1, 106, 50]
+    modes:
+      direct_verifier_nonthinking:
+        enable_thinking: false
+        do_sample: false
+        scoring: "Yes/No or A/B option logprob"
+        max_model_len: 6144
+      ng_model_card:
+        enable_thinking: false
+        do_sample: true
+        temperature: 1.0
+        top_p: 0.95
+        top_k: 64
+        max_new_tokens: 8192
+      tg_model_card:
+        enable_thinking: true
+        do_sample: true
+        temperature: 1.0
+        top_p: 0.95
+        top_k: 64
+        max_new_tokens: 8192
+        escalation_if_hitmax_rate_gt: 0.30
+        escalated_max_new_tokens: 16384
+qwen_gemma_only_queue:
+  primary_models:
+    - qwen35_27b
+    - gemma4_31b_it
+    - gemma4_26b_a4b_it
+  omit_for_now:
+    - glm47_flash_candidate
+  rerun_priority:
+    - "E119-QG-audit: finish and audit Qwen/Gemma rows already generated."
+    - "E146-QG-NG-model-card: rerun natural hard-task generation using model-card sampling profiles."
+    - "E131-QG-token-localization: all-token selected-layer localization on E61/E80/E90 cases."
+    - "E132-QG-span-patch: residual/MLP/token-mixer error-span causal patch."
+    - "E123-QG-process-confidence-stop: confidence-matched disentanglement."
+    - "E121-QG-TV-objective: thinking verifier objective ladder."
+    - "E143-QG-TG-final-contract: thinking natural generation with final-contract prompts."

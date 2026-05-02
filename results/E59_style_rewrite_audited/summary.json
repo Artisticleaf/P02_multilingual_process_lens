@@ -1,0 +1,41 @@
+{
+  "summary": [
+    {
+      "source_model_key": "qwen35_27b",
+      "raw_rows": 24,
+      "preserved_rows": 23,
+      "verifier_rows": 22,
+      "verifier_pairs": 11,
+      "dropped_rows": 1,
+      "dropped_by_reason": {
+        "invalid_rewrite_repaired_or_ambiguous": 1
+      },
+      "data_path": "/home/Awei/P02_multilingual_process_lens/data/processed/e59c_style_rewrite_audited/qwen35_27b_e59c_style_rewrite_audited.jsonl",
+      "pairs_path": "/home/Awei/P02_multilingual_process_lens/configs/e59c_style_rewrite_pairs/qwen35_27b_e59c_style_rewrite_pairs.yaml"
+    },
+    {
+      "source_model_key": "gemma4_31b_it",
+      "raw_rows": 24,
+      "preserved_rows": 24,
+      "verifier_rows": 24,
+      "verifier_pairs": 12,
+      "dropped_rows": 0,
+      "dropped_by_reason": {},
+      "data_path": "/home/Awei/P02_multilingual_process_lens/data/processed/e59c_style_rewrite_audited/gemma4_31b_it_e59c_style_rewrite_audited.jsonl",
+      "pairs_path": "/home/Awei/P02_multilingual_process_lens/configs/e59c_style_rewrite_pairs/gemma4_31b_it_e59c_style_rewrite_pairs.yaml"
+    },
+    {
+      "source_model_key": "gemma4_26b_a4b_it",
+      "raw_rows": 24,
+      "preserved_rows": 23,
+      "verifier_rows": 22,
+      "verifier_pairs": 11,
+      "dropped_rows": 1,
+      "dropped_by_reason": {
+        "invalid_rewrite_repaired_or_ambiguous": 1
+      },
+      "data_path": "/home/Awei/P02_multilingual_process_lens/data/processed/e59c_style_rewrite_audited/gemma4_26b_a4b_it_e59c_style_rewrite_audited.jsonl",
+      "pairs_path": "/home/Awei/P02_multilingual_process_lens/configs/e59c_style_rewrite_pairs/gemma4_26b_a4b_it_e59c_style_rewrite_pairs.yaml"
+    }
+  ]
+}

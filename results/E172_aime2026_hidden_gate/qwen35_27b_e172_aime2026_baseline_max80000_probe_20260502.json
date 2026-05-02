@@ -1,0 +1,92 @@
+{
+  "args": {
+    "batch_size": 1,
+    "checkpoint_jsonl": "logs/e172_aime2026_baseline_qwen35_27b_max80000_probe_20260502.jsonl",
+    "device": "auto",
+    "dtype": "bfloat16",
+    "local_files_only": true,
+    "max_new_tokens": 80000,
+    "max_tasks": 1,
+    "model_key": "qwen35_27b",
+    "out_dir": "/home/Awei/P02_multilingual_process_lens/results/E172_aime2026_hidden_gate",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "resume_from_checkpoint": "",
+    "tag": "max80000_probe_20260502",
+    "task_bank": "/home/Awei/P02_multilingual_process_lens/data/processed/e172_aime2026_matharena_task_bank_20260502.jsonl",
+    "task_ids": [],
+    "temperature": 0.0,
+    "top_k": 0,
+    "top_p": 1.0
+  },
+  "created_at": "2026-05-02T22:11:44",
+  "cuda_visible_devices": "0,1,2,3",
+  "host": "hpc-node-01",
+  "model_key": "qwen35_27b",
+  "prompt_template": "Solve the following AIME 2026 problem carefully in non-thinking mode. Show only the reasoning needed to justify the answer; do not give the final answer before the reasoning. End with exactly one line `Final answer: <integer>`.\n\nProblem: {problem}",
+  "rows": [
+    {
+      "chat_template_enable_thinking_false_requested": true,
+      "completion": "Let $v_P$ be Patrick's speed in miles per hour.\nAccording to the problem:\n1. Tanya's speed is $v_T = v_P + 2$.\n2. Jose's speed is $v_J = v_T + 7 = (v_P + 2) + 7 = v_P + 9$.\n\nLet $d$ be the distance from the school to the park in miles.\nLet $t_P$ be the time Patrick takes to travel the distance $d$.\nLet $t_T$ be the time Tanya takes to travel the distance $d$.\nLet $t_J$ be the time Jose takes to travel the distance $d$.\n\nThe relationship between distance, speed, and time is $d = \\text{speed} \\times \\text{time}$.\nSo, $t_P = \\frac{d}{v_P}$, $t_T = \\frac{d}{v_T}$, and $t_J = \\frac{d}{v_J}$.\n\nThe problem states the start times relative to Patrick:\n- Patrick starts at time $0$.\n- Tanya starts 1 hour after Patrick, so at time $1$.\n- Jose starts 1 hour after Tanya, so at time $2$.\n\nThey all arrive at the park at the same time. Let this arrival time be $T_{arrival}$.\nThen:\n$T_{arrival} = t_P$ (since Patrick started at 0)\n$T_{arrival} = 1 + t_T$ (since Tanya started at 1)\n$T_{arrival} = 2 + t_J$ (since Jose started at 2)\n\nEquating the expressions for $T_{arrival}$:\n$t_P = 1 + t_T = 2 + t_J$\n\nFrom $t_P = 1 + t_T$, we have:\n$\\frac{d}{v_P} = 1 + \\frac{d}{v_T}$\n$\\frac{d}{v_P} - \\frac{d}{v_T} = 1$\n$d \\left( \\frac{1}{v_P} - \\frac{1}{v_T} \\right) = 1$\n$d \\left( \\frac{v_T - v_P}{v_P v_T} \\right) = 1$\n\nSince $v_T = v_P + 2$, then $v_T - v_P = 2$.\n$d \\left( \\frac{2}{v_P (v_P + 2)} \\right) = 1$\n$d = \\frac{v_P (v_P + 2)}{2}$  (Equation 1)\n\nFrom $t_T = 1 + t_J$ (derived from $1 + t_T = 2 + t_J$), we have:\n$\\frac{d}{v_T} = 1 + \\frac{d}{v_J}$\n$\\frac{d}{v_T} - \\frac{d}{v_J} = 1$\n$d \\left( \\frac{1}{v_T} - \\frac{1}{v_J} \\right) = 1$\n$d \\left( \\frac{v_J - v_T}{v_T v_J} \\right) = 1$\n\nSince $v_J = v_T + 7$, then $v_J - v_T = 7$.\n$d \\left( \\frac{7}{v_T v_J} \\right) = 1$\n$d = \\frac{v_T v_J}{7}$ (Equation 2)\n\nNow substitute $v_T = v_P + 2$ and $v_J = v_P + 9$ into Equation 2:\n$d = \\frac{(v_P + 2)(v_P + 9)}{7}$\n\nNow we have two expressions for $d$. Set them equal:\n$\\frac{v_P (v_P + 2)}{2} = \\frac{(v_P + 2)(v_P + 9)}{7}$\n\nSince $v_P$ is a speed, $v_P > 0$, so $v_P + 2 \\neq 0$. We can divide both sides by $(v_P + 2)$:\n$\\frac{v_P}{2} = \\frac{v_P + 9}{7}$\n\nCross-multiply to solve for $v_P$:\n$7 v_P = 2 (v_P + 9)$\n$7 v_P = 2 v_P + 18$\n$5 v_P = 18$\n$v_P = \\frac{18}{5} = 3.6$ mph\n\nNow calculate the distance $d$ using Equation 1:\n$d = \\frac{v_P (v_P + 2)}{2}$\n$d = \\frac{\\frac{18}{5} \\left( \\frac{18}{5} + 2 \\right)}{2}$\n$d = \\frac{\\frac{18}{5} \\left( \\frac{18}{5} + \\frac{10}{5} \\right)}{2}$\n$d = \\frac{\\frac{18}{5} \\cdot \\frac{28}{5}}{2}$\n$d = \\frac{18 \\cdot 28}{25 \\cdot 2}$\n$d = \\frac{18 \\cdot 14}{25}$\n$d = \\frac{252}{25}$\n\nLet's verify with Equation 2 to be sure:\n$v_T = 3.6 + 2 = 5.6 = \\frac{28}{5}$\n$v_J = 5.6 + 7 = 12.6 = \\frac{63}{5}$\n$d = \\frac{v_T v_J}{7} = \\frac{\\frac{28}{5} \\cdot \\frac{63}{5}}{7} = \\frac{28 \\cdot 63}{25 \\cdot 7} = \\frac{4 \\cdot 63}{25} = \\frac{252}{25}$.\nThe results match.\n\nThe distance is $\\frac{252}{25}$ miles.\nWe need to check if $m = 252$ and $n = 25$ are relatively prime.\nThe prime factorization of $25$ is $5^2$.\nThe prime factorization of $252$: $252 = 2 \\times 126 = 2^2 \\times 63 = 2^2 \\times 9 \\times 7 = 2^2 \\times 3^2 \\times 7$.\nThere are no common factors between $252$ and $25$. Thus, $\\gcd(252, 25) = 1$.\n\nSo, $m = 252$ and $n = 25$.\nWe need to find $m + n$.\n$m + n = 252 + 25 = 277$.\n\nFinal answer: 277",
+      "created_at": "2026-05-02T22:11:44",
+      "dataset_metadata_in_prompt": false,
+      "dataset_repo": "MathArena/aime_2026",
+      "dataset_sha": "10b4e45b7a503075d4da8a0d57916a4f06ce6bd2",
+      "experiment": "E172_aime2026_nonthinking_baseline",
+      "extracted_final": "277",
+      "extracted_final_raw": "277",
+      "extraction_method": "final_answer_line",
+      "family": "matharena_aime2026",
+      "final_marker_found": true,
+      "generated_tokens": 1539,
+      "gold_answer": "277",
+      "gold_answer_in_prompt": false,
+      "hidden_signal_in_prompt": false,
+      "hit_max_new_tokens": false,
+      "manual_final_correct": true,
+      "model_key": "qwen35_27b",
+      "problem": "Patrick started walking at a constant rate along a straight road from school to the park. One hour after Patrick left, Tanya started running along the same road from school to the park. One hour after Tanya left, Jose started bicycling along the same road from school to the park. Tanya ran at a constant rate of $2$ miles per hour faster than Patrick walked, Jose bicycled at a constant rate of $7$ miles per hour faster than Tanya ran, and all three arrived at the park at the same time. The distance from the school to the park is $\\frac{m}{n}$ miles, where $m$ and $n$ are relatively prime positive integers. Find $m + n$.",
+      "problem_idx": 1,
+      "prompt_content": "Solve the following AIME 2026 problem carefully in non-thinking mode. Show only the reasoning needed to justify the answer; do not give the final answer before the reasoning. End with exactly one line `Final answer: <integer>`.\n\nProblem: Patrick started walking at a constant rate along a straight road from school to the park. One hour after Patrick left, Tanya started running along the same road from school to the park. One hour after Tanya left, Jose started bicycling along the same road from school to the park. Tanya ran at a constant rate of $2$ miles per hour faster than Patrick walked, Jose bicycled at a constant rate of $7$ miles per hour faster than Tanya ran, and all three arrived at the park at the same time. The distance from the school to the park is $\\frac{m}{n}$ miles, where $m$ and $n$ are relatively prime positive integers. Find $m + n$.",
+      "prompt_tokens": 214,
+      "prompt_variant": "baseline_nonthinking_aime2026",
+      "resume_policy": "generated_this_run",
+      "resume_source_checkpoint": "",
+      "retained_from_resume_checkpoint": false,
+      "source_task_id": "aime2026_p01",
+      "task_id": "e172_aime2026_p01",
+      "task_source": "MathArena/aime_2026/default/train",
+      "thinking": false,
+      "used_chat_template": true
+    }
+  ],
+  "started_at": "2026-05-02T22:10:08",
+  "summary": {
+    "accuracy": 1.0,
+    "by_task": {
+      "e172_aime2026_p01": {
+        "completion_tokens": 1539,
+        "final_marker_found": 1,
+        "hit_max": 0,
+        "manual_final_correct": 1,
+        "n": 1
+      }
+    },
+    "completion_tokens": 1539,
+    "final_marker_found": 1,
+    "hit_max": 0,
+    "jobs": 1,
+    "leakage_audit": {
+      "dataset_metadata_in_prompt_rows": 0,
+      "gold_answer_in_prompt_rows": 0,
+      "hidden_signal_in_prompt_rows": 0
+    },
+    "manual_final_correct": 1,
+    "resume": {
+      "generated_this_run_jobs": 1,
+      "resume_from_checkpoint": "",
+      "resume_stats": {},
+      "retained_complete_jobs": 0
+    },
+    "tasks": 1
+  }
+}

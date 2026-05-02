@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "issues": [],
+  "counts": {
+    "e39_rows": 72,
+    "focus_rows": 24,
+    "tasks": 12,
+    "absolute_files": 4,
+    "contrastive_files": 4,
+    "error_span_files": 4
+  },
+  "found_models": {
+    "absolute": [
+      "gemma4_31b_it",
+      "qwen35_27b",
+      "qwen35_9b",
+      "qwen3_14b_base"
+    ],
+    "contrastive": [
+      "gemma4_31b_it",
+      "qwen35_27b",
+      "qwen35_9b",
+      "qwen3_14b_base"
+    ],
+    "error_span": [
+      "gemma4_31b_it",
+      "qwen35_27b",
+      "qwen35_9b",
+      "qwen3_14b_base"
+    ]
+  },
+  "leakage_logic_note": "Known error spans are used only for post-hoc scoring; prompts are generated from problem/completion only, and result rows do not store prompt text."
+}

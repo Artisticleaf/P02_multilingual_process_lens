@@ -1,0 +1,34 @@
+/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+[2026-04-27T02:30:05] loading tokenizer: qwen3_14b_base -> /home/Awei/LLM/Model/base/Qwen3-14B-Base
+[2026-04-27T02:30:05] loading model dtype=bfloat16 device=cuda
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 485.38it/s]
+Traceback (most recent call last):
+  File "/home/Awei/P02_multilingual_process_lens/scripts/run_anchor_matrix_smoke.py", line 128, in <module>
+    main()
+  File "/home/Awei/P02_multilingual_process_lens/scripts/run_anchor_matrix_smoke.py", line 64, in main
+    model = load_causal_lm(spec["path"], dtype=dtype, device=args.device, local_files_only=local_only)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Awei/P02_multilingual_process_lens/src/mplens/modeling.py", line 65, in load_causal_lm
+    model.to(torch.device(device))
+  File "/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/transformers/modeling_utils.py", line 4343, in to
+    return super().to(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1371, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    module._apply(fn)
+  File "/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    module._apply(fn)
+  File "/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    module._apply(fn)
+  [Previous line repeated 2 more times]
+  File "/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/torch/nn/modules/module.py", line 957, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1357, in convert
+    return t.to(
+           ^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 170.00 MiB. GPU 0 has a total capacity of 31.36 GiB of which 109.44 MiB is free. Process 532145 has 16.08 GiB memory in use. Including non-PyTorch memory, this process has 15.14 GiB memory in use. Of the allocated memory 14.65 GiB is allocated by PyTorch, and 1.57 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

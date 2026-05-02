@@ -1,0 +1,1184 @@
+{
+  "args": {
+    "all_layers": false,
+    "audit_jsonl": "/home/Awei/P02_multilingual_process_lens/data/processed/e119_e146_process_audit_official_20260430.jsonl",
+    "best_layer": null,
+    "device": "auto",
+    "dry_run": true,
+    "dtype": "bfloat16",
+    "hidden_layers": null,
+    "include_valid_matched": true,
+    "layer_window": 2,
+    "local_files_only": false,
+    "max_model_len": 8192,
+    "max_target_rows": 0,
+    "model_key": "qwen35_27b",
+    "out_dir": "/home/Awei/P02_multilingual_process_lens/results/E131_e119_e146_hidden_localization",
+    "prompt_format": "official_if_chat",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "target_mode": "mixed",
+    "valid_per_task_prompt": 1
+  },
+  "by_trace_class": {
+    "repaired_acpi": 19,
+    "strict_valid": 5
+  },
+  "created_at": "2026-04-30T15:14:21",
+  "experiment": "E131_e119_e146_hidden_localization_dry_run",
+  "leakage_note_zh": "dry-run 不加载模型；只检查官方标签行选择和 prefix detector，不把人工标签写入 verifier prompt。",
+  "rows": [
+    {
+      "audit_idx": 1190081,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 2134,
+          "detector": "completion_end",
+          "span_text": "/ 56 = 8$. It works.\n\nThe valid integer bases are $21$ and $49$.\nThe problem asks for the sum of all such bases:\n$$\\text{Sum} = 21 + 49 = 70$$\n\nFinal answer: 70",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 2134,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 70",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 2134,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 70",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "neutral",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_base_divisor_p1",
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190085,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 16,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 20",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 16,
+          "detector": "final_regex",
+          "span_text": "Final answer: 20",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 256,
+          "detector": "post_error_window",
+          "span_text": "\n\n**Justification:**\nFirst, express the numbers $17_b$ and $97_b$ in base 10.\n$17_b = 1 \\cdot b + 7 = b + 7$.\n$97_b = 9 \\cdot b + 7 = 9b + 7$.\n\nThe problem states that $17_b$ is a divisor of $97_b$. This means $(b+7)$ divides $(9b+7)$.\nWe c",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1307,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1547,
+          "detector": "post_repair_window",
+          "span_text": "Wait, let me re-evaluate the calculation.\n$9b + 7 = 9(b+7) - 56$.\nDivisors of 56: 1, 2, 4, 7, 8, 14, 28, 56.\n$b+7$ must be in this set.\n$b = d - 7$.\nCondition $b > 9 \\implies d - 7 > 9 \\implies d > 16$.\nPossible $d \\in \\{28, 56\\}$.\nIf $d=28, b=",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 6211,
+          "detector": "completion_end",
+          "span_text": "\n$b=21$: $17_{21} = 28$, $97_{21} = 196$. $196 = 7 \\times 28$. OK.\n$b=49$: $17_{49} = 56$, $97_{49} = 448$. $448 = 8 \\times 56$. OK.\nSum = 70.\n\nFinal answer: 70",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 6211,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 70",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_base_divisor_p1",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190086,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 16,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 12",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 16,
+          "detector": "final_regex",
+          "span_text": "Final answer: 12",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 256,
+          "detector": "post_error_window",
+          "span_text": "\n\n**Justification:**\nFirst, express the numbers $17_b$ and $97_b$ in base 10.\n$17_b = 1 \\cdot b + 7 = b + 7$.\n$97_b = 9 \\cdot b + 7 = 9b + 7$.\n\nWe are looking for integer bases $b > 9$ such that $b + 7$ divides $9b + 7$.\nLet $k$ be an integ",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 856,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1096,
+          "detector": "post_repair_window",
+          "span_text": "Wait, let me re-check the calculation.\n$9b + 7 = 9(b+7) - 56$. Correct.\nDivisors of 56: 1, 2, 4, 7, 8, 14, 28, 56.\nCondition $b > 9 \\implies b+7 > 16$.\nPossible values for $b+7$: 28, 56.\nIf $b+7 = 28$, $b=21$. Check: $17_{21} = 28$, $97_{21} = ",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 5131,
+          "detector": "completion_end",
+          "span_text": " constraint $b > 9 \\implies b+7 > 16$.\n7. Filter divisors: 28, 56.\n8. Solve for $b$: $b=21, b=49$.\n9. Sum: $21+49=70$.\n\nThe logic is flawless.\n\nFinal answer: 70",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 5131,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 70",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_base_divisor_p1",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190087,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 4127,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 16",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 4145,
+          "detector": "completion_end",
+          "span_text": "= 126 \\cdot 10 = 1260$. Correct.\n- Sum: $252 + 504 + 1260 = 2016$. Correct.\n- Modulo: $2016 \\equiv 16 \\pmod{1000}$. Correct.\n\nFinal answer: 16\n\nFinal answer: 16",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 4145,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 16",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "neutral",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_icecream_ordered_assign_p3",
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190091,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 17,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 240",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 17,
+          "detector": "final_regex",
+          "span_text": "Final answer: 240",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 257,
+          "detector": "post_error_window",
+          "span_text": "\n\nLet $c$, $v$, and $s$ be the number of players who chose chocolate, vanilla, and strawberry, respectively. We are given the following conditions:\n1. $c + v + s = 9$ (total players)\n2. $c, v, s \\ge 1$ (at least one player chose each flavor",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1125,
+          "detector": "repair_regex",
+          "span_text": "but",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1365,
+          "detector": "post_repair_window",
+          "span_text": "but $c > v$ fails. No solutions.\n\nThe valid triples $(c, v, s)$ are:\n1. $(6, 2, 1)$\n2. $(5, 3, 1)$\n3. $(4, 3, 2)$\n\nFor each triple, the number of ways to assign flavors to the 9 distinct players is given by the multinomial coefficient $\\binom{",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 6647,
+          "detector": "completion_end",
+          "span_text": "es is correct.\n\nFinal check on the calculation $252+504+1260$.\n$252+504 = 756$.\n$756+1260 = 2016$.\n$2016 \\pmod{1000} = 16$.\n\nThe answer is 16.\n\nFinal answer: 16",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 6647,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 16",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_icecream_ordered_assign_p3",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190092,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 3730,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 3749,
+          "detector": "completion_end",
+          "span_text": ", 100]$.\n$y = 4m \\in [-100, 100]$.\nCorrect. Count is 51.\n\nIntersection: $(0,0)$ is the only one.\nSum: $67 + 51 - 1 = 117$.\n\nFinal answer: 117\n\nFinal answer: 117",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 3749,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "neutral",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190096,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 17,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 203",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 17,
+          "detector": "final_regex",
+          "span_text": "Final answer: 203",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 257,
+          "detector": "post_error_window",
+          "span_text": "\n\n**Justification:**\nThe given equation is $12x^2 - xy - 6y^2 = 0$. We can factor the quadratic form on the left-hand side. Treating it as a quadratic in $x$, we look for factors of $12(-6) = -72$ that sum to $-1$. These are $-9$ and $8$.\nR",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1401,
+          "detector": "repair_regex",
+          "span_text": "check",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1641,
+          "detector": "post_repair_window",
+          "span_text": "check if any pairs are counted in both cases.\nThe pair $(0,0)$ corresponds to $k=0$ in Case 1 and $m=0$ in Case 2.\nFor any non-zero solution in Case 1, $y/x = -3/2$.\nFor any non-zero solution in Case 2, $y/x = 4/3$.\nSince $-3/2 \\neq 4/3$, the on",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 6048,
+          "detector": "completion_end",
+          "span_text": "+1 = 67$.\nCase 2: $\\min(100/3, 100/4) = \\min(33.33, 25) = 25$. Count $2(25)+1 = 51$.\nTotal: $67 + 51 - 1 = 117$.\n\nThe answer seems to be 117.\n\nFinal answer: 117",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 6048,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190097,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 16,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 61",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 16,
+          "detector": "final_regex",
+          "span_text": "Final answer: 61",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 256,
+          "detector": "post_error_window",
+          "span_text": "\n\n**Justification:**\nThe given equation is $12x^2 - xy - 6y^2 = 0$. We can factor the left-hand side by grouping or using the quadratic formula for $x$ in terms of $y$.\nTreating it as a quadratic in $x$: $12x^2 - yx - 6y^2 = 0$.\nUsing the q",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1532,
+          "detector": "repair_regex",
+          "span_text": "check",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1772,
+          "detector": "post_repair_window",
+          "span_text": "check for pairs $(x,y)$ that satisfy both cases.\nIf a pair is in both sets, then $x = 3k = -2m$ and $y = 4k = 3m$.\nFrom $4k = 3m$, we have $k = \\frac{3}{4}m$. Since $k$ is an integer, $m$ must be a multiple of 4. Let $m = 4n$.\nThen $k = 3n$.\nSub",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 7773,
+          "detector": "completion_end",
+          "span_text": "rs $-25$ to $25$ is $51$.\n$100/3 = 33.33$. Integers $-33$ to $33$ is $67$.\nIntersection is only $(0,0)$.\n$51+67-1 = 117$.\n\nThe answer is 117.\n\nFinal answer: 117",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 7773,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190098,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 18,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 1857",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 18,
+          "detector": "final_regex",
+          "span_text": "Final answer: 1857",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 258,
+          "detector": "post_error_window",
+          "span_text": "\n\nTo find the number of eight-digit integers formed by the digits $\\{1, 2, 3, 4, 5, 6, 7, 8\\}$ exactly once that are divisible by $22$, we must satisfy two conditions:\n1.  The number is divisible by $2$.\n2.  The number is divisible by $11$.",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 2753,
+          "detector": "repair_regex",
+          "span_text": "However",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 2993,
+          "detector": "post_repair_window",
+          "span_text": "However, we have an additional constraint: the number must be divisible by $2$, which means the digit at the units place ($d_1$) must be even.\n\nLet's analyze the parity of the sets.\nThe total set of digits is $\\{1, 2, 3, 4, 5, 6, 7, 8\\}$, containi",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 7311,
+          "detector": "completion_end",
+          "span_text": "d_1$ is even is $2/4 = 1/2$.\nTotal count $N = 8 \\times 24 \\times 24 \\times \\frac{1}{2} = 8 \\times 24 \\times 12 = 2304$.\n\n$2304 - 2025 = 279$.\n\nFinal answer: 279",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 7311,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 279",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_perm_div22_p5",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190099,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 3135,
+          "detector": "completion_end",
+          "span_text": "})^2 = 144 - 144\\sqrt{3} + 108 = 252 - 144\\sqrt{3}$\n$r^2 + s^2 = (252 + 144\\sqrt{3}) + (252 - 144\\sqrt{3}) = 504$.\n\nThe result is consistent.\n\nFinal answer: 504",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 3135,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 504",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 3135,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 504",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "neutral",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_trapezoid_incircle_p6",
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190103,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 17,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 350",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 17,
+          "detector": "final_regex",
+          "span_text": "Final answer: 350",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 257,
+          "detector": "post_error_window",
+          "span_text": "\n\n**Justification:**\n1.  **Identify Properties of Tangential Trapezoids**: An isosceles trapezoid with an inscribed circle (a tangential trapezoid) has the property that the sum of the lengths of the parallel sides equals the sum of the len",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 2143,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 2383,
+          "detector": "post_repair_window",
+          "span_text": "Wait, let me re-calculate the arithmetic.\n$(r-s)^2/4 = 108 \\implies (r-s)^2 = 432$.\n$(r+s)^2 = 576$.\n$2(r^2+s^2) = 576 + 432 = 1008$.\n$r^2+s^2 = 504$.\n\nLet me double check the problem statement or my interpretation.\n\"radius of the circle is 3\" ",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 7921,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 504",
+          "stage": "last_final_answer_end"
+        },
+        {
+          "char_end": 9365,
+          "detector": "completion_end",
+          "span_text": "$r_{in} \\neq \\sqrt{rs}$.\nWait, for a tangential trapezoid, is the inradius the geometric mean of the parallel sides?\nLet's derive.\n$h = 2r_{in}$.\n$L = (r+s)/2$.",
+          "stage": "completion_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_trapezoid_incircle_p6",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190104,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 17,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 200",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 17,
+          "detector": "final_regex",
+          "span_text": "Final answer: 200",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 257,
+          "detector": "post_error_window",
+          "span_text": "\n\n**Justification:**\nLet the lengths of the parallel sides of the isosceles trapezoid be $r$ and $s$ (with $r \\neq s$), and the length of each non-parallel side be $x$. Since the trapezoid has an inscribed circle (it is tangential), the sum",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1782,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 2022,
+          "detector": "post_repair_window",
+          "span_text": "Wait, let me re-evaluate the calculation.\n$r+s = 24$.\n$h=6$.\nArea $= \\frac{r+s}{2} \\cdot h = \\frac{24}{2} \\cdot 6 = 12 \\cdot 6 = 72$. This matches.\nLeg $x = \\frac{r+s}{2} = 12$.\nHeight $h=6$.\nBase of right triangle $b = \\sqrt{x^2 - h^2} = \\sqrt",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 6515,
+          "detector": "completion_end",
+          "span_text": "rac{s-r}{2})^2 = 108 \\implies (s-r)^2 = 432$.\n7. $r^2+s^2 = \\frac{(r+s)^2 + (r-s)^2}{2} = \\frac{576 + 432}{2} = 504$.\n\nThe logic is flawless.\n\nFinal answer: 504",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 6515,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 504",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_trapezoid_incircle_p6",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460071,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 15,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 0",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 15,
+          "detector": "final_regex",
+          "span_text": "Final answer: 0",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 255,
+          "detector": "post_error_window",
+          "span_text": "\n\nJustification:\nFirst, express the numbers $17_b$ and $97_b$ in base 10.\n$17_b = 1 \\cdot b + 7 = b + 7$.\n$97_b = 9 \\cdot b + 7 = 9b + 7$.\n\nWe are looking for integer bases $b > 9$ such that $b + 7$ divides $9b + 7$.\nThis can be written as:",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1148,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1388,
+          "detector": "post_repair_window",
+          "span_text": "Wait, let's re-evaluate the divisor list.\nDivisors of 56: $1, 2, 4, 7, 8, 14, 28, 56$.\nCorresponding $b = d - 7$:\n$d=1 \\implies b=-6$\n$d=2 \\implies b=-5$\n$d=4 \\implies b=-3$\n$d=7 \\implies b=0$\n$d=8 \\implies b=1$\n$d=14 \\implies b=7$\n$d=28 \\impli",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 3115,
+          "detector": "completion_end",
+          "span_text": "(Valid, $49 > 9$)\n\nThis confirms the previous result derived from the divisibility method. The only bases are 21 and 49.\nSum = $21 + 49 = 70$.\n\nFinal answer: 70",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 3115,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 70",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_base_divisor_p1",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460072,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 16,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 12",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 16,
+          "detector": "final_regex",
+          "span_text": "Final answer: 12",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 256,
+          "detector": "post_error_window",
+          "span_text": "\nThe expression $17_b$ represents $1 \\cdot b + 7 = b + 7$ and $97_b$ represents $9 \\cdot b + 7$. The condition that $17_b$ divides $97_b$ means $b + 7$ divides $9b + 7$.\nWe can rewrite $9b + 7$ in terms of $b + 7$:\n$9b + 7 = 9(b + 7) - 63 +",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 756,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 996,
+          "detector": "post_repair_window",
+          "span_text": "Wait, let me re-read the condition carefully. \"divisor of\".\n$17_b | 97_b$.\n$9b+7 = q(b+7)$.\n$9b+7 = 9(b+7) - 56$.\nSo $b+7$ must divide $56$.\nDivisors of 56: 1, 2, 4, 7, 8, 14, 28, 56.\n$b+7 > 9+7=16$.\nPossible values for $b+7$: 28, 56.\nIf $b+7=2",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 3810,
+          "detector": "completion_end",
+          "span_text": "7$, $b+7 = 8 \\implies b = 1$. Rejected.\nSo the only solutions are $b=49$ and $b=21$.\nSum = $49 + 21 = 70$.\n\nThe logic holds up. The sum is 70.\n\nFinal answer: 70",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 3810,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 70",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_base_divisor_p1",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460073,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 17,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 864",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 17,
+          "detector": "final_regex",
+          "span_text": "Final answer: 864",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 257,
+          "detector": "post_error_window",
+          "span_text": "\n\nJustification:\nLet the area of $\\triangle ABC$ be $S$.\nThe side lengths on $AB$ are $AD=4, DE=16, EB=8$, so $AB = 4+16+8 = 28$.\nThe side lengths on $AC$ are $AF=13, FG=52, GC=26$, so $AC = 13+52+26 = 91$.\nWe are given the area of quadrila",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1217,
+          "detector": "repair_regex",
+          "span_text": "but",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1457,
+          "detector": "post_repair_window",
+          "span_text": "but inside the boundary defined by the path, plus the regions added by the \"bulges\" $F-N-B$ and $M-E-C$?\nActually, let's use the shoelace formula concept or decomposition.\nThe polygon is $A-F-N-B-C-E-M$.\nNote the positions:\n$A, F, G, C$ are on",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 14867,
+          "detector": "completion_end",
+          "span_text": "\n$12/26 = 6/13$. Correct.\n$1274 / 13$.\n$1300 - 26 = 1274$.\n$100 - 2 = 98$. Correct.\n$98 \\times 6 = 588$. Correct.\n\nThe solution seems robust.\n\nFinal answer: 588",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 14867,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_geometry_reflection_p2",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460078,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 17,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 232",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 17,
+          "detector": "final_regex",
+          "span_text": "Final answer: 232",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 257,
+          "detector": "post_error_window",
+          "span_text": "\n\nLet $c$, $v$, and $s$ denote the number of players who chose chocolate, vanilla, and strawberry, respectively.\nWe are given the following conditions:\n1. The total number of players is 9: $c + v + s = 9$.\n2. Each flavor was chosen by at le",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 2569,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 2809,
+          "detector": "post_repair_window",
+          "span_text": "Wait, let me re-calculate the sum carefully.\n$252 + 504 = 756$.\n$756 + 1260 = 2016$.\n$2016 \\div 1000 = 2$ with a remainder of $16$.\n\nLet me double check the calculations.\n$\\binom{9}{6,2,1} = \\frac{9 \\cdot 8 \\cdot 7}{2} = 252$. Correct.\n$\\binom{",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 9315,
+          "detector": "completion_end",
+          "span_text": "- For $(4,3,2)$: $\\binom{9}{4,3,2} = \\frac{9!}{4!3!2!} = 1260$.\n\nTotal $N = 252 + 504 + 1260 = 2016$.\n$N \\pmod{1000} = 2016 \\pmod{1000} = 16$.\n\nFinal answer: 16",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 9315,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 16",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_icecream_ordered_assign_p3",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460079,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 17,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 136",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 17,
+          "detector": "final_regex",
+          "span_text": "Final answer: 136",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 257,
+          "detector": "post_error_window",
+          "span_text": "\n\nLet $c$, $v$, and $s$ be the number of players who chose chocolate, vanilla, and strawberry, respectively. We are given:\n1. $c + v + s = 9$ (total players)\n2. $c, v, s \\ge 1$ (at least one of each)\n3. $c > v > s$\n\nFirst, we find the possi",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 546,
+          "detector": "repair_regex",
+          "span_text": "Check",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 786,
+          "detector": "post_repair_window",
+          "span_text": "Check: $6 > 2 > 1$. Valid. $(6, 2, 1)$.\n  - If $v = 3$, then $c = 5$. Check: $5 > 3 > 1$. Valid. $(5, 3, 1)$.\n\nIf $s = 2$:\n  $c > v > 2 \\implies v \\ge 3$.\n  $c = 9 - v - 2 = 7 - v$.\n  Condition $c > v \\implies 7 - v > v \\implies 2v < 7 \\implies ",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 8615,
+          "detector": "completion_end",
+          "span_text": "$.\n$288 \\times 60 = 17280$.\nSo $1000 + 200 + 60 = 1260$. Correct.\nSum = $252 + 504 + 1260 = 2016$.\n$2016 \\pmod{1000} = 16$.\n\nThe answer is 16.\n\nFinal answer: 16",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 8615,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 16",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_icecream_ordered_assign_p3",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460084,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 17,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 201",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 17,
+          "detector": "final_regex",
+          "span_text": "Final answer: 201",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 257,
+          "detector": "post_error_window",
+          "span_text": "\n\nThe equation $12x^2 - xy - 6y^2 = 0$ can be factored by finding roots of the quadratic form. Treating it as a quadratic in $x$, we have $12x^2 - xy - 6y^2 = (3x - 2y)(4x + 3y) = 0$. Thus, the solutions satisfy either $3x = 2y$ or $4x = -3",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1275,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1515,
+          "detector": "post_repair_window",
+          "span_text": "Wait, let me re-evaluate the factorization.\n$12x^2 - xy - 6y^2$.\nProduct of coefficients of $x^2$ and $y^2$ is $12 \\times (-6) = -72$. We need factors of -72 that sum to -1. These are -9 and 8.\n$12x^2 - 9xy + 8xy - 6y^2 = 3x(4x - 3y) + 2y(4x - ",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 10012,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "last_final_answer_end"
+        },
+        {
+          "char_end": 11167,
+          "detector": "completion_end",
+          "span_text": "oth equations (corresponding to $k=0$ and $m=0$). Using the Principle of Inclusion-Exclusion, the total number of distinct ordered pairs is $67 + 51 - 1 = 117$.",
+          "stage": "completion_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460085,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 17,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 203",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 17,
+          "detector": "final_regex",
+          "span_text": "Final answer: 203",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 257,
+          "detector": "post_error_window",
+          "span_text": "\n\n**Justification:**\n1.  **Factor the Equation**:\n    The given equation is $12x^2 - xy - 6y^2 = 0$. We can factor this quadratic form by finding two numbers that multiply to $12 \\cdot (-6) = -72$ and add to $-1$. These numbers are $-9$ and",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1789,
+          "detector": "repair_regex",
+          "span_text": "check",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 2029,
+          "detector": "post_repair_window",
+          "span_text": "check if any pair $(x,y)$ satisfies both equations simultaneously.\n    If $3x + 2y = 0$ and $4x - 3y = 0$, the only solution is $x=0, y=0$.\n    In Case 1, $(0,0)$ corresponds to $k=0$.\n    In Case 2, $(0,0)$ corresponds to $m=0$.\n    Thus, the p",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 14717,
+          "detector": "completion_end",
+          "span_text": "le 25$.\n    $m \\in \\{-25, \\dots, 25\\}$. Count 51.\n    Intersection: $(0,0)$. Count 1.\n    Total: $67 + 51 - 1 = 117$.\n\n    The answer is 117.\n\nFinal answer: 117",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 14717,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460086,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 14215,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 279.",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 15884,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 279",
+          "stage": "last_final_answer_end"
+        },
+        {
+          "char_end": 16925,
+          "detector": "completion_end",
+          "span_text": "k=0$, which gives $2S_{odd} = 36 \\implies S_{odd} = 18$. Consequently, $S_{even} = 18$.\n\nWe need to count the number of ways to partition the set $\\{1, \\dots, 8",
+          "stage": "completion_end"
+        }
+      ],
+      "prompt_variant": "neutral",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_perm_div22_p5",
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1460090,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 18,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 2145",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 18,
+          "detector": "final_regex",
+          "span_text": "Final answer: 2145",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 258,
+          "detector": "post_error_window",
+          "span_text": "\n\n**Justification:**\nA number is divisible by $22$ if and only if it is divisible by both $2$ and $11$.\nThe integers are formed by permuting the digits $\\{1, 2, 3, 4, 5, 6, 7, 8\\}$. Let the number be $d_1 d_2 d_3 d_4 d_5 d_6 d_7 d_8$.\n\n1.  ",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 2922,
+          "detector": "repair_regex",
+          "span_text": "However",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 3162,
+          "detector": "post_repair_window",
+          "span_text": "However, we also have the constraint that the number must be divisible by 2, meaning $d_8 \\in \\{2, 4, 6, 8\\}$.\n$d_8$ is the last element of the set assigned to $S_{even}$.\n\nLet's iterate through the 4 partitions. Let a partition be $(A, B)$ where ",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 9384,
+          "detector": "completion_end",
+          "span_text": " logic holds.\n\n$N = 2304$.\n$2304 - 2025 = 279$.\n\nFinal check of the arithmetic.\n$2304 - 2025$:\n$2304 - 2000 = 304$\n$304 - 25 = 279$.\nCorrect.\n\nFinal answer: 279",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 9384,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 279",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_perm_div22_p5",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460091,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 18,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 1745",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 18,
+          "detector": "final_regex",
+          "span_text": "Final answer: 1745",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 258,
+          "detector": "post_error_window",
+          "span_text": "\n\nTo find the number of eight-digit integers formed by the digits $1, 2, 3, 4, 5, 6, 7, 8$ exactly once that are divisible by 22, we must satisfy the divisibility rules for both 2 and 11.\n\n1.  **Divisibility by 2**: The number must end in a",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1929,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 2169,
+          "detector": "post_repair_window",
+          "span_text": "Wait, let's systematically count. Total subsets of size 4 from 8 is $\\binom{8}{4} = 70$. The mean sum is $4 \\times 4.5 = 18$. Due to symmetry, the number of subsets summing to 18 is the central coefficient.\n    Let's verify the count.\n    Possi",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 8489,
+          "detector": "completion_end",
+          "span_text": " = 24$ ways.\n    Total per set = $2 \\times 6 \\times 24 = 288$.\n    Total $N = 8 \\times 288 = 2304$.\n    \n    Difference: $2304 - 2025 = 279$.\n\nFinal answer: 279",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 8489,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 279",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_perm_div22_p5",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460096,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 17,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 160",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 17,
+          "detector": "final_regex",
+          "span_text": "Final answer: 160",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 257,
+          "detector": "post_error_window",
+          "span_text": "\n\nThe area $A$ of a tangential quadrilateral (one with an inscribed circle) is given by $A = rs$, where $r$ is the inradius and $s$ is the semiperimeter. Given $A = 72$ and $r = 3$, we have $72 = 3s$, so the semiperimeter $s = 24$. The peri",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1830,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 2070,
+          "detector": "post_repair_window",
+          "span_text": "Wait, let me re-read the problem statement carefully.\n\"The radius of the circle is 3, and the area of the trapezoid is 72.\"\nArea $A = r \\times s_{semi} \\implies 72 = 3 \\times s_{semi} \\implies s_{semi} = 24$.\nPerimeter $P = 48$.\nArea $A = \\frac",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 5128,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 504",
+          "stage": "last_final_answer_end"
+        },
+        {
+          "char_end": 6399,
+          "detector": "completion_end",
+          "span_text": "e need $r^2+s^2$. Using the identity $r^2+s^2 = \\frac{(r+s)^2 + (r-s)^2}{2}$:\n    $r^2+s^2 = \\frac{24^2 + 432}{2} = \\frac{576 + 432}{2} = \\frac{1008}{2} = 504$.",
+          "stage": "completion_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_trapezoid_incircle_p6",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460097,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "qwen35_27b",
+      "points": [
+        {
+          "char_end": 17,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 200",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 17,
+          "detector": "final_regex",
+          "span_text": "Final answer: 200",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 257,
+          "detector": "post_error_window",
+          "span_text": "\nLet the lengths of the parallel sides (bases) of the isosceles trapezoid be $r$ and $s$, with $r \\neq s$. Let the height of the trapezoid be $h$ and the radius of the inscribed circle be $R = 3$.\nSince the circle is inscribed in the trapez",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1952,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 2192,
+          "detector": "post_repair_window",
+          "span_text": "Wait, let me re-evaluate the calculation.\n$r+s = 24$.\n$l = 12$.\n$h = 6$.\n$x^2 = l^2 - h^2 = 144 - 36 = 108$.\n$x = \\frac{s-r}{2} \\implies (s-r)^2 = 4x^2 = 4(108) = 432$.\n$r^2 + s^2 = (r+s)^2 - 2rs$. Alternatively $r^2+s^2 = \\frac{(r+s)^2 + (r-s)",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 6922,
+          "detector": "completion_end",
+          "span_text": "s^2$. Using the identity $r^2+s^2 = \\frac{(r+s)^2 + (s-r)^2}{2}$, we get $\\frac{24^2 + 432}{2} = \\frac{576 + 432}{2} = \\frac{1008}{2} = 504$.\n\nFinal answer: 504",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 6922,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 504",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_trapezoid_incircle_p6",
+      "trace_class": "repaired_acpi"
+    }
+  ],
+  "selected_rows": 24
+}

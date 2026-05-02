@@ -1,0 +1,43 @@
+{
+  "by_family": {
+    "aime25_mixed_hard": 6,
+    "algebra_sign_factor": 2,
+    "causal_counterfactual": 2,
+    "code_boundary": 5,
+    "counting_invariant": 2,
+    "geometry_constraints": 5,
+    "graph_definition": 3,
+    "graph_path_constraints": 2,
+    "long_table_aggregation": 3,
+    "multilingual_semantic": 5,
+    "optimization_constraints": 2,
+    "probability_conditioning": 2,
+    "proof_validity": 5,
+    "recurrence_dp": 2,
+    "set_venn": 2,
+    "set_venn_counting": 3,
+    "string_regex_parsing": 2,
+    "table_aggregation": 2,
+    "temporal_order": 2,
+    "unit_percentage": 2
+  },
+  "by_task_source": {
+    "configs/e26_aime_hard_tasks.yaml": 6,
+    "data/processed/e153_difficult_scenario_tasks_20260501.jsonl": 32,
+    "data/processed/e164_hardened_multi_family_tasks_20260501.jsonl": 21
+  },
+  "created_at": "2026-05-02T10:35:03",
+  "dropped_duplicate_problem_answer_rows": 0,
+  "experiment": "E171_main_claim_task_bank_summary",
+  "leakage_policy": {
+    "gold_answer_in_prompt": false,
+    "manual_label_in_prompt": false,
+    "prompt_fields_allowed": [
+      "problem"
+    ],
+    "trap_note_in_prompt": false
+  },
+  "purpose_zh": "E171 只用原题做 non-thinking baseline，筛出模型自己做错的题，再在模型自己的错误 trace 上读取 hidden monitor。",
+  "task_bank": "data/processed/e171_main_claim_task_bank_20260502.jsonl",
+  "tasks": 59
+}

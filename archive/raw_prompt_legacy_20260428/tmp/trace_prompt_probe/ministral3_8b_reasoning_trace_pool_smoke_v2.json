@@ -1,0 +1,95 @@
+{
+  "args": {
+    "chat_template": "never",
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "k": 1,
+    "max_new_tokens": 120,
+    "max_tasks": 1,
+    "model_key": "ministral3_8b_reasoning",
+    "out_dir": "tmp/trace_prompt_probe",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "temperature": 0.7,
+    "top_p": 0.95
+  },
+  "model_spec": {
+    "class": "reasoning",
+    "family": "mistral",
+    "loader_risk": "conditional_generation_or_multimodal; may require AutoModelForImageTextToText/AutoProcessor rather than AutoModelForCausalLM",
+    "notes": "non-Qwen reasoning control",
+    "path": "/home/Awei/LLM/Model/base/ministral3_8b_reasoning",
+    "priority": "P0",
+    "remote_repo": "mistralai/Ministral-3-8B-Reasoning-2512",
+    "status": "local_downloaded"
+  },
+  "rows": [
+    {
+      "completion": "ĠToĠsolveĠforĠx,ĠweĠfirstĠneedĠtoĠisolateĠtheĠtermĠwithĠxĠonĠoneĠsideĠofĠtheĠequation.ĠWeĠcanĠdoĠthisĠbyĠsubtractingĠ3ĠfromĠbothĠsidesĠofĠtheĠequationĠtoĠeliminateĠtheĠconstantĠtermĠonĠtheĠleftĠside.Ċ2xĠ+Ġ3Ġ-Ġ3Ġ=Ġ11Ġ-Ġ3Ċ2xĠ=Ġ8ĊNowĠthatĠweĠhaveĠ2xĠ=Ġ8,ĠweĠcanĠsolveĠforĠxĠbyĠdividingĠbothĠsidesĠbyĠ2.Ċ2xĠ/Ġ2Ġ=Ġ8Ġ/Ġ2ĊxĠ=Ġ4ĊFinalĠanswer:Ġ4",
+      "created_at": "2026-04-27T02:23:49",
+      "gold_answer": "4",
+      "input_lang": "en",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: Solve 2x + 3 = 11.\nReasoning:",
+      "raw_completion": "ĠToĠsolveĠforĠx,ĠweĠfirstĠneedĠtoĠisolateĠtheĠtermĠwithĠxĠonĠoneĠsideĠofĠtheĠequation.ĠWeĠcanĠdoĠthisĠbyĠsubtractingĠ3ĠfromĠbothĠsidesĠofĠtheĠequationĠtoĠeliminateĠtheĠconstantĠtermĠonĠtheĠleftĠside.Ċ2xĠ+Ġ3Ġ-Ġ3Ġ=Ġ11Ġ-Ġ3Ċ2xĠ=Ġ8ĊNowĠthatĠweĠhaveĠ2xĠ=Ġ8,ĠweĠcanĠsolveĠforĠxĠbyĠdividingĠbothĠsidesĠbyĠ2.Ċ2xĠ/Ġ2Ġ=Ġ8Ġ/Ġ2ĊxĠ=Ġ4ĊFinalĠanswer:Ġ4",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "lin_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "é¦ĸåħĪï¼ĮæĪĳéľĢè¦ģå°Ĩæĸ¹ç¨ĭä¸ŃçļĦåıĺéĩıxåįķçĭ¬çķĻåľ¨çŃīå¼ıçļĦä¸Ģè¾¹ãĢĤä¸ºäºĨåģļåĪ°è¿Ļä¸ĢçĤ¹ï¼ĮæĪĳéľĢè¦ģæ¶ĪéĻ¤å¸¸æķ°é¡¹3ãĢĤæĪĳåı¯ä»¥éĢļè¿ĩä¸¤è¾¹åĲĮæĹ¶åĩıåİ»3æĿ¥å®ŀçİ°è¿Ļä¸ĢçĤ¹ãĢĤè¿Ļæł·ï¼Įæĸ¹ç¨ĭåıĺä¸º2xĠ=Ġ8ãĢĤæİ¥ä¸ĭæĿ¥ï¼Įä¸ºäºĨè§£åĩºxçļĦåĢ¼ï¼ĮæĪĳéľĢè¦ģå°ĨxçļĦç³»æķ°2åİ»æİīãĢĤè¿Ļåı¯ä»¥éĢļè¿ĩä¸¤è¾¹åĲĮæĹ¶éĻ¤ä»¥2æĿ¥å®ŀçİ°ãĢĤè¿Ļæł·ï¼ĮxĠ=Ġ4ãĢĤåĽłæŃ¤ï¼ĮxçļĦåĢ¼ä¸º4ãĢĤĊĊFinalĠanswer:Ġ4",
+      "created_at": "2026-04-27T02:23:51",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：求解 2x + 3 = 11。\n推理：",
+      "raw_completion": "é¦ĸåħĪï¼ĮæĪĳéľĢè¦ģå°Ĩæĸ¹ç¨ĭä¸ŃçļĦåıĺéĩıxåįķçĭ¬çķĻåľ¨çŃīå¼ıçļĦä¸Ģè¾¹ãĢĤä¸ºäºĨåģļåĪ°è¿Ļä¸ĢçĤ¹ï¼ĮæĪĳéľĢè¦ģæ¶ĪéĻ¤å¸¸æķ°é¡¹3ãĢĤæĪĳåı¯ä»¥éĢļè¿ĩä¸¤è¾¹åĲĮæĹ¶åĩıåİ»3æĿ¥å®ŀçİ°è¿Ļä¸ĢçĤ¹ãĢĤè¿Ļæł·ï¼Įæĸ¹ç¨ĭåıĺä¸º2xĠ=Ġ8ãĢĤæİ¥ä¸ĭæĿ¥ï¼Įä¸ºäºĨè§£åĩºxçļĦåĢ¼ï¼ĮæĪĳéľĢè¦ģå°ĨxçļĦç³»æķ°2åİ»æİīãĢĤè¿Ļåı¯ä»¥éĢļè¿ĩä¸¤è¾¹åĲĮæĹ¶éĻ¤ä»¥2æĿ¥å®ŀçİ°ãĢĤè¿Ļæł·ï¼ĮxĠ=Ġ4ãĢĤåĽłæŃ¤ï¼ĮxçļĦåĢ¼ä¸º4ãĢĤĊĊFinalĠanswer:Ġ4",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "lin_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "ĠToĠsolveĠtheĠequationĠ2xĠ+Ġ3Ġ=Ġ11,ĠIĠfirstĠsubtractĠ3ĠfromĠbothĠsidesĠtoĠisolateĠtheĠtermĠwithĠx.ĠThisĠgivesĠ2xĠ=Ġ8.ĠThen,ĠIĠdivideĠbothĠsidesĠbyĠ2ĠtoĠsolveĠforĠx,ĠwhichĠresultsĠinĠxĠ=Ġ4.ĊĊFinalĠanswer:Ġ4",
+      "created_at": "2026-04-27T02:23:52",
+      "gold_answer": "4",
+      "input_lang": "zh",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "Reason step by step in English only; do not restate the problem; end with one line `Final answer: <answer>` and then stop.\nProblem: 求解 2x + 3 = 11。\nReasoning:",
+      "raw_completion": "ĠToĠsolveĠtheĠequationĠ2xĠ+Ġ3Ġ=Ġ11,ĠIĠfirstĠsubtractĠ3ĠfromĠbothĠsidesĠtoĠisolateĠtheĠtermĠwithĠx.ĠThisĠgivesĠ2xĠ=Ġ8.ĠThen,ĠIĠdivideĠbothĠsidesĠbyĠ2ĠtoĠsolveĠforĠx,ĠwhichĠresultsĠinĠxĠ=Ġ4.ĊĊFinalĠanswer:Ġ4",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "lin_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    },
+    {
+      "completion": "é¦ĸåħĪï¼ĮæĪĳéľĢè¦ģè§£è¿Ļä¸ªæĸ¹ç¨ĭ2xĠ+Ġ3Ġ=Ġ11ãĢĤä¸ºäºĨæī¾åĪ°xçļĦåĢ¼ï¼ĮæĪĳéľĢè¦ģå°ĨxçļĦç³»æķ°åįķçĭ¬çķĻåľ¨å·¦è¾¹ï¼Įåħ¶ä»ĸå¸¸æķ°ç§»åĪ°åı³è¾¹ãĢĤĊĊé¦ĸåħĪï¼ĮæĪĳéľĢè¦ģåĩıåİ»3æĿ¥æ¶ĪéĻ¤æĸ¹ç¨ĭå·¦è¾¹çļĦå¸¸æķ°é¡¹3ãĢĤåĽłæŃ¤ï¼ĮæĪĳå°Ĩä¸¤è¾¹åĲĮæĹ¶åĩıåİ»3ï¼ļĊĊ2xĠ+Ġ3Ġ-Ġ3Ġ=Ġ11Ġ-Ġ3ĊĊç®ĢåĮĸåĲİå¾ĹåĪ°ï¼ļĊĊ2xĠ=Ġ8ĊĊæİ¥ä¸ĭæĿ¥ï¼ĮæĪĳéľĢè¦ģè§£åĩºxçļĦåĢ¼ï¼Įè¿ĻæĦıåĳ³çĿĢ",
+      "created_at": "2026-04-27T02:23:54",
+      "gold_answer": "4",
+      "input_lang": "en",
+      "model_key": "ministral3_8b_reasoning",
+      "prompt": "请只用中文逐步推理；不要复述题目；最后单独写一行 `Final answer: <答案>`，写完立即停止。\n题目：Solve 2x + 3 = 11.\n推理：",
+      "raw_completion": "é¦ĸåħĪï¼ĮæĪĳéľĢè¦ģè§£è¿Ļä¸ªæĸ¹ç¨ĭ2xĠ+Ġ3Ġ=Ġ11ãĢĤä¸ºäºĨæī¾åĪ°xçļĦåĢ¼ï¼ĮæĪĳéľĢè¦ģå°ĨxçļĦç³»æķ°åįķçĭ¬çķĻåľ¨å·¦è¾¹ï¼Įåħ¶ä»ĸå¸¸æķ°ç§»åĪ°åı³è¾¹ãĢĤĊĊé¦ĸåħĪï¼ĮæĪĳéľĢè¦ģåĩıåİ»3æĿ¥æ¶ĪéĻ¤æĸ¹ç¨ĭå·¦è¾¹çļĦå¸¸æķ°é¡¹3ãĢĤåĽłæŃ¤ï¼ĮæĪĳå°Ĩä¸¤è¾¹åĲĮæĹ¶åĩıåİ»3ï¼ļĊĊ2xĠ+Ġ3Ġ-Ġ3Ġ=Ġ11Ġ-Ġ3ĊĊç®ĢåĮĸåĲİå¾ĹåĪ°ï¼ļĊĊ2xĠ=Ġ8ĊĊæİ¥ä¸ĭæĿ¥ï¼ĮæĪĳéľĢè¦ģè§£åĩºxçļĦåĢ¼ï¼Įè¿ĻæĦıåĳ³çĿĢ",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "task_id": "lin_001",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": false
+    }
+  ]
+}

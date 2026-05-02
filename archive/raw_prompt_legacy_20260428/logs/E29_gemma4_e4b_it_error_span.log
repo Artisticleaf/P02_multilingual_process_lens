@@ -1,0 +1,105 @@
+[2026-04-27T18:51:33] loading model=gemma4_e4b_it device=cuda rows=24
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/2076 [00:00<?, ?it/s]Loading weights:  78%|███████▊  | 1625/2076 [00:00<00:00, 16247.07it/s]Loading weights: 100%|██████████| 2076/2076 [00:00<00:00, 17092.49it/s]
+[transformers] The following generation flags are not valid and may be ignored: ['top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+idx=600048 mode=locate_only prompt=en proc=True span_ok=True judge=None out=None
+idx=600048 mode=locate_only prompt=zh proc=True span_ok=True judge=None out=无 ```
+idx=600048 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60
+idx=600048 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60
+idx=600049 mode=locate_only prompt=en proc=False span_ok=False judge=None out=None
+idx=600049 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=无
+idx=600049 mode=locate_then_judge prompt=en proc=False span_ok=False judge=None out=60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60
+idx=600049 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60
+idx=600070 mode=locate_only prompt=en proc=False span_ok=False judge=None out=None
+idx=600070 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=\$100 题目：一个80美元的价格先上涨25%，再打八折，最终价格是多少？ 推理过程：Start with the initial price: \$80. Calculate 
+idx=600070 mode=locate_then_judge prompt=en proc=False span_ok=True judge=None out=80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 
+idx=600070 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=None out=80 Process: 80 Process_final: 80 Process_final_final: 80 Process_final_final_final: 80 Pro
+idx=600071 mode=locate_only prompt=en proc=True span_ok=True judge=None out=None
+idx=600071 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=在应用折扣时，应使用原始价格（即100美元）乘以折扣因子（0.8），得到最终价格80美元。  请问问问问问问问问问：  第一处错误：在应用折扣时，应使用原始价格（即100美元）乘以
+idx=600071 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=80 Span: 100 Span: 20 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span:
+idx=600071 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=$ Span: $ Span: $ Span: $ Span: $ Span: $ Span: $ Span: $ Span: $ Span: $ Span: $ Span: $ 
+idx=600150 mode=locate_only prompt=en proc=False span_ok=False judge=None out=None
+idx=600150 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=The jacket is being sold at a 75% discount of its original price.   推理过程：The jacket is bei
+idx=600150 mode=locate_then_judge prompt=en proc=False span_ok=True judge=None out=$60 Reasoning trace: 1. The jacket is being sold at a 75% discount of its original price. 
+idx=600150 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=$60 Span: $60 Span: $60 Span: $60 Span: $60 Span: $60 Span: $60 Span: $60 Span: $60 Span: 
+idx=600151 mode=locate_only prompt=en proc=True span_ok=True judge=None out=None.
+idx=600151 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=The original price of the jacket is 80 dollars. It is sold at 75% of the original price. T
+idx=600151 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=60 Span: 60 Span: 60 Span: 60 Span: 60 Span: 60 Span: 60 Span: 60 Span: 60 Span: 60 Span: 
+idx=600151 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=60 题目：一件80美元的夹克按原价75%出售 推理过程：The original price of the jacket is 80 dollars. It is sold at
+idx=280001 mode=locate_only prompt=en proc=True span_ok=True judge=None out=None
+idx=280001 mode=locate_only prompt=zh proc=True span_ok=True judge=None out=无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 
+idx=280001 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60
+idx=280001 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60
+idx=280002 mode=locate_only prompt=en proc=False span_ok=False judge=None out=None
+idx=280002 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 
+idx=280002 mode=locate_then_judge prompt=en proc=False span_ok=False judge=None out=60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60
+idx=280002 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60
+idx=280003 mode=locate_only prompt=en proc=True span_ok=True judge=None out=None. First error: None. First error: None. First error: None. First error: None. First er
+idx=280003 mode=locate_only prompt=zh proc=True span_ok=True judge=None out=无。 最终错误：60美元。 ```
+idx=280003 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=60美元。 Span: 60美元。 Span: 60美元。 Span: 60美元。 Span: 60美元。 Span: 60美元。 Span: 60美元。 Span: 60美元。 
+idx=280003 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=60 美元。 Span: 60 美元。 Span: 60 美元。 Span: 60 美元。 Span: 60 美元。 Span: 60 美元。 Span: 60 美元。 Span:
+idx=280004 mode=locate_only prompt=en proc=False span_ok=False judge=None out=None.
+idx=280004 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=无。
+idx=280004 mode=locate_then_judge prompt=en proc=False span_ok=False judge=None out=60美元。 Span: 60美元。 Span: 60美元。 Span: 60美元。 Span: 60美元。 Span: 60美元。 Span: 60美元。 Span: 60美元。 
+idx=280004 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=60 Span: 60 Span: 60 Span: 60 Span: 60 Span: 60 Span: 60 Span: 60 Span: 60 Span: 60 Span: 
+idx=280005 mode=locate_only prompt=en proc=True span_ok=False judge=None out=20美元 Reason: 20美元是折扣金额，不是最终售价。
+idx=280005 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=20美元 第一处错误：20美元 第一处错误：20美元 第一处错误：20美元 第一处错误：20美元 第一处错误：20美元 第一处错误：20美元 第一处错误：20美元 第一处错误：20
+idx=280005 mode=locate_then_judge prompt=en proc=True span_ok=False judge=True out=60美元 Reasoning trace: 售价等于原价减去折扣金额：80 - 20 = 60 美元。 或者，用等价说法，优惠25%就是支付75%的价格：售价 = 80美元 × 0
+idx=280005 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=20美元 Span: 60美元 Span: 80美元 Span: 75% Span: 25% Span: 60美元 Span: 20美元 Span: 80美元 Span: 75% 
+idx=280006 mode=locate_only prompt=en proc=False span_ok=False judge=None out=20美元 Reason: 折扣金额计算为 80 × 25% = 20 美元。
+idx=280006 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=20美元 第一处错误：20美元 第一处错误：20美元 第一处错误：20美元 第一处错误：20美元 第一处错误：20美元 第一处错误：20美元 第一处错误：20美元 第一处错误：20
+idx=280006 mode=locate_then_judge prompt=en proc=False span_ok=False judge=None out=60美元 Reasoning trace: 60美元 Reasoning trace: 60美元 Reasoning trace: 60美元 Reasoning trace: 60
+idx=280006 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60美元 Span: 60
+idx=280007 mode=locate_only prompt=en proc=True span_ok=False judge=None out=The calculation for the 25% increase is incorrect. The correct calculation is $80 \times 1
+idx=280007 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=$100 × 0.8 = $80. 推理过程：$100 \times 0.8 = 80$. 推理过程：$100 \times 0.8 = 80$. 推理过程：$100 \times
+idx=280007 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=80 Span: 100 Span: 20 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span:
+idx=280007 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 
+idx=280008 mode=locate_only prompt=en proc=False span_ok=True judge=None out=The calculation for the 25% increase is incorrect. The correct calculation is $80 \times 1
+idx=280008 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=$100 × 0.8 = $80. 题目：一个80美元的价格先上涨25%，再打八折，最终价格是多少？ 推理过程：Start with the initial price: $80.
+idx=280008 mode=locate_then_judge prompt=en proc=False span_ok=True judge=None out=80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 
+idx=280008 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=None out=80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 80 Span: 
+idx=280009 mode=locate_only prompt=en proc=True span_ok=False judge=None out=The calculation for the 25% increase is incorrect. $80 × 0.25 = $20, so the new price is $
+idx=280009 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=$100 × 0.8 = $80. 推理过程：$100 × 0.8 = $80. 第一处错误：$100 × 0.8 = $80. 第一处错误：$100 × 0.8 = $80. 第
+idx=280009 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=$80. Reasoning trace: The final price is $80. Reasoning trace: The final price is $80. Rea
+idx=280009 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=$80. Span: $80. Span: $80. Span: $80. Span: $80. Span: $80. Span: $80. Span: $80. Span: $8
+idx=280010 mode=locate_only prompt=en proc=False span_ok=True judge=None out=The calculation for the 25% increase is incorrect. $80 × 0.25 = $20, not $100. Second erro
+idx=280010 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=$100 × 0.8 = $80. 推理过程：$100 × 0.8 = $80. 第一处错误：$100 × 0.8 = $80. 第一处错误：$100 × 0.8 = $80. 第
+idx=280010 mode=locate_then_judge prompt=en proc=False span_ok=True judge=None out=$80. Span: $100. Span: $20. Span: $80. Span: $100. Span: $20. Span: $80. Span: $100. Span:
+idx=280010 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=None out=$80. Span: $80. Span: $80. Span: $80. Span: $80. Span: $80. Span: $80. Span: $80. Span: $8
+idx=280011 mode=locate_only prompt=en proc=True span_ok=False judge=None out=The calculation for the 25% increase is incorrect. The correct calculation is $80 + (80 \t
+idx=280011 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=$20 题目：一个80美元的价格先上涨25%，再打八折，最终价格是多少？ 推理过程：Start with the initial price: $80. Calculate the
+idx=280011 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=$80 Reasoning trace: Start with the initial price: $80. Calculate the price after a 25% in
+idx=280011 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 
+idx=280012 mode=locate_only prompt=en proc=False span_ok=True judge=None out=$80 × 0.25 = $20, so the new price is $100. Reasoning trace: Start with the initial price:
+idx=280012 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=$20 第二处错误：$100 第三处错误：$80 第一处错误：$20 第二处错误：$100 第三处错误：$80 第一处错误：$20 第二处错误：$100 第三处错误：$80 第一处
+idx=280012 mode=locate_then_judge prompt=en proc=False span_ok=True judge=None out=$80 Reasoning trace: Start with the initial price: $80. Calculate the price after a 25% in
+idx=280012 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 
+idx=280013 mode=locate_only prompt=en proc=True span_ok=True judge=None out=None
+idx=280013 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=$60 推理过程：$60 推理过程：$60 推理过程：$60 推理过程：$60 推理过程：$60 推理过程：$60 推理过程：$60 推理过程：$60 推理过程：$60 推理过程：
+idx=280013 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=$60 Reasoning trace: 1. The jacket is being sold for 75% of its original price. 2. To find
+idx=280013 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=$60 Span: $60 Span: $60 Span: $60 Span: $60 Span: $60 Span: $60 Span: $60 Span: $60 Span: 
+idx=280014 mode=locate_only prompt=en proc=False span_ok=False judge=None out=None
+idx=280014 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=The jacket is being sold at a 75% discount of its original price. 推理过程：The jacket is being
+idx=280014 mode=locate_then_judge prompt=en proc=False span_ok=True judge=None out=$60 Reasoning trace: 1. The jacket is being sold at a 75% discount of its original price. 
+idx=280014 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=$60 Span: $60 Span: $60 Span: $60 Span: $60 Span: $60 Span: $60 Span: $60 Span: $60 Span: 
+idx=280015 mode=locate_only prompt=en proc=True span_ok=True judge=None out=None.
+idx=280015 mode=locate_only prompt=zh proc=True span_ok=True judge=None out=无。
+idx=280015 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=$60 Reasoning trace: 1. The jacket is being sold for 75% of its original price. 2. To find
+idx=280015 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=$60 Span: $60 Span: $60 Span: $60 Span: $60 Span: $60 Span: $60 Span: $60 Span: $60 Span: 
+idx=280016 mode=locate_only prompt=en proc=False span_ok=True judge=None out=$60. Reasoning trace: 1. The jacket is being sold at a 75% discount of its original price.
+idx=280016 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=The jacket is being sold at a 75% discount of its original price. 推理过程：The jacket is being
+idx=280016 mode=locate_then_judge prompt=en proc=False span_ok=True judge=None out=$60 Reasoning trace: 1. The jacket is being sold at a 75% discount of its original price. 
+idx=280016 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=True out=$60 题目：一件80美元的夹克按原价75%出售，售价是多少？ 推理过程：1. The jacket is being sold at a 75% discount of its 
+idx=280017 mode=locate_only prompt=en proc=True span_ok=False judge=None out=$20 Reason: The calculated sale price is $60, not $20.
+idx=280017 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=$20 推理过程：1. The jacket is being sold for 75% of its original price. 2. To find the sale pr
+idx=280017 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=$60 Reasoning trace: 1. The jacket is being sold for 75% of its original price. 2. To find
+idx=280017 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=$60 ```
+idx=280018 mode=locate_only prompt=en proc=False span_ok=False judge=None out=$20 Reason: The calculated sale price is $60, not $20.
+idx=280018 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=$20 推理过程：1. The jacket is being sold at a 75% discount of its original price. 2. To find t
+idx=280018 mode=locate_then_judge prompt=en proc=False span_ok=True judge=None out=$60 Reasoning trace: 1. The jacket is being sold at a 75% discount of its original price. 
+idx=280018 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=$60 Span: $20 Span: $60 Span: $20 Span: $60 Span: $20 Span: $60 Span: $20 Span: $60 Span: 
+[2026-04-27T18:54:52] wrote results/E29_error_span_extraction_verifier/gemma4_e4b_it_error_span_extraction_verifier.json; eval_rows=96
+SUMMARY mode=locate_only prompt=en span_acc=0.4583333333333333 invalid_hit=0.3333333333333333 judge_acc=None loc_but_accept=None
+SUMMARY mode=locate_only prompt=zh span_acc=0.5 invalid_hit=0.6666666666666666 judge_acc=None loc_but_accept=None
+SUMMARY mode=locate_then_judge prompt=en span_acc=0.3333333333333333 invalid_hit=0.6666666666666666 judge_acc=1.0 loc_but_accept=None
+SUMMARY mode=locate_then_judge prompt=zh span_acc=0.16666666666666666 invalid_hit=0.3333333333333333 judge_acc=0.0 loc_but_accept=1.0

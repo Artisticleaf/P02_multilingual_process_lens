@@ -1,0 +1,31 @@
+{
+  "by_family": {
+    "code_boundary": 4,
+    "complement_symmetry": 4,
+    "invariant_counting": 4,
+    "multilingual_semantic": 4,
+    "percentage_roundtrip": 4,
+    "sign_symmetry_algebra": 4,
+    "table_aggregation": 4,
+    "unit_roundtrip": 4
+  },
+  "by_route": {
+    "en": 8,
+    "mixed": 8,
+    "romanized_zh": 8,
+    "zh": 8
+  },
+  "expected_phase_a_generations_k1_core3_prompts4": 384,
+  "expected_phase_a_generations_k2_core3_prompts4": 768,
+  "failures": [],
+  "note_zh": "无 GPU smoke：检查任务数、家族/语言路径分布、prompt 元数据泄露设计。",
+  "passed": true,
+  "prompt_variants": [
+    "answer_first_no_gold",
+    "neutral",
+    "self_check_short",
+    "terse_solution"
+  ],
+  "rows": 32,
+  "task_bank": "data/processed/e147_unrepaired_acpi_induction_tasks_20260430.jsonl"
+}

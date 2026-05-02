@@ -1,0 +1,184 @@
+tasks:
+  # Ratio semantics: same numbers, different denominator relation.
+  - id: ratio_boys_girls_2_3
+    en: The ratio of boys to girls in a club is 2:3. If there are 30 students in the club, how many boys are there?
+    zh: 一个社团里男生和女生的人数比是2:3。如果社团共有30名学生，男生有多少名？
+    answer: "12"
+    family: ratio
+    lexical_form: boys_to_girls
+    trap: "boys:girls = 2:3 means boys are 2/(2+3) of total, not 2/3 of total."
+  - id: ratio_boys_total_2_3
+    en: Boys make up 2/3 of a club. If there are 30 students in the club, how many boys are there?
+    zh: 一个社团里男生占总人数的2/3。如果社团共有30名学生，男生有多少名？
+    answer: "20"
+    family: ratio
+    lexical_form: boys_over_total
+    trap: "boys are 2/3 of total, not boys:girls = 2:3."
+  - id: ratio_boys_girls_same_answer
+    en: The ratio of boys to girls in a club is 2:3. If there are 12 boys, how many students are in the club?
+    zh: 一个社团里男生和女生的人数比是2:3。如果有12名男生，社团共有多少名学生？
+    answer: "30"
+    family: ratio
+    lexical_form: boys_to_girls_total
+    trap: "2:3 is part-to-part; total has 5 parts."
+
+  # Inequality quantifiers and boundary words.
+  - id: inequality_more_than
+    en: List the integers greater than 3 and less than or equal to 7. How many are there?
+    zh: 列出大于3且小于等于7的整数。一共有多少个？
+    answer: "4"
+    family: inequality
+    lexical_form: strict_lower_inclusive_upper
+    trap: "greater than 3 excludes 3; less than or equal to 7 includes 7."
+  - id: inequality_at_least
+    en: List the integers at least 3 and less than 7. How many are there?
+    zh: 列出至少为3且小于7的整数。一共有多少个？
+    answer: "4"
+    family: inequality
+    lexical_form: inclusive_lower_strict_upper
+    trap: "at least 3 includes 3; less than 7 excludes 7."
+  - id: inequality_no_more_than
+    en: A number is an integer greater than 3 and no more than 7. How many possible values are there?
+    zh: 一个数是大于3且不超过7的整数。它有多少个可能取值？
+    answer: "4"
+    family: inequality
+    lexical_form: strict_lower_no_more_than
+    trap: "no more than 7 means <= 7, not < 7."
+
+  # Inclusive/exclusive intervals.
+  - id: interval_closed_open
+    en: How many integers are in the interval [2, 8)?
+    zh: 区间[2, 8)中有多少个整数？
+    answer: "6"
+    family: interval
+    lexical_form: closed_open
+    trap: "[2,8) includes 2 and excludes 8."
+  - id: interval_open_closed
+    en: How many integers are in the interval (2, 8]?
+    zh: 区间(2, 8]中有多少个整数？
+    answer: "6"
+    family: interval
+    lexical_form: open_closed
+    trap: "(2,8] excludes 2 and includes 8."
+  - id: interval_between_exclusive
+    en: How many integers are strictly between 2 and 8?
+    zh: 严格介于2和8之间的整数有多少个？
+    answer: "5"
+    family: interval
+    lexical_form: strictly_between
+    trap: "strictly between excludes both endpoints."
+
+  # Average vs total / per-person phrasing.
+  - id: average_each_extra
+    en: Four people each receive 3 more apples. By how much does the average number of apples per person increase?
+    zh: 4个人每人多得到3个苹果。每人的平均苹果数增加了多少？
+    answer: "3"
+    family: average_total
+    lexical_form: average_per_person
+    trap: "each person gets 3 more, so the average increases by 3, not total 12."
+  - id: total_each_extra
+    en: Four people each receive 3 more apples. By how much does the total number of apples increase?
+    zh: 4个人每人多得到3个苹果。苹果总数增加了多少？
+    answer: "12"
+    family: average_total
+    lexical_form: total_increase
+    trap: "total increase is 4*3, not average increase 3."
+  - id: average_total_to_average
+    en: The total score of 5 students increases by 20 points. By how much does the class average increase?
+    zh: 5名学生的总分增加了20分。班级平均分增加了多少？
+    answer: "4"
+    family: average_total
+    lexical_form: total_to_average
+    trap: "average increase is total increase divided by 5."
+
+  # Geometry relation words.
+  - id: geometry_diameter_area
+    en: A circle has diameter 10 cm. What is its area in terms of pi?
+    zh: 一个圆的直径是10厘米。它的面积是多少（用π表示）？
+    answer: "25pi"
+    family: geometry
+    lexical_form: diameter_to_radius
+    trap: "diameter 10 means radius 5, not radius 10."
+  - id: geometry_radius_area
+    en: A circle has radius 10 cm. What is its area in terms of pi?
+    zh: 一个圆的半径是10厘米。它的面积是多少（用π表示）？
+    answer: "100pi"
+    family: geometry
+    lexical_form: radius_direct
+    trap: "radius is given directly."
+  - id: geometry_reflection_line
+    en: Point A is at (2, 3). Reflect A across the y-axis. What are the coordinates of the image?
+    zh: 点A在(2, 3)。将A关于y轴对称，像点坐标是多少？
+    answer: "(-2,3)"
+    family: geometry
+    lexical_form: reflection_across_y_axis
+    trap: "reflection across the y-axis changes x sign only."
+
+  # Unit and notation words.
+  - id: unit_dozen_pairs
+    en: A store sells 3 dozen socks. How many pairs of socks is that?
+    zh: 一家商店卖出3打袜子。相当于多少双袜子？
+    answer: "18"
+    family: unit
+    lexical_form: dozen_items_to_pairs
+    trap: "3 dozen socks are 36 individual socks, i.e. 18 pairs."
+  - id: unit_pairs_socks
+    en: A store sells 18 pairs of socks. How many individual socks is that?
+    zh: 一家商店卖出18双袜子。相当于多少只袜子？
+    answer: "36"
+    family: unit
+    lexical_form: pairs_to_items
+    trap: "one pair has two socks."
+  - id: unit_million_yi
+    en: A value is 0.3 yi yuan, where 1 yi is 100 million. How many million yuan is it?
+    zh: 一个数额是0.3亿元，其中1亿元等于100个百万元。它等于多少个百万元？
+    answer: "30"
+    family: unit
+    lexical_form: yi_to_million
+    trap: "0.3 yi = 30 million, not 0.3 million."
+
+  # Combinatorics order/replacement words.
+  - id: comb_choose_unordered
+    en: From 5 students, choose 2 to form an unordered committee. How many committees are possible?
+    zh: 从5名学生中选2名组成不区分顺序的委员会。有多少种选法？
+    answer: "10"
+    family: combinatorics
+    lexical_form: unordered_choose
+    trap: "unordered committee uses combinations, not permutations."
+  - id: comb_assign_ordered
+    en: From 5 students, choose a president and a secretary. One student cannot hold both roles. How many assignments are possible?
+    zh: 从5名学生中选出一名主席和一名秘书，不能由同一人兼任。有多少种任命方式？
+    answer: "20"
+    family: combinatorics
+    lexical_form: ordered_roles
+    trap: "president/secretary are ordered roles."
+  - id: comb_with_replacement
+    en: A two-character code is made from the letters A, B, C, with repetition allowed. How many codes are possible?
+    zh: 用A、B、C三个字母组成两位代码，允许重复。有多少种代码？
+    answer: "9"
+    family: combinatorics
+    lexical_form: replacement_allowed
+    trap: "with repetition allowed gives 3*3."
+
+  # Algebra/calculus operator words.
+  - id: algebra_coefficient
+    en: In the expression 7x^3, what is the coefficient of x^3?
+    zh: 在表达式7x^3中，x^3的系数是多少？
+    answer: "7"
+    family: algebra_operator
+    lexical_form: coefficient
+    trap: "coefficient is 7, not exponent 3."
+  - id: algebra_exponent
+    en: In the expression 7x^3, what is the exponent of x?
+    zh: 在表达式7x^3中，x的指数是多少？
+    answer: "3"
+    family: algebra_operator
+    lexical_form: exponent
+    trap: "exponent is 3, not coefficient 7."
+  - id: calculus_derivative_at_point
+    en: For f(x)=x^2+1, what is f'(3)?
+    zh: 对于f(x)=x^2+1，f'(3)是多少？
+    answer: "6"
+    family: calculus_operator
+    lexical_form: derivative_at_point
+    trap: "f'(3) is derivative evaluated at 3, not f(3)."

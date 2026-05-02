@@ -1,0 +1,684 @@
+{
+  "by_model": {
+    "gemma4_26b_a4b_it": {
+      "baseline_formal": {
+        "exists": false,
+        "run_summary": {},
+        "source": "logs/e172_aime2026_baseline_gemma4_26b_a4b_it_checkpoint_20260502.jsonl",
+        "source_type": "missing",
+        "summary": {
+          "accuracy_on_observed_rows": null,
+          "completion_tokens": 0,
+          "correct": 0,
+          "cost_per_correct": null,
+          "coverage": 0.0,
+          "expected_tasks": 30,
+          "final_marker_found": 0,
+          "hit_max": 0,
+          "mean_tokens": null,
+          "median_tokens": null,
+          "n": 0,
+          "problem_indices": [],
+          "strict_complete_rows": 0
+        }
+      },
+      "baseline_smoke": {
+        "exists": false,
+        "run_summary": {},
+        "source": "logs/e172_aime2026_baseline_gemma4_26b_a4b_it_smoke_checkpoint_20260502.jsonl",
+        "source_type": "missing",
+        "summary": {
+          "accuracy_on_observed_rows": null,
+          "completion_tokens": 0,
+          "correct": 0,
+          "cost_per_correct": null,
+          "coverage": 0.0,
+          "expected_tasks": 1,
+          "final_marker_found": 0,
+          "hit_max": 0,
+          "mean_tokens": null,
+          "median_tokens": null,
+          "n": 0,
+          "problem_indices": [],
+          "strict_complete_rows": 0
+        }
+      },
+      "completion_state": {
+        "baseline_formal": "not_started",
+        "hidden_gate_formal": "not_started"
+      },
+      "hidden_gate_formal": {
+        "exists": false,
+        "run_summary": {},
+        "source": "logs/e172_aime2026_hidden_gate_gemma4_26b_a4b_it_checkpoint_20260502.jsonl",
+        "source_type": "missing",
+        "summary": {
+          "accuracy_on_observed_rows": null,
+          "completion_tokens": 0,
+          "correct": 0,
+          "cost_per_correct": null,
+          "coverage": 0.0,
+          "expected_tasks": 30,
+          "final_marker_found": 0,
+          "hit_max": 0,
+          "mean_tokens": null,
+          "median_tokens": null,
+          "n": 0,
+          "problem_indices": [],
+          "strict_complete_rows": 0
+        }
+      },
+      "hidden_gate_smoke": {
+        "exists": false,
+        "run_summary": {},
+        "source": "logs/e172_aime2026_hidden_gate_gemma4_26b_a4b_it_smoke_checkpoint_20260502.jsonl",
+        "source_type": "missing",
+        "summary": {
+          "accuracy_on_observed_rows": null,
+          "completion_tokens": 0,
+          "correct": 0,
+          "cost_per_correct": null,
+          "coverage": 0.0,
+          "expected_tasks": 1,
+          "final_marker_found": 0,
+          "hit_max": 0,
+          "mean_tokens": null,
+          "median_tokens": null,
+          "n": 0,
+          "problem_indices": [],
+          "strict_complete_rows": 0
+        }
+      },
+      "hidden_observations": [],
+      "model_key": "gemma4_26b_a4b_it",
+      "observation_file": {
+        "by_task": {},
+        "exists": false,
+        "max_risk": null,
+        "mean_risk": null,
+        "observations": 0,
+        "source": "logs/e172_aime2026_hidden_gate_gemma4_26b_a4b_it_observations_smoke_20260502.jsonl",
+        "source_type": "missing",
+        "trigger_observations": 0
+      },
+      "paired_formal_gate_vs_baseline": {
+        "accuracy_delta_gate_minus_baseline": null,
+        "baseline_wins": 0,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "gate_wins": 0,
+        "mean_token_delta_gate_minus_baseline": null,
+        "median_token_delta_gate_minus_baseline": null,
+        "pairs": 0
+      },
+      "paired_smoke_gate_vs_baseline": {
+        "accuracy_delta_gate_minus_baseline": null,
+        "baseline_wins": 0,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "gate_wins": 0,
+        "mean_token_delta_gate_minus_baseline": null,
+        "median_token_delta_gate_minus_baseline": null,
+        "pairs": 0
+      },
+      "participated": false,
+      "planned_by_launcher": true,
+      "steps": {
+        "baseline_formal": "not_started",
+        "baseline_smoke": "not_started",
+        "hidden_gate_formal": "not_started",
+        "hidden_gate_smoke": "not_started"
+      },
+      "task_rows": {
+        "baseline_formal": [],
+        "baseline_smoke": [],
+        "hidden_gate_formal": [],
+        "hidden_gate_smoke": []
+      }
+    },
+    "gemma4_31b_it": {
+      "baseline_formal": {
+        "exists": false,
+        "run_summary": {},
+        "source": "logs/e172_aime2026_baseline_gemma4_31b_it_checkpoint_20260502.jsonl",
+        "source_type": "missing",
+        "summary": {
+          "accuracy_on_observed_rows": null,
+          "completion_tokens": 0,
+          "correct": 0,
+          "cost_per_correct": null,
+          "coverage": 0.0,
+          "expected_tasks": 30,
+          "final_marker_found": 0,
+          "hit_max": 0,
+          "mean_tokens": null,
+          "median_tokens": null,
+          "n": 0,
+          "problem_indices": [],
+          "strict_complete_rows": 0
+        }
+      },
+      "baseline_smoke": {
+        "exists": false,
+        "run_summary": {},
+        "source": "logs/e172_aime2026_baseline_gemma4_31b_it_smoke_checkpoint_20260502.jsonl",
+        "source_type": "missing",
+        "summary": {
+          "accuracy_on_observed_rows": null,
+          "completion_tokens": 0,
+          "correct": 0,
+          "cost_per_correct": null,
+          "coverage": 0.0,
+          "expected_tasks": 1,
+          "final_marker_found": 0,
+          "hit_max": 0,
+          "mean_tokens": null,
+          "median_tokens": null,
+          "n": 0,
+          "problem_indices": [],
+          "strict_complete_rows": 0
+        }
+      },
+      "completion_state": {
+        "baseline_formal": "not_started",
+        "hidden_gate_formal": "not_started"
+      },
+      "hidden_gate_formal": {
+        "exists": false,
+        "run_summary": {},
+        "source": "logs/e172_aime2026_hidden_gate_gemma4_31b_it_checkpoint_20260502.jsonl",
+        "source_type": "missing",
+        "summary": {
+          "accuracy_on_observed_rows": null,
+          "completion_tokens": 0,
+          "correct": 0,
+          "cost_per_correct": null,
+          "coverage": 0.0,
+          "expected_tasks": 30,
+          "final_marker_found": 0,
+          "hit_max": 0,
+          "mean_tokens": null,
+          "median_tokens": null,
+          "n": 0,
+          "problem_indices": [],
+          "strict_complete_rows": 0
+        }
+      },
+      "hidden_gate_smoke": {
+        "exists": false,
+        "run_summary": {},
+        "source": "logs/e172_aime2026_hidden_gate_gemma4_31b_it_smoke_checkpoint_20260502.jsonl",
+        "source_type": "missing",
+        "summary": {
+          "accuracy_on_observed_rows": null,
+          "completion_tokens": 0,
+          "correct": 0,
+          "cost_per_correct": null,
+          "coverage": 0.0,
+          "expected_tasks": 1,
+          "final_marker_found": 0,
+          "hit_max": 0,
+          "mean_tokens": null,
+          "median_tokens": null,
+          "n": 0,
+          "problem_indices": [],
+          "strict_complete_rows": 0
+        }
+      },
+      "hidden_observations": [],
+      "model_key": "gemma4_31b_it",
+      "observation_file": {
+        "by_task": {},
+        "exists": false,
+        "max_risk": null,
+        "mean_risk": null,
+        "observations": 0,
+        "source": "logs/e172_aime2026_hidden_gate_gemma4_31b_it_observations_smoke_20260502.jsonl",
+        "source_type": "missing",
+        "trigger_observations": 0
+      },
+      "paired_formal_gate_vs_baseline": {
+        "accuracy_delta_gate_minus_baseline": null,
+        "baseline_wins": 0,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "gate_wins": 0,
+        "mean_token_delta_gate_minus_baseline": null,
+        "median_token_delta_gate_minus_baseline": null,
+        "pairs": 0
+      },
+      "paired_smoke_gate_vs_baseline": {
+        "accuracy_delta_gate_minus_baseline": null,
+        "baseline_wins": 0,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "gate_wins": 0,
+        "mean_token_delta_gate_minus_baseline": null,
+        "median_token_delta_gate_minus_baseline": null,
+        "pairs": 0
+      },
+      "participated": false,
+      "planned_by_launcher": true,
+      "steps": {
+        "baseline_formal": "not_started",
+        "baseline_smoke": "not_started",
+        "hidden_gate_formal": "not_started",
+        "hidden_gate_smoke": "not_started"
+      },
+      "task_rows": {
+        "baseline_formal": [],
+        "baseline_smoke": [],
+        "hidden_gate_formal": [],
+        "hidden_gate_smoke": []
+      }
+    },
+    "qwen35_27b": {
+      "baseline_formal": {
+        "exists": true,
+        "run_summary": {},
+        "source": "logs/e172_aime2026_baseline_qwen35_27b_checkpoint_20260502.jsonl",
+        "source_type": "checkpoint_jsonl",
+        "summary": {
+          "accuracy_on_observed_rows": 1.0,
+          "completion_tokens": 36181,
+          "correct": 10,
+          "cost_per_correct": 3618.1,
+          "coverage": 0.3333333333333333,
+          "expected_tasks": 30,
+          "final_marker_found": 10,
+          "hit_max": 0,
+          "mean_tokens": 3618.1,
+          "median_tokens": 2248.0,
+          "n": 10,
+          "problem_indices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "strict_complete_rows": 10
+        }
+      },
+      "baseline_smoke": {
+        "exists": true,
+        "run_summary": {
+          "accuracy": 1.0,
+          "by_task": {
+            "e172_aime2026_p01": {
+              "completion_tokens": 1539,
+              "final_marker_found": 1,
+              "hit_max": 0,
+              "manual_final_correct": 1,
+              "n": 1
+            }
+          },
+          "completion_tokens": 1539,
+          "final_marker_found": 1,
+          "hit_max": 0,
+          "jobs": 1,
+          "leakage_audit": {
+            "dataset_metadata_in_prompt_rows": 0,
+            "gold_answer_in_prompt_rows": 0,
+            "hidden_signal_in_prompt_rows": 0
+          },
+          "manual_final_correct": 1,
+          "resume": {
+            "generated_this_run_jobs": 1,
+            "resume_from_checkpoint": "",
+            "resume_stats": {},
+            "retained_complete_jobs": 0
+          },
+          "tasks": 1
+        },
+        "source": "results/E172_aime2026_hidden_gate/qwen35_27b_e172_aime2026_baseline_smoke_20260502.json",
+        "source_type": "result_json_smoke",
+        "summary": {
+          "accuracy_on_observed_rows": 1.0,
+          "completion_tokens": 1539,
+          "correct": 1,
+          "cost_per_correct": 1539.0,
+          "coverage": 1.0,
+          "expected_tasks": 1,
+          "final_marker_found": 1,
+          "hit_max": 0,
+          "mean_tokens": 1539,
+          "median_tokens": 1539,
+          "n": 1,
+          "problem_indices": [
+            1
+          ],
+          "strict_complete_rows": 1
+        }
+      },
+      "completion_state": {
+        "baseline_formal": "partial_checkpoint_without_done",
+        "hidden_gate_formal": "not_started"
+      },
+      "hidden_gate_formal": {
+        "exists": false,
+        "run_summary": {},
+        "source": "logs/e172_aime2026_hidden_gate_qwen35_27b_checkpoint_20260502.jsonl",
+        "source_type": "missing",
+        "summary": {
+          "accuracy_on_observed_rows": null,
+          "completion_tokens": 0,
+          "correct": 0,
+          "cost_per_correct": null,
+          "coverage": 0.0,
+          "expected_tasks": 30,
+          "final_marker_found": 0,
+          "hit_max": 0,
+          "mean_tokens": null,
+          "median_tokens": null,
+          "n": 0,
+          "problem_indices": [],
+          "strict_complete_rows": 0
+        }
+      },
+      "hidden_gate_smoke": {
+        "exists": true,
+        "run_summary": {
+          "accuracy": 0.0,
+          "by_gate_triggered": {
+            "True": {
+              "final_marker_found": 0,
+              "generated_tokens_total": 608,
+              "hit_max": 1,
+              "manual_final_correct": 0,
+              "n": 1
+            }
+          },
+          "by_task": {
+            "e172_aime2026_p01": {
+              "final_marker_found": 0,
+              "generated_tokens_total": 608,
+              "hit_max": 1,
+              "manual_final_correct": 0,
+              "n": 1
+            }
+          },
+          "final_marker_found": 0,
+          "generated_tokens_total": 608,
+          "hidden_gate_not_triggered": 0,
+          "hidden_gate_triggered": 1,
+          "hidden_observations": 1,
+          "hit_max": 1,
+          "jobs": 1,
+          "leakage_audit": {
+            "dataset_metadata_in_prompt_rows": 0,
+            "gold_answer_in_prompt_rows": 0
+          },
+          "manual_final_correct": 0,
+          "mean_hidden_top_risk": 1.8095734119415283
+        },
+        "source": "results/E172_aime2026_hidden_gate/qwen35_27b_e172_aime2026_hidden_gate_smoke_20260502.json",
+        "source_type": "result_json_smoke",
+        "summary": {
+          "accuracy_on_observed_rows": 0.0,
+          "completion_tokens": 608,
+          "correct": 0,
+          "cost_per_correct": null,
+          "coverage": 1.0,
+          "expected_tasks": 1,
+          "final_marker_found": 0,
+          "hit_max": 1,
+          "mean_tokens": 608,
+          "median_tokens": 608,
+          "n": 1,
+          "problem_indices": [
+            1
+          ],
+          "strict_complete_rows": 0
+        }
+      },
+      "hidden_observations": [
+        {
+          "hidden_component_key": "35:residual_hidden_state",
+          "hidden_risk": 1.8095734119415283,
+          "hidden_threshold": 1.4118950366973877,
+          "hidden_threshold_crossed": true,
+          "hidden_validity_score": -1.8095734119415283,
+          "next_token_entropy": 0.06319166719913483,
+          "observation_index": 0,
+          "pred_process_valid": true,
+          "problem_idx": 1,
+          "task_id": "e172_aime2026_p01",
+          "visible_span": "Let $t_P$ be",
+          "yes_minus_no": 0.6875
+        }
+      ],
+      "model_key": "qwen35_27b",
+      "observation_file": {
+        "by_task": {
+          "e172_aime2026_p01": {
+            "observations": 1,
+            "triggered": 1
+          }
+        },
+        "exists": true,
+        "max_risk": 1.8095734119415283,
+        "mean_risk": 1.8095734119415283,
+        "observations": 1,
+        "source": "logs/e172_aime2026_hidden_gate_qwen35_27b_observations_smoke_20260502.jsonl",
+        "source_type": "smoke",
+        "trigger_observations": 1
+      },
+      "paired_formal_gate_vs_baseline": {
+        "accuracy_delta_gate_minus_baseline": null,
+        "baseline_wins": 0,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "gate_wins": 0,
+        "mean_token_delta_gate_minus_baseline": null,
+        "median_token_delta_gate_minus_baseline": null,
+        "pairs": 0
+      },
+      "paired_smoke_gate_vs_baseline": {
+        "accuracy_delta_gate_minus_baseline": -1.0,
+        "baseline_wins": 1,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "gate_wins": 0,
+        "mean_token_delta_gate_minus_baseline": -931,
+        "median_token_delta_gate_minus_baseline": -931,
+        "pairs": 1
+      },
+      "participated": true,
+      "planned_by_launcher": true,
+      "steps": {
+        "baseline_formal": "started_without_done",
+        "baseline_smoke": "done",
+        "hidden_gate_formal": "not_started",
+        "hidden_gate_smoke": "done"
+      },
+      "task_rows": {
+        "baseline_formal": [
+          {
+            "extracted_final": "277",
+            "final_marker_found": true,
+            "gold_answer": "277",
+            "hit_max_new_tokens": false,
+            "manual_final_correct": true,
+            "problem_idx": 1,
+            "task_id": "e172_aime2026_p01",
+            "tokens": 1539
+          },
+          {
+            "extracted_final": "62",
+            "final_marker_found": true,
+            "gold_answer": "62",
+            "hit_max_new_tokens": false,
+            "manual_final_correct": true,
+            "problem_idx": 2,
+            "task_id": "e172_aime2026_p02",
+            "tokens": 2626
+          },
+          {
+            "extracted_final": "79",
+            "final_marker_found": true,
+            "gold_answer": "79",
+            "hit_max_new_tokens": false,
+            "manual_final_correct": true,
+            "problem_idx": 3,
+            "task_id": "e172_aime2026_p03",
+            "tokens": 1168
+          },
+          {
+            "extracted_final": "70",
+            "final_marker_found": true,
+            "gold_answer": "70",
+            "hit_max_new_tokens": false,
+            "manual_final_correct": true,
+            "problem_idx": 4,
+            "task_id": "e172_aime2026_p04",
+            "tokens": 4143
+          },
+          {
+            "extracted_final": "65",
+            "final_marker_found": true,
+            "gold_answer": "65",
+            "hit_max_new_tokens": false,
+            "manual_final_correct": true,
+            "problem_idx": 5,
+            "task_id": "e172_aime2026_p05",
+            "tokens": 1215
+          },
+          {
+            "extracted_final": "441",
+            "final_marker_found": true,
+            "gold_answer": "441",
+            "hit_max_new_tokens": false,
+            "manual_final_correct": true,
+            "problem_idx": 6,
+            "task_id": "e172_aime2026_p06",
+            "tokens": 1363
+          },
+          {
+            "extracted_final": "396",
+            "final_marker_found": true,
+            "gold_answer": "396",
+            "hit_max_new_tokens": false,
+            "manual_final_correct": true,
+            "problem_idx": 7,
+            "task_id": "e172_aime2026_p07",
+            "tokens": 2309
+          },
+          {
+            "extracted_final": "244",
+            "final_marker_found": true,
+            "gold_answer": "244",
+            "hit_max_new_tokens": false,
+            "manual_final_correct": true,
+            "problem_idx": 8,
+            "task_id": "e172_aime2026_p08",
+            "tokens": 2187
+          },
+          {
+            "extracted_final": "29",
+            "final_marker_found": true,
+            "gold_answer": "29",
+            "hit_max_new_tokens": false,
+            "manual_final_correct": true,
+            "problem_idx": 9,
+            "task_id": "e172_aime2026_p09",
+            "tokens": 11382
+          },
+          {
+            "extracted_final": "156",
+            "final_marker_found": true,
+            "gold_answer": "156",
+            "hit_max_new_tokens": false,
+            "manual_final_correct": true,
+            "problem_idx": 10,
+            "task_id": "e172_aime2026_p10",
+            "tokens": 8249
+          }
+        ],
+        "baseline_smoke": [
+          {
+            "extracted_final": "277",
+            "final_marker_found": true,
+            "gold_answer": "277",
+            "hit_max_new_tokens": false,
+            "manual_final_correct": true,
+            "problem_idx": 1,
+            "task_id": "e172_aime2026_p01",
+            "tokens": 1539
+          }
+        ],
+        "hidden_gate_formal": [],
+        "hidden_gate_smoke": [
+          {
+            "extracted_final": "5",
+            "final_marker_found": false,
+            "gold_answer": "277",
+            "hit_max_new_tokens": true,
+            "manual_final_correct": false,
+            "problem_idx": 1,
+            "task_id": "e172_aime2026_p01",
+            "tokens": 608
+          }
+        ]
+      }
+    }
+  },
+  "claim_boundary": [
+    "Formal run is incomplete: no model has a completed 30-task E172 hidden-gate result.",
+    "qwen35_27b has a partial formal baseline checkpoint covering problems 1-10 only.",
+    "qwen35_27b hidden-gate evidence is smoke-only and failed to repair the first problem.",
+    "gemma4_31b_it and gemma4_26b_a4b_it have no generated E172 rows landed yet."
+  ],
+  "created_at": "2026-05-02T20:41:40",
+  "expected_tasks": 30,
+  "experiment": "E172_aime2026_hidden_gate_stage_analysis",
+  "models": [
+    "qwen35_27b",
+    "gemma4_31b_it",
+    "gemma4_26b_a4b_it"
+  ],
+  "status_events": [
+    {
+      "status": "start",
+      "step": "e172_static_audit",
+      "ts": "2026-05-02T19:49:21+08:00"
+    },
+    {
+      "status": "done",
+      "step": "e172_static_audit",
+      "ts": "2026-05-02T19:49:29+08:00"
+    },
+    {
+      "status": "start",
+      "step": "e172_baseline_qwen35_27b_smoke",
+      "ts": "2026-05-02T19:49:29+08:00"
+    },
+    {
+      "status": "done",
+      "step": "e172_baseline_qwen35_27b_smoke",
+      "ts": "2026-05-02T19:51:08+08:00"
+    },
+    {
+      "status": "start",
+      "step": "e172_hidden_gate_qwen35_27b_smoke",
+      "ts": "2026-05-02T19:51:08+08:00"
+    },
+    {
+      "status": "done",
+      "step": "e172_hidden_gate_qwen35_27b_smoke",
+      "ts": "2026-05-02T19:51:55+08:00"
+    },
+    {
+      "status": "start",
+      "step": "e172_baseline_qwen35_27b",
+      "ts": "2026-05-02T19:51:55+08:00"
+    }
+  ],
+  "status_path": "logs/e172_aime2026_hidden_gate_status_20260502.jsonl",
+  "task_bank": "data/processed/e172_aime2026_matharena_task_bank_20260502.jsonl"
+}

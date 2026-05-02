@@ -1,0 +1,106 @@
+[2026-04-27T18:55:07] loading model=qwen35_27b device=auto rows=24
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:   0%|          | 1/851 [00:00<02:38,  5.36it/s]Loading weights:   3%|▎         | 25/851 [00:00<00:07, 104.81it/s]Loading weights:   5%|▌         | 46/851 [00:00<00:05, 137.79it/s]Loading weights:   8%|▊         | 67/851 [00:00<00:05, 153.89it/s]Loading weights:  11%|█         | 93/851 [00:00<00:04, 186.10it/s]Loading weights:  13%|█▎        | 113/851 [00:00<00:03, 187.77it/s]Loading weights:  16%|█▌        | 134/851 [00:00<00:03, 180.04it/s]Loading weights:  18%|█▊        | 154/851 [00:00<00:03, 179.51it/s]Loading weights:  22%|██▏       | 186/851 [00:01<00:03, 214.02it/s]Loading weights:  24%|██▍       | 208/851 [00:01<00:03, 193.45it/s]Loading weights:  28%|██▊       | 238/851 [00:01<00:02, 219.61it/s]Loading weights:  31%|███       | 261/851 [00:01<00:03, 192.56it/s]Loading weights:  34%|███▍      | 290/851 [00:01<00:02, 213.91it/s]Loading weights:  37%|███▋      | 313/851 [00:01<00:02, 189.28it/s]Loading weights:  40%|████      | 342/851 [00:01<00:02, 213.79it/s]Loading weights:  43%|████▎     | 365/851 [00:01<00:02, 193.43it/s]Loading weights:  46%|████▌     | 391/851 [00:02<00:02, 205.64it/s]Loading weights:  49%|████▉     | 417/851 [00:02<00:02, 213.14it/s]Loading weights:  52%|█████▏    | 440/851 [00:02<00:01, 209.53it/s]Loading weights:  55%|█████▍    | 465/851 [00:02<00:01, 218.87it/s]Loading weights:  57%|█████▋    | 488/851 [00:02<00:01, 212.79it/s]Loading weights:  60%|█████▉    | 510/851 [00:02<00:01, 207.97it/s]Loading weights:  63%|██████▎   | 532/851 [00:02<00:01, 196.60it/s]Loading weights:  65%|██████▌   | 557/851 [00:02<00:01, 208.97it/s]Loading weights:  68%|██████▊   | 579/851 [00:03<00:01, 188.63it/s]Loading weights:  72%|███████▏  | 609/851 [00:03<00:01, 214.92it/s]Loading weights:  74%|███████▍  | 632/851 [00:03<00:01, 190.23it/s]Loading weights:  78%|███████▊  | 663/851 [00:03<00:00, 215.16it/s]Loading weights:  81%|████████  | 686/851 [00:03<00:00, 197.73it/s]Loading weights:  84%|████████▍ | 715/851 [00:03<00:00, 218.43it/s]Loading weights:  87%|████████▋ | 738/851 [00:03<00:00, 192.42it/s]Loading weights:  90%|█████████ | 768/851 [00:03<00:00, 216.16it/s]Loading weights:  93%|█████████▎| 791/851 [00:04<00:00, 190.68it/s]Loading weights:  96%|█████████▋| 821/851 [00:04<00:00, 214.32it/s]Loading weights:  99%|█████████▉| 844/851 [00:04<00:00, 189.54it/s]Loading weights: 100%|██████████| 851/851 [00:04<00:00, 195.56it/s]
+[transformers] The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+idx=600048 mode=locate_only prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=600048 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=600048 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes
+idx=600048 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes
+idx=600049 mode=locate_only prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=600049 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=600049 mode=locate_then_judge prompt=en proc=False span_ok=False judge=True out=NONE Process-valid: Yes
+idx=600049 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=True out=NONE Process-valid: Yes
+idx=600070 mode=locate_only prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=600070 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=600070 mode=locate_then_judge prompt=en proc=False span_ok=False judge=True out=NONE Process-valid: Yes
+idx=600070 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=True out=NONE Process-valid: Yes
+idx=600071 mode=locate_only prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=600071 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=600071 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes
+idx=600071 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes
+idx=600150 mode=locate_only prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=600150 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=600150 mode=locate_then_judge prompt=en proc=False span_ok=True judge=False out="The jacket is being sold at a 75% discount of its original price." Process-valid: No  <th
+idx=600150 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=False out=The jacket is being sold at a 75%打了75折 Process-valid: No  <think>  </think>  Span: The jac
+idx=600151 mode=locate_only prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=600151 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=600151 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes  <think>  </think>  Span: NONE Process-valid: Yes
+idx=600151 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes  <think> Thinking Process:  1.  **Analyze the Request:**     *   R
+idx=280001 mode=locate_only prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=280001 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280001 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes
+idx=280001 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes  <think> Thinking Process:  1.  **Analyze the Request:**     *   R
+idx=280002 mode=locate_only prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=280002 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280002 mode=locate_then_judge prompt=en proc=False span_ok=False judge=True out=NONE Process-valid: Yes
+idx=280002 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=True out=NONE Process-valid: Yes  <think> Thinking Process:  1.  **Analyze the Request:**     *   R
+idx=280003 mode=locate_only prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=280003 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280003 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes
+idx=280003 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes  <think> Thinking Process:  1.  **Analyze the Request:**     *   R
+idx=280004 mode=locate_only prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=280004 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280004 mode=locate_then_judge prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=280004 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=True out=NONE Process-valid: Yes  <think>  </think>  Span: NONE Process-valid: Yes
+idx=280005 mode=locate_only prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=280005 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280005 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes  <think>  </think>  Span: "Final answer: 20美元" Process-valid: No
+idx=280005 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=False out=20美元 Process-valid: No  <think>  </think>  Span: Final answer: 20 美元 Process-valid: No
+idx=280006 mode=locate_only prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=280006 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280006 mode=locate_then_judge prompt=en proc=False span_ok=False judge=True out=NONE Process-valid: Yes  <think>  </think>  Span: "Final answer: 20美元" Process-valid: No
+idx=280006 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=False out=20美元 Process-valid: No  <think>  </think>  Span: Final answer: 20 美元 Process-valid: No
+idx=280007 mode=locate_only prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=280007 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280007 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes
+idx=280007 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=False out=$80 × 0.25 = $20, so the new price is $100. Process-valid: No  <think>  </think>  Span: $8
+idx=280008 mode=locate_only prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=280008 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280008 mode=locate_then_judge prompt=en proc=False span_ok=False judge=True out=NONE Process-valid: Yes
+idx=280008 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=False out=$80 × 0.25 = $20, so the new price is $100. Process-valid: No  <think>  </think>  Span: $8
+idx=280009 mode=locate_only prompt=en proc=True span_ok=False judge=None out="Calculate the price after a 25% increase: $80 × 0.25 = $20, so the new price is $100." Re
+idx=280009 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280009 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=280009 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280010 mode=locate_only prompt=en proc=False span_ok=True judge=None out="Calculate the price after a 25% increase: $80 × 0.25 = $20, so the new price is $100." Re
+idx=280010 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280010 mode=locate_then_judge prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=280010 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280011 mode=locate_only prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=280011 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280011 mode=locate_then_judge prompt=en proc=True span_ok=False judge=False out="Final answer: 20" Process-valid: No  <think>  </think>  Span: "Final answer: 20" Process-
+idx=280011 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280012 mode=locate_only prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=280012 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280012 mode=locate_then_judge prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=280012 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280013 mode=locate_only prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=280013 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280013 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes  <think>  </think>  Span: NONE Process-valid: Yes
+idx=280013 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes  <think>  </think>  Span: NONE Process-valid: Yes
+idx=280014 mode=locate_only prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=280014 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280014 mode=locate_then_judge prompt=en proc=False span_ok=True judge=False out=<think>  </think>  Span: "The jacket is being sold at a 75% discount of its original price
+idx=280014 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=False out=The jacket is being sold at a 按原价的75%出售 Process-valid: No  <think>  </think>  Span: The ja
+idx=280015 mode=locate_only prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=280015 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280015 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes  <think> Thinking Process:  1.  **Analyze the Request:**     *   T
+idx=280015 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes  <think>  </think>  Span: NONE Process-valid: Yes
+idx=280016 mode=locate_only prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=280016 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280016 mode=locate_then_judge prompt=en proc=False span_ok=True judge=False out=<think>  </think>  Span: "The jacket is being sold at a 75% discount of its original price
+idx=280016 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=False out=The jacket is being sold at a 75%打了75折 Process-valid: No  <think> Thinking Process:  1.  *
+idx=280017 mode=locate_only prompt=en proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=280017 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280017 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes  <think>  </think>  Span: NONE Process-valid: Yes
+idx=280017 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=False out=80 × 0.75 = 60 Process-valid: No  <think>  </think>  Span: Final answer: $20 Process-valid
+idx=280018 mode=locate_only prompt=en proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Task: Audit a mathematical
+idx=280018 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=<think> Thinking Process:  1.  **Analyze the Request:**     *   Role: Mathematical Reasoni
+idx=280018 mode=locate_then_judge prompt=en proc=False span_ok=True judge=False out="The jacket is being sold at a 75% discount of its original price." Process-valid: No  <th
+idx=280018 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=False out=The jacket is being sold at a 75% 75% discount of its original price. Process-valid: No  <
+[2026-04-27T19:00:05] wrote results/E29_error_span_extraction_verifier/qwen35_27b_error_span_extraction_verifier.json; eval_rows=96
+SUMMARY mode=locate_only prompt=en span_acc=0.041666666666666664 invalid_hit=0.08333333333333333 judge_acc=None loc_but_accept=None
+SUMMARY mode=locate_only prompt=zh span_acc=0.0 invalid_hit=0.0 judge_acc=None loc_but_accept=None
+SUMMARY mode=locate_then_judge prompt=en span_acc=0.5833333333333334 invalid_hit=0.3333333333333333 judge_acc=0.7 loc_but_accept=0.0
+SUMMARY mode=locate_then_judge prompt=zh span_acc=0.5 invalid_hit=0.4166666666666667 judge_acc=0.65 loc_but_accept=0.0

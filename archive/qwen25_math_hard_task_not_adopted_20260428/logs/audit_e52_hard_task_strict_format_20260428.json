@@ -1,0 +1,113 @@
+{
+  "checks": {
+    "boxed_normalization": {
+      "issues": [],
+      "ok": true
+    },
+    "leakage": {
+      "issues": [],
+      "ok": true
+    },
+    "manual_audit": {
+      "ambiguous_notational_collision_boxed_correct": 6,
+      "audited_boxed_indices": [
+        1,
+        5,
+        9,
+        11,
+        13,
+        15,
+        67,
+        75,
+        80,
+        81,
+        88,
+        91,
+        92,
+        93
+      ],
+      "boxed_correct": 14,
+      "boxed_indices": [
+        1,
+        5,
+        9,
+        11,
+        13,
+        15,
+        67,
+        75,
+        80,
+        81,
+        88,
+        91,
+        92,
+        93
+      ],
+      "clear_process_invalid_boxed_correct": 2,
+      "leak_check": {
+        "issues": [],
+        "passed": true
+      },
+      "ok": true,
+      "strict_correct": 0,
+      "valid_boxed_only": 6
+    },
+    "official_settings": {
+      "backend": "vllm",
+      "k": 4,
+      "max_model_len": 4096,
+      "max_new_tokens": 2048,
+      "max_tasks": 6,
+      "model_key": "qwen25_math_7b_instruct",
+      "ok": true,
+      "tensor_parallel_size": 4,
+      "variants": [
+        "strict_contract",
+        "format_guard",
+        "first_and_last",
+        "short_solution"
+      ]
+    },
+    "raw_summary": {
+      "ok": true,
+      "recomputed_all": {
+        "boxed_correct": 14,
+        "n": 96,
+        "strict_correct": 0,
+        "strict_last_line": 0,
+        "strict_marker_found": 1,
+        "strict_or_boxed_correct": 14
+      },
+      "summary_all": {
+        "boxed_correct": 14,
+        "boxed_found": 87,
+        "finished_length": 8,
+        "finished_stop": 88,
+        "loose_tail_correct": 14,
+        "n": 96,
+        "strict_correct": 0,
+        "strict_last_line": 0,
+        "strict_marker_found": 1,
+        "strict_or_boxed_correct": 14
+      }
+    },
+    "reports/E52_HARD_TASK_STRICT_FORMAT_FORCING_20260428.md": {
+      "exists": true
+    },
+    "results/E52_hard_task_strict_format_forcing/e52_manual_audit_20260428.json": {
+      "exists": true
+    },
+    "results/E52_hard_task_strict_format_forcing/qwen25_math_7b_instruct_e52_hard_task_strict_format_forcing.json": {
+      "exists": true
+    },
+    "shape": {
+      "audit_rows": 96,
+      "audit_rows_match": true,
+      "ok": true,
+      "raw_rows": 96,
+      "raw_rows_expected": 96
+    }
+  },
+  "issues": [],
+  "passed": true
+}

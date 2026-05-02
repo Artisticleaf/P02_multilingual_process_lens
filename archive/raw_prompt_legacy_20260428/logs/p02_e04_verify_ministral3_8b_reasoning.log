@@ -1,0 +1,10 @@
+[2026-04-27T02:59:26] loading tokenizer: ministral3_8b_reasoning -> /home/Awei/LLM/Model/base/ministral3_8b_reasoning
+[2026-04-27T02:59:27] loading model dtype=bfloat16 device=cuda
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/531 [00:00<?, ?it/s]Loading weights: 100%|██████████| 531/531 [00:00<00:00, 14662.70it/s]
+[transformers] The tied weights mapping and config for this model specifies to tie model.language_model.embed_tokens.weight to lm_head.weight, but both are present in the checkpoints with different values, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning.
+[2026-04-27T02:59:43] wrote results/E04_manual_trace_verifier/ministral3_8b_reasoning_manual_trace_verifier.json; eval_rows=248
+SUMMARY model=ministral3_8b_reasoning mode=process_only prompt=en acc=0.871 false_accept=0.8888888888888888 proc_inv_false_accept=0.8888888888888888
+SUMMARY model=ministral3_8b_reasoning mode=process_only prompt=zh acc=0.903 false_accept=0.6666666666666666 proc_inv_false_accept=0.6666666666666666
+SUMMARY model=ministral3_8b_reasoning mode=training_candidate prompt=en acc=0.387 false_accept=0.926829268292683 proc_inv_false_accept=0.7777777777777778
+SUMMARY model=ministral3_8b_reasoning mode=training_candidate prompt=zh acc=0.613 false_accept=0.5853658536585366 proc_inv_false_accept=0.3333333333333333

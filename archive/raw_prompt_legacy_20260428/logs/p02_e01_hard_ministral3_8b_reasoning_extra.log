@@ -1,0 +1,11 @@
+[2026-04-27T02:37:47] loading tokenizer: ministral3_8b_reasoning -> /home/Awei/LLM/Model/base/ministral3_8b_reasoning
+[2026-04-27T02:37:47] loading model dtype=bfloat16 device=cuda
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/531 [00:00<?, ?it/s]Loading weights: 100%|██████████| 531/531 [00:00<00:00, 13632.46it/s]
+[transformers] The tied weights mapping and config for this model specifies to tie model.language_model.embed_tokens.weight to lm_head.weight, but both are present in the checkpoints with different values, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning.
+[2026-04-27T02:37:50] tokenization
+[2026-04-27T02:37:50] contextual bridge
+[2026-04-27T02:37:51] process verifier margins
+[2026-04-27T02:37:52] residual patching pairs=5 layers=[8, 17, 25, 33]
+[2026-04-27T02:37:54] wrote /home/Awei/P02_multilingual_process_lens/results/E01_anchor_matrix_hard/ministral3_8b_reasoning_anchor_smoke.json
+SUMMARY model=ministral3_8b_reasoning bridge_best_layer=10 top1=1.0 proc_acc=0.95 invalid_fc_false_accept=0.1

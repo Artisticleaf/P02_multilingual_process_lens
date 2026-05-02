@@ -1,0 +1,1170 @@
+{
+  "args": {
+    "all_layers": false,
+    "audit_jsonl": "/home/Awei/P02_multilingual_process_lens/data/processed/e119_e146_process_audit_official_20260430.jsonl",
+    "best_layer": null,
+    "device": "auto",
+    "dry_run": true,
+    "dtype": "bfloat16",
+    "hidden_layers": null,
+    "include_valid_matched": true,
+    "layer_window": 2,
+    "local_files_only": false,
+    "max_model_len": 8192,
+    "max_target_rows": 0,
+    "model_key": "gemma4_31b_it",
+    "out_dir": "/home/Awei/P02_multilingual_process_lens/results/E131_e119_e146_hidden_localization",
+    "prompt_format": "official_if_chat",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "target_mode": "mixed",
+    "valid_per_task_prompt": 1
+  },
+  "by_trace_class": {
+    "repaired_acpi": 16,
+    "strict_valid": 10
+  },
+  "created_at": "2026-04-30T15:14:21",
+  "experiment": "E131_e119_e146_hidden_localization_dry_run",
+  "leakage_note_zh": "dry-run 不加载模型；只检查官方标签行选择和 prefix detector，不把人工标签写入 verifier prompt。",
+  "rows": [
+    {
+      "audit_idx": 1190038,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 484,
+          "detector": "wrong_word_regex",
+          "span_text": "incorrect",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 513,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 724,
+          "detector": "post_error_window",
+          "span_text": " because $E$ is on $AB$.\nWait, the points are $A, D, E, B$ on $AB$ and $A, F, G, C$ on $AC$.\n$AD = 4, DE = 16, EB = 8 \\implies AB = 28$.\n$AF = 13, FG = 52, GC = 26 \\implies AC = 91$.\nArea of $\\triangle AFG = \\frac{AF}{AC} \\cdot \\frac{AG}{AB",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 753,
+          "detector": "post_repair_window",
+          "span_text": "Wait, the points are $A, D, E, B$ on $AB$ and $A, F, G, C$ on $AC$.\n$AD = 4, DE = 16, EB = 8 \\implies AB = 28$.\n$AF = 13, FG = 52, GC = 26 \\implies AC = 91$.\nArea of $\\triangle AFG = \\frac{AF}{AC} \\cdot \\frac{AG}{AB} \\cdot S$ is also incorrect.",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 6439,
+          "detector": "completion_end",
+          "span_text": " - 0(26c-4) = 520s$\n$x_7 y_1 - y_7 x_1 = (26c-4)(0) - 26s(0) = 0$\nSum = $-520s + 1820s + 2548s - 1820s + 520s = 2548s$.\nArea = $1274s = 588$.\n\nFinal answer: 588",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 6439,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 6439,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "neutral",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_geometry_reflection_p2",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190039,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 2202,
+          "detector": "wrong_word_regex",
+          "span_text": "wrong",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 2442,
+          "detector": "post_error_window",
+          "span_text": ". The vertices are $A, F, N, B, C, E, M$ in some order? No, the problem says heptagon $AFNBCEM$.\nThe vertices are $A, F, N, B, C, E, M$. Let's sum the areas of triangles from $A$:\nArea $= [AFN] + [ANB] + [NBC] + [BCE] + [CEM] + [EMA]$.\nUsin",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 3311,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 3540,
+          "detector": "completion_end",
+          "span_text": "sum: $-\\frac{10}{49} + \\frac{35}{49} + \\frac{49}{49} - \\frac{35}{49} + \\frac{10}{49} = \\frac{49}{49} = 1$.\nThe area is exactly $[ABC] = 588$.\n\nFinal answer: 588",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 3540,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 3540,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "last_final_answer_end"
+        },
+        {
+          "char_end": 3540,
+          "detector": "post_repair_window",
+          "span_text": "Wait, the order of vertices is $A, F, N, B, C, E, M$.\nLet's re-check the sum: $-\\frac{10}{49} + \\frac{35}{49} + \\frac{49}{49} - \\frac{35}{49} + \\frac{10}{49} = \\frac{49}{49} = 1$.\nThe area is exactly $[ABC] = 588$.\n\nFinal answer: 588",
+          "stage": "post_repair_240chars"
+        }
+      ],
+      "prompt_variant": "neutral",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_geometry_reflection_p2",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190040,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 421,
+          "detector": "wrong_word_regex",
+          "span_text": "incorrect",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 661,
+          "detector": "post_error_window",
+          "span_text": " because $E$ is on $AB$. Let's use the area formula $[PQR] = \\frac{1}{2} pq \\sin \\theta$.\nLet $\\angle A = \\alpha$.\n$[ADF] = \\frac{1}{2} AD \\cdot AF \\sin \\alpha = \\frac{1}{2} (4)(13) \\sin \\alpha = 26 \\sin \\alpha$.\n$[AEG] = \\frac{1}{2} AE \\cd",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1338,
+          "detector": "repair_regex",
+          "span_text": "However",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1578,
+          "detector": "post_repair_window",
+          "span_text": "However, $M$ and $N$ are reflections.\n$M$ is the reflection of $D$ through $F$, so $\\triangle DFM$ is not a triangle but $F$ is the midpoint of $DM$.\nThe area of $\\triangle AFM$ is equal to the area of $\\triangle AFD$ because they share the base $",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 5499,
+          "detector": "completion_end",
+          "span_text": " y_E x_M = (20)(26s) - (0)(26c-4) = 520s$\n$x_M y_A - y_M x_A = 0$\nSum $= -520s + 1820s + 2548s - 1820s + 520s = 2548s$.\nArea $= 1274s = 588$.\n\nFinal answer: 588",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 5499,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 5499,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "self_check",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_geometry_reflection_p2",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190041,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 1893,
+          "detector": "wrong_word_regex",
+          "span_text": "not right",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 2133,
+          "detector": "post_error_window",
+          "span_text": ". $M$ is the reflection of $D$ through $F$, so $\\triangle FMD$ is not a triangle. $M, F, D$ are collinear.\nThe heptagon vertices are $A, F, N, B, C, E, M$.\nArea $= [ABC] + [FMN] + [MNE]$? No.\nLet's use coordinates. Let $A=(0,0), B=(28,0), C",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 3051,
+          "detector": "repair_regex",
+          "span_text": "check",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 3291,
+          "detector": "post_repair_window",
+          "span_text": "check: $M$ and $N$ are reflections. The areas added by $M$ and $N$ are exactly balanced by the areas subtracted from the $\\triangle ABC$ region?\n$M$ is outside, $N$ is outside. The shoelace calculation shows the area is $1274 \\sin \\theta$.\n$1274",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 3363,
+          "detector": "completion_end",
+          "span_text": "de, $N$ is outside. The shoelace calculation shows the area is $1274 \\sin \\theta$.\n$1274 \\sin \\theta$ is exactly the area of $\\triangle ABC$.\n\nFinal answer: 588",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 3363,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 3363,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "self_check",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_geometry_reflection_p2",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190042,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 1876,
+          "detector": "completion_end",
+          "span_text": "\n$$N = 252 + 504 + 1260$$\n$$N = 756 + 1260 = 2016$$\n\nThe problem asks for the remainder when $N$ is divided by 1000:\n$$2016 \\pmod{1000} = 16$$\n\nFinal answer: 16",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 1876,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 16",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 1876,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 16",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "neutral",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_icecream_ordered_assign_p3",
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190044,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 1904,
+          "detector": "completion_end",
+          "span_text": "distinct? Yes, \"assignments of flavors to players\" implies the players are distinct. Calculation: $252+504+1260 = 756 + 1260 = 2016$. Correct.\n\nFinal answer: 16",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 1904,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 16",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 1904,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 16",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "self_check",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_icecream_ordered_assign_p3",
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190046,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 17,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 504",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 17,
+          "detector": "final_regex",
+          "span_text": "Final answer: 504",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 257,
+          "detector": "post_error_window",
+          "span_text": "\n\n**Justification:**\nLet $c, v,$ and $s$ be the number of players who chose chocolate, vanilla, and strawberry ice cream, respectively. We are given the following conditions:\n1. $c + v + s = 9$\n2. $c > v > s \\ge 1$\n\nWe find the possible int",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1444,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1684,
+          "detector": "post_repair_window",
+          "span_text": "Wait, looking back at the logic, I calculated the sum as 2016. Let me re-read the question. \"Find the remainder when $N$ is divided by 1000.\"\nCalculation check:\n$252 + 504 + 1260 = 2016$.\nWait, I see a potential error in my manual sum. $252+504",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 3302,
+          "detector": "completion_end",
+          "span_text": "y\".\n$C > V > S$.\nYes, my sets are correct.\n$6 > 2 > 1$\n$5 > 3 > 1$\n$4 > 3 > 2$\nSum = 2016. Remainder = 16.\n\nCorrecting the Final Answer to 16.\n\nFinal answer: 16",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 3302,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 16",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_icecream_ordered_assign_p3",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190047,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 1491,
+          "detector": "completion_end",
+          "span_text": "ese values to find $N$:\n$N = 252 + 504 + 1260 = 2016$\n\nThe problem asks for the remainder when $N$ is divided by 1000:\n$2016 \\pmod{1000} = 16$\n\nFinal answer: 16",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 1491,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 16",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 1491,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 16",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_icecream_ordered_assign_p3",
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190048,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 2132,
+          "detector": "completion_end",
+          "span_text": "y common pair is $(0, 0)$.\n\n**Total Count:**\nTotal pairs = (Pairs from Case 1) + (Pairs from Case 2) - (Overlap)\nTotal = $51 + 67 - 1 = 117$.\n\nFinal answer: 117",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 2132,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 2132,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "neutral",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190050,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 1864,
+          "detector": "completion_end",
+          "span_text": " Max $k$ is 33 ($\\pm 66, \\mp 99$). Correct.\nCase 2: $x=3m, y=4m$. Max $m$ is 25 ($\\pm 75, \\pm 100$). Correct.\nOverlap: Only $(0,0)$. Correct.\n\nFinal answer: 117",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 1864,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 1864,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "self_check",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190052,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 16,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 71",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 16,
+          "detector": "final_regex",
+          "span_text": "Final answer: 71",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 256,
+          "detector": "post_error_window",
+          "span_text": "\n\nJustification:\nThe given equation is a quadratic in $x$ and $y$: $12x^2 - xy - 6y^2 = 0$.\nWe can factor this quadratic by looking for two numbers that multiply to $12 \\times (-6) = -72$ and add to $-1$. These numbers are $-9$ and $8$.\n$12",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1264,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1504,
+          "detector": "post_repair_window",
+          "span_text": "Wait, re-evaluating the factoring: $12x^2 - xy - 6y^2 = 0$.\n$(4x - 3y)(3x + 2y) = 12x^2 + 8xy - 9xy - 6y^2 = 12x^2 - xy - 6y^2$. Correct.\nRe-checking the ranges:\nCase 1: $x=2k, y=-3k$. $|2k| \\le 100 \\implies |k| \\le 50$. $|-3k| \\le 100 \\implies",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 3488,
+          "detector": "completion_end",
+          "span_text": "lized I might have typed 71 in the final answer box by mistake in my draft. Let me double check everything.\n$67 + 51 = 118$. $118 - 1 = 117$.\n\nFinal answer: 117",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 3488,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190053,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 3410,
+          "detector": "completion_end",
+          "span_text": "ts have exactly 2 even digits.\nThus, $\\sum e_B = 8 \\times 2 = 16$.\n$N = 144 \\times 16 = 2304$.\nThe difference $N - 2025 = 2304 - 2025 = 279$.\n\nFinal answer: 279",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 3410,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 279",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 3410,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 279",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "neutral",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_perm_div22_p5",
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190055,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 2985,
+          "detector": "completion_end",
+          "span_text": "ain 2 evens and 2 odds to sum to an even number 18, given the total set has 4 evens and 4 odds). $4 \\times 2 = 8$, $4 \\times 2 = 8$. Correct.\n\nFinal answer: 279",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 2985,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 279",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 2985,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 279",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "self_check",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_perm_div22_p5",
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190057,
+      "manual_error_type": "self_corrected_wrong_counting_step",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 1309,
+          "detector": "counting_error_regex",
+          "span_text": "There are 14 such sets",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 1323,
+          "detector": "repair_regex",
+          "span_text": "but",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1549,
+          "detector": "post_error_window",
+          "span_text": " in total, but let's check again.\n    Wait, let's list them systematically:\n    - With 8: (8,7,2,1), (8,6,3,1), (8,5,4,1), (8,5,3,2), (8,4,3,3)X. (4 sets)\n    - With 7: (7,6,4,1), (7,6,3,2), (7,5,4,2). (3 sets)\n    - With 6: (6,5,4,3). (1 s",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1563,
+          "detector": "post_repair_window",
+          "span_text": "but let's check again.\n    Wait, let's list them systematically:\n    - With 8: (8,7,2,1), (8,6,3,1), (8,5,4,1), (8,5,3,2), (8,4,3,3)X. (4 sets)\n    - With 7: (7,6,4,1), (7,6,3,2), (7,5,4,2). (3 sets)\n    - With 6: (6,5,4,3). (1 set)\n    Actual",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 2851,
+          "detector": "completion_end",
+          "span_text": "text{ sets} \\times 4! \\times (2 \\times 3!) = 8 \\times 24 \\times 12 = 8 \\times 288 = 2304$.\n    Difference $|N - 2025| = |2304 - 2025| = 279$.\n\nFinal answer: 279",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 2851,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 279",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 2851,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 279",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_perm_div22_p5",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190058,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 2642,
+          "detector": "completion_end",
+          "span_text": "mallest sum is $1+2+3+4=10$.\nSo $B=7$ is impossible. Similarly $A=7$ is impossible.\n\nThus, $N = 2304$.\nThe difference is $2304 - 2025 = 279$.\n\nFinal answer: 279",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 2642,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 279",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 2642,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 279",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_perm_div22_p5",
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190059,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 1735,
+          "detector": "completion_end",
+          "span_text": "^2 + s^2$, we add the two equations:\n    $(r^2 - 2rs + s^2) + (r^2 + 2rs + s^2) = 432 + 576$\n    $2(r^2 + s^2) = 1008$\n    $r^2 + s^2 = 504$.\n\nFinal answer: 504",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 1735,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 504",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 1735,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 504",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "neutral",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_trapezoid_incircle_p6",
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190061,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 1870,
+          "detector": "completion_end",
+          "span_text": "12 = 24$. Correct.\n$r^2+s^2 = (12+6\\sqrt{3})^2 + (12-6\\sqrt{3})^2 = (144 + 108 + 144\\sqrt{3}) + (144 + 108 - 144\\sqrt{3}) = 252 + 252 = 504$.\n\nFinal answer: 504",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 1870,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 504",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 1870,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 504",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "self_check",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_trapezoid_incircle_p6",
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190063,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 17,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 162",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 17,
+          "detector": "final_regex",
+          "span_text": "Final answer: 162",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 257,
+          "detector": "post_error_window",
+          "span_text": "\n\n**Justification:**\n1.  **Height of the trapezoid:** Since the trapezoid has an inscribed circle of radius $R=3$, the height $h$ of the trapezoid is the diameter of the circle, so $h = 2R = 6$.\n2.  **Area formula:** The area $A$ of a trape",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1429,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1669,
+          "detector": "post_repair_window",
+          "span_text": "Wait, let me re-verify the calculation.**\n$r+s = 24$.\n$(r-s)^2 = 432$.\n$r^2+s^2 = \\frac{(r+s)^2 + (r-s)^2}{2} = \\frac{576 + 432}{2} = \\frac{1008}{2} = 504$.\n\n**Correction/Double Check:**\nWait, let's check the \"tangent to each of its four sides\"",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 3556,
+          "detector": "completion_end",
+          "span_text": "2 - 6^2 = 144 - 36 = 108$.\n$(r-s)^2 = 4 \\times 108 = 432$.\n$r^2+s^2 = \\frac{576 + 432}{2} = 504$.\nThe math is consistent. I will provide 504.\n\nFinal answer: 504",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 3556,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 504",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_trapezoid_incircle_p6",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460040,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 2637,
+          "detector": "wrong_word_regex",
+          "span_text": "wrong",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 2803,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 2877,
+          "detector": "post_error_window",
+          "span_text": " because $D,F,M$ are collinear.\nThe vertices are $A(0,0), F(13\\vec{v}), N(40\\vec{u}-65\\vec{v}), B(28\\vec{u}), C(91\\vec{v}), E(20\\vec{u}), M(26\\vec{v}-4\\vec{u})$.\nWait, the order is $A, F, N, B, C, E, M$.\nUsing the shoelace formula with $\\ve",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 3043,
+          "detector": "post_repair_window",
+          "span_text": "Wait, the order is $A, F, N, B, C, E, M$.\nUsing the shoelace formula with $\\vec{u}=(1,0)$ and $\\vec{v}=(\\cos \\alpha, \\sin \\alpha)$:\n$2 \\times \\text{Area} = |x_A y_F - y_A x_F + x_F y_N - y_F x_N + x_N y_B - y_N x_B + x_B y_C - y_B x_C + x_C y_E",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 4921,
+          "detector": "completion_end",
+          "span_text": "os\\alpha| = \\frac{1}{2} |-780\\sin\\alpha - 260\\sin\\alpha| = 520\\sin\\alpha$.\nArea $= 588 - 288 + 104(6/13) + 520(6/13) = 300 + 48 + 240 = 588$.\n\nFinal answer: 588",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 4921,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 4921,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "neutral",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_geometry_reflection_p2",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460041,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 488,
+          "detector": "wrong_word_regex",
+          "span_text": "not correct",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 728,
+          "detector": "post_error_window",
+          "span_text": ".\nLet's use the formula $\\text{Area}(\\triangle APQ) = \\frac{AP \\cdot AQ}{AB \\cdot AC} \\text{Area}(\\triangle ABC)$.\nArea $\\triangle ADE$ is not a triangle since $D, E$ are on $AB$. The points are $A, D, E, B$ on $AB$ and $A, F, G, C$ on $AC$",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1566,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1806,
+          "detector": "post_repair_window",
+          "span_text": "Wait, the vertices of the heptagon are $A, F, N, B, C, E, M$ in some order? No, the vertices are listed as $A, F, N, B, C, E, M$. Let's re-examine the region.\nThe region $AFNBCEM$ consists of:\n1. $\\triangle ABC$\n2. Minus $\\triangle ADF$ (since ",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 3460,
+          "detector": "completion_end",
+          "span_text": "- (520s - 845cs - 1820s + 1820s)|$\n$= |-845cs + 3068s - 520s + 845cs| = |2548s| = 2548(6/13) = 196 \\times 6 = 1176$.\nArea $= 1176 / 2 = 588$.\n\nFinal answer: 588",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 3460,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 3460,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "neutral",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_geometry_reflection_p2",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460042,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 633,
+          "detector": "wrong_word_regex",
+          "span_text": "wrong",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 873,
+          "detector": "post_error_window",
+          "span_text": ". Use the formula $\\text{Area}(\\triangle AXY) = \\frac{AX \\cdot AY}{AB \\cdot AC} \\cdot S$.\nArea $\\triangle ADF = \\frac{4 \\cdot 13}{28 \\cdot 91} S = \\frac{52}{2548} S = \\frac{1}{49} S$.\nArea $\\triangle AEG = \\frac{20 \\cdot 65}{28 \\cdot 91} S ",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1507,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1747,
+          "detector": "post_repair_window",
+          "span_text": "Wait, $M$ is the reflection of $D$ through $F$. This means $F$ is the midpoint of $DM$.\nArea $\\triangle FDM = 0$ because $D, F, M$ are collinear? No, $M$ is a point. $\\triangle FDM$ is a degenerate triangle.\nThe vertices of the heptagon are $A,",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 3753,
+          "detector": "completion_end",
+          "span_text": " \\triangle EGC) \\cup \\triangle AFM \\cup \\triangle BEN$.\nArea $= 588 - \\frac{1}{49}S - \\frac{10}{49}S + \\frac{1}{49}S + \\frac{10}{49}S = 588$.\n\nFinal answer: 588",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 3753,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 3753,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "self_check",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_geometry_reflection_p2",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460043,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 337,
+          "detector": "wrong_word_regex",
+          "span_text": "not correct",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 577,
+          "detector": "post_error_window",
+          "span_text": " since $E$ is on $AB$.\nLet's identify the points: $D, E$ on $AB$; $F, G$ on $AC$.\nArea($\\triangle ADF$) = $\\frac{1}{2} AD \\cdot AF \\sin A = \\frac{1}{2} (4)(13) \\sin A = 26 \\sin A$.\nArea($\\triangle AEG$) = $\\frac{1}{2} AE \\cdot AG \\sin A = \\",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 769,
+          "detector": "repair_regex",
+          "span_text": "correct",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1009,
+          "detector": "post_repair_window",
+          "span_text": "correct.\n$DEGF$ is a quadrilateral formed by points $D, E$ on $AB$ and $F, G$ on $AC$.\nArea($DEGF$) = Area($\\triangle AEG$) - Area($\\triangle ADF$) - Area($\\triangle DEG$)? No.\nThe vertices are $D, E, G, F$ in order around the boundary of the tria",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 5675,
+          "detector": "completion_end",
+          "span_text": "6s) \\to A(0,0)$.\nCalculation:\n$AF: 0$\n$FN: -520s$\n$NB: 1820s$\n$BC: 2548s$\n$CE: -1820s$\n$EM: 520s$\n$MA: 0$\nSum: $2548s$. Area $= 1274s = 588$.\n\nFinal answer: 588",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 5675,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 5675,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "self_check",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_geometry_reflection_p2",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460053,
+      "manual_error_type": "self_corrected_wrong_factorization",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 346,
+          "detector": "factorization_regex",
+          "span_text": "(4x + 3y)(3x - 2y)",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 418,
+          "detector": "repair_regex",
+          "span_text": "correct",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 586,
+          "detector": "post_error_window",
+          "span_text": " = 12x^2 - 8xy + 9xy - 6y^2 = 12x^2 + xy - 6y^2$. This is almost correct, but the middle sign is wrong.\nLet's try $(4x - 3y)(3x + 2y) = 12x^2 + 8xy - 9xy - 6y^2 = 12x^2 - xy - 6y^2$.\nThis matches. So the equation is $(4x - 3y)(3x + 2y) = 0$",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 658,
+          "detector": "post_repair_window",
+          "span_text": "correct, but the middle sign is wrong.\nLet's try $(4x - 3y)(3x + 2y) = 12x^2 + 8xy - 9xy - 6y^2 = 12x^2 - xy - 6y^2$.\nThis matches. So the equation is $(4x - 3y)(3x + 2y) = 0$.\n\nThis implies that either $4x = 3y$ or $3x = -2y$.\n\nCase 1: $4x = 3y$.",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 2141,
+          "detector": "completion_end",
+          "span_text": "$m=33 \\implies x=66, y=-99$. $12(66^2) - 66(-99) - 6(-99^2) = 12(4356) + 6534 - 6(9801) = 52272 + 6534 - 58806 = 58806 - 58806 = 0$. Correct.\n\nFinal answer: 117",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 2141,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 2141,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "self_check",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460054,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 16,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 81",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 16,
+          "detector": "final_regex",
+          "span_text": "Final answer: 81",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 256,
+          "detector": "post_error_window",
+          "span_text": "\n\nJustification:\nThe given equation is a quadratic form: $12x^2 - xy - 6y^2 = 0$.\nWe can factor this quadratic by treating it as a quadratic in $x$:\nUsing the quadratic formula $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$, where $a=12, b=-y, c=",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1326,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1566,
+          "detector": "post_repair_window",
+          "span_text": "Wait, let me re-calculate the boundaries.\n$x = 3k, y = 4k \\implies |k| \\le \\min(100/3, 100/4) = 25$. Count: $2 \\cdot 25 + 1 = 51$.\n$x = 2k, y = -3k \\implies |k| \\le \\min(100/2, 100/3) = 33$. Count: $2 \\cdot 33 + 1 = 67$.\nSum: $51 + 67 - 1 = 117",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 4126,
+          "detector": "completion_end",
+          "span_text": "frac{-1 \\pm 17}{4} \\implies y=4$ or $y=-4.5$.\nSo $(3, 4)$ is a solution. This fits $x=3k, y=4k$ with $k=1$.\n\nEverything seems correct. $117$.\n\nFinal answer: 117",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 4126,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460065,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 17,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 162",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 17,
+          "detector": "final_regex",
+          "span_text": "Final answer: 162",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 257,
+          "detector": "post_error_window",
+          "span_text": "\n\n**Justification:**\n1. Let the lengths of the parallel sides (bases) be $r$ and $s$.\n2. The height of the trapezoid is equal to the diameter of the inscribed circle, so $h = 2 \\times 3 = 6$.\n3. The area of a trapezoid is $A = \\frac{r+s}{2}",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1321,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1561,
+          "detector": "post_repair_window",
+          "span_text": "Wait, let me re-calculate.**\nRe-evaluating $r+s=24$ and $(r-s)^2=432$.\n$r^2 + s^2 = \\frac{(r+s)^2 + (r-s)^2}{2} = \\frac{576 + 432}{2} = \\frac{1008}{2} = 504$.\n\n**Check constraints again:**\nIf $(r-s)^2 = 432$, then $|r-s| = \\sqrt{432} = 12\\sqrt{",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 3386,
+          "detector": "completion_end",
+          "span_text": "ee a mistake in my \"Final answer: 162\" thought process (which I hadn't written yet, but I'm double checking). $504$ is the calculated result.\n\nFinal answer: 504",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 3386,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 504",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_trapezoid_incircle_p6",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460066,
+      "manual_error_type": "wrong_initial_or_intermediate_final_answer_repaired",
+      "model_key": "gemma4_31b_it",
+      "points": [
+        {
+          "char_end": 17,
+          "detector": "first_final_regex",
+          "span_text": "Final answer: 162",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 17,
+          "detector": "final_regex",
+          "span_text": "Final answer: 162",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 257,
+          "detector": "post_error_window",
+          "span_text": "\n\n**Justification:**\n1. Let the lengths of the parallel sides be $r$ and $s$.\n2. The height of the trapezoid is equal to the diameter of the inscribed circle, so $h = 2 \\times 3 = 6$.\n3. The area of the trapezoid is given by $A = \\frac{r+s}",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1257,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1497,
+          "detector": "post_repair_window",
+          "span_text": "Wait, re-calculating based on area again.**\nArea $A = 72$, $h=6$. $r+s = 24$.\nLeg $c = \\frac{r+s}{2} = 12$.\nHorizontal distance $x = \\frac{|r-s|}{2}$.\n$x^2 + 6^2 = 12^2 \\implies x^2 = 108$.\n$|r-s| = 2\\sqrt{108} = 2 \\cdot 6\\sqrt{3} = 12\\sqrt{3}$",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 3690,
+          "detector": "completion_end",
+          "span_text": "s = 2\\sqrt{108}$. $(r-s)^2 = 432$.\n$r+s = 24$. $(r+s)^2 = 576$.\n$2(r^2+s^2) = 576+432 = 1008 \\implies r^2+s^2 = 504$.\nBoth methods yield 504.\n\nFinal answer: 504",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 3690,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 504",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_trapezoid_incircle_p6",
+      "trace_class": "repaired_acpi"
+    }
+  ],
+  "selected_rows": 26
+}

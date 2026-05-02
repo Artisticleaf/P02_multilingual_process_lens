@@ -1,0 +1,128 @@
+{
+  "created_at": "2026-04-29T04:04:09",
+  "passed": true,
+  "checks": [
+    {
+      "check": "qwen35_27b E65 result exists",
+      "ok": true,
+      "detail": "results/E65_mechanistic_layer_sweep/qwen35_27b_e65_e61_layer_sweep.json"
+    },
+    {
+      "check": "qwen35_27b model key",
+      "ok": true,
+      "detail": "qwen35_27b"
+    },
+    {
+      "check": "qwen35_27b dataset E61",
+      "ok": true,
+      "detail": "E61"
+    },
+    {
+      "check": "qwen35_27b no prompt leakage labels",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "gemma4_31b_it E65 result exists",
+      "ok": true,
+      "detail": "results/E65_mechanistic_layer_sweep/gemma4_31b_it_e65_e61_layer_sweep.json"
+    },
+    {
+      "check": "gemma4_31b_it model key",
+      "ok": true,
+      "detail": "gemma4_31b_it"
+    },
+    {
+      "check": "gemma4_31b_it dataset E61",
+      "ok": true,
+      "detail": "E61"
+    },
+    {
+      "check": "gemma4_31b_it no prompt leakage labels",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "gemma4_26b_a4b_it E65 result exists",
+      "ok": true,
+      "detail": "results/E65_mechanistic_layer_sweep/gemma4_26b_a4b_it_e65_e61_layer_sweep.json"
+    },
+    {
+      "check": "gemma4_26b_a4b_it model key",
+      "ok": true,
+      "detail": "gemma4_26b_a4b_it"
+    },
+    {
+      "check": "gemma4_26b_a4b_it dataset E61",
+      "ok": true,
+      "detail": "E61"
+    },
+    {
+      "check": "gemma4_26b_a4b_it no prompt leakage labels",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "glm47_flash_candidate E65 result exists",
+      "ok": true,
+      "detail": "results/E65_mechanistic_layer_sweep/glm47_flash_candidate_e65_e61_layer_sweep.json"
+    },
+    {
+      "check": "glm47_flash_candidate model key",
+      "ok": true,
+      "detail": "glm47_flash_candidate"
+    },
+    {
+      "check": "glm47_flash_candidate dataset E61",
+      "ok": true,
+      "detail": "E61"
+    },
+    {
+      "check": "glm47_flash_candidate no prompt leakage labels",
+      "ok": true,
+      "detail": "0"
+    }
+  ],
+  "rows": [
+    {
+      "model_key": "qwen35_27b",
+      "layers_count": 65,
+      "items_count": 96,
+      "best_layer": 34,
+      "best_accuracy": 1.0,
+      "mean_score_valid": 5.6988372554381685,
+      "mean_score_invalid": -5.675669939567645,
+      "result_path": "results/E65_mechanistic_layer_sweep/qwen35_27b_e65_e61_layer_sweep.json"
+    },
+    {
+      "model_key": "gemma4_31b_it",
+      "layers_count": 61,
+      "items_count": 96,
+      "best_layer": 34,
+      "best_accuracy": 1.0,
+      "mean_score_valid": 8.714656492074331,
+      "mean_score_invalid": -8.68296971420447,
+      "result_path": "results/E65_mechanistic_layer_sweep/gemma4_31b_it_e65_e61_layer_sweep.json"
+    },
+    {
+      "model_key": "gemma4_26b_a4b_it",
+      "layers_count": 31,
+      "items_count": 96,
+      "best_layer": 17,
+      "best_accuracy": 0.9270833333333334,
+      "mean_score_valid": 8.29707908940812,
+      "mean_score_invalid": -8.250205000241598,
+      "result_path": "results/E65_mechanistic_layer_sweep/gemma4_26b_a4b_it_e65_e61_layer_sweep.json"
+    },
+    {
+      "model_key": "glm47_flash_candidate",
+      "layers_count": 48,
+      "items_count": 96,
+      "best_layer": 27,
+      "best_accuracy": 0.9791666666666666,
+      "mean_score_valid": 1.8686128100380301,
+      "mean_score_invalid": -1.8508176458223413,
+      "result_path": "results/E65_mechanistic_layer_sweep/glm47_flash_candidate_e65_e61_layer_sweep.json"
+    }
+  ]
+}

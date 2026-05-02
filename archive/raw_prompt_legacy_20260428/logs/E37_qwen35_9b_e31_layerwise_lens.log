@@ -1,0 +1,45 @@
+[2026-04-27T23:21:24] loading qwen35_9b for layerwise lens on cuda
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/427 [00:00<?, ?it/s]Loading weights: 100%|██████████| 427/427 [00:00<00:00, 15557.40it/s]
+absolute idx=310001 lang=en final=4.750
+absolute idx=310001 lang=zh final=2.438
+absolute idx=310002 lang=en final=-0.625
+absolute idx=310002 lang=zh final=-0.500
+absolute idx=310007 lang=en final=4.125
+absolute idx=310007 lang=zh final=2.000
+absolute idx=310008 lang=en final=3.375
+absolute idx=310008 lang=zh final=1.625
+absolute idx=310013 lang=en final=3.500
+absolute idx=310013 lang=zh final=1.250
+absolute idx=310014 lang=en final=-1.625
+absolute idx=310014 lang=zh final=-1.750
+absolute idx=310019 lang=en final=4.250
+absolute idx=310019 lang=zh final=2.125
+absolute idx=310020 lang=en final=2.500
+absolute idx=310020 lang=zh final=1.000
+absolute idx=310025 lang=en final=4.000
+absolute idx=310025 lang=zh final=1.875
+absolute idx=310026 lang=en final=1.500
+absolute idx=310026 lang=zh final=0.625
+contrastive pair=e31_ratio_boys_girls_bad310002_valid310001 lang=en order=bad_A final=0.250
+contrastive pair=e31_ratio_boys_girls_bad310002_valid310001 lang=en order=bad_B final=3.000
+contrastive pair=e31_ratio_boys_girls_bad310002_valid310001 lang=zh order=bad_A final=0.625
+contrastive pair=e31_ratio_boys_girls_bad310002_valid310001 lang=zh order=bad_B final=0.750
+contrastive pair=e31_inequality_boundary_bad310008_valid310007 lang=en order=bad_A final=-0.375
+contrastive pair=e31_inequality_boundary_bad310008_valid310007 lang=en order=bad_B final=0.750
+contrastive pair=e31_inequality_boundary_bad310008_valid310007 lang=zh order=bad_A final=0.125
+contrastive pair=e31_inequality_boundary_bad310008_valid310007 lang=zh order=bad_B final=0.125
+contrastive pair=e31_unit_dozen_pairs_bad310014_valid310013 lang=en order=bad_A final=-0.375
+contrastive pair=e31_unit_dozen_pairs_bad310014_valid310013 lang=en order=bad_B final=1.500
+contrastive pair=e31_unit_dozen_pairs_bad310014_valid310013 lang=zh order=bad_A final=0.750
+contrastive pair=e31_unit_dozen_pairs_bad310014_valid310013 lang=zh order=bad_B final=0.250
+contrastive pair=e31_geometry_diameter_bad310020_valid310019 lang=en order=bad_A final=0.375
+contrastive pair=e31_geometry_diameter_bad310020_valid310019 lang=en order=bad_B final=2.375
+contrastive pair=e31_geometry_diameter_bad310020_valid310019 lang=zh order=bad_A final=0.250
+contrastive pair=e31_geometry_diameter_bad310020_valid310019 lang=zh order=bad_B final=0.750
+contrastive pair=e31_comb_unordered_bad310026_valid310025 lang=en order=bad_A final=0.625
+contrastive pair=e31_comb_unordered_bad310026_valid310025 lang=en order=bad_B final=1.125
+contrastive pair=e31_comb_unordered_bad310026_valid310025 lang=zh order=bad_A final=0.375
+contrastive pair=e31_comb_unordered_bad310026_valid310025 lang=zh order=bad_B final=0.750
+wrote results/E37_e31_layerwise_lens/qwen35_9b_layerwise_verifier_lens.json; absolute=20 contrastive=20

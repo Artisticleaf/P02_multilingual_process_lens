@@ -1,0 +1,196 @@
+{
+  "created_at": "2026-04-28T16:30:21",
+  "project": "/home/Awei/P02_multilingual_process_lens",
+  "passed": true,
+  "issues": [],
+  "checks": {
+    "model_configs": {
+      "qwen35_9b": {
+        "path_exists": true,
+        "family": "qwen35",
+        "class": "post_trained_hybrid",
+        "layers": 32,
+        "dtype": "torch.bfloat16",
+        "has_chat_template": true,
+        "expected_chat_template": true,
+        "ok": true
+      },
+      "qwen35_27b": {
+        "path_exists": true,
+        "family": "qwen35",
+        "class": "post_trained_hybrid",
+        "layers": 64,
+        "dtype": "torch.bfloat16",
+        "has_chat_template": true,
+        "expected_chat_template": true,
+        "ok": true
+      },
+      "qwen3_14b_base": {
+        "path_exists": true,
+        "family": "qwen",
+        "class": "base",
+        "layers": 40,
+        "dtype": "torch.bfloat16",
+        "has_chat_template": true,
+        "expected_chat_template": false,
+        "ok": true
+      },
+      "gemma4_31b_it": {
+        "path_exists": true,
+        "family": "gemma",
+        "class": "instruct",
+        "layers": 60,
+        "dtype": "torch.bfloat16",
+        "has_chat_template": true,
+        "expected_chat_template": true,
+        "ok": true
+      },
+      "gemma4_26b_a4b_it": {
+        "path_exists": true,
+        "family": "gemma",
+        "class": "instruct_moe",
+        "layers": 30,
+        "dtype": "torch.bfloat16",
+        "has_chat_template": true,
+        "expected_chat_template": true,
+        "ok": true
+      }
+    },
+    "data_and_labels": {
+      "e39_rows": 72,
+      "e39_variant_counts": {
+        "valid_correct": 12,
+        "invalid_correct": 12,
+        "valid_masked": 12,
+        "invalid_masked": 12,
+        "valid_wrong": 12,
+        "invalid_wrong": 12
+      },
+      "e42_focus_rows": 24,
+      "tasks": 12,
+      "balanced_e39": true,
+      "balanced_e42_focus": true,
+      "acpi_label_logic_ok": true,
+      "ok": true
+    },
+    "layer_configs": {
+      "configs/e39_surface_semantic_pairs_qwen35_9b.yaml": {
+        "ok": true,
+        "issues": [],
+        "by_model": {
+          "qwen35_9b": {
+            "n_layers": 32,
+            "checked_pairs": 12,
+            "invalid_layers": []
+          }
+        }
+      },
+      "configs/e39_surface_semantic_pairs_qwen3_14b.yaml": {
+        "ok": true,
+        "issues": [],
+        "by_model": {
+          "qwen3_14b_base": {
+            "n_layers": 40,
+            "checked_pairs": 12,
+            "invalid_layers": []
+          }
+        }
+      },
+      "configs/e43_paraphrase_transfer_pairs.yaml": {
+        "ok": true,
+        "issues": [],
+        "by_model": {}
+      }
+    },
+    "official_template_parity": {
+      "qwen35_9b": {
+        "files": [
+          "/home/Awei/P02_multilingual_process_lens/results/E42_official_template_parity/qwen35_9b_e42_official_template_parity_chat.json"
+        ],
+        "used_chat_template": true,
+        "prompt_format": "official_if_chat",
+        "rows": 48,
+        "absolute_rows": 24,
+        "contrastive_rows": 24,
+        "contrastive_order_balanced": true,
+        "ok": true
+      },
+      "qwen35_27b": {
+        "files": [
+          "/home/Awei/P02_multilingual_process_lens/results/E42_official_template_parity/qwen35_27b_e42_official_template_parity_chat.json"
+        ],
+        "used_chat_template": true,
+        "prompt_format": "official_if_chat",
+        "rows": 48,
+        "absolute_rows": 24,
+        "contrastive_rows": 24,
+        "contrastive_order_balanced": true,
+        "ok": true
+      },
+      "qwen3_14b_base": {
+        "files": [
+          "/home/Awei/P02_multilingual_process_lens/results/E42_official_template_parity/qwen3_14b_base_e42_official_template_parity_raw.json"
+        ],
+        "used_chat_template": false,
+        "prompt_format": "official_if_chat",
+        "rows": 48,
+        "absolute_rows": 24,
+        "contrastive_rows": 24,
+        "contrastive_order_balanced": true,
+        "ok": true
+      },
+      "gemma4_31b_it": {
+        "files": [
+          "/home/Awei/P02_multilingual_process_lens/results/E42_official_template_parity/gemma4_31b_it_e42_official_template_parity_chat.json"
+        ],
+        "used_chat_template": true,
+        "prompt_format": "official_if_chat",
+        "rows": 48,
+        "absolute_rows": 24,
+        "contrastive_rows": 24,
+        "contrastive_order_balanced": true,
+        "ok": true
+      },
+      "gemma4_26b_a4b_it": {
+        "files": [
+          "/home/Awei/P02_multilingual_process_lens/results/E42_official_template_parity/gemma4_26b_a4b_it_e42_official_template_parity_chat.json"
+        ],
+        "used_chat_template": true,
+        "prompt_format": "official_if_chat",
+        "rows": 48,
+        "absolute_rows": 24,
+        "contrastive_rows": 24,
+        "contrastive_order_balanced": true,
+        "ok": true
+      }
+    },
+    "official_template_hidden_patch": {
+      "path": "/home/Awei/P02_multilingual_process_lens/results/E40_official_template_span_patch/qwen35_9b_real_acpi_span_patch.json",
+      "used_chat_template": true,
+      "add_special_tokens": false,
+      "rows": 120,
+      "layers": [
+        0,
+        4,
+        8,
+        12,
+        14,
+        16,
+        20,
+        24,
+        28,
+        31
+      ],
+      "clean_pairs": 12,
+      "ok": true
+    },
+    "archived_raw_e42_audit_note": {
+      "ok": true,
+      "path": "/home/Awei/P02_multilingual_process_lens/archive/raw_prompt_legacy_20260428/logs/audit_e42_objective_matrix_20260428.json",
+      "note_en": "The raw-prompt E42 matrix audit is intentionally archived; active paper-facing checks rely on official-template parity.",
+      "note_zh": "raw-prompt E42 矩阵审计已按要求归档；当前论文主证据检查依赖 official-template parity。"
+    }
+  },
+  "scope_note_en": "Paper-facing E39-E42 deterministic verifier and hidden-patch settings; older raw runs remain named stress tests unless rerun with official chat templates.",
+  "scope_note_zh": "本审计覆盖论文主证据所依赖的 E39-E42 确定性 verifier 与 hidden patch 设置；更早 raw 运行若未复跑官方 chat 模板，只作为已命名压力测试。"
+}

@@ -1,0 +1,40 @@
+{
+  "candidate_solutions": 80,
+  "expected_jobs": {
+    "core_models": [
+      "qwen35_27b",
+      "gemma4_31b_it",
+      "gemma4_26b_a4b_it"
+    ],
+    "e159_generation_per_model": 120,
+    "e160_thinking_generation_per_model": 120,
+    "e161_error_repair_per_model": 240
+  },
+  "families": {
+    "algebra_sign_symmetry": 4,
+    "code_boundary_zero": 4,
+    "counting_complement": 4,
+    "graph_definition": 4,
+    "multilingual_semantic": 4,
+    "probability_conditioning": 4,
+    "proof_invalid_lemma": 4,
+    "table_zero_swap": 4,
+    "temporal_boundary": 4,
+    "unit_roundtrip": 4
+  },
+  "first_e161_invalid_candidate": {
+    "blind_prompt_has_oracle_language": false,
+    "family": "algebra_sign_symmetry",
+    "manual_error_span_offline": "(2x+y)(5x-2y)",
+    "oracle_prompt_has_span": true,
+    "solution_id": "e159_algebra_sign_symmetry_01_invalid_answer_preserving_reference"
+  },
+  "first_generation_task": {
+    "family": "algebra_sign_symmetry",
+    "problem": "Count ordered integer pairs (x,y) with -90 <= x,y <= 90 satisfying 10x^2 - xy - 2y^2 = 0.",
+    "prompt_excerpt": "Solve the following problem carefully. Show the reasoning needed to justify the result. Do not give the final answer before the reasoning. End with exactly one line `Final answer: <answer>`.\n\nProblem: Count ordered integer pairs (x,y) with -90 <= x,y <= 90 satisfying 10x^2 - xy - 2y^2 = 0.",
+    "task_id": "e159_algebra_sign_symmetry_01"
+  },
+  "passed": true,
+  "tasks": 40
+}

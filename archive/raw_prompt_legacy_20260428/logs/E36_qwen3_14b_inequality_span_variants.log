@@ -1,0 +1,9 @@
+[2026-04-27T23:20:07] loading qwen3_14b_base on cuda; pairs=5
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s]Loading weights: 100%|██████████| 443/443 [00:00<00:00, 17722.97it/s]
+pair=e36_ineq_full_condition_qwen14 base_valid=2.625 base_bad=2.500 layers=[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 39]
+pair=e36_ineq_lower_bound_qwen14 base_valid=2.625 base_bad=2.500 layers=[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 39]
+pair=e36_ineq_upper_bound_qwen14 base_valid=2.625 base_bad=2.500 layers=[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 39]
+pair=e36_ineq_corrective_list_qwen14 base_valid=2.625 base_bad=2.500 layers=[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 39]
+pair=e36_ineq_full_clause_qwen14 base_valid=2.625 base_bad=2.500 layers=[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 39]
+wrote results/E36_inequality_boundary_span_variants/qwen3_14b_base_real_acpi_span_patch.json; rows=105 best_pair=e36_ineq_upper_bound_qwen14 span=support_error_span L12 v2b=0.125 b2v=-1.500

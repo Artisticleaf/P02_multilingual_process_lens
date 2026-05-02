@@ -1,0 +1,20 @@
+{
+  "python": "/home/Awei/miniconda3/envs/passage_prep_py312/bin/python",
+  "project": "/home/Awei/P02_multilingual_process_lens",
+  "cuda_visible_devices": "all",
+  "packages": {
+    "torch": "2.9.0+cu128",
+    "transformers": "5.6.2",
+    "safetensors": "0.7.0",
+    "accelerate": "1.13.0",
+    "yaml": "6.0.3",
+    "numpy": "2.2.6",
+    "sklearn": "1.8.0"
+  },
+  "gpus": [
+    "0, NVIDIA GeForce RTX 5090, 32607 MiB, 17 MiB",
+    "1, NVIDIA GeForce RTX 5090, 32607 MiB, 2 MiB",
+    "2, NVIDIA GeForce RTX 5090, 32607 MiB, 2 MiB",
+    "3, NVIDIA GeForce RTX 5090, 32607 MiB, 2 MiB"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "answer_max": 896,
+  "answer_min": 29,
+  "by_family": {
+    "matharena_aime2026": 30
+  },
+  "created_at": "2026-05-02T19:49:28",
+  "dataset": {
+    "config": "default",
+    "dataset_id": "MathArena/aime_2026",
+    "dataset_last_modified": "2026-02-16 09:50:26+00:00",
+    "dataset_sha": "10b4e45b7a503075d4da8a0d57916a4f06ce6bd2",
+    "repo": "MathArena/aime_2026",
+    "split": "train"
+  },
+  "errors": [],
+  "experiment": "E172_aime2026_matharena_task_bank_summary",
+  "leakage_policy": {
+    "gold_answer_in_prompt": false,
+    "manual_label_in_prompt": false,
+    "prompt_fields_allowed": [
+      "problem"
+    ],
+    "source_metadata_in_prompt": false,
+    "trap_note_in_prompt": false
+  },
+  "passed": true,
+  "problem_idx_max": 30,
+  "problem_idx_min": 1,
+  "task_bank": "data/processed/e172_aime2026_matharena_task_bank_20260502.jsonl",
+  "tasks": 30,
+  "warnings": []
+}

@@ -1,0 +1,611 @@
+{
+  "args": {
+    "control_variants": "clean_valid,suspicious_valid_marker,low_conf_valid",
+    "data_jsonl": "/home/Awei/P02_multilingual_process_lens/data/processed/e132_suspicious_valid_controls_20260430.jsonl",
+    "device": "auto",
+    "dry_run": false,
+    "dtype": "bfloat16",
+    "e136_result": "",
+    "local_files_only": true,
+    "max_input_tokens": 6144,
+    "max_jobs": 6,
+    "max_new_tokens": 256,
+    "max_time": 30.0,
+    "model_key": "qwen35_27b",
+    "out_dir": "results/E1395_base_span_localization_smoke",
+    "prompt_variants": "base_span_only,strong_span_only,direct_json_final_only",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml"
+  },
+  "created_at": "2026-04-30T21:14:39",
+  "cuda_visible_devices": "0,1,2,3",
+  "experiment": "E1395_base_span_localization",
+  "host": "hpc-node-01",
+  "model_key": "qwen35_27b",
+  "model_spec": {
+    "class": "post_trained_hybrid",
+    "family": "qwen35",
+    "loader_risk": "large model; conditional_generation_or_multimodal config may require transformers 5.x and AutoModelForImageTextToText fallback",
+    "notes": "core local P0 medium frontier model; downloaded via HF mirror on 2026-04-27; requires multi-GPU device_map=auto for full bf16 weights",
+    "path": "/home/Awei/LLM/Model/base/qwen35_27b",
+    "priority": "P0_core_frontier_medium",
+    "remote_repo": "Qwen/Qwen3.5-27B",
+    "status": "local_downloaded"
+  },
+  "rows": [
+    {
+      "audit_idx": 1320034,
+      "created_at": "2026-04-30T21:14:21",
+      "expected_error_span": "25% increase means the final price is 25% of the original",
+      "experiment": "E1395_base_span_localization",
+      "failure_policy_names": [
+        "plain_base_no_check_accept",
+        "plain_always_global_check_accept",
+        "plain_hidden_global_check_accept",
+        "strict_always_global_check_accept",
+        "strict_hidden_global_check_accept"
+      ],
+      "family": "percentage_base",
+      "generation": {
+        "completion": "<SPAN_AUDIT>\nHas error: Yes\nFirst wrong step: \"A 25% increase means the final price is 25% of the original, which would be 20.\"\nError type: Conceptual error\n</SPAN_AUDIT>",
+        "generated_tokens": 56,
+        "hit_max_new_tokens": false,
+        "input_tokens": 205,
+        "may_have_hit_max_time": false,
+        "stopped_with_eos": true,
+        "truncated_input": false
+      },
+      "manual_acpi_strict": true,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "controlled_repaired_strict_invalid",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "manual_repair_present": true,
+      "model_key": "qwen35_27b",
+      "parsed": {
+        "all_wrong_steps": "",
+        "error_type": "Conceptual error",
+        "final_block_found": true,
+        "first_wrong_step": "\"A 25% increase means the final price is 25% of the original, which would be 20.\"",
+        "has_error": true,
+        "json_found": false,
+        "parse_ok": true
+      },
+      "problem": "A price of 80 increases by 25%. What is the new price?",
+      "prompt_contains_gold_label_or_error_annotation": false,
+      "prompt_variant": "base_span_only",
+      "route_id": "en_en",
+      "selection_reason": "e136_base_or_check_failed_to_reject",
+      "source_kind": "strict_invalid_failure",
+      "span_hit": true,
+      "task_id": "e132_en_en_increase_base_repaired_strict_invalid",
+      "thinking": false,
+      "variant": "repaired_strict_invalid",
+      "visible_trace": "A 25% increase means the final price is 25% of the original, which would be 20. For an increase, add 25% of 80 to the original, so 80+20 = 100.\nFinal answer: 100"
+    },
+    {
+      "audit_idx": 1320034,
+      "created_at": "2026-04-30T21:14:25",
+      "expected_error_span": "25% increase means the final price is 25% of the original",
+      "experiment": "E1395_base_span_localization",
+      "failure_policy_names": [
+        "plain_base_no_check_accept",
+        "plain_always_global_check_accept",
+        "plain_hidden_global_check_accept",
+        "strict_always_global_check_accept",
+        "strict_hidden_global_check_accept"
+      ],
+      "family": "percentage_base",
+      "generation": {
+        "completion": "<SPAN_AUDIT>\nHas error: Yes\nFirst wrong step: \"A 25% increase means the final price is 25% of the original\"\nAll wrong steps: \"A 25% increase means the final price is 25% of the original\"\nError type: Conceptual error\n</SPAN_AUDIT>",
+        "generated_tokens": 74,
+        "hit_max_new_tokens": false,
+        "input_tokens": 240,
+        "may_have_hit_max_time": false,
+        "stopped_with_eos": true,
+        "truncated_input": false
+      },
+      "manual_acpi_strict": true,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "controlled_repaired_strict_invalid",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "manual_repair_present": true,
+      "model_key": "qwen35_27b",
+      "parsed": {
+        "all_wrong_steps": "\"A 25% increase means the final price is 25% of the original\"",
+        "error_type": "Conceptual error",
+        "final_block_found": true,
+        "first_wrong_step": "\"A 25% increase means the final price is 25% of the original\"",
+        "has_error": true,
+        "json_found": false,
+        "parse_ok": true
+      },
+      "problem": "A price of 80 increases by 25%. What is the new price?",
+      "prompt_contains_gold_label_or_error_annotation": false,
+      "prompt_variant": "strong_span_only",
+      "route_id": "en_en",
+      "selection_reason": "e136_base_or_check_failed_to_reject",
+      "source_kind": "strict_invalid_failure",
+      "span_hit": true,
+      "task_id": "e132_en_en_increase_base_repaired_strict_invalid",
+      "thinking": false,
+      "variant": "repaired_strict_invalid",
+      "visible_trace": "A 25% increase means the final price is 25% of the original, which would be 20. For an increase, add 25% of 80 to the original, so 80+20 = 100.\nFinal answer: 100"
+    },
+    {
+      "audit_idx": 1320034,
+      "created_at": "2026-04-30T21:14:28",
+      "expected_error_span": "25% increase means the final price is 25% of the original",
+      "experiment": "E1395_base_span_localization",
+      "failure_policy_names": [
+        "plain_base_no_check_accept",
+        "plain_always_global_check_accept",
+        "plain_hidden_global_check_accept",
+        "strict_always_global_check_accept",
+        "strict_hidden_global_check_accept"
+      ],
+      "family": "percentage_base",
+      "generation": {
+        "completion": "{\"has_error\": true, \"first_wrong_step\": \"A 25% increase means the final price is 25% of the original, which would be 20.\", \"error_type\": \"Conceptual Error\"}",
+        "generated_tokens": 48,
+        "hit_max_new_tokens": false,
+        "input_tokens": 171,
+        "may_have_hit_max_time": false,
+        "stopped_with_eos": true,
+        "truncated_input": false
+      },
+      "manual_acpi_strict": true,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "controlled_repaired_strict_invalid",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "manual_repair_present": true,
+      "model_key": "qwen35_27b",
+      "parsed": {
+        "all_wrong_steps": "",
+        "error_type": "Conceptual Error",
+        "final_block_found": false,
+        "first_wrong_step": "A 25% increase means the final price is 25% of the original, which would be 20.",
+        "has_error": true,
+        "json_found": true,
+        "parse_ok": true
+      },
+      "problem": "A price of 80 increases by 25%. What is the new price?",
+      "prompt_contains_gold_label_or_error_annotation": false,
+      "prompt_variant": "direct_json_final_only",
+      "route_id": "en_en",
+      "selection_reason": "e136_base_or_check_failed_to_reject",
+      "source_kind": "strict_invalid_failure",
+      "span_hit": true,
+      "task_id": "e132_en_en_increase_base_repaired_strict_invalid",
+      "thinking": false,
+      "variant": "repaired_strict_invalid",
+      "visible_trace": "A 25% increase means the final price is 25% of the original, which would be 20. For an increase, add 25% of 80 to the original, so 80+20 = 100.\nFinal answer: 100"
+    },
+    {
+      "audit_idx": 1320044,
+      "created_at": "2026-04-30T21:14:32",
+      "expected_error_span": "25% increase means the final price is 25% of the original",
+      "experiment": "E1395_base_span_localization",
+      "failure_policy_names": [
+        "plain_base_no_check_accept"
+      ],
+      "family": "percentage_base",
+      "generation": {
+        "completion": "<SPAN_AUDIT>\nHas error: Yes\nFirst wrong step: \"A 25% increase means the final price is 25% of the original, which would be 20.\"\nError type: Conceptual error\n</SPAN_AUDIT>",
+        "generated_tokens": 56,
+        "hit_max_new_tokens": false,
+        "input_tokens": 201,
+        "may_have_hit_max_time": false,
+        "stopped_with_eos": true,
+        "truncated_input": false
+      },
+      "manual_acpi_strict": true,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "controlled_repaired_strict_invalid",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "manual_repair_present": true,
+      "model_key": "qwen35_27b",
+      "parsed": {
+        "all_wrong_steps": "",
+        "error_type": "Conceptual error",
+        "final_block_found": true,
+        "first_wrong_step": "\"A 25% increase means the final price is 25% of the original, which would be 20.\"",
+        "has_error": true,
+        "json_found": false,
+        "parse_ok": true
+      },
+      "problem": "价格80增加25%后，新价格是多少？",
+      "prompt_contains_gold_label_or_error_annotation": false,
+      "prompt_variant": "base_span_only",
+      "route_id": "zh_en",
+      "selection_reason": "e136_base_or_check_failed_to_reject",
+      "source_kind": "strict_invalid_failure",
+      "span_hit": true,
+      "task_id": "e132_zh_en_increase_base_repaired_strict_invalid",
+      "thinking": false,
+      "variant": "repaired_strict_invalid",
+      "visible_trace": "A 25% increase means the final price is 25% of the original, which would be 20. For an increase, add 25% of 80 to the original, so 80+20 = 100.\nFinal answer: 100"
+    },
+    {
+      "audit_idx": 1320044,
+      "created_at": "2026-04-30T21:14:36",
+      "expected_error_span": "25% increase means the final price is 25% of the original",
+      "experiment": "E1395_base_span_localization",
+      "failure_policy_names": [
+        "plain_base_no_check_accept"
+      ],
+      "family": "percentage_base",
+      "generation": {
+        "completion": "<SPAN_AUDIT>\nHas error: Yes\nFirst wrong step: \"A 25% increase means the final price is 25% of the original\"\nAll wrong steps: \"A 25% increase means the final price is 25% of the original\"\nError type: Conceptual error\n</SPAN_AUDIT>",
+        "generated_tokens": 74,
+        "hit_max_new_tokens": false,
+        "input_tokens": 236,
+        "may_have_hit_max_time": false,
+        "stopped_with_eos": true,
+        "truncated_input": false
+      },
+      "manual_acpi_strict": true,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "controlled_repaired_strict_invalid",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "manual_repair_present": true,
+      "model_key": "qwen35_27b",
+      "parsed": {
+        "all_wrong_steps": "\"A 25% increase means the final price is 25% of the original\"",
+        "error_type": "Conceptual error",
+        "final_block_found": true,
+        "first_wrong_step": "\"A 25% increase means the final price is 25% of the original\"",
+        "has_error": true,
+        "json_found": false,
+        "parse_ok": true
+      },
+      "problem": "价格80增加25%后，新价格是多少？",
+      "prompt_contains_gold_label_or_error_annotation": false,
+      "prompt_variant": "strong_span_only",
+      "route_id": "zh_en",
+      "selection_reason": "e136_base_or_check_failed_to_reject",
+      "source_kind": "strict_invalid_failure",
+      "span_hit": true,
+      "task_id": "e132_zh_en_increase_base_repaired_strict_invalid",
+      "thinking": false,
+      "variant": "repaired_strict_invalid",
+      "visible_trace": "A 25% increase means the final price is 25% of the original, which would be 20. For an increase, add 25% of 80 to the original, so 80+20 = 100.\nFinal answer: 100"
+    },
+    {
+      "audit_idx": 1320044,
+      "created_at": "2026-04-30T21:14:39",
+      "expected_error_span": "25% increase means the final price is 25% of the original",
+      "experiment": "E1395_base_span_localization",
+      "failure_policy_names": [
+        "plain_base_no_check_accept"
+      ],
+      "family": "percentage_base",
+      "generation": {
+        "completion": "{\"has_error\": true, \"first_wrong_step\": \"A 25% increase means the final price is 25% of the original, which would be 20.\", \"error_type\": \"Conceptual Error\"}",
+        "generated_tokens": 48,
+        "hit_max_new_tokens": false,
+        "input_tokens": 167,
+        "may_have_hit_max_time": false,
+        "stopped_with_eos": true,
+        "truncated_input": false
+      },
+      "manual_acpi_strict": true,
+      "manual_acpi_unrepaired": false,
+      "manual_error_type": "controlled_repaired_strict_invalid",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "manual_repair_present": true,
+      "model_key": "qwen35_27b",
+      "parsed": {
+        "all_wrong_steps": "",
+        "error_type": "Conceptual Error",
+        "final_block_found": false,
+        "first_wrong_step": "A 25% increase means the final price is 25% of the original, which would be 20.",
+        "has_error": true,
+        "json_found": true,
+        "parse_ok": true
+      },
+      "problem": "价格80增加25%后，新价格是多少？",
+      "prompt_contains_gold_label_or_error_annotation": false,
+      "prompt_variant": "direct_json_final_only",
+      "route_id": "zh_en",
+      "selection_reason": "e136_base_or_check_failed_to_reject",
+      "source_kind": "strict_invalid_failure",
+      "span_hit": true,
+      "task_id": "e132_zh_en_increase_base_repaired_strict_invalid",
+      "thinking": false,
+      "variant": "repaired_strict_invalid",
+      "visible_trace": "A 25% increase means the final price is 25% of the original, which would be 20. For an increase, add 25% of 80 to the original, so 80+20 = 100.\nFinal answer: 100"
+    }
+  ],
+  "scope_note_zh": "E139.5 只测试 base/no-check 与 locate-only prompt 下能否直接定位错步；不要求整体接受/拒绝 trace。",
+  "selected_rows": [
+    {
+      "audit_idx": 1320034,
+      "expected_error_span": "25% increase means the final price is 25% of the original",
+      "failure_policy_names": [
+        "plain_base_no_check_accept",
+        "plain_always_global_check_accept",
+        "plain_hidden_global_check_accept",
+        "strict_always_global_check_accept",
+        "strict_hidden_global_check_accept"
+      ],
+      "family": "percentage_base",
+      "manual_process_valid_strict": false,
+      "route_id": "en_en",
+      "source_kind": "strict_invalid_failure",
+      "variant": "repaired_strict_invalid"
+    },
+    {
+      "audit_idx": 1320044,
+      "expected_error_span": "25% increase means the final price is 25% of the original",
+      "failure_policy_names": [
+        "plain_base_no_check_accept"
+      ],
+      "family": "percentage_base",
+      "manual_process_valid_strict": false,
+      "route_id": "zh_en",
+      "source_kind": "strict_invalid_failure",
+      "variant": "repaired_strict_invalid"
+    },
+    {
+      "audit_idx": 1320054,
+      "expected_error_span": "25% increase means final price is 25% of 80，也就是20。",
+      "failure_policy_names": [
+        "plain_base_no_check_accept",
+        "plain_always_global_check_accept",
+        "plain_hidden_global_check_accept",
+        "plain_hidden_local_check_accept",
+        "strict_always_global_check_accept",
+        "strict_hidden_global_check_accept",
+        "strict_hidden_local_check_accept"
+      ],
+      "family": "percentage_base",
+      "manual_process_valid_strict": false,
+      "route_id": "mixed",
+      "source_kind": "strict_invalid_failure",
+      "variant": "repaired_strict_invalid"
+    },
+    {
+      "audit_idx": 1320059,
+      "expected_error_span": "zengjia 25% shi zuihou jiage dengyu yuanjia de 25%, yejiu shi 20.",
+      "failure_policy_names": [
+        "plain_base_no_check_accept",
+        "plain_always_global_check_accept",
+        "plain_hidden_global_check_accept",
+        "strict_always_global_check_accept",
+        "strict_hidden_global_check_accept"
+      ],
+      "family": "percentage_base",
+      "manual_process_valid_strict": false,
+      "route_id": "romanized_zh",
+      "source_kind": "strict_invalid_failure",
+      "variant": "repaired_strict_invalid"
+    },
+    {
+      "audit_idx": 1320030,
+      "expected_error_span": "",
+      "failure_policy_names": [],
+      "family": "percentage_base",
+      "manual_process_valid_strict": true,
+      "route_id": "en_en",
+      "source_kind": "valid_control::clean_valid",
+      "variant": "clean_valid"
+    },
+    {
+      "audit_idx": 1320040,
+      "expected_error_span": "",
+      "failure_policy_names": [],
+      "family": "percentage_base",
+      "manual_process_valid_strict": true,
+      "route_id": "zh_en",
+      "source_kind": "valid_control::clean_valid",
+      "variant": "clean_valid"
+    },
+    {
+      "audit_idx": 1320050,
+      "expected_error_span": "",
+      "failure_policy_names": [],
+      "family": "percentage_base",
+      "manual_process_valid_strict": true,
+      "route_id": "mixed",
+      "source_kind": "valid_control::clean_valid",
+      "variant": "clean_valid"
+    },
+    {
+      "audit_idx": 1320055,
+      "expected_error_span": "",
+      "failure_policy_names": [],
+      "family": "percentage_base",
+      "manual_process_valid_strict": true,
+      "route_id": "romanized_zh",
+      "source_kind": "valid_control::clean_valid",
+      "variant": "clean_valid"
+    },
+    {
+      "audit_idx": 1320033,
+      "expected_error_span": "",
+      "failure_policy_names": [],
+      "family": "percentage_base",
+      "manual_process_valid_strict": true,
+      "route_id": "en_en",
+      "source_kind": "valid_control::low_conf_valid",
+      "variant": "low_conf_valid"
+    },
+    {
+      "audit_idx": 1320043,
+      "expected_error_span": "",
+      "failure_policy_names": [],
+      "family": "percentage_base",
+      "manual_process_valid_strict": true,
+      "route_id": "zh_en",
+      "source_kind": "valid_control::low_conf_valid",
+      "variant": "low_conf_valid"
+    },
+    {
+      "audit_idx": 1320053,
+      "expected_error_span": "",
+      "failure_policy_names": [],
+      "family": "percentage_base",
+      "manual_process_valid_strict": true,
+      "route_id": "mixed",
+      "source_kind": "valid_control::low_conf_valid",
+      "variant": "low_conf_valid"
+    },
+    {
+      "audit_idx": 1320058,
+      "expected_error_span": "",
+      "failure_policy_names": [],
+      "family": "percentage_base",
+      "manual_process_valid_strict": true,
+      "route_id": "romanized_zh",
+      "source_kind": "valid_control::low_conf_valid",
+      "variant": "low_conf_valid"
+    },
+    {
+      "audit_idx": 1320031,
+      "expected_error_span": "",
+      "failure_policy_names": [],
+      "family": "percentage_base",
+      "manual_process_valid_strict": true,
+      "route_id": "en_en",
+      "source_kind": "valid_control::suspicious_valid_marker",
+      "variant": "suspicious_valid_marker"
+    },
+    {
+      "audit_idx": 1320041,
+      "expected_error_span": "",
+      "failure_policy_names": [],
+      "family": "percentage_base",
+      "manual_process_valid_strict": true,
+      "route_id": "zh_en",
+      "source_kind": "valid_control::suspicious_valid_marker",
+      "variant": "suspicious_valid_marker"
+    },
+    {
+      "audit_idx": 1320051,
+      "expected_error_span": "",
+      "failure_policy_names": [],
+      "family": "percentage_base",
+      "manual_process_valid_strict": true,
+      "route_id": "mixed",
+      "source_kind": "valid_control::suspicious_valid_marker",
+      "variant": "suspicious_valid_marker"
+    },
+    {
+      "audit_idx": 1320056,
+      "expected_error_span": "",
+      "failure_policy_names": [],
+      "family": "percentage_base",
+      "manual_process_valid_strict": true,
+      "route_id": "romanized_zh",
+      "source_kind": "valid_control::suspicious_valid_marker",
+      "variant": "suspicious_valid_marker"
+    }
+  ],
+  "source_data_jsonl": "data/processed/e132_suspicious_valid_controls_20260430.jsonl",
+  "source_e136_result": "results/E136_suspicious_confidence_adaptive_check/qwen35_27b_e136_suspicious_confidence_adaptive_check_rowspervariant12.json",
+  "started_at": "2026-04-30T21:14:10",
+  "summary": {
+    "by_slice": {
+      "all": {
+        "hit_max_rate": 0.0,
+        "invalid_has_error_rate": 1.0,
+        "invalid_n": 6,
+        "invalid_span_hit_rate": 1.0,
+        "n": 6,
+        "parse_ok_rate": 1.0,
+        "valid_false_error_rate": null,
+        "valid_n": 0,
+        "valid_no_error_rate": null
+      },
+      "family=percentage_base": {
+        "hit_max_rate": 0.0,
+        "invalid_has_error_rate": 1.0,
+        "invalid_n": 6,
+        "invalid_span_hit_rate": 1.0,
+        "n": 6,
+        "parse_ok_rate": 1.0,
+        "valid_false_error_rate": null,
+        "valid_n": 0,
+        "valid_no_error_rate": null
+      },
+      "prompt=base_span_only": {
+        "hit_max_rate": 0.0,
+        "invalid_has_error_rate": 1.0,
+        "invalid_n": 2,
+        "invalid_span_hit_rate": 1.0,
+        "n": 2,
+        "parse_ok_rate": 1.0,
+        "valid_false_error_rate": null,
+        "valid_n": 0,
+        "valid_no_error_rate": null
+      },
+      "prompt=direct_json_final_only": {
+        "hit_max_rate": 0.0,
+        "invalid_has_error_rate": 1.0,
+        "invalid_n": 2,
+        "invalid_span_hit_rate": 1.0,
+        "n": 2,
+        "parse_ok_rate": 1.0,
+        "valid_false_error_rate": null,
+        "valid_n": 0,
+        "valid_no_error_rate": null
+      },
+      "prompt=strong_span_only": {
+        "hit_max_rate": 0.0,
+        "invalid_has_error_rate": 1.0,
+        "invalid_n": 2,
+        "invalid_span_hit_rate": 1.0,
+        "n": 2,
+        "parse_ok_rate": 1.0,
+        "valid_false_error_rate": null,
+        "valid_n": 0,
+        "valid_no_error_rate": null
+      },
+      "route=en_en": {
+        "hit_max_rate": 0.0,
+        "invalid_has_error_rate": 1.0,
+        "invalid_n": 3,
+        "invalid_span_hit_rate": 1.0,
+        "n": 3,
+        "parse_ok_rate": 1.0,
+        "valid_false_error_rate": null,
+        "valid_n": 0,
+        "valid_no_error_rate": null
+      },
+      "route=zh_en": {
+        "hit_max_rate": 0.0,
+        "invalid_has_error_rate": 1.0,
+        "invalid_n": 3,
+        "invalid_span_hit_rate": 1.0,
+        "n": 3,
+        "parse_ok_rate": 1.0,
+        "valid_false_error_rate": null,
+        "valid_n": 0,
+        "valid_no_error_rate": null
+      },
+      "source=strict_invalid_failure": {
+        "hit_max_rate": 0.0,
+        "invalid_has_error_rate": 1.0,
+        "invalid_n": 6,
+        "invalid_span_hit_rate": 1.0,
+        "n": 6,
+        "parse_ok_rate": 1.0,
+        "valid_false_error_rate": null,
+        "valid_n": 0,
+        "valid_no_error_rate": null
+      }
+    },
+    "leakage_audit": {
+      "gold_answer_in_prompt_rows": 0,
+      "labels_in_prompt_rows": 0,
+      "manual_error_span_annotation_in_prompt_rows": 0,
+      "note_zh": "Prompts contain only problem and visible candidate solution. Manual labels/gold/error spans are used only offline.",
+      "passed": true
+    }
+  }
+}

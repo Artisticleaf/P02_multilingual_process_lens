@@ -1,0 +1,17 @@
+[2026-04-28T00:30:01] loading qwen35_9b on cuda; pairs=12
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/427 [00:00<?, ?it/s]Loading weights: 100%|██████████| 427/427 [00:00<00:00, 15458.43it/s]
+pair=e39_mean_vs_median_bad390002_valid390001_qwen35_9b base_valid=3.250 base_bad=-0.375 layers=[0, 4, 8, 12, 14, 16, 20, 24, 28]
+pair=e39_range_vs_average_bad390012_valid390011_qwen35_9b base_valid=3.062 base_bad=0.875 layers=[0, 4, 8, 12, 14, 16, 20, 24, 28]
+pair=e39_coefficient_vs_exponent_bad390022_valid390021_qwen35_9b base_valid=3.875 base_bad=3.062 layers=[0, 4, 8, 12, 14, 16, 20, 24, 28]
+pair=e39_reciprocal_vs_additive_inverse_bad390032_valid390031_qwen35_9b base_valid=3.438 base_bad=0.500 layers=[0, 4, 8, 12, 14, 16, 20, 24, 28]
+pair=e39_percent_increase_vs_percent_of_bad390042_valid390041_qwen35_9b base_valid=3.125 base_bad=0.875 layers=[0, 4, 8, 12, 14, 16, 20, 24, 28]
+pair=e39_prob_without_replacement_bad390052_valid390051_qwen35_9b base_valid=2.438 base_bad=-1.250 layers=[0, 4, 8, 12, 14, 16, 20, 24, 28]
+pair=e39_each_vs_total_bad390062_valid390061_qwen35_9b base_valid=3.438 base_bad=-0.625 layers=[0, 4, 8, 12, 14, 16, 20, 24, 28]
+pair=e39_log_base_argument_bad390072_valid390071_qwen35_9b base_valid=3.562 base_bad=2.125 layers=[0, 4, 8, 12, 14, 16, 20, 24, 28]
+pair=e39_round_vs_truncate_bad390082_valid390081_qwen35_9b base_valid=2.875 base_bad=2.562 layers=[0, 4, 8, 12, 14, 16, 20, 24, 28]
+pair=e39_zh_perimeter_vs_area_bad390092_valid390091_qwen35_9b base_valid=3.625 base_bad=0.875 layers=[0, 4, 8, 12, 14, 16, 20, 24, 28]
+pair=e39_zh_yi_wan_unit_bad390102_valid390101_qwen35_9b base_valid=3.750 base_bad=0.375 layers=[0, 4, 8, 12, 14, 16, 20, 24, 28]
+pair=e39_zh_exclusive_interval_bad390112_valid390111_qwen35_9b base_valid=3.687 base_bad=0.125 layers=[0, 4, 8, 12, 14, 16, 20, 24, 28]
+wrote results/E40_surface_semantic_span_patch/qwen35_9b_real_acpi_span_patch.json; rows=108 best_pair=e39_zh_exclusive_interval_bad390112_valid390111_qwen35_9b span=support_error_span L8 v2b=3.062 b2v=-4.187

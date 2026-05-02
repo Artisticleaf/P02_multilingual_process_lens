@@ -1,0 +1,247 @@
+{
+  "passed": true,
+  "issues": [],
+  "checks": {
+    "e43_data": {
+      "rows": 24,
+      "pairs": 12,
+      "balanced_cells": 24,
+      "span_ok": true,
+      "ok": true
+    },
+    "e43_results": {
+      "qwen35_9b": {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E43_paraphrase_transfer_patch/qwen35_9b_e43_paraphrase_transfer_chat.json",
+        "used_chat_template": true,
+        "add_special_tokens": false,
+        "rows": 192,
+        "controls": [
+          "mismatched_family",
+          "same_family"
+        ],
+        "ok": true
+      },
+      "qwen3_14b_base": {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E43_paraphrase_transfer_patch/qwen3_14b_base_e43_paraphrase_transfer_raw.json",
+        "used_chat_template": false,
+        "add_special_tokens": true,
+        "rows": 240,
+        "controls": [
+          "mismatched_family",
+          "same_family"
+        ],
+        "ok": true
+      }
+    },
+    "e44_results": {
+      "qwen35_9b": {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E44_mlp_direction_steering/qwen35_9b_e44_mlp_direction_steering_chat.json",
+        "used_chat_template": true,
+        "add_special_tokens": false,
+        "rows": 1152,
+        "heldout_tasks": [
+          "each_vs_total",
+          "percent_increase_vs_percent_of",
+          "prob_without_replacement",
+          "reciprocal_vs_additive_inverse",
+          "zh_exclusive_interval",
+          "zh_perimeter_vs_area"
+        ],
+        "controls": [
+          "opposite_direction",
+          "process_direction",
+          "random_same_norm"
+        ],
+        "ok": true
+      },
+      "qwen35_27b": {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E44_mlp_direction_steering/qwen35_27b_e44_mlp_direction_steering_chat.json",
+        "used_chat_template": true,
+        "add_special_tokens": false,
+        "rows": 1152,
+        "heldout_tasks": [
+          "each_vs_total",
+          "percent_increase_vs_percent_of",
+          "prob_without_replacement",
+          "reciprocal_vs_additive_inverse",
+          "zh_exclusive_interval",
+          "zh_perimeter_vs_area"
+        ],
+        "controls": [
+          "opposite_direction",
+          "process_direction",
+          "random_same_norm"
+        ],
+        "ok": true
+      },
+      "qwen3_14b_base": {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E44_mlp_direction_steering/qwen3_14b_base_e44_mlp_direction_steering_raw.json",
+        "used_chat_template": false,
+        "add_special_tokens": true,
+        "rows": 1440,
+        "heldout_tasks": [
+          "each_vs_total",
+          "percent_increase_vs_percent_of",
+          "prob_without_replacement",
+          "reciprocal_vs_additive_inverse",
+          "zh_exclusive_interval",
+          "zh_perimeter_vs_area"
+        ],
+        "controls": [
+          "opposite_direction",
+          "process_direction",
+          "random_same_norm"
+        ],
+        "ok": true
+      },
+      "gemma4_31b_it": {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E44_mlp_direction_steering/gemma4_31b_it_e44_mlp_direction_steering_chat.json",
+        "used_chat_template": true,
+        "add_special_tokens": false,
+        "rows": 1152,
+        "heldout_tasks": [
+          "each_vs_total",
+          "percent_increase_vs_percent_of",
+          "prob_without_replacement",
+          "reciprocal_vs_additive_inverse",
+          "zh_exclusive_interval",
+          "zh_perimeter_vs_area"
+        ],
+        "controls": [
+          "opposite_direction",
+          "process_direction",
+          "random_same_norm"
+        ],
+        "ok": true
+      },
+      "gemma4_26b_a4b_it": {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E44_mlp_direction_steering/gemma4_26b_a4b_it_e44_mlp_direction_steering_chat.json",
+        "used_chat_template": true,
+        "add_special_tokens": false,
+        "rows": 1152,
+        "heldout_tasks": [
+          "each_vs_total",
+          "percent_increase_vs_percent_of",
+          "prob_without_replacement",
+          "reciprocal_vs_additive_inverse",
+          "zh_exclusive_interval",
+          "zh_perimeter_vs_area"
+        ],
+        "controls": [
+          "opposite_direction",
+          "process_direction",
+          "random_same_norm"
+        ],
+        "ok": true
+      }
+    },
+    "generation_results": {
+      "e46_gemma4_31b_it_conditioned_generation": {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E46_E47_conditioned_generation/e46_gemma4_31b_it_conditioned_generation.json",
+        "summary": {
+          "final_correct": 5,
+          "n": 6,
+          "needs_manual_process_audit": 0,
+          "not_final_correct": 1,
+          "process_invalid_final_correct": 0
+        },
+        "chat_tokenization_ok": true,
+        "final_flags_consistent": true,
+        "gold_answer_in_prompt_rows": 0,
+        "natural_no_gold_ok_or_answer_anchor": true,
+        "ok": true
+      },
+      "e46_qwen35_27b_answer_first_conditioned_generation": {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E46_E47_conditioned_generation/e46_qwen35_27b_answer_first_conditioned_generation.json",
+        "summary": {
+          "final_correct": 24,
+          "n": 24,
+          "needs_manual_process_audit": 0,
+          "not_final_correct": 0,
+          "process_invalid_final_correct": 0
+        },
+        "chat_tokenization_ok": true,
+        "final_flags_consistent": true,
+        "gold_answer_in_prompt_rows": 0,
+        "natural_no_gold_ok_or_answer_anchor": true,
+        "ok": true
+      },
+      "e46_qwen35_27b_conditioned_generation": {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E46_E47_conditioned_generation/e46_qwen35_27b_conditioned_generation.json",
+        "summary": {
+          "final_correct": 8,
+          "n": 12,
+          "needs_manual_process_audit": 0,
+          "not_final_correct": 4,
+          "process_invalid_final_correct": 0
+        },
+        "chat_tokenization_ok": true,
+        "final_flags_consistent": true,
+        "gold_answer_in_prompt_rows": 0,
+        "natural_no_gold_ok_or_answer_anchor": true,
+        "ok": true
+      },
+      "e46_qwen35_27b_shortcut_conditioned_generation": {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E46_E47_conditioned_generation/e46_qwen35_27b_shortcut_conditioned_generation.json",
+        "summary": {
+          "n": 24,
+          "final_correct": 24,
+          "process_invalid_final_correct": 0,
+          "not_final_correct": 0,
+          "needs_manual_process_audit": 0
+        },
+        "chat_tokenization_ok": true,
+        "final_flags_consistent": true,
+        "gold_answer_in_prompt_rows": 0,
+        "natural_no_gold_ok_or_answer_anchor": true,
+        "ok": true
+      },
+      "e47_qwen35_27b_answer_anchor_conditioned_generation": {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E46_E47_conditioned_generation/e47_qwen35_27b_answer_anchor_conditioned_generation.json",
+        "summary": {
+          "n": 3,
+          "final_correct": 2,
+          "process_invalid_final_correct": 0,
+          "not_final_correct": 1,
+          "needs_manual_process_audit": 0,
+          "gold_answer_in_prompt": 3
+        },
+        "chat_tokenization_ok": true,
+        "final_flags_consistent": true,
+        "gold_answer_in_prompt_rows": 3,
+        "natural_no_gold_ok_or_answer_anchor": true,
+        "ok": true
+      },
+      "e47_qwen35_27b_answer_first_conditioned_generation": {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E46_E47_conditioned_generation/e47_qwen35_27b_answer_first_conditioned_generation.json",
+        "summary": {
+          "final_correct": 0,
+          "n": 6,
+          "needs_manual_process_audit": 0,
+          "not_final_correct": 6,
+          "process_invalid_final_correct": 0
+        },
+        "chat_tokenization_ok": true,
+        "final_flags_consistent": true,
+        "gold_answer_in_prompt_rows": 0,
+        "natural_no_gold_ok_or_answer_anchor": true,
+        "ok": true
+      },
+      "e47_qwen35_27b_conditioned_generation": {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E46_E47_conditioned_generation/e47_qwen35_27b_conditioned_generation.json",
+        "summary": {
+          "final_correct": 0,
+          "n": 6,
+          "needs_manual_process_audit": 0,
+          "not_final_correct": 6,
+          "process_invalid_final_correct": 0
+        },
+        "chat_tokenization_ok": true,
+        "final_flags_consistent": true,
+        "gold_answer_in_prompt_rows": 0,
+        "natural_no_gold_ok_or_answer_anchor": true,
+        "ok": true
+      }
+    }
+  }
+}

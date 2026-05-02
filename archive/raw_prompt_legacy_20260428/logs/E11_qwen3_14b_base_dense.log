@@ -1,0 +1,8 @@
+/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+[2026-04-27T04:16:35] loading qwen3_14b_base on cuda; pairs=2
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 427.84it/s]
+pair=qwen14_deriv_sum_zh_402_bad_403_valid base_valid=2.875 base_bad=2.125 layers=[9, 14, 20, 25, 30]
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid base_valid=2.125 base_bad=2.625 layers=[9, 14, 20, 25, 30, 38]
+wrote results/E11_real_acpi_span_patch_dense/qwen3_14b_base_real_acpi_span_patch.json; rows=44 best_pair=qwen14_dabazhe_zh_en_445_bad_442_valid span=support_error_span L9 v2b=0.125 b2v=-2.750

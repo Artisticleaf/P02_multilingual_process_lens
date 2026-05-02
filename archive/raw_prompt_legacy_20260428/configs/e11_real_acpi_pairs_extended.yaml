@@ -1,0 +1,37 @@
+pairs:
+  - id: qwen14_deriv_sum_zh_402_bad_403_valid
+    model_key: qwen3_14b_base
+    valid_idx: 403
+    bad_idx: 402
+    support_span: "对于 3x，使用常数乘法的求导规则 (c * g(x))' = c * g'(x)，其中 c=3 和 g(x)=x，得到 (3x)' = 3 * 1 = 3"
+    error_span: "3 是常数，常数的导数为 0，所以 (3x)' = 3"
+    final_span_valid: "Final answer: 2x + 3"
+    final_span_bad: "Final answer: 2x + 3"
+    layers: [9, 14, 20, 25, 30]
+  - id: qwen14_dabazhe_zh_en_445_bad_442_valid
+    model_key: qwen3_14b_base
+    valid_idx: 442
+    bad_idx: 445
+    support_span: "计算打八折后的价格：100美元 * 0.8 = 80美元"
+    error_span: "apply an 80% discount"
+    final_span_valid: "Final answer: 80美元"
+    final_span_bad: "Final answer: 80 * 1.25 * 0.80"
+    layers: [9, 14, 20, 25, 30, 38]
+  - id: qwen35_discount_zh_234_bad_235_valid
+    model_key: qwen35_9b
+    valid_idx: 235
+    bad_idx: 234
+    support_span: "80 \\times 0.25 = 20"
+    error_span: "打八折，即原价的75%"
+    final_span_valid: "Final answer: 60美元"
+    final_span_bad: "Final answer: 60美元"
+    layers: [1, 3, 8, 16, 24, 31]
+  - id: qwen35_ratio_zh_en_261_bad_260_valid
+    model_key: qwen35_9b
+    valid_idx: 260
+    bad_idx: 261
+    support_span: "Number of Girls} = 64 - 24 = 40"
+    error_span: "64 - 2 = 62名"
+    final_span_valid: "Final answer: 40名女生"
+    final_span_bad: "Final answer: 40"
+    layers: [1, 3, 8, 16, 24, 31]

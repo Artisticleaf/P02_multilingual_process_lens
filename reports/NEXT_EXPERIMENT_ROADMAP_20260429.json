@@ -1,0 +1,616 @@
+{
+  "created_at": "2026-04-29",
+  "current_execution": {
+    "active_experiment": "E137-E140 completed; no active GPU experiment",
+    "key_artifacts": [
+      "reports/E137_E140_ADAPTIVE_NATURAL_CHECK_SYNTHESIS_20260430.md",
+      "reports/E137_E140_ADAPTIVE_NATURAL_CHECK_SYNTHESIS_20260430.json",
+      "reports/E1395_BASE_SPAN_LOCALIZATION_FORMAT_FIXED_20260430.md",
+      "results/E137_hidden_trigger_threshold_calibration/",
+      "results/E138_natural_hidden_trigger_check/",
+      "results/E140_natural_check_rationale_audit/"
+    ],
+    "last_completed": [
+      "E137",
+      "E138",
+      "E139",
+      "E139.5",
+      "E140"
+    ],
+    "next": "Prioritize E141 rationale taxonomy, E142 online trigger scaffold without label-informed prefixes, E144 caution-token intervention, and Gemma26 unrepaired ACPI deep dive. Treat E138 as diagnostic/offline, not deployable online monitoring.",
+    "status": "E137 threshold calibration, E138 natural hidden-trigger check, E140 rationale audit, and E139.5 format-fixed span localization completed and documented; no tmux/GPU inference job is currently running."
+  },
+  "execution_policy": "Proceed automatically with routine experiment implementation, execution, auditing, analysis, and history/KG updates unless blocked by license, destructive action, or major claim reversal.",
+  "experiments": [
+    {
+      "artifacts": [
+        "scripts/build_e61_language_error_grid.py",
+        "scripts/run_e61_language_error_grid.py",
+        "scripts/audit_e61_language_error_grid.py",
+        "scripts/launch_e61_language_error_grid_queue_20260429.sh",
+        "data/processed/e61_language_error_grid_20260429.jsonl",
+        "configs/e61_language_error_grid_pairs.yaml",
+        "reports/E61_LANGUAGE_ERROR_GRID_20260429.md"
+      ],
+      "id": "E61",
+      "key_result": "P0 plain pointwise ACPI accept 0.424; careful/answer-blind/locate 0.188/0.125/0.174; sibling/careful sibling accuracy 0.990/0.986; highest risks romanized_zh/mixed and percentage_base/code_execution/counting_order.",
+      "name": "Language-route x error-taxonomy grid",
+      "priority": "P0",
+      "purpose": "Generalization beyond short English/math traps",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e62_candidate_smoke.py",
+        "scripts/audit_e62_external_p0_smoke.py",
+        "scripts/launch_e62_external_p0_smoke_queue_20260429.sh",
+        "results/E62_external_p0_smoke/",
+        "reports/E62_EXTERNAL_P0_SMOKE_20260429.md",
+        "reports/E62_EXTERNAL_P0_SMOKE_AUDIT_20260429.json"
+      ],
+      "id": "E62",
+      "key_result": "GLM-4.7-Flash passed E62 and is admitted as expanded P0 evidence for E63; Nemotron Cascade 2 30B-A3B is backend-blocked by missing mamba-ssm for HF hidden-state experiments; EXAONE 4.5 33B is backend/license-limited under current env and not official evidence.",
+      "name": "External P0 candidate smoke",
+      "priority": "P0",
+      "purpose": "Promote or reject Nemotron/GLM/EXAONE candidates",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "reports/E63_GLM_EXPANDED_P0_REPLICATION_20260429.md",
+        "reports/E63_GLM_EXPANDED_P0_REPLICATION_AUDIT_20260429.json"
+      ],
+      "id": "E63",
+      "key_result": "GLM-4.7-Flash replicated pointwise ACPI over-acceptance but exposed a boundary: raw A/B sibling is weak under GLM due to label/position and contrastive-discrimination issues; layer-16 mechanism smoke was weak.",
+      "name": "External P0 replication",
+      "priority": "P0",
+      "purpose": "Expanded-P0 GLM replication of E42/E60/E61 plus mechanism feasibility checks",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "reports/E64_GLM_HARD_TASK_EXPANSION_20260429.md",
+        "reports/E64_GLM_HARD_TASK_EXPANSION_AUDIT_20260429.json",
+        "results/E64_natural_hard_task_expansion/"
+      ],
+      "id": "E64",
+      "key_result": "GLM hard-task natural generation k=4 over 6 AIME-style tasks produced 8/72 final-correct rows; all 8 were manually audited process-valid; no new natural ACPI.",
+      "name": "Larger natural and hard-task harvesting",
+      "priority": "P0",
+      "purpose": "Estimate natural/unrepaired ACPI prevalence",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e65_mechanistic_layer_sweep.py",
+        "reports/E65_MECHANISTIC_LAYER_SWEEP_20260429.md",
+        "results/E65_mechanistic_layer_sweep/"
+      ],
+      "id": "E65",
+      "key_result": "E61 layer sweep found strong residual process-validity directions in all core/expanded P0 models; best LOTO accuracy qwen/gemma31 1.000, gemma26 0.927, GLM 0.979.",
+      "name": "Mechanistic layer sweep",
+      "priority": "P0",
+      "purpose": "Layer-wise residual/token-mixer/MLP evidence",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e66_contrastive_label_calibration.py",
+        "reports/E66_CONTRASTIVE_LABEL_CALIBRATION_20260429.md",
+        "results/E66_contrastive_label_calibration/"
+      ],
+      "id": "E66",
+      "key_result": "Contrastive label calibration showed core P0 sibling is robust without needing calibration, while GLM sibling weakness is only partly explained by A/B bias.",
+      "name": "Path-specific mediation",
+      "priority": "P0",
+      "purpose": "Residual/token-mixer/MLP to Yes-No and A-B logits",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e67_span_local_observability.py",
+        "reports/E67_SPAN_LOCAL_OBSERVABILITY_20260429.md",
+        "results/E67_span_local_observability/"
+      ],
+      "id": "E67",
+      "key_result": "Span-local observability showed literal error-span matching is brittle across multilingual routes, but E65 hidden probes still reject strict ACPI even without literal span matches.",
+      "name": "Span-local mechanism",
+      "priority": "P1",
+      "purpose": "Error-span/support-span/final-answer token patching",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e68_filter_amplification_expanded.py",
+        "reports/E68_FILTER_AMPLIFICATION_EXPANDED_20260429.md",
+        "results/E68_filter_amplification_expanded/"
+      ],
+      "id": "E68",
+      "key_result": "Expanded filter simulation over E60/E61 showed outcome-only keeps all strict ACPI; plain pointwise retains large fractions; stronger pointwise reduces risk; sibling suppresses core P0 risk but GLM weakens expanded-P0 aggregate.",
+      "name": "Filter amplification loop",
+      "priority": "P1",
+      "purpose": "Selection pipeline amplification of ACPI",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e69_strict_vs_repair_boundary.py",
+        "reports/E69_STRICT_VS_REPAIR_BOUNDARY_20260429.md",
+        "results/E69_strict_vs_repair_boundary/"
+      ],
+      "id": "E69",
+      "key_result": "Strict-vs-repair audit showed 55/78 controlled strict ACPI rows include explicit repair/override markers; paper must frame controlled claim as strict trace-selection risk and separate unrepaired ACPI.",
+      "name": "Formal/executable trace checking",
+      "priority": "P1",
+      "purpose": "Separate tool-checkable and semantic verifier risks",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e70_statistics_audit_appendix.py",
+        "reports/E70_STATISTICS_AUDIT_APPENDIX_20260429.md",
+        "results/E70_statistics_audit_appendix/"
+      ],
+      "id": "E70",
+      "key_result": "Statistics appendix added Wilson CIs and E61 leave-one-family sensitivity; GLM rows are marked expanded-P0 boundary evidence.",
+      "name": "Statistics and audit appendix",
+      "priority": "P0",
+      "purpose": "Bootstrap CI, family LOO, audit appendix",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e71_repair_objective.py",
+        "results/E71_repair_objective/",
+        "reports/E71_E79_REPAIR_HIDDEN_LABELFREE_AUDIT_20260429.md"
+      ],
+      "id": "E71",
+      "key_result": "Strict_process rejects most controlled invalid traces, but core P0 accepts both Gemma26 unrepaired hard-task ACPI cases; repair-aware/final-surviving objectives substantially increase acceptance of repaired traces.",
+      "name": "Strict vs repair-aware verifier objective",
+      "priority": "P0",
+      "purpose": "Separate strict trace-selection from repair-aware CoT-as-scratchpad reading",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e78_hidden_probe_false_positive_audit.py",
+        "results/E78_hidden_probe_false_positive_audit/",
+        "reports/E71_E79_REPAIR_HIDDEN_LABELFREE_AUDIT_20260429.md"
+      ],
+      "id": "E78",
+      "key_result": "Leave-one-task/family/route accuracies remain high across core/expanded P0 and permutation nulls stay near chance; Gemma26 shows valid false rejections, so the signal is strong but not perfectly invalid-only.",
+      "name": "Hidden-probe false-positive audit",
+      "priority": "P0",
+      "purpose": "Test whether residual process-validity probes survive leave-one and permutation controls",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e79_glm_label_free_sibling.py",
+        "results/E79_glm_label_free_sibling/",
+        "reports/E71_E79_REPAIR_HIDDEN_LABELFREE_AUDIT_20260429.md"
+      ],
+      "id": "E79",
+      "key_result": "Raw GLM sibling formats are weak due to first-option/label readout bias, but label-free two-pass reaches 0.990 accuracy.",
+      "name": "GLM label-free sibling readout",
+      "priority": "P0",
+      "purpose": "Diagnose whether GLM sibling failure is a process blind spot or label/readout bottleneck",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e76_e77_hardtask_hidden_replay.py",
+        "results/E76_E77_hardtask_hidden_replay/gemma4_31b_it_e76_e77_hidden_replay_repaired_acpi_chat.json",
+        "reports/E71_E79_REPAIR_HIDDEN_LABELFREE_AUDIT_20260429.md"
+      ],
+      "id": "E76",
+      "key_result": "Teacher-forced projected scores did not show a simple repair-turns-positive trajectory; only projected scores were saved, not full hidden tensors.",
+      "name": "Gemma31 repaired hard-task hidden replay",
+      "priority": "P1",
+      "purpose": "Probe hidden trajectory in repaired hard-task ACPI traces",
+      "status": "completed_boundary_result"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e76_e77_hardtask_hidden_replay.py",
+        "results/E76_E77_hardtask_hidden_replay/gemma4_26b_a4b_it_e76_e77_hidden_replay_unrepaired_acpi_chat.json",
+        "reports/E71_E79_REPAIR_HIDDEN_LABELFREE_AUDIT_20260429.md"
+      ],
+      "id": "E77",
+      "key_result": "Error-span projected scores are negative, while final-answer scores become less negative; this is suggestive but not conclusive because the direction is transferred across prompt contexts.",
+      "name": "Gemma26 unrepaired hard-task hidden replay",
+      "priority": "P1",
+      "purpose": "Probe hidden trajectory in the two unrepaired hard-task ACPI cases",
+      "status": "completed_boundary_result"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e80_progressive_prefix_replay.py",
+        "results/E80_progressive_prefix_replay/",
+        "reports/E80_E84_PREFIX_LABELFREE_PREVALENCE_MEDIATION_20260429.md"
+      ],
+      "id": "E80",
+      "key_result": "Gemma31 repaired ACPI flips from accepted early wrong-answer prefixes to rejected after repair markers; Gemma26 unrepaired ACPI is accepted already at the erroneous factorization prefix and remains accepted.",
+      "name": "Progressive-prefix verifier replay",
+      "priority": "P0",
+      "purpose": "Track strict verifier hidden/logit dynamics as hard-task traces are revealed prefix by prefix",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e79_glm_label_free_sibling.py",
+        "results/E81_label_free_sibling_allp0/",
+        "results/E81_label_free_sibling_fulloption_check/",
+        "reports/E80_E84_PREFIX_LABELFREE_PREVALENCE_MEDIATION_20260429.md"
+      ],
+      "id": "E81",
+      "key_result": "Core P0 remains robust across label formats after full-option correction; GLM raw labels remain weak but label-free two-pass is near-perfect. Trace1/Trace2 first-token scoring was identified as an artifact and corrected.",
+      "name": "Label-free sibling across all P0",
+      "priority": "P0",
+      "purpose": "Separate sibling information from raw output-label artifacts across Qwen/Gemma/GLM",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e82_unrepaired_case_ablation.py",
+        "results/E82_unrepaired_case_ablation/",
+        "reports/E80_E84_PREFIX_LABELFREE_PREVALENCE_MEDIATION_20260429.md"
+      ],
+      "id": "E82",
+      "key_result": "Wrong final answers make all verifiers reject, but removed/masked final answers still leave Qwen/Gemma mostly accepting; failure is final-answer anchoring plus subtle locally coherent algebra error, not pure answer-only checking.",
+      "name": "Unrepaired ACPI case ablation",
+      "priority": "P0",
+      "purpose": "Explain why core P0 strict verifiers miss the two Gemma26 unrepaired hard-task ACPI cases",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e83_natural_hardtask_prevalence_audit.py",
+        "results/E83_natural_hardtask_prevalence_audit/",
+        "reports/E80_E84_PREFIX_LABELFREE_PREVALENCE_MEDIATION_20260429.md"
+      ],
+      "id": "E83",
+      "key_result": "Current pool: 288 generated, 127 final-correct audited, 11 strict ACPI, 9 repaired, 2 unrepaired; unrepaired ACPI per generated trace 0.0069 with Wilson CI [0.0019, 0.0250].",
+      "name": "Natural hard-task prevalence audit",
+      "priority": "P0",
+      "purpose": "Pool existing no-gold hard-task generation and human audits to estimate strict/repaired/unrepaired ACPI prevalence",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e84_glm_readout_mediation.py",
+        "results/E84_glm_readout_mediation/",
+        "reports/E80_E84_PREFIX_LABELFREE_PREVALENCE_MEDIATION_20260429.md"
+      ],
+      "id": "E84",
+      "key_result": "For GLM, hidden margin strongly correlates with label-free margin (Pearson 0.883) but weakly with raw A/B margin, supporting a readout/output-label bottleneck.",
+      "name": "GLM hidden-to-readout mediation",
+      "priority": "P0",
+      "purpose": "Compare hidden validity margin, label-free invalid margin, and raw A/B target margin",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e85_hardtask_full_hidden_cache.py",
+        "results/E85_hardtask_full_hidden_cache/"
+      ],
+      "id": "E85",
+      "key_result": "Full-layer key-prefix hidden caches completed for Gemma31 repaired ACPI and Gemma26 unrepaired ACPI; Gemma31 flips from accepted early prefixes to rejected repaired completion, while Gemma26 stays accepted at all key prefixes.",
+      "name": "Hard-task full hidden cache",
+      "priority": "P0",
+      "purpose": "Store full-layer key-token hidden/residual/attention/MLP trajectories for repaired and unrepaired hard-task cases",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e86_algebra_equivalence_adversarial.py",
+        "results/E86_algebra_equivalence_adversarial/"
+      ],
+      "id": "E86",
+      "key_result": "Boundary/negative-control result: short explicit algebra invalid traces are rejected by strict pointwise in all four P0 models (invalid accept 0), while many valid terse traces are over-rejected.",
+      "name": "Algebra-equivalence adversarial set",
+      "priority": "P0",
+      "purpose": "Generalize Gemma26 factorization/sign/root-set failures into controlled algebra traps",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e87_glm_readout_intervention.py",
+        "results/E87_glm_readout_intervention/",
+        "reports/E87_GLM_READOUT_INTERVENTION_20260429.md"
+      ],
+      "id": "E87",
+      "key_result": "GLM readout intervention completed: raw A/B 0.542, two-order antisymmetric 0.812, hidden readout 1.000, label-free two-pass 0.958; supports readout/output-label bottleneck.",
+      "name": "GLM readout intervention",
+      "priority": "P0",
+      "purpose": "Test GLM raw A/B readout bottleneck by bias-centering, two-order antisymmetrization, hidden-readout replacement, and label-free replacement.",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/build_e88_answer_first_audit_sheet.py",
+        "results/E88_answer_first_natural_sample/",
+        "data/processed/e88_answer_first_final_correct_audit_sheet_20260429.jsonl"
+      ],
+      "id": "E88",
+      "key_result": "Answer-first/no-gold natural hard-task audit completed: 192 generated, 63 final-correct, 23 strict ACPI, 22 repaired ACPI, 1 unrepaired ACPI.",
+      "name": "Answer-first no-gold larger natural sample",
+      "priority": "P0",
+      "purpose": "Expand the high-yield natural setting identified by E83 and manually audit new final-correct rows",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e89_repair_policy_filter_simulation.py",
+        "results/E89_repair_policy_filter_simulation/",
+        "reports/E89_REPAIR_POLICY_FILTER_SIMULATION_20260429.md"
+      ],
+      "id": "E89",
+      "key_result": "Repair-policy filter simulation rerun with E88: outcome-only retains all final-correct ACPI; strict policy rejects repaired/unrepaired; repair-aware accepts repaired but rejects unrepaired.",
+      "name": "Repair-policy-aware filter simulation",
+      "priority": "P1",
+      "purpose": "Compare outcome-only, strict, repair-aware, label-free, and raw sibling filters under repaired/unrepaired ACPI labels",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "results/E90_hardtask_component_activation_cache/",
+        "reports/E90_COMPONENT_ACTIVATION_CACHE_20260429.md",
+        "reports/E90_COMPONENT_ACTIVATION_CACHE_20260429.json"
+      ],
+      "id": "E90",
+      "key_result": "E90 captured residual hidden state, token-mixer/attention output, MLP output, and norm outputs. Gemma31 repaired traces show coordinated residual/MLP/post-FF/token-mixer shifts after repair; Gemma26 unrepaired traces remain accepted despite mixed/negative component evidence.",
+      "name": "Component activation cache for hard-task repaired/unrepaired ACPI",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e91_thinking_mode_config_audit.py",
+        "results/E91_thinking_mode_config_audit/",
+        "reports/E91_THINKING_MODE_CONFIG_AUDIT_20260429.md",
+        "reports/THINKING_MODE_AUDIT_AND_RERUN_PLAN_20260429.md"
+      ],
+      "id": "E91",
+      "key_result": "All four core/expanded P0 models differentiate thinking vs non-thinking templates. First-token Yes/No or A/B option-logprob is invalid for thinking-verifier measurements; TV must generate and parse a final decision.",
+      "name": "Thinking-mode config/parser audit",
+      "priority": "P0",
+      "purpose": "Verify P0 chat-template thinking/non-thinking rendering, official local model-card sampling parameters, and parser rules before TG/TV reruns.",
+      "status": "completed_passed_audit"
+    },
+    {
+      "id": "E92",
+      "key_result": "phase-A running: k=2, max_new_tokens=3072; full result pending manual/agent audit.",
+      "mode": "TG",
+      "name": "Thinking hard-task natural harvesting",
+      "priority": "P0",
+      "purpose": "Rerun E57/E88/E64-style AIME hard-task natural generation with thinking enabled and official sampling parameters; audit final-correct rows into strict-valid, repaired ACPI, and unrepaired ACPI.",
+      "source_to_revisit": [
+        "E57",
+        "E88",
+        "E64"
+      ],
+      "status": "running_phaseA"
+    },
+    {
+      "id": "E93",
+      "mode": "TG",
+      "name": "Thinking simple-task natural prevalence",
+      "priority": "P0",
+      "purpose": "Rerun E48-style no-leak simple tasks with thinking enabled to test whether simple-task zero/near-zero ACPI persists under reasoning mode.",
+      "source_to_revisit": [
+        "E48"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "E94",
+      "mode": "TV",
+      "name": "Thinking verifier objective ladder",
+      "priority": "P0",
+      "purpose": "Rerun controlled E42/E54/E61 verifier objectives with thinking enabled and final-decision parsing, not first-token logprob.",
+      "source_to_revisit": [
+        "E42",
+        "E53",
+        "E54",
+        "E60",
+        "E61",
+        "E71"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "E95",
+      "mode": "TV",
+      "name": "Thinking sibling/readout study",
+      "priority": "P0",
+      "purpose": "Test whether GLM/raw-label readout mismatch and core-P0 sibling strength persist when models think and then output final A/B or label-free decisions.",
+      "source_to_revisit": [
+        "E79",
+        "E81",
+        "E84",
+        "E87"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "E96",
+      "mode": "TV",
+      "name": "Thinking strict-vs-repair-aware and hard-case ablation",
+      "priority": "P0",
+      "purpose": "Use thinking verifiers on repaired/unrepaired hard cases, final-answer ablations, and algebra negative controls to separate strict invalidity from repair-aware acceptance.",
+      "source_to_revisit": [
+        "E71",
+        "E80",
+        "E82",
+        "E86"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "E97",
+      "mode": "TG/TV mechanism",
+      "name": "Thinking mechanism capture",
+      "priority": "P0",
+      "purpose": "Capture residual/MLP/token-mixer/attention-related states at thought tokens, repair markers, and final decision tokens under thinking mode.",
+      "source_to_revisit": [
+        "E65",
+        "E78",
+        "E90"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "E98",
+      "mode": "PM",
+      "name": "Mode-stratified filter simulation",
+      "priority": "P0",
+      "purpose": "Recompute outcome-only, DV, TV, sibling, label-free, strict, and repair-aware filters without mixing NG and TG pools.",
+      "source_to_revisit": [
+        "E58",
+        "E68",
+        "E83",
+        "E89"
+      ],
+      "status": "planned_after_E92_E95"
+    },
+    {
+      "id": "E99",
+      "mode": "TG/TV",
+      "name": "Thinking self/cross verifier",
+      "priority": "P1",
+      "purpose": "Check whether self-verifier and cross-family verifier conclusions hold when source traces and judges both use thinking mode.",
+      "source_to_revisit": [
+        "E59"
+      ],
+      "status": "planned_optional"
+    },
+    {
+      "artifacts": [
+        "results/E100_batch_invariance_audit/qwen35_27b_e100_batch_invariance.json",
+        "reports/E100_E102_BATCH_MODE_HIDDEN_CONTRAST_20260429.md"
+      ],
+      "id": "E100",
+      "key_result": "At max_model_len=4096, batch=1/2/4 features are extremely close but not bit-identical; worst min cosine 0.9995675, worst max relative L2 0.03044. Batch size is an engineering confound, not a current threat to hidden-direction conclusions.",
+      "mode": "MI-TG/MI-NG replay",
+      "name": "Batch-size hidden invariance audit",
+      "priority": "P0",
+      "purpose": "Replay fixed Qwen prompt+completion sequences under batch=1/2/4 to test whether residual/MLP/token-mixer/logit readouts are materially changed by batch size.",
+      "status": "completed"
+    },
+    {
+      "artifacts": [
+        "results/E101_batch_generation_sensitivity/qwen35_27b_e101_batch_generation_sensitivity.json",
+        "reports/E100_E102_BATCH_MODE_HIDDEN_CONTRAST_20260429.md"
+      ],
+      "id": "E101",
+      "key_result": "With max_new_tokens=512, both NG_neutral and TG_boxed_neutral hit max for all tested batch sizes and produced no final marker; diagnostic only, not a prevalence estimate.",
+      "mode": "TG/NG generation diagnostic",
+      "name": "Batch-size generation sensitivity smoke",
+      "priority": "P1",
+      "purpose": "Run capped Qwen generation across batch=1/2/4 to see whether generation-time batch sensitivity and closure failures appear without allowing endless thinking.",
+      "status": "completed"
+    },
+    {
+      "artifacts": [
+        "results/E102_thinking_nonthinking_hidden_contrast/qwen35_27b_e102_thinking_nonthinking_hidden_contrast.json",
+        "reports/E100_E102_BATCH_MODE_HIDDEN_CONTRAST_20260429.md"
+      ],
+      "id": "E102",
+      "key_result": "TG traces are much longer than NG traces and often lack final markers. Strict direct-verifier replay accepts NG_E57 rows strongly, rejects NG_E88 repaired answer-first rows, and gives mixed readings for TG_E92. Thinking changes closure/trace form but does not automatically improve trace-selection.",
+      "mode": "MI-TG/MI-NG replay",
+      "name": "Thinking vs non-thinking hidden contrast",
+      "priority": "P0",
+      "purpose": "Compare existing Qwen TG and NG traces in content length, closure behavior, repair markers, strict-verifier hidden process-validity scores, and Yes/No margins.",
+      "status": "completed"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e103_tg_ng_fair_hardtask.py",
+        "scripts/launch_e103_e104_qwen_queue_20260429.sh",
+        "results/E103_tg_ng_fair_hardtask/qwen35_27b_e103_tg_ng_fair_hardtask.json",
+        "reports/E103_E104_TG_NG_FAIRNESS_AUDIT_20260429.md"
+      ],
+      "id": "E103",
+      "key_result": "NG_baseline strict 8/9, NG_matched strict 7/9, TG_official strict 0/9; TG 9/9 hit-max and 0/9 explicit final marker.",
+      "name": "Qwen TG/NG hard-task fairness probe",
+      "priority": "P0_thinking_boundary",
+      "purpose": "Compare Qwen thinking and non-thinking hard-task generation with strict/fallback final separated.",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/build_e104_tg_ng_process_audit_sheet.py",
+        "scripts/finalize_e104_manual_audit.py",
+        "data/processed/e104_tg_ng_process_audit_official_20260429.jsonl",
+        "results/E104_tg_ng_process_audit/e104_tg_ng_process_audit_official_summary.json"
+      ],
+      "id": "E104",
+      "key_result": "NG answer-first rows include 3 repaired strict ACPI; TG fallback-correct rows are unfinished and not strict final decisions; unrepaired ACPI 0 in this small audit.",
+      "name": "E103 manual process audit",
+      "priority": "P0_thinking_boundary",
+      "purpose": "Audit E103 strict/fallback final-correct rows for strict-valid, repaired ACPI, unrepaired ACPI, and unfinished TG.",
+      "status": "completed_passed_audit"
+    },
+    {
+      "artifacts": [
+        "scripts/run_e105_tg_closure_policy.py",
+        "scripts/summarize_e105_tg_closure_policy.py",
+        "scripts/launch_e105_tg_closure_policy_20260429.sh",
+        "scripts/launch_e105_reviewer_stress_20260429.sh",
+        "reports/E105_TG_CLOSURE_POLICY_20260429.md",
+        "reports/E105_TG_CLOSURE_POLICY_20260429.json",
+        "logs/e105_qwen35_tg_closure_k1_checkpoint_20260429.jsonl",
+        "logs/e105r_qwen35_canary16k_checkpoint_20260429.jsonl",
+        "logs/e105r_qwen35_canary32k_checkpoint_20260429.jsonl"
+      ],
+      "id": "E105",
+      "key_result": "8k capped pilot still failed to emit explicit final answers (0/2 markers, 2/2 hit-max). On base_divisor, 16k/32k final-contract canaries produced clean final stops; 16k free/budgeted prompts emitted final markers but continued after them and hit max.",
+      "name": "TG closure-policy intervention",
+      "priority": "P0_thinking_boundary",
+      "purpose": "Compare free_think, budgeted_think, and deliberate_then_final so TG can emit explicit final decisions before scaling to P0.",
+      "status": "completed_passed_audit"
+    },
+    {
+      "id": "E137",
+      "name": "Hidden trigger threshold calibration",
+      "priority": "P0",
+      "purpose": "Calibrate hidden process-risk thresholds on suspicious-valid controls before natural transfer",
+      "status": "completed_passed_audit",
+      "artifacts": [
+        "scripts/run_e137_hidden_trigger_threshold_calibration.py",
+        "results/E137_hidden_trigger_threshold_calibration/",
+        "reports/E137_E140_ADAPTIVE_NATURAL_CHECK_SYNTHESIS_20260430.md"
+      ],
+      "key_result": "Qwen/Gemma31 controlled thresholds are clean; Gemma26 has higher suspicious-valid false triggers and no threshold meets strict FP constraints."
+    },
+    {
+      "id": "E138",
+      "name": "Natural hidden-trigger second-pass check",
+      "priority": "P0",
+      "purpose": "Test whether hidden trigger plus strict second-pass check reduces natural hard-task ACPI over-acceptance",
+      "status": "completed_passed_audit_diagnostic_offline",
+      "artifacts": [
+        "scripts/run_e138_natural_hidden_trigger_check.py",
+        "scripts/launch_e138_natural_hidden_trigger_check_queue_20260430.sh",
+        "results/E138_natural_hidden_trigger_check/",
+        "reports/E137_E140_ADAPTIVE_NATURAL_CHECK_SYNTHESIS_20260430.md"
+      ],
+      "key_result": "Qwen zero strict-local reduces repaired ACPI accept 2/19 to 0/19; Gemma31 reduces 6/16 to 2/16; Gemma26 unrepaired rows remain accepted despite hidden trigger."
+    },
+    {
+      "id": "E140",
+      "name": "Natural check-rationale audit",
+      "priority": "P0",
+      "purpose": "Explain whether second-pass failures are no-error-seen, repair-aware acceptance, answer anchoring, or local semantic miss",
+      "status": "completed_passed_audit",
+      "artifacts": [
+        "scripts/run_e140_natural_check_rationale_audit.py",
+        "results/E140_natural_check_rationale_audit/",
+        "reports/E137_E140_ADAPTIVE_NATURAL_CHECK_SYNTHESIS_20260430.md"
+      ],
+      "key_result": "Qwen recognizes 8/8 errors but repair-aware accepts 5/8; Gemma31 recognizes 8/20 and repair-aware accepts 20/20; Gemma26 recognizes 2/20 and misses unrepaired ACPI 4/4."
+    }
+  ],
+  "last_updated": "2026-04-30T01:04:00",
+  "mode_scoping_policy": "All claims and post-hoc summaries must be stratified as DV/TV/NG/TG/MI-DV/PM after the thinking-mode audit."
+}

@@ -1,0 +1,548 @@
+{
+  "args": {
+    "device": "auto",
+    "dtype": "bfloat16",
+    "layer": null,
+    "local_files_only": true,
+    "max_model_len": 8192,
+    "max_rows": null,
+    "model_key": "gemma4_31b_it",
+    "out_dir": "/home/Awei/P02_multilingual_process_lens/results/E76_E77_hardtask_hidden_replay",
+    "prompt_format": "official_if_chat",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "target_mode": "repaired_acpi"
+  },
+  "created_at": "2026-04-29T10:38:21",
+  "cuda_visible_devices": "0,1,2,3",
+  "direction_source": "E61 all rows valid_mean_minus_invalid_mean at E65 best layer",
+  "experiment": "E76_E77_hardtask_hidden_replay",
+  "host": "hpc-node-01",
+  "layer": 34,
+  "leakage_audit": {
+    "error_spans_in_prompt_rows": 0,
+    "hard_task_labels_in_prompt_rows": 0,
+    "note_zh": "hard-task 人工标签和 span 只用于离线选择分析 token；模型输入为原始 problem prompt + saved completion。"
+  },
+  "model_key": "gemma4_31b_it",
+  "model_spec": {
+    "class": "instruct",
+    "family": "gemma",
+    "loader_risk": "large model; multimodal/text config may require AutoModelForImageTextToText fallback",
+    "notes": "core local P0 medium frontier model; Google medium Gemma 4 31B instruction model; downloaded via HF mirror on 2026-04-27; use multi-GPU device_map=auto for verifier/generation",
+    "path": "/home/Awei/LLM/Model/base/gemma4_31b_it",
+    "priority": "P0_core_frontier_medium",
+    "remote_repo": "google/gemma-4-31B-it",
+    "status": "local_downloaded"
+  },
+  "rows": [
+    {
+      "input_tokens": 892,
+      "manual_audit_idx": 56,
+      "manual_error_span": "Final answer: 12",
+      "manual_error_type": "repaired_wrong_initial_answer",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "prompt_variant": "answer_first_no_gold",
+      "source_model": "gemma4_31b_it",
+      "stage_scores": [
+        {
+          "char_end": 351,
+          "span_text": "Final answer: 12",
+          "stage": "error_span_end",
+          "token_index_full": 87,
+          "token_index_used": 87,
+          "validity_score": -13.26827335357666
+        },
+        {
+          "char_end": 351,
+          "span_text": "Final answer: 12",
+          "stage": "first_final_answer_end",
+          "token_index_full": 87,
+          "token_index_used": 87,
+          "validity_score": -13.26827335357666
+        },
+        {
+          "char_end": 2069,
+          "span_text": "\nFinal answer: 70",
+          "stage": "last_final_answer_end",
+          "token_index_full": 891,
+          "token_index_used": 891,
+          "validity_score": -21.118167877197266
+        },
+        {
+          "char_end": 1182,
+          "span_text": "Wait",
+          "stage": "repair_trigger_end",
+          "token_index_full": 477,
+          "token_index_used": 477,
+          "validity_score": -26.882083892822266
+        },
+        {
+          "char_end": 2069,
+          "span_text": "swer line by mistake while thinking. The calculated sum is 70.\n\nFinal answer: 70",
+          "stage": "completion_end",
+          "token_index_full": 891,
+          "token_index_used": 891,
+          "validity_score": -21.118167877197266
+        }
+      ],
+      "task_id": "aime25_base_divisor_p1",
+      "trace_class": "repaired_acpi",
+      "truncated_left_tokens": 0
+    },
+    {
+      "input_tokens": 701,
+      "manual_audit_idx": 57,
+      "manual_error_span": "Final answer: 14",
+      "manual_error_type": "repaired_wrong_initial_answer",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "prompt_variant": "answer_first_no_gold",
+      "source_model": "gemma4_31b_it",
+      "stage_scores": [
+        {
+          "char_end": 351,
+          "span_text": "Final answer: 14",
+          "stage": "error_span_end",
+          "token_index_full": 87,
+          "token_index_used": 87,
+          "validity_score": -12.062166213989258
+        },
+        {
+          "char_end": 351,
+          "span_text": "Final answer: 14",
+          "stage": "first_final_answer_end",
+          "token_index_full": 87,
+          "token_index_used": 87,
+          "validity_score": -12.062166213989258
+        },
+        {
+          "char_end": 1613,
+          "span_text": "\nFinal answer: 70",
+          "stage": "last_final_answer_end",
+          "token_index_full": 700,
+          "token_index_used": 700,
+          "validity_score": -20.88014030456543
+        },
+        {
+          "char_end": 1061,
+          "span_text": "Wait",
+          "stage": "repair_trigger_end",
+          "token_index_full": 446,
+          "token_index_used": 446,
+          "validity_score": -27.201791763305664
+        },
+        {
+          "char_end": 1613,
+          "span_text": "ped initially was 14, which is wrong. I will correct it to 70.\n\nFinal answer: 70",
+          "stage": "completion_end",
+          "token_index_full": 700,
+          "token_index_used": 700,
+          "validity_score": -20.88014030456543
+        }
+      ],
+      "task_id": "aime25_base_divisor_p1",
+      "trace_class": "repaired_acpi",
+      "truncated_left_tokens": 0
+    },
+    {
+      "input_tokens": 1269,
+      "manual_audit_idx": 58,
+      "manual_error_span": "Final answer: 21",
+      "manual_error_type": "repaired_wrong_initial_answer",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "prompt_variant": "answer_first_no_gold",
+      "source_model": "gemma4_31b_it",
+      "stage_scores": [
+        {
+          "char_end": 351,
+          "span_text": "Final answer: 21",
+          "stage": "error_span_end",
+          "token_index_full": 87,
+          "token_index_used": 87,
+          "validity_score": -15.108171463012695
+        },
+        {
+          "char_end": 351,
+          "span_text": "Final answer: 21",
+          "stage": "first_final_answer_end",
+          "token_index_full": 87,
+          "token_index_used": 87,
+          "validity_score": -15.108171463012695
+        },
+        {
+          "char_end": 2881,
+          "span_text": "\nFinal Answer: 70",
+          "stage": "last_final_answer_end",
+          "token_index_full": 1268,
+          "token_index_used": 1268,
+          "validity_score": -21.543170928955078
+        },
+        {
+          "char_end": 1099,
+          "span_text": "However",
+          "stage": "repair_trigger_end",
+          "token_index_full": 445,
+          "token_index_used": 445,
+          "validity_score": -30.939544677734375
+        },
+        {
+          "char_end": 2881,
+          "span_text": "n the scratchpad initially. That was a mistake. The sum is 70.\n\nFinal Answer: 70",
+          "stage": "completion_end",
+          "token_index_full": 1268,
+          "token_index_used": 1268,
+          "validity_score": -21.543170928955078
+        }
+      ],
+      "task_id": "aime25_base_divisor_p1",
+      "trace_class": "repaired_acpi",
+      "truncated_left_tokens": 0
+    },
+    {
+      "input_tokens": 1202,
+      "manual_audit_idx": 67,
+      "manual_error_span": "Final answer: 504",
+      "manual_error_type": "repaired_wrong_initial_answer",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "prompt_variant": "answer_first_no_gold",
+      "source_model": "gemma4_31b_it",
+      "stage_scores": [
+        {
+          "char_end": 785,
+          "span_text": "Final answer: 504",
+          "stage": "error_span_end",
+          "token_index_full": 169,
+          "token_index_used": 169,
+          "validity_score": -9.465239524841309
+        },
+        {
+          "char_end": 785,
+          "span_text": "Final answer: 504",
+          "stage": "first_final_answer_end",
+          "token_index_full": 169,
+          "token_index_used": 169,
+          "validity_score": -9.465239524841309
+        },
+        {
+          "char_end": 3221,
+          "span_text": "\nFinal answer: 16",
+          "stage": "last_final_answer_end",
+          "token_index_full": 1201,
+          "token_index_used": 1201,
+          "validity_score": -23.7509765625
+        },
+        {
+          "char_end": 1932,
+          "span_text": "Wait",
+          "stage": "repair_trigger_end",
+          "token_index_full": 676,
+          "token_index_used": 676,
+          "validity_score": -27.679733276367188
+        },
+        {
+          "char_end": 3221,
+          "span_text": "ly, looking at the prompt again, I will provide the result 16.\n\nFinal answer: 16",
+          "stage": "completion_end",
+          "token_index_full": 1201,
+          "token_index_used": 1201,
+          "validity_score": -23.7509765625
+        }
+      ],
+      "task_id": "aime25_icecream_ordered_assign_p3",
+      "trace_class": "repaired_acpi",
+      "truncated_left_tokens": 0
+    },
+    {
+      "input_tokens": 1140,
+      "manual_audit_idx": 68,
+      "manual_error_span": "Final answer: 1260",
+      "manual_error_type": "repaired_wrong_initial_answer",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "prompt_variant": "answer_first_no_gold",
+      "source_model": "gemma4_31b_it",
+      "stage_scores": [
+        {
+          "char_end": 786,
+          "span_text": "Final answer: 1260",
+          "stage": "error_span_end",
+          "token_index_full": 170,
+          "token_index_used": 170,
+          "validity_score": -10.990677833557129
+        },
+        {
+          "char_end": 786,
+          "span_text": "Final answer: 1260",
+          "stage": "first_final_answer_end",
+          "token_index_full": 170,
+          "token_index_used": 170,
+          "validity_score": -10.990677833557129
+        },
+        {
+          "char_end": 2943,
+          "span_text": "\nFinal answer: 16",
+          "stage": "last_final_answer_end",
+          "token_index_full": 1139,
+          "token_index_used": 1139,
+          "validity_score": -25.67428207397461
+        },
+        {
+          "char_end": 2227,
+          "span_text": "Wait",
+          "stage": "repair_trigger_end",
+          "token_index_full": 817,
+          "token_index_used": 817,
+          "validity_score": -28.21909523010254
+        },
+        {
+          "char_end": 2943,
+          "span_text": "I must provide the correct remainder.\n$2016 \\pmod{1000} = 16$.\n\nFinal answer: 16",
+          "stage": "completion_end",
+          "token_index_full": 1139,
+          "token_index_used": 1139,
+          "validity_score": -25.67428207397461
+        }
+      ],
+      "task_id": "aime25_icecream_ordered_assign_p3",
+      "trace_class": "repaired_acpi",
+      "truncated_left_tokens": 0
+    },
+    {
+      "input_tokens": 1234,
+      "manual_audit_idx": 69,
+      "manual_error_span": "Final answer: 420",
+      "manual_error_type": "repaired_wrong_initial_answer",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "prompt_variant": "answer_first_no_gold",
+      "source_model": "gemma4_31b_it",
+      "stage_scores": [
+        {
+          "char_end": 785,
+          "span_text": "Final answer: 420",
+          "stage": "error_span_end",
+          "token_index_full": 169,
+          "token_index_used": 169,
+          "validity_score": -9.084233283996582
+        },
+        {
+          "char_end": 785,
+          "span_text": "Final answer: 420",
+          "stage": "first_final_answer_end",
+          "token_index_full": 169,
+          "token_index_used": 169,
+          "validity_score": -9.084233283996582
+        },
+        {
+          "char_end": 3010,
+          "span_text": "\nFinal answer: 16",
+          "stage": "last_final_answer_end",
+          "token_index_full": 1233,
+          "token_index_used": 1233,
+          "validity_score": -22.97067642211914
+        },
+        {
+          "char_end": 2059,
+          "span_text": "Wait",
+          "stage": "repair_trigger_end",
+          "token_index_full": 742,
+          "token_index_used": 742,
+          "validity_score": -27.87738037109375
+        },
+        {
+          "char_end": 3010,
+          "span_text": "\" line in the scratchpad was a placeholder. I will output 16).\n\nFinal answer: 16",
+          "stage": "completion_end",
+          "token_index_full": 1233,
+          "token_index_used": 1233,
+          "validity_score": -22.97067642211914
+        }
+      ],
+      "task_id": "aime25_icecream_ordered_assign_p3",
+      "trace_class": "repaired_acpi",
+      "truncated_left_tokens": 0
+    },
+    {
+      "input_tokens": 1133,
+      "manual_audit_idx": 70,
+      "manual_error_span": "Final answer: 1260",
+      "manual_error_type": "repaired_wrong_initial_answer",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "prompt_variant": "answer_first_no_gold",
+      "source_model": "gemma4_31b_it",
+      "stage_scores": [
+        {
+          "char_end": 786,
+          "span_text": "Final answer: 1260",
+          "stage": "error_span_end",
+          "token_index_full": 170,
+          "token_index_used": 170,
+          "validity_score": -10.990677833557129
+        },
+        {
+          "char_end": 786,
+          "span_text": "Final answer: 1260",
+          "stage": "first_final_answer_end",
+          "token_index_full": 170,
+          "token_index_used": 170,
+          "validity_score": -10.990677833557129
+        },
+        {
+          "char_end": 2848,
+          "span_text": "\nFinal answer: 16",
+          "stage": "last_final_answer_end",
+          "token_index_full": 1132,
+          "token_index_used": 1132,
+          "validity_score": -26.384082794189453
+        },
+        {
+          "char_end": 1958,
+          "span_text": "Wait",
+          "stage": "repair_trigger_end",
+          "token_index_full": 689,
+          "token_index_used": 689,
+          "validity_score": -27.26217269897461
+        },
+        {
+          "char_end": 2848,
+          "span_text": ") = 1260$.\n$252 + 504 + 1260 = 2016$.\n$2016 \\pmod{1000} = 16$.\n\nFinal answer: 16",
+          "stage": "completion_end",
+          "token_index_full": 1132,
+          "token_index_used": 1132,
+          "validity_score": -26.384082794189453
+        }
+      ],
+      "task_id": "aime25_icecream_ordered_assign_p3",
+      "trace_class": "repaired_acpi",
+      "truncated_left_tokens": 0
+    },
+    {
+      "input_tokens": 1650,
+      "manual_audit_idx": 85,
+      "manual_error_span": "There are 14 such subsets in total",
+      "manual_error_type": "repaired_enumeration_count_error",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "prompt_variant": "answer_first_no_gold",
+      "source_model": "gemma4_31b_it",
+      "stage_scores": [
+        {
+          "char_end": 1793,
+          "span_text": "There are 14 such subsets in total",
+          "stage": "error_span_end",
+          "token_index_full": 770,
+          "token_index_used": 770,
+          "validity_score": -27.747100830078125
+        },
+        {
+          "char_end": 3621,
+          "span_text": "\nFinal answer: 279",
+          "stage": "first_final_answer_end",
+          "token_index_full": 1649,
+          "token_index_used": 1649,
+          "validity_score": -12.490852355957031
+        },
+        {
+          "char_end": 3621,
+          "span_text": "\nFinal answer: 279",
+          "stage": "last_final_answer_end",
+          "token_index_full": 1649,
+          "token_index_used": 1649,
+          "validity_score": -12.490852355957031
+        },
+        {
+          "char_end": 1845,
+          "span_text": "However",
+          "stage": "repair_trigger_end",
+          "token_index_full": 781,
+          "token_index_used": 781,
+          "validity_score": -28.651247024536133
+        },
+        {
+          "char_end": 3621,
+          "span_text": "= 2304$.\n\n6.  **Difference:** $N - 2025 = 2304 - 2025 = 279$.\n\nFinal answer: 279",
+          "stage": "completion_end",
+          "token_index_full": 1649,
+          "token_index_used": 1649,
+          "validity_score": -12.490852355957031
+        }
+      ],
+      "task_id": "aime25_perm_div22_p5",
+      "trace_class": "repaired_acpi",
+      "truncated_left_tokens": 0
+    },
+    {
+      "input_tokens": 1257,
+      "manual_audit_idx": 94,
+      "manual_error_span": "Final answer: 162",
+      "manual_error_type": "repaired_wrong_initial_answer",
+      "manual_process_valid_repaired": true,
+      "manual_process_valid_strict": false,
+      "prompt_variant": "answer_first_no_gold",
+      "source_model": "gemma4_31b_it",
+      "stage_scores": [
+        {
+          "char_end": 520,
+          "span_text": "Final answer: 162",
+          "stage": "error_span_end",
+          "token_index_full": 130,
+          "token_index_used": 130,
+          "validity_score": -14.905521392822266
+        },
+        {
+          "char_end": 520,
+          "span_text": "Final answer: 162",
+          "stage": "first_final_answer_end",
+          "token_index_full": 130,
+          "token_index_used": 130,
+          "validity_score": -14.905521392822266
+        },
+        {
+          "char_end": 3027,
+          "span_text": "\nFinal answer: 504",
+          "stage": "last_final_answer_end",
+          "token_index_full": 1256,
+          "token_index_used": 1256,
+          "validity_score": -22.63290023803711
+        },
+        {
+          "char_end": 2032,
+          "span_text": "Wait",
+          "stage": "repair_trigger_end",
+          "token_index_full": 731,
+          "token_index_used": 731,
+          "validity_score": -27.098915100097656
+        },
+        {
+          "char_end": 3027,
+          "span_text": "76$\n$r^2-2rs+s^2=432$\n$2(r^2+s^2)=1008 \\implies r^2+s^2=504$.\n\nFinal answer: 504",
+          "stage": "completion_end",
+          "token_index_full": 1256,
+          "token_index_used": 1256,
+          "validity_score": -22.63290023803711
+        }
+      ],
+      "task_id": "aime25_trapezoid_incircle_p6",
+      "trace_class": "repaired_acpi",
+      "truncated_left_tokens": 0
+    }
+  ],
+  "scope_note_zh": "E76/E77 是 teacher-forced hidden replay；它复现已保存可见路径的 hidden 轨迹，不声称重采样随机路径 bit-level 可复现。",
+  "started_at": "2026-04-29T10:37:55",
+  "summary": {
+    "n_rows": 9,
+    "stage_mean_scores": {
+      "completion_end": -21.9383610619439,
+      "error_span_end": -13.735784636603462,
+      "first_final_answer_end": -12.040645917256674,
+      "last_final_answer_end": -21.9383610619439,
+      "repair_trigger_end": -27.9791071150038
+    }
+  },
+  "target_mode": "repaired_acpi",
+  "used_chat_template": true
+}

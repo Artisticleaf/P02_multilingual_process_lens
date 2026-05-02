@@ -1,0 +1,189 @@
+{
+  "passed": true,
+  "issues": [],
+  "checks": {
+    "e48": [
+      {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E48_natural_prevalence_official/gemma4_26b_a4b_it_e48_natural_prevalence_official.json",
+        "exists": true,
+        "ok": true,
+        "issues": [],
+        "n": 48,
+        "final_correct": 42,
+        "acpi": 0
+      },
+      {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E48_natural_prevalence_official/gemma4_31b_it_e48_natural_prevalence_official.json",
+        "exists": true,
+        "ok": true,
+        "issues": [],
+        "n": 96,
+        "final_correct": 88,
+        "acpi": 0
+      },
+      {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E48_natural_prevalence_official/qwen35_27b_e48_natural_prevalence_official.json",
+        "exists": true,
+        "ok": true,
+        "issues": [],
+        "n": 96,
+        "final_correct": 85,
+        "acpi": 0
+      },
+      {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E48_natural_prevalence_official/qwen35_9b_e48_natural_prevalence_official.json",
+        "exists": true,
+        "ok": true,
+        "issues": [],
+        "n": 96,
+        "final_correct": 89,
+        "acpi": 0
+      },
+      {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E48_natural_prevalence_official/qwen3_14b_base_e48_vllm_official_generation.json",
+        "exists": true,
+        "ok": true,
+        "issues": [],
+        "n": 96,
+        "final_correct": 73,
+        "acpi": 0
+      }
+    ],
+    "e49_no_gold": [
+      {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E49_hard_task_conditioning_official/gemma4_26b_a4b_it_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json",
+        "exists": true,
+        "ok": true,
+        "issues": [],
+        "n": 18,
+        "final_correct": 0,
+        "strict_final_marker_missing": 18
+      },
+      {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E49_hard_task_conditioning_official/qwen35_27b_e49_neutral_answer_first_no_gold_self_check_hard_task_conditioning.json",
+        "exists": true,
+        "ok": true,
+        "issues": [],
+        "n": 18,
+        "final_correct": 0,
+        "strict_final_marker_missing": 18
+      }
+    ],
+    "e50": [
+      {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E50_residual_probe_steering/gemma4_26b_a4b_it_e50_residual_probe_steering.json",
+        "exists": true,
+        "ok": true,
+        "issues": [],
+        "n_rows": 24,
+        "best_probe_layer": {
+          "accuracy": 0.9583333333333334,
+          "control": "mean_diff",
+          "layer": 16,
+          "n": 24
+        }
+      },
+      {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E50_residual_probe_steering/gemma4_31b_it_e50_residual_probe_steering.json",
+        "exists": true,
+        "ok": true,
+        "issues": [],
+        "n_rows": 24,
+        "best_probe_layer": {
+          "accuracy": 0.9583333333333334,
+          "control": "mean_diff",
+          "layer": 32,
+          "n": 24
+        }
+      },
+      {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E50_residual_probe_steering/qwen35_27b_e50_residual_probe_steering.json",
+        "exists": true,
+        "ok": true,
+        "issues": [],
+        "n_rows": 24,
+        "best_probe_layer": {
+          "accuracy": 0.9583333333333334,
+          "control": "mean_diff",
+          "layer": 32,
+          "n": 24
+        }
+      },
+      {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E50_residual_probe_steering/qwen35_9b_e50_residual_probe_steering.json",
+        "exists": true,
+        "ok": true,
+        "issues": [],
+        "n_rows": 24,
+        "best_probe_layer": {
+          "accuracy": 0.9166666666666666,
+          "control": "mean_diff",
+          "layer": 16,
+          "n": 24
+        }
+      },
+      {
+        "path": "/home/Awei/P02_multilingual_process_lens/results/E50_residual_probe_steering/qwen3_14b_base_e50_residual_probe_steering.json",
+        "exists": true,
+        "ok": true,
+        "issues": [],
+        "n_rows": 24,
+        "best_probe_layer": {
+          "accuracy": 0.9583333333333334,
+          "control": "mean_diff",
+          "layer": 24,
+          "n": 24
+        }
+      }
+    ],
+    "backend_required": [
+      {
+        "path": "/home/Awei/P02_multilingual_process_lens/reports/APPENDIX_BACKEND_COMPATIBILITY_AND_THROUGHPUT_20260428.md",
+        "exists": true,
+        "ok": true
+      },
+      {
+        "path": "/home/Awei/P02_multilingual_process_lens/scripts/check_backend_compatibility.py",
+        "exists": true,
+        "ok": true
+      },
+      {
+        "path": "/home/Awei/P02_multilingual_process_lens/logs/backend_compat_environment_project_pythonpath_20260428.json",
+        "exists": true,
+        "ok": true
+      },
+      {
+        "path": "/home/Awei/P02_multilingual_process_lens/logs/backend_compat_local_model_configs_20260428.json",
+        "exists": true,
+        "ok": true
+      },
+      {
+        "path": "/home/Awei/P02_multilingual_process_lens/logs/backend_compat_qwen35_9b_vllm_auto_20260428.json",
+        "exists": true,
+        "ok": true
+      },
+      {
+        "path": "/home/Awei/P02_multilingual_process_lens/logs/backend_compat_qwen35_9b_vllm_transformers_20260428.json",
+        "exists": true,
+        "ok": true
+      },
+      {
+        "path": "/home/Awei/P02_multilingual_process_lens/logs/backend_compat_gemma4_e4b_it_vllm_auto_20260428.json",
+        "exists": true,
+        "ok": true
+      }
+    ],
+    "quarantine_expected": [
+      {
+        "path": "/home/Awei/P02_multilingual_process_lens/archive/logic_error_quarantine_20260428/gemma4_26b_a4b_it_e48_false_positive_round_4p6.json",
+        "exists": true,
+        "ok": true
+      },
+      {
+        "path": "/home/Awei/P02_multilingual_process_lens/archive/logic_error_quarantine_20260428/qwen35_9b_e50_residual_probe_steering.json",
+        "exists": true,
+        "ok": true
+      }
+    ]
+  }
+}

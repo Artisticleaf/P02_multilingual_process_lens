@@ -1,0 +1,17 @@
+[
+  {
+    "from": "logs/backend_compat_gemma4_e4b_it_vllm_smoke_20260428.log",
+    "to": "archive/backend_smoke_misc_20260428/backend_compat_gemma4_e4b_it_vllm_smoke_20260428.log",
+    "reason": "superseded by scripts/check_backend_compatibility.py full/json logs; one early Gemma run failed due stdin+spawn rather than model compatibility"
+  },
+  {
+    "from": "logs/backend_compat_qwen35_9b_vllm_smoke_20260428.log",
+    "to": "archive/backend_smoke_misc_20260428/backend_compat_qwen35_9b_vllm_smoke_20260428.log",
+    "reason": "superseded by scripts/check_backend_compatibility.py full/json logs; one early Gemma run failed due stdin+spawn rather than model compatibility"
+  },
+  {
+    "from": "logs/backend_compat_qwen35_9b_vllm_transformers_smoke_20260428.log",
+    "to": "archive/backend_smoke_misc_20260428/backend_compat_qwen35_9b_vllm_transformers_smoke_20260428.log",
+    "reason": "superseded by scripts/check_backend_compatibility.py full/json logs; one early Gemma run failed due stdin+spawn rather than model compatibility"
+  }
+]

@@ -1,0 +1,13 @@
+[2026-04-27T12:25:22] loading verifier=qwen35_9b on cuda; pairs=2
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/427 [00:00<?, ?it/s]Loading weights: 100%|██████████| 427/427 [00:00<00:00, 15103.33it/s]
+pair=qwen35_e18_discount_234_bad_181000_valid prompt=en order=bad_A target=A pred=A margin=0.250
+pair=qwen35_e18_discount_234_bad_181000_valid prompt=en order=bad_B target=B pred=B margin=0.875
+pair=qwen35_e18_discount_234_bad_181000_valid prompt=zh order=bad_A target=A pred=A margin=0.250
+pair=qwen35_e18_discount_234_bad_181000_valid prompt=zh order=bad_B target=B pred=B margin=0.875
+pair=qwen35_e18_discount_234_bad_181001_valid prompt=en order=bad_A target=A pred=A margin=0.750
+pair=qwen35_e18_discount_234_bad_181001_valid prompt=en order=bad_B target=B pred=B margin=0.875
+pair=qwen35_e18_discount_234_bad_181001_valid prompt=zh order=bad_A target=A pred=A margin=0.250
+pair=qwen35_e18_discount_234_bad_181001_valid prompt=zh order=bad_B target=B pred=B margin=0.625
+wrote results/E23_e18_clean_sibling_contrastive/qwen35_9b_contrastive_acpi_verifier.json; rows=8 acc=1.000 mean_margin=0.594

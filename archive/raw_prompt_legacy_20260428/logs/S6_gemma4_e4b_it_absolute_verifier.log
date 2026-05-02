@@ -1,0 +1,9 @@
+[2026-04-27T18:05:54] loading tokenizer: gemma4_e4b_it -> /home/Awei/LLM/Model/base/gemma4_e4b_it
+[2026-04-27T18:05:56] loading model dtype=bfloat16 device=cuda
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/2076 [00:00<?, ?it/s]Loading weights:  79%|███████▉  | 1645/2076 [00:00<00:00, 16438.77it/s]Loading weights: 100%|██████████| 2076/2076 [00:00<00:00, 16526.83it/s]
+[2026-04-27T18:06:04] wrote /home/Awei/P02_multilingual_process_lens/results/S6_lexical_grid_absolute_verifier/gemma4_e4b_it_manual_trace_verifier.json; eval_rows=24
+SUMMARY model=gemma4_e4b_it mode=process_only prompt=en acc=0.500 false_accept=1.0 proc_inv_false_accept=1.0
+SUMMARY model=gemma4_e4b_it mode=process_only prompt=zh acc=0.500 false_accept=1.0 proc_inv_false_accept=1.0
+SUMMARY model=gemma4_e4b_it mode=training_candidate prompt=en acc=0.500 false_accept=1.0 proc_inv_false_accept=1.0
+SUMMARY model=gemma4_e4b_it mode=training_candidate prompt=zh acc=0.500 false_accept=1.0 proc_inv_false_accept=1.0

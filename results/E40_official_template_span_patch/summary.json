@@ -1,0 +1,157 @@
+{
+  "aggregate": {
+    "models": {
+      "qwen35_9b": {
+        "input_path": "results/E40_official_template_span_patch/qwen35_9b_real_acpi_span_patch.json",
+        "n_pairs": 12,
+        "clean_pairs": 12,
+        "best_rows": [
+          {
+            "pair_id": "e39_coefficient_vs_exponent_bad390022_valid390021_qwen35_9b",
+            "task": "coefficient_vs_exponent",
+            "best_is_clean": true,
+            "best_layer": 4,
+            "best_v2b": 0.9374995231628418,
+            "best_b2v": -3.499999523162842,
+            "base_valid": 6.6875,
+            "base_bad": 3.4375,
+            "bad_span": "The coefficient is the exponent 3",
+            "valid_span": "the coefficient is the number multiplying x^3"
+          },
+          {
+            "pair_id": "e39_each_vs_total_bad390062_valid390061_qwen35_9b",
+            "task": "each_vs_total",
+            "best_is_clean": true,
+            "best_layer": 8,
+            "best_v2b": 6.312500476837158,
+            "best_b2v": -5.0625,
+            "base_valid": 6.5625,
+            "base_bad": -0.4375,
+            "bad_span": "each student read 24 pages",
+            "valid_span": "total pages are 4*6"
+          },
+          {
+            "pair_id": "e39_log_base_argument_bad390072_valid390071_qwen35_9b",
+            "task": "log_base_argument",
+            "best_is_clean": true,
+            "best_layer": 12,
+            "best_v2b": 2.874999523162842,
+            "best_b2v": -0.5625009536743164,
+            "base_valid": 7.375000476837158,
+            "base_bad": 3.125000476837158,
+            "bad_span": "The base is 8 and the argument is 2",
+            "valid_span": "log base 2 of 8 asks what exponent on 2 gives 8"
+          },
+          {
+            "pair_id": "e39_mean_vs_median_bad390002_valid390001_qwen35_9b",
+            "task": "mean_vs_median",
+            "best_is_clean": true,
+            "best_layer": 0,
+            "best_v2b": 0.8125,
+            "best_b2v": -3.000000476837158,
+            "base_valid": 7.0,
+            "base_bad": 0.4375,
+            "bad_span": "The mean is the middle value of the ordered list, so it is 4",
+            "valid_span": "The mean is the sum divided by the count"
+          },
+          {
+            "pair_id": "e39_percent_increase_vs_percent_of_bad390042_valid390041_qwen35_9b",
+            "task": "percent_increase_vs_percent_of",
+            "best_is_clean": true,
+            "best_layer": 0,
+            "best_v2b": 0.4999995231628418,
+            "best_b2v": -3.5,
+            "base_valid": 6.625,
+            "base_bad": 1.7500004768371582,
+            "bad_span": "A 20% increase means the new price is 20% of the original",
+            "valid_span": "A 20% increase means add 20% of 50 to the original price"
+          },
+          {
+            "pair_id": "e39_prob_without_replacement_bad390052_valid390051_qwen35_9b",
+            "task": "prob_without_replacement",
+            "best_is_clean": true,
+            "best_layer": 4,
+            "best_v2b": 4.874999523162842,
+            "best_b2v": -1.4999995231628418,
+            "base_valid": 3.687499523162842,
+            "base_bad": -2.1875,
+            "bad_span": "Without replacement means the first ball is put back before the second draw",
+            "valid_span": "Without replacement means the second draw has 2 red balls left out of 4 balls"
+          },
+          {
+            "pair_id": "e39_range_vs_average_bad390012_valid390011_qwen35_9b",
+            "task": "range_vs_average",
+            "best_is_clean": true,
+            "best_layer": 4,
+            "best_v2b": 4.000000476837158,
+            "best_b2v": -3.437500476837158,
+            "base_valid": 5.875000476837158,
+            "base_bad": -0.3125,
+            "bad_span": "The range is the average of the numbers",
+            "valid_span": "The range is maximum minus minimum"
+          },
+          {
+            "pair_id": "e39_reciprocal_vs_additive_inverse_bad390032_valid390031_qwen35_9b",
+            "task": "reciprocal_vs_additive_inverse",
+            "best_is_clean": true,
+            "best_layer": 4,
+            "best_v2b": 3.125,
+            "best_b2v": -7.125,
+            "base_valid": 6.562500476837158,
+            "base_bad": 0.6875,
+            "bad_span": "The reciprocal means the additive inverse, -4",
+            "valid_span": "The reciprocal is the number that multiplies by 4 to give 1"
+          },
+          {
+            "pair_id": "e39_round_vs_truncate_bad390082_valid390081_qwen35_9b",
+            "task": "round_vs_truncate",
+            "best_is_clean": true,
+            "best_layer": 14,
+            "best_v2b": 0.2500009536743164,
+            "best_b2v": -0.2499995231628418,
+            "base_valid": 6.249999523162842,
+            "base_bad": 5.124999523162842,
+            "bad_span": "Nearest tenth means drop all later digits, so 4.6",
+            "valid_span": "the hundredths digit is 7, so the tenths digit rounds up"
+          },
+          {
+            "pair_id": "e39_zh_exclusive_interval_bad390112_valid390111_qwen35_9b",
+            "task": "zh_exclusive_interval",
+            "best_is_clean": true,
+            "best_layer": 8,
+            "best_v2b": 5.625,
+            "best_b2v": -6.3125,
+            "base_valid": 7.6875,
+            "base_bad": 0.6875,
+            "bad_span": "大于2且小于6包含2和6",
+            "valid_span": "大于2且小于6，只能取3、4、5"
+          },
+          {
+            "pair_id": "e39_zh_perimeter_vs_area_bad390092_valid390091_qwen35_9b",
+            "task": "zh_perimeter_vs_area",
+            "best_is_clean": true,
+            "best_layer": 4,
+            "best_v2b": 2.25,
+            "best_b2v": -5.562500953674316,
+            "base_valid": 7.812500953674316,
+            "base_bad": 1.9375,
+            "bad_span": "周长就是面积",
+            "valid_span": "周长是四条边长度之和"
+          },
+          {
+            "pair_id": "e39_zh_yi_wan_unit_bad390102_valid390101_qwen35_9b",
+            "task": "zh_yi_wan_unit",
+            "best_is_clean": true,
+            "best_layer": 0,
+            "best_v2b": 1.1875,
+            "best_b2v": -3.625,
+            "base_valid": 6.25,
+            "base_bad": 2.9375,
+            "bad_span": "1亿等于1000万",
+            "valid_span": "1亿等于10000万"
+          }
+        ]
+      }
+    }
+  }
+}

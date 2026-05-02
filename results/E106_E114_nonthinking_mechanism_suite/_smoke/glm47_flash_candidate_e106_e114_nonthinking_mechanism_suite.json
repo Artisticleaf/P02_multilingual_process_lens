@@ -1,0 +1,854 @@
+{
+  "args": {
+    "anchor_max_items": 4,
+    "best_layer": null,
+    "device": "auto",
+    "dilution_max_items": 1,
+    "dtype": "bfloat16",
+    "local_files_only": true,
+    "max_e61_items": 4,
+    "max_model_len": 6144,
+    "model_key": "glm47_flash_candidate",
+    "out_dir": "results/E106_E114_nonthinking_mechanism_suite/_smoke",
+    "prefix_max_rows": 1,
+    "prompt_format": "official_if_chat",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "steering_alpha": 2.0,
+    "steering_max_items": 1
+  },
+  "best_hidden_layer": 27,
+  "created_at": "2026-04-30T00:55:02",
+  "cuda_visible_devices": "0,1,2,3",
+  "experiment": "E106_E114_nonthinking_mechanism_suite",
+  "host": "hpc-node-01",
+  "leakage_audit": {
+    "gold_label_in_prompt_rows": 0,
+    "known_error_span_annotation_in_prompt_rows": 0,
+    "known_error_span_in_prompt_rows": 0,
+    "manual_correction_in_prompt_rows": 0,
+    "note_zh": "E61/E53/E57/E88/E104 的人工标签、错误 span 和修复标签只用于离线分组、prefix 截断与评分；strict verifier prompt 只包含 problem 与 visible trace。",
+    "passed": true
+  },
+  "model_key": "glm47_flash_candidate",
+  "model_spec": {
+    "class": "sparse_or_flash_candidate",
+    "family": "glm",
+    "loader_risk": "smoke_passed_current_env; use four-GPU HF device_map=auto for official hidden-state/verifier experiments",
+    "notes": "Z.ai/GLM recent 30B-A3B flash candidate; downloaded via hf-mirror on 2026-04-28. E62 passed license, tokenizer/chat-template, AutoConfig, HF dynamic option-logprob, hidden-state output, layer discovery, and vLLM static checks; admitted into expanded P0 evidence for E63 replication.",
+    "path": "/home/Awei/LLM/Model/base/glm47_flash",
+    "priority": "P0_expanded_frontier_medium",
+    "remote_repo": "zai-org/GLM-4.7-Flash",
+    "status": "local_smoke_passed"
+  },
+  "scope_note_zh": "E106-E114 是 non-thinking/direct-verifier 机制套件；它测试 process-validity hidden signal 是否能与 readout confidence 区分，并做小规模 steering/prefix/dilution/gated-filter 诊断。不是 thinking 终止机制实验。",
+  "sections": {
+    "E106_E107_confidence_vs_process": {
+      "direction_rows": [
+        {
+          "heldout_task": "e61_en_en_increase_base",
+          "process_confidence_direction_cosine": null,
+          "train_median_readout_confidence": 2.5
+        },
+        {
+          "heldout_task": "e61_en_en_meter_centimeter",
+          "process_confidence_direction_cosine": null,
+          "train_median_readout_confidence": 2.5
+        }
+      ],
+      "score_rows": [
+        {
+          "family": "percentage_base",
+          "gold_process_valid": false,
+          "hidden_confidence_score": null,
+          "hidden_process_score": -1.1182513236999512,
+          "is_acpi": true,
+          "item_id": "610062",
+          "label_entropy": 0.060488976847657784,
+          "pred_process_valid_from_hidden": false,
+          "pred_process_valid_from_yes_no": false,
+          "readout_confidence": 4.500000201165676,
+          "route_id": "en_en",
+          "task_id": "e61_en_en_increase_base",
+          "yes_minus_no": -4.500000201165676
+        },
+        {
+          "family": "percentage_base",
+          "gold_process_valid": true,
+          "hidden_confidence_score": null,
+          "hidden_process_score": 2.3087353706359863,
+          "is_acpi": false,
+          "item_id": "610061",
+          "label_entropy": 0.2685351660626903,
+          "pred_process_valid_from_hidden": true,
+          "pred_process_valid_from_yes_no": true,
+          "readout_confidence": 2.5000001043081284,
+          "route_id": "en_en",
+          "task_id": "e61_en_en_increase_base",
+          "yes_minus_no": 2.5000001043081284
+        },
+        {
+          "family": "unit_scale",
+          "gold_process_valid": false,
+          "hidden_confidence_score": null,
+          "hidden_process_score": -1.78761625289917,
+          "is_acpi": true,
+          "item_id": "610002",
+          "label_entropy": 0.1908649660555574,
+          "pred_process_valid_from_hidden": false,
+          "pred_process_valid_from_yes_no": false,
+          "readout_confidence": 3.000000037252903,
+          "route_id": "en_en",
+          "task_id": "e61_en_en_meter_centimeter",
+          "yes_minus_no": -3.000000037252903
+        },
+        {
+          "family": "unit_scale",
+          "gold_process_valid": true,
+          "hidden_confidence_score": null,
+          "hidden_process_score": 2.016965389251709,
+          "is_acpi": false,
+          "item_id": "610001",
+          "label_entropy": 0.26853518695522544,
+          "pred_process_valid_from_hidden": true,
+          "pred_process_valid_from_yes_no": true,
+          "readout_confidence": 2.499999985098839,
+          "route_id": "en_en",
+          "task_id": "e61_en_en_meter_centimeter",
+          "yes_minus_no": 2.499999985098839
+        }
+      ],
+      "summary": {
+        "confidence_matched_pairs": {
+          "hidden_pair_accuracy": 1.0,
+          "mean_confidence_gap": 1.250000074505806,
+          "n": 2,
+          "pairs_brief": [
+            {
+              "confidence_gap": 2.0000000968575478,
+              "family": "percentage_base",
+              "hidden_orders_valid_above_invalid": true,
+              "invalid_item_id": "610062",
+              "valid_item_id": "610061",
+              "yes_no_orders_valid_above_invalid": true
+            },
+            {
+              "confidence_gap": 0.5000000521540642,
+              "family": "unit_scale",
+              "hidden_orders_valid_above_invalid": true,
+              "invalid_item_id": "610002",
+              "valid_item_id": "610001",
+              "yes_no_orders_valid_above_invalid": true
+            }
+          ],
+          "yes_no_pair_accuracy": 1.0
+        },
+        "direction_cosine_abs_mean": null,
+        "direction_cosine_max": null,
+        "direction_cosine_mean": null,
+        "direction_cosine_min": null,
+        "hidden_accuracy": 1.0,
+        "hidden_label_partial_corr_controlling_readout_confidence_entropy": 0.9999999999999999,
+        "hidden_process_auc_valid": 1.0,
+        "hidden_score_vs_label_entropy_corr": 0.7615316227117643,
+        "hidden_score_vs_readout_confidence_corr": -0.6709932544876542,
+        "n": 4,
+        "quadrants": {
+          "invalid|high_conf": {
+            "hidden_accuracy": 1.0,
+            "n": 2,
+            "yes_no_accuracy": 1.0
+          },
+          "valid|low_conf": {
+            "hidden_accuracy": 1.0,
+            "n": 2,
+            "yes_no_accuracy": 1.0
+          }
+        },
+        "readout_confidence_auc_valid": 0.0,
+        "readout_confidence_median": 2.7500000707805157,
+        "yes_no_accuracy": 1.0
+      }
+    },
+    "E108_process_vs_confidence_direction": {
+      "direction_rows": [
+        {
+          "heldout_task": "e61_en_en_increase_base",
+          "process_confidence_direction_cosine": null,
+          "train_median_readout_confidence": 2.5
+        },
+        {
+          "heldout_task": "e61_en_en_meter_centimeter",
+          "process_confidence_direction_cosine": null,
+          "train_median_readout_confidence": 2.5
+        }
+      ],
+      "summary": {
+        "mean_abs_cosine": null,
+        "mean_cosine": null
+      }
+    },
+    "E109_steering_specificity": {
+      "alpha": 2.0,
+      "best_hidden_layer": 27,
+      "enabled": true,
+      "patched_module_index": 26,
+      "rows": [
+        {
+          "base": {
+            "pred_process_valid": true,
+            "readout_confidence": 2.5000001043081284,
+            "yes_minus_no": 2.5000001043081284
+          },
+          "gold_process_valid": true,
+          "item_id": "610061",
+          "patched": {
+            "confidence_toward_high": {
+              "label_entropy": NaN,
+              "no_option": " No",
+              "no_score": NaN,
+              "no_token_id": 2308,
+              "p_no_binary": NaN,
+              "p_yes_binary": NaN,
+              "pred_process_valid": false,
+              "readout_confidence": NaN,
+              "yes_minus_no": NaN,
+              "yes_option": " Yes",
+              "yes_score": NaN,
+              "yes_token_id": 7414
+            },
+            "confidence_toward_low": {
+              "label_entropy": NaN,
+              "no_option": " No",
+              "no_score": NaN,
+              "no_token_id": 2308,
+              "p_no_binary": NaN,
+              "p_yes_binary": NaN,
+              "pred_process_valid": false,
+              "readout_confidence": NaN,
+              "yes_minus_no": NaN,
+              "yes_option": " Yes",
+              "yes_score": NaN,
+              "yes_token_id": 7414
+            },
+            "process_toward_invalid": {
+              "label_entropy": 0.6931471805579453,
+              "no_option": "No",
+              "no_score": -0.703036367893219,
+              "no_token_id": 2753,
+              "p_no_binary": 0.5,
+              "p_yes_binary": 0.5,
+              "pred_process_valid": false,
+              "readout_confidence": 0.0,
+              "yes_minus_no": 0.0,
+              "yes_option": "Yes",
+              "yes_score": -0.703036367893219,
+              "yes_token_id": 9450
+            },
+            "process_toward_valid": {
+              "label_entropy": 0.011259995389127267,
+              "no_option": "No",
+              "no_score": -6.504211902618408,
+              "no_token_id": 2753,
+              "p_no_binary": 0.0015011823432881349,
+              "p_yes_binary": 0.9984988176567118,
+              "pred_process_valid": true,
+              "readout_confidence": 6.499999942258,
+              "yes_minus_no": 6.499999942258,
+              "yes_option": "Yes",
+              "yes_score": -0.004211960360407829,
+              "yes_token_id": 9450
+            }
+          },
+          "task_id": "e61_en_en_increase_base"
+        }
+      ],
+      "summary": [
+        {
+          "flip_count": 0,
+          "mean_readout_confidence_effect": 3.999999837949872,
+          "mean_yes_minus_no_effect": 3.999999837949872,
+          "n": 1,
+          "patch": "process_toward_valid"
+        },
+        {
+          "flip_count": 1,
+          "mean_readout_confidence_effect": -2.5000001043081284,
+          "mean_yes_minus_no_effect": -2.5000001043081284,
+          "n": 1,
+          "patch": "process_toward_invalid"
+        },
+        {
+          "flip_count": 1,
+          "mean_readout_confidence_effect": NaN,
+          "mean_yes_minus_no_effect": NaN,
+          "n": 1,
+          "patch": "confidence_toward_high"
+        },
+        {
+          "flip_count": 1,
+          "mean_readout_confidence_effect": NaN,
+          "mean_yes_minus_no_effect": NaN,
+          "n": 1,
+          "patch": "confidence_toward_low"
+        }
+      ]
+    },
+    "E110_prefix_emergence": {
+      "rows": [
+        {
+          "audit_idx": 880059,
+          "char_end": 17,
+          "hidden_pred_process_valid_global": false,
+          "hidden_process_score_global": -0.8468672037124634,
+          "input_tokens": 171,
+          "label_entropy": 0.13234321699672302,
+          "manual_acpi_strict": true,
+          "manual_acpi_unrepaired": true,
+          "manual_repair_present": true,
+          "no_option": "No",
+          "no_score": -0.3182505667209625,
+          "no_token_id": 2753,
+          "p_no_binary": 0.9706877717925421,
+          "p_yes_binary": 0.02931222820745785,
+          "pred_process_valid": false,
+          "readout_confidence": 3.500000089406967,
+          "source": "E88",
+          "span_text": "Final answer: 401",
+          "stage": "first_final_answer_end",
+          "task_id": "aime25_integer_pairs_quad_p4",
+          "yes_minus_no": -3.500000089406967,
+          "yes_option": "Yes",
+          "yes_score": -3.8182506561279297,
+          "yes_token_id": 9450
+        },
+        {
+          "audit_idx": 880059,
+          "char_end": 52,
+          "hidden_pred_process_valid_global": false,
+          "hidden_process_score_global": -1.4393141269683838,
+          "input_tokens": 179,
+          "label_entropy": 0.09009477408085212,
+          "manual_acpi_strict": true,
+          "manual_acpi_unrepaired": true,
+          "manual_repair_present": true,
+          "no_option": "No",
+          "no_score": -0.26223859190940857,
+          "no_token_id": 2753,
+          "p_no_binary": 0.9820137884587394,
+          "p_yes_binary": 0.01798621154126062,
+          "pred_process_valid": false,
+          "readout_confidence": 3.999999910593033,
+          "source": "E88",
+          "span_text": "Final answer: 401\n\nThe equation can be factored as $",
+          "stage": "before_error_span",
+          "task_id": "aime25_integer_pairs_quad_p4",
+          "yes_minus_no": -3.999999910593033,
+          "yes_option": "Yes",
+          "yes_score": -4.262238502502441,
+          "yes_token_id": 9450
+        },
+        {
+          "audit_idx": 880059,
+          "char_end": 74,
+          "hidden_pred_process_valid_global": false,
+          "hidden_process_score_global": -0.9876825213432312,
+          "input_tokens": 197,
+          "label_entropy": 0.365333861343313,
+          "manual_acpi_strict": true,
+          "manual_acpi_unrepaired": true,
+          "manual_repair_present": true,
+          "no_option": "No",
+          "no_score": -0.25542572140693665,
+          "no_token_id": 2753,
+          "p_no_binary": 0.8807970748488297,
+          "p_yes_binary": 0.11920292515117029,
+          "pred_process_valid": false,
+          "readout_confidence": 1.9999999701976776,
+          "source": "E88",
+          "span_text": "(3x - 2y)(4x + 3y) = 0",
+          "stage": "error_span_end",
+          "task_id": "aime25_integer_pairs_quad_p4",
+          "yes_minus_no": -1.9999999701976776,
+          "yes_option": "Yes",
+          "yes_score": -2.2554256916046143,
+          "yes_token_id": 9450
+        },
+        {
+          "audit_idx": 880059,
+          "char_end": 659,
+          "hidden_pred_process_valid_global": false,
+          "hidden_process_score_global": -1.9534205198287964,
+          "input_tokens": 450,
+          "label_entropy": 0.13234323035219023,
+          "manual_acpi_strict": true,
+          "manual_acpi_unrepaired": true,
+          "manual_repair_present": true,
+          "no_option": "No",
+          "no_score": -0.06419329345226288,
+          "no_token_id": 2753,
+          "p_no_binary": 0.9706877679766944,
+          "p_yes_binary": 0.029312232023305632,
+          "pred_process_valid": false,
+          "readout_confidence": 3.4999999552965164,
+          "source": "E88",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end",
+          "task_id": "aime25_integer_pairs_quad_p4",
+          "yes_minus_no": -3.4999999552965164,
+          "yes_option": "Yes",
+          "yes_score": -3.5641932487487793,
+          "yes_token_id": 9450
+        },
+        {
+          "audit_idx": 880059,
+          "char_end": 899,
+          "hidden_pred_process_valid_global": false,
+          "hidden_process_score_global": -1.9042888879776,
+          "input_tokens": 556,
+          "label_entropy": 0.1908649700946655,
+          "manual_acpi_strict": true,
+          "manual_acpi_unrepaired": true,
+          "manual_repair_present": true,
+          "no_option": "No",
+          "no_score": -0.08039569109678268,
+          "no_token_id": 2753,
+          "p_no_binary": 0.9525741271590255,
+          "p_yes_binary": 0.04742587284097443,
+          "pred_process_valid": false,
+          "readout_confidence": 3.0000000074505806,
+          "source": "E88",
+          "span_text": "Wait, let's recheck arithmetic.\nFor $3x-2y=0$: $k \\in [-33, 33] \\implies 67$.\nFor $4x+3y=0$: $k \\in [-25, 25] \\implies 51$.\nSum is $118$. Intersection is 1. Total is 117.\nWait, re-reading bounds.\n$3k \\le 100 \\implies k \\le 33.33 \\implies k \\le ",
+          "stage": "post_repair_240chars",
+          "task_id": "aime25_integer_pairs_quad_p4",
+          "yes_minus_no": -3.0000000074505806,
+          "yes_option": "Yes",
+          "yes_score": -3.0803956985473633,
+          "yes_token_id": 9450
+        },
+        {
+          "audit_idx": 880059,
+          "char_end": 1218,
+          "hidden_pred_process_valid_global": false,
+          "hidden_process_score_global": -1.7380609512329102,
+          "input_tokens": 670,
+          "label_entropy": 0.13234322738430856,
+          "manual_acpi_strict": true,
+          "manual_acpi_unrepaired": true,
+          "manual_repair_present": true,
+          "no_option": "No",
+          "no_score": -0.050370946526527405,
+          "no_token_id": 2753,
+          "p_no_binary": 0.9706877688246606,
+          "p_yes_binary": 0.029312231175339418,
+          "pred_process_valid": false,
+          "readout_confidence": 3.499999985098839,
+          "source": "E88",
+          "span_text": "25$. Correct. Count 51.\nSum 118. Subtract 1 = 117.\n\nFinal check of problem statement: \"ordered pairs\". Yes.\nFinal check of bounds: inclusive.\nFinal answer: 117.",
+          "stage": "completion_end",
+          "task_id": "aime25_integer_pairs_quad_p4",
+          "yes_minus_no": -3.499999985098839,
+          "yes_option": "Yes",
+          "yes_score": -3.550370931625366,
+          "yes_token_id": 9450
+        },
+        {
+          "audit_idx": 880059,
+          "char_end": 1218,
+          "hidden_pred_process_valid_global": false,
+          "hidden_process_score_global": -1.7380609512329102,
+          "input_tokens": 670,
+          "label_entropy": 0.13234322738430856,
+          "manual_acpi_strict": true,
+          "manual_acpi_unrepaired": true,
+          "manual_repair_present": true,
+          "no_option": "No",
+          "no_score": -0.050370946526527405,
+          "no_token_id": 2753,
+          "p_no_binary": 0.9706877688246606,
+          "p_yes_binary": 0.029312231175339418,
+          "pred_process_valid": false,
+          "readout_confidence": 3.499999985098839,
+          "source": "E88",
+          "span_text": "Final answer: 117.",
+          "stage": "last_final_answer_end",
+          "task_id": "aime25_integer_pairs_quad_p4",
+          "yes_minus_no": -3.499999985098839,
+          "yes_option": "Yes",
+          "yes_score": -3.550370931625366,
+          "yes_token_id": 9450
+        }
+      ],
+      "source_rows": 1,
+      "summary": [
+        {
+          "accept_rate": 0.0,
+          "mean_hidden_process_score": -1.4393141269683838,
+          "mean_yes_minus_no": -3.999999910593033,
+          "n": 1,
+          "stage": "before_error_span"
+        },
+        {
+          "accept_rate": 0.0,
+          "mean_hidden_process_score": -1.7380609512329102,
+          "mean_yes_minus_no": -3.499999985098839,
+          "n": 1,
+          "stage": "completion_end"
+        },
+        {
+          "accept_rate": 0.0,
+          "mean_hidden_process_score": -0.9876825213432312,
+          "mean_yes_minus_no": -1.9999999701976776,
+          "n": 1,
+          "stage": "error_span_end"
+        },
+        {
+          "accept_rate": 0.0,
+          "mean_hidden_process_score": -0.8468672037124634,
+          "mean_yes_minus_no": -3.500000089406967,
+          "n": 1,
+          "stage": "first_final_answer_end"
+        },
+        {
+          "accept_rate": 0.0,
+          "mean_hidden_process_score": -1.7380609512329102,
+          "mean_yes_minus_no": -3.499999985098839,
+          "n": 1,
+          "stage": "last_final_answer_end"
+        },
+        {
+          "accept_rate": 0.0,
+          "mean_hidden_process_score": -1.9042888879776,
+          "mean_yes_minus_no": -3.0000000074505806,
+          "n": 1,
+          "stage": "post_repair_240chars"
+        },
+        {
+          "accept_rate": 0.0,
+          "mean_hidden_process_score": -1.9534205198287964,
+          "mean_yes_minus_no": -3.4999999552965164,
+          "n": 1,
+          "stage": "repair_trigger_end"
+        }
+      ]
+    },
+    "E111_long_context_dilution": {
+      "rows": [
+        {
+          "condition": "suffix_0",
+          "family": "percentage_base",
+          "hidden_pred_process_valid_global": false,
+          "hidden_process_score_global": -1.8665343523025513,
+          "input_tokens": 182,
+          "item_id": "610062",
+          "label_entropy": 0.060488976847657784,
+          "no_option": "No",
+          "no_score": -0.01818636804819107,
+          "no_token_id": 2753,
+          "p_no_binary": 0.9890130595553192,
+          "p_yes_binary": 0.010986940444680947,
+          "pred_process_valid": false,
+          "readout_confidence": 4.500000201165676,
+          "suffix_chars": 0,
+          "task_id": "e61_en_en_increase_base",
+          "yes_minus_no": -4.500000201165676,
+          "yes_option": "Yes",
+          "yes_score": -4.518186569213867,
+          "yes_token_id": 9450
+        },
+        {
+          "condition": "suffix_300",
+          "family": "percentage_base",
+          "hidden_pred_process_valid_global": false,
+          "hidden_process_score_global": -1.4130507707595825,
+          "input_tokens": 204,
+          "item_id": "610062",
+          "label_entropy": 0.13234321662573784,
+          "no_option": "No",
+          "no_score": -0.034243013709783554,
+          "no_token_id": 2753,
+          "p_no_binary": 0.9706877718985378,
+          "p_yes_binary": 0.029312228101462088,
+          "pred_process_valid": false,
+          "readout_confidence": 3.5000000931322575,
+          "suffix_chars": 110,
+          "task_id": "e61_en_en_increase_base",
+          "yes_minus_no": -3.5000000931322575,
+          "yes_option": "Yes",
+          "yes_score": -3.534243106842041,
+          "yes_token_id": 9450
+        },
+        {
+          "condition": "suffix_1200",
+          "family": "percentage_base",
+          "hidden_pred_process_valid_global": false,
+          "hidden_process_score_global": -1.4072604179382324,
+          "input_tokens": 357,
+          "item_id": "610062",
+          "label_entropy": 0.13234321810967858,
+          "no_option": "No",
+          "no_score": -0.033981483429670334,
+          "no_token_id": 2753,
+          "p_no_binary": 0.9706877714745548,
+          "p_yes_binary": 0.02931222852544515,
+          "pred_process_valid": false,
+          "readout_confidence": 3.5000000782310963,
+          "suffix_chars": 879,
+          "task_id": "e61_en_en_increase_base",
+          "yes_minus_no": -3.5000000782310963,
+          "yes_option": "Yes",
+          "yes_score": -3.5339815616607666,
+          "yes_token_id": 9450
+        }
+      ],
+      "summary": [
+        {
+          "accept_rate": 0.0,
+          "condition": "suffix_0",
+          "mean_hidden_process_score": -1.8665343523025513,
+          "mean_readout_confidence": 4.500000201165676,
+          "mean_yes_minus_no": -4.500000201165676,
+          "n": 1
+        },
+        {
+          "accept_rate": 0.0,
+          "condition": "suffix_1200",
+          "mean_hidden_process_score": -1.4072604179382324,
+          "mean_readout_confidence": 3.5000000782310963,
+          "mean_yes_minus_no": -3.5000000782310963,
+          "n": 1
+        },
+        {
+          "accept_rate": 0.0,
+          "condition": "suffix_300",
+          "mean_hidden_process_score": -1.4130507707595825,
+          "mean_readout_confidence": 3.5000000931322575,
+          "mean_yes_minus_no": -3.5000000931322575,
+          "n": 1
+        }
+      ]
+    },
+    "E112_answer_anchor_hidden_mediation": {
+      "rows": [
+        {
+          "answer_condition": "masked",
+          "audit_idx": 530012,
+          "hidden_pred_process_valid_global": false,
+          "hidden_process_score_global": -1.4223687648773193,
+          "input_tokens": 170,
+          "is_acpi": false,
+          "label_entropy": 0.1323432370299243,
+          "manual_process_valid": false,
+          "no_option": "No",
+          "no_score": -0.0409461185336113,
+          "no_token_id": 2753,
+          "p_no_binary": 0.9706877660687704,
+          "p_yes_binary": 0.029312233931229704,
+          "pred_process_valid": false,
+          "process_variant": "invalid_correct",
+          "readout_confidence": 3.499999888241291,
+          "task_id": "coefficient_vs_exponent",
+          "yes_minus_no": -3.499999888241291,
+          "yes_option": "Yes",
+          "yes_score": -3.5409460067749023,
+          "yes_token_id": 9450
+        },
+        {
+          "answer_condition": "removed",
+          "audit_idx": 530011,
+          "hidden_pred_process_valid_global": false,
+          "hidden_process_score_global": -1.55967378616333,
+          "input_tokens": 163,
+          "is_acpi": false,
+          "label_entropy": 0.1908649599968952,
+          "manual_process_valid": false,
+          "no_option": "No",
+          "no_score": -0.060035862028598785,
+          "no_token_id": 2753,
+          "p_no_binary": 0.952574130524949,
+          "p_yes_binary": 0.04742586947505113,
+          "pred_process_valid": false,
+          "process_variant": "invalid_correct",
+          "readout_confidence": 3.0000000819563866,
+          "task_id": "coefficient_vs_exponent",
+          "yes_minus_no": -3.0000000819563866,
+          "yes_option": "Yes",
+          "yes_score": -3.0600359439849854,
+          "yes_token_id": 9450
+        },
+        {
+          "answer_condition": "shown",
+          "audit_idx": 530010,
+          "hidden_pred_process_valid_global": false,
+          "hidden_process_score_global": -1.4319651126861572,
+          "input_tokens": 169,
+          "is_acpi": true,
+          "label_entropy": 0.13234321996460438,
+          "manual_process_valid": false,
+          "no_option": "No",
+          "no_score": -0.03670471906661987,
+          "no_token_id": 2753,
+          "p_no_binary": 0.9706877709445761,
+          "p_yes_binary": 0.02931222905542399,
+          "pred_process_valid": false,
+          "process_variant": "invalid_correct",
+          "readout_confidence": 3.5000000596046448,
+          "task_id": "coefficient_vs_exponent",
+          "yes_minus_no": -3.5000000596046448,
+          "yes_option": "Yes",
+          "yes_score": -3.5367047786712646,
+          "yes_token_id": 9450
+        },
+        {
+          "answer_condition": "wrong",
+          "audit_idx": 530013,
+          "hidden_pred_process_valid_global": false,
+          "hidden_process_score_global": -2.142113208770752,
+          "input_tokens": 169,
+          "is_acpi": false,
+          "label_entropy": 0.06048897734859611,
+          "manual_process_valid": false,
+          "no_option": "No",
+          "no_score": -0.01543645840138197,
+          "no_token_id": 2753,
+          "p_no_binary": 0.9890130594439994,
+          "p_yes_binary": 0.01098694055600054,
+          "pred_process_valid": false,
+          "process_variant": "invalid_correct",
+          "readout_confidence": 4.500000190921128,
+          "task_id": "coefficient_vs_exponent",
+          "yes_minus_no": -4.500000190921128,
+          "yes_option": "Yes",
+          "yes_score": -4.51543664932251,
+          "yes_token_id": 9450
+        }
+      ],
+      "summary": [
+        {
+          "accept_rate": 0.0,
+          "answer_condition": "masked",
+          "manual_process_valid": false,
+          "mean_hidden_process_score": -1.4223687648773193,
+          "mean_yes_minus_no": -3.499999888241291,
+          "n": 1
+        },
+        {
+          "accept_rate": 0.0,
+          "answer_condition": "removed",
+          "manual_process_valid": false,
+          "mean_hidden_process_score": -1.55967378616333,
+          "mean_yes_minus_no": -3.0000000819563866,
+          "n": 1
+        },
+        {
+          "accept_rate": 0.0,
+          "answer_condition": "shown",
+          "manual_process_valid": false,
+          "mean_hidden_process_score": -1.4319651126861572,
+          "mean_yes_minus_no": -3.5000000596046448,
+          "n": 1
+        },
+        {
+          "accept_rate": 0.0,
+          "answer_condition": "wrong",
+          "manual_process_valid": false,
+          "mean_hidden_process_score": -2.142113208770752,
+          "mean_yes_minus_no": -4.500000190921128,
+          "n": 1
+        }
+      ]
+    },
+    "E114_hidden_gated_filter": {
+      "rows": [
+        {
+          "base_accept": false,
+          "family": "percentage_base",
+          "gated_accept": false,
+          "gold_process_valid": false,
+          "hidden_accept": false,
+          "hidden_confidence_score": null,
+          "hidden_process_score": -1.1182513236999512,
+          "is_acpi": true,
+          "item_id": "610062",
+          "label_entropy": 0.060488976847657784,
+          "pred_process_valid_from_hidden": false,
+          "pred_process_valid_from_yes_no": false,
+          "readout_confidence": 4.500000201165676,
+          "route_id": "en_en",
+          "task_id": "e61_en_en_increase_base",
+          "yes_minus_no": -4.500000201165676
+        },
+        {
+          "base_accept": true,
+          "family": "percentage_base",
+          "gated_accept": true,
+          "gold_process_valid": true,
+          "hidden_accept": true,
+          "hidden_confidence_score": null,
+          "hidden_process_score": 2.3087353706359863,
+          "is_acpi": false,
+          "item_id": "610061",
+          "label_entropy": 0.2685351660626903,
+          "pred_process_valid_from_hidden": true,
+          "pred_process_valid_from_yes_no": true,
+          "readout_confidence": 2.5000001043081284,
+          "route_id": "en_en",
+          "task_id": "e61_en_en_increase_base",
+          "yes_minus_no": 2.5000001043081284
+        },
+        {
+          "base_accept": false,
+          "family": "unit_scale",
+          "gated_accept": false,
+          "gold_process_valid": false,
+          "hidden_accept": false,
+          "hidden_confidence_score": null,
+          "hidden_process_score": -1.78761625289917,
+          "is_acpi": true,
+          "item_id": "610002",
+          "label_entropy": 0.1908649660555574,
+          "pred_process_valid_from_hidden": false,
+          "pred_process_valid_from_yes_no": false,
+          "readout_confidence": 3.000000037252903,
+          "route_id": "en_en",
+          "task_id": "e61_en_en_meter_centimeter",
+          "yes_minus_no": -3.000000037252903
+        },
+        {
+          "base_accept": true,
+          "family": "unit_scale",
+          "gated_accept": true,
+          "gold_process_valid": true,
+          "hidden_accept": true,
+          "hidden_confidence_score": null,
+          "hidden_process_score": 2.016965389251709,
+          "is_acpi": false,
+          "item_id": "610001",
+          "label_entropy": 0.26853518695522544,
+          "pred_process_valid_from_hidden": true,
+          "pred_process_valid_from_yes_no": true,
+          "readout_confidence": 2.499999985098839,
+          "route_id": "en_en",
+          "task_id": "e61_en_en_meter_centimeter",
+          "yes_minus_no": 2.499999985098839
+        }
+      ],
+      "summary": [
+        {
+          "base_accept_rate": 0.0,
+          "gated_accept_rate": 0.0,
+          "hidden_accept_rate": 0.0,
+          "n": 2,
+          "slice": "acpi_invalid"
+        },
+        {
+          "base_accept_rate": 1.0,
+          "gated_accept_rate": 1.0,
+          "hidden_accept_rate": 1.0,
+          "n": 2,
+          "slice": "valid"
+        }
+      ]
+    }
+  },
+  "started_at": "2026-04-30T00:54:47"
+}

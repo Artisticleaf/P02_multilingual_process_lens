@@ -1,0 +1,8 @@
+[2026-04-27T19:44:52] loading verifier=qwen3_14b_base on cuda; pairs=1
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s]Loading weights: 100%|██████████| 443/443 [00:00<00:00, 16272.65it/s]
+pair=e30_inequality_no_more_than_between_inclusive prompt=en order=bad_A target=A pred=B margin=-0.750
+pair=e30_inequality_no_more_than_between_inclusive prompt=en order=bad_B target=B pred=B margin=0.500
+pair=e30_inequality_no_more_than_between_inclusive prompt=zh order=bad_A target=A pred=B margin=-0.125
+pair=e30_inequality_no_more_than_between_inclusive prompt=zh order=bad_B target=B pred=B margin=0.125
+wrote results/E30_non_discount_contrastive_verifier/qwen3_14b_base_contrastive_acpi_verifier.json; rows=4 acc=0.500 mean_margin=-0.062

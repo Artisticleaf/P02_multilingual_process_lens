@@ -1,0 +1,713 @@
+{
+  "args": {
+    "all_layers": false,
+    "audit_jsonl": "/home/Awei/P02_multilingual_process_lens/data/processed/e119_e146_process_audit_official_20260430.jsonl",
+    "best_layer": null,
+    "device": "auto",
+    "dry_run": true,
+    "dtype": "bfloat16",
+    "hidden_layers": null,
+    "include_valid_matched": true,
+    "layer_window": 2,
+    "local_files_only": false,
+    "max_model_len": 8192,
+    "max_target_rows": 0,
+    "model_key": "gemma4_26b_a4b_it",
+    "out_dir": "/home/Awei/P02_multilingual_process_lens/results/E131_e119_e146_hidden_localization",
+    "prompt_format": "official_if_chat",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "target_mode": "mixed",
+    "valid_per_task_prompt": 1
+  },
+  "by_trace_class": {
+    "repaired_acpi": 8,
+    "strict_valid": 6,
+    "unrepaired_acpi": 2
+  },
+  "created_at": "2026-04-30T15:19:09",
+  "experiment": "E131_e119_e146_hidden_localization_dry_run",
+  "leakage_note_zh": "dry-run 不加载模型；只检查官方标签行选择和 prefix detector，不把人工标签写入 verifier prompt。",
+  "rows": [
+    {
+      "audit_idx": 1190007,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "model_key": "gemma4_26b_a4b_it",
+      "points": [
+        {
+          "char_end": 916,
+          "detector": "wrong_word_regex",
+          "span_text": "Wait,",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 1106,
+          "detector": "repair_regex",
+          "span_text": "However",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1156,
+          "detector": "post_error_window",
+          "span_text": " the order of vertices in the heptagon is $A-F-N-B-C-E-M$. Let's calculate the area by subtracting/adding pieces to $S$.\nThe heptagon is formed by the vertices $A, F, N, B, C, E, M$. However, $M$ and $N$ are reflections.\n$M$ is reflection o",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1346,
+          "detector": "post_repair_window",
+          "span_text": "However, $M$ and $N$ are reflections.\n$M$ is reflection of $D$ through $F$. $N$ is reflection of $G$ through $E$.\nLet's use coordinates or area addition. The area of $AFNBCEM$ can be viewed as:\n$Area = [ABC] - [FBN] - [GCM] \\dots$ No, let's be mor",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 6045,
+          "detector": "completion_end",
+          "span_text": "s or the calculation of $S$.\n$S = 588$. $DEGF = \\frac{24}{49} \\times 588 = 24 \\times 12 = 288$. Correct.\nFinal answer calculation: $S = 588$.\n\nFinal answer: 588",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 6045,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 6045,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "self_check",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_geometry_reflection_p2",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190008,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "model_key": "gemma4_26b_a4b_it",
+      "points": [
+        {
+          "char_end": 1253,
+          "detector": "wrong_word_regex",
+          "span_text": "Wait,",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 1348,
+          "detector": "repair_regex",
+          "span_text": "re-read",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1493,
+          "detector": "post_error_window",
+          "span_text": " let's look at the vertices: $A, F, N, B, C, E, M$. This is not a simple polygon. Let's re-read.\nThe heptagon is $AFNBCEM$. The vertices are $A \\to F \\to N \\to B \\to C \\to E \\to M \\to A$.\nActually, it's easier to use the area of $ABC$ and a",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1588,
+          "detector": "post_repair_window",
+          "span_text": "re-read.\nThe heptagon is $AFNBCEM$. The vertices are $A \\to F \\to N \\to B \\to C \\to E \\to M \\to A$.\nActually, it's easier to use the area of $ABC$ and adjust.\n$M$ is reflection of $D$ through $F$. Since $A, F, G, C$ are collinear, $M$ is not neces",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 4091,
+          "detector": "completion_end",
+          "span_text": "520s + 1820s + 2548s - 1820s + 520s = 2548s$.\n$2 \\text{Area} = 2548s \\implies \\text{Area} = 1274s$.\nSince $S = 1274s = 588$, the area is 588.\n\nFinal answer: 588",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 4091,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 4091,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_geometry_reflection_p2",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190009,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "model_key": "gemma4_26b_a4b_it",
+      "points": [
+        {
+          "char_end": 718,
+          "detector": "wrong_word_regex",
+          "span_text": "not quite right",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 958,
+          "detector": "post_error_window",
+          "span_text": ").\nLet's use coordinates with $A$ at the origin. Let $\\vec{u}$ be the unit vector along $AB$ and $\\vec{v}$ be the unit vector along $AC$.\n$D = 4\\vec{u}$, $E = 20\\vec{u}$, $F = 13\\vec{v}$, $G = 65\\vec{v}$.\nArea($DEGF$) = Area($\\triangle AGE$",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1030,
+          "detector": "repair_regex",
+          "span_text": "Actually",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1270,
+          "detector": "post_repair_window",
+          "span_text": "Actually, Area($DEGF$) = Area($\\triangle AEG$) - Area($\\triangle ADF$) - Area($\\triangle EFG$ is not right).\nWait, $D, E$ are on $AB$ and $F, G$ are on $AC$. The area of a quadrilateral with vertices on two rays from the origin is:\nArea($DEGF$) = A",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 7943,
+          "detector": "completion_end",
+          "span_text": "a)(0) = 0$\nSum $= (-520 + 1820 + 2548 - 1820 + 520)\\sin \\alpha = 2548\\sin \\alpha$.\nArea $= \\frac{1}{2} |2548\\sin \\alpha| = 1274(6/13) = 588$.\n\nFinal answer: 588",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 7943,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 7943,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_geometry_reflection_p2",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1190015,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "model_key": "gemma4_26b_a4b_it",
+      "points": [
+        {
+          "char_end": 2114,
+          "detector": "completion_end",
+          "span_text": "the overlap is $(0, 0)$.\n\n**Total count:**\nTotal pairs = (Pairs in Case 1) + (Pairs in Case 2) - (Overlap)\nTotal pairs = $51 + 67 - 1 = 117$.\n\nFinal answer: 117",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 2114,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 2114,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "neutral",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190017,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "model_key": "gemma4_26b_a4b_it",
+      "points": [
+        {
+          "char_end": 1942,
+          "detector": "completion_end",
+          "span_text": "eck: The main trap is forgetting to subtract the overlapping solution $(0,0)$. Case 1 yields 67 pairs, Case 2 yields 51 pairs. $67+51-1=117$.\n\nFinal answer: 117",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 1942,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 1942,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "self_check",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190019,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "model_key": "gemma4_26b_a4b_it",
+      "points": [
+        {
+          "char_end": 2041,
+          "detector": "completion_end",
+          "span_text": "(0,0)$.\nIn Case 2, $m=0$ gives $(0,0)$.\nTotal unique pairs = (Number in Case 1) + (Number in Case 2) - (Overlap)\nTotal = $51 + 67 - 1 = 117$.\n\nFinal answer: 117",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 2041,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 2041,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190020,
+      "manual_error_type": "wrong_factorization_unrepaired_symmetric_count",
+      "model_key": "gemma4_26b_a4b_it",
+      "points": [
+        {
+          "char_end": 157,
+          "detector": "factorization_regex",
+          "span_text": "(3x - 2y)(4x + 3y)",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 397,
+          "detector": "post_error_window",
+          "span_text": " = 0$\n\nFor the product to be zero, at least one of the factors must be zero:\n1. $3x - 2y = 0 \\implies 3x = 2y$. Since $\\gcd(3, 2) = 1$, $x$ must be a multiple of 2 and $y$ must be a multiple of 3. Let $x = 2k$ and $y = 3k$ for some integer ",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1450,
+          "detector": "completion_end",
+          "span_text": ",0)$.\nSince $(0,0)$ is counted in both sets, we must subtract it once to avoid double counting.\n\nTotal number of pairs = $67 + 51 - 1 = 117$.\n\nFinal answer: 117",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 1450,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 1450,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "trace_class": "unrepaired_acpi"
+    },
+    {
+      "audit_idx": 1190021,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "model_key": "gemma4_26b_a4b_it",
+      "points": [
+        {
+          "char_end": 6382,
+          "detector": "completion_end",
+          "span_text": " \\{1, 2, 3, 4, 5, 6, 7, 8\\}$ and the even digits are $\\{2, 4, 6, 8\\}$.\nThe calculation $4 \\times 576 = 2304$ is correct.\n$2304 - 2025 = 279$.\n\nFinal answer: 279",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 6382,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 279",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 6382,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 279",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "neutral",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_perm_div22_p5",
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190023,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "model_key": "gemma4_26b_a4b_it",
+      "points": [
+        {
+          "char_end": 3740,
+          "detector": "completion_end",
+          "span_text": "A = \\{8, 7, 2, 1\\}$, $B = \\{6, 5, 4, 3\\}$.\n$B$ has even digits $\\{6, 4\\}$, so $k=2$. Correct.\n$N = 8 \\times 288 = 2304$.\n$2304 - 2025 = 279$.\n\nFinal answer: 279",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 3740,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 279",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 3740,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 279",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "self_check",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_perm_div22_p5",
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1190025,
+      "manual_error_type": "strict_valid_no_process_error_found",
+      "model_key": "gemma4_26b_a4b_it",
+      "points": [
+        {
+          "char_end": 3656,
+          "detector": "completion_end",
+          "span_text": "n: 6,2)\n   7. 7,5,4,2 (even: 4,2)\n   8. 6,5,4,3 (even: 6,4)\n   All have $k=2$.\n   $N = 8 \\times 24 \\times 12 = 2304$.\n   $2304 - 2025 = 279$.\n\nFinal answer: 279",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 3656,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 279",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 3656,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 279",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E119_uniform_legacy_baseline",
+      "task_id": "aime25_perm_div22_p5",
+      "trace_class": "strict_valid"
+    },
+    {
+      "audit_idx": 1460007,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "model_key": "gemma4_26b_a4b_it",
+      "points": [
+        {
+          "char_end": 886,
+          "detector": "wrong_word_regex",
+          "span_text": "No,",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 1126,
+          "detector": "post_error_window",
+          "span_text": " $DEGF$ is a quadrilateral with vertices $D, E, G, F$. Since $D, E$ are on $AB$ and $F, G$ are on $AC$, we can use the area formula for a quadrilateral with vertices on the sides of an angle:\nArea($DEGF$) = Area($AEG$) - Area($ADF$) - Area(",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1158,
+          "detector": "repair_regex",
+          "span_text": "Actually",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1398,
+          "detector": "post_repair_window",
+          "span_text": "Actually, Area($DEGF$) = Area($AEG$) - Area($ADF$) - Area($\\triangle \\dots$ is incorrect).\nThe area of a quadrilateral with vertices $D, E$ on one side and $F, G$ on the other (starting from $A$) is:\nArea($DEGF$) = Area($AEG$) - Area($ADF$) - Area(",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 8368,
+          "detector": "completion_end",
+          "span_text": "+), A(0)$.\nThis shape is made of triangles $AFN, NB C, CBE, EMA$.\nActually, the shoelace formula calculated the signed area.\nThe area is 588.\n\nFinal answer: 588",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 8368,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 8368,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "neutral",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_geometry_reflection_p2",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460008,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "model_key": "gemma4_26b_a4b_it",
+      "points": [
+        {
+          "char_end": 1017,
+          "detector": "wrong_word_regex",
+          "span_text": "not quite right",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 1257,
+          "detector": "post_error_window",
+          "span_text": ".\nUsing the coordinates for a trapezoid area formula: $\\text{Area} = \\frac{1}{2} |(x_D y_E - y_D x_E) + (x_E y_G - y_E x_G) + (x_G y_F - y_G x_F) + (x_F y_D - y_F x_D)|$.\n$x_D y_E - y_D x_E = 4(0) - 0(20) = 0$.\n$x_E y_G - y_E x_G = 20(65\\si",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 2150,
+          "detector": "repair_regex",
+          "span_text": "However",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 2390,
+          "detector": "post_repair_window",
+          "span_text": "However, the vertices $M$ and $N$ are outside $ABC$.\nLet's calculate the area of $ABC$ and subtract the areas of the regions outside the heptagon.\nThe heptagon is $A-F-N-B-C-E-M-A$ is not quite right. The order is $A, F, N, B, C, E, M$.\nWait, the ",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 8602,
+          "detector": "completion_end",
+          "span_text": "lation:\n$1248/2 = 624$. $288/624 = 12/26 = 6/13$. Correct.\n$14 \\times 91 = 1274$. Correct.\n$1274 \\times 6 / 13 = 98 \\times 6 = 588$. Correct.\n\nFinal answer: 588",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 8602,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 8602,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "self_check",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_geometry_reflection_p2",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460009,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "model_key": "gemma4_26b_a4b_it",
+      "points": [
+        {
+          "char_end": 850,
+          "detector": "wrong_word_regex",
+          "span_text": "incorrect",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 987,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1090,
+          "detector": "post_error_window",
+          "span_text": " because $D, E, F, G$ do not form a simple subtraction.\nThe vertices are $D$ (on $AB$), $E$ (on $AB$), $G$ (on $AC$), $F$ (on $AC$). Wait, the points are $A, D, E, B$ and $A, F, G, C$.\nThe quadrilateral $DEGF$ has vertices $D(4,0)$, $E(20,0",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1227,
+          "detector": "post_repair_window",
+          "span_text": "Wait, the points are $A, D, E, B$ and $A, F, G, C$.\nThe quadrilateral $DEGF$ has vertices $D(4,0)$, $E(20,0)$, $G(0, 65)$, $F(0, 13)$ (using scalar multiples of $\\vec{u}, \\vec{v}$).\nThe area of $DEGF$ is Area($AEG$) - Area($ADF$)? No, $DE$ is o",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 9263,
+          "detector": "completion_end",
+          "span_text": "48}{1248} = 588$.\nThe heptagon area calculation $\\text{Area} = \\frac{1}{2} | \\sum x_i y_{i+1} - y_i x_{i+1} |$ results in $\\text{Area}(ABC)$.\n\nFinal answer: 588",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 9263,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 9263,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "self_check",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_geometry_reflection_p2",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460010,
+      "manual_error_type": "self_corrected_wrong_geometry_or_shoelace_step",
+      "model_key": "gemma4_26b_a4b_it",
+      "points": [
+        {
+          "char_end": 355,
+          "detector": "wrong_word_regex",
+          "span_text": "No,",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 595,
+          "detector": "post_error_window",
+          "span_text": " the points are on the sides.\nArea $(\\triangle ADE) = S \\cdot \\frac{AD \\cdot AE}{AB \\cdot AC}$ is incorrect. The formula for a triangle $APQ$ where $P$ is on $AB$ and $Q$ is on $AC$ is $\\text{Area}(APQ) = S \\cdot \\frac{AP}{AB} \\cdot \\frac{A",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 838,
+          "detector": "repair_regex",
+          "span_text": "correct",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 1078,
+          "detector": "post_repair_window",
+          "span_text": "correct because $D, E$ are on $AB$ and $F, G$ are on $AC$.\nThe area of quadrilateral $DEGF$ is $\\text{Area}(AEG) - \\text{Area}(ADF)$? No.\nThe vertices are $D(4,0), E(20,0), G(x_G, y_G), F(x_F, y_F)$ in a sense.\nThe area of $DEGF$ is $\\text{Area}(A",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 11844,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 12938,
+          "detector": "completion_end",
+          "span_text": "40-65c)(0) - (-65s)(28) + (28)(91s) - 0 + 0 - (91s)(20) + (20)(26s) - 0 + 0| = 2548s$.\n$\\text{Area} = 1274s = 1274 \\cdot \\frac{6}{13} = 588$.\n\nFinal answer: 588",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 12938,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 588",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_geometry_reflection_p2",
+      "trace_class": "repaired_acpi"
+    },
+    {
+      "audit_idx": 1460021,
+      "manual_error_type": "wrong_factorization_unrepaired_symmetric_count",
+      "model_key": "gemma4_26b_a4b_it",
+      "points": [
+        {
+          "char_end": 287,
+          "detector": "factorization_regex",
+          "span_text": "(3x - 2y)(4x + 3y)",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 527,
+          "detector": "post_error_window",
+          "span_text": " = 0$\n\nFor this product to be zero, at least one of the factors must be zero:\n1.  $3x - 2y = 0 \\implies 3x = 2y$. Since $\\gcd(3, 2) = 1$, $x$ must be a multiple of 2 and $y$ must be a multiple of 3. We can write $x = 2k$ and $y = 3k$ for so",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 1740,
+          "detector": "completion_end",
+          "span_text": "mon solution is $(0,0)$.\n\n**Total count:**\nTotal pairs = (Count in Case 1) + (Count in Case 2) - (Overlap)\nTotal pairs = $67 + 51 - 1 = 117$.\n\nFinal answer: 117",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 1740,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 1740,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 117",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_integer_pairs_quad_p4",
+      "trace_class": "unrepaired_acpi"
+    },
+    {
+      "audit_idx": 1460028,
+      "manual_error_type": "self_corrected_wrong_counting_step",
+      "model_key": "gemma4_26b_a4b_it",
+      "points": [
+        {
+          "char_end": 2023,
+          "detector": "counting_error_regex",
+          "span_text": "incorrect",
+          "stage": "detected_error_marker_end"
+        },
+        {
+          "char_end": 2263,
+          "detector": "post_error_window",
+          "span_text": ".\nThe total number of permutations for a fixed set $B$ is $4! \\times 4!$. The number of these where $d_8$ is even is $4! \\times (\\text{count of even digits in } B) \\times 3!$.\nLet $e_B$ be the number of even digits in $B$. Total $N = \\sum_{",
+          "stage": "post_error_240chars"
+        },
+        {
+          "char_end": 2311,
+          "detector": "repair_regex",
+          "span_text": "Wait",
+          "stage": "repair_trigger_end"
+        },
+        {
+          "char_end": 2551,
+          "detector": "post_repair_window",
+          "span_text": "Wait, the pairs are $\\{A, B\\}$ where $A$ is the odd-position set and $B$ is the even-position set.\n$A$ can be any of the 8 sets. If $A$ is one of the 8 sets, $B$ is the complement.\nFor each set $A$, the number of valid integers is $4! \\times (\\",
+          "stage": "post_repair_240chars"
+        },
+        {
+          "char_end": 3748,
+          "detector": "completion_end",
+          "span_text": "\n$A=\\{6,5,4,3\\} \\implies e_A=2, e_B=2$.\nYes, all have exactly 2 even digits.\nTotal $N = 8 \\times 288 = 2304$.\n$N - 2025 = 2304 - 2025 = 279$.\n\nFinal answer: 279",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 3748,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 279",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 3748,
+          "detector": "final_regex",
+          "span_text": "\nFinal answer: 279",
+          "stage": "last_final_answer_end"
+        }
+      ],
+      "prompt_variant": "answer_first_no_gold",
+      "run_id": "E146_model_card_hf_profile",
+      "task_id": "aime25_perm_div22_p5",
+      "trace_class": "repaired_acpi"
+    }
+  ],
+  "selected_rows": 16
+}

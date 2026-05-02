@@ -1,0 +1,38 @@
+{
+  "by_family": {
+    "algebra_sign_factor": 2,
+    "causal_counterfactual": 2,
+    "code_boundary": 2,
+    "counting_invariant": 2,
+    "geometry_constraints": 2,
+    "graph_path_constraints": 2,
+    "multilingual_semantic": 2,
+    "optimization_constraints": 2,
+    "probability_conditioning": 2,
+    "proof_validity": 2,
+    "recurrence_dp": 2,
+    "set_venn": 2,
+    "string_regex_parsing": 2,
+    "table_aggregation": 2,
+    "temporal_order": 2,
+    "unit_percentage": 2
+  },
+  "created_at": "2026-05-01T01:11:47",
+  "expected_error_finding_jobs_core3_prompts2": 384,
+  "expected_phase_a_generations_core3_prompts3_k1": 288,
+  "leakage_policy": {
+    "error_span_in_prompt_by_design_rows": 0,
+    "gold_answer_in_prompt_by_design_rows": 0,
+    "manual_label_in_prompt_by_design_rows": 0,
+    "passed": true,
+    "trap_note_in_prompt_by_design_rows": 0
+  },
+  "solution_bank": "data/processed/e153_candidate_solution_bank_20260501.jsonl",
+  "solution_variants": {
+    "invalid_reference": 32,
+    "valid_reference": 32
+  },
+  "solutions": 64,
+  "task_bank": "data/processed/e153_difficult_scenario_tasks_20260501.jsonl",
+  "tasks": 32
+}

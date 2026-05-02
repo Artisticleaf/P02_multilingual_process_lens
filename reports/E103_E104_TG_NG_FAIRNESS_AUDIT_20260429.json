@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-04-29T21:34:52",
+  "e103_summary_by_mode": {
+    "NG_baseline": {
+      "explicit_final_marker_rate": 1.0,
+      "fallback_final_correct": 8,
+      "hit_max_rate": 0.2222222222222222,
+      "mean_generated_tokens": 2214.6666666666665,
+      "mean_repair_markers": 5.111111111111111,
+      "n": 9,
+      "needs_audit": 8,
+      "strict_final_correct": 8
+    },
+    "NG_matched_sampling": {
+      "explicit_final_marker_rate": 1.0,
+      "fallback_final_correct": 7,
+      "hit_max_rate": 0.4444444444444444,
+      "mean_generated_tokens": 2735.8888888888887,
+      "mean_repair_markers": 6.555555555555555,
+      "n": 9,
+      "needs_audit": 7,
+      "strict_final_correct": 7
+    },
+    "TG_official": {
+      "explicit_final_marker_rate": 0.0,
+      "fallback_final_correct": 5,
+      "hit_max_rate": 1.0,
+      "mean_generated_tokens": 4096.0,
+      "mean_repair_markers": 18.0,
+      "n": 9,
+      "needs_audit": 5,
+      "strict_final_correct": 0
+    }
+  },
+  "e104_manual_audit_by_mode": {
+    "NG_baseline": {
+      "audit_rows": 8,
+      "explicit_final_marker_found": 8,
+      "fallback_final_correct": 8,
+      "hit_max_new_tokens": 1,
+      "repaired_acpi": 2,
+      "strict_acpi": 2,
+      "strict_final_correct": 8,
+      "strict_valid": 6,
+      "unfinished_tg": 0,
+      "unrepaired_acpi": 0
+    },
+    "NG_matched_sampling": {
+      "audit_rows": 7,
+      "explicit_final_marker_found": 7,
+      "fallback_final_correct": 7,
+      "hit_max_new_tokens": 2,
+      "repaired_acpi": 1,
+      "strict_acpi": 1,
+      "strict_final_correct": 7,
+      "strict_valid": 6,
+      "unfinished_tg": 0,
+      "unrepaired_acpi": 0
+    },
+    "TG_official": {
+      "audit_rows": 5,
+      "explicit_final_marker_found": 0,
+      "fallback_final_correct": 5,
+      "hit_max_new_tokens": 5,
+      "repaired_acpi": 0,
+      "strict_acpi": 0,
+      "strict_final_correct": 0,
+      "strict_valid": 0,
+      "unfinished_tg": 5,
+      "unrepaired_acpi": 0
+    }
+  },
+  "experiment": "E103_E104_TG_NG_fairness_audit",
+  "model_key": "qwen35_27b",
+  "scope_boundary_zh": "小样本诊断，不是自然发生率主表；只覆盖 Qwen、3 道任务、3 个 prompt variants、k=1。",
+  "strict_scientific_takeaway_zh": "Qwen3.5-27B 在本轮 hard-task 小样本中 TG 不优于 NG；TG 9/9 hit-max 且 0/9 explicit final marker，fallback 正确不能当 strict final decision。"
+}

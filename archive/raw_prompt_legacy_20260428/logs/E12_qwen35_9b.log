@@ -1,0 +1,21 @@
+[2026-04-27T04:16:04] loading verifier=qwen35_9b on cuda; pairs=4
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/427 [00:00<?, ?it/s]Loading weights: 100%|██████████| 427/427 [00:00<00:00, 13376.71it/s]
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=en order=bad_A target=A pred=A margin=0.250
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=en order=bad_B target=B pred=B margin=2.750
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=zh order=bad_A target=A pred=A margin=0.000
+pair=qwen14_deriv_sum_zh_402_bad_403_valid prompt=zh order=bad_B target=B pred=B margin=1.500
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=en order=bad_A target=A pred=B margin=-0.500
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=en order=bad_B target=B pred=B margin=1.125
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=zh order=bad_A target=A pred=B margin=-0.125
+pair=qwen14_dabazhe_zh_en_445_bad_442_valid prompt=zh order=bad_B target=B pred=B margin=0.625
+pair=qwen35_discount_zh_234_bad_235_valid prompt=en order=bad_A target=A pred=A margin=0.250
+pair=qwen35_discount_zh_234_bad_235_valid prompt=en order=bad_B target=B pred=B margin=1.375
+pair=qwen35_discount_zh_234_bad_235_valid prompt=zh order=bad_A target=A pred=A margin=0.375
+pair=qwen35_discount_zh_234_bad_235_valid prompt=zh order=bad_B target=B pred=B margin=1.000
+pair=qwen35_ratio_zh_en_261_bad_260_valid prompt=en order=bad_A target=A pred=A margin=2.251
+pair=qwen35_ratio_zh_en_261_bad_260_valid prompt=en order=bad_B target=B pred=B margin=1.406
+pair=qwen35_ratio_zh_en_261_bad_260_valid prompt=zh order=bad_A target=A pred=A margin=2.750
+pair=qwen35_ratio_zh_en_261_bad_260_valid prompt=zh order=bad_B target=B pred=B margin=1.750
+wrote /home/Awei/P02_multilingual_process_lens/results/E12_contrastive_acpi_verifier/qwen35_9b_contrastive_acpi_verifier.json; rows=16 acc=0.875 mean_margin=1.049

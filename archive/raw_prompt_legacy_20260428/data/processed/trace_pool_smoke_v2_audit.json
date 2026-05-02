@@ -1,0 +1,1902 @@
+{
+  "rows": [
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "lin_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "4",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 460,
+      "zh_chars": 0,
+      "latin_letters": 293,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "lin_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "4",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 490,
+      "zh_chars": 0,
+      "latin_letters": 316,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "lin_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "4",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 447,
+      "zh_chars": 0,
+      "latin_letters": 278,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "lin_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "4",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 431,
+      "zh_chars": 0,
+      "latin_letters": 264,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "area_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "20",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 582,
+      "zh_chars": 0,
+      "latin_letters": 413,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "area_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "20",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 708,
+      "zh_chars": 0,
+      "latin_letters": 538,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "area_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "20",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 692,
+      "zh_chars": 0,
+      "latin_letters": 547,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "area_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "20",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 524,
+      "zh_chars": 0,
+      "latin_letters": 346,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "prob_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "3/5",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 688,
+      "zh_chars": 0,
+      "latin_letters": 514,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "prob_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "3/5",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 667,
+      "zh_chars": 0,
+      "latin_letters": 498,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "prob_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "3/5",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 613,
+      "zh_chars": 0,
+      "latin_letters": 464,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "prob_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "3/5",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 731,
+      "zh_chars": 0,
+      "latin_letters": 564,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "avg_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "11",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 473,
+      "zh_chars": 0,
+      "latin_letters": 299,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "avg_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "11",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 574,
+      "zh_chars": 0,
+      "latin_letters": 410,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "avg_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "11",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 588,
+      "zh_chars": 0,
+      "latin_letters": 449,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "avg_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "11",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 475,
+      "zh_chars": 0,
+      "latin_letters": 303,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "percent_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "60",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 468,
+      "zh_chars": 0,
+      "latin_letters": 298,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "percent_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "60",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 808,
+      "zh_chars": 0,
+      "latin_letters": 644,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "percent_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "60",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 648,
+      "zh_chars": 0,
+      "latin_letters": 501,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "percent_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "60",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 421,
+      "zh_chars": 0,
+      "latin_letters": 242,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "ratio_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "40",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 472,
+      "zh_chars": 0,
+      "latin_letters": 303,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "ratio_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "40",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 633,
+      "zh_chars": 0,
+      "latin_letters": 456,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "ratio_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "40",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 607,
+      "zh_chars": 0,
+      "latin_letters": 464,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "task_id": "ratio_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "40",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 523,
+      "zh_chars": 0,
+      "latin_letters": 360,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "lin_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "4",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 188,
+      "zh_chars": 0,
+      "latin_letters": 95,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "lin_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "4",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 377,
+      "zh_chars": 0,
+      "latin_letters": 25,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "lin_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "4",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 217,
+      "zh_chars": 0,
+      "latin_letters": 106,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "lin_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "4",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 336,
+      "zh_chars": 0,
+      "latin_letters": 22,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "area_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "20",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 231,
+      "zh_chars": 0,
+      "latin_letters": 130,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "area_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "20",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 295,
+      "zh_chars": 0,
+      "latin_letters": 13,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "area_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "20",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 278,
+      "zh_chars": 0,
+      "latin_letters": 12,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "area_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "20",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 309,
+      "zh_chars": 0,
+      "latin_letters": 186,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "prob_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "3/5",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 518,
+      "zh_chars": 0,
+      "latin_letters": 368,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "prob_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "3/5",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 176,
+      "zh_chars": 0,
+      "latin_letters": 13,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "prob_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "3/5",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 389,
+      "zh_chars": 0,
+      "latin_letters": 15,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "prob_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "3/5",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 519,
+      "zh_chars": 0,
+      "latin_letters": 4,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "avg_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "11",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 492,
+      "zh_chars": 0,
+      "latin_letters": 281,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "avg_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "11",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 354,
+      "zh_chars": 0,
+      "latin_letters": 4,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "avg_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "11",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 410,
+      "zh_chars": 0,
+      "latin_letters": 257,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "avg_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "11",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 175,
+      "zh_chars": 0,
+      "latin_letters": 16,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "percent_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "60",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 285,
+      "zh_chars": 0,
+      "latin_letters": 176,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "percent_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "60",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 196,
+      "zh_chars": 0,
+      "latin_letters": 18,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "percent_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "60",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 237,
+      "zh_chars": 0,
+      "latin_letters": 128,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "percent_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "60",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 160,
+      "zh_chars": 0,
+      "latin_letters": 16,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "ratio_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "40",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 441,
+      "zh_chars": 0,
+      "latin_letters": 282,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "ratio_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "40",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 425,
+      "zh_chars": 0,
+      "latin_letters": 12,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "ratio_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "40",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 239,
+      "zh_chars": 0,
+      "latin_letters": 11,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "task_id": "ratio_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "40",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 474,
+      "zh_chars": 0,
+      "latin_letters": 10,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "lin_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "4",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 545,
+      "zh_chars": 0,
+      "latin_letters": 353,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "lin_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "4",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 226,
+      "zh_chars": 74,
+      "latin_letters": 18,
+      "route_adherence_ratio": 0.8043478260869565,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "lin_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "4",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 474,
+      "zh_chars": 0,
+      "latin_letters": 268,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "lin_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "4",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 500,
+      "zh_chars": 25,
+      "latin_letters": 282,
+      "route_adherence_ratio": 0.08143322475570032,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "area_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "20",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 543,
+      "zh_chars": 0,
+      "latin_letters": 354,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "area_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "20",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 542,
+      "zh_chars": 0,
+      "latin_letters": 342,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "area_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "20",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 510,
+      "zh_chars": 0,
+      "latin_letters": 314,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "area_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "20",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 555,
+      "zh_chars": 8,
+      "latin_letters": 349,
+      "route_adherence_ratio": 0.022408963585434174,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "prob_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "3/5",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 555,
+      "zh_chars": 0,
+      "latin_letters": 353,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "prob_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "3/5",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 602,
+      "zh_chars": 2,
+      "latin_letters": 410,
+      "route_adherence_ratio": 0.0048543689320388345,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "prob_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "3/5",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 501,
+      "zh_chars": 21,
+      "latin_letters": 307,
+      "route_adherence_ratio": 0.9359756097560976,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "prob_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "3/5",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 553,
+      "zh_chars": 2,
+      "latin_letters": 356,
+      "route_adherence_ratio": 0.00558659217877095,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "avg_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "11",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 489,
+      "zh_chars": 0,
+      "latin_letters": 287,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "avg_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "11",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 511,
+      "zh_chars": 2,
+      "latin_letters": 308,
+      "route_adherence_ratio": 0.0064516129032258064,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "avg_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "11",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 461,
+      "zh_chars": 7,
+      "latin_letters": 264,
+      "route_adherence_ratio": 0.974169741697417,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "avg_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "11",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 530,
+      "zh_chars": 0,
+      "latin_letters": 331,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "percent_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "60",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 487,
+      "zh_chars": 0,
+      "latin_letters": 280,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "percent_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "60",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 581,
+      "zh_chars": 4,
+      "latin_letters": 387,
+      "route_adherence_ratio": 0.010230179028132993,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "percent_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "60",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 496,
+      "zh_chars": 20,
+      "latin_letters": 289,
+      "route_adherence_ratio": 0.9352750809061489,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "percent_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "60",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 550,
+      "zh_chars": 25,
+      "latin_letters": 330,
+      "route_adherence_ratio": 0.07042253521126761,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "ratio_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "40",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 504,
+      "zh_chars": 0,
+      "latin_letters": 302,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "ratio_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "40",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 547,
+      "zh_chars": 0,
+      "latin_letters": 346,
+      "route_adherence_ratio": 0.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "ratio_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "40",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 504,
+      "zh_chars": 21,
+      "latin_letters": 298,
+      "route_adherence_ratio": 0.9341692789968652,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen35_9b",
+      "task_id": "ratio_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "40",
+      "used_chat_template": true,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 563,
+      "zh_chars": 2,
+      "latin_letters": 356,
+      "route_adherence_ratio": 0.00558659217877095,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "lin_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "4",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 233,
+      "zh_chars": 0,
+      "latin_letters": 142,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "lin_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "4",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 71,
+      "zh_chars": 22,
+      "latin_letters": 13,
+      "route_adherence_ratio": 0.6285714285714286,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "lin_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "4",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 296,
+      "zh_chars": 0,
+      "latin_letters": 191,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "lin_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "4",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 133,
+      "zh_chars": 74,
+      "latin_letters": 16,
+      "route_adherence_ratio": 0.8222222222222222,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "area_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "20",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 190,
+      "zh_chars": 0,
+      "latin_letters": 117,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "area_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "20",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 97,
+      "zh_chars": 31,
+      "latin_letters": 11,
+      "route_adherence_ratio": 0.7380952380952381,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "area_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "20",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 231,
+      "zh_chars": 0,
+      "latin_letters": 146,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "area_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "20",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 105,
+      "zh_chars": 29,
+      "latin_letters": 11,
+      "route_adherence_ratio": 0.725,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "prob_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "3/5",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 183,
+      "zh_chars": 0,
+      "latin_letters": 136,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "prob_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "3/5",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 82,
+      "zh_chars": 40,
+      "latin_letters": 11,
+      "route_adherence_ratio": 0.7843137254901961,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "prob_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "3/5",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 314,
+      "zh_chars": 0,
+      "latin_letters": 234,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "prob_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "3/5",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 167,
+      "zh_chars": 83,
+      "latin_letters": 11,
+      "route_adherence_ratio": 0.8829787234042553,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "avg_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "11",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 466,
+      "zh_chars": 0,
+      "latin_letters": 275,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "avg_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "11",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 217,
+      "zh_chars": 87,
+      "latin_letters": 9,
+      "route_adherence_ratio": 0.90625,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "avg_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "11",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 274,
+      "zh_chars": 0,
+      "latin_letters": 157,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "avg_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "11",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 179,
+      "zh_chars": 73,
+      "latin_letters": 17,
+      "route_adherence_ratio": 0.8111111111111111,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "percent_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "60",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 394,
+      "zh_chars": 0,
+      "latin_letters": 228,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "percent_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "60",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 176,
+      "zh_chars": 87,
+      "latin_letters": 11,
+      "route_adherence_ratio": 0.8877551020408163,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "percent_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "60",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 220,
+      "zh_chars": 0,
+      "latin_letters": 146,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "percent_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "60",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 73,
+      "zh_chars": 33,
+      "latin_letters": 11,
+      "route_adherence_ratio": 0.75,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "ratio_001",
+      "input_lang": "en",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "40",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 436,
+      "zh_chars": 0,
+      "latin_letters": 239,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": false,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "ratio_001",
+      "input_lang": "zh",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "40",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 227,
+      "zh_chars": 98,
+      "latin_letters": 28,
+      "route_adherence_ratio": 0.7777777777777778,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "ratio_001",
+      "input_lang": "zh",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "gold_answer": "40",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 274,
+      "zh_chars": 0,
+      "latin_letters": 172,
+      "route_adherence_ratio": 1.0,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "task_id": "ratio_001",
+      "input_lang": "en",
+      "reason_lang": "zh",
+      "sample_idx": 0,
+      "gold_answer": "40",
+      "used_chat_template": false,
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "completion_chars": 183,
+      "zh_chars": 70,
+      "latin_letters": 16,
+      "route_adherence_ratio": 0.813953488372093,
+      "likely_final_correct": true,
+      "repetition_flag": false
+    }
+  ],
+  "summary": [
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "reason_lang": "en",
+      "n": 12,
+      "likely_final_correct_rate": 0.3333333333333333,
+      "mean_route_adherence_ratio": 1.0,
+      "repetition_rate": 0.0,
+      "mean_completion_chars": 561.5
+    },
+    {
+      "model_key": "deepseek_r1_0528_qwen3_8b",
+      "reason_lang": "zh",
+      "n": 12,
+      "likely_final_correct_rate": 0.25,
+      "mean_route_adherence_ratio": 0.0,
+      "repetition_rate": 0.0,
+      "mean_completion_chars": 582.0833333333334
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "reason_lang": "en",
+      "n": 12,
+      "likely_final_correct_rate": 0.9166666666666666,
+      "mean_route_adherence_ratio": 1.0,
+      "repetition_rate": 0.0,
+      "mean_completion_chars": 327.0833333333333
+    },
+    {
+      "model_key": "ministral3_8b_reasoning",
+      "reason_lang": "zh",
+      "n": 12,
+      "likely_final_correct_rate": 0.75,
+      "mean_route_adherence_ratio": 0.0,
+      "repetition_rate": 0.0,
+      "mean_completion_chars": 316.3333333333333
+    },
+    {
+      "model_key": "qwen35_9b",
+      "reason_lang": "en",
+      "n": 12,
+      "likely_final_correct_rate": 0.0,
+      "mean_route_adherence_ratio": 0.9816324759463774,
+      "repetition_rate": 0.0,
+      "mean_completion_chars": 505.75
+    },
+    {
+      "model_key": "qwen35_9b",
+      "reason_lang": "zh",
+      "n": 12,
+      "likely_final_correct_rate": 0.16666666666666666,
+      "mean_route_adherence_ratio": 0.08427682457169151,
+      "repetition_rate": 0.0,
+      "mean_completion_chars": 521.6666666666666
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "reason_lang": "en",
+      "n": 12,
+      "likely_final_correct_rate": 0.75,
+      "mean_route_adherence_ratio": 1.0,
+      "repetition_rate": 0.0,
+      "mean_completion_chars": 292.5833333333333
+    },
+    {
+      "model_key": "qwen3_14b_base",
+      "reason_lang": "zh",
+      "n": 12,
+      "likely_final_correct_rate": 0.9166666666666666,
+      "mean_route_adherence_ratio": 0.7940024014237616,
+      "repetition_rate": 0.0,
+      "mean_completion_chars": 142.5
+    }
+  ]
+}

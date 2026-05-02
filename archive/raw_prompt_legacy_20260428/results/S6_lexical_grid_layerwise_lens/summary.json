@@ -1,0 +1,20 @@
+{
+  "aggregate": {
+    "models": {
+      "gemma4_e4b_it": {
+        "absolute_n": 12,
+        "contrastive_n": 12
+      },
+      "qwen3_14b_base": {
+        "absolute_n": 12,
+        "contrastive_n": 12
+      }
+    },
+    "absolute_n": 24,
+    "contrastive_n": 24
+  },
+  "inputs": [
+    "results/S6_lexical_grid_layerwise_lens/gemma4_e4b_it_layerwise_verifier_lens.json",
+    "results/S6_lexical_grid_layerwise_lens/qwen3_14b_base_layerwise_verifier_lens.json"
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "args": {
+    "device": "auto",
+    "dtype": "bfloat16",
+    "local_files_only": true,
+    "max_model_len": 2048,
+    "max_new_tokens": 8,
+    "model_key": "glm47_flash_candidate",
+    "out_dir": "/home/Awei/P02_multilingual_process_lens/results/E62_external_p0_smoke",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "skip_hf_dynamic": false
+  },
+  "checks": [
+    {
+      "name": "license_probe",
+      "ok": true,
+      "seconds": 0.0003917217254638672,
+      "value": {
+        "license_class": "mit",
+        "license_exists": false,
+        "license_files": [],
+        "readme_exists": true,
+        "snippets": [
+          "--- language:   - en   - zh library_name: transformers license: mit pipeline_tag: text-generation ---  # GLM-4.7-Flash  <div align=\"center\"> <img src=https://raw.githubusercontent.com/zai-org/GLM-4.5/refs/heads/main/resources/logo.svg width=\"15%\"/> </div> <p align=\"center\">     👋 Join our <a href=\"https://discord.gg/QR7SARHRxK\" target=\"_blank\">Discord</a> community.     <br>     📖 Check out the GLM-4.7 <a href=\"https://z.ai/blog/glm-4.7\" target=\"_blank\">technical blog</a>, <a href=\"https://arxiv.org/abs/2508.06471\" target=\"_blank\">technical report(G"
+        ],
+        "usage_gate": "permissive_for_research"
+      }
+    },
+    {
+      "name": "static_probe",
+      "ok": true,
+      "seconds": 0.0004949569702148438,
+      "value": {
+        "architectures": [
+          "Glm4MoeLiteForCausalLM"
+        ],
+        "auto_map": null,
+        "chat_template_file_exists": true,
+        "config_exists": true,
+        "model_type": "glm4_moe_lite",
+        "path_exists": true,
+        "readme_mentions_transformers_fork": false,
+        "readme_mentions_vllm": true,
+        "safetensor_shards": 48,
+        "safetensor_size_gib": 58.155670300126076,
+        "tokenizer_chat_template_in_config": false,
+        "tokenizer_config_exists": true,
+        "transformers_version_in_config": "5.0.0rc0"
+      }
+    },
+    {
+      "name": "auto_config",
+      "ok": true,
+      "seconds": 0.0023016929626464844,
+      "value": {
+        "class": "Glm4MoeLiteConfig"
+      }
+    },
+    {
+      "name": "tokenizer_chat",
+      "ok": true,
+      "seconds": 1.3421995639801025,
+      "value": {
+        "class": "TokenizersBackend",
+        "has_chat_template": true
+      }
+    },
+    {
+      "name": "vllm_static",
+      "ok": true,
+      "seconds": 0.6503398418426514,
+      "value": {
+        "readme_vllm_lines": [
+          "For local deployment, GLM-4.7-Flash supports inference frameworks including vLLM and SGLang. Comprehensive deployment",
+          "vLLM and SGLang only support GLM-4.7-Flash on their main branches.",
+          "### vLLM",
+          "pip install -U vllm --pre --index-url https://pypi.org/simple --extra-index-url https://wheels.vllm.ai/nightly",
+          "### vLLM",
+          "vllm serve zai-org/GLM-4.7-Flash \\"
+        ],
+        "vllm_import_ok": true,
+        "vllm_version": "0.12.0"
+      }
+    },
+    {
+      "name": "hf_dynamic",
+      "ok": true,
+      "seconds": 77.29921865463257,
+      "value": {
+        "device": "cuda:0",
+        "generate_error": null,
+        "generate_text": "Yes",
+        "hidden_last_shape": [
+          1,
+          19,
+          2048
+        ],
+        "hidden_states_count": 48,
+        "layer_count": 47,
+        "layer_error": null,
+        "layer_type": "Glm4MoeLiteDecoderLayer",
+        "logits_shape": [
+          1,
+          19,
+          154880
+        ],
+        "model_class": "Glm4MoeLiteForCausalLM",
+        "no_score": -11.000144004821777,
+        "option_logprob_ok": true,
+        "rendered_prompt_prefix": "[gMASK]<sop><|user|>Answer only Yes or No: is 2+2=4?<|assistant|></think>",
+        "tokenizer_class": "TokenizersBackend",
+        "used_chat_template": true,
+        "yes_minus_no": 10.999923015217064,
+        "yes_score": -0.00022098960471339524
+      }
+    }
+  ],
+  "created_at": "2026-04-29T02:34:01",
+  "cuda_visible_devices": "0,1,2,3",
+  "experiment": "E62_external_p0_candidate_smoke",
+  "host": "hpc-node-01",
+  "model_key": "glm47_flash_candidate",
+  "model_spec": {
+    "class": "sparse_or_flash_candidate",
+    "family": "glm",
+    "loader_risk": "local_pending_smoke; glm4_moe_lite architecture support must be checked for HF hooks and vLLM",
+    "notes": "Z.ai/GLM recent flash candidate; downloaded via hf-mirror on 2026-04-28; promote to P0 evidence only if license check and local smoke tests pass",
+    "path": "/home/Awei/LLM/Model/base/glm47_flash",
+    "priority": "P1_candidate_or_P0_if_latest_leaderboard_close",
+    "remote_repo": "zai-org/GLM-4.7-Flash",
+    "status": "local_downloaded_pending_smoke"
+  },
+  "started_at": "2026-04-29T02:32:41",
+  "summary": {
+    "architectures": [
+      "Glm4MoeLiteForCausalLM"
+    ],
+    "auto_config_ok": true,
+    "hf_dynamic_ok": true,
+    "license_class": "mit",
+    "license_ok_for_noncommercial_research": true,
+    "model_type": "glm4_moe_lite",
+    "promote_to_expanded_p0": true,
+    "promotion_rule": "license permits noncommercial research, tokenizer/config load, HF dynamic option-logprob, hidden states, and layer discovery all pass",
+    "tokenizer_ok": true,
+    "usage_gate": "permissive_for_research",
+    "vllm_static_ok": true
+  }
+}

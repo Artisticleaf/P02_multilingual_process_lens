@@ -1,0 +1,25 @@
+pairs:
+  - id: qwen14_deriv_sum_zh_402_bad_403_valid
+    model_key: qwen3_14b_base
+    valid_idx: 403
+    bad_idx: 402
+  - id: qwen14_dabazhe_zh_en_445_bad_442_valid
+    model_key: qwen3_14b_base
+    valid_idx: 442
+    bad_idx: 445
+  - id: qwen14_e18_dabazhe_zh_en_92_bad_91_valid
+    model_key: qwen3_14b_base
+    valid_idx: 180091
+    bad_idx: 180092
+  - id: qwen14_e18_dabazhe_zh_en_92_bad_94_valid
+    model_key: qwen3_14b_base
+    valid_idx: 180094
+    bad_idx: 180092
+  - id: qwen35_e18_discount_234_bad_181000_valid
+    model_key: qwen35_9b
+    valid_idx: 181000
+    bad_idx: 234
+  - id: qwen35_e18_discount_234_bad_181001_valid
+    model_key: qwen35_9b
+    valid_idx: 181001
+    bad_idx: 234

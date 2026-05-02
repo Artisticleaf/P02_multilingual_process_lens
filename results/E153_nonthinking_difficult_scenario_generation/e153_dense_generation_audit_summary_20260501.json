@@ -1,0 +1,390 @@
+{
+  "by_model": {
+    "gemma4_31b_it": {
+      "auto_final_correct": 88,
+      "causal_prefill_usable": 96,
+      "clean_valid_prefill_candidate": 90,
+      "language_trait_use": 14,
+      "manual_acpi_unrepaired": 0,
+      "manual_final_correct": 93,
+      "manual_process_valid_strict": 93,
+      "n": 96,
+      "posthoc_rationalization": 0,
+      "repair_or_rethink_marker": 0
+    },
+    "qwen35_27b": {
+      "auto_final_correct": 90,
+      "causal_prefill_usable": 96,
+      "clean_valid_prefill_candidate": 89,
+      "language_trait_use": 19,
+      "manual_acpi_unrepaired": 0,
+      "manual_final_correct": 96,
+      "manual_process_valid_strict": 96,
+      "n": 96,
+      "posthoc_rationalization": 0,
+      "repair_or_rethink_marker": 4
+    }
+  },
+  "by_model_family": {
+    "gemma4_31b_it::algebra_sign_factor": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "gemma4_31b_it::causal_counterfactual": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "gemma4_31b_it::code_boundary": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "gemma4_31b_it::counting_invariant": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "gemma4_31b_it::geometry_constraints": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "gemma4_31b_it::graph_path_constraints": {
+      "clean_valid_prefill_candidate": 3,
+      "language_trait_use": 3,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "gemma4_31b_it::multilingual_semantic": {
+      "clean_valid_prefill_candidate": 3,
+      "language_trait_use": 6,
+      "manual_final_correct": 3,
+      "n": 6
+    },
+    "gemma4_31b_it::optimization_constraints": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "gemma4_31b_it::probability_conditioning": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "gemma4_31b_it::proof_validity": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "gemma4_31b_it::recurrence_dp": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "gemma4_31b_it::set_venn": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "gemma4_31b_it::string_regex_parsing": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 3,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "gemma4_31b_it::table_aggregation": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "gemma4_31b_it::temporal_order": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "gemma4_31b_it::unit_percentage": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 2,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "qwen35_27b::algebra_sign_factor": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "qwen35_27b::causal_counterfactual": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "qwen35_27b::code_boundary": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "qwen35_27b::counting_invariant": {
+      "clean_valid_prefill_candidate": 5,
+      "language_trait_use": 1,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "qwen35_27b::geometry_constraints": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "qwen35_27b::graph_path_constraints": {
+      "clean_valid_prefill_candidate": 3,
+      "language_trait_use": 3,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "qwen35_27b::multilingual_semantic": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 6,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "qwen35_27b::optimization_constraints": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "qwen35_27b::probability_conditioning": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "qwen35_27b::proof_validity": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "qwen35_27b::recurrence_dp": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "qwen35_27b::set_venn": {
+      "clean_valid_prefill_candidate": 5,
+      "language_trait_use": 1,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "qwen35_27b::string_regex_parsing": {
+      "clean_valid_prefill_candidate": 5,
+      "language_trait_use": 4,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "qwen35_27b::table_aggregation": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 0,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "qwen35_27b::temporal_order": {
+      "clean_valid_prefill_candidate": 5,
+      "language_trait_use": 1,
+      "manual_final_correct": 6,
+      "n": 6
+    },
+    "qwen35_27b::unit_percentage": {
+      "clean_valid_prefill_candidate": 6,
+      "language_trait_use": 3,
+      "manual_final_correct": 6,
+      "n": 6
+    }
+  },
+  "by_model_prompt": {
+    "gemma4_31b_it::solve_neutral": {
+      "clean_valid_prefill_candidate": 30,
+      "language_trait_use": 5,
+      "manual_final_correct": 31,
+      "n": 32
+    },
+    "gemma4_31b_it::solve_self_check": {
+      "clean_valid_prefill_candidate": 30,
+      "language_trait_use": 4,
+      "manual_final_correct": 31,
+      "n": 32
+    },
+    "gemma4_31b_it::solve_terse": {
+      "clean_valid_prefill_candidate": 30,
+      "language_trait_use": 5,
+      "manual_final_correct": 31,
+      "n": 32
+    },
+    "qwen35_27b::solve_neutral": {
+      "clean_valid_prefill_candidate": 28,
+      "language_trait_use": 8,
+      "manual_final_correct": 32,
+      "n": 32
+    },
+    "qwen35_27b::solve_self_check": {
+      "clean_valid_prefill_candidate": 30,
+      "language_trait_use": 6,
+      "manual_final_correct": 32,
+      "n": 32
+    },
+    "qwen35_27b::solve_terse": {
+      "clean_valid_prefill_candidate": 31,
+      "language_trait_use": 5,
+      "manual_final_correct": 32,
+      "n": 32
+    }
+  },
+  "created_at": "2026-05-01T02:18:44",
+  "error_cases": [
+    {
+      "extracted_final": "2",
+      "gold_answer": "9",
+      "manual_error_span": "interprets `zhi duo wei 4` as `digit/value is 4` instead of `at most 4`",
+      "manual_error_type": "multilingual_semantic_misparse",
+      "manual_note": "Final answer 2; model turns 至多为4 into |x|=4.",
+      "model_key": "gemma4_31b_it",
+      "prompt_variant": "solve_neutral",
+      "task_id": "e153_multilingual_semantic_01"
+    },
+    {
+      "extracted_final": "0",
+      "gold_answer": "9",
+      "manual_error_span": "interprets `zhengshu` as positive integer and `zhi duo wei 4` as tens digit 4",
+      "manual_error_type": "multilingual_semantic_misparse",
+      "manual_note": "Final answer 0; model misreads both integer polarity and the pinyin phrase.",
+      "model_key": "gemma4_31b_it",
+      "prompt_variant": "solve_terse",
+      "task_id": "e153_multilingual_semantic_01"
+    },
+    {
+      "extracted_final": "1",
+      "gold_answer": "9",
+      "manual_error_span": "interprets `zhengshu` as positive integer and `zhi duo wei 4` as units digit 4",
+      "manual_error_type": "multilingual_semantic_misparse",
+      "manual_note": "Final answer 1; self-check reinforces the wrong semantic parse.",
+      "model_key": "gemma4_31b_it",
+      "prompt_variant": "solve_self_check",
+      "task_id": "e153_multilingual_semantic_01"
+    }
+  ],
+  "field_meanings": {
+    "causal_prefill_usable": "Trace has chronological visible order suitable for causal prefill analysis; it may still be wrong and useful for error analysis.",
+    "clean_valid_prefill_candidate": "Subset for main valid-trace prefill/mutation seeds: final-correct, process-valid, derivation-first, no explicit repair/rethink marker, and no ambiguous task boundary.",
+    "language_trait_use": "Trace is useful for language-behavior analysis, including semantic misread, task ambiguity, repair/rethink language, answer formatting, or non-derivation-first order."
+  },
+  "normalization_fixes": [
+    {
+      "extracted_final": "'bcd'",
+      "gold_answer": "bcd",
+      "model_key": "qwen35_27b",
+      "prompt_variant": "solve_neutral",
+      "reason": "quoted_string_equivalent",
+      "task_id": "e153_string_regex_parsing_02"
+    },
+    {
+      "extracted_final": "'bcd'",
+      "gold_answer": "bcd",
+      "model_key": "qwen35_27b",
+      "prompt_variant": "solve_terse",
+      "reason": "quoted_string_equivalent",
+      "task_id": "e153_string_regex_parsing_02"
+    },
+    {
+      "extracted_final": "'bcd'",
+      "gold_answer": "bcd",
+      "model_key": "qwen35_27b",
+      "prompt_variant": "solve_self_check",
+      "reason": "quoted_string_equivalent",
+      "task_id": "e153_string_regex_parsing_02"
+    },
+    {
+      "extracted_final": "120 meters",
+      "gold_answer": "120",
+      "model_key": "qwen35_27b",
+      "prompt_variant": "solve_neutral",
+      "reason": "unit_suffix_equivalent",
+      "task_id": "e153_unit_percentage_02"
+    },
+    {
+      "extracted_final": "120 m",
+      "gold_answer": "120",
+      "model_key": "qwen35_27b",
+      "prompt_variant": "solve_terse",
+      "reason": "unit_suffix_equivalent",
+      "task_id": "e153_unit_percentage_02"
+    },
+    {
+      "extracted_final": "120 meters",
+      "gold_answer": "120",
+      "model_key": "qwen35_27b",
+      "prompt_variant": "solve_self_check",
+      "reason": "unit_suffix_equivalent",
+      "task_id": "e153_unit_percentage_02"
+    },
+    {
+      "extracted_final": "'bcd'",
+      "gold_answer": "bcd",
+      "model_key": "gemma4_31b_it",
+      "prompt_variant": "solve_neutral",
+      "reason": "quoted_string_equivalent",
+      "task_id": "e153_string_regex_parsing_02"
+    },
+    {
+      "extracted_final": "'bcd'",
+      "gold_answer": "bcd",
+      "model_key": "gemma4_31b_it",
+      "prompt_variant": "solve_terse",
+      "reason": "quoted_string_equivalent",
+      "task_id": "e153_string_regex_parsing_02"
+    },
+    {
+      "extracted_final": "'bcd'",
+      "gold_answer": "bcd",
+      "model_key": "gemma4_31b_it",
+      "prompt_variant": "solve_self_check",
+      "reason": "quoted_string_equivalent",
+      "task_id": "e153_string_regex_parsing_02"
+    },
+    {
+      "extracted_final": "120m",
+      "gold_answer": "120",
+      "model_key": "gemma4_31b_it",
+      "prompt_variant": "solve_neutral",
+      "reason": "unit_suffix_equivalent",
+      "task_id": "e153_unit_percentage_02"
+    },
+    {
+      "extracted_final": "120m",
+      "gold_answer": "120",
+      "model_key": "gemma4_31b_it",
+      "prompt_variant": "solve_terse",
+      "reason": "unit_suffix_equivalent",
+      "task_id": "e153_unit_percentage_02"
+    }
+  ],
+  "rows": 192,
+  "scope": "E153 dense generation audit: qwen35_27b and gemma4_31b_it"
+}

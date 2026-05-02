@@ -1,0 +1,51 @@
+tasks:
+  - id: e124_quad_sign_symmetry_001
+    family: quadratic_factorization_sign_symmetry
+    en: Find the number of ordered pairs $(x,y)$ of integers with $-120 \le x,y \le 120$ such that $20x^2-xy-12y^2=0$.
+    answer: "97"
+    trap: "The correct factorization is (4x+3y)(5x-4y); the plus/minus sign error can preserve similar-looking line counts."
+  - id: e124_quad_sign_symmetry_002
+    family: quadratic_factorization_sign_symmetry
+    en: Find the number of ordered pairs $(x,y)$ of integers with $-150 \le x,y \le 150$ such that $30x^2-xy-20y^2=0$.
+    answer: "161"
+    trap: "The correct factorization is (5x+4y)(6x-5y); a middle-term sign error gives a superficially similar counting problem."
+  - id: e124_quad_sign_symmetry_003
+    family: quadratic_factorization_sign_symmetry
+    en: Find the number of ordered pairs $(x,y)$ of integers with $-180 \le x,y \le 180$ such that $42x^2-xy-30y^2=0$.
+    answer: "193"
+    trap: "The correct factorization is (6x+5y)(7x-6y)."
+  - id: e124_quad_asymmetric_bounds_001
+    family: quadratic_factorization_asymmetric_bounds
+    en: Find the number of ordered pairs $(x,y)$ of integers with $-100 \le x \le 100$ and $-140 \le y \le 140$ such that $12x^2-xy-6y^2=0$.
+    answer: "151"
+    trap: "A wrong sign factorization no longer necessarily preserves the count under asymmetric bounds."
+  - id: e124_quad_asymmetric_bounds_002
+    family: quadratic_factorization_asymmetric_bounds
+    en: Find the number of ordered pairs $(x,y)$ of integers with $-160 \le x \le 160$ and $-90 \le y \le 90$ such that $20x^2-xy-12y^2=0$.
+    answer: "121"
+    trap: "Asymmetric bounds make sign-line mistakes easier to expose."
+  - id: e124_strict_inequality_001
+    family: inequality_boundary
+    en: How many integers $n$ satisfy $-40 < 3n+2 \le 95$?
+    answer: "44"
+    trap: "The lower bound is strict and the upper bound is non-strict."
+  - id: e124_median_mean_001
+    family: mean_median_order_statistics
+    en: A multiset of five integers has mean 12, median 10, minimum 4, and maximum 25. The remaining two integers are positive and the multiset is ordered nondecreasingly. How many possible multisets are there?
+    answer: "8"
+    trap: "Median fixes the third value; the two unknown values must respect ordering and the sum."
+  - id: e124_unit_conversion_001
+    family: unit_conversion_rate
+    en: A machine fills 7 identical bottles in 2 minutes and 20 seconds. At the same constant rate, how many full bottles can it fill in 1 hour and 12 minutes?
+    answer: "216"
+    trap: "Convert both times to seconds before scaling."
+  - id: e124_percentage_base_001
+    family: percentage_base_shift
+    en: A price is increased by 25% and then decreased by 10%. The final price is 225 dollars. What was the original price in dollars?
+    answer: "200"
+    trap: "Successive percentage changes multiply; do not subtract 10 from 25."
+  - id: e124_modular_count_001
+    family: modular_counting
+    en: How many integers $n$ with $1 \le n \le 500$ satisfy $n \equiv 2 \pmod 7$ and $n \equiv 3 \pmod 5$?
+    answer: "14"
+    trap: "Solve the CRT residue then count inclusive endpoints."

@@ -1,0 +1,68 @@
+pairs:
+- id: e59c_qwen35_27b_coefficient_vs_exponent
+  task_id: coefficient_vs_exponent
+  source_model_key: qwen35_27b
+  bad_idx: 590101
+  valid_idx: 590100
+  problem: In the term 5x^3, what is the coefficient of x^3?
+- id: e59c_qwen35_27b_each_vs_total
+  task_id: each_vs_total
+  source_model_key: qwen35_27b
+  bad_idx: 590111
+  valid_idx: 590110
+  problem: Four students each read 6 pages. How many pages did they read in total?
+- id: e59c_qwen35_27b_log_base_argument
+  task_id: log_base_argument
+  source_model_key: qwen35_27b
+  bad_idx: 590121
+  valid_idx: 590120
+  problem: What is log base 2 of 8?
+- id: e59c_qwen35_27b_mean_vs_median
+  task_id: mean_vs_median
+  source_model_key: qwen35_27b
+  bad_idx: 590131
+  valid_idx: 590130
+  problem: For the numbers 2, 4, and 9, what is the mean?
+- id: e59c_qwen35_27b_percent_increase_vs_percent_of
+  task_id: percent_increase_vs_percent_of
+  source_model_key: qwen35_27b
+  bad_idx: 590141
+  valid_idx: 590140
+  problem: A price is $50 and increases by 20%. What is the new price?
+- id: e59c_qwen35_27b_prob_without_replacement
+  task_id: prob_without_replacement
+  source_model_key: qwen35_27b
+  bad_idx: 590151
+  valid_idx: 590150
+  problem: A bag has 3 red balls and 2 blue balls. Two balls are drawn without replacement.
+    What is the probability both are red?
+- id: e59c_qwen35_27b_range_vs_average
+  task_id: range_vs_average
+  source_model_key: qwen35_27b
+  bad_idx: 590161
+  valid_idx: 590160
+  problem: For the numbers 3, 7, and 10, what is the range?
+- id: e59c_qwen35_27b_reciprocal_vs_additive_inverse
+  task_id: reciprocal_vs_additive_inverse
+  source_model_key: qwen35_27b
+  bad_idx: 590171
+  valid_idx: 590170
+  problem: What is the reciprocal of 4?
+- id: e59c_qwen35_27b_round_vs_truncate
+  task_id: round_vs_truncate
+  source_model_key: qwen35_27b
+  bad_idx: 590181
+  valid_idx: 590180
+  problem: Round 4.67 to the nearest tenth.
+- id: e59c_qwen35_27b_zh_exclusive_interval
+  task_id: zh_exclusive_interval
+  source_model_key: qwen35_27b
+  bad_idx: 590191
+  valid_idx: 590190
+  problem: 一个整数大于2且小于6。它有多少个可能取值？
+- id: e59c_qwen35_27b_zh_perimeter_vs_area
+  task_id: zh_perimeter_vs_area
+  source_model_key: qwen35_27b
+  bad_idx: 590201
+  valid_idx: 590200
+  problem: 一个长方形长8厘米、宽3厘米。它的周长是多少厘米？

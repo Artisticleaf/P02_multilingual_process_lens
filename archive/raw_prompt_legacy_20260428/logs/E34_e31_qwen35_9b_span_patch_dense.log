@@ -1,0 +1,10 @@
+[2026-04-27T22:28:02] loading qwen35_9b on cuda; pairs=5
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/427 [00:00<?, ?it/s]Loading weights: 100%|██████████| 427/427 [00:00<00:00, 15241.76it/s]
+pair=e31_ratio_boys_girls_bad310002_valid310001 base_valid=3.875 base_bad=-0.750 layers=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+pair=e31_inequality_boundary_bad310008_valid310007 base_valid=3.438 base_bad=2.750 layers=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+pair=e31_unit_dozen_pairs_bad310014_valid310013 base_valid=2.875 base_bad=-1.625 layers=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+pair=e31_geometry_diameter_bad310020_valid310019 base_valid=3.375 base_bad=1.938 layers=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+pair=e31_comb_unordered_bad310026_valid310025 base_valid=3.312 base_bad=1.125 layers=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+wrote results/E34_e31_non_discount_span_patch_dense/qwen35_9b_real_acpi_span_patch.json; rows=160 best_pair=e31_comb_unordered_bad310026_valid310025 span=support_error_span L5 v2b=2.250 b2v=-3.438

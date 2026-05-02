@@ -1,0 +1,33 @@
+{
+  "experiment": "E132_suspicious_valid_controls",
+  "created_at": "2026-04-30T17:08:34",
+  "out_jsonl": "data/processed/e132_suspicious_valid_controls_20260430.jsonl",
+  "n_rows": 384,
+  "n_pairs": 48,
+  "by_variant": {
+    "clean_valid": 48,
+    "low_conf_valid": 48,
+    "markerless_valid_ablation": 48,
+    "repaired_invalid_strict": 48,
+    "suspicious_valid_alternative": 48,
+    "suspicious_valid_marker": 48,
+    "unrepaired_invalid": 48,
+    "unusual_valid": 48
+  },
+  "by_family": {
+    "code_execution": 48,
+    "counting_order": 48,
+    "geometry_notation": 48,
+    "percentage_base": 48,
+    "proof_validity": 48,
+    "quantifier_inequality": 48,
+    "table_interpretation": 48,
+    "unit_scale": 48
+  },
+  "leakage_audit": {
+    "gold_label_in_prompt_rows": 0,
+    "known_error_span_annotation_in_prompt_rows": 0,
+    "manual_correction_in_prompt_rows": 0,
+    "note_zh": "gold/error labels are metadata only; prompts will contain only problem and completion."
+  }
+}

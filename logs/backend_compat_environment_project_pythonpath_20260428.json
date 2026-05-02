@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-04-28T12:18:20+08:00",
+  "python": "3.12.13",
+  "torch": "2.9.0+cu128",
+  "transformers": "5.6.2",
+  "transformers_file": "/home/Awei/P02_multilingual_process_lens/.deps/hf5/transformers/__init__.py",
+  "vllm": "0.12.0",
+  "vllm_file": "/home/Awei/miniconda3/envs/passage_prep_py312/lib/python3.12/site-packages/vllm/__init__.py",
+  "accelerate": "1.13.0",
+  "pythonpath_note": "PYTHONPATH=.deps/hf5:src, matching official project runners",
+  "gpus": [
+    "0, NVIDIA GeForce RTX 5090, 580.126.09, 32607 MiB",
+    "1, NVIDIA GeForce RTX 5090, 580.126.09, 32607 MiB",
+    "2, NVIDIA GeForce RTX 5090, 580.126.09, 32607 MiB",
+    "3, NVIDIA GeForce RTX 5090, 580.126.09, 32607 MiB"
+  ]
+}

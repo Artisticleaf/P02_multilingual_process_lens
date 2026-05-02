@@ -1,0 +1,5 @@
+E31 rows 30 unique audit_idx 30 tasks ['comb_choose_unordered', 'geometry_diameter_area', 'inequality_no_more_than', 'ratio_boys_girls_2_3', 'unit_dozen_pairs']
+variant counts {'valid_correct': 5, 'invalid_correct': 5, 'valid_masked': 5, 'invalid_masked': 5, 'valid_wrong': 5, 'invalid_wrong': 5}
+results/E31_non_discount_counterfactual_absolute_verifier files ['gemma4_e4b_it_manual_trace_verifier.json', 'qwen35_27b_manual_trace_verifier.json', 'qwen35_9b_manual_trace_verifier.json', 'qwen3_14b_base_manual_trace_verifier.json']
+results/E31_non_discount_error_span_verifier files ['gemma4_e4b_it_error_span_extraction_verifier.json', 'qwen35_27b_error_span_extraction_verifier.json', 'qwen35_9b_error_span_extraction_verifier.json', 'qwen3_14b_base_error_span_extraction_verifier.json']
+audit integrity ok

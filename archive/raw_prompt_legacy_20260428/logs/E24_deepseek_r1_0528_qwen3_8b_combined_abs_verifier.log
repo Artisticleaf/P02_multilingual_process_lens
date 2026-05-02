@@ -1,0 +1,11 @@
+[2026-04-27T12:57:31] loading tokenizer: deepseek_r1_0528_qwen3_8b -> /home/Awei/LLM/Model/base/DeepSeek-R1-0528-Qwen3-8B
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='yarn': {'attn_factor'}
+[2026-04-27T12:57:32] loading model dtype=bfloat16 device=cuda
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='yarn': {'attn_factor'}
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 14510.65it/s]
+[2026-04-27T12:59:57] wrote /home/Awei/P02_multilingual_process_lens/results/E24_s4_absolute_verifier_combined/deepseek_r1_0528_qwen3_8b_manual_trace_verifier.json; eval_rows=736
+SUMMARY model=deepseek_r1_0528_qwen3_8b mode=process_only prompt=en acc=0.846 false_accept=1.0 proc_inv_false_accept=1.0
+SUMMARY model=deepseek_r1_0528_qwen3_8b mode=process_only prompt=zh acc=0.143 false_accept=0.0 proc_inv_false_accept=0.0
+SUMMARY model=deepseek_r1_0528_qwen3_8b mode=training_candidate prompt=en acc=0.500 false_accept=0.9583333333333334 proc_inv_false_accept=1.0
+SUMMARY model=deepseek_r1_0528_qwen3_8b mode=training_candidate prompt=zh acc=0.516 false_accept=0.0 proc_inv_false_accept=0.0

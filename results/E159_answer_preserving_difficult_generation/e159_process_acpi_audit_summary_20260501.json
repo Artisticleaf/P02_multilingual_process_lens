@@ -1,0 +1,937 @@
+{
+  "acpi_strict": 0,
+  "acpi_unrepaired": 0,
+  "audit_actor": "assistant_single_pass_process_audit",
+  "by_family": {
+    "algebra_sign_symmetry": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 36,
+      "manual_final_correct_audit": 36,
+      "n": 36,
+      "process_valid_strict": 36,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 36
+    },
+    "code_boundary_zero": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 36,
+      "manual_final_correct_audit": 36,
+      "n": 36,
+      "process_valid_strict": 36,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 36
+    },
+    "counting_complement": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 36,
+      "manual_final_correct_audit": 36,
+      "n": 36,
+      "process_valid_strict": 36,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 36
+    },
+    "graph_definition": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 36,
+      "manual_final_correct_audit": 36,
+      "n": 36,
+      "process_valid_strict": 36,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 36
+    },
+    "multilingual_semantic": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 33,
+      "manual_final_correct_audit": 33,
+      "n": 36,
+      "process_valid_strict": 33,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 33
+    },
+    "probability_conditioning": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 36,
+      "manual_final_correct_audit": 36,
+      "n": 36,
+      "process_valid_strict": 36,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 36
+    },
+    "proof_invalid_lemma": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 36,
+      "manual_final_correct_audit": 36,
+      "n": 36,
+      "process_valid_strict": 36,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 36
+    },
+    "table_zero_swap": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 36,
+      "manual_final_correct_audit": 36,
+      "n": 36,
+      "process_valid_strict": 36,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 36
+    },
+    "temporal_boundary": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 36,
+      "manual_final_correct_audit": 36,
+      "n": 36,
+      "process_valid_strict": 36,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 36
+    },
+    "unit_roundtrip": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 36,
+      "manual_final_correct_audit": 36,
+      "n": 36,
+      "process_valid_strict": 36,
+      "runner_false_negative_format": 17,
+      "runner_final_correct": 19
+    }
+  },
+  "by_model": {
+    "gemma4_26b_a4b_it": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 120,
+      "manual_final_correct_audit": 120,
+      "n": 120,
+      "process_valid_strict": 120,
+      "runner_false_negative_format": 6,
+      "runner_final_correct": 114
+    },
+    "gemma4_31b_it": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 117,
+      "manual_final_correct_audit": 117,
+      "n": 120,
+      "process_valid_strict": 117,
+      "runner_false_negative_format": 5,
+      "runner_final_correct": 112
+    },
+    "qwen35_27b": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 120,
+      "manual_final_correct_audit": 120,
+      "n": 120,
+      "process_valid_strict": 120,
+      "runner_false_negative_format": 6,
+      "runner_final_correct": 114
+    }
+  },
+  "by_model_family": {
+    "gemma4_26b_a4b_it::algebra_sign_symmetry": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "gemma4_26b_a4b_it::code_boundary_zero": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "gemma4_26b_a4b_it::counting_complement": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "gemma4_26b_a4b_it::graph_definition": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "gemma4_26b_a4b_it::multilingual_semantic": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "gemma4_26b_a4b_it::probability_conditioning": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "gemma4_26b_a4b_it::proof_invalid_lemma": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "gemma4_26b_a4b_it::table_zero_swap": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "gemma4_26b_a4b_it::temporal_boundary": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "gemma4_26b_a4b_it::unit_roundtrip": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 6,
+      "runner_final_correct": 6
+    },
+    "gemma4_31b_it::algebra_sign_symmetry": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "gemma4_31b_it::code_boundary_zero": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "gemma4_31b_it::counting_complement": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "gemma4_31b_it::graph_definition": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "gemma4_31b_it::multilingual_semantic": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 9,
+      "manual_final_correct_audit": 9,
+      "n": 12,
+      "process_valid_strict": 9,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 9
+    },
+    "gemma4_31b_it::probability_conditioning": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "gemma4_31b_it::proof_invalid_lemma": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "gemma4_31b_it::table_zero_swap": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "gemma4_31b_it::temporal_boundary": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "gemma4_31b_it::unit_roundtrip": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 5,
+      "runner_final_correct": 7
+    },
+    "qwen35_27b::algebra_sign_symmetry": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "qwen35_27b::code_boundary_zero": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "qwen35_27b::counting_complement": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "qwen35_27b::graph_definition": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "qwen35_27b::multilingual_semantic": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "qwen35_27b::probability_conditioning": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "qwen35_27b::proof_invalid_lemma": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "qwen35_27b::table_zero_swap": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "qwen35_27b::temporal_boundary": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 0,
+      "runner_final_correct": 12
+    },
+    "qwen35_27b::unit_roundtrip": {
+      "acpi_strict": 0,
+      "acpi_unrepaired": 0,
+      "clean_valid_prefill_candidate": 12,
+      "manual_final_correct_audit": 12,
+      "n": 12,
+      "process_valid_strict": 12,
+      "runner_false_negative_format": 6,
+      "runner_final_correct": 6
+    }
+  },
+  "clean_valid_prefill_candidate": 357,
+  "created_at": "2026-05-01T12:31:17",
+  "examples": {
+    "acpi_unrepaired": [],
+    "format_false_negative": [
+      {
+        "family": "unit_roundtrip",
+        "gold_answer": "100",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_neutral",
+        "runner_extracted_final": "100 meters",
+        "task_id": "e159_unit_roundtrip_01"
+      },
+      {
+        "family": "unit_roundtrip",
+        "gold_answer": "100",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_terse",
+        "runner_extracted_final": "100 meters",
+        "task_id": "e159_unit_roundtrip_01"
+      },
+      {
+        "family": "unit_roundtrip",
+        "gold_answer": "100",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_self_check",
+        "runner_extracted_final": "100 meters",
+        "task_id": "e159_unit_roundtrip_01"
+      },
+      {
+        "family": "unit_roundtrip",
+        "gold_answer": "3",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_neutral",
+        "runner_extracted_final": "3 kilometers",
+        "task_id": "e159_unit_roundtrip_03"
+      },
+      {
+        "family": "unit_roundtrip",
+        "gold_answer": "3",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_terse",
+        "runner_extracted_final": "3 km",
+        "task_id": "e159_unit_roundtrip_03"
+      },
+      {
+        "family": "unit_roundtrip",
+        "gold_answer": "3",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_self_check",
+        "runner_extracted_final": "3 kilometers",
+        "task_id": "e159_unit_roundtrip_03"
+      },
+      {
+        "family": "unit_roundtrip",
+        "gold_answer": "100",
+        "invalid_spans": [],
+        "model_key": "gemma4_31b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_neutral",
+        "runner_extracted_final": "100 meters",
+        "task_id": "e159_unit_roundtrip_01"
+      },
+      {
+        "family": "unit_roundtrip",
+        "gold_answer": "100",
+        "invalid_spans": [],
+        "model_key": "gemma4_31b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_terse",
+        "runner_extracted_final": "100m",
+        "task_id": "e159_unit_roundtrip_01"
+      },
+      {
+        "family": "unit_roundtrip",
+        "gold_answer": "3",
+        "invalid_spans": [],
+        "model_key": "gemma4_31b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_neutral",
+        "runner_extracted_final": "3 km",
+        "task_id": "e159_unit_roundtrip_03"
+      },
+      {
+        "family": "unit_roundtrip",
+        "gold_answer": "3",
+        "invalid_spans": [],
+        "model_key": "gemma4_31b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_terse",
+        "runner_extracted_final": "3 km",
+        "task_id": "e159_unit_roundtrip_03"
+      },
+      {
+        "family": "unit_roundtrip",
+        "gold_answer": "3",
+        "invalid_spans": [],
+        "model_key": "gemma4_31b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_self_check",
+        "runner_extracted_final": "3 km",
+        "task_id": "e159_unit_roundtrip_03"
+      },
+      {
+        "family": "unit_roundtrip",
+        "gold_answer": "100",
+        "invalid_spans": [],
+        "model_key": "qwen35_27b",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_neutral",
+        "runner_extracted_final": "100 meters",
+        "task_id": "e159_unit_roundtrip_01"
+      },
+      {
+        "family": "unit_roundtrip",
+        "gold_answer": "100",
+        "invalid_spans": [],
+        "model_key": "qwen35_27b",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_terse",
+        "runner_extracted_final": "100 meters",
+        "task_id": "e159_unit_roundtrip_01"
+      },
+      {
+        "family": "unit_roundtrip",
+        "gold_answer": "100",
+        "invalid_spans": [],
+        "model_key": "qwen35_27b",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_self_check",
+        "runner_extracted_final": "100 meters",
+        "task_id": "e159_unit_roundtrip_01"
+      },
+      {
+        "family": "unit_roundtrip",
+        "gold_answer": "3",
+        "invalid_spans": [],
+        "model_key": "qwen35_27b",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_neutral",
+        "runner_extracted_final": "3 kilometers",
+        "task_id": "e159_unit_roundtrip_03"
+      },
+      {
+        "family": "unit_roundtrip",
+        "gold_answer": "3",
+        "invalid_spans": [],
+        "model_key": "qwen35_27b",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_terse",
+        "runner_extracted_final": "3 km",
+        "task_id": "e159_unit_roundtrip_03"
+      },
+      {
+        "family": "unit_roundtrip",
+        "gold_answer": "3",
+        "invalid_spans": [],
+        "model_key": "qwen35_27b",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_self_check",
+        "runner_extracted_final": "3 km",
+        "task_id": "e159_unit_roundtrip_03"
+      }
+    ],
+    "process_invalid_final_wrong": [
+      {
+        "family": "multilingual_semantic",
+        "gold_answer": "7",
+        "invalid_spans": [
+          "interprets `zhi duo wei 3` as multiple/divisible by 3"
+        ],
+        "model_key": "gemma4_31b_it",
+        "note_zh": "多语言语义误读：`zhi duo wei 3` 在本题应为 `at most 3`，不是 3 的倍数。 Final answer is also wrong, so this is not ACPI.",
+        "prompt_variant": "solve_neutral",
+        "runner_extracted_final": "5",
+        "task_id": "e159_multilingual_semantic_01"
+      },
+      {
+        "family": "multilingual_semantic",
+        "gold_answer": "7",
+        "invalid_spans": [
+          "interprets `zhi duo wei 3` as multiple/divisible by 3"
+        ],
+        "model_key": "gemma4_31b_it",
+        "note_zh": "多语言语义误读：`zhi duo wei 3` 在本题应为 `at most 3`，不是 3 的倍数。 Final answer is also wrong, so this is not ACPI.",
+        "prompt_variant": "solve_terse",
+        "runner_extracted_final": "5",
+        "task_id": "e159_multilingual_semantic_01"
+      },
+      {
+        "family": "multilingual_semantic",
+        "gold_answer": "7",
+        "invalid_spans": [
+          "interprets `zhi duo wei 3` as multiple/divisible by 3"
+        ],
+        "model_key": "gemma4_31b_it",
+        "note_zh": "多语言语义误读：`zhi duo wei 3` 在本题应为 `at most 3`，不是 3 的倍数。 Final answer is also wrong, so this is not ACPI.",
+        "prompt_variant": "solve_self_check",
+        "runner_extracted_final": "5",
+        "task_id": "e159_multilingual_semantic_01"
+      }
+    ],
+    "reviewed_warnings": [
+      {
+        "family": "algebra_sign_symmetry",
+        "flags": [
+          "repair_or_check_language_present",
+          "sqrt_y2_branch_equivalence_reviewed"
+        ],
+        "gold_answer": "127",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "`sqrt(81y^2)` handling reviewed; with both ± branches, using ±9y does not change the solution set.",
+        "prompt_variant": "solve_neutral",
+        "runner_extracted_final": "127",
+        "task_id": "e159_algebra_sign_symmetry_01"
+      },
+      {
+        "family": "algebra_sign_symmetry",
+        "flags": [
+          "sqrt_y2_branch_equivalence_reviewed"
+        ],
+        "gold_answer": "127",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "`sqrt(81y^2)` handling reviewed; with both ± branches, using ±9y does not change the solution set.",
+        "prompt_variant": "solve_terse",
+        "runner_extracted_final": "127",
+        "task_id": "e159_algebra_sign_symmetry_01"
+      },
+      {
+        "family": "algebra_sign_symmetry",
+        "flags": [
+          "repair_or_check_language_present"
+        ],
+        "gold_answer": "127",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_self_check",
+        "runner_extracted_final": "127",
+        "task_id": "e159_algebra_sign_symmetry_01"
+      },
+      {
+        "family": "algebra_sign_symmetry",
+        "flags": [
+          "repair_or_check_language_present"
+        ],
+        "gold_answer": "2,20",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_neutral",
+        "runner_extracted_final": "2,20",
+        "task_id": "e159_algebra_sign_symmetry_02"
+      },
+      {
+        "family": "algebra_sign_symmetry",
+        "flags": [
+          "repair_or_check_language_present"
+        ],
+        "gold_answer": "2,20",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_terse",
+        "runner_extracted_final": "2,20",
+        "task_id": "e159_algebra_sign_symmetry_02"
+      },
+      {
+        "family": "algebra_sign_symmetry",
+        "flags": [
+          "repair_or_check_language_present"
+        ],
+        "gold_answer": "2,20",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_self_check",
+        "runner_extracted_final": "2,20",
+        "task_id": "e159_algebra_sign_symmetry_02"
+      },
+      {
+        "family": "algebra_sign_symmetry",
+        "flags": [
+          "repair_or_check_language_present"
+        ],
+        "gold_answer": "0",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_neutral",
+        "runner_extracted_final": "0",
+        "task_id": "e159_algebra_sign_symmetry_03"
+      },
+      {
+        "family": "algebra_sign_symmetry",
+        "flags": [
+          "repair_or_check_language_present"
+        ],
+        "gold_answer": "0",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_self_check",
+        "runner_extracted_final": "0",
+        "task_id": "e159_algebra_sign_symmetry_03"
+      },
+      {
+        "family": "algebra_sign_symmetry",
+        "flags": [
+          "repair_or_check_language_present"
+        ],
+        "gold_answer": "2",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_neutral",
+        "runner_extracted_final": "2",
+        "task_id": "e159_algebra_sign_symmetry_04"
+      },
+      {
+        "family": "algebra_sign_symmetry",
+        "flags": [
+          "repair_or_check_language_present"
+        ],
+        "gold_answer": "2",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_terse",
+        "runner_extracted_final": "2",
+        "task_id": "e159_algebra_sign_symmetry_04"
+      },
+      {
+        "family": "algebra_sign_symmetry",
+        "flags": [
+          "repair_or_check_language_present"
+        ],
+        "gold_answer": "2",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_self_check",
+        "runner_extracted_final": "2",
+        "task_id": "e159_algebra_sign_symmetry_04"
+      },
+      {
+        "family": "code_boundary_zero",
+        "flags": [
+          "repair_or_check_language_present"
+        ],
+        "gold_answer": "-20",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_neutral",
+        "runner_extracted_final": "-20",
+        "task_id": "e159_code_boundary_zero_01"
+      },
+      {
+        "family": "code_boundary_zero",
+        "flags": [
+          "repair_or_check_language_present"
+        ],
+        "gold_answer": "-20",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_self_check",
+        "runner_extracted_final": "-20",
+        "task_id": "e159_code_boundary_zero_01"
+      },
+      {
+        "family": "code_boundary_zero",
+        "flags": [
+          "repair_or_check_language_present"
+        ],
+        "gold_answer": "-4",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_self_check",
+        "runner_extracted_final": "-4",
+        "task_id": "e159_code_boundary_zero_02"
+      },
+      {
+        "family": "code_boundary_zero",
+        "flags": [
+          "repair_or_check_language_present"
+        ],
+        "gold_answer": "-10",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_neutral",
+        "runner_extracted_final": "-10",
+        "task_id": "e159_code_boundary_zero_03"
+      },
+      {
+        "family": "code_boundary_zero",
+        "flags": [
+          "repair_or_check_language_present"
+        ],
+        "gold_answer": "-10",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_self_check",
+        "runner_extracted_final": "-10",
+        "task_id": "e159_code_boundary_zero_03"
+      },
+      {
+        "family": "code_boundary_zero",
+        "flags": [
+          "repair_or_check_language_present"
+        ],
+        "gold_answer": "2",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_neutral",
+        "runner_extracted_final": "2",
+        "task_id": "e159_code_boundary_zero_04"
+      },
+      {
+        "family": "code_boundary_zero",
+        "flags": [
+          "repair_or_check_language_present"
+        ],
+        "gold_answer": "2",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_terse",
+        "runner_extracted_final": "2",
+        "task_id": "e159_code_boundary_zero_04"
+      },
+      {
+        "family": "code_boundary_zero",
+        "flags": [
+          "repair_or_check_language_present"
+        ],
+        "gold_answer": "2",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_self_check",
+        "runner_extracted_final": "2",
+        "task_id": "e159_code_boundary_zero_04"
+      },
+      {
+        "family": "counting_complement",
+        "flags": [
+          "repair_or_check_language_present"
+        ],
+        "gold_answer": "32",
+        "invalid_spans": [],
+        "model_key": "gemma4_26b_a4b_it",
+        "note_zh": "未发现关键过程错步；过程按当前任务标准判为有效。",
+        "prompt_variant": "solve_neutral",
+        "runner_extracted_final": "32",
+        "task_id": "e159_counting_complement_01"
+      }
+    ]
+  },
+  "inputs": [
+    "gemma4_26b_a4b_it_E159_answer_preserving_generation_nonthinking_solve_neutral_solve_terse_solve_self_check_k1.json",
+    "gemma4_31b_it_E159_answer_preserving_generation_nonthinking_solve_neutral_solve_terse_solve_self_check_k1.json",
+    "qwen35_27b_E159_answer_preserving_generation_nonthinking_solve_neutral_solve_terse_solve_self_check_k1.json"
+  ],
+  "manual_final_correct_audit": 357,
+  "n": 360,
+  "needs_second_human_review_for_paper": true,
+  "outputs": {
+    "jsonl": "data/processed/e159_generation_process_acpi_audit_20260501.jsonl",
+    "report": "reports/E159_GENERATION_PROCESS_ACPI_AUDIT_20260501.md",
+    "summary": "results/E159_answer_preserving_difficult_generation/e159_process_acpi_audit_summary_20260501.json"
+  },
+  "process_invalid": 3,
+  "process_valid_strict": 357,
+  "runner_false_negative_format": 17,
+  "runner_final_correct": 340,
+  "scope": "E159 non-thinking generated trace process ACPI audit"
+}

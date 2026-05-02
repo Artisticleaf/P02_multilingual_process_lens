@@ -1,0 +1,1004 @@
+{
+  "E05_manual_combined": {
+    "n": 154,
+    "is_acpi_true": 9,
+    "manual_process_invalid": 18,
+    "manual_final_correct_true": 138,
+    "manual_final_correct_false": 7,
+    "manual_format_valid_true": 77,
+    "manual_route_valid_true": 150,
+    "risk_top": [
+      [
+        "valid_clean",
+        68
+      ],
+      [
+        "truncated_valid_or_no_clean_final",
+        27
+      ],
+      [
+        "valid_correct_but_after_final_spill_or_trim",
+        17
+      ],
+      [
+        "valid_correct_but_raw_or_visible_spill",
+        7
+      ],
+      [
+        "valid_math_wrong_requested_reason_language",
+        3
+      ],
+      [
+        "valid_correct_but_visible_empty_think_tag",
+        2
+      ],
+      [
+        "self_corrected_discount_semantic_confusion",
+        1
+      ],
+      [
+        "self_corrected_75_percent_surface_confusion",
+        1
+      ]
+    ],
+    "model_counts": [
+      [
+        "qwen35_9b",
+        83
+      ],
+      [
+        "qwen3_14b_base",
+        34
+      ],
+      [
+        "deepseek_r1_0528_qwen3_8b",
+        20
+      ],
+      [
+        "phi4_mini_reasoning",
+        17
+      ]
+    ],
+    "task_counts": [
+      [
+        "percent_then_discount",
+        26
+      ],
+      [
+        "deriv_sum",
+        22
+      ],
+      [
+        "disc_zh_75_price",
+        20
+      ],
+      [
+        "disc_en_75_off",
+        20
+      ],
+      [
+        "deriv_coeff",
+        13
+      ],
+      [
+        "ratio_boys_total",
+        12
+      ],
+      [
+        "disc_en_25_off",
+        8
+      ],
+      [
+        "ratio_boys_girls",
+        8
+      ],
+      [
+        "ratio_girls_boys",
+        8
+      ],
+      [
+        "deriv_product_equiv",
+        8
+      ]
+    ]
+  },
+  "E18_targeted_manual": {
+    "n": 32,
+    "is_acpi_true": 1,
+    "manual_process_invalid": 8,
+    "manual_final_correct_true": 25,
+    "manual_final_correct_false": 7,
+    "manual_format_valid_true": 23,
+    "manual_route_valid_true": 29,
+    "risk_top": [
+      [
+        "valid_clean",
+        5
+      ],
+      [
+        "valid_clean_same_route_discount",
+        4
+      ],
+      [
+        "valid_but_reason_language_violation",
+        3
+      ],
+      [
+        "valid_clean_translation_to_25pct_off",
+        3
+      ],
+      [
+        "valid_correct_but_after_final_spill",
+        3
+      ],
+      [
+        "semantic_drift_75pct_off_final_wrong",
+        2
+      ],
+      [
+        "valid_clean_same_route_sibling",
+        2
+      ],
+      [
+        "semantic_drift_80pct_discount_final_wrong",
+        2
+      ]
+    ],
+    "model_counts": [
+      [
+        "qwen3_14b_base",
+        20
+      ],
+      [
+        "qwen35_9b",
+        12
+      ]
+    ],
+    "task_counts": [
+      [
+        "disc_en_25_off",
+        9
+      ],
+      [
+        "disc_zh_75_price",
+        9
+      ],
+      [
+        "percent_then_discount",
+        8
+      ],
+      [
+        "ratio_boys_total",
+        4
+      ],
+      [
+        "disc_en_75_off",
+        2
+      ]
+    ]
+  },
+  "E26_aime_manual": {
+    "n": 48,
+    "is_acpi_true": 0,
+    "manual_process_invalid": 7,
+    "manual_final_correct_true": 0,
+    "manual_final_correct_false": 48,
+    "manual_format_valid_true": 5,
+    "manual_route_valid_true": 0,
+    "risk_top": [
+      [
+        "no_final_marker_truncated_or_unresolved",
+        26
+      ],
+      [
+        "no_final_marker_partial_reasoning_often_on_track",
+        8
+      ],
+      [
+        "no_final_marker_geometry_partial_or_unresolved",
+        7
+      ],
+      [
+        "final_wrong_no_acpi",
+        5
+      ],
+      [
+        "no_final_marker_invalid_base_notation_as_three_digit",
+        2
+      ]
+    ],
+    "model_counts": [
+      [
+        "deepseek_r1_0528_qwen3_8b",
+        12
+      ],
+      [
+        "phi4_mini_reasoning",
+        12
+      ],
+      [
+        "qwen35_9b",
+        12
+      ],
+      [
+        "qwen3_14b_base",
+        12
+      ]
+    ],
+    "task_counts": [
+      [
+        "aime25_base_divisor_p1",
+        16
+      ],
+      [
+        "aime25_geometry_reflection_p2",
+        16
+      ],
+      [
+        "aime25_icecream_ordered_assign_p3",
+        16
+      ]
+    ],
+    "is_acpi_candidate_true": 0
+  },
+  "E27_transfer_subset": {
+    "n": 11,
+    "is_acpi_true": 4,
+    "manual_process_invalid": 4,
+    "manual_final_correct_true": 11,
+    "manual_final_correct_false": 0,
+    "manual_format_valid_true": 10,
+    "manual_route_valid_true": 11,
+    "risk_top": [
+      [
+        "valid_clean",
+        2
+      ],
+      [
+        "valid_clean_same_route_sibling",
+        2
+      ],
+      [
+        "valid_clean_same_route_discount",
+        2
+      ],
+      [
+        "acpi_unmarked_discount_word_mismatch",
+        1
+      ],
+      [
+        "valid_correct_but_raw_or_visible_spill",
+        1
+      ],
+      [
+        "acpi_unmarked_wrong_derivative_rule",
+        1
+      ],
+      [
+        "acpi_lexical_mismatch_dabazhe_80_percent_discount",
+        1
+      ],
+      [
+        "acpi_unmarked_dabazhe_80pct_discount_word_mismatch",
+        1
+      ]
+    ],
+    "model_counts": [
+      [
+        "qwen3_14b_base",
+        7
+      ],
+      [
+        "qwen35_9b",
+        4
+      ]
+    ],
+    "task_counts": [
+      [
+        "percent_then_discount",
+        5
+      ],
+      [
+        "disc_en_25_off",
+        4
+      ],
+      [
+        "deriv_sum",
+        2
+      ]
+    ]
+  },
+  "E24_causal_chain": {
+    "pairs": 9,
+    "manual_acpi_pairs": 8,
+    "abs_overaccept_acpi_pairs": 8,
+    "contrastive_signal_acpi_pairs": 7,
+    "hidden_span_signal_acpi_pairs": 6,
+    "mlp_signal_acpi_pairs": 2,
+    "boundary_pairs": [
+      {
+        "pair_id": "qwen14_e18_dabazhe_zh_en_92_bad_91_valid",
+        "bad_idx": 180092,
+        "valid_idx": 180091,
+        "risk": "acpi_unmarked_dabazhe_80pct_discount_word_mismatch",
+        "absolute_overaccept": true,
+        "contrastive_signal": false,
+        "hidden_span_signal": false,
+        "mlp_signal": false
+      },
+      {
+        "pair_id": "qwen14_e18_dabazhe_zh_en_92_bad_94_valid",
+        "bad_idx": 180092,
+        "valid_idx": 180094,
+        "risk": "acpi_unmarked_dabazhe_80pct_discount_word_mismatch",
+        "absolute_overaccept": true,
+        "contrastive_signal": true,
+        "hidden_span_signal": false,
+        "mlp_signal": false
+      }
+    ],
+    "human_examples": [
+      {
+        "pair_id": "qwen14_deriv_sum_zh_402_bad_403_valid",
+        "bad_idx": 402,
+        "valid_idx": 403,
+        "problem": "求 x^2 + 3x 的导数。",
+        "bad_error": "3 是常数，常数的导数为 0，所以 (3x)'=3",
+        "bad_correction": "最终 2x+3 正确，但第5步说“3 是常数，常数导数为0，所以 (3x)'=3”；把系数常数和整个 3x 混淆。",
+        "valid_correction": "过程和答案正确。",
+        "flags": {
+          "absolute_overaccept": true,
+          "contrastive_signal": true,
+          "hidden_span_signal": true,
+          "manual_acpi": true,
+          "module_mlp_signal": true,
+          "surface_or_process_trap": true
+        }
+      },
+      {
+        "pair_id": "qwen14_dabazhe_zh_en_445_bad_442_valid",
+        "bad_idx": 445,
+        "valid_idx": 442,
+        "problem": "一个80美元的价格先上涨25%，再打八折，最终价格是多少？",
+        "bad_error": "apply an 80% discount",
+        "bad_correction": "最终表达式 80*1.25*0.80 等价于80，但文字说“apply an 80% discount”，与公式0.80/pay-80%冲突。",
+        "valid_correction": "中文基线：打八折写成乘以0.8，最终80。",
+        "flags": {
+          "absolute_overaccept": true,
+          "contrastive_signal": true,
+          "hidden_span_signal": true,
+          "manual_acpi": true,
+          "module_mlp_signal": false,
+          "surface_or_process_trap": true
+        }
+      },
+      {
+        "pair_id": "qwen35_discount_zh_234_bad_235_valid",
+        "bad_idx": 234,
+        "valid_idx": 235,
+        "problem": "一件80美元的夹克优惠25%后售价是多少？",
+        "bad_error": "打八折，即原价的75%",
+        "bad_correction": "题目是优惠25%，最终60正确；但推理写“打八折，即原价的75%”，八折和75%不一致，属于表层折扣词错误。",
+        "valid_correction": "折扣计算正确，但 raw trim flag 或可见答案后续写使其不适合作为训练轨迹。",
+        "flags": {
+          "absolute_overaccept": true,
+          "contrastive_signal": true,
+          "hidden_span_signal": true,
+          "manual_acpi": true,
+          "module_mlp_signal": true,
+          "surface_or_process_trap": true
+        }
+      },
+      {
+        "pair_id": "qwen35_ratio_zh_en_261_bad_260_valid",
+        "bad_idx": 261,
+        "valid_idx": 260,
+        "problem": "男生占全班人数的3/8。如果有24名男生，女生有多少名？",
+        "bad_error": "64 - 2 = 62",
+        "bad_correction": "先写女生=64-2=62，括号中自我纠正应为64-24=40；最终40正确，但轨迹包含显式错误步骤。",
+        "valid_correction": "过程和答案正确。",
+        "flags": {
+          "absolute_overaccept": true,
+          "contrastive_signal": true,
+          "hidden_span_signal": true,
+          "manual_acpi": true,
+          "module_mlp_signal": false,
+          "surface_or_process_trap": true
+        }
+      },
+      {
+        "pair_id": "qwen14_e18_dabazhe_zh_en_92_bad_91_valid",
+        "bad_idx": 180092,
+        "valid_idx": 180091,
+        "problem": "一个80美元的价格先上涨25%，再打八折，最终价格是多少？",
+        "bad_error": "says apply the 80% discount but multiplies by 0.80",
+        "bad_correction": "",
+        "valid_correction": "",
+        "flags": {
+          "absolute_overaccept": true,
+          "contrastive_signal": false,
+          "hidden_span_signal": false,
+          "manual_acpi": true,
+          "module_mlp_signal": false,
+          "surface_or_process_trap": true
+        }
+      },
+      {
+        "pair_id": "qwen14_e18_dabazhe_zh_en_92_bad_94_valid",
+        "bad_idx": 180092,
+        "valid_idx": 180094,
+        "problem": "一个80美元的价格先上涨25%，再打八折，最终价格是多少？",
+        "bad_error": "says apply the 80% discount but multiplies by 0.80",
+        "bad_correction": "",
+        "valid_correction": "",
+        "flags": {
+          "absolute_overaccept": true,
+          "contrastive_signal": true,
+          "hidden_span_signal": false,
+          "manual_acpi": true,
+          "module_mlp_signal": false,
+          "surface_or_process_trap": true
+        }
+      },
+      {
+        "pair_id": "qwen14_e18_dabazhe_final_wrong_93_bad_91_valid",
+        "bad_idx": 180093,
+        "valid_idx": 180091,
+        "problem": "一个80美元的价格先上涨25%，再打八折，最终价格是多少？",
+        "bad_error": "states 80% discount means pay20",
+        "bad_correction": "",
+        "valid_correction": "",
+        "flags": {
+          "absolute_overaccept": true,
+          "contrastive_signal": false,
+          "hidden_span_signal": false,
+          "manual_acpi": false,
+          "module_mlp_signal": false,
+          "surface_or_process_trap": true
+        }
+      },
+      {
+        "pair_id": "qwen35_e18_discount_234_bad_181000_valid",
+        "bad_idx": 234,
+        "valid_idx": 181000,
+        "problem": "一件80美元的夹克优惠25%后售价是多少？",
+        "bad_error": "打八折，即原价的75%",
+        "bad_correction": "题目是优惠25%，最终60正确；但推理写“打八折，即原价的75%”，八折和75%不一致，属于表层折扣词错误。",
+        "valid_correction": "",
+        "flags": {
+          "absolute_overaccept": true,
+          "contrastive_signal": true,
+          "hidden_span_signal": true,
+          "manual_acpi": true,
+          "module_mlp_signal": false,
+          "surface_or_process_trap": true
+        }
+      },
+      {
+        "pair_id": "qwen35_e18_discount_234_bad_181001_valid",
+        "bad_idx": 234,
+        "valid_idx": 181001,
+        "problem": "一件80美元的夹克优惠25%后售价是多少？",
+        "bad_error": "打八折，即原价的75%",
+        "bad_correction": "题目是优惠25%，最终60正确；但推理写“打八折，即原价的75%”，八折和75%不一致，属于表层折扣词错误。",
+        "valid_correction": "",
+        "flags": {
+          "absolute_overaccept": true,
+          "contrastive_signal": true,
+          "hidden_span_signal": true,
+          "manual_acpi": true,
+          "module_mlp_signal": false,
+          "surface_or_process_trap": true
+        }
+      }
+    ]
+  },
+  "E06_abs_e05": [
+    {
+      "model": "qwen35_9b",
+      "accuracy": 0.8529411764705882,
+      "acpi_false_accept_rate": 1.0,
+      "false_accept_rate_target_false": 1.0,
+      "mean_margin": 2.8874080950284706,
+      "mode": "process_only",
+      "n": 136,
+      "process_invalid_false_accept_rate": 1.0,
+      "prompt_lang": "en",
+      "slice": "all",
+      "yes_rate": 0.9852941176470589
+    },
+    {
+      "model": "qwen35_9b",
+      "accuracy": 0.8676470588235294,
+      "acpi_false_accept_rate": 0.8888888888888888,
+      "false_accept_rate_target_false": 0.9444444444444444,
+      "mean_margin": 2.6521139812162695,
+      "mode": "process_only",
+      "n": 136,
+      "process_invalid_false_accept_rate": 0.9444444444444444,
+      "prompt_lang": "zh",
+      "slice": "all",
+      "yes_rate": 0.9852941176470589
+    },
+    {
+      "model": "qwen3_14b_base",
+      "accuracy": 0.8970588235294118,
+      "acpi_false_accept_rate": 0.7777777777777778,
+      "false_accept_rate_target_false": 0.7222222222222222,
+      "mean_margin": 2.155330881202484,
+      "mode": "process_only",
+      "n": 136,
+      "process_invalid_false_accept_rate": 0.7222222222222222,
+      "prompt_lang": "en",
+      "slice": "all",
+      "yes_rate": 0.9558823529411765
+    },
+    {
+      "model": "qwen3_14b_base",
+      "accuracy": 0.8897058823529411,
+      "acpi_false_accept_rate": 0.8888888888888888,
+      "false_accept_rate_target_false": 0.8333333333333334,
+      "mean_margin": 1.5681348771569152,
+      "mode": "process_only",
+      "n": 136,
+      "process_invalid_false_accept_rate": 0.8333333333333334,
+      "prompt_lang": "zh",
+      "slice": "all",
+      "yes_rate": 0.9779411764705882
+    },
+    {
+      "model": "deepseek_r1_0528_qwen3_8b",
+      "accuracy": 0.8602941176470589,
+      "acpi_false_accept_rate": 1.0,
+      "false_accept_rate_target_false": 1.0,
+      "mean_margin": 3.644301479346776,
+      "mode": "process_only",
+      "n": 136,
+      "process_invalid_false_accept_rate": 1.0,
+      "prompt_lang": "en",
+      "slice": "all",
+      "yes_rate": 0.9926470588235294
+    },
+    {
+      "model": "deepseek_r1_0528_qwen3_8b",
+      "accuracy": 0.8676470588235294,
+      "acpi_false_accept_rate": 1.0,
+      "false_accept_rate_target_false": 0.9444444444444444,
+      "mean_margin": 5.7205905810326785,
+      "mode": "process_only",
+      "n": 136,
+      "process_invalid_false_accept_rate": 0.9444444444444444,
+      "prompt_lang": "zh",
+      "slice": "all",
+      "yes_rate": 0.9852941176470589
+    },
+    {
+      "model": "phi4_mini_reasoning",
+      "accuracy": 0.8529411764705882,
+      "acpi_false_accept_rate": 1.0,
+      "false_accept_rate_target_false": 1.0,
+      "mean_margin": 4.771599258709209,
+      "mode": "process_only",
+      "n": 136,
+      "process_invalid_false_accept_rate": 1.0,
+      "prompt_lang": "en",
+      "slice": "all",
+      "yes_rate": 0.9852941176470589
+    },
+    {
+      "model": "phi4_mini_reasoning",
+      "accuracy": 0.8676470588235294,
+      "acpi_false_accept_rate": 1.0,
+      "false_accept_rate_target_false": 1.0,
+      "mean_margin": 7.848755705108702,
+      "mode": "process_only",
+      "n": 136,
+      "process_invalid_false_accept_rate": 1.0,
+      "prompt_lang": "zh",
+      "slice": "all",
+      "yes_rate": 1.0
+    }
+  ],
+  "E24_abs_e18": [
+    {
+      "model": "qwen35_9b",
+      "accuracy": 0.8125,
+      "acpi_false_accept_rate": 1.0,
+      "false_accept_rate_target_false": 0.75,
+      "mean_margin": 2.878906246740371,
+      "mode": "process_only",
+      "n": 32,
+      "process_invalid_false_accept_rate": 0.75,
+      "prompt_lang": "en",
+      "slice": "all",
+      "yes_rate": 0.9375
+    },
+    {
+      "model": "qwen35_9b",
+      "accuracy": 0.75,
+      "acpi_false_accept_rate": 1.0,
+      "false_accept_rate_target_false": 1.0,
+      "mean_margin": 2.304687560070306,
+      "mode": "process_only",
+      "n": 32,
+      "process_invalid_false_accept_rate": 1.0,
+      "prompt_lang": "zh",
+      "slice": "all",
+      "yes_rate": 1.0
+    },
+    {
+      "model": "qwen3_14b_base",
+      "accuracy": 0.875,
+      "acpi_false_accept_rate": 1.0,
+      "false_accept_rate_target_false": 0.5,
+      "mean_margin": 1.80859375721775,
+      "mode": "process_only",
+      "n": 32,
+      "process_invalid_false_accept_rate": 0.5,
+      "prompt_lang": "en",
+      "slice": "all",
+      "yes_rate": 0.875
+    },
+    {
+      "model": "qwen3_14b_base",
+      "accuracy": 0.75,
+      "acpi_false_accept_rate": 1.0,
+      "false_accept_rate_target_false": 1.0,
+      "mean_margin": 1.5876590503085026,
+      "mode": "process_only",
+      "n": 32,
+      "process_invalid_false_accept_rate": 1.0,
+      "prompt_lang": "zh",
+      "slice": "all",
+      "yes_rate": 1.0
+    },
+    {
+      "model": "deepseek_r1_0528_qwen3_8b",
+      "accuracy": 0.71875,
+      "acpi_false_accept_rate": 1.0,
+      "false_accept_rate_target_false": 1.0,
+      "mean_margin": 3.097656246041879,
+      "mode": "process_only",
+      "n": 32,
+      "process_invalid_false_accept_rate": 1.0,
+      "prompt_lang": "en",
+      "slice": "all",
+      "yes_rate": 0.96875
+    },
+    {
+      "model": "deepseek_r1_0528_qwen3_8b",
+      "accuracy": 0.25,
+      "acpi_false_accept_rate": 0.0,
+      "false_accept_rate_target_false": 0.0,
+      "mean_margin": NaN,
+      "mode": "process_only",
+      "n": 32,
+      "process_invalid_false_accept_rate": 0.0,
+      "prompt_lang": "zh",
+      "slice": "all",
+      "yes_rate": 0.0
+    },
+    {
+      "model": "phi4_mini_reasoning",
+      "accuracy": 0.75,
+      "acpi_false_accept_rate": 1.0,
+      "false_accept_rate_target_false": 1.0,
+      "mean_margin": 5.437500040196028,
+      "mode": "process_only",
+      "n": 32,
+      "process_invalid_false_accept_rate": 1.0,
+      "prompt_lang": "en",
+      "slice": "all",
+      "yes_rate": 1.0
+    },
+    {
+      "model": "phi4_mini_reasoning",
+      "accuracy": 0.75,
+      "acpi_false_accept_rate": 1.0,
+      "false_accept_rate_target_false": 1.0,
+      "mean_margin": 6.7626082642091205,
+      "mode": "process_only",
+      "n": 32,
+      "process_invalid_false_accept_rate": 1.0,
+      "prompt_lang": "zh",
+      "slice": "all",
+      "yes_rate": 1.0
+    }
+  ],
+  "E27_abs_transfer": [
+    {
+      "model": "gemma4_e4b_it",
+      "accuracy": 0.6363636363636364,
+      "acpi_false_accept_rate": 1.0,
+      "false_accept_rate_target_false": 1.0,
+      "mean_margin": 6.306818115524948,
+      "mode": "process_only",
+      "n": 11,
+      "process_invalid_false_accept_rate": 1.0,
+      "prompt_lang": "en",
+      "slice": "all",
+      "yes_rate": 1.0
+    },
+    {
+      "model": "gemma4_e4b_it",
+      "accuracy": 0.6363636363636364,
+      "acpi_false_accept_rate": 1.0,
+      "false_accept_rate_target_false": 1.0,
+      "mean_margin": 7.537532090971416,
+      "mode": "process_only",
+      "n": 11,
+      "process_invalid_false_accept_rate": 1.0,
+      "prompt_lang": "zh",
+      "slice": "all",
+      "yes_rate": 1.0
+    },
+    {
+      "model": "qwen35_27b",
+      "accuracy": 0.6363636363636364,
+      "acpi_false_accept_rate": 1.0,
+      "false_accept_rate_target_false": 1.0,
+      "mean_margin": 3.84659084406766,
+      "mode": "process_only",
+      "n": 11,
+      "process_invalid_false_accept_rate": 1.0,
+      "prompt_lang": "en",
+      "slice": "all",
+      "yes_rate": 1.0
+    },
+    {
+      "model": "qwen35_27b",
+      "accuracy": 0.6363636363636364,
+      "acpi_false_accept_rate": 1.0,
+      "false_accept_rate_target_false": 1.0,
+      "mean_margin": 2.693181785670194,
+      "mode": "process_only",
+      "n": 11,
+      "process_invalid_false_accept_rate": 1.0,
+      "prompt_lang": "zh",
+      "slice": "all",
+      "yes_rate": 1.0
+    }
+  ],
+  "E12_contrastive": [
+    {
+      "model": "qwen35_9b",
+      "acc": 0.875,
+      "mean_margin": 1.0488721504807472,
+      "n": 16,
+      "slice": "all",
+      "slice_type": "all"
+    },
+    {
+      "model": "phi4_mini_reasoning",
+      "acc": 0.6875,
+      "mean_margin": 0.5778939519077539,
+      "n": 16,
+      "slice": "all",
+      "slice_type": "all"
+    },
+    {
+      "model": "qwen3_14b_base",
+      "acc": 0.8125,
+      "mean_margin": 1.301575468853116,
+      "n": 16,
+      "slice": "all",
+      "slice_type": "all"
+    },
+    {
+      "model": "deepseek_r1_0528_qwen3_8b",
+      "acc": 0.4375,
+      "mean_margin": 0.25245334580540657,
+      "n": 16,
+      "slice": "all",
+      "slice_type": "all"
+    }
+  ],
+  "E16_contrastive_expanded": [
+    {
+      "model": "qwen35_9b",
+      "acc": 0.75,
+      "mean_margin": 0.6807265511967919,
+      "n": 44,
+      "slice": "all",
+      "slice_type": "all"
+    },
+    {
+      "model": "phi4_mini_reasoning",
+      "acc": 0.5681818181818182,
+      "mean_margin": -0.18098155891692097,
+      "n": 44,
+      "slice": "all",
+      "slice_type": "all"
+    },
+    {
+      "model": "qwen3_14b_base",
+      "acc": 0.8181818181818182,
+      "mean_margin": 1.1947336488149383,
+      "n": 44,
+      "slice": "all",
+      "slice_type": "all"
+    },
+    {
+      "model": "deepseek_r1_0528_qwen3_8b",
+      "acc": 0.4772727272727273,
+      "mean_margin": 0.09515926716002551,
+      "n": 44,
+      "slice": "all",
+      "slice_type": "all"
+    }
+  ],
+  "E21_qwen14_hard_contrastive": [
+    {
+      "model": "qwen35_9b",
+      "acc": 0.6666666666666666,
+      "mean_margin": 0.08333332339922588,
+      "n": 12,
+      "slice": "all",
+      "slice_type": "all"
+    },
+    {
+      "model": "qwen3_14b_base",
+      "acc": 0.3333333333333333,
+      "mean_margin": -0.4375,
+      "n": 12,
+      "slice": "all",
+      "slice_type": "all"
+    }
+  ],
+  "E23_qwen35_clean_sibling_contrastive": [
+    {
+      "model": "qwen35_9b",
+      "acc": 1.0,
+      "mean_margin": 0.5937500149011612,
+      "n": 8,
+      "slice": "all",
+      "slice_type": "all"
+    },
+    {
+      "model": "qwen3_14b_base",
+      "acc": 1.0,
+      "mean_margin": 2.140625048428774,
+      "n": 8,
+      "slice": "all",
+      "slice_type": "all"
+    }
+  ],
+  "E27_transfer_contrastive": [
+    {
+      "model": "qwen35_27b",
+      "acc": 0.875,
+      "mean_margin": 0.9764947096506754,
+      "n": 24,
+      "slice": "all",
+      "slice_type": "all"
+    },
+    {
+      "model": "gemma4_e4b_it",
+      "acc": 0.5416666666666666,
+      "mean_margin": 0.5976446395119032,
+      "n": 24,
+      "slice": "all",
+      "slice_type": "all"
+    }
+  ],
+  "E25_layerwise_summary": {
+    "aggregate": {
+      "models": {
+        "qwen35_9b": {
+          "absolute_n": 28,
+          "contrastive_n": 36
+        },
+        "qwen3_14b_base": {
+          "absolute_n": 28,
+          "contrastive_n": 36
+        }
+      },
+      "absolute_n": 56,
+      "contrastive_n": 72
+    },
+    "inputs": [
+      "/home/Awei/P02_multilingual_process_lens/results/E25_layerwise_verifier_lens/qwen35_9b_layerwise_verifier_lens.json",
+      "/home/Awei/P02_multilingual_process_lens/results/E25_layerwise_verifier_lens/qwen3_14b_base_layerwise_verifier_lens.json"
+    ]
+  },
+  "E27_generation_smoke": [
+    {
+      "model": "qwen35_27b",
+      "n": 6,
+      "usable_non_meta_with_final": 0,
+      "rows": [
+        {
+          "model": "qwen35_27b",
+          "task_id": "disc_en_25_off",
+          "gold": "60",
+          "meta_planning": true,
+          "extracted_final": "<answer>`."
+        },
+        {
+          "model": "qwen35_27b",
+          "task_id": "disc_zh_75_price",
+          "gold": "60",
+          "meta_planning": true,
+          "extracted_final": "<answer>`."
+        },
+        {
+          "model": "qwen35_27b",
+          "task_id": "disc_en_75_off",
+          "gold": "20",
+          "meta_planning": true,
+          "extracted_final": "<answer>`."
+        },
+        {
+          "model": "qwen35_27b",
+          "task_id": "ratio_boys_total",
+          "gold": "40",
+          "meta_planning": true,
+          "extracted_final": "<answer>` and then stop."
+        },
+        {
+          "model": "qwen35_27b",
+          "task_id": "deriv_sum",
+          "gold": "2x+3",
+          "meta_planning": true,
+          "extracted_final": "<answer>`."
+        },
+        {
+          "model": "qwen35_27b",
+          "task_id": "percent_then_discount",
+          "gold": "80",
+          "meta_planning": true,
+          "extracted_final": "<answer>`. Stop after that."
+        }
+      ]
+    },
+    {
+      "model": "gemma4_e4b_it",
+      "n": 6,
+      "usable_non_meta_with_final": 6,
+      "rows": [
+        {
+          "model": "gemma4_e4b_it",
+          "task_id": "disc_en_25_off",
+          "gold": "60",
+          "meta_planning": false,
+          "extracted_final": "60"
+        },
+        {
+          "model": "gemma4_e4b_it",
+          "task_id": "disc_zh_75_price",
+          "gold": "60",
+          "meta_planning": false,
+          "extracted_final": "$20"
+        },
+        {
+          "model": "gemma4_e4b_it",
+          "task_id": "disc_en_75_off",
+          "gold": "20",
+          "meta_planning": false,
+          "extracted_final": "$20"
+        },
+        {
+          "model": "gemma4_e4b_it",
+          "task_id": "ratio_boys_total",
+          "gold": "40",
+          "meta_planning": false,
+          "extracted_final": "40"
+        },
+        {
+          "model": "gemma4_e4b_it",
+          "task_id": "deriv_sum",
+          "gold": "2x+3",
+          "meta_planning": false,
+          "extracted_final": "2x + 3"
+        },
+        {
+          "model": "gemma4_e4b_it",
+          "task_id": "percent_then_discount",
+          "gold": "80",
+          "meta_planning": false,
+          "extracted_final": "$80"
+        }
+      ]
+    }
+  ]
+}

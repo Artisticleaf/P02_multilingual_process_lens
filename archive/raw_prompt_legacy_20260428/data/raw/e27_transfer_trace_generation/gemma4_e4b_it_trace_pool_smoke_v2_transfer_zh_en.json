@@ -1,0 +1,133 @@
+{
+  "args": {
+    "chat_template": "auto",
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "k": 1,
+    "max_new_tokens": 384,
+    "max_tasks": 6,
+    "model_key": "gemma4_e4b_it",
+    "out_dir": "data/raw/e27_transfer_trace_generation",
+    "out_suffix": "transfer_zh_en",
+    "prompt_style": "concise",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "routes": "zh->en",
+    "seed": 20260427,
+    "tasks_yaml": "configs/e18_targeted_sibling_tasks.yaml",
+    "temperature": 0.4,
+    "top_p": 0.9
+  },
+  "model_spec": {
+    "class": "instruct",
+    "family": "gemma",
+    "notes": "downloaded via HF mirror on 2026-04-27; current Google small open model control; may require newer transformers or multimodal text loader",
+    "path": "/home/Awei/LLM/Model/base/gemma4_e4b_it",
+    "priority": "P0",
+    "remote_repo": "google/gemma-4-E4B-it",
+    "status": "local_downloaded"
+  },
+  "rows": [
+    {
+      "completion": "The original price of the jacket is $80.\nThe discount percentage is 25%.\nCalculate the discount amount: $80 \\times 0.25$.\nDiscount amount is $20.\nSubtract the discount from the original price: $80 - 20$.\nThe final selling price is $60.\n\nFinal answer: 60",
+      "created_at": "2026-04-27T13:29:06",
+      "gold_answer": "60",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一件80美元的夹克优惠25%后售价是多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "The original price of the jacket is $80.\nThe discount percentage is 25%.\nCalculate the discount amount: $80 \\times 0.25$.\nDiscount amount is $20.\nSubtract the discount from the original price: $80 - 20$.\nThe final selling price is $60.\n\nFinal answer: 60",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "disc_en_25_off",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The original price of the jacket is $80.\nThe discount is 75% off, which means the customer pays $100\\% - 75\\% = 25\\%$ of the original price.\nTo find the sale price, multiply the original price by the remaining percentage (0.25).\nSale Price = Original Price $\\times$ Discount Percentage Paid\nSale Price = $\\$80 \\times 0.25$\nSale Price = $\\$20$.\n\nFinal answer: $20",
+      "created_at": "2026-04-27T13:29:09",
+      "gold_answer": "60",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一件80美元的夹克打七五折后售价是多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "The original price of the jacket is $80.\nThe discount is 75% off, which means the customer pays $100\\% - 75\\% = 25\\%$ of the original price.\nTo find the sale price, multiply the original price by the remaining percentage (0.25).\nSale Price = Original Price $\\times$ Discount Percentage Paid\nSale Price = $\\$80 \\times 0.25$\nSale Price = $\\$20$.\n\nFinal answer: $20",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "disc_zh_75_price",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The original price of the jacket is $80.\nThe discount percentage is 75%.\nCalculate the discount amount: $80 \\times 0.75$.\n$80 \\times 0.75 = 60$.\nThe discount amount is $60.\nSubtract the discount from the original price: $80 - 60$.\n$80 - 60 = 20$.\nThe final selling price is $20.\n\nFinal answer: $20",
+      "created_at": "2026-04-27T13:29:12",
+      "gold_answer": "20",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一件80美元的夹克优惠75%后售价是多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "The original price of the jacket is $80.\nThe discount percentage is 75%.\nCalculate the discount amount: $80 \\times 0.75$.\n$80 \\times 0.75 = 60$.\nThe discount amount is $60.\nSubtract the discount from the original price: $80 - 60$.\n$80 - 60 = 20$.\nThe final selling price is $20.\n\nFinal answer: $20",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "disc_en_75_off",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "Let $T$ be the total number of students in the class.\nThe fraction of boys is $\\frac{3}{8}$ of $T$.\nWe are given that the number of boys is 24.\nSo, $\\frac{3}{8} T = 24$.\nTo find $T$, multiply both sides by $\\frac{8}{3}$: $T = 24 \\times \\frac{8}{3}$.\n$T = 8 \\times 8 = 64$.\nThe total number of students is 64.\nThe fraction of girls is $1 - \\frac{3}{8} = \\frac{5}{8}$.\nThe number of girls is $\\frac{5}{8}$ of $T$.\nNumber of girls $= \\frac{5}{8} \\times 64$.\nNumber of girls $= 5 \\times 8 = 40$.\n\nFinal answer: 40",
+      "created_at": "2026-04-27T13:29:18",
+      "gold_answer": "40",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n男生占全班人数的3/8。如果有24名男生，女生有多少名？<turn|>\n<|turn>model\n",
+      "raw_completion": "Let $T$ be the total number of students in the class.\nThe fraction of boys is $\\frac{3}{8}$ of $T$.\nWe are given that the number of boys is 24.\nSo, $\\frac{3}{8} T = 24$.\nTo find $T$, multiply both sides by $\\frac{8}{3}$: $T = 24 \\times \\frac{8}{3}$.\n$T = 8 \\times 8 = 64$.\nThe total number of students is 64.\nThe fraction of girls is $1 - \\frac{3}{8} = \\frac{5}{8}$.\nThe number of girls is $\\frac{5}{8}$ of $T$.\nNumber of girls $= \\frac{5}{8} \\times 64$.\nNumber of girls $= 5 \\times 8 = 40$.\n\nFinal answer: 40",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "ratio_boys_total",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "The function is $f(x) = x^2 + 3x$.\nWe need to find the derivative, $f'(x)$.\nWe use the linearity of the derivative.\n$f'(x) = \\frac{d}{dx}(x^2) + \\frac{d}{dx}(3x)$.\nUsing the power rule, $\\frac{d}{dx}(x^n) = nx^{n-1}$.\nThe derivative of $x^2$ is $2x^{2-1} = 2x$.\nUsing the constant multiple rule, $\\frac{d}{dx}(3x) = 3 \\cdot \\frac{d}{dx}(x)$.\nThe derivative of $x$ is $1$.\nSo, $\\frac{d}{dx}(3x) = 3 \\cdot 1 = 3$.\nCombining the results, $f'(x) = 2x + 3$.\n\nFinal answer: 2x + 3",
+      "created_at": "2026-04-27T13:29:23",
+      "gold_answer": "2x+3",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n求 x^2 + 3x 的导数。<turn|>\n<|turn>model\n",
+      "raw_completion": "The function is $f(x) = x^2 + 3x$.\nWe need to find the derivative, $f'(x)$.\nWe use the linearity of the derivative.\n$f'(x) = \\frac{d}{dx}(x^2) + \\frac{d}{dx}(3x)$.\nUsing the power rule, $\\frac{d}{dx}(x^n) = nx^{n-1}$.\nThe derivative of $x^2$ is $2x^{2-1} = 2x$.\nUsing the constant multiple rule, $\\frac{d}{dx}(3x) = 3 \\cdot \\frac{d}{dx}(x)$.\nThe derivative of $x$ is $1$.\nSo, $\\frac{d}{dx}(3x) = 3 \\cdot 1 = 3$.\nCombining the results, $f'(x) = 2x + 3$.\n\nFinal answer: 2x + 3",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "deriv_sum",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    },
+    {
+      "completion": "Initial price is $80.\nFirst, calculate the 25% increase.\nIncrease amount = $80 * 0.25 = $20.\nPrice after increase = $80 + $20 = $100.\nNext, apply the 20% discount (打八折 means 80% of the price).\nFinal price = $100 * 0.80.\nFinal price = $80.\n\nFinal answer: $80",
+      "created_at": "2026-04-27T13:29:26",
+      "gold_answer": "80",
+      "input_lang": "zh",
+      "model_key": "gemma4_e4b_it",
+      "prompt": "<bos><|turn>system\nReason step by step in English only; Use at most 12 short reasoning lines; do not restate the problem; end with one line `Final answer: <answer>` and then stop.<turn|>\n<|turn>user\n一个80美元的价格先上涨25%，再打八折，最终价格是多少？<turn|>\n<|turn>model\n",
+      "raw_completion": "Initial price is $80.\nFirst, calculate the 25% increase.\nIncrease amount = $80 * 0.25 = $20.\nPrice after increase = $80 + $20 = $100.\nNext, apply the 20% discount (打八折 means 80% of the price).\nFinal price = $100 * 0.80.\nFinal price = $80.\n\nFinal answer: $80",
+      "reason_lang": "en",
+      "sample_idx": 0,
+      "task_id": "percent_then_discount",
+      "trim_flags": {
+        "trimmed_after_second_final": false,
+        "trimmed_after_second_problem": false
+      },
+      "used_chat_template": true
+    }
+  ]
+}

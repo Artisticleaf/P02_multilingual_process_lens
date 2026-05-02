@@ -1,0 +1,104 @@
+[2026-04-27 22:16:07 CST] waiting for gemma4_31b_it download PID 756393 to finish
+[2026-04-27 22:16:30 CST] waiting for gemma4_31b_it download PID 756393 to finish
+17G	/home/Awei/LLM/Model/base/gemma4_31b_it
+18G	/home/Awei/LLM/Model/base/gemma4_31b_it
+18G	/home/Awei/LLM/Model/base/gemma4_31b_it
+19G	/home/Awei/LLM/Model/base/gemma4_31b_it
+20G	/home/Awei/LLM/Model/base/gemma4_31b_it
+21G	/home/Awei/LLM/Model/base/gemma4_31b_it
+21G	/home/Awei/LLM/Model/base/gemma4_31b_it
+22G	/home/Awei/LLM/Model/base/gemma4_31b_it
+23G	/home/Awei/LLM/Model/base/gemma4_31b_it
+23G	/home/Awei/LLM/Model/base/gemma4_31b_it
+24G	/home/Awei/LLM/Model/base/gemma4_31b_it
+25G	/home/Awei/LLM/Model/base/gemma4_31b_it
+26G	/home/Awei/LLM/Model/base/gemma4_31b_it
+26G	/home/Awei/LLM/Model/base/gemma4_31b_it
+27G	/home/Awei/LLM/Model/base/gemma4_31b_it
+28G	/home/Awei/LLM/Model/base/gemma4_31b_it
+28G	/home/Awei/LLM/Model/base/gemma4_31b_it
+29G	/home/Awei/LLM/Model/base/gemma4_31b_it
+30G	/home/Awei/LLM/Model/base/gemma4_31b_it
+31G	/home/Awei/LLM/Model/base/gemma4_31b_it
+31G	/home/Awei/LLM/Model/base/gemma4_31b_it
+32G	/home/Awei/LLM/Model/base/gemma4_31b_it
+33G	/home/Awei/LLM/Model/base/gemma4_31b_it
+33G	/home/Awei/LLM/Model/base/gemma4_31b_it
+34G	/home/Awei/LLM/Model/base/gemma4_31b_it
+35G	/home/Awei/LLM/Model/base/gemma4_31b_it
+36G	/home/Awei/LLM/Model/base/gemma4_31b_it
+36G	/home/Awei/LLM/Model/base/gemma4_31b_it
+37G	/home/Awei/LLM/Model/base/gemma4_31b_it
+38G	/home/Awei/LLM/Model/base/gemma4_31b_it
+39G	/home/Awei/LLM/Model/base/gemma4_31b_it
+39G	/home/Awei/LLM/Model/base/gemma4_31b_it
+40G	/home/Awei/LLM/Model/base/gemma4_31b_it
+41G	/home/Awei/LLM/Model/base/gemma4_31b_it
+42G	/home/Awei/LLM/Model/base/gemma4_31b_it
+42G	/home/Awei/LLM/Model/base/gemma4_31b_it
+43G	/home/Awei/LLM/Model/base/gemma4_31b_it
+44G	/home/Awei/LLM/Model/base/gemma4_31b_it
+44G	/home/Awei/LLM/Model/base/gemma4_31b_it
+45G	/home/Awei/LLM/Model/base/gemma4_31b_it
+46G	/home/Awei/LLM/Model/base/gemma4_31b_it
+47G	/home/Awei/LLM/Model/base/gemma4_31b_it
+47G	/home/Awei/LLM/Model/base/gemma4_31b_it
+48G	/home/Awei/LLM/Model/base/gemma4_31b_it
+49G	/home/Awei/LLM/Model/base/gemma4_31b_it
+50G	/home/Awei/LLM/Model/base/gemma4_31b_it
+50G	/home/Awei/LLM/Model/base/gemma4_31b_it
+51G	/home/Awei/LLM/Model/base/gemma4_31b_it
+52G	/home/Awei/LLM/Model/base/gemma4_31b_it
+52G	/home/Awei/LLM/Model/base/gemma4_31b_it
+53G	/home/Awei/LLM/Model/base/gemma4_31b_it
+54G	/home/Awei/LLM/Model/base/gemma4_31b_it
+55G	/home/Awei/LLM/Model/base/gemma4_31b_it
+55G	/home/Awei/LLM/Model/base/gemma4_31b_it
+56G	/home/Awei/LLM/Model/base/gemma4_31b_it
+57G	/home/Awei/LLM/Model/base/gemma4_31b_it
+58G	/home/Awei/LLM/Model/base/gemma4_31b_it
+58G	/home/Awei/LLM/Model/base/gemma4_31b_it
+[2026-04-27 23:14:31 CST] download PID ended; checking files
+-rw-rw-r-- 1 ubunut ubunut 47G Apr 27 23:14 /home/Awei/LLM/Model/base/gemma4_31b_it/model-00001-of-00002.safetensors
+-rw-rw-r-- 1 ubunut ubunut 12G Apr 27 22:26 /home/Awei/LLM/Model/base/gemma4_31b_it/model-00002-of-00002.safetensors
+[4gpu-suite] resolved backend=hf for model=gemma4_31b_it
+[4gpu-suite] backend=hf model=gemma4_31b_it tag=S6 manual=data/processed/s6_lexical_grid_verifier_subset_20260427.jsonl out=/home/Awei/P02_multilingual_process_lens/results/S6_lexical_grid_absolute_verifier_hf
+[2026-04-27T23:14:34] loading tokenizer: gemma4_31b_it -> /home/Awei/LLM/Model/base/gemma4_31b_it
+[2026-04-27T23:14:35] loading model dtype=bfloat16 device=auto
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/1188 [00:00<?, ?it/s]Loading weights:   0%|          | 2/1188 [00:00<01:45, 11.25it/s]Loading weights:   2%|▏         | 19/1188 [00:00<00:14, 78.66it/s]Loading weights:   3%|▎         | 33/1188 [00:00<00:11, 98.60it/s]Loading weights:   4%|▍         | 48/1188 [00:00<00:09, 114.93it/s]Loading weights:   6%|▌         | 71/1188 [00:00<00:07, 150.80it/s]Loading weights:   7%|▋         | 88/1188 [00:00<00:07, 140.81it/s]Loading weights:   9%|▊         | 103/1188 [00:00<00:07, 141.59it/s]Loading weights:  10%|█         | 124/1188 [00:00<00:06, 160.37it/s]Loading weights:  12%|█▏        | 144/1188 [00:01<00:06, 166.87it/s]Loading weights:  14%|█▎        | 162/1188 [00:01<00:06, 159.09it/s]Loading weights:  16%|█▌        | 185/1188 [00:01<00:05, 173.08it/s]Loading weights:  17%|█▋        | 203/1188 [00:01<00:06, 163.69it/s]Loading weights:  19%|█▉        | 223/1188 [00:01<00:05, 171.11it/s]Loading weights:  20%|██        | 241/1188 [00:01<00:05, 169.26it/s]Loading weights:  22%|██▏       | 259/1188 [00:01<00:05, 156.48it/s]Loading weights:  23%|██▎       | 275/1188 [00:01<00:05, 155.64it/s]Loading weights:  25%|██▍       | 296/1188 [00:01<00:05, 166.94it/s]Loading weights:  26%|██▋       | 313/1188 [00:02<00:05, 155.77it/s]Loading weights:  28%|██▊       | 331/1188 [00:02<00:05, 154.15it/s]Loading weights:  30%|██▉       | 351/1188 [00:02<00:05, 164.15it/s]Loading weights:  31%|███       | 368/1188 [00:02<00:05, 153.98it/s]Loading weights:  33%|███▎      | 388/1188 [00:02<00:04, 164.42it/s]Loading weights:  34%|███▍      | 407/1188 [00:02<00:04, 171.21it/s]Loading weights:  36%|███▌      | 425/1188 [00:02<00:04, 159.35it/s]Loading weights:  37%|███▋      | 444/1188 [00:02<00:04, 167.55it/s]Loading weights:  39%|███▉      | 462/1188 [00:03<00:04, 168.26it/s]Loading weights:  40%|████      | 480/1188 [00:03<00:04, 161.40it/s]Loading weights:  42%|████▏     | 497/1188 [00:03<00:04, 162.45it/s]Loading weights:  44%|████▎     | 517/1188 [00:03<00:04, 164.67it/s]Loading weights:  45%|████▍     | 534/1188 [00:03<00:04, 156.65it/s]Loading weights:  47%|████▋     | 555/1188 [00:03<00:03, 169.63it/s]Loading weights:  48%|████▊     | 573/1188 [00:03<00:03, 168.88it/s]Loading weights:  50%|████▉     | 591/1188 [00:03<00:03, 157.33it/s]Loading weights:  51%|█████     | 607/1188 [00:03<00:03, 155.49it/s]Loading weights:  53%|█████▎    | 628/1188 [00:04<00:03, 165.83it/s]Loading weights:  54%|█████▍    | 645/1188 [00:04<00:03, 163.31it/s]Loading weights:  56%|█████▌    | 666/1188 [00:04<00:03, 169.03it/s]Loading weights:  57%|█████▋    | 683/1188 [00:04<00:03, 166.99it/s]Loading weights:  59%|█████▉    | 700/1188 [00:04<00:03, 156.46it/s]Loading weights:  61%|██████    | 721/1188 [00:04<00:02, 168.99it/s]Loading weights:  62%|██████▏   | 739/1188 [00:04<00:02, 167.93it/s]Loading weights:  64%|██████▎   | 756/1188 [00:04<00:02, 154.14it/s]Loading weights:  65%|██████▌   | 774/1188 [00:04<00:02, 159.22it/s]Loading weights:  67%|██████▋   | 794/1188 [00:05<00:02, 167.45it/s]Loading weights:  68%|██████▊   | 811/1188 [00:05<00:02, 157.48it/s]Loading weights:  70%|██████▉   | 830/1188 [00:05<00:02, 164.26it/s]Loading weights: 100%|██████████| 1188/1188 [00:05<00:00, 221.28it/s]
+[2026-04-27T23:15:04] wrote /home/Awei/P02_multilingual_process_lens/results/S6_lexical_grid_absolute_verifier_hf/gemma4_31b_it_manual_trace_verifier.json; eval_rows=24
+SUMMARY model=gemma4_31b_it mode=process_only prompt=en acc=0.500 false_accept=1.0 proc_inv_false_accept=1.0
+SUMMARY model=gemma4_31b_it mode=process_only prompt=zh acc=0.500 false_accept=1.0 proc_inv_false_accept=1.0
+SUMMARY model=gemma4_31b_it mode=training_candidate prompt=en acc=0.667 false_accept=0.6666666666666666 proc_inv_false_accept=0.6666666666666666
+SUMMARY model=gemma4_31b_it mode=training_candidate prompt=zh acc=0.667 false_accept=0.6666666666666666 proc_inv_false_accept=0.6666666666666666
+[4gpu-suite] backend=hf model=gemma4_31b_it tag=E28 manual=data/processed/e28_counterfactual_answer_masking_20260427.jsonl out=/home/Awei/P02_multilingual_process_lens/results/E28_counterfactual_answer_masking_absolute_verifier_hf
+[2026-04-27T23:15:07] loading tokenizer: gemma4_31b_it -> /home/Awei/LLM/Model/base/gemma4_31b_it
+[2026-04-27T23:15:09] loading model dtype=bfloat16 device=auto
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/1188 [00:00<?, ?it/s]Loading weights:   0%|          | 2/1188 [00:00<01:50, 10.78it/s]Loading weights:   2%|▏         | 18/1188 [00:00<00:16, 71.58it/s]Loading weights:   3%|▎         | 34/1188 [00:00<00:11, 100.68it/s]Loading weights:   4%|▍         | 49/1188 [00:00<00:09, 116.05it/s]Loading weights:   6%|▌         | 71/1188 [00:00<00:07, 148.21it/s]Loading weights:   7%|▋         | 88/1188 [00:00<00:07, 147.95it/s]Loading weights:   9%|▉         | 104/1188 [00:00<00:07, 142.05it/s]Loading weights:  11%|█         | 126/1188 [00:00<00:06, 161.09it/s]Loading weights:  12%|█▏        | 144/1188 [00:01<00:06, 163.93it/s]Loading weights:  14%|█▎        | 161/1188 [00:01<00:06, 153.55it/s]Loading weights:  16%|█▌        | 185/1188 [00:01<00:05, 171.54it/s]Loading weights:  17%|█▋        | 203/1188 [00:01<00:06, 162.45it/s]Loading weights:  19%|█▉        | 223/1188 [00:01<00:05, 169.06it/s]Loading weights:  20%|██        | 241/1188 [00:01<00:05, 167.57it/s]Loading weights:  22%|██▏       | 258/1188 [00:01<00:06, 152.35it/s]Loading weights:  23%|██▎       | 278/1188 [00:01<00:05, 163.05it/s]Loading weights:  25%|██▍       | 296/1188 [00:01<00:05, 163.85it/s]Loading weights:  26%|██▋       | 313/1188 [00:02<00:05, 154.22it/s]Loading weights:  28%|██▊       | 330/1188 [00:02<00:05, 156.68it/s]Loading weights:  29%|██▉       | 348/1188 [00:02<00:05, 162.51it/s]Loading weights:  31%|███       | 365/1188 [00:02<00:05, 161.58it/s]Loading weights:  32%|███▏      | 382/1188 [00:02<00:05, 152.13it/s]Loading weights:  34%|███▍      | 403/1188 [00:02<00:04, 164.83it/s]Loading weights:  35%|███▌      | 420/1188 [00:02<00:04, 166.20it/s]Loading weights:  37%|███▋      | 437/1188 [00:02<00:04, 157.80it/s]Loading weights:  39%|███▊      | 458/1188 [00:02<00:04, 169.74it/s]Loading weights:  40%|████      | 476/1188 [00:03<00:04, 169.07it/s]Loading weights:  42%|████▏     | 494/1188 [00:03<00:04, 160.77it/s]Loading weights:  43%|████▎     | 511/1188 [00:03<00:04, 161.13it/s]Loading weights:  45%|████▍     | 531/1188 [00:03<00:03, 164.57it/s]Loading weights:  46%|████▌     | 548/1188 [00:03<00:04, 156.01it/s]Loading weights:  48%|████▊     | 569/1188 [00:03<00:03, 168.44it/s]Loading weights:  49%|████▉     | 587/1188 [00:03<00:03, 156.42it/s]Loading weights:  51%|█████     | 603/1188 [00:03<00:03, 154.72it/s]Loading weights:  52%|█████▏    | 623/1188 [00:04<00:03, 164.45it/s]Loading weights:  54%|█████▍    | 643/1188 [00:04<00:03, 165.71it/s]Loading weights:  56%|█████▌    | 660/1188 [00:04<00:03, 166.19it/s]Loading weights:  57%|█████▋    | 677/1188 [00:04<00:03, 163.74it/s]Loading weights:  59%|█████▊    | 697/1188 [00:04<00:02, 164.42it/s]Loading weights:  60%|██████    | 714/1188 [00:04<00:03, 155.29it/s]Loading weights:  62%|██████▏   | 735/1188 [00:04<00:02, 167.83it/s]Loading weights:  63%|██████▎   | 752/1188 [00:04<00:02, 160.95it/s]Loading weights:  65%|██████▍   | 769/1188 [00:04<00:02, 152.63it/s]Loading weights:  66%|██████▋   | 789/1188 [00:05<00:02, 163.77it/s]Loading weights:  68%|██████▊   | 808/1188 [00:05<00:02, 167.31it/s]Loading weights:  69%|██████▉   | 825/1188 [00:05<00:02, 158.41it/s]Loading weights:  92%|█████████▏| 1097/1188 [00:05<00:00, 854.17it/s]Loading weights: 100%|██████████| 1188/1188 [00:05<00:00, 219.54it/s]
+[2026-04-27T23:16:15] wrote /home/Awei/P02_multilingual_process_lens/results/E28_counterfactual_answer_masking_absolute_verifier_hf/gemma4_31b_it_manual_trace_verifier.json; eval_rows=72
+SUMMARY model=gemma4_31b_it mode=process_only prompt=en acc=0.444 false_accept=1.0 proc_inv_false_accept=1.0
+SUMMARY model=gemma4_31b_it mode=process_only prompt=zh acc=0.444 false_accept=0.7777777777777778 proc_inv_false_accept=0.7777777777777778
+SUMMARY model=gemma4_31b_it mode=training_candidate prompt=en acc=0.500 false_accept=0.6 proc_inv_false_accept=0.6666666666666666
+SUMMARY model=gemma4_31b_it mode=training_candidate prompt=zh acc=0.611 false_accept=0.4 proc_inv_false_accept=0.3333333333333333
+[4gpu-suite] backend=hf model=gemma4_31b_it tag=E30 manual=data/processed/e30_non_discount_verifier_subset_20260427.jsonl out=/home/Awei/P02_multilingual_process_lens/results/E30_non_discount_absolute_verifier_hf
+[2026-04-27T23:16:19] loading tokenizer: gemma4_31b_it -> /home/Awei/LLM/Model/base/gemma4_31b_it
+[2026-04-27T23:16:20] loading model dtype=bfloat16 device=auto
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/1188 [00:00<?, ?it/s]Loading weights:   0%|          | 2/1188 [00:00<01:46, 11.09it/s]Loading weights:   2%|▏         | 19/1188 [00:00<00:14, 78.09it/s]Loading weights:   3%|▎         | 33/1188 [00:00<00:11, 98.42it/s]Loading weights:   4%|▍         | 49/1188 [00:00<00:09, 118.16it/s]Loading weights:   6%|▌         | 71/1188 [00:00<00:07, 148.95it/s]Loading weights:   7%|▋         | 88/1188 [00:00<00:07, 147.75it/s]Loading weights:   9%|▉         | 104/1188 [00:00<00:07, 141.20it/s]Loading weights:  11%|█         | 126/1188 [00:00<00:06, 162.43it/s]Loading weights:  12%|█▏        | 144/1188 [00:01<00:06, 163.31it/s]Loading weights:  14%|█▎        | 161/1188 [00:01<00:06, 154.55it/s]Loading weights:  16%|█▌        | 185/1188 [00:01<00:05, 172.19it/s]Loading weights:  17%|█▋        | 203/1188 [00:01<00:06, 162.23it/s]Loading weights:  19%|█▉        | 223/1188 [00:01<00:05, 169.89it/s]Loading weights:  20%|██        | 241/1188 [00:01<00:05, 167.26it/s]Loading weights:  22%|██▏       | 258/1188 [00:01<00:06, 152.06it/s]Loading weights:  23%|██▎       | 276/1188 [00:01<00:05, 155.22it/s]Loading weights:  25%|██▍       | 296/1188 [00:01<00:05, 164.88it/s]Loading weights:  26%|██▋       | 313/1188 [00:02<00:05, 153.76it/s]Loading weights:  28%|██▊       | 332/1188 [00:02<00:05, 160.51it/s]Loading weights:  29%|██▉       | 349/1188 [00:02<00:05, 161.53it/s]Loading weights:  31%|███       | 366/1188 [00:02<00:05, 152.36it/s]Loading weights:  32%|███▏      | 382/1188 [00:02<00:05, 151.24it/s]Loading weights:  34%|███▍      | 403/1188 [00:02<00:04, 164.44it/s]Loading weights:  35%|███▌      | 420/1188 [00:02<00:04, 162.80it/s]Loading weights:  37%|███▋      | 437/1188 [00:02<00:04, 155.30it/s]Loading weights:  38%|███▊      | 457/1188 [00:03<00:04, 167.00it/s]Loading weights:  40%|████      | 476/1188 [00:03<00:04, 170.38it/s]Loading weights:  42%|████▏     | 494/1188 [00:03<00:04, 161.49it/s]Loading weights:  43%|████▎     | 511/1188 [00:03<00:04, 161.93it/s]Loading weights:  45%|████▍     | 531/1188 [00:03<00:03, 166.48it/s]Loading weights:  46%|████▌     | 548/1188 [00:03<00:04, 157.17it/s]Loading weights:  48%|████▊     | 568/1188 [00:03<00:03, 166.83it/s]Loading weights:  49%|████▉     | 586/1188 [00:03<00:03, 162.77it/s]Loading weights:  51%|█████     | 603/1188 [00:03<00:03, 153.86it/s]Loading weights:  53%|█████▎    | 624/1188 [00:04<00:03, 166.12it/s]Loading weights:  54%|█████▍    | 643/1188 [00:04<00:03, 167.00it/s]Loading weights:  56%|█████▌    | 660/1188 [00:04<00:03, 166.89it/s]Loading weights:  57%|█████▋    | 677/1188 [00:04<00:03, 165.03it/s]Loading weights:  59%|█████▊    | 697/1188 [00:04<00:02, 167.22it/s]Loading weights:  60%|██████    | 714/1188 [00:04<00:03, 157.37it/s]Loading weights:  62%|██████▏   | 735/1188 [00:04<00:02, 169.65it/s]Loading weights:  63%|██████▎   | 753/1188 [00:04<00:02, 155.40it/s]Loading weights:  65%|██████▍   | 769/1188 [00:04<00:02, 154.45it/s]Loading weights:  66%|██████▋   | 790/1188 [00:05<00:02, 168.53it/s]Loading weights:  68%|██████▊   | 808/1188 [00:05<00:02, 168.61it/s]Loading weights:  70%|██████▉   | 826/1188 [00:05<00:02, 161.03it/s]Loading weights:  91%|█████████ | 1084/1188 [00:05<00:00, 819.81it/s]Loading weights: 100%|██████████| 1188/1188 [00:05<00:00, 219.63it/s]
+[2026-04-27T23:16:35] wrote /home/Awei/P02_multilingual_process_lens/results/E30_non_discount_absolute_verifier_hf/gemma4_31b_it_manual_trace_verifier.json; eval_rows=8
+SUMMARY model=gemma4_31b_it mode=process_only prompt=en acc=0.500 false_accept=1.0 proc_inv_false_accept=1.0
+SUMMARY model=gemma4_31b_it mode=process_only prompt=zh acc=0.500 false_accept=1.0 proc_inv_false_accept=1.0
+SUMMARY model=gemma4_31b_it mode=training_candidate prompt=en acc=0.500 false_accept=1.0 proc_inv_false_accept=1.0
+SUMMARY model=gemma4_31b_it mode=training_candidate prompt=zh acc=0.000 false_accept=1.0 proc_inv_false_accept=1.0
+[4gpu-suite] backend=hf model=gemma4_31b_it tag=E31 manual=data/processed/e31_non_discount_counterfactual_20260427.jsonl out=/home/Awei/P02_multilingual_process_lens/results/E31_non_discount_counterfactual_absolute_verifier_hf
+[2026-04-27T23:16:38] loading tokenizer: gemma4_31b_it -> /home/Awei/LLM/Model/base/gemma4_31b_it
+[2026-04-27T23:16:39] loading model dtype=bfloat16 device=auto
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/1188 [00:00<?, ?it/s]Loading weights:   0%|          | 2/1188 [00:00<01:48, 10.97it/s]Loading weights:   2%|▏         | 19/1188 [00:00<00:15, 76.86it/s]Loading weights:   3%|▎         | 34/1188 [00:00<00:11, 100.39it/s]Loading weights:   4%|▍         | 49/1188 [00:00<00:09, 115.04it/s]Loading weights:   6%|▌         | 71/1188 [00:00<00:07, 146.49it/s]Loading weights:   7%|▋         | 88/1188 [00:00<00:07, 145.76it/s]Loading weights:   9%|▉         | 104/1188 [00:00<00:07, 139.71it/s]Loading weights:  11%|█         | 126/1188 [00:00<00:06, 160.93it/s]Loading weights:  12%|█▏        | 144/1188 [00:01<00:06, 162.22it/s]Loading weights:  14%|█▎        | 161/1188 [00:01<00:06, 153.08it/s]Loading weights:  15%|█▌        | 181/1188 [00:01<00:06, 165.94it/s]Loading weights:  17%|█▋        | 199/1188 [00:01<00:05, 166.26it/s]Loading weights:  18%|█▊        | 216/1188 [00:01<00:06, 156.10it/s]Loading weights:  20%|█▉        | 237/1188 [00:01<00:05, 169.02it/s]Loading weights:  21%|██▏       | 255/1188 [00:01<00:06, 146.93it/s]Loading weights:  23%|██▎       | 278/1188 [00:01<00:05, 166.86it/s]Loading weights:  25%|██▍       | 296/1188 [00:02<00:05, 166.73it/s]Loading weights:  26%|██▋       | 314/1188 [00:02<00:05, 159.09it/s]Loading weights:  28%|██▊       | 332/1188 [00:02<00:05, 163.46it/s]Loading weights:  29%|██▉       | 349/1188 [00:02<00:05, 164.66it/s]Loading weights:  31%|███       | 366/1188 [00:02<00:05, 147.29it/s]Loading weights:  33%|███▎      | 389/1188 [00:02<00:04, 167.19it/s]Loading weights:  34%|███▍      | 408/1188 [00:02<00:04, 167.43it/s]Loading weights:  36%|███▌      | 426/1188 [00:02<00:04, 164.09it/s]Loading weights:  37%|███▋      | 445/1188 [00:02<00:04, 170.51it/s]Loading weights:  39%|███▉      | 463/1188 [00:03<00:04, 162.77it/s]Loading weights:  40%|████      | 480/1188 [00:03<00:04, 162.81it/s]Loading weights:  42%|████▏     | 497/1188 [00:03<00:04, 163.05it/s]Loading weights:  44%|████▎     | 517/1188 [00:03<00:04, 165.38it/s]Loading weights:  45%|████▍     | 534/1188 [00:03<00:04, 156.89it/s]Loading weights:  47%|████▋     | 555/1188 [00:03<00:03, 169.34it/s]Loading weights:  48%|████▊     | 573/1188 [00:03<00:03, 168.24it/s]Loading weights:  50%|████▉     | 590/1188 [00:03<00:03, 154.63it/s]Loading weights:  51%|█████▏    | 610/1188 [00:03<00:03, 164.34it/s]Loading weights:  53%|█████▎    | 628/1188 [00:04<00:03, 156.40it/s]Loading weights:  55%|█████▍    | 649/1188 [00:04<00:03, 163.75it/s]Loading weights:  56%|█████▋    | 669/1188 [00:04<00:03, 158.63it/s]Loading weights:  58%|█████▊    | 686/1188 [00:04<00:03, 159.85it/s]Loading weights:  60%|█████▉    | 707/1188 [00:04<00:02, 171.84it/s]Loading weights:  61%|██████    | 725/1188 [00:04<00:02, 170.30it/s]Loading weights:  63%|██████▎   | 743/1188 [00:04<00:02, 161.25it/s]Loading weights:  64%|██████▍   | 760/1188 [00:04<00:02, 157.25it/s]Loading weights:  66%|██████▌   | 780/1188 [00:04<00:02, 164.77it/s]Loading weights:  67%|██████▋   | 797/1188 [00:05<00:02, 155.63it/s]Loading weights:  69%|██████▉   | 817/1188 [00:05<00:02, 165.47it/s]Loading weights:  70%|███████   | 837/1188 [00:05<00:02, 174.93it/s]Loading weights: 100%|██████████| 1188/1188 [00:05<00:00, 219.63it/s]
+[2026-04-27T23:18:24] wrote /home/Awei/P02_multilingual_process_lens/results/E31_non_discount_counterfactual_absolute_verifier_hf/gemma4_31b_it_manual_trace_verifier.json; eval_rows=120
+SUMMARY model=gemma4_31b_it mode=process_only prompt=en acc=0.700 false_accept=0.4 proc_inv_false_accept=0.4
+SUMMARY model=gemma4_31b_it mode=process_only prompt=zh acc=0.800 false_accept=0.26666666666666666 proc_inv_false_accept=0.26666666666666666
+SUMMARY model=gemma4_31b_it mode=training_candidate prompt=en acc=0.733 false_accept=0.28 proc_inv_false_accept=0.13333333333333333
+SUMMARY model=gemma4_31b_it mode=training_candidate prompt=zh acc=0.833 false_accept=0.16 proc_inv_false_accept=0.0

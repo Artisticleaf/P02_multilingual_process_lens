@@ -1,0 +1,104 @@
+[2026-04-27T18:51:33] loading model=qwen3_14b_base device=cuda rows=24
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s]Loading weights: 100%|██████████| 443/443 [00:00<00:00, 15331.93it/s]
+idx=600048 mode=locate_only prompt=en proc=True span_ok=True judge=None out=NONE
+idx=600048 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=`$80 \times 0.25 = 20$ 美元。`   解释：计算折扣金额时，`$80 \times 0.25` 的结果应为 `20` 美元，但推理过程中的表达式 `$80 \
+idx=600048 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes
+idx=600048 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes
+idx=600049 mode=locate_only prompt=en proc=False span_ok=True judge=None out="或者，如果打八折（即支付 $100\% - 25\% = 75\%$ 的价格）"   Reason: The phrase "打八折" (which means "80% off
+idx=600049 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=`售价 $= 80 \text{ 美元} - 20 \text{ 美元} = 60$ 美元。`   解释：这里没有错误，计算正确。
+idx=600049 mode=locate_then_judge prompt=en proc=False span_ok=False judge=True out=NONE Process-valid: Yes
+idx=600049 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=True out=NONE Process-valid: Yes
+idx=600070 mode=locate_only prompt=en proc=False span_ok=True judge=None out="Final price calculation: $\$100 \times 0.8 = \$80$." Reason: The final price should be $\
+idx=600070 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=`Final price calculation: $\$100 \times 0.8 = \$80$.`  解释：这里计算最终价格时，将100美元乘以0.8得到80美元是正确的，
+idx=600070 mode=locate_then_judge prompt=en proc=False span_ok=False judge=True out=NONE Process-valid: Yes
+idx=600070 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=True out=NONE Process-valid: Yes
+idx=600071 mode=locate_only prompt=en proc=True span_ok=False judge=None out="Discount factor is 0.8." The reason is that the discount factor should be 0.2, not 0.8, b
+idx=600071 mode=locate_only prompt=zh proc=True span_ok=True judge=None out=`Final price = $\$100 \times 0.8$.`   解释：这里计算的是80%的折扣，但题目要求的是打八折，即80%的折扣，所以计算正确。没有错误。
+idx=600071 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes
+idx=600071 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes
+idx=600150 mode=locate_only prompt=en proc=False span_ok=True judge=None out="The jacket is being sold at a 75% discount of its original price."   Reason: The jacket i
+idx=600150 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=`The jacket is being sold at a 75% discount of its original price.`  解释：这句话中的“discount”（折扣
+idx=600150 mode=locate_then_judge prompt=en proc=False span_ok=False judge=True out=NONE   Process-valid: Yes
+idx=600150 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=True out=NONE Process-valid: Yes
+idx=600151 mode=locate_only prompt=en proc=True span_ok=False judge=None out="0.75 times 80 equals 60." Reason: The calculation is incorrect; 0.75 times 80 equals 60, 
+idx=600151 mode=locate_only prompt=zh proc=True span_ok=True judge=None out=`75% of 80 is calculated as 0.75 multiplied by 80.`   解释：这句话没有错误，但推理过程中的计算步骤可以更简洁。
+idx=600151 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes
+idx=600151 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes
+idx=280001 mode=locate_only prompt=en proc=True span_ok=False judge=None out="折扣金额计算为 80 × 25% = 20 美元。" Reason: The calculation should be 80 × 0.25 = 20 美元, not 80 × 
+idx=280001 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=折扣金额计算为 80 × 25% = 20 美元。 解释：折扣金额应为 80 × 0.25 = 20 美元，而不是 80 × 25% = 20 美元。虽然结果正确，但表达方式不准确
+idx=280001 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes
+idx=280001 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes
+idx=280002 mode=locate_only prompt=en proc=False span_ok=False judge=None out="折扣金额计算为 80 × 25% = 20 美元。" Reason: The calculation should be 80 × 0.25 = 20 美元, not 80 × 
+idx=280002 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=折扣金额计算为 80 × 25% = 20 美元。 解释：折扣金额应为 80 × 0.25 = 20 美元，而不是 80 × 25% = 20 美元。虽然结果正确，但表达方式不准确
+idx=280002 mode=locate_then_judge prompt=en proc=False span_ok=False judge=True out=NONE Process-valid: Yes
+idx=280002 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=True out=NONE Process-valid: Yes
+idx=280003 mode=locate_only prompt=en proc=True span_ok=False judge=None out="折扣金额计算为 80 × 25% = 20 美元。" Reason: The calculation of the discount amount should be 80 × 
+idx=280003 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=折扣金额计算为 80 × 25% = 20 美元。 解释：折扣金额应为 80 × 0.25 = 20 美元，而不是 80 × 25% = 20 美元。虽然结果正确，但表达方式不准确
+idx=280003 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes
+idx=280003 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes
+idx=280004 mode=locate_only prompt=en proc=False span_ok=False judge=None out="折扣金额计算为 80 × 25% = 20 美元。" Reason: The calculation should be 80 × 0.25 = 20 美元, not 80 × 
+idx=280004 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=折扣金额计算为 80 × 25% = 20 美元。 解释：折扣金额应为 80 × 0.25 = 20 美元，而不是 80 × 25% = 20 美元。虽然结果正确，但表达方式不准确
+idx=280004 mode=locate_then_judge prompt=en proc=False span_ok=False judge=True out=NONE Process-valid: Yes
+idx=280004 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=True out=NONE Process-valid: Yes
+idx=280005 mode=locate_only prompt=en proc=True span_ok=False judge=None out="Final answer: 20美元" Reason: The final answer should be 60美元, not 20美元.
+idx=280005 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=`Final answer: 20美元`  解释：推理过程中的最终答案应该是60美元，而不是20美元。20美元是折扣金额，而不是最终售价。
+idx=280005 mode=locate_then_judge prompt=en proc=True span_ok=False judge=False out=售价等于原价减去折扣金额：80 - 20 = 60 美元。 Process-valid: No
+idx=280005 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=False out=Final answer: 20美元 Process-valid: No
+idx=280006 mode=locate_only prompt=en proc=False span_ok=False judge=None out="Final answer: 20美元" Reason: The final answer should be 60美元, not 20美元.
+idx=280006 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=`Final answer: 20美元`。解释：最终答案应为60美元，而不是20美元。
+idx=280006 mode=locate_then_judge prompt=en proc=False span_ok=False judge=False out=售价等于原价减去折扣金额：80 - 20 = 60 美元。 Process-valid: No
+idx=280006 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=False out=Final answer: 20美元 Process-valid: No
+idx=280007 mode=locate_only prompt=en proc=True span_ok=False judge=None out="Calculate the price after a 25% increase: $80 × 0.25 = $20, so the new price is $100." Re
+idx=280007 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=`$80 × 0.25 = $20, so the new price is $100.`  解释：计算25%的增加时，应该将初始价格乘以1.25（即100% + 25%），而不是
+idx=280007 mode=locate_then_judge prompt=en proc=True span_ok=False judge=False out=$80 × 0.25 = $20, so the new price is $100. Process-valid: No
+idx=280007 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=False out=$80 × 0.25 = $20, so the new price is $100. Process-valid: No
+idx=280008 mode=locate_only prompt=en proc=False span_ok=True judge=None out="Calculate the price after a 25% increase: $80 × 0.25 = $20, so the new price is $100." Re
+idx=280008 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=`$80 × 0.25 = $20, so the new price is $100.`  解释：计算25%的增加时，应该将80美元乘以1.25（即100% + 25%），而不是
+idx=280008 mode=locate_then_judge prompt=en proc=False span_ok=True judge=False out=$80 × 0.25 = $20, so the new price is $100. Process-valid: No
+idx=280008 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=False out=$80 × 0.25 = $20, so the new price is $100. Process-valid: No
+idx=280009 mode=locate_only prompt=en proc=True span_ok=False judge=None out="Calculate the price after a 25% increase: $80 × 0.25 = $20, so the new price is $100." Re
+idx=280009 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=`$80 × 0.25 = $20, so the new price is $100.`  解释：计算25%的增加时，应该将80美元乘以1.25（即100% + 25%），而不是
+idx=280009 mode=locate_then_judge prompt=en proc=True span_ok=False judge=False out=$80 × 0.25 = $20, so the new price is $100. Process-valid: No
+idx=280009 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=False out=$80 × 0.25 = $20, so the new price is $100. Process-valid: No
+idx=280010 mode=locate_only prompt=en proc=False span_ok=True judge=None out="$80 × 0.25 = $20, so the new price is $100." Reason: The calculation of the price after a
+idx=280010 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=$80 × 0.25 = $20, so the new price is $100. 解释：计算错误，$80 × 0.25 应该是 $20，但新的价格应该是 $80 + $20 
+idx=280010 mode=locate_then_judge prompt=en proc=False span_ok=True judge=False out=$80 × 0.25 = $20, so the new price is $100. Process-valid: No
+idx=280010 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=False out=$80 × 0.25 = $20, so the new price is $100. Process-valid: No
+idx=280011 mode=locate_only prompt=en proc=True span_ok=False judge=None out="Calculate the price after a 25% increase: $80 × 0.25 = $20, so the new price is $100." Re
+idx=280011 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=`$80 × 0.25 = $20, so the new price is $100.`  解释：计算25%的增加时，应该将80美元乘以1.25（即100% + 25%），而不是
+idx=280011 mode=locate_then_judge prompt=en proc=True span_ok=False judge=False out=$80 × 0.25 = $20, so the new price is $100. Process-valid: No
+idx=280011 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=False out=$80 × 0.25 = $20, so the new price is $100. Process-valid: No
+idx=280012 mode=locate_only prompt=en proc=False span_ok=True judge=None out="Final answer: 20" Reason: The final answer should be $80, not 20.
+idx=280012 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=`Final answer: 20`。解释：最终答案应为80，而不是20。
+idx=280012 mode=locate_then_judge prompt=en proc=False span_ok=True judge=False out=$80 × 0.25 = $20, so the new price is $100. Process-valid: No
+idx=280012 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=False out=$80 × 0.25 = $20, so the new price is $100. Process-valid: No
+idx=280013 mode=locate_only prompt=en proc=True span_ok=False judge=None out="75% = 0.75." Reason: This is not an error; it is a correct conversion of percentage to de
+idx=280013 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=`75% = 0.75.`  解释：虽然75%确实等于0.75，但在这个推理过程中，这一步骤是多余的，因为直接使用75%进行计算即可，不需要将其转换为小数。
+idx=280013 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes
+idx=280013 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes
+idx=280014 mode=locate_only prompt=en proc=False span_ok=True judge=None out="1. The jacket is being sold at a 75% discount of its original price." Reason: The jacket 
+idx=280014 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=`The jacket is being sold at a 75% discount of its original price.`  解释：这句话中的“discount”（折扣
+idx=280014 mode=locate_then_judge prompt=en proc=False span_ok=True judge=False out=1. The jacket is being sold at a 75% discount of its original price. Process-valid: No
+idx=280014 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=True out=NONE Process-valid: Yes
+idx=280015 mode=locate_only prompt=en proc=True span_ok=False judge=None out="75% = 0.75." The correct conversion should be 75% = 0.75, but the reasoning trace incorre
+idx=280015 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=`75% = 0.75.`  解释：虽然75%确实等于0.75，但在这个推理过程中，这一步骤是多余的，因为直接使用75%进行计算即可，不需要将其转换为小数。
+idx=280015 mode=locate_then_judge prompt=en proc=True span_ok=True judge=True out=NONE Process-valid: Yes
+idx=280015 mode=locate_then_judge prompt=zh proc=True span_ok=True judge=True out=NONE Process-valid: Yes
+idx=280016 mode=locate_only prompt=en proc=False span_ok=True judge=None out="1. The jacket is being sold at a 75% discount of its original price." Reason: The jacket 
+idx=280016 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=`The jacket is being sold at a 75% discount of its original price.`  解释：这句话中的“discount”（折扣
+idx=280016 mode=locate_then_judge prompt=en proc=False span_ok=False judge=True out=NONE Process-valid: Yes
+idx=280016 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=True out=NONE Process-valid: Yes
+idx=280017 mode=locate_only prompt=en proc=True span_ok=False judge=None out="Final answer: $20"   Reason: The final answer should be $60, not $20.
+idx=280017 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=`Final answer: $20`。推理过程中的计算是正确的，但最终答案与推理过程中的结果不符。
+idx=280017 mode=locate_then_judge prompt=en proc=True span_ok=False judge=False out=The sale price is $60. Process-valid: No
+idx=280017 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=False out=Final answer: $20 Process-valid: No
+idx=280018 mode=locate_only prompt=en proc=False span_ok=False judge=None out="The sale price is $60." Reason: The calculation is correct, but the final answer provided
+idx=280018 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=`Final answer: $20`。解释：最终答案应为 $60，而不是 $20。
+idx=280018 mode=locate_then_judge prompt=en proc=False span_ok=True judge=False out=1. The jacket is being sold at a 75% discount of its original price. Process-valid: No
+idx=280018 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=False out=5. The sale price is $60. Process-valid: No
+[2026-04-27T18:53:10] wrote results/E29_error_span_extraction_verifier/qwen3_14b_base_error_span_extraction_verifier.json; eval_rows=96
+SUMMARY mode=locate_only prompt=en span_acc=0.375 invalid_hit=0.6666666666666666 judge_acc=None loc_but_accept=None
+SUMMARY mode=locate_only prompt=zh span_acc=0.375 invalid_hit=0.5833333333333334 judge_acc=None loc_but_accept=None
+SUMMARY mode=locate_then_judge prompt=en span_acc=0.5 invalid_hit=0.4166666666666667 judge_acc=0.5416666666666666 loc_but_accept=0.0
+SUMMARY mode=locate_then_judge prompt=zh span_acc=0.4166666666666667 invalid_hit=0.25 judge_acc=0.5 loc_but_accept=0.0

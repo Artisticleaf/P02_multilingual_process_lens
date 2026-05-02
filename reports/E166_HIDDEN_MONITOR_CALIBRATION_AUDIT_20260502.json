@@ -1,0 +1,1720 @@
+{
+  "created_at": "2026-05-02T01:32:47",
+  "experiment": "E166_hidden_monitor_calibration_audit",
+  "method_note": "Risk is -component_validity_score, because E61 directions are valid-minus-invalid. All prompts use only problem and prefix_text; labels are offline.",
+  "models": [
+    {
+      "best_key": "35:residual_hidden_state",
+      "best_key_record": {
+        "budgeted_eval": {
+          "all_non_target_trigger_rate": 0.25161290322580643,
+          "invalid_non_target_trigger_rate": 0.4148936170212766,
+          "overall_trigger_rate": 0.3248730964467005,
+          "target_recall": 0.5952380952380952,
+          "threshold": 2.2777209281921387,
+          "valid_false_trigger_rate": 0.0
+        },
+        "budgeted_threshold": 2.2777209281921387,
+        "high_precision_eval": {
+          "all_non_target_trigger_rate": 0.4645161290322581,
+          "invalid_non_target_trigger_rate": 0.6914893617021277,
+          "overall_trigger_rate": 0.5685279187817259,
+          "target_recall": 0.9523809523809523,
+          "threshold": 1.4118950366973877,
+          "valid_false_trigger_rate": 0.11475409836065574
+        },
+        "high_precision_threshold": 1.4118950366973877,
+        "key": "35:residual_hidden_state",
+        "mean_non_target_risk": 1.3936803505786004,
+        "mean_target_risk": 2.4385900440670194,
+        "mean_valid_risk": 0.34990955571659277,
+        "primary_score": 1.5997746216413589,
+        "target_vs_non_target_auc": 0.7608294930875577,
+        "target_vs_valid_auc": 0.9812646370023419
+      },
+      "component_cache_pt": "results/E166_hardened_hidden_monitor_replay/qwen35_27b_e166_generation_prefill_full_20260502.pt",
+      "component_cache_shape": [
+        197,
+        15,
+        5120
+      ],
+      "family_metrics_best_key": {
+        "code_boundary": {
+          "mean_target_risk": 2.7986526091893515,
+          "mean_valid_risk": 0.5159200318157673,
+          "n": 26,
+          "target_vs_non_target_auc": 0.8,
+          "target_vs_valid_auc": 1.0,
+          "targets": 6,
+          "valid_controls": 8
+        },
+        "geometry_constraints": {
+          "mean_target_risk": 2.435173829396566,
+          "mean_valid_risk": 0.7543625652790069,
+          "n": 30,
+          "target_vs_non_target_auc": 0.8888888888888888,
+          "target_vs_valid_auc": 1.0,
+          "targets": 6,
+          "valid_controls": 10
+        },
+        "graph_definition": {
+          "mean_target_risk": 2.4285340905189514,
+          "mean_valid_risk": 0.44845731407403944,
+          "n": 30,
+          "target_vs_non_target_auc": 0.7430555555555556,
+          "target_vs_valid_auc": 0.9833333333333333,
+          "targets": 6,
+          "valid_controls": 10
+        },
+        "long_table_aggregation": {
+          "mean_target_risk": 1.891948640346527,
+          "mean_valid_risk": 0.042045588294665016,
+          "n": 25,
+          "target_vs_non_target_auc": 0.8157894736842105,
+          "target_vs_valid_auc": 1.0,
+          "targets": 6,
+          "valid_controls": 6
+        },
+        "multilingual_semantic": {
+          "mean_target_risk": 2.7238807678222656,
+          "mean_valid_risk": 0.07446341216564178,
+          "n": 31,
+          "target_vs_non_target_auc": 0.64,
+          "target_vs_valid_auc": 1.0,
+          "targets": 6,
+          "valid_controls": 10
+        },
+        "proof_validity": {
+          "mean_target_risk": 2.410327196121216,
+          "mean_valid_risk": -0.13888105563819408,
+          "n": 25,
+          "target_vs_non_target_auc": 0.8245614035087719,
+          "target_vs_valid_auc": 1.0,
+          "targets": 6,
+          "valid_controls": 8
+        },
+        "set_venn_counting": {
+          "mean_target_risk": 2.3816131750742593,
+          "mean_valid_risk": 0.5892294049263,
+          "n": 30,
+          "target_vs_non_target_auc": 0.6736111111111112,
+          "target_vs_valid_auc": 0.9259259259259259,
+          "targets": 6,
+          "valid_controls": 9
+        }
+      },
+      "leakage_audit": {
+        "gold_answer_in_prompt_rows": 0,
+        "manual_error_span_in_prompt_rows": 0,
+        "manual_label_in_prompt_rows": 0,
+        "note_zh": "manual error spans and monitor_target labels are offline only; hidden replay prompt contains only problem and causal prefix.",
+        "prompt_fields_used": [
+          "problem",
+          "prefix_text"
+        ]
+      },
+      "localization_best_budgeted": {
+        "first_trigger_after_rate": 0.023809523809523808,
+        "first_trigger_before_rate": 0.0,
+        "first_trigger_exact_rate": 0.5952380952380952,
+        "first_trigger_none_rate": 0.38095238095238093,
+        "rank_miss_examples": [
+          {
+            "solution_id": "e164_code_01_range_zero_endpoints_nested_invalid_answer_preserving_reference",
+            "target_family": "code_boundary",
+            "target_prefix_id": "e166_e164_code_01_range_zero_endpoints_nested_invalid_answer_preserving_reference_manual_error_span_end_54",
+            "target_rank": 2,
+            "target_risk": 3.8320837020874023,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "Python range(0,8) skips the start 0 and stops before 7",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_code_01_range_zero_endpoints_nested_invalid_answer_preserving_reference_sentence_end_74",
+            "top_risk": 3.879641056060791,
+            "top_visible_span": "Python range(0,8) skips the start 0 and stops before 7, so i=1,2,3,4,5,6."
+          },
+          {
+            "solution_id": "e164_code_01_range_zero_endpoints_nested_invalid_answer_wrong_reference",
+            "target_family": "code_boundary",
+            "target_prefix_id": "e166_e164_code_01_range_zero_endpoints_nested_invalid_answer_wrong_reference_manual_error_span_end_28",
+            "target_rank": 3,
+            "target_risk": 2.6193456649780273,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "Python range(0,8) includes 8",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_code_01_range_zero_endpoints_nested_invalid_answer_wrong_reference_sentence_end_116",
+            "top_risk": 4.538044452667236,
+            "top_visible_span": "The original total 0 then adds the extra even term 8*(8-7)=8, so the print value is 8."
+          },
+          {
+            "solution_id": "e164_geo_01_multistep_sas_similarity_invalid_answer_preserving_reference",
+            "target_family": "geometry_constraints",
+            "target_prefix_id": "e166_e164_geo_01_multistep_sas_similarity_invalid_answer_preserving_reference_manual_error_span_end_53",
+            "target_rank": 2,
+            "target_risk": 2.896765947341919,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "AB is parallel to DE and AC is parallel to DF",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_geo_01_multistep_sas_similarity_invalid_answer_preserving_reference_sentence_end_89",
+            "top_risk": 2.8979926109313965,
+            "top_visible_span": "Because AB is parallel to DE and AC is parallel to DF, the triangles have AA similarity."
+          },
+          {
+            "solution_id": "e164_geo_03_coordinate_collinearity_area_invalid_answer_preserving_reference",
+            "target_family": "geometry_constraints",
+            "target_prefix_id": "e166_e164_geo_03_coordinate_collinearity_area_invalid_answer_preserving_reference_manual_error_span_end_33",
+            "target_rank": 2,
+            "target_risk": 2.343334197998047,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "The slopes AC and AD are both 3/4",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_geo_03_coordinate_collinearity_area_invalid_answer_preserving_reference_sentence_end_59",
+            "top_risk": 2.6314754486083984,
+            "top_visible_span": "The slopes AC and AD are both 3/4, so A,C,D are collinear."
+          },
+          {
+            "solution_id": "e164_geo_03_coordinate_collinearity_area_invalid_answer_wrong_reference",
+            "target_family": "geometry_constraints",
+            "target_prefix_id": "e166_e164_geo_03_coordinate_collinearity_area_invalid_answer_wrong_reference_manual_error_span_end_22",
+            "target_rank": 2,
+            "target_risk": 2.399381399154663,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "slope of AC is 3/4",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_geo_03_coordinate_collinearity_area_invalid_answer_wrong_reference_sentence_end_145",
+            "top_risk": 2.689018726348877,
+            "top_visible_span": "Using a mistaken area sum gives twice the area 24*4+16*6=192."
+          },
+          {
+            "solution_id": "e164_graph_01_directed_reachability_components_invalid_answer_wrong_reference",
+            "target_family": "graph_definition",
+            "target_prefix_id": "e166_e164_graph_01_directed_reachability_components_invalid_answer_wrong_reference_manual_error_span_end_57",
+            "target_rank": 2,
+            "target_risk": 2.8702495098114014,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "Every vertex that appears in any edge is reachable from A",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_graph_01_directed_reachability_components_invalid_answer_wrong_reference_sentence_end_110",
+            "top_risk": 3.1008434295654297,
+            "top_visible_span": "That gives A,B,C,D,E,F,G,H,I,J, so the count is 10."
+          },
+          {
+            "solution_id": "e164_graph_02_outneighbor_incoming_duplicate_invalid_answer_preserving_reference",
+            "target_family": "graph_definition",
+            "target_prefix_id": "e166_e164_graph_02_outneighbor_incoming_duplicate_invalid_answer_preserving_reference_manual_error_span_end_56",
+            "target_rank": 2,
+            "target_risk": 1.9716546535491943,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "The incoming edge b->v also makes b an out-neighbor of v",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_graph_02_outneighbor_incoming_duplicate_invalid_answer_preserving_reference_sentence_end_58",
+            "top_risk": 2.0924715995788574,
+            "top_visible_span": "The incoming edge b->v also makes b an out-neighbor of v."
+          },
+          {
+            "solution_id": "e164_graph_03_simple_paths_with_cycles_invalid_answer_preserving_reference",
+            "target_family": "graph_definition",
+            "target_prefix_id": "e166_e164_graph_03_simple_paths_with_cycles_invalid_answer_preserving_reference_manual_error_span_end_33",
+            "target_rank": 2,
+            "target_risk": 2.4713573455810547,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "A simple path may repeat vertices",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_graph_03_simple_paths_with_cycles_invalid_answer_preserving_reference_sentence_end_35",
+            "top_risk": 2.7993381023406982,
+            "top_visible_span": "A simple path may repeat vertices."
+          }
+        ],
+        "solutions_with_target": 42,
+        "target_rank_mean": 1.7619047619047619,
+        "target_rank_median": 2.0,
+        "target_top1_rate": 0.47619047619047616,
+        "target_top2_rate": 0.7619047619047619,
+        "target_top3_rate": 1.0
+      },
+      "localization_best_high_precision": {
+        "first_trigger_after_rate": 0.0,
+        "first_trigger_before_rate": 0.0,
+        "first_trigger_exact_rate": 0.9523809523809523,
+        "first_trigger_none_rate": 0.047619047619047616,
+        "rank_miss_examples": [
+          {
+            "solution_id": "e164_code_01_range_zero_endpoints_nested_invalid_answer_preserving_reference",
+            "target_family": "code_boundary",
+            "target_prefix_id": "e166_e164_code_01_range_zero_endpoints_nested_invalid_answer_preserving_reference_manual_error_span_end_54",
+            "target_rank": 2,
+            "target_risk": 3.8320837020874023,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "Python range(0,8) skips the start 0 and stops before 7",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_code_01_range_zero_endpoints_nested_invalid_answer_preserving_reference_sentence_end_74",
+            "top_risk": 3.879641056060791,
+            "top_visible_span": "Python range(0,8) skips the start 0 and stops before 7, so i=1,2,3,4,5,6."
+          },
+          {
+            "solution_id": "e164_code_01_range_zero_endpoints_nested_invalid_answer_wrong_reference",
+            "target_family": "code_boundary",
+            "target_prefix_id": "e166_e164_code_01_range_zero_endpoints_nested_invalid_answer_wrong_reference_manual_error_span_end_28",
+            "target_rank": 3,
+            "target_risk": 2.6193456649780273,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "Python range(0,8) includes 8",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_code_01_range_zero_endpoints_nested_invalid_answer_wrong_reference_sentence_end_116",
+            "top_risk": 4.538044452667236,
+            "top_visible_span": "The original total 0 then adds the extra even term 8*(8-7)=8, so the print value is 8."
+          },
+          {
+            "solution_id": "e164_geo_01_multistep_sas_similarity_invalid_answer_preserving_reference",
+            "target_family": "geometry_constraints",
+            "target_prefix_id": "e166_e164_geo_01_multistep_sas_similarity_invalid_answer_preserving_reference_manual_error_span_end_53",
+            "target_rank": 2,
+            "target_risk": 2.896765947341919,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "AB is parallel to DE and AC is parallel to DF",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_geo_01_multistep_sas_similarity_invalid_answer_preserving_reference_sentence_end_89",
+            "top_risk": 2.8979926109313965,
+            "top_visible_span": "Because AB is parallel to DE and AC is parallel to DF, the triangles have AA similarity."
+          },
+          {
+            "solution_id": "e164_geo_03_coordinate_collinearity_area_invalid_answer_preserving_reference",
+            "target_family": "geometry_constraints",
+            "target_prefix_id": "e166_e164_geo_03_coordinate_collinearity_area_invalid_answer_preserving_reference_manual_error_span_end_33",
+            "target_rank": 2,
+            "target_risk": 2.343334197998047,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "The slopes AC and AD are both 3/4",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_geo_03_coordinate_collinearity_area_invalid_answer_preserving_reference_sentence_end_59",
+            "top_risk": 2.6314754486083984,
+            "top_visible_span": "The slopes AC and AD are both 3/4, so A,C,D are collinear."
+          },
+          {
+            "solution_id": "e164_geo_03_coordinate_collinearity_area_invalid_answer_wrong_reference",
+            "target_family": "geometry_constraints",
+            "target_prefix_id": "e166_e164_geo_03_coordinate_collinearity_area_invalid_answer_wrong_reference_manual_error_span_end_22",
+            "target_rank": 2,
+            "target_risk": 2.399381399154663,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "slope of AC is 3/4",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_geo_03_coordinate_collinearity_area_invalid_answer_wrong_reference_sentence_end_145",
+            "top_risk": 2.689018726348877,
+            "top_visible_span": "Using a mistaken area sum gives twice the area 24*4+16*6=192."
+          },
+          {
+            "solution_id": "e164_graph_01_directed_reachability_components_invalid_answer_wrong_reference",
+            "target_family": "graph_definition",
+            "target_prefix_id": "e166_e164_graph_01_directed_reachability_components_invalid_answer_wrong_reference_manual_error_span_end_57",
+            "target_rank": 2,
+            "target_risk": 2.8702495098114014,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "Every vertex that appears in any edge is reachable from A",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_graph_01_directed_reachability_components_invalid_answer_wrong_reference_sentence_end_110",
+            "top_risk": 3.1008434295654297,
+            "top_visible_span": "That gives A,B,C,D,E,F,G,H,I,J, so the count is 10."
+          },
+          {
+            "solution_id": "e164_graph_02_outneighbor_incoming_duplicate_invalid_answer_preserving_reference",
+            "target_family": "graph_definition",
+            "target_prefix_id": "e166_e164_graph_02_outneighbor_incoming_duplicate_invalid_answer_preserving_reference_manual_error_span_end_56",
+            "target_rank": 2,
+            "target_risk": 1.9716546535491943,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "The incoming edge b->v also makes b an out-neighbor of v",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_graph_02_outneighbor_incoming_duplicate_invalid_answer_preserving_reference_sentence_end_58",
+            "top_risk": 2.0924715995788574,
+            "top_visible_span": "The incoming edge b->v also makes b an out-neighbor of v."
+          },
+          {
+            "solution_id": "e164_graph_03_simple_paths_with_cycles_invalid_answer_preserving_reference",
+            "target_family": "graph_definition",
+            "target_prefix_id": "e166_e164_graph_03_simple_paths_with_cycles_invalid_answer_preserving_reference_manual_error_span_end_33",
+            "target_rank": 2,
+            "target_risk": 2.4713573455810547,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "A simple path may repeat vertices",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_graph_03_simple_paths_with_cycles_invalid_answer_preserving_reference_sentence_end_35",
+            "top_risk": 2.7993381023406982,
+            "top_visible_span": "A simple path may repeat vertices."
+          }
+        ],
+        "solutions_with_target": 42,
+        "target_rank_mean": 1.7619047619047619,
+        "target_rank_median": 2.0,
+        "target_top1_rate": 0.47619047619047616,
+        "target_top2_rate": 0.7619047619047619,
+        "target_top3_rate": 1.0
+      },
+      "model_key": "qwen35_27b",
+      "non_target_rows": 155,
+      "path": "results/E166_hardened_hidden_monitor_replay/qwen35_27b_e166_generation_prefill_full_20260502.json",
+      "rows": 197,
+      "target_rows": 42,
+      "top_keys": [
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.4148936170212766,
+            "overall_trigger_rate": 0.3248730964467005,
+            "target_recall": 0.5952380952380952,
+            "threshold": 2.2777209281921387,
+            "valid_false_trigger_rate": 0.0
+          },
+          "budgeted_threshold": 2.2777209281921387,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.4645161290322581,
+            "invalid_non_target_trigger_rate": 0.6914893617021277,
+            "overall_trigger_rate": 0.5685279187817259,
+            "target_recall": 0.9523809523809523,
+            "threshold": 1.4118950366973877,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": 1.4118950366973877,
+          "key": "35:residual_hidden_state",
+          "mean_non_target_risk": 1.3936803505786004,
+          "mean_target_risk": 2.4385900440670194,
+          "mean_valid_risk": 0.34990955571659277,
+          "primary_score": 1.5997746216413589,
+          "target_vs_non_target_auc": 0.7608294930875577,
+          "target_vs_valid_auc": 0.9812646370023419
+        },
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.4148936170212766,
+            "overall_trigger_rate": 0.3147208121827411,
+            "target_recall": 0.5476190476190477,
+            "threshold": 2.465313673019409,
+            "valid_false_trigger_rate": 0.0
+          },
+          "budgeted_threshold": 2.465313673019409,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.43870967741935485,
+            "invalid_non_target_trigger_rate": 0.648936170212766,
+            "overall_trigger_rate": 0.5279187817258884,
+            "target_recall": 0.8571428571428571,
+            "threshold": 1.6180232763290405,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": 1.6180232763290405,
+          "key": "35:post_attention_norm_output",
+          "mean_non_target_risk": 1.3135129757465855,
+          "mean_target_risk": 2.535155006817409,
+          "mean_valid_risk": 0.08546811244526847,
+          "primary_score": 1.5594872957115156,
+          "target_vs_non_target_auc": 0.752073732718894,
+          "target_vs_valid_auc": 0.9691647150663544
+        },
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.40425531914893614,
+            "overall_trigger_rate": 0.30456852791878175,
+            "target_recall": 0.5,
+            "threshold": 0.18712952733039856,
+            "valid_false_trigger_rate": 0.01639344262295082
+          },
+          "budgeted_threshold": 0.18712952733039856,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.4064516129032258,
+            "invalid_non_target_trigger_rate": 0.5957446808510638,
+            "overall_trigger_rate": 0.5025380710659898,
+            "target_recall": 0.8571428571428571,
+            "threshold": -0.11977187544107437,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": -0.11977187544107437,
+          "key": "33:token_mixer_output",
+          "mean_non_target_risk": -0.1507683734860151,
+          "mean_target_risk": 0.27695082775538876,
+          "mean_valid_risk": -0.4766336662358925,
+          "primary_score": 1.5474604014001159,
+          "target_vs_non_target_auc": 0.7717357910906298,
+          "target_vs_valid_auc": 0.9473067915690867
+        },
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.4148936170212766,
+            "overall_trigger_rate": 0.29441624365482233,
+            "target_recall": 0.4523809523809524,
+            "threshold": 1.0273046493530273,
+            "valid_false_trigger_rate": 0.0
+          },
+          "budgeted_threshold": 1.0273046493530273,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.44516129032258067,
+            "invalid_non_target_trigger_rate": 0.6595744680851063,
+            "overall_trigger_rate": 0.5431472081218274,
+            "target_recall": 0.9047619047619048,
+            "threshold": 0.30580878257751465,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": 0.30580878257751465,
+          "key": "34:post_attention_norm_output",
+          "mean_non_target_risk": 0.16627535348938358,
+          "mean_target_risk": 1.0538009440615064,
+          "mean_valid_risk": -0.9158416888752922,
+          "primary_score": 1.545741734028355,
+          "target_vs_non_target_auc": 0.7195084485407066,
+          "target_vs_valid_auc": 0.9597970335675253
+        },
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.4148936170212766,
+            "overall_trigger_rate": 0.3248730964467005,
+            "target_recall": 0.5952380952380952,
+            "threshold": 1.4168665409088135,
+            "valid_false_trigger_rate": 0.0
+          },
+          "budgeted_threshold": 1.4168665409088135,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.43870967741935485,
+            "invalid_non_target_trigger_rate": 0.648936170212766,
+            "overall_trigger_rate": 0.5279187817258884,
+            "target_recall": 0.8571428571428571,
+            "threshold": 0.8140683770179749,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": 0.8140683770179749,
+          "key": "34:residual_hidden_state",
+          "mean_non_target_risk": 0.6296061721299925,
+          "mean_target_risk": 1.4743478631689435,
+          "mean_valid_risk": -0.25103477626794674,
+          "primary_score": 1.545536501221324,
+          "target_vs_non_target_auc": 0.7397849462365591,
+          "target_vs_valid_auc": 0.9613583138173302
+        },
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.4148936170212766,
+            "overall_trigger_rate": 0.3299492385786802,
+            "target_recall": 0.6190476190476191,
+            "threshold": 1.964918851852417,
+            "valid_false_trigger_rate": 0.0
+          },
+          "budgeted_threshold": 1.964918851852417,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.43870967741935485,
+            "invalid_non_target_trigger_rate": 0.648936170212766,
+            "overall_trigger_rate": 0.5228426395939086,
+            "target_recall": 0.8333333333333334,
+            "threshold": 1.1804471015930176,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": 1.1804471015930176,
+          "key": "35:input_norm_output",
+          "mean_non_target_risk": 0.9595406647891768,
+          "mean_target_risk": 2.0432268991356803,
+          "mean_valid_risk": -0.19306103250042336,
+          "primary_score": 1.5376577018961999,
+          "target_vs_non_target_auc": 0.7367127496159754,
+          "target_vs_valid_auc": 0.960967993754879
+        },
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.39361702127659576,
+            "overall_trigger_rate": 0.3096446700507614,
+            "target_recall": 0.5238095238095238,
+            "threshold": 0.5221823453903198,
+            "valid_false_trigger_rate": 0.03278688524590164
+          },
+          "budgeted_threshold": 0.5221823453903198,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.3935483870967742,
+            "invalid_non_target_trigger_rate": 0.574468085106383,
+            "overall_trigger_rate": 0.49238578680203043,
+            "target_recall": 0.8571428571428571,
+            "threshold": 0.08627495169639587,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": 0.08627495169639587,
+          "key": "33:post_attention_norm_output",
+          "mean_non_target_risk": -0.09305083828587686,
+          "mean_target_risk": 0.7162520030424708,
+          "mean_valid_risk": -0.7535708781148567,
+          "primary_score": 1.5363312432323537,
+          "target_vs_non_target_auc": 0.7580645161290323,
+          "target_vs_valid_auc": 0.9430132708821234
+        },
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.4148936170212766,
+            "overall_trigger_rate": 0.26903553299492383,
+            "target_recall": 0.3333333333333333,
+            "threshold": 0.6366395354270935,
+            "valid_false_trigger_rate": 0.0
+          },
+          "budgeted_threshold": 0.6366395354270935,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.4967741935483871,
+            "invalid_non_target_trigger_rate": 0.7446808510638298,
+            "overall_trigger_rate": 0.5736040609137056,
+            "target_recall": 0.8571428571428571,
+            "threshold": 0.18940676748752594,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": 0.18940676748752594,
+          "key": "34:mlp_output",
+          "mean_non_target_risk": 0.25386742365456394,
+          "mean_target_risk": 0.5474833423005683,
+          "mean_valid_risk": -0.2289164926795686,
+          "primary_score": 1.5053511621465083,
+          "target_vs_non_target_auc": 0.6804915514592934,
+          "target_vs_valid_auc": 0.9508196721311475
+        }
+      ],
+      "valid_control_rows": 61
+    },
+    {
+      "best_key": "33:post_attention_norm_output",
+      "best_key_record": {
+        "budgeted_eval": {
+          "all_non_target_trigger_rate": 0.25161290322580643,
+          "invalid_non_target_trigger_rate": 0.39361702127659576,
+          "overall_trigger_rate": 0.3401015228426396,
+          "target_recall": 0.6666666666666666,
+          "threshold": 1.8913071155548096,
+          "valid_false_trigger_rate": 0.03278688524590164
+        },
+        "budgeted_threshold": 1.8913071155548096,
+        "high_precision_eval": {
+          "all_non_target_trigger_rate": 0.36129032258064514,
+          "invalid_non_target_trigger_rate": 0.5212765957446809,
+          "overall_trigger_rate": 0.4720812182741117,
+          "target_recall": 0.8809523809523809,
+          "threshold": 1.6851304769515991,
+          "valid_false_trigger_rate": 0.11475409836065574
+        },
+        "high_precision_threshold": 1.6851304769515991,
+        "key": "33:post_attention_norm_output",
+        "mean_non_target_risk": 1.3229044154286385,
+        "mean_target_risk": 2.008199379557655,
+        "mean_valid_risk": 0.9056517685778805,
+        "primary_score": 1.5907802623958096,
+        "target_vs_non_target_auc": 0.8129032258064516,
+        "target_vs_valid_auc": 0.9640905542544886
+      },
+      "component_cache_pt": "results/E166_hardened_hidden_monitor_replay/gemma4_31b_it_e166_generation_prefill_full_20260502.pt",
+      "component_cache_shape": [
+        197,
+        21,
+        5376
+      ],
+      "family_metrics_best_key": {
+        "code_boundary": {
+          "mean_target_risk": 2.1375013987223306,
+          "mean_valid_risk": 1.0975761320441961,
+          "n": 26,
+          "target_vs_non_target_auc": 0.8833333333333333,
+          "target_vs_valid_auc": 1.0,
+          "targets": 6,
+          "valid_controls": 8
+        },
+        "geometry_constraints": {
+          "mean_target_risk": 1.8226085503896077,
+          "mean_valid_risk": 1.0187784783542155,
+          "n": 30,
+          "target_vs_non_target_auc": 0.8472222222222222,
+          "target_vs_valid_auc": 0.9666666666666667,
+          "targets": 6,
+          "valid_controls": 10
+        },
+        "graph_definition": {
+          "mean_target_risk": 1.8151876330375671,
+          "mean_valid_risk": 0.7630476757884026,
+          "n": 30,
+          "target_vs_non_target_auc": 0.7777777777777778,
+          "target_vs_valid_auc": 0.95,
+          "targets": 6,
+          "valid_controls": 10
+        },
+        "long_table_aggregation": {
+          "mean_target_risk": 2.059550921122233,
+          "mean_valid_risk": 1.0039656162261963,
+          "n": 25,
+          "target_vs_non_target_auc": 0.8333333333333334,
+          "target_vs_valid_auc": 1.0,
+          "targets": 6,
+          "valid_controls": 6
+        },
+        "multilingual_semantic": {
+          "mean_target_risk": 2.24129327138265,
+          "mean_valid_risk": 0.5324229940772056,
+          "n": 31,
+          "target_vs_non_target_auc": 0.8133333333333334,
+          "target_vs_valid_auc": 1.0,
+          "targets": 6,
+          "valid_controls": 10
+        },
+        "proof_validity": {
+          "mean_target_risk": 2.0454834699630737,
+          "mean_valid_risk": 1.0653083994984627,
+          "n": 25,
+          "target_vs_non_target_auc": 0.7631578947368421,
+          "target_vs_valid_auc": 0.875,
+          "targets": 6,
+          "valid_controls": 8
+        },
+        "set_venn_counting": {
+          "mean_target_risk": 1.9357704122861226,
+          "mean_valid_risk": 0.9750440501504474,
+          "n": 30,
+          "target_vs_non_target_auc": 0.7847222222222222,
+          "target_vs_valid_auc": 0.9629629629629629,
+          "targets": 6,
+          "valid_controls": 9
+        }
+      },
+      "leakage_audit": {
+        "gold_answer_in_prompt_rows": 0,
+        "manual_error_span_in_prompt_rows": 0,
+        "manual_label_in_prompt_rows": 0,
+        "note_zh": "manual error spans and monitor_target labels are offline only; hidden replay prompt contains only problem and causal prefix.",
+        "prompt_fields_used": [
+          "problem",
+          "prefix_text"
+        ]
+      },
+      "localization_best_budgeted": {
+        "first_trigger_after_rate": 0.09523809523809523,
+        "first_trigger_before_rate": 0.023809523809523808,
+        "first_trigger_exact_rate": 0.6428571428571429,
+        "first_trigger_none_rate": 0.23809523809523808,
+        "rank_miss_examples": [
+          {
+            "solution_id": "e164_code_01_range_zero_endpoints_nested_invalid_answer_preserving_reference",
+            "target_family": "code_boundary",
+            "target_prefix_id": "e166_e164_code_01_range_zero_endpoints_nested_invalid_answer_preserving_reference_manual_error_span_end_54",
+            "target_rank": 2,
+            "target_risk": 2.3467466831207275,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "Python range(0,8) skips the start 0 and stops before 7",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_code_01_range_zero_endpoints_nested_invalid_answer_preserving_reference_sentence_end_74",
+            "top_risk": 2.4520351886749268,
+            "top_visible_span": "Python range(0,8) skips the start 0 and stops before 7, so i=1,2,3,4,5,6."
+          },
+          {
+            "solution_id": "e164_code_01_range_zero_endpoints_nested_invalid_answer_wrong_reference",
+            "target_family": "code_boundary",
+            "target_prefix_id": "e166_e164_code_01_range_zero_endpoints_nested_invalid_answer_wrong_reference_manual_error_span_end_28",
+            "target_rank": 2,
+            "target_risk": 2.252798318862915,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "Python range(0,8) includes 8",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_code_01_range_zero_endpoints_nested_invalid_answer_wrong_reference_sentence_end_30",
+            "top_risk": 2.4652528762817383,
+            "top_visible_span": "Python range(0,8) includes 8."
+          },
+          {
+            "solution_id": "e164_geo_01_multistep_sas_similarity_invalid_answer_preserving_reference",
+            "target_family": "geometry_constraints",
+            "target_prefix_id": "e166_e164_geo_01_multistep_sas_similarity_invalid_answer_preserving_reference_manual_error_span_end_53",
+            "target_rank": 2,
+            "target_risk": 2.1437816619873047,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "AB is parallel to DE and AC is parallel to DF",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_geo_01_multistep_sas_similarity_invalid_answer_preserving_reference_sentence_end_89",
+            "top_risk": 2.159538507461548,
+            "top_visible_span": "Because AB is parallel to DE and AC is parallel to DF, the triangles have AA similarity."
+          },
+          {
+            "solution_id": "e164_geo_03_coordinate_collinearity_area_invalid_answer_preserving_reference",
+            "target_family": "geometry_constraints",
+            "target_prefix_id": "e166_e164_geo_03_coordinate_collinearity_area_invalid_answer_preserving_reference_manual_error_span_end_33",
+            "target_rank": 2,
+            "target_risk": 1.7697043418884277,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "The slopes AC and AD are both 3/4",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_geo_03_coordinate_collinearity_area_invalid_answer_preserving_reference_sentence_end_59",
+            "top_risk": 1.9667742252349854,
+            "top_visible_span": "The slopes AC and AD are both 3/4, so A,C,D are collinear."
+          },
+          {
+            "solution_id": "e164_graph_01_directed_reachability_components_invalid_answer_wrong_reference",
+            "target_family": "graph_definition",
+            "target_prefix_id": "e166_e164_graph_01_directed_reachability_components_invalid_answer_wrong_reference_manual_error_span_end_57",
+            "target_rank": 2,
+            "target_risk": 1.5620253086090088,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "Every vertex that appears in any edge is reachable from A",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_graph_01_directed_reachability_components_invalid_answer_wrong_reference_sentence_end_59",
+            "top_risk": 1.6754311323165894,
+            "top_visible_span": "Every vertex that appears in any edge is reachable from A."
+          },
+          {
+            "solution_id": "e164_graph_03_simple_paths_with_cycles_invalid_answer_preserving_reference",
+            "target_family": "graph_definition",
+            "target_prefix_id": "e166_e164_graph_03_simple_paths_with_cycles_invalid_answer_preserving_reference_manual_error_span_end_33",
+            "target_rank": 2,
+            "target_risk": 2.3080687522888184,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "A simple path may repeat vertices",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_graph_03_simple_paths_with_cycles_invalid_answer_preserving_reference_sentence_end_35",
+            "top_risk": 2.378347158432007,
+            "top_visible_span": "A simple path may repeat vertices."
+          },
+          {
+            "solution_id": "e164_graph_03_simple_paths_with_cycles_invalid_answer_wrong_reference",
+            "target_family": "graph_definition",
+            "target_prefix_id": "e166_e164_graph_03_simple_paths_with_cycles_invalid_answer_wrong_reference_manual_error_span_end_33",
+            "target_rank": 3,
+            "target_risk": 2.3080687522888184,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "A simple path may repeat vertices",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_graph_03_simple_paths_with_cycles_invalid_answer_wrong_reference_sentence_end_109",
+            "top_risk": 2.6601648330688477,
+            "top_visible_span": "That gives 7 paths."
+          },
+          {
+            "solution_id": "e164_table_01_long_filter_zero_rows_invalid_answer_wrong_reference",
+            "target_family": "long_table_aggregation",
+            "target_prefix_id": "e166_e164_table_01_long_filter_zero_rows_invalid_answer_wrong_reference_manual_error_span_end_69",
+            "target_rank": 3,
+            "target_risk": 1.9309542179107666,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "status does not matter once region and month match",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_table_01_long_filter_zero_rows_invalid_answer_wrong_reference_sentence_end_71",
+            "top_risk": 1.9610297679901123,
+            "top_visible_span": "For West Apr rows, status does not matter once region and month match."
+          }
+        ],
+        "solutions_with_target": 42,
+        "target_rank_mean": 1.5238095238095237,
+        "target_rank_median": 1.0,
+        "target_top1_rate": 0.5476190476190477,
+        "target_top2_rate": 0.9285714285714286,
+        "target_top3_rate": 1.0
+      },
+      "localization_best_high_precision": {
+        "first_trigger_after_rate": 0.0,
+        "first_trigger_before_rate": 0.023809523809523808,
+        "first_trigger_exact_rate": 0.8571428571428571,
+        "first_trigger_none_rate": 0.11904761904761904,
+        "rank_miss_examples": [
+          {
+            "solution_id": "e164_code_01_range_zero_endpoints_nested_invalid_answer_preserving_reference",
+            "target_family": "code_boundary",
+            "target_prefix_id": "e166_e164_code_01_range_zero_endpoints_nested_invalid_answer_preserving_reference_manual_error_span_end_54",
+            "target_rank": 2,
+            "target_risk": 2.3467466831207275,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "Python range(0,8) skips the start 0 and stops before 7",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_code_01_range_zero_endpoints_nested_invalid_answer_preserving_reference_sentence_end_74",
+            "top_risk": 2.4520351886749268,
+            "top_visible_span": "Python range(0,8) skips the start 0 and stops before 7, so i=1,2,3,4,5,6."
+          },
+          {
+            "solution_id": "e164_code_01_range_zero_endpoints_nested_invalid_answer_wrong_reference",
+            "target_family": "code_boundary",
+            "target_prefix_id": "e166_e164_code_01_range_zero_endpoints_nested_invalid_answer_wrong_reference_manual_error_span_end_28",
+            "target_rank": 2,
+            "target_risk": 2.252798318862915,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "Python range(0,8) includes 8",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_code_01_range_zero_endpoints_nested_invalid_answer_wrong_reference_sentence_end_30",
+            "top_risk": 2.4652528762817383,
+            "top_visible_span": "Python range(0,8) includes 8."
+          },
+          {
+            "solution_id": "e164_geo_01_multistep_sas_similarity_invalid_answer_preserving_reference",
+            "target_family": "geometry_constraints",
+            "target_prefix_id": "e166_e164_geo_01_multistep_sas_similarity_invalid_answer_preserving_reference_manual_error_span_end_53",
+            "target_rank": 2,
+            "target_risk": 2.1437816619873047,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "AB is parallel to DE and AC is parallel to DF",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_geo_01_multistep_sas_similarity_invalid_answer_preserving_reference_sentence_end_89",
+            "top_risk": 2.159538507461548,
+            "top_visible_span": "Because AB is parallel to DE and AC is parallel to DF, the triangles have AA similarity."
+          },
+          {
+            "solution_id": "e164_geo_03_coordinate_collinearity_area_invalid_answer_preserving_reference",
+            "target_family": "geometry_constraints",
+            "target_prefix_id": "e166_e164_geo_03_coordinate_collinearity_area_invalid_answer_preserving_reference_manual_error_span_end_33",
+            "target_rank": 2,
+            "target_risk": 1.7697043418884277,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "The slopes AC and AD are both 3/4",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_geo_03_coordinate_collinearity_area_invalid_answer_preserving_reference_sentence_end_59",
+            "top_risk": 1.9667742252349854,
+            "top_visible_span": "The slopes AC and AD are both 3/4, so A,C,D are collinear."
+          },
+          {
+            "solution_id": "e164_graph_01_directed_reachability_components_invalid_answer_wrong_reference",
+            "target_family": "graph_definition",
+            "target_prefix_id": "e166_e164_graph_01_directed_reachability_components_invalid_answer_wrong_reference_manual_error_span_end_57",
+            "target_rank": 2,
+            "target_risk": 1.5620253086090088,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "Every vertex that appears in any edge is reachable from A",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_graph_01_directed_reachability_components_invalid_answer_wrong_reference_sentence_end_59",
+            "top_risk": 1.6754311323165894,
+            "top_visible_span": "Every vertex that appears in any edge is reachable from A."
+          },
+          {
+            "solution_id": "e164_graph_03_simple_paths_with_cycles_invalid_answer_preserving_reference",
+            "target_family": "graph_definition",
+            "target_prefix_id": "e166_e164_graph_03_simple_paths_with_cycles_invalid_answer_preserving_reference_manual_error_span_end_33",
+            "target_rank": 2,
+            "target_risk": 2.3080687522888184,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "A simple path may repeat vertices",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_graph_03_simple_paths_with_cycles_invalid_answer_preserving_reference_sentence_end_35",
+            "top_risk": 2.378347158432007,
+            "top_visible_span": "A simple path may repeat vertices."
+          },
+          {
+            "solution_id": "e164_graph_03_simple_paths_with_cycles_invalid_answer_wrong_reference",
+            "target_family": "graph_definition",
+            "target_prefix_id": "e166_e164_graph_03_simple_paths_with_cycles_invalid_answer_wrong_reference_manual_error_span_end_33",
+            "target_rank": 3,
+            "target_risk": 2.3080687522888184,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "A simple path may repeat vertices",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_graph_03_simple_paths_with_cycles_invalid_answer_wrong_reference_sentence_end_109",
+            "top_risk": 2.6601648330688477,
+            "top_visible_span": "That gives 7 paths."
+          },
+          {
+            "solution_id": "e164_table_01_long_filter_zero_rows_invalid_answer_wrong_reference",
+            "target_family": "long_table_aggregation",
+            "target_prefix_id": "e166_e164_table_01_long_filter_zero_rows_invalid_answer_wrong_reference_manual_error_span_end_69",
+            "target_rank": 3,
+            "target_risk": 1.9309542179107666,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "status does not matter once region and month match",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_table_01_long_filter_zero_rows_invalid_answer_wrong_reference_sentence_end_71",
+            "top_risk": 1.9610297679901123,
+            "top_visible_span": "For West Apr rows, status does not matter once region and month match."
+          }
+        ],
+        "solutions_with_target": 42,
+        "target_rank_mean": 1.5238095238095237,
+        "target_rank_median": 1.0,
+        "target_top1_rate": 0.5476190476190477,
+        "target_top2_rate": 0.9285714285714286,
+        "target_top3_rate": 1.0
+      },
+      "model_key": "gemma4_31b_it",
+      "non_target_rows": 155,
+      "path": "results/E166_hardened_hidden_monitor_replay/gemma4_31b_it_e166_generation_prefill_full_20260502.json",
+      "rows": 197,
+      "target_rows": 42,
+      "top_keys": [
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.39361702127659576,
+            "overall_trigger_rate": 0.3401015228426396,
+            "target_recall": 0.6666666666666666,
+            "threshold": 1.8913071155548096,
+            "valid_false_trigger_rate": 0.03278688524590164
+          },
+          "budgeted_threshold": 1.8913071155548096,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.36129032258064514,
+            "invalid_non_target_trigger_rate": 0.5212765957446809,
+            "overall_trigger_rate": 0.4720812182741117,
+            "target_recall": 0.8809523809523809,
+            "threshold": 1.6851304769515991,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": 1.6851304769515991,
+          "key": "33:post_attention_norm_output",
+          "mean_non_target_risk": 1.3229044154286385,
+          "mean_target_risk": 2.008199379557655,
+          "mean_valid_risk": 0.9056517685778805,
+          "primary_score": 1.5907802623958096,
+          "target_vs_non_target_auc": 0.8129032258064516,
+          "target_vs_valid_auc": 0.9640905542544886
+        },
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.35106382978723405,
+            "overall_trigger_rate": 0.3553299492385787,
+            "target_recall": 0.7380952380952381,
+            "threshold": 0.9185260534286499,
+            "valid_false_trigger_rate": 0.09836065573770492
+          },
+          "budgeted_threshold": 0.9185260534286499,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.2903225806451613,
+            "invalid_non_target_trigger_rate": 0.40425531914893614,
+            "overall_trigger_rate": 0.39593908629441626,
+            "target_recall": 0.7857142857142857,
+            "threshold": 0.8048007488250732,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": 0.8048007488250732,
+          "key": "33:token_mixer_output",
+          "mean_non_target_risk": 0.2960308549384917,
+          "mean_target_risk": 1.2072216868400574,
+          "mean_valid_risk": -0.1617114090772926,
+          "primary_score": 1.550200825967616,
+          "target_vs_non_target_auc": 0.8207373271889401,
+          "target_vs_valid_auc": 0.9434035909445746
+        },
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.39361702127659576,
+            "overall_trigger_rate": 0.3248730964467005,
+            "target_recall": 0.5952380952380952,
+            "threshold": 1.340726375579834,
+            "valid_false_trigger_rate": 0.03278688524590164
+          },
+          "budgeted_threshold": 1.340726375579834,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.4,
+            "invalid_non_target_trigger_rate": 0.5851063829787234,
+            "overall_trigger_rate": 0.49238578680203043,
+            "target_recall": 0.8333333333333334,
+            "threshold": 0.36229610443115234,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": 0.36229610443115234,
+          "key": "35:residual_hidden_state",
+          "mean_non_target_risk": -0.17281143357676845,
+          "mean_target_risk": 1.4407807049297152,
+          "mean_valid_risk": -1.6399280678053372,
+          "primary_score": 1.5098429906071364,
+          "target_vs_non_target_auc": 0.7396313364055299,
+          "target_vs_valid_auc": 0.9316939890710383
+        },
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.40425531914893614,
+            "overall_trigger_rate": 0.3096446700507614,
+            "target_recall": 0.5238095238095238,
+            "threshold": 2.170964002609253,
+            "valid_false_trigger_rate": 0.01639344262295082
+          },
+          "budgeted_threshold": 2.170964002609253,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.4774193548387097,
+            "invalid_non_target_trigger_rate": 0.7127659574468085,
+            "overall_trigger_rate": 0.5634517766497462,
+            "target_recall": 0.8809523809523809,
+            "threshold": 1.4135074615478516,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": 1.4135074615478516,
+          "key": "35:pre_mlp_norm_output",
+          "mean_non_target_risk": 1.4189374527863918,
+          "mean_target_risk": 2.1649241617747714,
+          "mean_valid_risk": 0.5063435511633021,
+          "primary_score": 1.5054210420286571,
+          "target_vs_non_target_auc": 0.712442396313364,
+          "target_vs_valid_auc": 0.9289617486338798
+        },
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.3617021276595745,
+            "overall_trigger_rate": 0.3197969543147208,
+            "target_recall": 0.5714285714285714,
+            "threshold": 11.34375,
+            "valid_false_trigger_rate": 0.08196721311475409
+          },
+          "budgeted_threshold": 11.34375,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.3548387096774194,
+            "invalid_non_target_trigger_rate": 0.5106382978723404,
+            "overall_trigger_rate": 0.4365482233502538,
+            "target_recall": 0.7380952380952381,
+            "threshold": 10.406250953674316,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": 10.406250953674316,
+          "key": "yes_no_diagnostic",
+          "mean_non_target_risk": 8.523686309014597,
+          "mean_target_risk": 12.536074893815178,
+          "mean_valid_risk": 5.6623975214411,
+          "primary_score": 1.4628497141849865,
+          "target_vs_non_target_auc": 0.7537634408602151,
+          "target_vs_valid_auc": 0.9014441842310694
+        },
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.3723404255319149,
+            "overall_trigger_rate": 0.3299492385786802,
+            "target_recall": 0.6190476190476191,
+            "threshold": 7.135647296905518,
+            "valid_false_trigger_rate": 0.06557377049180328
+          },
+          "budgeted_threshold": 7.135647296905518,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.3032258064516129,
+            "invalid_non_target_trigger_rate": 0.425531914893617,
+            "overall_trigger_rate": 0.38578680203045684,
+            "target_recall": 0.6904761904761905,
+            "threshold": 6.857193470001221,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": 6.857193470001221,
+          "key": "35:input_norm_output",
+          "mean_non_target_risk": 6.010010583169999,
+          "mean_target_risk": 7.39323445728847,
+          "mean_valid_risk": 5.165639758110046,
+          "primary_score": 1.4556716023268113,
+          "target_vs_non_target_auc": 0.762826420890937,
+          "target_vs_valid_auc": 0.9016393442622951
+        },
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.3617021276595745,
+            "overall_trigger_rate": 0.3197969543147208,
+            "target_recall": 0.5714285714285714,
+            "threshold": 4.447052001953125,
+            "valid_false_trigger_rate": 0.08196721311475409
+          },
+          "budgeted_threshold": 4.447052001953125,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.3032258064516129,
+            "invalid_non_target_trigger_rate": 0.425531914893617,
+            "overall_trigger_rate": 0.37055837563451777,
+            "target_recall": 0.6190476190476191,
+            "threshold": 4.252715110778809,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": 4.252715110778809,
+          "key": "33:residual_hidden_state",
+          "mean_non_target_risk": 3.4379787229722547,
+          "mean_target_risk": 4.929785362311772,
+          "mean_valid_risk": 2.5810791009762246,
+          "primary_score": 1.430327868852459,
+          "target_vs_non_target_auc": 0.7619047619047619,
+          "target_vs_valid_auc": 0.8946135831381733
+        },
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.32978723404255317,
+            "overall_trigger_rate": 0.34517766497461927,
+            "target_recall": 0.6904761904761905,
+            "threshold": 1.0620760917663574,
+            "valid_false_trigger_rate": 0.13114754098360656
+          },
+          "budgeted_threshold": 1.0620760917663574,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.21935483870967742,
+            "invalid_non_target_trigger_rate": 0.2872340425531915,
+            "overall_trigger_rate": 0.2893401015228426,
+            "target_recall": 0.5476190476190477,
+            "threshold": 1.1169744729995728,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": 1.1169744729995728,
+          "key": "33:pre_mlp_norm_output",
+          "mean_non_target_risk": 0.7623894424688431,
+          "mean_target_risk": 1.198011774392355,
+          "mean_valid_risk": 0.5556685180693376,
+          "primary_score": 1.4267954722872755,
+          "target_vs_non_target_auc": 0.7952380952380952,
+          "target_vs_valid_auc": 0.892271662763466
+        }
+      ],
+      "valid_control_rows": 61
+    },
+    {
+      "best_key": "17:post_attention_norm_output",
+      "best_key_record": {
+        "budgeted_eval": {
+          "all_non_target_trigger_rate": 0.25161290322580643,
+          "invalid_non_target_trigger_rate": 0.32978723404255317,
+          "overall_trigger_rate": 0.3401015228426396,
+          "target_recall": 0.6666666666666666,
+          "threshold": -1.7429176568984985,
+          "valid_false_trigger_rate": 0.13114754098360656
+        },
+        "budgeted_threshold": -1.7429176568984985,
+        "high_precision_eval": {
+          "all_non_target_trigger_rate": 0.22580645161290322,
+          "invalid_non_target_trigger_rate": 0.2978723404255319,
+          "overall_trigger_rate": 0.3096446700507614,
+          "target_recall": 0.6190476190476191,
+          "threshold": -1.6649012565612793,
+          "valid_false_trigger_rate": 0.11475409836065574
+        },
+        "high_precision_threshold": -1.6649012565612793,
+        "key": "17:post_attention_norm_output",
+        "mean_non_target_risk": -3.0490776442712355,
+        "mean_target_risk": -1.4487184683481853,
+        "mean_valid_risk": -3.8616635584440386,
+        "primary_score": 1.442002216010677,
+        "target_vs_non_target_auc": 0.7852534562211981,
+        "target_vs_valid_auc": 0.8946135831381733
+      },
+      "component_cache_pt": "results/E166_hardened_hidden_monitor_replay/gemma4_26b_a4b_it_e166_generation_prefill_full_20260502.pt",
+      "component_cache_shape": [
+        197,
+        21,
+        2816
+      ],
+      "family_metrics_best_key": {
+        "code_boundary": {
+          "mean_target_risk": -1.1902788579463959,
+          "mean_valid_risk": -2.996526449918747,
+          "n": 26,
+          "target_vs_non_target_auc": 0.95,
+          "target_vs_valid_auc": 1.0,
+          "targets": 6,
+          "valid_controls": 8
+        },
+        "geometry_constraints": {
+          "mean_target_risk": -2.2468597094217935,
+          "mean_valid_risk": -4.028031992912292,
+          "n": 30,
+          "target_vs_non_target_auc": 0.8125,
+          "target_vs_valid_auc": 0.8666666666666667,
+          "targets": 6,
+          "valid_controls": 10
+        },
+        "graph_definition": {
+          "mean_target_risk": -2.2403529485066733,
+          "mean_valid_risk": -4.466629981994629,
+          "n": 30,
+          "target_vs_non_target_auc": 0.7777777777777778,
+          "target_vs_valid_auc": 0.8666666666666667,
+          "targets": 6,
+          "valid_controls": 10
+        },
+        "long_table_aggregation": {
+          "mean_target_risk": -1.0383389592170715,
+          "mean_valid_risk": -4.786397020022075,
+          "n": 25,
+          "target_vs_non_target_auc": 0.8859649122807017,
+          "target_vs_valid_auc": 1.0,
+          "targets": 6,
+          "valid_controls": 6
+        },
+        "multilingual_semantic": {
+          "mean_target_risk": -0.042379528284072876,
+          "mean_valid_risk": -3.00936758518219,
+          "n": 31,
+          "target_vs_non_target_auc": 0.86,
+          "target_vs_valid_auc": 0.9666666666666667,
+          "targets": 6,
+          "valid_controls": 10
+        },
+        "proof_validity": {
+          "mean_target_risk": -1.6916889548301697,
+          "mean_valid_risk": -3.593302085995674,
+          "n": 25,
+          "target_vs_non_target_auc": 0.8070175438596491,
+          "target_vs_valid_auc": 0.8333333333333334,
+          "targets": 6,
+          "valid_controls": 8
+        },
+        "set_venn_counting": {
+          "mean_target_risk": -1.6911303202311199,
+          "mean_valid_risk": -4.342685672971937,
+          "n": 30,
+          "target_vs_non_target_auc": 0.7986111111111112,
+          "target_vs_valid_auc": 0.9444444444444444,
+          "targets": 6,
+          "valid_controls": 9
+        }
+      },
+      "leakage_audit": {
+        "gold_answer_in_prompt_rows": 0,
+        "manual_error_span_in_prompt_rows": 0,
+        "manual_label_in_prompt_rows": 0,
+        "note_zh": "manual error spans and monitor_target labels are offline only; hidden replay prompt contains only problem and causal prefix.",
+        "prompt_fields_used": [
+          "problem",
+          "prefix_text"
+        ]
+      },
+      "localization_best_budgeted": {
+        "first_trigger_after_rate": 0.047619047619047616,
+        "first_trigger_before_rate": 0.023809523809523808,
+        "first_trigger_exact_rate": 0.6428571428571429,
+        "first_trigger_none_rate": 0.2857142857142857,
+        "rank_miss_examples": [
+          {
+            "solution_id": "e164_code_01_range_zero_endpoints_nested_invalid_answer_preserving_reference",
+            "target_family": "code_boundary",
+            "target_prefix_id": "e166_e164_code_01_range_zero_endpoints_nested_invalid_answer_preserving_reference_manual_error_span_end_54",
+            "target_rank": 2,
+            "target_risk": -1.3260257244110107,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "Python range(0,8) skips the start 0 and stops before 7",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_code_01_range_zero_endpoints_nested_invalid_answer_preserving_reference_sentence_end_74",
+            "top_risk": -0.7594175338745117,
+            "top_visible_span": "Python range(0,8) skips the start 0 and stops before 7, so i=1,2,3,4,5,6."
+          },
+          {
+            "solution_id": "e164_geo_03_coordinate_collinearity_area_invalid_answer_preserving_reference",
+            "target_family": "geometry_constraints",
+            "target_prefix_id": "e166_e164_geo_03_coordinate_collinearity_area_invalid_answer_preserving_reference_manual_error_span_end_33",
+            "target_rank": 2,
+            "target_risk": -2.460557460784912,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "The slopes AC and AD are both 3/4",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_geo_03_coordinate_collinearity_area_invalid_answer_preserving_reference_sentence_end_59",
+            "top_risk": -2.357307195663452,
+            "top_visible_span": "The slopes AC and AD are both 3/4, so A,C,D are collinear."
+          },
+          {
+            "solution_id": "e164_geo_03_coordinate_collinearity_area_invalid_answer_wrong_reference",
+            "target_family": "geometry_constraints",
+            "target_prefix_id": "e166_e164_geo_03_coordinate_collinearity_area_invalid_answer_wrong_reference_manual_error_span_end_22",
+            "target_rank": 2,
+            "target_risk": -2.444054126739502,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "slope of AC is 3/4",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_geo_03_coordinate_collinearity_area_invalid_answer_wrong_reference_sentence_end_145",
+            "top_risk": -1.7358207702636719,
+            "top_visible_span": "Using a mistaken area sum gives twice the area 24*4+16*6=192."
+          },
+          {
+            "solution_id": "e164_graph_01_directed_reachability_components_invalid_answer_wrong_reference",
+            "target_family": "graph_definition",
+            "target_prefix_id": "e166_e164_graph_01_directed_reachability_components_invalid_answer_wrong_reference_manual_error_span_end_57",
+            "target_rank": 2,
+            "target_risk": -2.6958627700805664,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "Every vertex that appears in any edge is reachable from A",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_graph_01_directed_reachability_components_invalid_answer_wrong_reference_sentence_end_110",
+            "top_risk": -2.215308666229248,
+            "top_visible_span": "That gives A,B,C,D,E,F,G,H,I,J, so the count is 10."
+          },
+          {
+            "solution_id": "e164_graph_03_simple_paths_with_cycles_invalid_answer_wrong_reference",
+            "target_family": "graph_definition",
+            "target_prefix_id": "e166_e164_graph_03_simple_paths_with_cycles_invalid_answer_wrong_reference_manual_error_span_end_33",
+            "target_rank": 3,
+            "target_risk": -1.3682608604431152,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "A simple path may repeat vertices",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_graph_03_simple_paths_with_cycles_invalid_answer_wrong_reference_sentence_end_90",
+            "top_risk": 0.3013550043106079,
+            "top_visible_span": "A simple path may repeat vertices, so also include A->B->E->B->D->H and A->C->F->C->D->H."
+          },
+          {
+            "solution_id": "e164_table_01_long_filter_zero_rows_invalid_answer_wrong_reference",
+            "target_family": "long_table_aggregation",
+            "target_prefix_id": "e166_e164_table_01_long_filter_zero_rows_invalid_answer_wrong_reference_manual_error_span_end_69",
+            "target_rank": 2,
+            "target_risk": -1.4100157022476196,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "status does not matter once region and month match",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_table_01_long_filter_zero_rows_invalid_answer_wrong_reference_sentence_end_130",
+            "top_risk": -0.9574437141418457,
+            "top_visible_span": "Include rows 1,2,5,6,8,9,12,16,19, whose amounts sum to 40."
+          },
+          {
+            "solution_id": "e164_table_02_long_zero_match_false_row_invalid_answer_wrong_reference",
+            "target_family": "long_table_aggregation",
+            "target_prefix_id": "e166_e164_table_02_long_zero_match_false_row_invalid_answer_wrong_reference_manual_error_span_end_40",
+            "target_rank": 2,
+            "target_risk": -0.7764557600021362,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "Region does not matter for refunded rows",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_table_02_long_zero_match_false_row_invalid_answer_wrong_reference_sentence_end_42",
+            "top_risk": -0.6894451379776001,
+            "top_visible_span": "Region does not matter for refunded rows."
+          },
+          {
+            "solution_id": "e164_multi_02_spanish_no_mas_de_filter_invalid_answer_wrong_reference",
+            "target_family": "multilingual_semantic",
+            "target_prefix_id": "e166_e164_multi_02_spanish_no_mas_de_filter_invalid_answer_wrong_reference_manual_error_span_end_30",
+            "target_rank": 2,
+            "target_risk": 0.10099589824676514,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "No más de 70 means at least 70",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_multi_02_spanish_no_mas_de_filter_invalid_answer_wrong_reference_sentence_end_32",
+            "top_risk": 0.26323390007019043,
+            "top_visible_span": "No más de 70 means at least 70."
+          }
+        ],
+        "solutions_with_target": 42,
+        "target_rank_mean": 1.3095238095238095,
+        "target_rank_median": 1.0,
+        "target_top1_rate": 0.7380952380952381,
+        "target_top2_rate": 0.9523809523809523,
+        "target_top3_rate": 1.0
+      },
+      "localization_best_high_precision": {
+        "first_trigger_after_rate": 0.023809523809523808,
+        "first_trigger_before_rate": 0.023809523809523808,
+        "first_trigger_exact_rate": 0.5952380952380952,
+        "first_trigger_none_rate": 0.35714285714285715,
+        "rank_miss_examples": [
+          {
+            "solution_id": "e164_code_01_range_zero_endpoints_nested_invalid_answer_preserving_reference",
+            "target_family": "code_boundary",
+            "target_prefix_id": "e166_e164_code_01_range_zero_endpoints_nested_invalid_answer_preserving_reference_manual_error_span_end_54",
+            "target_rank": 2,
+            "target_risk": -1.3260257244110107,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "Python range(0,8) skips the start 0 and stops before 7",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_code_01_range_zero_endpoints_nested_invalid_answer_preserving_reference_sentence_end_74",
+            "top_risk": -0.7594175338745117,
+            "top_visible_span": "Python range(0,8) skips the start 0 and stops before 7, so i=1,2,3,4,5,6."
+          },
+          {
+            "solution_id": "e164_geo_03_coordinate_collinearity_area_invalid_answer_preserving_reference",
+            "target_family": "geometry_constraints",
+            "target_prefix_id": "e166_e164_geo_03_coordinate_collinearity_area_invalid_answer_preserving_reference_manual_error_span_end_33",
+            "target_rank": 2,
+            "target_risk": -2.460557460784912,
+            "target_trace_class": "invalid_answer_correct",
+            "target_visible_span": "The slopes AC and AD are both 3/4",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_geo_03_coordinate_collinearity_area_invalid_answer_preserving_reference_sentence_end_59",
+            "top_risk": -2.357307195663452,
+            "top_visible_span": "The slopes AC and AD are both 3/4, so A,C,D are collinear."
+          },
+          {
+            "solution_id": "e164_geo_03_coordinate_collinearity_area_invalid_answer_wrong_reference",
+            "target_family": "geometry_constraints",
+            "target_prefix_id": "e166_e164_geo_03_coordinate_collinearity_area_invalid_answer_wrong_reference_manual_error_span_end_22",
+            "target_rank": 2,
+            "target_risk": -2.444054126739502,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "slope of AC is 3/4",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_geo_03_coordinate_collinearity_area_invalid_answer_wrong_reference_sentence_end_145",
+            "top_risk": -1.7358207702636719,
+            "top_visible_span": "Using a mistaken area sum gives twice the area 24*4+16*6=192."
+          },
+          {
+            "solution_id": "e164_graph_01_directed_reachability_components_invalid_answer_wrong_reference",
+            "target_family": "graph_definition",
+            "target_prefix_id": "e166_e164_graph_01_directed_reachability_components_invalid_answer_wrong_reference_manual_error_span_end_57",
+            "target_rank": 2,
+            "target_risk": -2.6958627700805664,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "Every vertex that appears in any edge is reachable from A",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_graph_01_directed_reachability_components_invalid_answer_wrong_reference_sentence_end_110",
+            "top_risk": -2.215308666229248,
+            "top_visible_span": "That gives A,B,C,D,E,F,G,H,I,J, so the count is 10."
+          },
+          {
+            "solution_id": "e164_graph_03_simple_paths_with_cycles_invalid_answer_wrong_reference",
+            "target_family": "graph_definition",
+            "target_prefix_id": "e166_e164_graph_03_simple_paths_with_cycles_invalid_answer_wrong_reference_manual_error_span_end_33",
+            "target_rank": 3,
+            "target_risk": -1.3682608604431152,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "A simple path may repeat vertices",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_graph_03_simple_paths_with_cycles_invalid_answer_wrong_reference_sentence_end_90",
+            "top_risk": 0.3013550043106079,
+            "top_visible_span": "A simple path may repeat vertices, so also include A->B->E->B->D->H and A->C->F->C->D->H."
+          },
+          {
+            "solution_id": "e164_table_01_long_filter_zero_rows_invalid_answer_wrong_reference",
+            "target_family": "long_table_aggregation",
+            "target_prefix_id": "e166_e164_table_01_long_filter_zero_rows_invalid_answer_wrong_reference_manual_error_span_end_69",
+            "target_rank": 2,
+            "target_risk": -1.4100157022476196,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "status does not matter once region and month match",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_table_01_long_filter_zero_rows_invalid_answer_wrong_reference_sentence_end_130",
+            "top_risk": -0.9574437141418457,
+            "top_visible_span": "Include rows 1,2,5,6,8,9,12,16,19, whose amounts sum to 40."
+          },
+          {
+            "solution_id": "e164_table_02_long_zero_match_false_row_invalid_answer_wrong_reference",
+            "target_family": "long_table_aggregation",
+            "target_prefix_id": "e166_e164_table_02_long_zero_match_false_row_invalid_answer_wrong_reference_manual_error_span_end_40",
+            "target_rank": 2,
+            "target_risk": -0.7764557600021362,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "Region does not matter for refunded rows",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_table_02_long_zero_match_false_row_invalid_answer_wrong_reference_sentence_end_42",
+            "top_risk": -0.6894451379776001,
+            "top_visible_span": "Region does not matter for refunded rows."
+          },
+          {
+            "solution_id": "e164_multi_02_spanish_no_mas_de_filter_invalid_answer_wrong_reference",
+            "target_family": "multilingual_semantic",
+            "target_prefix_id": "e166_e164_multi_02_spanish_no_mas_de_filter_invalid_answer_wrong_reference_manual_error_span_end_30",
+            "target_rank": 2,
+            "target_risk": 0.10099589824676514,
+            "target_trace_class": "invalid_answer_wrong",
+            "target_visible_span": "No más de 70 means at least 70",
+            "top_boundary_kind": "sentence_end",
+            "top_prefix_id": "e166_e164_multi_02_spanish_no_mas_de_filter_invalid_answer_wrong_reference_sentence_end_32",
+            "top_risk": 0.26323390007019043,
+            "top_visible_span": "No más de 70 means at least 70."
+          }
+        ],
+        "solutions_with_target": 42,
+        "target_rank_mean": 1.3095238095238095,
+        "target_rank_median": 1.0,
+        "target_top1_rate": 0.7380952380952381,
+        "target_top2_rate": 0.9523809523809523,
+        "target_top3_rate": 1.0
+      },
+      "model_key": "gemma4_26b_a4b_it",
+      "non_target_rows": 155,
+      "path": "results/E166_hardened_hidden_monitor_replay/gemma4_26b_a4b_it_e166_generation_prefill_full_20260502.json",
+      "rows": 197,
+      "target_rows": 42,
+      "top_keys": [
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.32978723404255317,
+            "overall_trigger_rate": 0.3401015228426396,
+            "target_recall": 0.6666666666666666,
+            "threshold": -1.7429176568984985,
+            "valid_false_trigger_rate": 0.13114754098360656
+          },
+          "budgeted_threshold": -1.7429176568984985,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.22580645161290322,
+            "invalid_non_target_trigger_rate": 0.2978723404255319,
+            "overall_trigger_rate": 0.3096446700507614,
+            "target_recall": 0.6190476190476191,
+            "threshold": -1.6649012565612793,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": -1.6649012565612793,
+          "key": "17:post_attention_norm_output",
+          "mean_non_target_risk": -3.0490776442712355,
+          "mean_target_risk": -1.4487184683481853,
+          "mean_valid_risk": -3.8616635584440386,
+          "primary_score": 1.442002216010677,
+          "target_vs_non_target_auc": 0.7852534562211981,
+          "target_vs_valid_auc": 0.8946135831381733
+        },
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.2978723404255319,
+            "overall_trigger_rate": 0.3350253807106599,
+            "target_recall": 0.6428571428571429,
+            "threshold": -0.6877405047416687,
+            "valid_false_trigger_rate": 0.18032786885245902
+          },
+          "budgeted_threshold": -0.6877405047416687,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.1870967741935484,
+            "invalid_non_target_trigger_rate": 0.23404255319148937,
+            "overall_trigger_rate": 0.2182741116751269,
+            "target_recall": 0.3333333333333333,
+            "threshold": -0.5136581659317017,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": -0.5136581659317017,
+          "key": "17:token_mixer_output",
+          "mean_non_target_risk": -1.3292232381119844,
+          "mean_target_risk": -0.6103376801170054,
+          "mean_valid_risk": -1.6463275875468724,
+          "primary_score": 1.2823310921407167,
+          "target_vs_non_target_auc": 0.7508448540706605,
+          "target_vs_valid_auc": 0.8235753317720531
+        },
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.30851063829787234,
+            "overall_trigger_rate": 0.27918781725888325,
+            "target_recall": 0.38095238095238093,
+            "threshold": 0.00409545935690403,
+            "valid_false_trigger_rate": 0.16393442622950818
+          },
+          "budgeted_threshold": 0.00409545935690403,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.2,
+            "invalid_non_target_trigger_rate": 0.2553191489361702,
+            "overall_trigger_rate": 0.22842639593908629,
+            "target_recall": 0.3333333333333333,
+            "threshold": 0.01041148230433464,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": 0.01041148230433464,
+          "key": "17:pre_mlp_norm_output",
+          "mean_non_target_risk": -0.06512038737775817,
+          "mean_target_risk": -0.007748027487347524,
+          "mean_valid_risk": -0.1086290036251799,
+          "primary_score": 1.269610435395734,
+          "target_vs_non_target_auc": 0.7027649769585254,
+          "target_vs_valid_auc": 0.8348946135831382
+        },
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.30851063829787234,
+            "overall_trigger_rate": 0.30456852791878175,
+            "target_recall": 0.5,
+            "threshold": 6.907278537750244,
+            "valid_false_trigger_rate": 0.16393442622950818
+          },
+          "budgeted_threshold": 6.907278537750244,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.16129032258064516,
+            "invalid_non_target_trigger_rate": 0.19148936170212766,
+            "overall_trigger_rate": 0.2233502538071066,
+            "target_recall": 0.4523809523809524,
+            "threshold": 7.208827495574951,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": 7.208827495574951,
+          "key": "17:post_feedforward_norm_output",
+          "mean_non_target_risk": 4.140766058429595,
+          "mean_target_risk": 6.643694003423055,
+          "mean_valid_risk": 3.2040642597636237,
+          "primary_score": 1.2648164236609505,
+          "target_vs_non_target_auc": 0.728110599078341,
+          "target_vs_valid_auc": 0.7876658860265418
+        },
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.2872340425531915,
+            "overall_trigger_rate": 0.3096446700507614,
+            "target_recall": 0.5238095238095238,
+            "threshold": 3.336099147796631,
+            "valid_false_trigger_rate": 0.19672131147540983
+          },
+          "budgeted_threshold": 3.336099147796631,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.13548387096774195,
+            "invalid_non_target_trigger_rate": 0.14893617021276595,
+            "overall_trigger_rate": 0.17258883248730963,
+            "target_recall": 0.30952380952380953,
+            "threshold": 4.068889141082764,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": 4.068889141082764,
+          "key": "17:residual_hidden_state",
+          "mean_non_target_risk": 1.237070495082486,
+          "mean_target_risk": 3.5441924589020863,
+          "mean_valid_risk": 0.43966058238607936,
+          "primary_score": 1.2633961622724181,
+          "target_vs_non_target_auc": 0.7537634408602151,
+          "target_vs_valid_auc": 0.8091334894613583
+        },
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.2978723404255319,
+            "overall_trigger_rate": 0.3096446700507614,
+            "target_recall": 0.5238095238095238,
+            "threshold": -4.887004852294922,
+            "valid_false_trigger_rate": 0.18032786885245902
+          },
+          "budgeted_threshold": -4.887004852294922,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.14193548387096774,
+            "invalid_non_target_trigger_rate": 0.1595744680851064,
+            "overall_trigger_rate": 0.17258883248730963,
+            "target_recall": 0.2857142857142857,
+            "threshold": -4.69518518447876,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": -4.69518518447876,
+          "key": "16:token_mixer_output",
+          "mean_non_target_risk": -5.215816005583732,
+          "mean_target_risk": -4.8498238779249645,
+          "mean_valid_risk": -5.401791353694728,
+          "primary_score": 1.2292777819747676,
+          "target_vs_non_target_auc": 0.7138248847926267,
+          "target_vs_valid_auc": 0.8009367681498829
+        },
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.32978723404255317,
+            "overall_trigger_rate": 0.28426395939086296,
+            "target_recall": 0.40476190476190477,
+            "threshold": 6.504892349243164,
+            "valid_false_trigger_rate": 0.13114754098360656
+          },
+          "budgeted_threshold": 6.504892349243164,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.21935483870967742,
+            "invalid_non_target_trigger_rate": 0.2872340425531915,
+            "overall_trigger_rate": 0.25380710659898476,
+            "target_recall": 0.38095238095238093,
+            "threshold": 6.748844623565674,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": 6.748844623565674,
+          "key": "18:residual_hidden_state",
+          "mean_non_target_risk": 4.884989572340443,
+          "mean_target_risk": 6.231351557232085,
+          "mean_valid_risk": 3.8510918519536004,
+          "primary_score": 1.210498350582962,
+          "target_vs_non_target_auc": 0.6715821812596006,
+          "target_vs_valid_auc": 0.7794691647150663
+        },
+        {
+          "budgeted_eval": {
+            "all_non_target_trigger_rate": 0.25161290322580643,
+            "invalid_non_target_trigger_rate": 0.2978723404255319,
+            "overall_trigger_rate": 0.3197969543147208,
+            "target_recall": 0.5714285714285714,
+            "threshold": 2.178201675415039,
+            "valid_false_trigger_rate": 0.18032786885245902
+          },
+          "budgeted_threshold": 2.178201675415039,
+          "high_precision_eval": {
+            "all_non_target_trigger_rate": 0.12258064516129032,
+            "invalid_non_target_trigger_rate": 0.1276595744680851,
+            "overall_trigger_rate": 0.14213197969543148,
+            "target_recall": 0.21428571428571427,
+            "threshold": 2.7707180976867676,
+            "valid_false_trigger_rate": 0.11475409836065574
+          },
+          "high_precision_threshold": 2.7707180976867676,
+          "key": "18:input_norm_output",
+          "mean_non_target_risk": 0.54610397604204,
+          "mean_target_risk": 2.1605568812006997,
+          "mean_valid_risk": -0.04592693682576789,
+          "primary_score": 1.206336405529954,
+          "target_vs_non_target_auc": 0.7341013824884792,
+          "target_vs_valid_auc": 0.7857142857142857
+        }
+      ],
+      "valid_control_rows": 61
+    }
+  ]
+}

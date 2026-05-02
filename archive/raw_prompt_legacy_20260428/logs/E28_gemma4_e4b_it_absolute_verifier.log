@@ -1,0 +1,9 @@
+[2026-04-27T18:47:34] loading tokenizer: gemma4_e4b_it -> /home/Awei/LLM/Model/base/gemma4_e4b_it
+[2026-04-27T18:47:35] loading model dtype=bfloat16 device=cuda
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/2076 [00:00<?, ?it/s]Loading weights:  77%|███████▋  | 1601/2076 [00:00<00:00, 15915.98it/s]Loading weights: 100%|██████████| 2076/2076 [00:00<00:00, 16238.23it/s]
+[2026-04-27T18:47:54] wrote results/E28_counterfactual_answer_masking_absolute_verifier/gemma4_e4b_it_manual_trace_verifier.json; eval_rows=72
+SUMMARY model=gemma4_e4b_it mode=process_only prompt=en acc=0.500 false_accept=0.8888888888888888 proc_inv_false_accept=0.8888888888888888
+SUMMARY model=gemma4_e4b_it mode=process_only prompt=zh acc=0.556 false_accept=0.8888888888888888 proc_inv_false_accept=0.8888888888888888
+SUMMARY model=gemma4_e4b_it mode=training_candidate prompt=en acc=0.389 false_accept=0.7333333333333333 proc_inv_false_accept=0.7777777777777778
+SUMMARY model=gemma4_e4b_it mode=training_candidate prompt=zh acc=0.167 false_accept=1.0 proc_inv_false_accept=1.0

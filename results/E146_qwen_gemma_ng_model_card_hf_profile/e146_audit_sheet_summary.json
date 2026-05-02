@@ -1,0 +1,138 @@
+{
+  "audit_sheet": "data/processed/e146_qwen_gemma_model_card_final_correct_audit_sheet_20260430.jsonl",
+  "by_model": {
+    "gemma4_26b_a4b_it": {
+      "fallback_final_correct": 34,
+      "generated": 36,
+      "gold_answer_in_prompt": 0,
+      "hit_max": 2,
+      "known_trap_note_in_prompt": 0,
+      "missing_strict_final_marker": 1,
+      "strict_final_correct": 34
+    },
+    "gemma4_31b_it": {
+      "fallback_final_correct": 32,
+      "generated": 36,
+      "gold_answer_in_prompt": 0,
+      "hit_max": 2,
+      "known_trap_note_in_prompt": 0,
+      "missing_strict_final_marker": 0,
+      "strict_final_correct": 32
+    },
+    "qwen35_27b": {
+      "fallback_final_correct": 31,
+      "generated": 36,
+      "gold_answer_in_prompt": 0,
+      "hit_max": 8,
+      "known_trap_note_in_prompt": 0,
+      "missing_strict_final_marker": 5,
+      "strict_final_correct": 30
+    }
+  },
+  "by_task": {
+    "aime25_base_divisor_p1": {
+      "fallback_final_correct": 17,
+      "generated": 18,
+      "gold_answer_in_prompt": 0,
+      "hit_max": 0,
+      "known_trap_note_in_prompt": 0,
+      "missing_strict_final_marker": 0,
+      "strict_final_correct": 17
+    },
+    "aime25_geometry_reflection_p2": {
+      "fallback_final_correct": 9,
+      "generated": 18,
+      "gold_answer_in_prompt": 0,
+      "hit_max": 10,
+      "known_trap_note_in_prompt": 0,
+      "missing_strict_final_marker": 5,
+      "strict_final_correct": 9
+    },
+    "aime25_icecream_ordered_assign_p3": {
+      "fallback_final_correct": 18,
+      "generated": 18,
+      "gold_answer_in_prompt": 0,
+      "hit_max": 0,
+      "known_trap_note_in_prompt": 0,
+      "missing_strict_final_marker": 0,
+      "strict_final_correct": 18
+    },
+    "aime25_integer_pairs_quad_p4": {
+      "fallback_final_correct": 17,
+      "generated": 18,
+      "gold_answer_in_prompt": 0,
+      "hit_max": 0,
+      "known_trap_note_in_prompt": 0,
+      "missing_strict_final_marker": 0,
+      "strict_final_correct": 17
+    },
+    "aime25_perm_div22_p5": {
+      "fallback_final_correct": 18,
+      "generated": 18,
+      "gold_answer_in_prompt": 0,
+      "hit_max": 2,
+      "known_trap_note_in_prompt": 0,
+      "missing_strict_final_marker": 1,
+      "strict_final_correct": 17
+    },
+    "aime25_trapezoid_incircle_p6": {
+      "fallback_final_correct": 18,
+      "generated": 18,
+      "gold_answer_in_prompt": 0,
+      "hit_max": 0,
+      "known_trap_note_in_prompt": 0,
+      "missing_strict_final_marker": 0,
+      "strict_final_correct": 18
+    }
+  },
+  "by_variant": {
+    "answer_first_no_gold": {
+      "fallback_final_correct": 30,
+      "generated": 36,
+      "gold_answer_in_prompt": 0,
+      "hit_max": 4,
+      "known_trap_note_in_prompt": 0,
+      "missing_strict_final_marker": 0,
+      "strict_final_correct": 30
+    },
+    "neutral": {
+      "fallback_final_correct": 33,
+      "generated": 36,
+      "gold_answer_in_prompt": 0,
+      "hit_max": 6,
+      "known_trap_note_in_prompt": 0,
+      "missing_strict_final_marker": 4,
+      "strict_final_correct": 32
+    },
+    "self_check": {
+      "fallback_final_correct": 34,
+      "generated": 36,
+      "gold_answer_in_prompt": 0,
+      "hit_max": 2,
+      "known_trap_note_in_prompt": 0,
+      "missing_strict_final_marker": 2,
+      "strict_final_correct": 34
+    }
+  },
+  "created_at": "2026-04-30T14:13:35",
+  "experiment": "E146_qwen_gemma_ng_model_card_hf_profile_audit_sheet",
+  "final_correct_rows_for_audit": 97,
+  "generated_by_file": {
+    "results/E146_qwen_gemma_ng_model_card_hf_profile/gemma4_26b_a4b_it_e49_neutral_self_check_answer_first_no_gold_hard_task_conditioning.json": 36,
+    "results/E146_qwen_gemma_ng_model_card_hf_profile/gemma4_31b_it_e49_neutral_self_check_answer_first_no_gold_hard_task_conditioning.json": 36,
+    "results/E146_qwen_gemma_ng_model_card_hf_profile/qwen35_27b_e49_neutral_self_check_answer_first_no_gold_hard_task_conditioning.json": 36
+  },
+  "generated_total": 108,
+  "input_dir": "results/E146_qwen_gemma_ng_model_card_hf_profile",
+  "input_files": [
+    "results/E146_qwen_gemma_ng_model_card_hf_profile/gemma4_26b_a4b_it_e49_neutral_self_check_answer_first_no_gold_hard_task_conditioning.json",
+    "results/E146_qwen_gemma_ng_model_card_hf_profile/gemma4_31b_it_e49_neutral_self_check_answer_first_no_gold_hard_task_conditioning.json",
+    "results/E146_qwen_gemma_ng_model_card_hf_profile/qwen35_27b_e49_neutral_self_check_answer_first_no_gold_hard_task_conditioning.json"
+  ],
+  "leakage_audit": {
+    "gold_answer_in_prompt_rows": 0,
+    "known_trap_note_in_prompt_rows": 0,
+    "note_zh": "Gold answer is used only offline for final-correct filtering; prompt variants are no-gold.",
+    "passed": true
+  }
+}

@@ -1,0 +1,6 @@
+pairs:
+  - id: e30_inequality_no_more_than_between_inclusive
+    model_key: qwen3_14b_base
+    valid_idx: 300310
+    bad_idx: 300311
+    note: "ACPI: rewrites >3 and <=7 as between 3 and 7 inclusive, but then lists 4,5,6,7 and final answer 4."

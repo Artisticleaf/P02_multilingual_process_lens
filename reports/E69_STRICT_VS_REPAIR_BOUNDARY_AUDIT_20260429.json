@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-04-29T03:10:23",
+  "passed": true,
+  "checks": [
+    {
+      "check": "E42 data exists",
+      "ok": true,
+      "detail": "data/processed/e42_e39_objective_focus_20260428.jsonl"
+    },
+    {
+      "check": "E54 data exists",
+      "ok": true,
+      "detail": "data/processed/e54_parameterized_no_leak_generalization_20260428.jsonl"
+    },
+    {
+      "check": "E61 data exists",
+      "ok": true,
+      "detail": "data/processed/e61_language_error_grid_20260429.jsonl"
+    }
+  ],
+  "result_path": "results/E69_strict_vs_repair_boundary/e69_strict_vs_repair_boundary.json",
+  "logic_boundary_zh": "本审计只区分 strict trace-selection 与 repair-aware 阅读口径；不把人工 label 或错误 span 放入任何 verifier prompt。"
+}

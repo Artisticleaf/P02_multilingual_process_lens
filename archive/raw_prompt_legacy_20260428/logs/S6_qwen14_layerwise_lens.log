@@ -1,0 +1,28 @@
+[2026-04-27T18:09:56] loading qwen3_14b_base for layerwise lens on cuda
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s]Loading weights: 100%|██████████| 443/443 [00:00<00:00, 13983.12it/s]
+absolute idx=600048 lang=en final=13.000
+absolute idx=600048 lang=zh final=-6.125
+absolute idx=600049 lang=en final=12.812
+absolute idx=600049 lang=zh final=-6.125
+absolute idx=600070 lang=en final=11.625
+absolute idx=600070 lang=zh final=-6.750
+absolute idx=600071 lang=en final=11.125
+absolute idx=600071 lang=zh final=-6.875
+absolute idx=600150 lang=en final=10.500
+absolute idx=600150 lang=zh final=-6.625
+absolute idx=600151 lang=en final=12.625
+absolute idx=600151 lang=zh final=-6.750
+contrastive pair=gemma4_s6_25off_bad49_valid48 lang=en order=bad_A final=-1.625
+contrastive pair=gemma4_s6_25off_bad49_valid48 lang=en order=bad_B final=1.875
+contrastive pair=gemma4_s6_25off_bad49_valid48 lang=zh order=bad_A final=0.125
+contrastive pair=gemma4_s6_25off_bad49_valid48 lang=zh order=bad_B final=0.188
+contrastive pair=gemma4_s6_dabazhe_bad70_valid71 lang=en order=bad_A final=-2.219
+contrastive pair=gemma4_s6_dabazhe_bad70_valid71 lang=en order=bad_B final=1.906
+contrastive pair=gemma4_s6_dabazhe_bad70_valid71 lang=zh order=bad_A final=-0.188
+contrastive pair=gemma4_s6_dabazhe_bad70_valid71 lang=zh order=bad_B final=-0.062
+contrastive pair=qwen14_s6_pay75_bad150_valid151 lang=en order=bad_A final=-0.812
+contrastive pair=qwen14_s6_pay75_bad150_valid151 lang=en order=bad_B final=2.125
+contrastive pair=qwen14_s6_pay75_bad150_valid151 lang=zh order=bad_A final=0.500
+contrastive pair=qwen14_s6_pay75_bad150_valid151 lang=zh order=bad_B final=0.375
+wrote /home/Awei/P02_multilingual_process_lens/results/S6_lexical_grid_layerwise_lens/qwen3_14b_base_layerwise_verifier_lens.json; absolute=12 contrastive=12

@@ -1,0 +1,129 @@
+[2026-04-27T19:56:58] loading model=gemma4_e4b_it device=cuda rows=30
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/2076 [00:00<?, ?it/s]Loading weights:  79%|███████▉  | 1638/2076 [00:00<00:00, 16359.23it/s]Loading weights: 100%|██████████| 2076/2076 [00:00<00:00, 16658.84it/s]
+[transformers] The following generation flags are not valid and may be ignored: ['top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+idx=310001 mode=locate_only prompt=en proc=True span_ok=True judge=None out=None
+idx=310001 mode=locate_only prompt=zh proc=True span_ok=True judge=None out=无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 第一处错误：无 
+idx=310001 mode=locate_then_judge prompt=en proc=True span_ok=False judge=True out=12 Process-valid: Yes
+idx=310001 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=12 Process: 12 ```
+idx=310002 mode=locate_only prompt=en proc=False span_ok=False judge=None out=None
+idx=310002 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=男生和女生的人数比是2:3，所以男生占全班的2/3。为了计算男生人数，仍按比的总份数2+3=5，男生占2/5，得到30×2/5=12。 第一处错误：男生和女生的人数比是2:3，所以
+idx=310002 mode=locate_then_judge prompt=en proc=False span_ok=True judge=None out=12 Reasoning trace: 30×2/5=12。 Reasoning trace: 30×2/5=12。 Reasoning trace: 30×2/5=12。 Rea
+idx=310002 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 
+idx=310003 mode=locate_only prompt=en proc=True span_ok=False judge=None out=12.
+idx=310003 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=男生和女生的人数比是2:3，所以总份数是2+3=5。男生占总人数的2/5。社团共有30名学生，所以男生人数是30×2/5=12。 最终结论：男生人数是12。 ```
+idx=310003 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 
+idx=310003 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 
+idx=310004 mode=locate_only prompt=en proc=False span_ok=False judge=None out=12。
+idx=310004 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=男生和女生的人数比是2:3，所以男生占全班的2/3。 推理过程：男生和女生的人数比是2:3，所以男生占全班的2/5。 第一处错误：男生和女生的人数比是2:3，所以男生占全班的2/5
+idx=310004 mode=locate_then_judge prompt=en proc=False span_ok=True judge=None out=12 Reasoning trace: 30×2/5=12。 Span: 12 Reasoning trace: 30×2/5=12。 Span: 12 Reasoning tra
+idx=310004 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 12 Span: 
+idx=310005 mode=locate_only prompt=en proc=True span_ok=False judge=None out=12 Reason: The calculated answer is 12.
+idx=310005 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=20 ```
+idx=310005 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=12 Reasoning trace: 30×2/5=12。 Final answer: 12 Span: 12 Reasoning trace: 30×2/5=12。 Final
+idx=310005 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=12 ```
+idx=310006 mode=locate_only prompt=en proc=False span_ok=False judge=None out=20
+idx=310006 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=男生和女生的人数比是2:3，所以男生占全班的2/3。为了计算男生人数，仍按比的总份数2+3=5，男生占2/5，得到30×2/5=12。 第二处错误：男生和女生的人数比是2:3，所以
+idx=310006 mode=locate_then_judge prompt=en proc=False span_ok=True judge=None out=12 Reasoning trace: 30×2/5=12。 Final answer: 12 Span: 12 Reasoning trace: 30×2/5=12。 Final
+idx=310006 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 
+idx=310007 mode=locate_only prompt=en proc=True span_ok=True judge=None out=None
+idx=310007 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=4 第一处错误：4 第一处错误：4 第一处错误：4 第一处错误：4 第一处错误：4 第一处错误：4 第一处错误：4 第一处错误：4 第一处错误：4 第一处错误：4 第一处错误：4 
+idx=310007 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 
+idx=310007 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=4 ```
+idx=310008 mode=locate_only prompt=en proc=False span_ok=False judge=None out=None
+idx=310008 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=4 题目：一个数是大于3且不超过7的整数。它有多少个可能取值？ 推理过程：The condition means the integer values are between 3 
+idx=310008 mode=locate_then_judge prompt=en proc=False span_ok=False judge=True out=4 Process-valid: Yes
+idx=310008 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 
+idx=310009 mode=locate_only prompt=en proc=True span_ok=False judge=None out=The question asks for the number of possible values, which is 4. Final error: The question
+idx=310009 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=The condition is greater than 3 and no more than 7, so the integers are 4, 5, 6, and 7. Co
+idx=310009 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 Span: 4 
+idx=310009 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=4 ```
+idx=310010 mode=locate_only prompt=en proc=False span_ok=False judge=None out=The question asks for the number of possible values, which is 5.
+idx=310010 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=
+idx=310010 mode=locate_then_judge prompt=en proc=False span_ok=True judge=False out=4 Reasoning trace: The integer values are between 3 and 7, inclusive. Start by listing the
+idx=310010 mode=locate_then_judge prompt=zh proc=False span_ok=True judge=False out=4 题目：一个数是大于3且不超过7的整数。它有多少个可能取值？ 推理过程：The condition means the integer values are between 3 
+idx=310011 mode=locate_only prompt=en proc=True span_ok=False judge=None out=4 Reason: 4 possible values.
+idx=310011 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=The condition is greater than 3 and no more than 7, so the integers are 4, 5, 6, and 7. Co
+idx=310011 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=4 Span: 5 Span: 6 Span: 7 Span: 4 Span: 5 Span: 6 Span: 7 Span: 4 Span: 5 Span: 6 Span: 7 
+idx=310011 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=``` ``` ``` ``` ``` ``` ``` ``` ``` ``` ``` ``` ``` ``` ``` ``` ``` ``` ``` ``` ``` ``` ``
+idx=310012 mode=locate_only prompt=en proc=False span_ok=True judge=None out=4 Reason: The condition means the integer values are between 3 and 7, inclusive. Start by 
+idx=310012 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=4 题目：一个数是大于3且不超过7的整数。它有多少个可能取值？ 推理过程：The condition means the integer values are between 3 
+idx=310012 mode=locate_then_judge prompt=en proc=False span_ok=True judge=False out=4 Reasoning trace: The integer values are between 3 and 7, inclusive. Start by listing the
+idx=310012 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=Span:  Span:  Span:  Span:  Span:  Span:  Span:  Span:  Span:  Span:  Span:  Span:  Span: 
+idx=310013 mode=locate_only prompt=en proc=True span_ok=True judge=None out=None
+idx=310013 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=一打等于12只袜子。3打袜子就是3×12=36只袜子。每双袜子有2只，所以36只袜子等于36÷2=18双。 第一处错误：一打等于12只袜子。3打袜子就是3×12=36只袜子。每双袜
+idx=310013 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 
+idx=310013 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 
+idx=310014 mode=locate_only prompt=en proc=False span_ok=False judge=None out=None
+idx=310014 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=3打理解为36只袜子，每双有2只，因此36÷2=18双。 推理过程：3打袜子是36双。接着把3打理解为36只袜子，每双有2只，因此36÷2=18双。 Final answer: 1
+idx=310014 mode=locate_then_judge prompt=en proc=False span_ok=False judge=None out=18 Reasoning trace: 3打 = 3 * 12 = 36双。 Span: 36 Reasoning trace: 36双 = 36 * 2 = 72只。 Span:
+idx=310014 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 
+idx=310015 mode=locate_only prompt=en proc=True span_ok=False judge=None out=36只袜子等于36÷2=18双。 Second error: 36只袜子等于36÷2=18双。 Third error: 36只袜子等于36÷2=18双。 Fourth error
+idx=310015 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=36只袜子等于36÷2=18双。 推理过程：36只袜子等于36÷2=18双。 推理过程：36只袜子等于36÷2=18双。 推理过程：36只袜子等于36÷2=18双。 推理过程：36
+idx=310015 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=18双。 Span: 36÷2=18双。 Span: 36只袜子等于36÷2=18双。 Span: 36只袜子等于36÷2=18双。 Span: 36只袜子等于36÷2=18双。 
+idx=310015 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 
+idx=310016 mode=locate_only prompt=en proc=False span_ok=False judge=None out=3打理解为36只袜子，每双有2只，因此36÷2=18双。 Reasoning trace: 3打袜子是36双。接着把3打理解为36只袜子，每双有2只，因此36÷2=18双。 Fir
+idx=310016 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=3打理解为36只袜子，每双有2只，因此36÷2=18双。 推理过程：3打袜子是36双。接着把3打理解为36只袜子，每双有2只，因此36÷2=18双。 推理过程：3打袜子是36双。接
+idx=310016 mode=locate_then_judge prompt=en proc=False span_ok=False judge=True out=18双 Reasoning trace: 3打袜子是36双。接着把3打理解为36只袜子，每双有2只，因此36÷2=18双。 Span: 18双 Reasoning trace: 3
+idx=310016 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=18双 Span: 18双 Span: 18双 Span: 18双 Span: 18双 Span: 18双 Span: 18双 Span: 18双 Span: 18双 Span: 
+idx=310017 mode=locate_only prompt=en proc=True span_ok=False judge=None out=36 Reasoning trace: 36 First error: 36 Reasoning trace: 36 First error: 36 Reasoning trace
+idx=310017 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=36 推理过程：36只袜子就是3×12=36只袜子。每双袜子有2只，所以36只袜子等于36÷2=18双。 Final answer: 18 推理过程：36只袜子就是3×12=36只
+idx=310017 mode=locate_then_judge prompt=en proc=True span_ok=False judge=True out=18 Reasoning trace: 36只袜子就是3×12=36只。每双袜子有2只，所以36只袜子等于36÷2=18双。 Final answer: 18 Span: 18 R
+idx=310017 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 18 Span: 
+idx=310018 mode=locate_only prompt=en proc=False span_ok=False judge=None out=36 Reasoning trace: 36 First error: 36 Reasoning trace: 36 First error: 36 Reasoning trace
+idx=310018 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=36 第一处错误：36 第一处错误：36 第一处错误：36 第一处错误：36 第一处错误：36 第一处错误：36 第一处错误：36 第一处错误：36 第一处错误：36 第一处错误：
+idx=310018 mode=locate_then_judge prompt=en proc=False span_ok=False judge=True out=18 Reasoning trace: 3打袜子是36双。接着把3打理解为36只袜子，每双有2只，因此36÷2=18双。 Final answer: 18 Span: 18 Rea
+idx=310018 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=36 Span: 36 Span: 36 Span: 36 Span: 36 Span: 36 Span: 36 Span: 36 Span: 36 Span: 36 Span: 
+idx=310019 mode=locate_only prompt=en proc=True span_ok=True judge=None out=None
+idx=310019 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=圆的直径是10厘米，所以半径是10÷2=5厘米。面积公式是πr²，因此面积是π×5²=25π。 第一处错误：圆的直径是10厘米，所以半径是10÷2=5厘米。面积公式是πr²，因此面
+idx=310019 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 
+idx=310019 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 
+idx=310020 mode=locate_only prompt=en proc=False span_ok=False judge=None out=25π
+idx=310020 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=圆的直径是10厘米，也就是说半径是10厘米。计算面积时仍取直径的一半作为半径5厘米，面积为π×5²=25π。 第一处错误：圆的直径是10厘米，也就是说半径是10厘米。计算面积时仍取
+idx=310020 mode=locate_then_judge prompt=en proc=False span_ok=False judge=None out=25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 
+idx=310020 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 
+idx=310021 mode=locate_only prompt=en proc=True span_ok=False judge=None out=25π
+idx=310021 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=圆的直径是10厘米，所以半径是10÷2=5厘米。面积公式是πr²，因此面积是π×5²=25π。 第一处错误：圆的直径是10厘米，所以半径是10÷2=5厘米。面积公式是πr²，因此面
+idx=310021 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 
+idx=310021 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 
+idx=310022 mode=locate_only prompt=en proc=False span_ok=False judge=None out=面积为π×5²=25π。 Reasoning trace: 面积为π×5²=25π。 First error: 面积为π×5²=25π。 Reasoning trace: 面积为π
+idx=310022 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=圆的直径是10厘米，也就是说半径是10厘米。计算面积时仍取直径的一半作为半径5厘米，面积为π×5²=25π。 圆的直径是10厘米，也就是说半径是10厘米。计算面积时仍取直径的一半作
+idx=310022 mode=locate_then_judge prompt=en proc=False span_ok=False judge=None out=25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 
+idx=310022 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 25π Span: 
+idx=310023 mode=locate_only prompt=en proc=True span_ok=False judge=None out=100π
+idx=310023 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=100π 第一处错误：100π 第一处错误：100π 第一处错误：100π 第一处错误：100π 第一处错误：100π 第一处错误：100π 第一处错误：100π 第一处错误：10
+idx=310023 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=100π Span: 100π Span: 100π Span: 100π Span: 100π Span: 100π Span: 100π Span: 100π Span: 10
+idx=310023 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=100π Span: 100π Span: 100π Span: 100π Span: 100π Span: 100π Span: 100π Span: 100π Span: 10
+idx=310024 mode=locate_only prompt=en proc=False span_ok=False judge=None out=100π
+idx=310024 mode=locate_only prompt=zh proc=False span_ok=True judge=None out=圆的直径是10厘米，也就是说半径是10厘米。计算面积时仍取直径的一半作为半径5厘米，面积为π×5²=25π。第一处错误：圆的直径是10厘米，也就是说半径是10厘米。计算面积时仍取直
+idx=310024 mode=locate_then_judge prompt=en proc=False span_ok=False judge=None out=100π Span: 100π Span: 100π Span: 100π Span: 100π Span: 100π Span: 100π Span: 100π Span: 10
+idx=310024 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=100π Span: 100π Span: 100π Span: 100π Span: 100π Span: 100π Span: 100π Span: 100π Span: 10
+idx=310025 mode=locate_only prompt=en proc=True span_ok=True judge=None out=None
+idx=310025 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=10 第一处错误：10 第一处错误：10 第一处错误：10 第一处错误：10 第一处错误：10 第一处错误：10 第一处错误：10 第一处错误：10 第一处错误：10 第一处错误：
+idx=310025 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 
+idx=310025 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 
+idx=310026 mode=locate_only prompt=en proc=False span_ok=False judge=None out=None
+idx=310026 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=10 第一处错误：10 第一处错误：10 第一处错误：10 第一处错误：10 第一处错误：10 第一处错误：10 第一处错误：10 第一处错误：10 第一处错误：10 第一处错误：
+idx=310026 mode=locate_then_judge prompt=en proc=False span_ok=True judge=True out=10 Process-valid: Yes Problem: 从5名学生中选2名组成不区分顺序的委员会。有多少种选法？ Reasoning trace: Because two s
+idx=310026 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 
+idx=310027 mode=locate_only prompt=en proc=True span_ok=False judge=None out=The committee is unordered, so choosing A then B is the same as choosing B then A. Compute
+idx=310027 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=The committee is unordered, so choosing A then B is the same as choosing B then A. Compute
+idx=310027 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=C(5,2) Span: 10 Span: 5 Span: 2 Span: 1 Span: 1 Span: 1 Span: 1 Span: 1 Span: 1 Span: 1 Sp
+idx=310027 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=C(5,2) Span: C(5,2) Span: C(5,2) Span: C(5,2) Span: C(5,2) Span: C(5,2) Span: C(5,2) Span:
+idx=310028 mode=locate_only prompt=en proc=False span_ok=True judge=None out=The order matters. There are 5 choices for the first student and 4 for the second, then we
+idx=310028 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=因为两个学生是选2名组成不区分顺序的委员会。有多少种选法？ 推理过程：因为两个学生是选2名组成不区分顺序的委员会。有多少种选法？ 第一处错误：因为两个学生是选2名组成不区分顺序的委
+idx=310028 mode=locate_then_judge prompt=en proc=False span_ok=True judge=None out=10 First write `Process-valid:` Problem: 从5名学生中选2名组成不区分顺序的委员会。有多少种选法？ Reasoning trace: Bec
+idx=310028 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 10 Span: 
+idx=310029 mode=locate_only prompt=en proc=True span_ok=False judge=None out=The committee is unordered, so choosing A then B is the same as choosing B then A. Compute
+idx=310029 mode=locate_only prompt=zh proc=True span_ok=False judge=None out=20 第一处错误：20 第一处错误：20 第一处错误：20 第一处错误：20 第一处错误：20 第一处错误：20 第一处错误：20 第一处错误：20 第一处错误：20 第一处错误：
+idx=310029 mode=locate_then_judge prompt=en proc=True span_ok=False judge=None out=20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 
+idx=310029 mode=locate_then_judge prompt=zh proc=True span_ok=False judge=None out=20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 
+idx=310030 mode=locate_only prompt=en proc=False span_ok=True judge=None out=The order matters. There are 5 choices for the first student and 4 for the second, then we
+idx=310030 mode=locate_only prompt=zh proc=False span_ok=False judge=None out=20 第一处错误：20 第一处错误：20 第一处错误：20 第一处错误：20 第一处错误：20 第一处错误：20 第一处错误：20 第一处错误：20 第一处错误：20 第一处错误：
+idx=310030 mode=locate_then_judge prompt=en proc=False span_ok=True judge=None out=10 Reasoning trace: Because two students are selected, the order matters. There are 5 choi
+idx=310030 mode=locate_then_judge prompt=zh proc=False span_ok=False judge=None out=20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 20 Span: 
+[2026-04-27T20:01:03] wrote results/E31_non_discount_error_span_verifier/gemma4_e4b_it_error_span_extraction_verifier.json; eval_rows=120
+SUMMARY mode=locate_only prompt=en span_acc=0.26666666666666666 invalid_hit=0.2 judge_acc=None loc_but_accept=None
+SUMMARY mode=locate_only prompt=zh span_acc=0.3 invalid_hit=0.5333333333333333 judge_acc=None loc_but_accept=None
+SUMMARY mode=locate_then_judge prompt=en span_acc=0.26666666666666666 invalid_hit=0.5333333333333333 judge_acc=0.5 loc_but_accept=0.16666666666666666
+SUMMARY mode=locate_then_judge prompt=zh span_acc=0.03333333333333333 invalid_hit=0.06666666666666667 judge_acc=1.0 loc_but_accept=0.0

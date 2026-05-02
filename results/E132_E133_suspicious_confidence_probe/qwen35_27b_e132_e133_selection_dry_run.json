@@ -1,0 +1,1841 @@
+{
+  "args": {
+    "all_layers": false,
+    "best_layer": null,
+    "data_jsonl": "/home/Awei/P02_multilingual_process_lens/data/processed/e132_suspicious_valid_controls_20260430.jsonl",
+    "device": "auto",
+    "dry_run": true,
+    "dtype": "bfloat16",
+    "hidden_layers": null,
+    "layer_window": 1,
+    "local_files_only": false,
+    "max_model_len": 8192,
+    "max_rows": 0,
+    "model_key": "qwen35_27b",
+    "out_dir": "/home/Awei/P02_multilingual_process_lens/results/E132_E133_suspicious_confidence_probe",
+    "prompt_format": "official_if_chat",
+    "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml",
+    "routes": null,
+    "rows_per_variant": 12,
+    "variants": null
+  },
+  "by_variant": {
+    "clean_valid": 12,
+    "low_conf_valid": 12,
+    "repaired_strict_invalid": 12,
+    "suspicious_valid_alternative": 12,
+    "suspicious_valid_marker": 12
+  },
+  "created_at": "2026-04-30T17:55:57",
+  "experiment": "E132_E133_dry_run",
+  "prefix_rows": 211,
+  "rows": 60,
+  "selection": [
+    {
+      "audit_idx": 1320000,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 89,
+          "detector": "completion_end",
+          "span_text": "1 meter is 100 centimeters, so 3.2 meters is 3.2*100 = 320 centimeters.\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 89,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        }
+      ],
+      "route_id": "en_en",
+      "source_task_name": "meter_centimeter",
+      "variant": "clean_valid"
+    },
+    {
+      "audit_idx": 1320001,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 4,
+          "detector": "suspicion_marker_regex",
+          "span_text": "Wait",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 131,
+          "detector": "completion_end",
+          "span_text": "Wait, let me double-check the definition: 1 meter is 100 centimeters, so 3.2 meters is 3.2*100 = 320 centimeters.\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 131,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 131,
+          "detector": "post_suspicion_window",
+          "span_text": "Wait, let me double-check the definition: 1 meter is 100 centimeters, so 3.2 meters is 3.2*100 = 320 centimeters.\nFinal answer: 320",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "en_en",
+      "source_task_name": "meter_centimeter",
+      "variant": "suspicious_valid_marker"
+    },
+    {
+      "audit_idx": 1320002,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 95,
+          "detector": "suspicion_marker_regex",
+          "span_text": "second valid check",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 218,
+          "detector": "completion_end",
+          "span_text": " centimeters.\nAs a second valid check, use the same rule from another angle: Repeating the same valid relationship gives the same result, 320.\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 218,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 218,
+          "detector": "post_suspicion_window",
+          "span_text": "second valid check, use the same rule from another angle: Repeating the same valid relationship gives the same result, 320.\nFinal answer: 320",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "en_en",
+      "source_task_name": "meter_centimeter",
+      "variant": "suspicious_valid_alternative"
+    },
+    {
+      "audit_idx": 1320003,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 19,
+          "detector": "suspicion_marker_regex",
+          "span_text": "mistaken",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 202,
+          "detector": "completion_end",
+          "span_text": "rule carefully: 1 meter is 100 centimeters, so 3.2 meters is 3.2*100 = 320 centimeters.\nEven with that caution, the computation is consistent.\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 202,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 202,
+          "detector": "post_suspicion_window",
+          "span_text": "mistaken, so I will verify the rule carefully: 1 meter is 100 centimeters, so 3.2 meters is 3.2*100 = 320 centimeters.\nEven with that caution, the computation is consistent.\nFinal answer: 320",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "en_en",
+      "source_task_name": "meter_centimeter",
+      "variant": "low_conf_valid"
+    },
+    {
+      "audit_idx": 1320004,
+      "manual_process_valid_strict": false,
+      "points": [
+        {
+          "char_end": 25,
+          "detector": "literal_error_span",
+          "span_text": "1 meter is 10 centimeters",
+          "stage": "error_span_end"
+        },
+        {
+          "char_end": 168,
+          "detector": "completion_end",
+          "span_text": "is 10 centimeters, so 3.2 meters looks like 32 centimeters. Using the centimeter scale for the requested unit gives 3.2*100 = 320 centimeters.\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 168,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 168,
+          "detector": "post_error_window",
+          "span_text": "1 meter is 10 centimeters, so 3.2 meters looks like 32 centimeters. Using the centimeter scale for the requested unit gives 3.2*100 = 320 centimeters.\nFinal answer: 320",
+          "stage": "post_error_240chars"
+        }
+      ],
+      "route_id": "en_en",
+      "source_task_name": "meter_centimeter",
+      "variant": "repaired_strict_invalid"
+    },
+    {
+      "audit_idx": 1320005,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 50,
+          "detector": "completion_end",
+          "span_text": "1米等于100厘米，所以3.2米等于3.2*100=320厘米。\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 50,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        }
+      ],
+      "route_id": "zh_zh",
+      "source_task_name": "meter_centimeter",
+      "variant": "clean_valid"
+    },
+    {
+      "audit_idx": 1320006,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 3,
+          "detector": "suspicion_marker_regex",
+          "span_text": "等一下",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 62,
+          "detector": "completion_end",
+          "span_text": "等一下，我先核对定义： 1米等于100厘米，所以3.2米等于3.2*100=320厘米。\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 62,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 62,
+          "detector": "post_suspicion_window",
+          "span_text": "等一下，我先核对定义： 1米等于100厘米，所以3.2米等于3.2*100=320厘米。\nFinal answer: 320",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "zh_zh",
+      "source_task_name": "meter_centimeter",
+      "variant": "suspicious_valid_marker"
+    },
+    {
+      "audit_idx": 1320007,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 41,
+          "detector": "suspicion_marker_regex",
+          "span_text": "换一个角度",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 133,
+          "detector": "completion_end",
+          "span_text": "1米等于100厘米，所以3.2米等于3.2*100=320厘米。\n也可以换一个角度复核同一个规则： Repeating the same valid relationship gives the same result, 320.\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 133,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 133,
+          "detector": "post_suspicion_window",
+          "span_text": "换一个角度复核同一个规则： Repeating the same valid relationship gives the same result, 320.\nFinal answer: 320",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "zh_zh",
+      "source_task_name": "meter_centimeter",
+      "variant": "suspicious_valid_alternative"
+    },
+    {
+      "audit_idx": 1320008,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 5,
+          "detector": "suspicion_marker_regex",
+          "span_text": "不太确定",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 129,
+          "detector": "completion_end",
+          "span_text": "我不太确定自己有没有看错，所以按定义逐步核对： 1米等于100厘米，所以3.2米等于3.2*100=320厘米。\nEven with that caution, the computation is consistent.\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 129,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 129,
+          "detector": "post_suspicion_window",
+          "span_text": "不太确定自己有没有看错，所以按定义逐步核对： 1米等于100厘米，所以3.2米等于3.2*100=320厘米。\nEven with that caution, the computation is consistent.\nFinal answer: 320",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "zh_zh",
+      "source_task_name": "meter_centimeter",
+      "variant": "low_conf_valid"
+    },
+    {
+      "audit_idx": 1320009,
+      "manual_process_valid_strict": false,
+      "points": [
+        {
+          "char_end": 13,
+          "detector": "first_sentence_fallback",
+          "span_text": "1米等于10厘米，所以3.",
+          "stage": "first_claim_end"
+        },
+        {
+          "char_end": 69,
+          "detector": "completion_end",
+          "span_text": "1米等于10厘米，所以3.2米看起来是32厘米。按题目要求的厘米尺度计算，3.2*100=320厘米。\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 69,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        }
+      ],
+      "route_id": "zh_zh",
+      "source_task_name": "meter_centimeter",
+      "variant": "repaired_strict_invalid"
+    },
+    {
+      "audit_idx": 1320010,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 89,
+          "detector": "completion_end",
+          "span_text": "1 meter is 100 centimeters, so 3.2 meters is 3.2*100 = 320 centimeters.\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 89,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        }
+      ],
+      "route_id": "zh_en",
+      "source_task_name": "meter_centimeter",
+      "variant": "clean_valid"
+    },
+    {
+      "audit_idx": 1320011,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 4,
+          "detector": "suspicion_marker_regex",
+          "span_text": "Wait",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 131,
+          "detector": "completion_end",
+          "span_text": "Wait, let me double-check the definition: 1 meter is 100 centimeters, so 3.2 meters is 3.2*100 = 320 centimeters.\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 131,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 131,
+          "detector": "post_suspicion_window",
+          "span_text": "Wait, let me double-check the definition: 1 meter is 100 centimeters, so 3.2 meters is 3.2*100 = 320 centimeters.\nFinal answer: 320",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "zh_en",
+      "source_task_name": "meter_centimeter",
+      "variant": "suspicious_valid_marker"
+    },
+    {
+      "audit_idx": 1320012,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 95,
+          "detector": "suspicion_marker_regex",
+          "span_text": "second valid check",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 218,
+          "detector": "completion_end",
+          "span_text": " centimeters.\nAs a second valid check, use the same rule from another angle: Repeating the same valid relationship gives the same result, 320.\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 218,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 218,
+          "detector": "post_suspicion_window",
+          "span_text": "second valid check, use the same rule from another angle: Repeating the same valid relationship gives the same result, 320.\nFinal answer: 320",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "zh_en",
+      "source_task_name": "meter_centimeter",
+      "variant": "suspicious_valid_alternative"
+    },
+    {
+      "audit_idx": 1320013,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 19,
+          "detector": "suspicion_marker_regex",
+          "span_text": "mistaken",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 202,
+          "detector": "completion_end",
+          "span_text": "rule carefully: 1 meter is 100 centimeters, so 3.2 meters is 3.2*100 = 320 centimeters.\nEven with that caution, the computation is consistent.\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 202,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 202,
+          "detector": "post_suspicion_window",
+          "span_text": "mistaken, so I will verify the rule carefully: 1 meter is 100 centimeters, so 3.2 meters is 3.2*100 = 320 centimeters.\nEven with that caution, the computation is consistent.\nFinal answer: 320",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "zh_en",
+      "source_task_name": "meter_centimeter",
+      "variant": "low_conf_valid"
+    },
+    {
+      "audit_idx": 1320014,
+      "manual_process_valid_strict": false,
+      "points": [
+        {
+          "char_end": 25,
+          "detector": "literal_error_span",
+          "span_text": "1 meter is 10 centimeters",
+          "stage": "error_span_end"
+        },
+        {
+          "char_end": 168,
+          "detector": "completion_end",
+          "span_text": "is 10 centimeters, so 3.2 meters looks like 32 centimeters. Using the centimeter scale for the requested unit gives 3.2*100 = 320 centimeters.\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 168,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 168,
+          "detector": "post_error_window",
+          "span_text": "1 meter is 10 centimeters, so 3.2 meters looks like 32 centimeters. Using the centimeter scale for the requested unit gives 3.2*100 = 320 centimeters.\nFinal answer: 320",
+          "stage": "post_error_240chars"
+        }
+      ],
+      "route_id": "zh_en",
+      "source_task_name": "meter_centimeter",
+      "variant": "repaired_strict_invalid"
+    },
+    {
+      "audit_idx": 1320015,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 50,
+          "detector": "completion_end",
+          "span_text": "1米等于100厘米，所以3.2米等于3.2*100=320厘米。\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 50,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        }
+      ],
+      "route_id": "en_zh",
+      "source_task_name": "meter_centimeter",
+      "variant": "clean_valid"
+    },
+    {
+      "audit_idx": 1320016,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 3,
+          "detector": "suspicion_marker_regex",
+          "span_text": "等一下",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 62,
+          "detector": "completion_end",
+          "span_text": "等一下，我先核对定义： 1米等于100厘米，所以3.2米等于3.2*100=320厘米。\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 62,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 62,
+          "detector": "post_suspicion_window",
+          "span_text": "等一下，我先核对定义： 1米等于100厘米，所以3.2米等于3.2*100=320厘米。\nFinal answer: 320",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "en_zh",
+      "source_task_name": "meter_centimeter",
+      "variant": "suspicious_valid_marker"
+    },
+    {
+      "audit_idx": 1320017,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 41,
+          "detector": "suspicion_marker_regex",
+          "span_text": "换一个角度",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 133,
+          "detector": "completion_end",
+          "span_text": "1米等于100厘米，所以3.2米等于3.2*100=320厘米。\n也可以换一个角度复核同一个规则： Repeating the same valid relationship gives the same result, 320.\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 133,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 133,
+          "detector": "post_suspicion_window",
+          "span_text": "换一个角度复核同一个规则： Repeating the same valid relationship gives the same result, 320.\nFinal answer: 320",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "en_zh",
+      "source_task_name": "meter_centimeter",
+      "variant": "suspicious_valid_alternative"
+    },
+    {
+      "audit_idx": 1320018,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 5,
+          "detector": "suspicion_marker_regex",
+          "span_text": "不太确定",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 129,
+          "detector": "completion_end",
+          "span_text": "我不太确定自己有没有看错，所以按定义逐步核对： 1米等于100厘米，所以3.2米等于3.2*100=320厘米。\nEven with that caution, the computation is consistent.\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 129,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 129,
+          "detector": "post_suspicion_window",
+          "span_text": "不太确定自己有没有看错，所以按定义逐步核对： 1米等于100厘米，所以3.2米等于3.2*100=320厘米。\nEven with that caution, the computation is consistent.\nFinal answer: 320",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "en_zh",
+      "source_task_name": "meter_centimeter",
+      "variant": "low_conf_valid"
+    },
+    {
+      "audit_idx": 1320019,
+      "manual_process_valid_strict": false,
+      "points": [
+        {
+          "char_end": 13,
+          "detector": "first_sentence_fallback",
+          "span_text": "1米等于10厘米，所以3.",
+          "stage": "first_claim_end"
+        },
+        {
+          "char_end": 69,
+          "detector": "completion_end",
+          "span_text": "1米等于10厘米，所以3.2米看起来是32厘米。按题目要求的厘米尺度计算，3.2*100=320厘米。\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 69,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        }
+      ],
+      "route_id": "en_zh",
+      "source_task_name": "meter_centimeter",
+      "variant": "repaired_strict_invalid"
+    },
+    {
+      "audit_idx": 1320020,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 68,
+          "detector": "completion_end",
+          "span_text": "1 meter = 100 厘米，所以 3.2 meters = 3.2*100 = 320 厘米。\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 68,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        }
+      ],
+      "route_id": "mixed",
+      "source_task_name": "meter_centimeter",
+      "variant": "clean_valid"
+    },
+    {
+      "audit_idx": 1320021,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 3,
+          "detector": "suspicion_marker_regex",
+          "span_text": "等一下",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 80,
+          "detector": "completion_end",
+          "span_text": "等一下，我先核对定义： 1 meter = 100 厘米，所以 3.2 meters = 3.2*100 = 320 厘米。\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 80,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 80,
+          "detector": "post_suspicion_window",
+          "span_text": "等一下，我先核对定义： 1 meter = 100 厘米，所以 3.2 meters = 3.2*100 = 320 厘米。\nFinal answer: 320",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "mixed",
+      "source_task_name": "meter_centimeter",
+      "variant": "suspicious_valid_marker"
+    },
+    {
+      "audit_idx": 1320022,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 59,
+          "detector": "suspicion_marker_regex",
+          "span_text": "换一个角度",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 151,
+          "detector": "completion_end",
+          "span_text": "1 meter = 100 厘米，所以 3.2 meters = 3.2*100 = 320 厘米。\n也可以换一个角度复核同一个规则： Repeating the same valid relationship gives the same result, 320.\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 151,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 151,
+          "detector": "post_suspicion_window",
+          "span_text": "换一个角度复核同一个规则： Repeating the same valid relationship gives the same result, 320.\nFinal answer: 320",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "mixed",
+      "source_task_name": "meter_centimeter",
+      "variant": "suspicious_valid_alternative"
+    },
+    {
+      "audit_idx": 1320023,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 5,
+          "detector": "suspicion_marker_regex",
+          "span_text": "不太确定",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 147,
+          "detector": "completion_end",
+          "span_text": "我不太确定自己有没有看错，所以按定义逐步核对： 1 meter = 100 厘米，所以 3.2 meters = 3.2*100 = 320 厘米。\nEven with that caution, the computation is consistent.\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 147,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 147,
+          "detector": "post_suspicion_window",
+          "span_text": "不太确定自己有没有看错，所以按定义逐步核对： 1 meter = 100 厘米，所以 3.2 meters = 3.2*100 = 320 厘米。\nEven with that caution, the computation is consistent.\nFinal answer: 320",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "mixed",
+      "source_task_name": "meter_centimeter",
+      "variant": "low_conf_valid"
+    },
+    {
+      "audit_idx": 1320024,
+      "manual_process_valid_strict": false,
+      "points": [
+        {
+          "char_end": 21,
+          "detector": "first_sentence_fallback",
+          "span_text": "1 meter = 10 厘米，所以 3.",
+          "stage": "first_claim_end"
+        },
+        {
+          "char_end": 58,
+          "detector": "repair_or_contrast_regex",
+          "span_text": "实际",
+          "stage": "repair_or_contrast_marker_end"
+        },
+        {
+          "char_end": 93,
+          "detector": "completion_end",
+          "span_text": "1 meter = 10 厘米，所以 3.2 meters 看起来是 32 厘米。按 centimeters 的实际换算，3.2*100 = 320。\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 93,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        }
+      ],
+      "route_id": "mixed",
+      "source_task_name": "meter_centimeter",
+      "variant": "repaired_strict_invalid"
+    },
+    {
+      "audit_idx": 1320025,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 73,
+          "detector": "completion_end",
+          "span_text": "1 mi shi 100 limi, suoyi 3.2 mi shi 3.2*100 = 320 limi.\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 73,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        }
+      ],
+      "route_id": "romanized_zh",
+      "source_task_name": "meter_centimeter",
+      "variant": "clean_valid"
+    },
+    {
+      "audit_idx": 1320026,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 10,
+          "detector": "suspicion_marker_regex",
+          "span_text": "Deng yixia",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 117,
+          "detector": "completion_end",
+          "span_text": "Deng yixia, rang wo zai hedui yixia dingyi: 1 mi shi 100 limi, suoyi 3.2 mi shi 3.2*100 = 320 limi.\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 117,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 117,
+          "detector": "post_suspicion_window",
+          "span_text": "Deng yixia, rang wo zai hedui yixia dingyi: 1 mi shi 100 limi, suoyi 3.2 mi shi 3.2*100 = 320 limi.\nFinal answer: 320",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "romanized_zh",
+      "source_task_name": "meter_centimeter",
+      "variant": "suspicious_valid_marker"
+    },
+    {
+      "audit_idx": 1320027,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 65,
+          "detector": "suspicion_marker_regex",
+          "span_text": "Ling yige",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 189,
+          "detector": "completion_end",
+          "span_text": "mi shi 3.2*100 = 320 limi.\nLing yige hedui fangfa ye shi kan tongyige guize: Repeating the same valid relationship gives the same result, 320.\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 189,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 189,
+          "detector": "post_suspicion_window",
+          "span_text": "Ling yige hedui fangfa ye shi kan tongyige guize: Repeating the same valid relationship gives the same result, 320.\nFinal answer: 320",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "romanized_zh",
+      "source_task_name": "meter_centimeter",
+      "variant": "suspicious_valid_alternative"
+    },
+    {
+      "audit_idx": 1320028,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 9,
+          "detector": "suspicion_marker_regex",
+          "span_text": "keneng",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 186,
+          "detector": "completion_end",
+          "span_text": "yi xian an dingyi manman hedui: 1 mi shi 100 limi, suoyi 3.2 mi shi 3.2*100 = 320 limi.\nEven with that caution, the computation is consistent.\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 186,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 186,
+          "detector": "post_suspicion_window",
+          "span_text": "keneng hui kan cuo, suoyi xian an dingyi manman hedui: 1 mi shi 100 limi, suoyi 3.2 mi shi 3.2*100 = 320 limi.\nEven with that caution, the computation is consistent.\nFinal answer: 320",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "romanized_zh",
+      "source_task_name": "meter_centimeter",
+      "variant": "low_conf_valid"
+    },
+    {
+      "audit_idx": 1320029,
+      "manual_process_valid_strict": false,
+      "points": [
+        {
+          "char_end": 26,
+          "detector": "first_sentence_fallback",
+          "span_text": "1 mi shi 10 limi, suoyi 3.",
+          "stage": "first_claim_end"
+        },
+        {
+          "char_end": 112,
+          "detector": "completion_end",
+          "span_text": "1 mi shi 10 limi, suoyi 3.2 mi kanqilai shi 32 limi. An zhengque limi huansuan, 3.2*100 = 320.\nFinal answer: 320",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 112,
+          "detector": "final_regex",
+          "span_text": "Final answer: 320",
+          "stage": "first_final_answer_end"
+        }
+      ],
+      "route_id": "romanized_zh",
+      "source_task_name": "meter_centimeter",
+      "variant": "repaired_strict_invalid"
+    },
+    {
+      "audit_idx": 1320030,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 94,
+          "detector": "completion_end",
+          "span_text": "A 25% increase adds 25% of 80, which is 20, so the new price is 80+20 = 100.\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 94,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        }
+      ],
+      "route_id": "en_en",
+      "source_task_name": "increase_base",
+      "variant": "clean_valid"
+    },
+    {
+      "audit_idx": 1320031,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 4,
+          "detector": "suspicion_marker_regex",
+          "span_text": "Wait",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 136,
+          "detector": "completion_end",
+          "span_text": "Wait, let me double-check the definition: A 25% increase adds 25% of 80, which is 20, so the new price is 80+20 = 100.\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 136,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 136,
+          "detector": "post_suspicion_window",
+          "span_text": "Wait, let me double-check the definition: A 25% increase adds 25% of 80, which is 20, so the new price is 80+20 = 100.\nFinal answer: 100",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "en_en",
+      "source_task_name": "increase_base",
+      "variant": "suspicious_valid_marker"
+    },
+    {
+      "audit_idx": 1320032,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 100,
+          "detector": "suspicion_marker_regex",
+          "span_text": "second valid check",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 223,
+          "detector": "completion_end",
+          "span_text": " 80+20 = 100.\nAs a second valid check, use the same rule from another angle: Repeating the same valid relationship gives the same result, 100.\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 223,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 223,
+          "detector": "post_suspicion_window",
+          "span_text": "second valid check, use the same rule from another angle: Repeating the same valid relationship gives the same result, 100.\nFinal answer: 100",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "en_en",
+      "source_task_name": "increase_base",
+      "variant": "suspicious_valid_alternative"
+    },
+    {
+      "audit_idx": 1320033,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 19,
+          "detector": "suspicion_marker_regex",
+          "span_text": "mistaken",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 207,
+          "detector": "completion_end",
+          "span_text": "carefully: A 25% increase adds 25% of 80, which is 20, so the new price is 80+20 = 100.\nEven with that caution, the computation is consistent.\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 207,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 207,
+          "detector": "post_suspicion_window",
+          "span_text": "mistaken, so I will verify the rule carefully: A 25% increase adds 25% of 80, which is 20, so the new price is 80+20 = 100.\nEven with that caution, the computation is consistent.\nFinal answer: 100",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "en_en",
+      "source_task_name": "increase_base",
+      "variant": "low_conf_valid"
+    },
+    {
+      "audit_idx": 1320034,
+      "manual_process_valid_strict": false,
+      "points": [
+        {
+          "char_end": 59,
+          "detector": "literal_error_span",
+          "span_text": "25% increase means the final price is 25% of the original",
+          "stage": "error_span_end"
+        },
+        {
+          "char_end": 161,
+          "detector": "completion_end",
+          "span_text": " 25% increase means the final price is 25% of the original, which would be 20. For an increase, add 25% of 80 to the original, so 80+20 = 100.\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 161,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 161,
+          "detector": "post_error_window",
+          "span_text": "25% increase means the final price is 25% of the original, which would be 20. For an increase, add 25% of 80 to the original, so 80+20 = 100.\nFinal answer: 100",
+          "stage": "post_error_240chars"
+        }
+      ],
+      "route_id": "en_en",
+      "source_task_name": "increase_base",
+      "variant": "repaired_strict_invalid"
+    },
+    {
+      "audit_idx": 1320035,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 58,
+          "detector": "completion_end",
+          "span_text": "增加25%表示加上原价80的25%，也就是20，所以新价格是80+20=100。\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 58,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        }
+      ],
+      "route_id": "zh_zh",
+      "source_task_name": "increase_base",
+      "variant": "clean_valid"
+    },
+    {
+      "audit_idx": 1320036,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 3,
+          "detector": "suspicion_marker_regex",
+          "span_text": "等一下",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 70,
+          "detector": "completion_end",
+          "span_text": "等一下，我先核对定义： 增加25%表示加上原价80的25%，也就是20，所以新价格是80+20=100。\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 70,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 70,
+          "detector": "post_suspicion_window",
+          "span_text": "等一下，我先核对定义： 增加25%表示加上原价80的25%，也就是20，所以新价格是80+20=100。\nFinal answer: 100",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "zh_zh",
+      "source_task_name": "increase_base",
+      "variant": "suspicious_valid_marker"
+    },
+    {
+      "audit_idx": 1320037,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 49,
+          "detector": "suspicion_marker_regex",
+          "span_text": "换一个角度",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 141,
+          "detector": "completion_end",
+          "span_text": "增加25%表示加上原价80的25%，也就是20，所以新价格是80+20=100。\n也可以换一个角度复核同一个规则： Repeating the same valid relationship gives the same result, 100.\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 141,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 141,
+          "detector": "post_suspicion_window",
+          "span_text": "换一个角度复核同一个规则： Repeating the same valid relationship gives the same result, 100.\nFinal answer: 100",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "zh_zh",
+      "source_task_name": "increase_base",
+      "variant": "suspicious_valid_alternative"
+    },
+    {
+      "audit_idx": 1320038,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 5,
+          "detector": "suspicion_marker_regex",
+          "span_text": "不太确定",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 137,
+          "detector": "completion_end",
+          "span_text": "我不太确定自己有没有看错，所以按定义逐步核对： 增加25%表示加上原价80的25%，也就是20，所以新价格是80+20=100。\nEven with that caution, the computation is consistent.\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 137,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 137,
+          "detector": "post_suspicion_window",
+          "span_text": "不太确定自己有没有看错，所以按定义逐步核对： 增加25%表示加上原价80的25%，也就是20，所以新价格是80+20=100。\nEven with that caution, the computation is consistent.\nFinal answer: 100",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "zh_zh",
+      "source_task_name": "increase_base",
+      "variant": "low_conf_valid"
+    },
+    {
+      "audit_idx": 1320039,
+      "manual_process_valid_strict": false,
+      "points": [
+        {
+          "char_end": 25,
+          "detector": "first_sentence_fallback",
+          "span_text": "增加25%表示最终价格是原价的25%，也就是20。",
+          "stage": "first_claim_end"
+        },
+        {
+          "char_end": 73,
+          "detector": "completion_end",
+          "span_text": "增加25%表示最终价格是原价的25%，也就是20。作为增加，应把80的25%加回原价，所以80+20=100。\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 73,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        }
+      ],
+      "route_id": "zh_zh",
+      "source_task_name": "increase_base",
+      "variant": "repaired_strict_invalid"
+    },
+    {
+      "audit_idx": 1320040,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 94,
+          "detector": "completion_end",
+          "span_text": "A 25% increase adds 25% of 80, which is 20, so the new price is 80+20 = 100.\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 94,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        }
+      ],
+      "route_id": "zh_en",
+      "source_task_name": "increase_base",
+      "variant": "clean_valid"
+    },
+    {
+      "audit_idx": 1320041,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 4,
+          "detector": "suspicion_marker_regex",
+          "span_text": "Wait",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 136,
+          "detector": "completion_end",
+          "span_text": "Wait, let me double-check the definition: A 25% increase adds 25% of 80, which is 20, so the new price is 80+20 = 100.\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 136,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 136,
+          "detector": "post_suspicion_window",
+          "span_text": "Wait, let me double-check the definition: A 25% increase adds 25% of 80, which is 20, so the new price is 80+20 = 100.\nFinal answer: 100",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "zh_en",
+      "source_task_name": "increase_base",
+      "variant": "suspicious_valid_marker"
+    },
+    {
+      "audit_idx": 1320042,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 100,
+          "detector": "suspicion_marker_regex",
+          "span_text": "second valid check",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 223,
+          "detector": "completion_end",
+          "span_text": " 80+20 = 100.\nAs a second valid check, use the same rule from another angle: Repeating the same valid relationship gives the same result, 100.\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 223,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 223,
+          "detector": "post_suspicion_window",
+          "span_text": "second valid check, use the same rule from another angle: Repeating the same valid relationship gives the same result, 100.\nFinal answer: 100",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "zh_en",
+      "source_task_name": "increase_base",
+      "variant": "suspicious_valid_alternative"
+    },
+    {
+      "audit_idx": 1320043,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 19,
+          "detector": "suspicion_marker_regex",
+          "span_text": "mistaken",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 207,
+          "detector": "completion_end",
+          "span_text": "carefully: A 25% increase adds 25% of 80, which is 20, so the new price is 80+20 = 100.\nEven with that caution, the computation is consistent.\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 207,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 207,
+          "detector": "post_suspicion_window",
+          "span_text": "mistaken, so I will verify the rule carefully: A 25% increase adds 25% of 80, which is 20, so the new price is 80+20 = 100.\nEven with that caution, the computation is consistent.\nFinal answer: 100",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "zh_en",
+      "source_task_name": "increase_base",
+      "variant": "low_conf_valid"
+    },
+    {
+      "audit_idx": 1320044,
+      "manual_process_valid_strict": false,
+      "points": [
+        {
+          "char_end": 59,
+          "detector": "literal_error_span",
+          "span_text": "25% increase means the final price is 25% of the original",
+          "stage": "error_span_end"
+        },
+        {
+          "char_end": 161,
+          "detector": "completion_end",
+          "span_text": " 25% increase means the final price is 25% of the original, which would be 20. For an increase, add 25% of 80 to the original, so 80+20 = 100.\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 161,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 161,
+          "detector": "post_error_window",
+          "span_text": "25% increase means the final price is 25% of the original, which would be 20. For an increase, add 25% of 80 to the original, so 80+20 = 100.\nFinal answer: 100",
+          "stage": "post_error_240chars"
+        }
+      ],
+      "route_id": "zh_en",
+      "source_task_name": "increase_base",
+      "variant": "repaired_strict_invalid"
+    },
+    {
+      "audit_idx": 1320045,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 58,
+          "detector": "completion_end",
+          "span_text": "增加25%表示加上原价80的25%，也就是20，所以新价格是80+20=100。\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 58,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        }
+      ],
+      "route_id": "en_zh",
+      "source_task_name": "increase_base",
+      "variant": "clean_valid"
+    },
+    {
+      "audit_idx": 1320046,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 3,
+          "detector": "suspicion_marker_regex",
+          "span_text": "等一下",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 70,
+          "detector": "completion_end",
+          "span_text": "等一下，我先核对定义： 增加25%表示加上原价80的25%，也就是20，所以新价格是80+20=100。\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 70,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 70,
+          "detector": "post_suspicion_window",
+          "span_text": "等一下，我先核对定义： 增加25%表示加上原价80的25%，也就是20，所以新价格是80+20=100。\nFinal answer: 100",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "en_zh",
+      "source_task_name": "increase_base",
+      "variant": "suspicious_valid_marker"
+    },
+    {
+      "audit_idx": 1320047,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 49,
+          "detector": "suspicion_marker_regex",
+          "span_text": "换一个角度",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 141,
+          "detector": "completion_end",
+          "span_text": "增加25%表示加上原价80的25%，也就是20，所以新价格是80+20=100。\n也可以换一个角度复核同一个规则： Repeating the same valid relationship gives the same result, 100.\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 141,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 141,
+          "detector": "post_suspicion_window",
+          "span_text": "换一个角度复核同一个规则： Repeating the same valid relationship gives the same result, 100.\nFinal answer: 100",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "en_zh",
+      "source_task_name": "increase_base",
+      "variant": "suspicious_valid_alternative"
+    },
+    {
+      "audit_idx": 1320048,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 5,
+          "detector": "suspicion_marker_regex",
+          "span_text": "不太确定",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 137,
+          "detector": "completion_end",
+          "span_text": "我不太确定自己有没有看错，所以按定义逐步核对： 增加25%表示加上原价80的25%，也就是20，所以新价格是80+20=100。\nEven with that caution, the computation is consistent.\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 137,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 137,
+          "detector": "post_suspicion_window",
+          "span_text": "不太确定自己有没有看错，所以按定义逐步核对： 增加25%表示加上原价80的25%，也就是20，所以新价格是80+20=100。\nEven with that caution, the computation is consistent.\nFinal answer: 100",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "en_zh",
+      "source_task_name": "increase_base",
+      "variant": "low_conf_valid"
+    },
+    {
+      "audit_idx": 1320049,
+      "manual_process_valid_strict": false,
+      "points": [
+        {
+          "char_end": 25,
+          "detector": "first_sentence_fallback",
+          "span_text": "增加25%表示最终价格是原价的25%，也就是20。",
+          "stage": "first_claim_end"
+        },
+        {
+          "char_end": 73,
+          "detector": "completion_end",
+          "span_text": "增加25%表示最终价格是原价的25%，也就是20。作为增加，应把80的25%加回原价，所以80+20=100。\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 73,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        }
+      ],
+      "route_id": "en_zh",
+      "source_task_name": "increase_base",
+      "variant": "repaired_strict_invalid"
+    },
+    {
+      "audit_idx": 1320050,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 84,
+          "detector": "completion_end",
+          "span_text": "25% increase means add 25% of 80，也就是20，所以 new price = 80+20 = 100。\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 84,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        }
+      ],
+      "route_id": "mixed",
+      "source_task_name": "increase_base",
+      "variant": "clean_valid"
+    },
+    {
+      "audit_idx": 1320051,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 3,
+          "detector": "suspicion_marker_regex",
+          "span_text": "等一下",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 96,
+          "detector": "completion_end",
+          "span_text": "等一下，我先核对定义： 25% increase means add 25% of 80，也就是20，所以 new price = 80+20 = 100。\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 96,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 96,
+          "detector": "post_suspicion_window",
+          "span_text": "等一下，我先核对定义： 25% increase means add 25% of 80，也就是20，所以 new price = 80+20 = 100。\nFinal answer: 100",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "mixed",
+      "source_task_name": "increase_base",
+      "variant": "suspicious_valid_marker"
+    },
+    {
+      "audit_idx": 1320052,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 75,
+          "detector": "suspicion_marker_regex",
+          "span_text": "换一个角度",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 167,
+          "detector": "completion_end",
+          "span_text": "rease means add 25% of 80，也就是20，所以 new price = 80+20 = 100。\n也可以换一个角度复核同一个规则： Repeating the same valid relationship gives the same result, 100.\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 167,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 167,
+          "detector": "post_suspicion_window",
+          "span_text": "换一个角度复核同一个规则： Repeating the same valid relationship gives the same result, 100.\nFinal answer: 100",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "mixed",
+      "source_task_name": "increase_base",
+      "variant": "suspicious_valid_alternative"
+    },
+    {
+      "audit_idx": 1320053,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 5,
+          "detector": "suspicion_marker_regex",
+          "span_text": "不太确定",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 163,
+          "detector": "completion_end",
+          "span_text": "确定自己有没有看错，所以按定义逐步核对： 25% increase means add 25% of 80，也就是20，所以 new price = 80+20 = 100。\nEven with that caution, the computation is consistent.\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 163,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 163,
+          "detector": "post_suspicion_window",
+          "span_text": "不太确定自己有没有看错，所以按定义逐步核对： 25% increase means add 25% of 80，也就是20，所以 new price = 80+20 = 100。\nEven with that caution, the computation is consistent.\nFinal answer: 100",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "mixed",
+      "source_task_name": "increase_base",
+      "variant": "low_conf_valid"
+    },
+    {
+      "audit_idx": 1320054,
+      "manual_process_valid_strict": false,
+      "points": [
+        {
+          "char_end": 50,
+          "detector": "first_sentence_fallback",
+          "span_text": "25% increase means final price is 25% of 80，也就是20。",
+          "stage": "first_claim_end"
+        },
+        {
+          "char_end": 53,
+          "detector": "repair_or_contrast_regex",
+          "span_text": "But",
+          "stage": "repair_or_contrast_marker_end"
+        },
+        {
+          "char_end": 103,
+          "detector": "completion_end",
+          "span_text": "25% increase means final price is 25% of 80，也就是20。But increase 要加到原价上，所以 80+20 = 100。\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 103,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        }
+      ],
+      "route_id": "mixed",
+      "source_task_name": "increase_base",
+      "variant": "repaired_strict_invalid"
+    },
+    {
+      "audit_idx": 1320055,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 95,
+          "detector": "completion_end",
+          "span_text": "zengjia 25% shi jia shang 80 de 25%, yejiu shi 20, suoyi xin jiage 80+20=100.\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 95,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        }
+      ],
+      "route_id": "romanized_zh",
+      "source_task_name": "increase_base",
+      "variant": "clean_valid"
+    },
+    {
+      "audit_idx": 1320056,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 10,
+          "detector": "suspicion_marker_regex",
+          "span_text": "Deng yixia",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 139,
+          "detector": "completion_end",
+          "span_text": "Deng yixia, rang wo zai hedui yixia dingyi: zengjia 25% shi jia shang 80 de 25%, yejiu shi 20, suoyi xin jiage 80+20=100.\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 139,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 139,
+          "detector": "post_suspicion_window",
+          "span_text": "Deng yixia, rang wo zai hedui yixia dingyi: zengjia 25% shi jia shang 80 de 25%, yejiu shi 20, suoyi xin jiage 80+20=100.\nFinal answer: 100",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "romanized_zh",
+      "source_task_name": "increase_base",
+      "variant": "suspicious_valid_marker"
+    },
+    {
+      "audit_idx": 1320057,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 87,
+          "detector": "suspicion_marker_regex",
+          "span_text": "Ling yige",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 211,
+          "detector": "completion_end",
+          "span_text": "suoyi xin jiage 80+20=100.\nLing yige hedui fangfa ye shi kan tongyige guize: Repeating the same valid relationship gives the same result, 100.\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 211,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 211,
+          "detector": "post_suspicion_window",
+          "span_text": "Ling yige hedui fangfa ye shi kan tongyige guize: Repeating the same valid relationship gives the same result, 100.\nFinal answer: 100",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "romanized_zh",
+      "source_task_name": "increase_base",
+      "variant": "suspicious_valid_alternative"
+    },
+    {
+      "audit_idx": 1320058,
+      "manual_process_valid_strict": true,
+      "points": [
+        {
+          "char_end": 9,
+          "detector": "suspicion_marker_regex",
+          "span_text": "keneng",
+          "stage": "suspicion_marker_end"
+        },
+        {
+          "char_end": 208,
+          "detector": "completion_end",
+          "span_text": "an hedui: zengjia 25% shi jia shang 80 de 25%, yejiu shi 20, suoyi xin jiage 80+20=100.\nEven with that caution, the computation is consistent.\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 208,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        },
+        {
+          "char_end": 208,
+          "detector": "post_suspicion_window",
+          "span_text": "keneng hui kan cuo, suoyi xian an dingyi manman hedui: zengjia 25% shi jia shang 80 de 25%, yejiu shi 20, suoyi xin jiage 80+20=100.\nEven with that caution, the computation is consistent.\nFinal answer: 100",
+          "stage": "post_suspicion_240chars"
+        }
+      ],
+      "route_id": "romanized_zh",
+      "source_task_name": "increase_base",
+      "variant": "low_conf_valid"
+    },
+    {
+      "audit_idx": 1320059,
+      "manual_process_valid_strict": false,
+      "points": [
+        {
+          "char_end": 65,
+          "detector": "first_sentence_fallback",
+          "span_text": "zengjia 25% shi zuihou jiage dengyu yuanjia de 25%, yejiu shi 20.",
+          "stage": "first_claim_end"
+        },
+        {
+          "char_end": 72,
+          "detector": "repair_or_contrast_regex",
+          "span_text": "Danshi",
+          "stage": "repair_or_contrast_marker_end"
+        },
+        {
+          "char_end": 136,
+          "detector": "completion_end",
+          "span_text": "zengjia 25% shi zuihou jiage dengyu yuanjia de 25%, yejiu shi 20. Danshi zengjia yao jia hui yuanjia, suoyi 80+20=100.\nFinal answer: 100",
+          "stage": "completion_end"
+        },
+        {
+          "char_end": 136,
+          "detector": "final_regex",
+          "span_text": "Final answer: 100",
+          "stage": "first_final_answer_end"
+        }
+      ],
+      "route_id": "romanized_zh",
+      "source_task_name": "increase_base",
+      "variant": "repaired_strict_invalid"
+    }
+  ]
+}

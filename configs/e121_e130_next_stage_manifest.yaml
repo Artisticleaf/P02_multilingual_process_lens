@@ -1,0 +1,132 @@
+created_at: "2026-04-30"
+scope: "Top-tier next-stage experiments after E106-E120"
+mode_boundary:
+  DV: "direct/non-thinking verifier; first-token logprob or short direct answer"
+  TV: "thinking verifier; full generated judgment and parsed final decision"
+  NG: "non-thinking natural generation"
+  TG: "thinking natural generation"
+  MI_DV: "mechanistic inspection under direct/non-thinking verifier replay"
+  MI_TG: "mechanistic inspection under thinking trace replay"
+  PM: "post-hoc simulation, statistics, or audit"
+claim_boundary_zh: "受控 strict ACPI 风险稳健；自然 unrepaired ACPI 低频但真实；hidden activation 有过程有效性证据，但它与 confidence/readout/stop signal 缠绕，仍需更强的 thinking、自然扩样和因果干预证据。"
+experiments:
+  - id: E121
+    title: "Thinking verifier objective ladder"
+    mode: TV
+    purpose_zh: "确认 direct verifier 的 ACPI over-accept 是否在 thinking verifier 最终判定中仍然存在。"
+    input_pool:
+      - E61_language_error_grid
+      - E71_repair_boundary
+      - E82_unrepaired_case_ablation
+    implementation_zh: "对 controlled valid/ACPI trace 生成完整 thinking 判断，解析最终 Yes/No；不能使用首 token logprob。"
+    expected_signal_zh: "若 TV 仍接受 unrepaired ACPI，说明风险不是 direct-readout 特例；若 TV 修复，说明 thinking objective 可缓解但要付出收口/成本代价。"
+    leakage_controls:
+      - "prompt contains only problem and visible trace"
+      - "manual labels used only offline"
+  - id: E122
+    title: "Thinking sibling and label-free verifier"
+    mode: TV
+    purpose_zh: "检查 sibling/label-free 在 thinking final decision 下是否仍暴露过程错误，尤其复查 GLM raw A/B bottleneck。"
+    input_pool:
+      - E61_pairs
+      - E86_algebra_equivalence
+      - E82_unrepaired_cases
+    implementation_zh: "A/B、反向顺序、First/Second、label-free two-pass 都生成完整 thinking 判定，解析最终选择。"
+    expected_signal_zh: "如果 label-free 仍强而 raw A/B 弱，GLM 的问题更像 output-label/readout bottleneck，而不是不会推理。"
+    leakage_controls:
+      - "no gold label in prompt"
+      - "counterbalanced order"
+  - id: E123
+    title: "Process vs confidence vs stop disentanglement"
+    mode: MI_DV
+    purpose_zh: "回答“模型意识到错误”和“低置信度”是否只是同一件事，同时把 stop/commit signal 与 process-validity signal 分开。"
+    input_pool:
+      - E61_controlled_grid
+      - E106_E114_outputs
+      - E116_E118_stop_points
+    implementation_zh: "confidence-matched pairs、entropy controls、final-answer anchor controls、stop-score controls、置换检验。"
+    expected_signal_zh: "希望证明 process score 在控制 confidence/entropy/stop 后仍有增量；若没有，则如实把 claim 收窄为 confidence-entangled process evidence。"
+    leakage_controls:
+      - "all controls are post-hoc grouping"
+  - id: E124
+    title: "Layer/component causal intervention sweep"
+    mode: MI_DV
+    purpose_zh: "把 hidden probe 从相关性推进到更强因果证据。"
+    input_pool:
+      - E61_controlled_grid
+      - E82_unrepaired_cases
+      - E84_GLM_readout
+    implementation_zh: "按 layer、residual/MLP/token-mixer/attention output 做 alpha sweep；同时记录 Yes/No logits、A/B logits、hidden gate decision。"
+    expected_signal_zh: "找出哪些组件能稳定改变 verifier 决策，哪些只改变 confidence，不改变 process decision。"
+    leakage_controls:
+      - "intervention direction trained on disjoint task families"
+  - id: E125
+    title: "Natural hard-task prevalence expansion"
+    mode: NG
+    purpose_zh: "收窄自然 unrepaired ACPI 的置信区间，避免只靠 discount 或单一二次型个案。"
+    input_pool:
+      - E119_current_queue
+      - future_AIME24_25_AMC_code_table_unit
+    implementation_zh: "final-correct harvesting 后人工/agent 双审 strict-valid、repaired ACPI、unrepaired ACPI。"
+    expected_signal_zh: "即使 unrepaired 低频，也要给出可信 CI；如果只在 answer-first 出现，则把 claim 写成 prompt-policy-conditioned risk。"
+    leakage_controls:
+      - "no gold answer or trap note in prompt"
+  - id: E126
+    title: "Activation-induced and activation-reduced ACPI"
+    mode: MI_DV
+    purpose_zh: "测试直接作用于 hidden activation 是否能诱发或降低 ACPI-like 接受风险。"
+    input_pool:
+      - E61_valid_invalid_pairs
+      - E119_final_correct_rows_after_audit
+    implementation_zh: "在 verifier replay 或 short generation 里注入 process-invalid/process-valid/stop directions，观察 accept、final answer、local step validity。"
+    expected_signal_zh: "若 valid trace 被推向 invalid accept 或 invalid trace 被推向 reject，因果链更强；若只影响置信度，则机制 claim 需收窄。"
+    leakage_controls:
+      - "directions trained on held-out families"
+  - id: E127
+    title: "Training-filter simulation with hidden gate"
+    mode: PM
+    purpose_zh: "模拟 outcome-only、absolute、strict、repair-aware、sibling、hidden-gated 筛选器会如何放大或抑制 ACPI。"
+    input_pool:
+      - E57
+      - E88
+      - E119
+      - E61_controlled
+    implementation_zh: "按 strict/repaired/unrepaired、model、task、prompt variant 汇总 retention rate 与 Wilson CI。"
+    expected_signal_zh: "证明风险不是单次 verifier 错误，而是数据筛选目标会系统性改变 trace 分布。"
+    leakage_controls:
+      - "source experiment mode labels preserved"
+  - id: E128
+    title: "Human audit reliability and adjudication"
+    mode: PM
+    purpose_zh: "让人工审计本身达到论文附录标准。"
+    input_pool:
+      - E57_manual_audit
+      - E88_manual_audit
+      - E119_audit_sheet
+    implementation_zh: "双审抽样、冲突记录、strict vs repair-aware 判定指南、错误 span 二次核对。"
+    expected_signal_zh: "给出 process-validity 标签可靠性，避免 reviewer 质疑人工标签任意性。"
+    leakage_controls:
+      - "audit guide excludes model identity when possible"
+  - id: E129
+    title: "Cross-family and new-model replication"
+    mode: DV
+    purpose_zh: "证明现象不是 Qwen/Gemma/GLM 单一生态的偶然。"
+    input_pool:
+      - E61_subset
+      - E119_subset
+    implementation_zh: "在可运行的新中型开源模型上 smoke，再复制 E61/E114/E121 的小核心指标。"
+    expected_signal_zh: "若复制成功，claim 泛化性更强；若失败，也能明确模型能力/训练风格边界。"
+    leakage_controls:
+      - "same official prompt templates per model family"
+  - id: E130
+    title: "Trace-as-proof vs trace-as-draft policy study"
+    mode: TV
+    purpose_zh: "把 strict ACPI 与 repair-aware ACPI 的评价口径形式化，回应 CoT 是否应被当成草稿的问题。"
+    input_pool:
+      - repaired_ACPI_cases
+      - unrepaired_ACPI_cases
+      - valid_self_correction_cases
+    implementation_zh: "设计 strict proof、final surviving proof、repair-aware draft 三套 rubric，让 verifier 生成最终判定和理由。"
+    expected_signal_zh: "如果模型在 draft rubric 下接受 repaired trace，在 proof rubric 下拒绝，说明不是不会检查，而是评价口径不同。"
+    leakage_controls:
+      - "rubric disclosed, labels hidden"

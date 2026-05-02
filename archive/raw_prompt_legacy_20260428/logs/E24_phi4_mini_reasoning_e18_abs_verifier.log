@@ -1,0 +1,10 @@
+[2026-04-27T13:05:46] loading tokenizer: phi4_mini_reasoning -> /home/Awei/LLM/Model/base/phi4_mini_reasoning
+[transformers] This model config has set a `rope_parameters['original_max_position_embeddings']` field, to be used together with `max_position_embeddings` to determine a scaling factor. Please set the `factor` field of `rope_parameters`with this ratio instead -- we recommend the use of this field over `original_max_position_embeddings`, as it is compatible with most model architectures.
+[2026-04-27T13:05:47] loading model dtype=bfloat16 device=cuda
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/194 [00:00<?, ?it/s]Loading weights: 100%|██████████| 194/194 [00:00<00:00, 16444.93it/s]
+[2026-04-27T13:06:10] wrote /home/Awei/P02_multilingual_process_lens/results/E24_s4_absolute_verifier_e18_targeted/phi4_mini_reasoning_manual_trace_verifier.json; eval_rows=128
+SUMMARY model=phi4_mini_reasoning mode=process_only prompt=en acc=0.750 false_accept=1.0 proc_inv_false_accept=1.0
+SUMMARY model=phi4_mini_reasoning mode=process_only prompt=zh acc=0.750 false_accept=1.0 proc_inv_false_accept=1.0
+SUMMARY model=phi4_mini_reasoning mode=training_candidate prompt=en acc=0.594 false_accept=0.8571428571428571 proc_inv_false_accept=0.75
+SUMMARY model=phi4_mini_reasoning mode=training_candidate prompt=zh acc=0.531 false_accept=0.9285714285714286 proc_inv_false_accept=0.875

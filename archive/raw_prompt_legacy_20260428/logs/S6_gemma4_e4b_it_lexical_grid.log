@@ -1,0 +1,3 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/2076 [00:00<?, ?it/s]Loading weights:  67%|██████▋   | 1382/2076 [00:00<00:00, 13816.16it/s]Loading weights: 100%|██████████| 2076/2076 [00:00<00:00, 14054.33it/s]
+wrote /home/Awei/P02_multilingual_process_lens/data/raw/s6_lexical_grid_trace_pool/gemma4_e4b_it_trace_pool_smoke_v2_s6_lexical_grid.json; rows=48

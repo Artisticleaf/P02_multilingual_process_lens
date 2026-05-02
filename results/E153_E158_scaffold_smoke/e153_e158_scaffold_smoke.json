@@ -1,0 +1,49 @@
+{
+  "by_family": {
+    "algebra_sign_factor": 2,
+    "causal_counterfactual": 2,
+    "code_boundary": 2,
+    "counting_invariant": 2,
+    "geometry_constraints": 2,
+    "graph_path_constraints": 2,
+    "multilingual_semantic": 2,
+    "optimization_constraints": 2,
+    "probability_conditioning": 2,
+    "proof_validity": 2,
+    "recurrence_dp": 2,
+    "set_venn": 2,
+    "string_regex_parsing": 2,
+    "table_aggregation": 2,
+    "temporal_order": 2,
+    "unit_percentage": 2
+  },
+  "error_finding_prompt_variants": [
+    "find_problem_global",
+    "find_problem_localize_only"
+  ],
+  "failures": [],
+  "first_error_prompt": "You are checking a proposed solution. Do not solve from scratch unless needed. State whether the proposed solution contains a wrong reasoning step. Use this exact final block:\nERROR: Yes or No\nLOCATION: <short quote or NONE>\nREASON: <one sentence>\n\nProblem: Find the number of ordered integer pairs (x,y), with -100 <= x,y <= 100, satisfying 12x^2 - xy - 6y^2 = 0.\nProposed solution:\nFactor 12x^2 - xy - 6y^2 as (3x-2y)(4x+3y). Thus y=3x/2 or y=-4x/3. Counting integer pairs in the symmetric box gives 117. Final answer: 117",
+  "first_generation_prompt": "Solve the following difficult problem carefully. Show the reasoning needed to justify the result. Do not give the final answer before the reasoning. End with exactly one line `Final answer: <answer>`.\n\nProblem: Find the number of ordered integer pairs (x,y), with -100 <= x,y <= 100, satisfying 12x^2 - xy - 6y^2 = 0.",
+  "first_solution": {
+    "candidate_variant": "invalid_reference",
+    "manual_error_span": "(3x-2y)(4x+3y)",
+    "manual_process_valid_strict": false,
+    "solution_id": "e153_algebra_sign_factor_01_invalid_reference"
+  },
+  "first_task": {
+    "family": "algebra_sign_factor",
+    "gold_answer": "117",
+    "problem": "Find the number of ordered integer pairs (x,y), with -100 <= x,y <= 100, satisfying 12x^2 - xy - 6y^2 = 0.",
+    "task_id": "e153_algebra_sign_factor_01"
+  },
+  "generation_prompt_variants": [
+    "solve_neutral",
+    "solve_self_check",
+    "solve_terse"
+  ],
+  "passed": true,
+  "solution_bank": "data/processed/e153_candidate_solution_bank_20260501.jsonl",
+  "solutions": 64,
+  "task_bank": "data/processed/e153_difficult_scenario_tasks_20260501.jsonl",
+  "tasks": 32
+}

@@ -1,0 +1,68 @@
+pairs:
+- id: e59c_gemma4_26b_a4b_it_coefficient_vs_exponent
+  task_id: coefficient_vs_exponent
+  source_model_key: gemma4_26b_a4b_it
+  bad_idx: 590301
+  valid_idx: 590300
+  problem: In the term 5x^3, what is the coefficient of x^3?
+- id: e59c_gemma4_26b_a4b_it_each_vs_total
+  task_id: each_vs_total
+  source_model_key: gemma4_26b_a4b_it
+  bad_idx: 590311
+  valid_idx: 590310
+  problem: Four students each read 6 pages. How many pages did they read in total?
+- id: e59c_gemma4_26b_a4b_it_log_base_argument
+  task_id: log_base_argument
+  source_model_key: gemma4_26b_a4b_it
+  bad_idx: 590321
+  valid_idx: 590320
+  problem: What is log base 2 of 8?
+- id: e59c_gemma4_26b_a4b_it_mean_vs_median
+  task_id: mean_vs_median
+  source_model_key: gemma4_26b_a4b_it
+  bad_idx: 590331
+  valid_idx: 590330
+  problem: For the numbers 2, 4, and 9, what is the mean?
+- id: e59c_gemma4_26b_a4b_it_prob_without_replacement
+  task_id: prob_without_replacement
+  source_model_key: gemma4_26b_a4b_it
+  bad_idx: 590341
+  valid_idx: 590340
+  problem: A bag has 3 red balls and 2 blue balls. Two balls are drawn without replacement.
+    What is the probability both are red?
+- id: e59c_gemma4_26b_a4b_it_range_vs_average
+  task_id: range_vs_average
+  source_model_key: gemma4_26b_a4b_it
+  bad_idx: 590351
+  valid_idx: 590350
+  problem: For the numbers 3, 7, and 10, what is the range?
+- id: e59c_gemma4_26b_a4b_it_reciprocal_vs_additive_inverse
+  task_id: reciprocal_vs_additive_inverse
+  source_model_key: gemma4_26b_a4b_it
+  bad_idx: 590361
+  valid_idx: 590360
+  problem: What is the reciprocal of 4?
+- id: e59c_gemma4_26b_a4b_it_round_vs_truncate
+  task_id: round_vs_truncate
+  source_model_key: gemma4_26b_a4b_it
+  bad_idx: 590371
+  valid_idx: 590370
+  problem: Round 4.67 to the nearest tenth.
+- id: e59c_gemma4_26b_a4b_it_zh_exclusive_interval
+  task_id: zh_exclusive_interval
+  source_model_key: gemma4_26b_a4b_it
+  bad_idx: 590381
+  valid_idx: 590380
+  problem: 一个整数大于2且小于6。它有多少个可能取值？
+- id: e59c_gemma4_26b_a4b_it_zh_perimeter_vs_area
+  task_id: zh_perimeter_vs_area
+  source_model_key: gemma4_26b_a4b_it
+  bad_idx: 590391
+  valid_idx: 590390
+  problem: 一个长方形长8厘米、宽3厘米。它的周长是多少厘米？
+- id: e59c_gemma4_26b_a4b_it_zh_yi_wan_unit
+  task_id: zh_yi_wan_unit
+  source_model_key: gemma4_26b_a4b_it
+  bad_idx: 590401
+  valid_idx: 590400
+  problem: 0.3亿等于多少万？

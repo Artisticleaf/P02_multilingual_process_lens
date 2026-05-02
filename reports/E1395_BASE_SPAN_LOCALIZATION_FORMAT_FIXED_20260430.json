@@ -1,0 +1,521 @@
+{
+  "experiment": "E1395_base_span_localization_format_fixed",
+  "created_at": "2026-04-30T21:45:00",
+  "models": {
+    "qwen35_27b": {
+      "summary": {
+        "all": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 0.9166666666666666,
+          "invalid_n": 12,
+          "invalid_span_hit_rate": 0.9166666666666666,
+          "n": 48,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 36,
+          "valid_no_error_rate": 1.0
+        },
+        "family=percentage_base": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 0.9166666666666666,
+          "invalid_n": 12,
+          "invalid_span_hit_rate": 0.9166666666666666,
+          "n": 48,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 36,
+          "valid_no_error_rate": 1.0
+        },
+        "prompt=base_span_only": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 1.0,
+          "invalid_n": 4,
+          "invalid_span_hit_rate": 1.0,
+          "n": 16,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 12,
+          "valid_no_error_rate": 1.0
+        },
+        "prompt=direct_json_final_only": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 0.75,
+          "invalid_n": 4,
+          "invalid_span_hit_rate": 0.75,
+          "n": 16,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 12,
+          "valid_no_error_rate": 1.0
+        },
+        "prompt=strong_span_only": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 1.0,
+          "invalid_n": 4,
+          "invalid_span_hit_rate": 1.0,
+          "n": 16,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 12,
+          "valid_no_error_rate": 1.0
+        },
+        "route=en_en": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 1.0,
+          "invalid_n": 3,
+          "invalid_span_hit_rate": 1.0,
+          "n": 12,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 9,
+          "valid_no_error_rate": 1.0
+        },
+        "route=mixed": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 0.6666666666666666,
+          "invalid_n": 3,
+          "invalid_span_hit_rate": 0.6666666666666666,
+          "n": 12,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 9,
+          "valid_no_error_rate": 1.0
+        },
+        "route=romanized_zh": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 1.0,
+          "invalid_n": 3,
+          "invalid_span_hit_rate": 1.0,
+          "n": 12,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 9,
+          "valid_no_error_rate": 1.0
+        },
+        "route=zh_en": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 1.0,
+          "invalid_n": 3,
+          "invalid_span_hit_rate": 1.0,
+          "n": 12,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 9,
+          "valid_no_error_rate": 1.0
+        },
+        "source=strict_invalid_failure": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 0.9166666666666666,
+          "invalid_n": 12,
+          "invalid_span_hit_rate": 0.9166666666666666,
+          "n": 12,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": null,
+          "valid_n": 0,
+          "valid_no_error_rate": null
+        },
+        "source=valid_control::clean_valid": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": null,
+          "invalid_n": 0,
+          "invalid_span_hit_rate": null,
+          "n": 12,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 12,
+          "valid_no_error_rate": 1.0
+        },
+        "source=valid_control::low_conf_valid": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": null,
+          "invalid_n": 0,
+          "invalid_span_hit_rate": null,
+          "n": 12,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 12,
+          "valid_no_error_rate": 1.0
+        },
+        "source=valid_control::suspicious_valid_marker": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": null,
+          "invalid_n": 0,
+          "invalid_span_hit_rate": null,
+          "n": 12,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 12,
+          "valid_no_error_rate": 1.0
+        }
+      },
+      "args": {
+        "control_variants": "clean_valid,suspicious_valid_marker,low_conf_valid",
+        "data_jsonl": "/home/Awei/P02_multilingual_process_lens/data/processed/e132_suspicious_valid_controls_20260430.jsonl",
+        "device": "auto",
+        "dry_run": false,
+        "dtype": "bfloat16",
+        "e136_result": "",
+        "local_files_only": true,
+        "max_input_tokens": 6144,
+        "max_jobs": 0,
+        "max_new_tokens": 160,
+        "max_time": 45.0,
+        "model_key": "qwen35_27b",
+        "no_stop_at_first_answer": false,
+        "out_dir": "results/E1395_base_span_localization_format_fixed",
+        "prompt_variants": "base_span_only,strong_span_only,direct_json_final_only",
+        "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml"
+      },
+      "source_e136_result": "results/E136_suspicious_confidence_adaptive_check/qwen35_27b_e136_suspicious_confidence_adaptive_check_rowspervariant12.json",
+      "source_data_jsonl": "data/processed/e132_suspicious_valid_controls_20260430.jsonl"
+    },
+    "gemma4_31b_it": {
+      "summary": {
+        "all": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 0.6666666666666666,
+          "invalid_n": 9,
+          "invalid_span_hit_rate": 0.6666666666666666,
+          "n": 36,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 27,
+          "valid_no_error_rate": 1.0
+        },
+        "family=percentage_base": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 0.6666666666666666,
+          "invalid_n": 9,
+          "invalid_span_hit_rate": 0.6666666666666666,
+          "n": 36,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 27,
+          "valid_no_error_rate": 1.0
+        },
+        "prompt=base_span_only": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 0.6666666666666666,
+          "invalid_n": 3,
+          "invalid_span_hit_rate": 0.6666666666666666,
+          "n": 12,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 9,
+          "valid_no_error_rate": 1.0
+        },
+        "prompt=direct_json_final_only": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 0.6666666666666666,
+          "invalid_n": 3,
+          "invalid_span_hit_rate": 0.6666666666666666,
+          "n": 12,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 9,
+          "valid_no_error_rate": 1.0
+        },
+        "prompt=strong_span_only": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 0.6666666666666666,
+          "invalid_n": 3,
+          "invalid_span_hit_rate": 0.6666666666666666,
+          "n": 12,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 9,
+          "valid_no_error_rate": 1.0
+        },
+        "route=en_zh": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 1.0,
+          "invalid_n": 3,
+          "invalid_span_hit_rate": 1.0,
+          "n": 12,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 9,
+          "valid_no_error_rate": 1.0
+        },
+        "route=mixed": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 1.0,
+          "invalid_n": 3,
+          "invalid_span_hit_rate": 1.0,
+          "n": 12,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 9,
+          "valid_no_error_rate": 1.0
+        },
+        "route=romanized_zh": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 0.0,
+          "invalid_n": 3,
+          "invalid_span_hit_rate": 0.0,
+          "n": 12,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 9,
+          "valid_no_error_rate": 1.0
+        },
+        "source=strict_invalid_failure": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 0.6666666666666666,
+          "invalid_n": 9,
+          "invalid_span_hit_rate": 0.6666666666666666,
+          "n": 9,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": null,
+          "valid_n": 0,
+          "valid_no_error_rate": null
+        },
+        "source=valid_control::clean_valid": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": null,
+          "invalid_n": 0,
+          "invalid_span_hit_rate": null,
+          "n": 9,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 9,
+          "valid_no_error_rate": 1.0
+        },
+        "source=valid_control::low_conf_valid": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": null,
+          "invalid_n": 0,
+          "invalid_span_hit_rate": null,
+          "n": 9,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 9,
+          "valid_no_error_rate": 1.0
+        },
+        "source=valid_control::suspicious_valid_marker": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": null,
+          "invalid_n": 0,
+          "invalid_span_hit_rate": null,
+          "n": 9,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 9,
+          "valid_no_error_rate": 1.0
+        }
+      },
+      "args": {
+        "control_variants": "clean_valid,suspicious_valid_marker,low_conf_valid",
+        "data_jsonl": "/home/Awei/P02_multilingual_process_lens/data/processed/e132_suspicious_valid_controls_20260430.jsonl",
+        "device": "auto",
+        "dry_run": false,
+        "dtype": "bfloat16",
+        "e136_result": "",
+        "local_files_only": true,
+        "max_input_tokens": 6144,
+        "max_jobs": 0,
+        "max_new_tokens": 160,
+        "max_time": 45.0,
+        "model_key": "gemma4_31b_it",
+        "no_stop_at_first_answer": false,
+        "out_dir": "results/E1395_base_span_localization_format_fixed",
+        "prompt_variants": "base_span_only,strong_span_only,direct_json_final_only",
+        "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml"
+      },
+      "source_e136_result": "results/E136_suspicious_confidence_adaptive_check/gemma4_31b_it_e136_suspicious_confidence_adaptive_check_rowspervariant12.json",
+      "source_data_jsonl": "data/processed/e132_suspicious_valid_controls_20260430.jsonl"
+    },
+    "gemma4_26b_a4b_it": {
+      "summary": {
+        "all": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 0.7777777777777778,
+          "invalid_n": 18,
+          "invalid_span_hit_rate": 0.7777777777777778,
+          "n": 72,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.05555555555555555,
+          "valid_n": 54,
+          "valid_no_error_rate": 0.9444444444444444
+        },
+        "family=percentage_base": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 0.7777777777777778,
+          "invalid_n": 18,
+          "invalid_span_hit_rate": 0.7777777777777778,
+          "n": 72,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.05555555555555555,
+          "valid_n": 54,
+          "valid_no_error_rate": 0.9444444444444444
+        },
+        "prompt=base_span_only": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 0.8333333333333334,
+          "invalid_n": 6,
+          "invalid_span_hit_rate": 0.8333333333333334,
+          "n": 24,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.05555555555555555,
+          "valid_n": 18,
+          "valid_no_error_rate": 0.9444444444444444
+        },
+        "prompt=direct_json_final_only": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 0.6666666666666666,
+          "invalid_n": 6,
+          "invalid_span_hit_rate": 0.6666666666666666,
+          "n": 24,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 18,
+          "valid_no_error_rate": 1.0
+        },
+        "prompt=strong_span_only": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 0.8333333333333334,
+          "invalid_n": 6,
+          "invalid_span_hit_rate": 0.8333333333333334,
+          "n": 24,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.1111111111111111,
+          "valid_n": 18,
+          "valid_no_error_rate": 0.8888888888888888
+        },
+        "route=en_en": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 0.6666666666666666,
+          "invalid_n": 3,
+          "invalid_span_hit_rate": 0.6666666666666666,
+          "n": 12,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 9,
+          "valid_no_error_rate": 1.0
+        },
+        "route=en_zh": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 1.0,
+          "invalid_n": 3,
+          "invalid_span_hit_rate": 1.0,
+          "n": 12,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 9,
+          "valid_no_error_rate": 1.0
+        },
+        "route=mixed": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 0.0,
+          "invalid_n": 3,
+          "invalid_span_hit_rate": 0.0,
+          "n": 12,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 9,
+          "valid_no_error_rate": 1.0
+        },
+        "route=romanized_zh": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 1.0,
+          "invalid_n": 3,
+          "invalid_span_hit_rate": 1.0,
+          "n": 12,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.3333333333333333,
+          "valid_n": 9,
+          "valid_no_error_rate": 0.6666666666666666
+        },
+        "route=zh_en": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 1.0,
+          "invalid_n": 3,
+          "invalid_span_hit_rate": 1.0,
+          "n": 12,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 9,
+          "valid_no_error_rate": 1.0
+        },
+        "route=zh_zh": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 1.0,
+          "invalid_n": 3,
+          "invalid_span_hit_rate": 1.0,
+          "n": 12,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 9,
+          "valid_no_error_rate": 1.0
+        },
+        "source=strict_invalid_failure": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": 0.7777777777777778,
+          "invalid_n": 18,
+          "invalid_span_hit_rate": 0.7777777777777778,
+          "n": 18,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": null,
+          "valid_n": 0,
+          "valid_no_error_rate": null
+        },
+        "source=valid_control::clean_valid": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": null,
+          "invalid_n": 0,
+          "invalid_span_hit_rate": null,
+          "n": 18,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.0,
+          "valid_n": 18,
+          "valid_no_error_rate": 1.0
+        },
+        "source=valid_control::low_conf_valid": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": null,
+          "invalid_n": 0,
+          "invalid_span_hit_rate": null,
+          "n": 18,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.05555555555555555,
+          "valid_n": 18,
+          "valid_no_error_rate": 0.9444444444444444
+        },
+        "source=valid_control::suspicious_valid_marker": {
+          "hit_max_rate": 0.0,
+          "invalid_has_error_rate": null,
+          "invalid_n": 0,
+          "invalid_span_hit_rate": null,
+          "n": 18,
+          "parse_ok_rate": 1.0,
+          "valid_false_error_rate": 0.1111111111111111,
+          "valid_n": 18,
+          "valid_no_error_rate": 0.8888888888888888
+        }
+      },
+      "args": {
+        "control_variants": "clean_valid,suspicious_valid_marker,low_conf_valid",
+        "data_jsonl": "/home/Awei/P02_multilingual_process_lens/data/processed/e132_suspicious_valid_controls_20260430.jsonl",
+        "device": "auto",
+        "dry_run": false,
+        "dtype": "bfloat16",
+        "e136_result": "",
+        "local_files_only": true,
+        "max_input_tokens": 6144,
+        "max_jobs": 0,
+        "max_new_tokens": 160,
+        "max_time": 45.0,
+        "model_key": "gemma4_26b_a4b_it",
+        "no_stop_at_first_answer": false,
+        "out_dir": "results/E1395_base_span_localization_format_fixed",
+        "prompt_variants": "base_span_only,strong_span_only,direct_json_final_only",
+        "registry": "/home/Awei/P02_multilingual_process_lens/configs/model_registry.yaml"
+      },
+      "source_e136_result": "results/E136_suspicious_confidence_adaptive_check/gemma4_26b_a4b_it_e136_suspicious_confidence_adaptive_check_rowspervariant12.json",
+      "source_data_jsonl": "data/processed/e132_suspicious_valid_controls_20260430.jsonl"
+    }
+  },
+  "adopted_results": "results/E1395_base_span_localization_format_fixed/",
+  "non_adopted_debug_archive": "archive/e1395_format_debug_20260430/results/",
+  "note_zh": "旧 Gemma31 E139.5 结果因重复输出导致格式/解析污染，不进入最终横向比较；format-fixed 三模型 parse_ok=1.0 且 hit_max=0.0。"
+}

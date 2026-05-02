@@ -1,0 +1,8 @@
+[2026-04-27T02:45:13] loading tokenizer: ministral3_8b_reasoning -> /home/Awei/LLM/Model/base/ministral3_8b_reasoning
+[2026-04-27T02:45:13] loading model dtype=bfloat16 device=cuda
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/531 [00:00<?, ?it/s]Loading weights: 100%|██████████| 531/531 [00:00<00:00, 14651.31it/s]
+[transformers] The tied weights mapping and config for this model specifies to tie model.language_model.embed_tokens.weight to lm_head.weight, but both are present in the checkpoints with different values, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning.
+[2026-04-27T02:45:16] pairs=5 layers=[7, 8, 10, 17, 25, 33] spans=['verdict_pos', 'problem_span', 'trace_span', 'support_error_span', 'final_clause_span']
+[2026-04-27T02:45:29] wrote results/E03_span_patch_hard/ministral3_8b_reasoning_span_patch_hard.json; rows=150
+SUMMARY model=ministral3_8b_reasoning best_span=verdict_pos layer=33 v2b=1.625 b2v=-0.750
