@@ -1,4 +1,4 @@
-# Handoff + History Stage Synthesis / 交接与历史阶段性整理（2026-04-30）
+# Handoff + History Stage Synthesis / 交接与历史阶段性整理（2026-04-30，updated 2026-05-03）
 
 Working directory / 工作目录：`/home/Awei/P02_multilingual_process_lens`
 
@@ -8,7 +8,7 @@ This document replaces the old habit of reading the whole handoff/history chain 
 
 **Current safe claim / 当前安全主张：**
 
-In direct or non-thinking verifier settings, current P0 models often contain hidden process-validity evidence, but the final Yes/No or A/B decision may fail to use that evidence because of objective, threshold, answer anchoring, repair-aware reading, output-label readout, language-route difficulty, local semantic competence, and stop/commit control. / 在 direct 或 non-thinking verifier 设置中，当前 P0 模型内部常有“过程是否有效”的隐藏证据，但最终 Yes/No 或 A/B 决策可能因为目标、阈值、答案锚定、把 CoT 当可修复草稿读、输出标签读出、语言路径难度、局部语义能力和停止/提交控制而没有用好这些证据。
+In direct or non-thinking verifier settings, current P0 models often contain hidden process-validity evidence, but the final Yes/No or A/B decision may fail to use that evidence because of objective, threshold, answer anchoring, repair-aware reading, output-label readout, language-route difficulty, local semantic competence, and stop/commit control. A new finding (E172 probe, 2026-05-03): hidden states also carry a selective “pre-turnaround signal” — elevated risk that precedes explicit conceptual self-correction in CoT, suggesting metacognitive uncertainty is encoded in component states before it surfaces in visible text. / 在 direct 或 non-thinking verifier 设置中，当前 P0 模型内部常有”过程是否有效”的隐藏证据，但最终 Yes/No 或 A/B 决策可能因为目标、阈值、答案锚定、把 CoT 当可修复草稿读、输出标签读出、语言路径难度、局部语义能力和停止/提交控制而没有用好这些证据。新发现（E172 probe）：hidden state 中还编码了选择性的”预转变信号”——在模型显式写出概念性自纠文本之前，hidden risk 就已经升高，说明元认知不确定性在进入可见文本之前就已经在 component state 中编码。
 
 **Do not overclaim / 不要过度主张：**
 
@@ -54,7 +54,8 @@ In direct or non-thinking verifier settings, current P0 models often contain hid
 | final marker | 模型明确写出 `Final answer:` 这类最终提交标志。 | An explicit final-answer marker. |
 | fallback answer | 没有 final marker 时，从文本里抽到的数字；不能等同最终提交。 | A number extracted without an explicit final decision; not a strict final answer. |
 | clean final stop | 写出最终答案后自然停止，不再继续自检或输出。 | The model stops cleanly after the final answer. |
-| stop/commit signal | hidden state 中可读出的“是否该提交并停止”的信号。 | Hidden evidence about whether to commit and stop. |
+| stop/commit signal | hidden state 中可读出的”是否该提交并停止”的信号。 | Hidden evidence about whether to commit and stop. |
+| pre-turnaround signal | 模型在显式写出自纠文本（如”Wait...”）之前，hidden risk 就已经升高的现象。选择性出现：概念性纠错前有信号，执行检查前没有。 | Hidden risk elevation that precedes explicit self-correction markers. Selective: appears before conceptual error recognition, not before execution checks. |
 | prompt leakage | 答案、人工标签、错误 span 或 trap note 进入 prompt。 | Gold answers, labels, error spans, or trap notes leaking into prompts. |
 | Wilson CI | 小样本比例的置信区间，比普通正态近似更稳。 | A robust confidence interval for proportions. |
 | romanized_zh | 中文内容用拼音/罗马字母写，语义在中文，表面像英文。 | Chinese content written in romanized form. |
@@ -137,6 +138,50 @@ GLM is admitted as expanded P0 boundary evidence, not merged into the core headl
 
 **Stage E fact / 人话结论：** Thinking mode is not automatically safer. A model may have computed a useful answer but fail to submit cleanly; or it may keep thinking after a final marker. TV/TG claims still need systematic reruns. / thinking 不是自动更可靠；必须单独测最终提交、干净停止和过程有效性。
 
+### Stage F: Pre-Turnaround Signal in Hidden States / hidden state 中的预转变信号
+
+**E172 probe / 预转变信号探测（2026-05-03）：**
+
+在 4 道高分自纠正确题（p14/p17/p27/p28，最终答案正确但过程中分别有 15/16/23/12 个 self-correction anchor）的 baseline completion 上，每 300 chars 做 teacher-force prefill，读取 E166 校准的 hidden component（`35:residual_hidden_state`）risk 分数。每个采样点按距离最近 "Wait..." / self-correction anchor 的位置分为 confident（远离任何 anchor 的正常推理）、pre_correction（anchor 前 50-400 chars）、at_correction（anchor ±50 chars）、post_correction（anchor 后 50-400 chars）。
+
+核心假设：hidden state 不仅反映当前 token 的 risk，还编码了模型对推理过程的**元认知不确定性**。如果模型即将在显式文本中识别出一个概念性推理错误，这种不确定性会在 hidden state 中提前升高——早于显式的 "Wait..." 文本。
+
+聚合结果（4 题合并，n=374 采样点）：
+| segment | n | mean_risk | 解释 |
+|---------|---|-----------|------|
+| confident | 227 | 2.546 | 正常推理基线 |
+| pre_correction | 61 | 2.692 | **比 confident 高 0.146** |
+| at_correction | 16 | 3.034 | 纠错时刻最高（sanity check 通过）|
+| post_correction | 70 | 2.657 | 纠错后略回落 |
+
+聚合层面存在预转变信号（delta +0.146）。
+
+但逐题拆开后发现**信号是选择性的**：
+| task | confident | pre_corr | delta | 类型 |
+|------|-----------|----------|-------|------|
+| **p28** | 2.775 | **3.553** | **+0.778** | **极强信号，std=0.19** |
+| p14 | 2.590 | 2.783 | +0.193 | 中等信号 |
+| p17 | 2.498 | 2.437 | -0.061 | 无信号 |
+| p27 | 2.341 | 2.247 | -0.094 | 无信号 |
+
+定性分析（逐 anchor 读上下文）揭示了为什么有些任务有信号、有些没有：
+
+- **p28（极强信号）**：组合数学/匹配问题。纠错是**概念性/结构性**的——模型在构建理论框架，发现"这个情况不能推广"、"block 必须是隔离的"。hidden state 在模型"意识到框架有问题"之前就升高了。所有 13 个 pre-correction 采样点一致高 risk（std=0.19），不是偶然波动。
+- **p14（中等信号）**：同样是系统性 casework 中的概念纠错。
+- **p17（无信号）**：网格路径计数。纠错是**执行性**的——"这条路径数了两次"、"n=1 的 base case 对不对"。模型在做机械验证，不是在识别框架错误。
+- **p27（无信号）**：立体几何。纠错是**定义性**的——"什么叫 disphenoid？"、"insphere 的条件是什么？"。模型在搜索知识，不是在发现推理错误。
+
+脚本：`scripts/probe_e172_pre_turnaround_signal.py`。
+结果：`results/E172_aime2026_pre_turnaround_signal/qwen35_27b_e172_pre_turnaround_signal_20260503.json`。
+
+**Stage F fact / 人话结论：** Hidden states carry a selective "pre-turnaround signal" — risk elevates BEFORE the model explicitly writes "Wait..." / self-correction markers, but only for conceptual/structural error recognition, not for routine execution checks or definitional uncertainty. The strongest case (p28) shows +28% risk elevation with std=0.19 across all 13 pre-correction samples. This suggests hidden states encode metacognitive uncertainty about the reasoning framework, not just local token risk. The causal direction is not yet proven (correlation, not intervention). / hidden state 中存在选择性的预转变信号——模型在写出"Wait..."之前，hidden risk 就已经升高了。但这个信号只对概念性/结构性的错误识别有效，对执行细节检查和定义不确定不敏感。p28 是最强证据：pre-correction risk 比 confident 高 28%，且所有 13 个采样点一致地高（std=0.19）。这说明 hidden state 编码了对推理框架的元认知不确定性，而不仅仅是局部 token 风险。因果方向尚未通过干预实验证明。
+
+**Boundaries / 边界：**
+- 当前证据仅在 Qwen3.5-27B 的 4 道 AIME2026 正确题上，不能声称跨模型或跨任务分布。
+- 聚合 delta +0.146 主要由 p28 驱动；p17/p27 无信号。
+- "预转变"的因果方向尚未证明——这是相关性，不是干预结果。
+- 所有 segment（包括 confident）都有 85% 采样点跨过 HP 阈值，再次确认 E166 阈值对 AIME2026 分布过于敏感。
+
 ## 5. Current Paper Position / 当前论文位置
 
 **Best headline / 最稳 headline：**
@@ -151,6 +196,7 @@ GLM is admitted as expanded P0 boundary evidence, not merged into the core headl
 4. Multilingual route taxonomy: romanized Chinese and mixed-language routes expose surface lexicalization vs process semantics. / 多语言路径揭示表层词汇化与过程语义错配。
 5. Natural NG prevalence with repaired/unrepaired labels: strict ACPI is common under answer-first, but unrepaired ACPI remains low-frequency. / 自然样本中分清 repaired 和 unrepaired。
 6. Adaptive checking boundary: hidden triggers can reduce risk for Qwen/Gemma31, but Gemma26 shows why this is not an oracle. / hidden 触发可用但有模型边界。
+7. Pre-turnaround signal: hidden states carry a selective metacognitive signal that elevates before conceptual self-correction in CoT, with p28 showing +28% risk elevation (std=0.19) across all pre-correction samples. / hidden state 中存在选择性的预转变信号，在概念性自纠前可检测到。
 
 ## 6. 2024-2026 Literature Positioning / 2024-2026 文献定位
 
@@ -201,6 +247,12 @@ This is a targeted scan of recent top-conference, top-journal, and frontier-lab 
 7. **E145 causal component sweep on natural rows.** Patch/steer residual, MLP, token-mixer/attention-related outputs at error spans and completion prefixes, with confidence-matched valid controls. / 在自然行上做组件因果。Reason: turns hidden localization into stronger causal evidence.
 8. **E146b process-confidence-stop disentanglement.** Regress/match hidden process score against Yes/No margin, entropy, length, marker count, answer visibility, repair marker, and stop score. / 解缠过程、置信度、停止。Reason: prevents collision with “hidden states just know confidence/correctness.”
 
+### Pre-turnaround signal follow-up / 预转变信号后续
+
+9. **E147 fine-grained p28 probe.** Re-probe p28 at 100-char intervals around each anchor to map the exact temporal profile of the pre-turnaround signal. / 对 p28 做更细粒度探测（100 chars 间隔），画每个 anchor 前后的 risk 时间曲线。Reason: the +0.778 delta with std=0.19 is our strongest single-case evidence; need to characterize it precisely before making a claim.
+10. **E148 wrong-case probe.** Run the same probe on the 2 wrong cases (p13, p15) to see whether wrong-answer traces show different hidden risk patterns (e.g., persistently high risk, absent post-correction drop, or different pre/post dynamics). / 对错题做同样 probe。Reason: if wrong cases show different dynamics (e.g., risk stays high after correction, or never drops), it strengthens the interpretation that pre-turnaround + post-correction-drop = successful self-correction.
+11. **E149 cross-model pre-turnaround.** If Gemma baseline becomes available, probe at least one Gemma model on the same 4 tasks. / 跨模型验证。Reason: single-model evidence is not a claim.
+
 ### Thinking-mode completion / thinking 模式补齐
 
 9. **TV objective ladder.** Re-run E42/E54/E61/E71 subsets with thinking enabled, full generated judgments, parsed final Yes/No, and no first-token logprob. / 补 thinking verifier。Reason: DV results cannot be sold as thinking-verifier results.
@@ -222,7 +274,8 @@ This is a targeted scan of recent top-conference, top-journal, and frontier-lab 
 4. **Mechanism.** E106-E114/E131/E132 show hidden process evidence and confidence/false-positive controls. / 机制证据。
 5. **Decision mismatch.** E139/E139.5/E140 show evidence can be present but objective/readout can still accept. / 证据到决策错配。
 6. **Adaptive check.** E136/E138 show hidden-triggered checking helps in Qwen/Gemma31 but fails on Gemma26 boundary. / 自适应检查。
-7. **Boundaries.** TV/TG, causal mechanism, multilingual breadth, human audit, and external baseline gaps. / 边界。
+7. **Pre-turnaround signal (new).** E172 probe shows hidden risk elevates before explicit conceptual self-correction in CoT, with selective metacognitive pattern. / 预转变信号。
+8. **Boundaries.** TV/TG, causal mechanism, multilingual breadth, human audit, and external baseline gaps. / 边界。
 
 ## 10. Operating Rules Going Forward / 后续执行规则
 

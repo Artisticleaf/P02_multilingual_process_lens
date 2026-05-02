@@ -2,7 +2,7 @@
 
 > 2026-04-30 stage synthesis / 阶段性整理入口：`docs/HANDOFF_HISTORY_STAGE_SYNTHESIS_20260430.md`。Use that file for the current human-readable claim, glossary, experiment summary, literature positioning, and next-experiment plan; keep this file as the chronological knowledge graph. / 当前主张、术语人话表、实验总结、文献定位和后续实验计划请先看该文件；本文保留为时间顺序知识图谱。
 
-Last updated / 最近更新：2026-05-02  
+Last updated / 最近更新：2026-05-03  
 Workspace / 工作目录：`/home/Awei/P02_multilingual_process_lens`
 
 本文件是压缩后的项目主记录。只保留能支撑论文主张的事件、文件地址、实验设置、实验结论和解释边界；下载流水、旧交接文本和不进入主证据的候选状态不再展开。
@@ -1793,3 +1793,76 @@ Next / 下一步：
 - Resume or rerun E172 formal baseline from the 10-row Qwen checkpoint, then run Qwen hidden-gate formal. / 从 Qwen 10 行 checkpoint 续跑或重跑正式 baseline，再跑 Qwen 正式 hidden-gate。
 - Start Gemma4-31B and Gemma4-26B-A4B E172 runs only after Qwen state is cleanly checkpointed or marked failed, to avoid mixing partial state. / 先把 Qwen 状态干净 checkpoint 或标记失败，再启动两个 Gemma，避免混淆 partial 状态。
 - For hidden-gate, report trigger precision/false positives, trigger timing, final-marker rate, hit-max rate, and paired gate-vs-baseline accuracy before any improvement claim. / hidden-gate 必须先报告触发精度/假阳性、触发时机、final-marker、hit-max 和 paired gate-vs-baseline 准确率，再谈提升 claim。
+
+## 50. 2026-05-03 E172 Pre-Turnaround Signal Probe / 预转变信号探测
+
+What we did / 做了什么：
+
+在 4 道高分自纠正确题（p14/p17/p27/p28，均有 12-23 个 self-correction anchor，最终答案正确但过程中大量自我修正）的 baseline completion 上，每 300 chars 做一次 teacher-force prefill，读取 E166 校准的 hidden component（`35:residual_hidden_state`）的 risk 分数。每个采样点按距离最近 self-correction anchor 的位置分为 4 类：
+- `confident`：距离任何 anchor >400 chars，代表"正常推理"基线
+- `pre_correction`：在 anchor 前 50-400 chars，测试"hidden state 是否在显式纠错前就已经报警"
+- `at_correction`：anchor ±50 chars，验证纠错时刻 risk 确实升高（sanity check）
+- `post_correction`：anchor 后 50-400 chars，检查纠错后 risk 是否回落
+
+脚本：`scripts/probe_e172_pre_turnaround_signal.py`。
+结果文件：`results/E172_aime2026_pre_turnaround_signal/qwen35_27b_e172_pre_turnaround_signal_20260503.json`。
+
+Key results / 关键结果：
+
+聚合层面（4 题合并）：
+| segment | n | mean_risk | cross_hp | cross_budgeted |
+|---|---:|---:|---:|---:|
+| confident | 227 | 2.546 | 85% | 67% |
+| pre_correction | 61 | 2.692 | 89% | 69% |
+| at_correction | 16 | 3.034 | 100% | 88% |
+| post_correction | 70 | 2.657 | 90% | 64% |
+
+Delta pre - confident = **+0.146**。聚合层面存在预转变信号。
+
+逐题拆开——信号是选择性的：
+| task | confident | pre_corr | delta | 有没有信号？ |
+|------|-----------|----------|-------|------------|
+| p14 | 2.590 | 2.783 | +0.193 | 有（中等） |
+| p17 | 2.498 | 2.437 | -0.061 | 无 |
+| p27 | 2.341 | 2.247 | -0.094 | 无 |
+| **p28** | 2.775 | **3.553** | **+0.778** | **有（极强）** |
+
+p28 的 pre_correction std 只有 0.19，说明所有 13 个 pre-correction 采样点一致地处于高 risk 状态，不是偶然波动。
+
+Qualitative pattern / 定性模式——为什么有的有信号、有的没有？
+
+仔细读了 4 道题的所有 anchor 上下文后发现：
+- **p28（强信号）**：组合数学/匹配问题。纠错是**概念性/结构性**的——模型在构建理论框架，发现"这个情况不能推广"、"block 必须是隔离的"。hidden state 在模型"意识到框架有问题"之前就升高了。
+- **p14（中等信号）**：同样是系统性 casework 中的概念纠错。
+- **p17（无信号）**：网格路径计数。纠错是**执行性**的——"这条路径数了两次"、"n=1 的 base case 对不对"。模型在做机械验证，不是在识别框架错误。
+- **p27（无信号）**：立体几何。纠错是**定义性**的——"什么叫 disphenoid？"、"insphere 的条件是什么？"。模型在搜索知识，不是在发现推理错误。
+
+Scientific interpretation / 科学解释：
+
+hidden state 编码的是**元认知不确定性**（metacognitive uncertainty），不是简单的"当前 token 风险"。当模型即将在显式文本中识别出一个**概念性推理错误**时，这种元认知信号会提前升高。但当模型只是在做执行细节检查或搜索定义时，hidden state 没有这个预转变信号。
+
+换句话说：hidden state 能"预感"到模型即将说"Wait, this is wrong..."，但只能预感**真正的框架级错误识别**，对"让我再数一遍"这种机械检查不敏感。
+
+Boundaries / 必须保留的边界：
+
+- 当前证据只在 4 道 Qwen3.5-27B 的 AIME2026 正确题上，不能声称跨模型或跨任务分布。
+- 聚合 delta +0.146 是真实但温和的；效应主要由 p28 驱动。
+- 这不是说 hidden state "知道正确答案"——它只是在模型即将发现自己的推理框架有问题时，编码了更高的不确定性。
+- "预转变"的因果方向尚未证明：我们观测到相关性（pre-correction risk ↑），但没有做 intervention 实验证明这个信号**导致**了纠错。
+- 所有 segment（包括 confident）都有 85% 的采样点跨过 high_precision 阈值，这再次确认 E166 的 HP 阈值对 AIME2026 分布过于敏感。
+
+Updated state / 更新后的项目状态：
+
+- Qwen baseline：28/30 题完成（26 对 2 错），p29/p30 缺失。
+- hidden-gate：仅有 smoke 行（p01，误触发），正式 hidden-gate 尚未运行。
+- 预转变信号：已探测 4 题，p28 提供最强证据。
+- Gemma baseline：未开始。
+- 软化后的 CONTROLLED_TEMPLATE 已提交但 trigger logic 改动仍在等待。
+
+Next / 下一步：
+
+- 对 p28 做更细粒度分析（缩小采样间隔、逐 anchor 分析哪些 anchor 有预信号哪些没有）。
+- 对 2 道错题（p13/p15）运行同样的 probe，看错题的 hidden risk pattern 是否不同。
+- 补齐 p29/p30 baseline。
+- 应用 delayed trigger logic（前 200 token 用 budgeted 阈值或完全跳过）。
+- 如果 p28 的预信号能被更细粒度验证，可以写成新 claim："hidden states carry a selective pre-turnaround signal that precedes conceptual self-correction in CoT reasoning"。
